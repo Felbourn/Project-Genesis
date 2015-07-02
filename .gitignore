@@ -1,4 +1,6 @@
-KSP.*
+KSP.exe
+KSP.log
+readme.txt
 GameData/Squad/*
 KSP_Data/*
 Ships/*
