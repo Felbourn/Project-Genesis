@@ -1,0 +1,22 @@
+Executing: MiniAVC - 1.0.3.0
+Assembly: E:\Program Files (x86)\Steam\SteamApps\common\Kerbal Space Program 1.0.4 - Genesis\GameData\PlanetShine\Plugins\MiniAVC.dll
+
+[Log 07:07:20.9100535]: Starter was created.
+[Log 07:07:22.0391270]: Identical remote version found: Using remote version information only.
+[Log 07:07:22.0401278]: https://raw.githubusercontent.com/valerian/ksp-planetshine/master/PlanetShine.version
+	NAME: PlanetShine
+	URL: https://raw.githubusercontent.com/valerian/ksp-planetshine/master/PlanetShine.version
+	DOWNLOAD: http://kerbalstuff.com/mod/266/PlanetShine
+	GITHUB: valerian/ksp-planetshine
+		LatestRelease: NULL
+		AllowPreRelease: False
+	VERSION: 0.2.3.1
+	KSP_VERSION: 1.0.2
+	KSP_VERSION_MIN: 0.24.2
+	KSP_VERSION_MAX: 1.0.2
+	CompatibleKspVersion: False
+	CompatibleKspVersionMin: True
+	CompatibleKspVersionMax: False
+	CompatibleGitHubVersion: True
+
+[Log 07:07:22.0471340]: IssueGui was created.
