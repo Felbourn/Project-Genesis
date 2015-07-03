@@ -1055,7 +1055,7 @@ UrlConfig
 		useVertex = True
 		updateFrequency = 2
 		quality = 1
-		stockToolbarEnabled = True
+		stockToolbarEnabled = False
 	}
 }
 UrlConfig

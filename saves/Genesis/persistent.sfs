@@ -91,8 +91,8 @@ GAME
 		{
 			RecordsAltitude
 			{
-				reached = 16466.4596940354
-				record = 72.5692320688395
+				reached = 16941.1396940458
+				record = 72.5732143804198
 			}
 			RecordsSpeed
 			{
@@ -101,8 +101,8 @@ GAME
 			}
 			RecordsDistance
 			{
-				reached = 16466.5596940354
-				record = 756.372361075269
+				reached = 16924.3196940455
+				record = 756.403933097963
 			}
 		}
 	}
@@ -338,7 +338,7 @@ GAME
 	FLIGHTSTATE
 	{
 		version = 1.0.4
-		UT = 16912.9396940452
+		UT = 17018.6996940475
 		activeVessel = 7
 		mapViewFiltering = -1026
 		VESSEL
@@ -925,31 +925,31 @@ GAME
 			landedAt = KSC_LaunchPad_Platform
 			splashed = False
 			met = 0
-			lct = 16912.9396940452
+			lct = 17018.6996940475
 			root = 0
-			lat = -0.097207788539387
-			lon = 285.442327029352
-			alt = 72.519231095328
-			hgt = 0.04999844
-			nrm = 9.48063E-07,1,-1.574512E-07
-			rot = -0.7009887,-0.09221742,-0.09726547,0.7004644
-			CoM = 1.015034E-13,2.461182E-14,-1.455154E-11
+			lat = -0.097207789707302
+			lon = 285.442328727124
+			alt = 72.5732138504973
+			hgt = 0.04999883
+			nrm = 8.850046E-07,1,-3.799775E-08
+			rot = -0.7009887,-0.09221714,-0.09726568,0.7004644
+			CoM = 0,0,0
 			stg = 1
 			prst = False
 			ref = 533662147
 			ctrl = False
 			cPch = 0.2
-			cHdg = 0.304
+			cHdg = 0.3
 			cMod = 0
 			ORBIT
 			{
-				SMA = 300814.947911915
-				ECC = 0.9948228084616
-				INC = 0.0972077874063335
-				LPE = 89.9999917204781
-				LAN = 27.3261433987889
+				SMA = 300814.975186569
+				ECC = 0.994822807047597
+				INC = 0.0972077885761271
+				LPE = 89.9999606218869
+				LAN = 29.0888500414911
 				MNA = 3.14159265358979
-				EPH = 16912.9396940452
+				EPH = 17018.6996940475
 				REF = 1
 			}
 			PART
@@ -974,14 +974,14 @@ GAME
 				attN = bottom, -1
 				attN = top, -1
 				mass = 0.1
-				temp = 300.935171819732
-				tempExt = 301.336835468976
+				temp = 302.720709257794
+				tempExt = 303.06194161673
 				expt = 0
 				state = 0
 				connected = True
 				attached = True
 				flag = Squad/Flags/kerbin
-				rTrf = probeStackSmall
+				rTrf = probeStackSmall (Untitled Space Craft)
 				modCost = 0
 				EVENTS
 				{
@@ -1332,14 +1332,14 @@ GAME
 						}
 						MechJebModuleFlightRecorder
 						{
-							markUT = 16912.9396940452
+							markUT = 17018.6996940475
 							deltaVExpended = 0
 							dragLosses = 0
 							gravityLosses = 0
 							steeringLosses = 0
-							markLatitude = -0.0972077885379554
-							markLongitude = -74.5576729706487
-							markAltitude = 72.519231259136
+							markLatitude = -0.0972077897074316
+							markLongitude = -74.5576712728761
+							markAltitude = 72.5732138676453
 							markBodyIndex = 1
 							maxDragGees = 0
 							unlockParts = 
