@@ -10,7 +10,7 @@ GAME
 	scene = 5
 	editor = None
 	flag = Squad/Flags/kerbin
-	launchID = 2
+	launchID = 3
 	PARAMETERS
 	{
 		preset = Normal
@@ -91,13 +91,13 @@ GAME
 		{
 			RecordsAltitude
 			{
-				reached = 16941.1396940458
-				record = 72.5732143804198
+				reached = 17192.7196940512
+				record = 73.0769762663404
 			}
 			RecordsSpeed
 			{
-				reached = 16466.5396940354
-				record = 0.781498798972711
+				reached = 17192.7996940512
+				record = 0.781547091339629
 			}
 			RecordsDistance
 			{
@@ -335,10 +335,24 @@ GAME
 			MaxDeltaTime = 21600
 		}
 	}
+	SCENARIO
+	{
+		name = SentinelScenario
+		scene = 7, 8, 5
+		NextSpawnTime = 106084.737244435
+	}
+	SCENARIO
+	{
+		name = KerbalAlarmClockScenario
+		scene = 6, 5, 7
+		KACAlarmListStorage
+		{
+		}
+	}
 	FLIGHTSTATE
 	{
 		version = 1.0.4
-		UT = 17018.6996940475
+		UT = 17481.6596940575
 		activeVessel = 7
 		mapViewFiltering = -1026
 		VESSEL
@@ -917,48 +931,48 @@ GAME
 		}
 		VESSEL
 		{
-			pid = 7cc7407b1bd0445fb889f631dcc0675c
+			pid = 63e9bb0ecd1b4486ace7ab16878fb070
 			name = Untitled Space Craft
-			type = Probe
+			type = Lander
 			sit = PRELAUNCH
 			landed = True
 			landedAt = KSC_LaunchPad_Platform
 			splashed = False
 			met = 0
-			lct = 17018.6996940475
+			lct = 17481.6596940575
 			root = 0
-			lat = -0.097207789707302
-			lon = 285.442328727124
-			alt = 72.5732138504973
-			hgt = 0.04999883
-			nrm = 8.850046E-07,1,-3.799775E-08
-			rot = -0.7009887,-0.09221714,-0.09726568,0.7004644
-			CoM = 0,0,0
+			lat = -0.0972077861579116
+			lon = 285.442326076412
+			alt = 73.0269771021558
+			hgt = 0.562501
+			nrm = 5.264387E-06,1,-2.272439E-06
+			rot = -0.7009881,-0.09221596,-0.09726385,0.7004653
+			CoM = 2.077581E-09,0.0108209,-6.366379E-09
 			stg = 1
 			prst = False
-			ref = 533662147
-			ctrl = False
+			ref = 794478237
+			ctrl = True
 			cPch = 0.2
 			cHdg = 0.3
 			cMod = 0
 			ORBIT
 			{
-				SMA = 300814.975186569
-				ECC = 0.994822807047597
-				INC = 0.0972077885761271
-				LPE = 89.9999606218869
-				LAN = 29.0888500414911
+				SMA = 300815.210111626
+				ECC = 0.994822793583024
+				INC = 0.0972077850255036
+				LPE = 90.0011174154708
+				LAN = 36.8037219708912
 				MNA = 3.14159265358979
-				EPH = 17018.6996940475
+				EPH = 17481.6596940575
 				REF = 1
 			}
 			PART
 			{
-				name = probeStackSmall
-				cid = 4294713992
-				uid = 533662147
-				mid = 2318205197
-				launchID = 1
+				name = landerCabinSmall
+				cid = 4294619436
+				uid = 794478237
+				mid = 254490813
+				launchID = 2
 				parent = 0
 				position = 0,0,0
 				rotation = 0,0,0,1
@@ -972,17 +986,18 @@ GAME
 				attm = 0
 				srfN = , -1
 				attN = bottom, -1
-				attN = top, -1
-				mass = 0.1
-				temp = 302.720709257794
-				tempExt = 303.06194161673
-				expt = 0
+				attN = top, 1
+				mass = 0.6
+				temp = 292.120907334861
+				tempExt = 292.881590816931
+				expt = 0.5
 				state = 0
 				connected = True
 				attached = True
 				flag = Squad/Flags/kerbin
-				rTrf = probeStackSmall (Untitled Space Craft)
+				rTrf = landerCabinSmall
 				modCost = 0
+				crew = Jebediah Kerman
 				EVENTS
 				{
 				}
@@ -996,7 +1011,7 @@ GAME
 				{
 					name = ModuleCommand
 					isEnabled = True
-					controlSrcStatusText = Not Enough ElectricCharge (0.0/0.1)
+					controlSrcStatusText = Operational
 					EVENTS
 					{
 						MakeReference
@@ -1065,13 +1080,174 @@ GAME
 				}
 				MODULE
 				{
-					name = ModuleSAS
+					name = ModuleScienceExperiment
 					isEnabled = True
-					standaloneToggle = True
-					standaloneToggle_UIFlight
+					Deployed = False
+					Inoperable = False
+					EVENTS
 					{
-						controlEnabled = True
+						DeployExperiment
+						{
+							active = True
+							guiActive = True
+							guiIcon = Deploy
+							guiName = Crew Report
+							category = Deploy
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+						CollectDataExternalEvent
+						{
+							active = False
+							guiActive = False
+							guiIcon = 
+							guiName = Take Data
+							category = 
+							guiActiveUnfocused = True
+							unfocusedRange = 1.5
+							externalToEVAOnly = True
+						}
+						ReviewDataEvent
+						{
+							active = False
+							guiActive = True
+							guiIcon = Review Data
+							guiName = Review Report
+							category = Review Data
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+						ResetExperiment
+						{
+							active = False
+							guiActive = True
+							guiIcon = Reset
+							guiName = Discard Crew Report
+							category = Reset
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+						DeployExperimentExternal
+						{
+							active = True
+							guiActive = False
+							guiIcon = Deploy
+							guiName = Crew Report
+							category = Deploy
+							guiActiveUnfocused = True
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+						ResetExperimentExternal
+						{
+							active = False
+							guiActive = False
+							guiIcon = Reset
+							guiName = Discard Crew Report
+							category = Reset
+							guiActiveUnfocused = True
+							unfocusedRange = 1.5
+							externalToEVAOnly = True
+						}
+						CleanUpExperimentExternal
+						{
+							active = False
+							guiActive = False
+							guiIcon = Restore
+							guiName = Restore
+							category = Restore
+							guiActiveUnfocused = True
+							unfocusedRange = 1.5
+							externalToEVAOnly = True
+						}
 					}
+					ACTIONS
+					{
+						DeployAction
+						{
+							actionGroup = None
+						}
+						ResetAction
+						{
+							actionGroup = None
+						}
+					}
+				}
+				MODULE
+				{
+					name = ModuleScienceContainer
+					isEnabled = True
+					EVENTS
+					{
+						StoreDataExternalEvent
+						{
+							active = False
+							guiActive = False
+							guiIcon = 
+							guiName = Store Experiments (0)
+							category = 
+							guiActiveUnfocused = True
+							unfocusedRange = 1.3
+							externalToEVAOnly = True
+						}
+						CollectDataExternalEvent
+						{
+							active = False
+							guiActive = False
+							guiIcon = 
+							guiName = Take Data (0)
+							category = 
+							guiActiveUnfocused = True
+							unfocusedRange = 1.3
+							externalToEVAOnly = True
+						}
+						ReviewDataEvent
+						{
+							active = False
+							guiActive = True
+							guiIcon = Review Data
+							guiName = Review Stored Data (0)
+							category = Review Data
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = FlagDecal
+					isEnabled = True
+					flagDisplayed = True
+					EVENTS
+					{
+						ToggleFlag
+						{
+							active = True
+							guiActive = False
+							guiActiveEditor = True
+							guiIcon = Toggle Flag
+							guiName = Toggle Flag
+							category = Toggle Flag
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = CollisionFX
+					isEnabled = True
 					EVENTS
 					{
 					}
@@ -1332,14 +1508,14 @@ GAME
 						}
 						MechJebModuleFlightRecorder
 						{
-							markUT = 17018.6996940475
+							markUT = 17481.6596940575
 							deltaVExpended = 0
 							dragLosses = 0
 							gravityLosses = 0
 							steeringLosses = 0
-							markLatitude = -0.0972077897074316
-							markLongitude = -74.5576712728761
-							markAltitude = 72.5732138676453
+							markLatitude = -0.0972077861598961
+							markLongitude = -74.5576739243597
+							markAltitude = 73.0377975630574
 							markBodyIndex = 1
 							maxDragGees = 0
 							unlockParts = 
@@ -1365,8 +1541,80 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 0
+					amount = 50
+					maxAmount = 50
+					flowState = True
+					isTweakable = True
+					hideFlow = False
+					flowMode = Both
+				}
+				RESOURCE
+				{
+					name = MonoPropellant
+					amount = 15
 					maxAmount = 15
+					flowState = True
+					isTweakable = True
+					hideFlow = False
+					flowMode = Both
+				}
+			}
+			PART
+			{
+				name = batteryBankMini
+				cid = 4294606328
+				uid = 149324706
+				mid = 254490813
+				launchID = 2
+				parent = 0
+				position = 0,0.725000381469727,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 0
+				dstg = 0
+				sqor = -1
+				sepI = 0
+				sidx = -1
+				attm = 0
+				srfN = srfAttach, -1
+				attN = top, -1
+				attN = bottom, 0
+				mass = 0.01
+				temp = 292.218263192679
+				tempExt = 292.880664774246
+				expt = 0.5
+				state = 0
+				connected = True
+				attached = True
+				flag = Squad/Flags/kerbin
+				rTrf = batteryBankMini
+				modCost = 0
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = CollisionFX
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				RESOURCE
+				{
+					name = ElectricCharge
+					amount = 200
+					maxAmount = 200
 					flowState = True
 					isTweakable = True
 					hideFlow = False
@@ -1427,9 +1675,9 @@ GAME
 			dumb = 0.5
 			badS = True
 			tour = False
-			state = Available
+			state = Assigned
 			ToD = 0
-			idx = -1
+			idx = 0
 			CAREER_LOG
 			{
 				flight = 0

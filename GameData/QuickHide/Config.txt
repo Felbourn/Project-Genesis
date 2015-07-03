@@ -1,0 +1,54 @@
+isHidden = True
+MouseHide = True
+TimeToKeep = 2
+StockToolBar = True
+BlizzyToolBar = True
+StockToolBar_ModApp = True
+CanPin
+{
+	Item = KerbalAlarmClock
+	Item = DistantObject
+	Item = HyperEdit
+	Item = QuickGoTo
+	Item = RCSBuildAid
+	Item = MechJeb2
+	Item = CameraTools
+	Item = KSPAlternateResourcePanel
+	Item = PlanetShine
+}
+CanHide
+{
+	Item = KerbalAlarmClock
+	Item = DistantObject
+	Item = HyperEdit
+	Item = QuickGoTo
+	Item = RCSBuildAid
+	Item = MechJeb2
+	Item = CameraTools
+	Item = KSPAlternateResourcePanel
+	Item = PlanetShine
+}
+CanSetFalse
+{
+	Item = KerbalAlarmClock
+	Item = DistantObject
+	Item = HyperEdit
+	Item = QuickGoTo
+	Item = RCSBuildAid
+	Item = MechJeb2
+	Item = CameraTools
+	Item = KSPAlternateResourcePanel
+	Item = PlanetShine
+}
+ModHasFirstConfig
+{
+	Item = KerbalAlarmClock
+	Item = DistantObject
+	Item = HyperEdit
+	Item = QuickGoTo
+	Item = RCSBuildAid
+	Item = MechJeb2
+	Item = CameraTools
+	Item = KSPAlternateResourcePanel
+	Item = PlanetShine
+}

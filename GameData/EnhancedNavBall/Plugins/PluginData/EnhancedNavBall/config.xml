@@ -6,7 +6,7 @@
         <ymin>0</ymin>
         <ymax>32</ymax>
     </rect>
-    <bool name="WindowVisibleByActiveScene">1</bool>
+    <bool name="WindowVisibleByActiveScene">0</bool>
     <string name="NavballPosition">0.3472222</string>
     <string name="NavballScale">0.8219297</string>
     <string name="GhostPosition">0.1</string>

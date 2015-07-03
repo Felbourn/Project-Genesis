@@ -1,4 +1,4 @@
-patchedNodeCount = 19
+patchedNodeCount = 430
 catEatenCount = 0
 UrlConfig
 {
@@ -204,6 +204,301 @@ UrlConfig
 					key = 25 0.3 0.0006807274 0
 				}
 			}
+		}
+	}
+}
+UrlConfig
+{
+	name = EXPERIMENT_DEFINITION
+	type = EXPERIMENT_DEFINITION
+	parentUrl = AsteroidDay/ScienceDefs
+	url = AsteroidDay/ScienceDefs/EXPERIMENT_DEFINITION
+	EXPERIMENT_DEFINITION
+	{
+		id = infraredTelescope
+		title = Infrared Telescope
+		baseValue = 20
+		scienceCap = 22
+		dataScale = 3
+		requireAtmosphere = False
+		situationMask = 32
+		biomeMask = 0
+		RESULTS
+		{
+			default = You focus the telescope out into space, scanning for celestial bodies.
+			KerbinInSpaceHigh = You scan for celestial bodies while orbiting high over Kerbin.
+		}
+	}
+}
+UrlConfig
+{
+	name = InfraredTelescope
+	type = PART
+	parentUrl = AsteroidDay/Parts/CamSat
+	url = AsteroidDay/Parts/CamSat/InfraredTelescope
+	PART
+	{
+		name = InfraredTelescope
+		module = Part
+		author = RoverDude
+		rescaleFactor = 1
+		node_stack_bottom = 0,-.14,0,0,-1,0,0
+		TechRequired = scienceTech
+		entryCost = 9000
+		cost = 4500
+		category = Science
+		subcategory = 0
+		title = SENTINEL Infrared Telescope
+		manufacturer = Experimental Engineering Group
+		description = The Sentinel Space Telescope uses infrared light to detect celestial bodies, such as asteroids, that may pose a risk to Kerbin.
+		attachRules = 1,0,0,1,0
+		mass = 0.1
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		angularDrag = 1
+		crashTolerance = 7
+		maxTemp = 2000
+		MODEL
+		{
+			model = AsteroidDay/Assets/CamSat
+		}
+		MODULE
+		{
+			name = ModuleScienceExperiment
+			experimentID = infraredTelescope
+			experimentActionName = Log Observation Data
+			resetActionName = Delete Data
+			useStaging = False
+			useActionGroups = True
+			hideUIwhenUnavailable = False
+			xmitDataScalar = 0.4
+			dataIsCollectable = True
+			collectActionName = Take Data
+			interactionRange = 1.2
+			rerunnable = True
+			usageReqMaskInternal = 1
+			usageReqMaskExternal = 8
+		}
+		MODULE
+		{
+			name = FlagDecal
+			textureQuadName = Flag
+		}
+		MODULE
+		{
+			name = SentinelModule
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+	}
+}
+UrlConfig
+{
+	name = HECS2_ProbeCore
+	type = PART
+	parentUrl = AsteroidDay/Parts/HECS2
+	url = AsteroidDay/Parts/HECS2/HECS2_ProbeCore
+	PART
+	{
+		name = HECS2_ProbeCore
+		module = Part
+		author = RoverDude
+		rescaleFactor = 1
+		node_stack_top = 0,.5,0,0,1,0,0
+		node_stack_bottom = 0,-.5,0,0,-1,0,0
+		TechRequired = advUnmanned
+		entryCost = 9000
+		cost = 4500
+		category = Pods
+		subcategory = 0
+		title = HECS-2 Probe Core
+		manufacturer = Probodobodyne Inc
+		description = An extra-large probe core based on the popular HECS design. With integrated battery banks, advanced flight controls, and a built in reaction wheel, the HECS-2 is a suitable probe core for larger satellites.
+		attachRules = 1,0,1,1,0
+		mass = 0.2
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		angularDrag = 1
+		crashTolerance = 8
+		vesselType = Probe
+		bulkheadProfiles = size1
+		MODEL
+		{
+			model = AsteroidDay/Assets/HECS2
+		}
+		MODULE
+		{
+			name = ModuleCommand
+			minimumCrew = 0
+			RESOURCE
+			{
+				name = ElectricCharge
+				rate = 0.05
+			}
+		}
+		RESOURCE
+		{
+			name = ElectricCharge
+			amount = 1000
+			maxAmount = 1000
+		}
+		MODULE
+		{
+			name = ModuleReactionWheel
+			PitchTorque = 10
+			YawTorque = 10
+			RollTorque = 10
+			RESOURCE
+			{
+				name = ElectricCharge
+				rate = 0.5
+			}
+		}
+		MODULE
+		{
+			name = ModuleSAS
+			SASServiceLevel = 3
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = MechJebCore
+			blacklist = MechJebModuleAscentAutopilot MechJebModuleAscentGuidance MechJebModuleAscentPathEditor MechJebModuleAttitudeAdjustment MechJebModuleDockingAutopilot MechJebModuleDockingGuidance MechJebModuleLandingAutopilot MechJebModuleLandingGuidance MechJebModuleLandingPredictions MechJebModuleNodeEditor MechJebModuleRendezvousAutopilot MechJebModuleRendezvousAutopilotWindow MechJebModuleRoverController MechJebModuleRoverWindow MechJebModuleSpaceplaneAutopilot MechJebModuleSpaceplaneGuidance MechJebModuleTranslatron MechJebModuleWarpHelper
+			RESOURCE
+			{
+				name = ElectricCharge
+				rate = 0.03
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = HighGainAntenna
+	type = PART
+	parentUrl = AsteroidDay/Parts/HighGainAntenna
+	url = AsteroidDay/Parts/HighGainAntenna/HighGainAntenna
+	PART
+	{
+		name = HighGainAntenna
+		module = Part
+		author = RoverDude
+		rescaleFactor = 1
+		node_attach = 0,0,0,0,-1,0,0
+		TechRequired = automation
+		entryCost = 4500
+		cost = 1500
+		category = Science
+		subcategory = 0
+		title = HG-55 High Gain Antenna
+		manufacturer = Ionic Symphonic Protonic Electronics
+		description = Designed for deep space probes, the HG-55 allows for high speed directional data transmission.
+		attachRules = 0,1,0,0,0
+		mass = 0.035
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		angularDrag = 1
+		crashTolerance = 7
+		maxTemp = 2000
+		MODEL
+		{
+			model = AsteroidDay/Assets/HighGainAntenna
+		}
+		MODULE
+		{
+			name = ModuleAnimateGeneric
+			animationName = Deploy
+			isOneShot = false
+			startEventGUIName = Extend
+			endEventGUIName = Retract
+			actionGUIName = Toggle Antenna
+			allowAnimationWhileShielded = False
+		}
+		MODULE
+		{
+			name = ModuleDataTransmitter
+			packetInterval = 0.15
+			packetSize = 3
+			packetResourceCost = 20.0
+			requiredResource = ElectricCharge
+			DeployFxModules = 0
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+	}
+}
+UrlConfig
+{
+	name = LgRadialSolarPanel
+	type = PART
+	parentUrl = AsteroidDay/Parts/LgRadialSolar
+	url = AsteroidDay/Parts/LgRadialSolar/LgRadialSolarPanel
+	PART
+	{
+		name = LgRadialSolarPanel
+		module = Part
+		author = RoverDude
+		rescaleFactor = 1
+		node_attach = 0,0,0,0,0,1,0
+		TechRequired = advElectrics
+		entryCost = 6000
+		cost = 600
+		category = Utility
+		subcategory = 0
+		title = OX-STAT-XL Photovoltaic Panels
+		manufacturer = Probodyne, Inc
+		description = A larger version of the OX-STAT, the XL version features a larger surface area than it's smaller cousin while retaining the cost and weight benefits of a static solar panel.
+		attachRules = 0,1,0,0,0
+		mass = 0.04
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		angularDrag = 1
+		crashTolerance = 8
+		maxTemp = 1200
+		MODEL
+		{
+			model = AsteroidDay/Assets/LgRadialSolar
+		}
+		MODULE
+		{
+			name = ModuleDeployableSolarPanel
+			sunTracking = false
+			raycastTransformName = suncatcher
+			pivotName = suncatcher
+			isBreakable = false
+			resourceName = ElectricCharge
+			chargeRate = 2.8
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -769,6 +1064,233 @@ UrlConfig
 }
 UrlConfig
 {
+	name = ACTIVE_TEXTURE_MANAGER_CONFIG
+	type = ACTIVE_TEXTURE_MANAGER_CONFIG
+	parentUrl = CameraTools/ATM_CameraTools
+	url = CameraTools/ATM_CameraTools/ACTIVE_TEXTURE_MANAGER_CONFIG
+	ACTIVE_TEXTURE_MANAGER_CONFIG
+	{
+		folder = CameraTools
+		enabled = true
+		OVERRIDES
+		{
+			CameraTools/Textures/.*
+			{
+				compress = true
+				mipmaps = false
+				scale = 1
+				max_size = 0
+				make_not_readable = false
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = KerbalEVA
+	type = KerbalEVA
+	parentUrl = CollisionFX/settings
+	url = CollisionFX/settings/KerbalEVA
+	KerbalEVA
+	{
+		scrapeSparks = false
+		collisionSound = CollisionFX/Sounds/Oof
+	}
+}
+UrlConfig
+{
+	name = Moho
+	type = CelestialBodyColor
+	parentUrl = DistantObject/PlanetColors
+	url = DistantObject/PlanetColors/Moho
+	CelestialBodyColor
+	{
+		name = Moho
+		color = 124,102,88
+	}
+}
+UrlConfig
+{
+	name = Eve
+	type = CelestialBodyColor
+	parentUrl = DistantObject/PlanetColors
+	url = DistantObject/PlanetColors/Eve
+	CelestialBodyColor
+	{
+		name = Eve
+		color = 104,76,141
+	}
+}
+UrlConfig
+{
+	name = Gilly
+	type = CelestialBodyColor
+	parentUrl = DistantObject/PlanetColors
+	url = DistantObject/PlanetColors/Gilly
+	CelestialBodyColor
+	{
+		name = Gilly
+		color = 134,119,103
+	}
+}
+UrlConfig
+{
+	name = Kerbin
+	type = CelestialBodyColor
+	parentUrl = DistantObject/PlanetColors
+	url = DistantObject/PlanetColors/Kerbin
+	CelestialBodyColor
+	{
+		name = Kerbin
+		color = 73,99,121
+	}
+}
+UrlConfig
+{
+	name = Mun
+	type = CelestialBodyColor
+	parentUrl = DistantObject/PlanetColors
+	url = DistantObject/PlanetColors/Mun
+	CelestialBodyColor
+	{
+		name = Mun
+		color = 80,82,81
+	}
+}
+UrlConfig
+{
+	name = Minmus
+	type = CelestialBodyColor
+	parentUrl = DistantObject/PlanetColors
+	url = DistantObject/PlanetColors/Minmus
+	CelestialBodyColor
+	{
+		name = Minmus
+		color = 187,253,228
+	}
+}
+UrlConfig
+{
+	name = Duna
+	type = CelestialBodyColor
+	parentUrl = DistantObject/PlanetColors
+	url = DistantObject/PlanetColors/Duna
+	CelestialBodyColor
+	{
+		name = Duna
+		color = 165,72,41
+	}
+}
+UrlConfig
+{
+	name = Ike
+	type = CelestialBodyColor
+	parentUrl = DistantObject/PlanetColors
+	url = DistantObject/PlanetColors/Ike
+	CelestialBodyColor
+	{
+		name = Ike
+		color = 64,64,64
+	}
+}
+UrlConfig
+{
+	name = Dres
+	type = CelestialBodyColor
+	parentUrl = DistantObject/PlanetColors
+	url = DistantObject/PlanetColors/Dres
+	CelestialBodyColor
+	{
+		name = Dres
+		color = 128,128,128
+	}
+}
+UrlConfig
+{
+	name = Jool
+	type = CelestialBodyColor
+	parentUrl = DistantObject/PlanetColors
+	url = DistantObject/PlanetColors/Jool
+	CelestialBodyColor
+	{
+		name = Jool
+		color = 117,173,78
+	}
+}
+UrlConfig
+{
+	name = Laythe
+	type = CelestialBodyColor
+	parentUrl = DistantObject/PlanetColors
+	url = DistantObject/PlanetColors/Laythe
+	CelestialBodyColor
+	{
+		name = Laythe
+		color = 88,92,106
+	}
+}
+UrlConfig
+{
+	name = Vall
+	type = CelestialBodyColor
+	parentUrl = DistantObject/PlanetColors
+	url = DistantObject/PlanetColors/Vall
+	CelestialBodyColor
+	{
+		name = Vall
+		color = 140,158,160
+	}
+}
+UrlConfig
+{
+	name = Tylo
+	type = CelestialBodyColor
+	parentUrl = DistantObject/PlanetColors
+	url = DistantObject/PlanetColors/Tylo
+	CelestialBodyColor
+	{
+		name = Tylo
+		color = 188,180,168
+	}
+}
+UrlConfig
+{
+	name = Bop
+	type = CelestialBodyColor
+	parentUrl = DistantObject/PlanetColors
+	url = DistantObject/PlanetColors/Bop
+	CelestialBodyColor
+	{
+		name = Bop
+		color = 100,86,76
+	}
+}
+UrlConfig
+{
+	name = Pol
+	type = CelestialBodyColor
+	parentUrl = DistantObject/PlanetColors
+	url = DistantObject/PlanetColors/Pol
+	CelestialBodyColor
+	{
+		name = Pol
+		color = 238,206,152
+	}
+}
+UrlConfig
+{
+	name = Eeloo
+	type = CelestialBodyColor
+	parentUrl = DistantObject/PlanetColors
+	url = DistantObject/PlanetColors/Eeloo
+	CelestialBodyColor
+	{
+		name = Eeloo
+		color = 200,205,201
+	}
+}
+UrlConfig
+{
 	name = ENVIRONMENTAL_VISUAL_ENHANCEMENTS
 	type = ENVIRONMENTAL_VISUAL_ENHANCEMENTS
 	parentUrl = EnvironmentalVisualEnhancements/settings
@@ -777,6 +1299,94 @@ UrlConfig
 	{
 		volumeHexRadius = 12000
 		volumeSegmentDiv = 3
+	}
+}
+UrlConfig
+{
+	name = FuseBoxMonitor
+	type = RPMCVARIABLEHANDLER
+	parentUrl = Fusebox/FuseboxVariables
+	url = Fusebox/FuseboxVariables/FuseBoxMonitor
+	RPMCVARIABLEHANDLER
+	{
+		name = FuseBoxMonitor
+		method = ProcessVariable
+		variable = FBAVAILABLE,0
+		variable = ELECTRICCONSUMPTION,0
+		variable = ELECTRICPRODUCTION,0
+		variable = ELECTRICDELTA,0
+		variable = ELECTRICSTATUS
+	}
+}
+UrlConfig
+{
+	name = Select
+	type = Select
+	parentUrl = Kerbaltek/HyperEdit/windowpos
+	url = Kerbaltek/HyperEdit/windowpos/Select
+	Select
+	{
+		x = 650
+		y = 200
+	}
+}
+UrlConfig
+{
+	name = HyperEdit
+	type = HyperEdit
+	parentUrl = Kerbaltek/HyperEdit/windowpos
+	url = Kerbaltek/HyperEdit/windowpos/HyperEdit
+	HyperEdit
+	{
+		x = 349
+		y = 138
+	}
+}
+UrlConfig
+{
+	name = Orbit_Editor
+	type = Orbit_Editor
+	parentUrl = Kerbaltek/HyperEdit/windowpos
+	url = Kerbaltek/HyperEdit/windowpos/Orbit_Editor
+	Orbit_Editor
+	{
+		x = 272
+		y = 415
+	}
+}
+UrlConfig
+{
+	name = Save_as...
+	type = Save_as...
+	parentUrl = Kerbaltek/HyperEdit/windowpos
+	url = Kerbaltek/HyperEdit/windowpos/Save_as...
+	Save_as...
+	{
+		x = 700
+		y = 400
+	}
+}
+UrlConfig
+{
+	name = Lander
+	type = Lander
+	parentUrl = Kerbaltek/HyperEdit/windowpos
+	url = Kerbaltek/HyperEdit/windowpos/Lander
+	Lander
+	{
+		x = 152
+		y = 374
+	}
+}
+UrlConfig
+{
+	name = DockingPortAlignment
+	type = DockingPortAlignment
+	parentUrl = NavyFish/Plugins/Docking Port Alignment Indicator/DPAI Settings
+	url = NavyFish/Plugins/Docking Port Alignment Indicator/DPAI Settings/DockingPortAlignment
+	DockingPortAlignment
+	{
+		forceStockAppLauncher = false
 	}
 }
 UrlConfig
@@ -2917,6 +3527,14 @@ UrlConfig
 		thermalMassModifier = 6.0
 		fuelCrossFeed = False
 		bulkheadProfiles = size1
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -2983,6 +3601,14 @@ UrlConfig
 				rotatorsName = PistonArm
 			}
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -3033,6 +3659,14 @@ UrlConfig
 			name = IntakeAir
 			amount = 0.6
 			maxAmount = 0.6
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -3087,6 +3721,14 @@ UrlConfig
 			ctrlSurfaceArea = 1
 			actuatorSpeed = 15
 			transformName = ControlSurface
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -3145,6 +3787,14 @@ UrlConfig
 			amount = 0
 			maxAmount = 600
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -3200,6 +3850,14 @@ UrlConfig
 			actuatorSpeed = 15
 			transformName = ctrlSrf
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -3252,6 +3910,14 @@ UrlConfig
 			ctrlSurfaceArea = 1
 			actuatorSpeed = 30
 			transformName = ctrlSrf
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -3306,6 +3972,14 @@ UrlConfig
 			actuatorSpeed = 20
 			transformName = ctrlSrf
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -3355,6 +4029,14 @@ UrlConfig
 			deflectionLiftCoeff = 1.37
 			dragAtMaxAoA = 0.6
 			dragAtMinAoA = 0.1
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -3409,6 +4091,14 @@ UrlConfig
 			actuatorSpeed = 25
 			transformName = ctrlSrf
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -3452,6 +4142,14 @@ UrlConfig
 			name = ModuleLiftingSurface
 			useInternalDragModel = True
 			deflectionLiftCoeff = 0.12
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -3517,6 +4215,14 @@ UrlConfig
 			name = ModuleAnimateHeat
 			ThermalAnim = IntakeCircularHeat
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -3581,6 +4287,14 @@ UrlConfig
 			name = ModuleAnimateHeat
 			ThermalAnim = IntakeConeHeat
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -3635,6 +4349,14 @@ UrlConfig
 			name = ModuleAnimateHeat
 			ThermalAnim = Cone_Heat
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -3680,6 +4402,14 @@ UrlConfig
 		{
 			name = ModuleAnimateHeat
 			ThermalAnim = Cone_Heat
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -3728,6 +4458,14 @@ UrlConfig
 		{
 			name = ModuleAnimateHeat
 			ThermalAnim = Cone_Heat
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -3781,6 +4519,14 @@ UrlConfig
 			name = ModuleAnimateHeat
 			ThermalAnim = Cone_Heat
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -3825,6 +4571,14 @@ UrlConfig
 		{
 			name = ModuleAnimateHeat
 			ThermalAnim = Cone_Heat
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -3873,6 +4627,14 @@ UrlConfig
 			name = ModuleAnimateHeat
 			ThermalAnim = Cone_Heat
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -3919,6 +4681,14 @@ UrlConfig
 		{
 			name = ModuleAnimateHeat
 			ThermalAnim = Cone_Heat
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -3987,6 +4757,14 @@ UrlConfig
 			name = ModuleAnimateHeat
 			ThermalAnim = Nacelle2Heat
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -4053,6 +4831,14 @@ UrlConfig
 		{
 			name = ModuleAnimateHeat
 			ThermalAnim = Nacelle1Heat
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -4128,6 +4914,14 @@ UrlConfig
 			closedPosition = 0
 			lookupRadius = 0.75
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -4201,6 +4995,14 @@ UrlConfig
 			DeployModuleIndex = 0
 			closedPosition = 0
 			lookupRadius = 1.25
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -4276,6 +5078,14 @@ UrlConfig
 			closedPosition = 0
 			lookupRadius = 2.5
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -4349,6 +5159,14 @@ UrlConfig
 			name = Ablator
 			amount = 200
 			maxAmount = 200
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -4425,6 +5243,14 @@ UrlConfig
 			amount = 800
 			maxAmount = 800
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -4500,6 +5326,14 @@ UrlConfig
 			amount = 1800
 			maxAmount = 1800
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -4552,6 +5386,14 @@ UrlConfig
 			amount = 0.082
 			maxAmount = 0.082
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -4589,6 +5431,14 @@ UrlConfig
 		emissiveConstant = 0.7
 		fuelCrossFeed = False
 		bulkheadProfiles = size2
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -4645,6 +5495,14 @@ UrlConfig
 		{
 			name = ModuleAnimateHeat
 			ThermalAnim = IntakeRampHeat
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -4703,6 +5561,14 @@ UrlConfig
 			amount = 0
 			maxAmount = 300
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -4753,6 +5619,14 @@ UrlConfig
 			ctrlSurfaceRange = 15
 			ctrlSurfaceArea = 1
 			transformName = Elevon
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -4808,6 +5682,14 @@ UrlConfig
 			actuatorSpeed = 35
 			transformName = Elevon
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -4861,6 +5743,14 @@ UrlConfig
 			ctrlSurfaceArea = 1
 			actuatorSpeed = 35
 			transformName = Elevon
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -4916,6 +5806,14 @@ UrlConfig
 			ctrlSurfaceArea = 0.29
 			actuatorSpeed = 35
 			transformName = ControlSurface
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -4974,6 +5872,14 @@ UrlConfig
 			amount = 0
 			maxAmount = 100
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -5021,6 +5927,14 @@ UrlConfig
 			ctrlSurfaceRange = 15
 			ctrlSurfaceArea = 0.95
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -5065,6 +5979,14 @@ UrlConfig
 			useInternalDragModel = True
 			deflectionLiftCoeff = 0.37
 			dragAtMaxAoA = 0.3
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -5113,6 +6035,14 @@ UrlConfig
 			deflectionLiftCoeff = 0.65
 			ctrlSurfaceRange = 25
 			ctrlSurfaceArea = 0.2
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -5164,6 +6094,14 @@ UrlConfig
 			dragAtMaxAoA = 0.5
 			dragAtMinAoA = 0.0
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -5213,6 +6151,14 @@ UrlConfig
 			deflectionLiftCoeff = 2.0
 			dragAtMaxAoA = 0.5
 			dragAtMinAoA = 0.0
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -5264,6 +6210,14 @@ UrlConfig
 			dragAtMaxAoA = 0.25
 			dragAtMinAoA = 0.0
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -5313,6 +6267,14 @@ UrlConfig
 			deflectionLiftCoeff = 0.5
 			dragAtMaxAoA = 0.12
 			dragAtMinAoA = 0.0
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -5364,6 +6326,14 @@ UrlConfig
 			dragAtMaxAoA = 0.12
 			dragAtMinAoA = 0.0
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -5414,6 +6384,14 @@ UrlConfig
 			dragAtMaxAoA = 0.6
 			dragAtMinAoA = 0.0
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -5463,6 +6441,14 @@ UrlConfig
 			deflectionLiftCoeff = 0.5
 			dragAtMaxAoA = 0.1
 			dragAtMinAoA = 0.0
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -5515,6 +6501,14 @@ UrlConfig
 			ctrlSurfaceArea = 1.0
 			transformName = Elevon1
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -5565,6 +6559,14 @@ UrlConfig
 			ctrlSurfaceRange = 20
 			ctrlSurfaceArea = 1.0
 			transformName = Elevon2
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -5617,6 +6619,14 @@ UrlConfig
 			ctrlSurfaceArea = 1.0
 			transformName = Elevon3
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -5667,6 +6677,14 @@ UrlConfig
 			ctrlSurfaceRange = 20
 			ctrlSurfaceArea = 1.0
 			transformName = Elevon4
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -5719,6 +6737,14 @@ UrlConfig
 			ctrlSurfaceArea = 1.0
 			transformName = Elevon5
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -5768,6 +6794,14 @@ UrlConfig
 			deflectionLiftCoeff = 0.5
 			dragAtMaxAoA = 0.2
 			dragAtMinAoA = 0.0
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -5819,6 +6853,14 @@ UrlConfig
 			dragAtMaxAoA = 0.3
 			dragAtMinAoA = 0.0
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -5868,6 +6910,14 @@ UrlConfig
 			deflectionLiftCoeff = 1
 			dragAtMaxAoA = 0.3
 			dragAtMinAoA = 0.0
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -5919,6 +6969,14 @@ UrlConfig
 			dragAtMaxAoA = 0.15
 			dragAtMinAoA = 0.0
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -5968,6 +7026,14 @@ UrlConfig
 			deflectionLiftCoeff = 0.25
 			dragAtMaxAoA = 0.08
 			dragAtMinAoA = 0.0
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -6019,6 +7085,14 @@ UrlConfig
 			dragAtMaxAoA = 0.3
 			dragAtMinAoA = 0.0
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -6068,6 +7142,14 @@ UrlConfig
 			deflectionLiftCoeff = 2.26
 			dragAtMaxAoA = 0.3
 			dragAtMinAoA = 0.0
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -6119,6 +7201,14 @@ UrlConfig
 		DRAG_CUBE
 		{
 			cube = Default, 1.245117,0.7806778,1.344706, 1.245117,0.7806778,1.344706, 4.643318,0.9183766,0.5737258, 4.643318,0.9590334,0.5462748, 1.245117,0.774645,1.344706, 1.245117,0.774645,1.344706, 0,0,0, 2.5,0.5000004,2.5
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -6219,6 +7309,14 @@ UrlConfig
 		}
 		MODULE
 		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
 			name = MechJebCore
 			blacklist = MechJebModuleAscentAutopilot MechJebModuleAscentGuidance MechJebModuleAscentPathEditor MechJebModuleAttitudeAdjustment MechJebModuleDockingAutopilot MechJebModuleDockingGuidance MechJebModuleLandingAutopilot MechJebModuleLandingGuidance MechJebModuleLandingPredictions MechJebModuleNodeEditor MechJebModuleRendezvousAutopilot MechJebModuleRendezvousAutopilotWindow MechJebModuleRoverController MechJebModuleRoverWindow MechJebModuleSpaceplaneAutopilot MechJebModuleSpaceplaneGuidance MechJebModuleTranslatron MechJebModuleWarpHelper
 			RESOURCE
@@ -6268,6 +7366,14 @@ UrlConfig
 			name = KerbalSeat
 			seatPivotName = seatPivot
 			ejectDirection = 0, 1, 0.2
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -6339,6 +7445,14 @@ UrlConfig
 			name = FlagDecal
 			textureQuadName = flagTransform
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -6387,6 +7501,14 @@ UrlConfig
 				rate = 0.45
 			}
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -6432,6 +7554,14 @@ UrlConfig
 				name = ElectricCharge
 				rate = 0.25
 			}
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -6541,6 +7671,14 @@ UrlConfig
 		}
 		MODULE
 		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
 			name = MechJebCore
 			blacklist = MechJebModuleAscentAutopilot MechJebModuleAscentGuidance MechJebModuleAscentPathEditor MechJebModuleAttitudeAdjustment MechJebModuleDockingAutopilot MechJebModuleDockingGuidance MechJebModuleLandingAutopilot MechJebModuleLandingGuidance MechJebModuleLandingPredictions MechJebModuleNodeEditor MechJebModuleRendezvousAutopilot MechJebModuleRendezvousAutopilotWindow MechJebModuleRoverController MechJebModuleRoverWindow MechJebModuleSpaceplaneAutopilot MechJebModuleSpaceplaneGuidance MechJebModuleTranslatron MechJebModuleWarpHelper
 			RESOURCE
@@ -6644,6 +7782,14 @@ UrlConfig
 		{
 			name = FlagDecal
 			textureQuadName = flagTransform
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 		MODULE
 		{
@@ -6762,6 +7908,14 @@ UrlConfig
 		}
 		MODULE
 		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
 			name = MechJebCore
 			blacklist = MechJebModuleAscentAutopilot MechJebModuleAscentGuidance MechJebModuleAscentPathEditor MechJebModuleAttitudeAdjustment MechJebModuleDockingAutopilot MechJebModuleDockingGuidance MechJebModuleLandingAutopilot MechJebModuleLandingGuidance MechJebModuleLandingPredictions MechJebModuleNodeEditor MechJebModuleRendezvousAutopilot MechJebModuleRendezvousAutopilotWindow MechJebModuleRoverController MechJebModuleRoverWindow MechJebModuleSpaceplaneAutopilot MechJebModuleSpaceplaneGuidance MechJebModuleTranslatron MechJebModuleWarpHelper
 			RESOURCE
@@ -6866,6 +8020,14 @@ UrlConfig
 		{
 			name = FlagDecal
 			textureQuadName = flagTransform
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 		MODULE
 		{
@@ -6982,6 +8144,14 @@ UrlConfig
 			name = ModuleConductionMultiplier
 			modifiedConductionFactor = 0.003
 			convectionFluxThreshold = 3000
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 		MODULE
 		{
@@ -7113,6 +8283,14 @@ UrlConfig
 		}
 		MODULE
 		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
 			name = MechJebCore
 			blacklist = MechJebModuleAscentAutopilot MechJebModuleAscentGuidance MechJebModuleAscentPathEditor MechJebModuleAttitudeAdjustment MechJebModuleDockingAutopilot MechJebModuleDockingGuidance MechJebModuleLandingAutopilot MechJebModuleLandingGuidance MechJebModuleLandingPredictions MechJebModuleNodeEditor MechJebModuleRendezvousAutopilot MechJebModuleRendezvousAutopilotWindow MechJebModuleRoverController MechJebModuleRoverWindow MechJebModuleSpaceplaneAutopilot MechJebModuleSpaceplaneGuidance MechJebModuleTranslatron MechJebModuleWarpHelper
 			RESOURCE
@@ -7239,6 +8417,14 @@ UrlConfig
 		}
 		MODULE
 		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
 			name = MechJebCore
 			blacklist = MechJebModuleAscentAutopilot MechJebModuleAscentGuidance MechJebModuleAscentPathEditor MechJebModuleAttitudeAdjustment MechJebModuleDockingAutopilot MechJebModuleDockingGuidance MechJebModuleLandingAutopilot MechJebModuleLandingGuidance MechJebModuleLandingPredictions MechJebModuleNodeEditor MechJebModuleRendezvousAutopilot MechJebModuleRendezvousAutopilotWindow MechJebModuleRoverController MechJebModuleRoverWindow MechJebModuleSpaceplaneAutopilot MechJebModuleSpaceplaneGuidance MechJebModuleTranslatron MechJebModuleWarpHelper
 			RESOURCE
@@ -7316,6 +8502,14 @@ UrlConfig
 		{
 			name = ModuleSAS
 			SASServiceLevel = 3
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 		MODULE
 		{
@@ -7424,6 +8618,14 @@ UrlConfig
 		{
 			name = FlagDecal
 			textureQuadName = flagTransform
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 		MODULE
 		{
@@ -7547,6 +8749,14 @@ UrlConfig
 		}
 		MODULE
 		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
 			name = MechJebCore
 			blacklist = MechJebModuleAscentAutopilot MechJebModuleAscentGuidance MechJebModuleAscentPathEditor MechJebModuleAttitudeAdjustment MechJebModuleDockingAutopilot MechJebModuleDockingGuidance MechJebModuleLandingAutopilot MechJebModuleLandingGuidance MechJebModuleLandingPredictions MechJebModuleNodeEditor MechJebModuleRendezvousAutopilot MechJebModuleRendezvousAutopilotWindow MechJebModuleRoverController MechJebModuleRoverWindow MechJebModuleSpaceplaneAutopilot MechJebModuleSpaceplaneGuidance MechJebModuleTranslatron MechJebModuleWarpHelper
 			RESOURCE
@@ -7611,6 +8821,14 @@ UrlConfig
 		MODULE
 		{
 			name = ModuleSAS
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 		MODULE
 		{
@@ -7694,6 +8912,14 @@ UrlConfig
 		}
 		MODULE
 		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
 			name = MechJebCore
 			blacklist = MechJebModuleAscentAutopilot MechJebModuleAscentGuidance MechJebModuleAscentPathEditor MechJebModuleAttitudeAdjustment MechJebModuleDockingAutopilot MechJebModuleDockingGuidance MechJebModuleLandingAutopilot MechJebModuleLandingGuidance MechJebModuleLandingPredictions MechJebModuleNodeEditor MechJebModuleRendezvousAutopilot MechJebModuleRendezvousAutopilotWindow MechJebModuleRoverController MechJebModuleRoverWindow MechJebModuleSpaceplaneAutopilot MechJebModuleSpaceplaneGuidance MechJebModuleTranslatron MechJebModuleWarpHelper
 			RESOURCE
@@ -7773,6 +8999,14 @@ UrlConfig
 		}
 		MODULE
 		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
 			name = MechJebCore
 			blacklist = MechJebModuleAscentAutopilot MechJebModuleAscentGuidance MechJebModuleAscentPathEditor MechJebModuleAttitudeAdjustment MechJebModuleDockingAutopilot MechJebModuleDockingGuidance MechJebModuleLandingAutopilot MechJebModuleLandingGuidance MechJebModuleLandingPredictions MechJebModuleNodeEditor MechJebModuleRendezvousAutopilot MechJebModuleRendezvousAutopilotWindow MechJebModuleRoverController MechJebModuleRoverWindow MechJebModuleSpaceplaneAutopilot MechJebModuleSpaceplaneGuidance MechJebModuleTranslatron MechJebModuleWarpHelper
 			RESOURCE
@@ -7841,6 +9075,14 @@ UrlConfig
 		}
 		MODULE
 		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
 			name = MechJebCore
 			blacklist = MechJebModuleAscentAutopilot MechJebModuleAscentGuidance MechJebModuleAscentPathEditor MechJebModuleAttitudeAdjustment MechJebModuleDockingAutopilot MechJebModuleDockingGuidance MechJebModuleLandingAutopilot MechJebModuleLandingGuidance MechJebModuleLandingPredictions MechJebModuleNodeEditor MechJebModuleRendezvousAutopilot MechJebModuleRendezvousAutopilotWindow MechJebModuleRoverController MechJebModuleRoverWindow MechJebModuleSpaceplaneAutopilot MechJebModuleSpaceplaneGuidance MechJebModuleTranslatron MechJebModuleWarpHelper
 			RESOURCE
@@ -7904,6 +9146,14 @@ UrlConfig
 		MODULE
 		{
 			name = ModuleSAS
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 		MODULE
 		{
@@ -7987,6 +9237,14 @@ UrlConfig
 		}
 		MODULE
 		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
 			name = MechJebCore
 			blacklist = MechJebModuleAscentAutopilot MechJebModuleAscentGuidance MechJebModuleAscentPathEditor MechJebModuleAttitudeAdjustment MechJebModuleDockingAutopilot MechJebModuleDockingGuidance MechJebModuleLandingAutopilot MechJebModuleLandingGuidance MechJebModuleLandingPredictions MechJebModuleNodeEditor MechJebModuleRendezvousAutopilot MechJebModuleRendezvousAutopilotWindow MechJebModuleRoverController MechJebModuleRoverWindow MechJebModuleSpaceplaneAutopilot MechJebModuleSpaceplaneGuidance MechJebModuleTranslatron MechJebModuleWarpHelper
 			RESOURCE
@@ -8067,6 +9325,14 @@ UrlConfig
 		}
 		MODULE
 		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
 			name = MechJebCore
 			blacklist = MechJebModuleAscentAutopilot MechJebModuleAscentGuidance MechJebModuleAscentPathEditor MechJebModuleAttitudeAdjustment MechJebModuleDockingAutopilot MechJebModuleDockingGuidance MechJebModuleLandingAutopilot MechJebModuleLandingGuidance MechJebModuleLandingPredictions MechJebModuleNodeEditor MechJebModuleRendezvousAutopilot MechJebModuleRendezvousAutopilotWindow MechJebModuleRoverController MechJebModuleRoverWindow MechJebModuleSpaceplaneAutopilot MechJebModuleSpaceplaneGuidance MechJebModuleTranslatron MechJebModuleWarpHelper
 			RESOURCE
@@ -8126,6 +9392,14 @@ UrlConfig
 			name = ElectricCharge
 			amount = 10
 			maxAmount = 10
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 		MODULE
 		{
@@ -8193,6 +9467,14 @@ UrlConfig
 		{
 			none = True
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -8250,6 +9532,14 @@ UrlConfig
 		{
 			none = True
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -8292,6 +9582,14 @@ UrlConfig
 			animationName = solarpanels2
 			resourceName = ElectricCharge
 			chargeRate = 1.64
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -8337,6 +9635,14 @@ UrlConfig
 			chargeRate = 1.64
 			retractable = false
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -8379,6 +9685,14 @@ UrlConfig
 			animationName = solarpanels
 			resourceName = ElectricCharge
 			chargeRate = 1.64
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -8424,6 +9738,14 @@ UrlConfig
 			chargeRate = 1.64
 			retractable = false
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -8468,6 +9790,14 @@ UrlConfig
 			resourceName = ElectricCharge
 			chargeRate = 24.4
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -8511,6 +9841,14 @@ UrlConfig
 			isBreakable = false
 			resourceName = ElectricCharge
 			chargeRate = 0.35
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -8558,6 +9896,14 @@ UrlConfig
 				rate = 0.75
 			}
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -8598,6 +9944,14 @@ UrlConfig
 			amount = 100
 			maxAmount = 100
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -8637,6 +9991,14 @@ UrlConfig
 			name = ElectricCharge
 			amount = 1000
 			maxAmount = 1000
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -8679,6 +10041,14 @@ UrlConfig
 			amount = 200
 			maxAmount = 200
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -8718,6 +10088,14 @@ UrlConfig
 			name = ElectricCharge
 			amount = 400
 			maxAmount = 400
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -8759,6 +10137,14 @@ UrlConfig
 			amount = 4000
 			maxAmount = 4000
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -8796,7 +10182,7 @@ UrlConfig
 		bulkheadProfiles = size0
 		MODULE
 		{
-			name = ModuleEngines
+			name = ModuleEnginesFX
 			thrustVectorTransformName = thrustTransform
 			exhaustDamage = False
 			ignitionThreshold = 0.1
@@ -8804,6 +10190,7 @@ UrlConfig
 			maxThrust = 2
 			heatProduction = 0
 			EngineType = Electric
+			powerEffectName = powerflame
 			PROPELLANT
 			{
 				name = ElectricCharge
@@ -8834,6 +10221,48 @@ UrlConfig
 			environments = 15
 			useStaging = True
 			useEvent = True
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = tjs_EngineLight
+			isDebug = true
+			lightPower = 0.7
+			lightRange = 40.0
+			maxLightPower = 23.0
+			lightRed = 0.47
+			lightGreen = 0.83
+			lightBlue = 0.94
+			jitterMultiplier = 1.3
+			multiplierOnIva = 0.5
+		}
+		EFFECTS
+		{
+			powerflame
+			{
+				MODEL_MULTI_PARTICLE_PERSIST
+				{
+					name = flameion1
+					modelName = MP_Nazari/FX/flameion
+					transformName = thrustTransform
+					emission = 0.0 0.0
+					emission = 0.10 0.00
+					emission = 0.15 0.45
+					emission = 1.0 0.75
+					speed = 0.0 0.75
+					speed = 1.0 0.97
+					energy = 0.0 0.33
+					energy = 1.0 0.99
+					fixedEmissions = false
+				}
+			}
 		}
 	}
 }
@@ -8885,10 +10314,8 @@ UrlConfig
 			engineDecelerationSpeed = 0.5
 			fxOffset = 0, 0, 0.74
 			flameoutEffectName = flameout
-			powerEffectName = running_thrust
 			engageEffectName = engage
 			disengageEffectName = disengage
-			spoolEffectName = running_turbine
 			engineSpoolIdle = 0.05
 			engineSpoolTime = 2.0
 			EngineType = Turbine
@@ -8898,6 +10325,8 @@ UrlConfig
 			flameoutBar = 0.02
 			machLimit = 0.75
 			machHeatMult = 3.5
+			powerEffectName = powerflame
+			spoolEffectName = powersmoke
 			PROPELLANT
 			{
 				name = LiquidFuel
@@ -9062,6 +10491,104 @@ UrlConfig
 				}
 			}
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		EFFECTS
+		{
+			powerflame
+			{
+				MODEL_MULTI_PARTICLE_PERSIST
+				{
+					name = flamejet3
+					modelName = MP_Nazari/FX/flamejet3
+					transformName = thrustTransform
+					emission = 0.0 0.0
+					emission = 0.42 0.0
+					emission = 0.54 1.55
+					emission = 1.0 1.78
+					speed = 0.0 1.45
+					speed = 1.0 0.55
+					energy = 0.0 0.05
+					energy = 0.5 0.77
+					energy = 1.0 0.99
+					fixedEmissions = false
+				}
+			}
+			powersmoke
+			{
+				AUDIO
+				{
+					name = sndjet1
+					channel = Ship
+					clip = sound_jet_low
+					volume = 0.0 0.0
+					volume = 0.0001 1.12
+					volume = 1.0 1.32
+					pitch = 0.0 0.3
+					pitch = 1.0 1.0
+					loop = true
+				}
+				AUDIO
+				{
+					name = sndjet2
+					channel = Ship
+					clip = sound_jet_deep
+					volume = 0.1 0.0
+					volume = 0.3 1.12
+					volume = 1.0 1.25
+					pitch = 0.0 0.3
+					pitch = 1.0 1.0
+					loop = true
+				}
+				MODEL_MULTI_PARTICLE_PERSIST
+				{
+					name = smokethrust
+					modelName = MP_Nazari/FX/smokejet
+					transformName = thrustTransform
+					emission = 0.0 0.0
+					emission = 0.2 0.0
+					emission = 0.4 0.4
+					emission = 1.0 1.1
+					energy = 0.0 0.0
+					energy = 1.0 3.2
+					speed = 0.0 1.0
+					speed = 1.0 0.8
+					grow = 0.0 0.0
+					grow = 1.0 0.15
+					scale = 0.0 1.0
+					scale = 1.0 1.0
+					offset = 0.0 0.0
+					offset = 1.0 0.5
+					size = 0.0 1.0
+					size = 1.0 1.1
+					renderMode = "Billboard"
+					collide = false
+					collideRatio = 0
+					fixedScale = 1.0
+					sizeClamp = 50
+					angle = 0.0 1.0
+					angle = 45.0 1.0
+					angle = 50.0 1.0
+					distance = 0.0 1.0
+					distance = 100.0 1.0
+					distance = 110.0 1.0
+					energy
+					{
+						density = 1.0 1.0
+						density = 0.4 1.0
+						density = 0.3 1.0
+						density = 0.002 1.0
+						density = 0.001 0.0
+					}
+				}
+			}
+		}
 	}
 }
 UrlConfig
@@ -9112,8 +10639,6 @@ UrlConfig
 			engineDecelerationSpeed = 0.4
 			useVelocityCurve = False
 			flameoutEffectName = flameout
-			powerEffectName = running_thrust
-			runningEffectName = shockDiamond
 			engageEffectName = engage
 			disengageEffectName = disengage
 			spoolEffectName = running_turbine
@@ -9125,6 +10650,8 @@ UrlConfig
 			useAtmCurve = True
 			machLimit = 2.5
 			machHeatMult = 6.0
+			runningEffectName = powersmoke
+			powerEffectName = powerflame
 			PROPELLANT
 			{
 				name = LiquidFuel
@@ -9206,48 +10733,125 @@ UrlConfig
 			falloff = 2
 			thrustTransformName = thrustTransform
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 		EFFECTS
 		{
-			running_thrust
+			powerflame
 			{
-				AUDIO
+				MODEL_MULTI_PARTICLE_PERSIST
 				{
-					channel = Ship
-					clip = sound_jet_deep
-					volume = 0.0 0.0
-					volume = 0.05 0.4
-					volume = 1.0 0.9
-					pitch = 0.0 0.8
-					pitch = 1.0 1.4
-					loop = true
-				}
-				PREFAB_PARTICLE
-				{
-					prefabName = fx_smokeTrail_light
+					name = flamejet1
+					modelName = MP_Nazari/FX/flamejet
 					transformName = thrustTransform
 					emission = 0.0 0.0
-					emission = 0.05 0.0
-					emission = 0.075 0.25
-					emission = 1.0 1.25
-					speed = 0.0 0.25
-					speed = 1.0 1.0
-					localOffset = 0, 0, 1
-					localRotation = 1, 0, 0, -90
+					emission = 0.54 0.0
+					emission = 0.70 1.4
+					emission = 1.0 1.5
+					speed = 0.0 1.5
+					speed = 1.0 1.2
+					energy = 0.0 0.05
+					energy = 0.7 0.33
+					energy = 1.0 0.99
+					fixedEmissions = false
+					logGrow
+					{
+						density = 0 8
+						density = 1 0.7
+						density = 10 0
+					}
 				}
-			}
-			shockDiamond
-			{
+				AUDIO
+				{
+					name = sndjet2
+					channel = Ship
+					clip = sound_jet_deep
+					volume = 0.1 0.0
+					volume = 0.3 1.12
+					volume = 1.0 1.25
+					pitch = 0.0 0.4
+					pitch = 1.0 1.0
+					loop = true
+				}
 				MODEL_MULTI_PARTICLE
 				{
 					modelName = Squad/FX/afterburner_shock
 					transformName = thrustTransform
 					emission = 0.0 0.0
-					emission = 0.4 0.0
-					emission = 0.6 0.8
-					emission = 1 1.15
-					speed = 0.4 0.3
-					speed = 0.6 0.8
-					speed = 1.0 1.15
+					emission = 0.97 0.0
+					emission = 0.98 0.2
+					emission = 1 1.0
+					speed = 0.7 0.05
+					speed = 0.9 0.16
+					speed = 1.0 0.24
+				}
+			}
+			powersmoke
+			{
+				AUDIO
+				{
+					name = sndjet1
+					channel = Ship
+					clip = sound_jet_low
+					volume = 0.0 0.0
+					volume = 0.0001 1.12
+					volume = 1.0 1.25
+					pitch = 0.0 0.4
+					pitch = 1.0 1.05
+					loop = true
+				}
+				MODEL_MULTI_PARTICLE_PERSIST
+				{
+					name = smokethrust
+					modelName = MP_Nazari/FX/smokejet
+					transformName = thrustTransform
+					emission = 0.0 0.0
+					emission = 0.2 0.0
+					emission = 0.4 0.4
+					emission = 1.0 1.1
+					energy = 0.0 0.2
+					energy = 1.0 3.2
+					speed = 0.0 1.0
+					speed = 1.0 0.8
+					grow = 0.0 0.0
+					grow = 1.0 0.15
+					scale = 0.0 1.0
+					scale = 1.0 1.0
+					offset = 0.0 0.0
+					offset = 1.0 0.5
+					size = 0.0 1.0
+					size = 1.0 1.1
+					renderMode = "Billboard"
+					collide = false
+					collideRatio = 0
+					fixedScale = 1.0
+					sizeClamp = 50
+					angle = 0.0 1.0
+					angle = 45.0 1.0
+					angle = 50.0 1.0
+					distance = 0.0 1.0
+					distance = 100.0 1.0
+					distance = 110.0 1.0
+					energy
+					{
+						density = 1.0 1.0
+						density = 0.4 1.0
+						density = 0.3 1.0
+						density = 0.002 1.0
+						density = 0.001 0.0
+					}
+					logGrow
+					{
+						density = 0 8
+						density = 1 0.7
+						density = 10 0
+					}
 				}
 			}
 			running_turbine
@@ -9263,17 +10867,6 @@ UrlConfig
 					pitch = 0.05 0.6
 					pitch = 1.0 1.2
 					loop = true
-				}
-				MODEL_MULTI_PARTICLE
-				{
-					modelName = Squad/FX/afterburner_flame
-					transformName = thrustTransform
-					emission = 0.0 0.0
-					emission = 0.2 0.0
-					emission = 0.3 0.8
-					emission = 1.0 1.15
-					speed = 0.0 0.8
-					speed = 1.0 1.15
 				}
 			}
 			engage
@@ -9438,6 +11031,27 @@ UrlConfig
 			useStaging = True
 			useEvent = True
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = tjs_EngineLight
+			isDebug = true
+			lightPower = 1.0
+			lightRange = 40.0
+			maxLightPower = 23.0
+			lightRed = 1
+			lightGreen = 0.88
+			lightBlue = 0.68
+			jitterMultiplier = 10.5
+			multiplierOnIva = 0.5
+		}
 	}
 }
 UrlConfig
@@ -9571,6 +11185,27 @@ UrlConfig
 			useStaging = True
 			useEvent = True
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = tjs_EngineLight
+			isDebug = true
+			lightPower = 1.0
+			lightRange = 40.0
+			maxLightPower = 23.0
+			lightRed = 1
+			lightGreen = 0.88
+			lightBlue = 0.68
+			jitterMultiplier = 10.5
+			multiplierOnIva = 0.5
+		}
 	}
 }
 UrlConfig
@@ -9616,15 +11251,16 @@ UrlConfig
 		bulkheadProfiles = size1
 		MODULE
 		{
-			name = ModuleEngines
+			name = ModuleEnginesFX
 			thrustVectorTransformName = thrustTransform
 			exhaustDamage = True
 			ignitionThreshold = 0.1
 			minThrust = 0
 			maxThrust = 180
 			heatProduction = 110
-			fxOffset = 0, 0, 0.25
 			EngineType = LiquidFuel
+			spoolEffectName = powersmoke
+			powerEffectName = powerflame
 			PROPELLANT
 			{
 				name = LiquidFuel
@@ -9673,6 +11309,205 @@ UrlConfig
 			maxDistance = 40
 			falloff = 1.7
 			thrustTransformName = thrustTransform
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = tjs_EngineLight
+			isDebug = true
+			lightPower = 1.0
+			lightRange = 40.0
+			maxLightPower = 23.0
+			lightRed = 1
+			lightGreen = 0.88
+			lightBlue = 0.68
+			jitterMultiplier = 10.5
+			multiplierOnIva = 0.5
+		}
+		EFFECTS
+		{
+			powerflame
+			{
+				MODEL_MULTI_PARTICLE_PERSIST
+				{
+					name = flamejet1
+					modelName = MP_Nazari/FX/flamejet
+					transformName = thrustTransform
+					emission = 0.0 0.0
+					emission = 0.67 0.0
+					emission = 0.71 1.4
+					emission = 1.0 3.5
+					speed = 0.0 1.65
+					speed = 1.0 1.25
+					energy = 0.0 0.33
+					energy = 1.0 0.99
+					fixedEmissions = false
+					logGrow
+					{
+						density = 0 8
+						density = 1 0.7
+						density = 10 0
+					}
+				}
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_rocket_hard
+					volume = 0.0 0.0
+					volume = 1.0 1.0
+					pitch = 0.0 0.2
+					pitch = 1.0 1.0
+					loop = true
+				}
+			}
+			powersmoke
+			{
+				MODEL_MULTI_PARTICLE_PERSIST
+				{
+					name = smokethrust
+					modelName = MP_Nazari/FX/smokejet
+					transformName = thrustTransform
+					emission = 0.0 0.0
+					emission = 0.07 0.0
+					emission = 0.2 0.4
+					emission = 1.0 1.1
+					energy = 0.0 0.2
+					energy = 1.0 3.2
+					speed = 0.0 1.0
+					speed = 1.0 0.8
+					grow = 0.0 0.0
+					grow = 1.0 0.15
+					scale = 0.0 1.0
+					scale = 1.0 1.0
+					offset = 0.0 0.0
+					offset = 1.0 0.5
+					size = 0.0 1.0
+					size = 1.0 1.1
+					renderMode = "Billboard"
+					collide = false
+					collideRatio = 0
+					fixedScale = 1.0
+					sizeClamp = 50
+					angle = 0.0 1.0
+					angle = 45.0 1.0
+					angle = 50.0 1.0
+					distance = 0.0 1.0
+					distance = 100.0 1.0
+					distance = 110.0 1.0
+					emission
+					{
+						mach = 0.0 1.0
+						mach = 0.8 1.0
+						mach = 1.0 1.0
+						density = 1.0 1.0
+						density = 0.4 1.0
+						density = 0.3 1.0
+						density = 0.002 1.0
+						density = 0.001 0.0
+					}
+					logGrow
+					{
+						density = 0 8
+						density = 1 0.7
+						density = 10 0
+					}
+				}
+				MODEL_MULTI_PARTICLE_PERSIST
+				{
+					name = smokelaunch
+					modelName = MP_Nazari/FX/smokelaunch
+					transformName = thrustTransform
+					emission = 0.0 0.0
+					emission = 0.05 0.0
+					emission = 0.2 0.5
+					emission = 1.0 1.8
+					energy = 0.0 0.2
+					energy = 1.0 1.1
+					speed = 0.0 0.1
+					speed = 1.0 0.15
+					grow = 0.0 0.0
+					grow = 1.0 0.75
+					size = 0.0 1.0
+					size = 1.0 1.5
+					renderMode = "Billboard"
+					collide = true
+					collideRatio = 0.12
+					fixedScale = 1.0
+					sizeClamp = 50
+					angle = 0.0 1.0
+					angle = 45.0 1.0
+					angle = 50.0 1.0
+					distance = 0.0 1.0
+					distance = 100.0 1.0
+					distance = 550.0 0.0
+					initialDensity = 2.25
+					physical = true
+					stickiness = 0.8
+					dragCoefficient = 1
+					logarithmicGrowth = 2.75
+					fixedEmissions = true
+					randomInitalVelocityOffsetMaxRadius = 15.5
+					emission
+					{
+						mach = 0.0 1.25
+						mach = 0.05 0.0
+						mach = 1.0 0.0
+					}
+					logGrow
+					{
+						power = 0 0
+						power = 1 2
+						density = 0 8
+						density = 1 0.7
+						density = 10 0
+					}
+					Grow
+					{
+						power = 0 0
+						power = 1 2
+					}
+				}
+			}
+			engage
+			{
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_vent_medium
+					volume = 1.0
+					pitch = 2.0
+					loop = false
+				}
+			}
+			disengage
+			{
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_vent_soft
+					volume = 1.0
+					pitch = 2.0
+					loop = false
+				}
+			}
+			flameout
+			{
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_explosion_low
+					volume = 1.0
+					pitch = 2.0
+					loop = false
+				}
+			}
 		}
 	}
 }
@@ -9751,6 +11586,27 @@ UrlConfig
 			environments = 8
 			useStaging = False
 			useEvent = True
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = tjs_EngineLight
+			isDebug = true
+			lightPower = 1.0
+			lightRange = 40.0
+			maxLightPower = 23.0
+			lightRed = 1
+			lightGreen = 0.88
+			lightBlue = 0.68
+			jitterMultiplier = 10.5
+			multiplierOnIva = 0.5
 		}
 	}
 }
@@ -9835,6 +11691,27 @@ UrlConfig
 			gimbalTransformName = thrustTransform
 			gimbalRange = 8
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = tjs_EngineLight
+			isDebug = true
+			lightPower = 1.0
+			lightRange = 40.0
+			maxLightPower = 23.0
+			lightRed = 1
+			lightGreen = 0.88
+			lightBlue = 0.68
+			jitterMultiplier = 10.5
+			multiplierOnIva = 0.5
+		}
 	}
 }
 UrlConfig
@@ -9880,15 +11757,16 @@ UrlConfig
 		bulkheadProfiles = size1
 		MODULE
 		{
-			name = ModuleEngines
+			name = ModuleEnginesFX
 			thrustVectorTransformName = thrustTransform
 			exhaustDamage = True
 			ignitionThreshold = 0.1
 			minThrust = 0
 			maxThrust = 60
 			heatProduction = 80
-			fxOffset = 0, 0, 0.21
 			EngineType = LiquidFuel
+			spoolEffectName = powersmoke
+			powerEffectName = powerflame
 			PROPELLANT
 			{
 				name = LiquidFuel
@@ -9944,6 +11822,205 @@ UrlConfig
 			falloff = 1.7
 			thrustTransformName = thrustTransform
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = tjs_EngineLight
+			isDebug = true
+			lightPower = 1.0
+			lightRange = 40.0
+			maxLightPower = 23.0
+			lightRed = 1
+			lightGreen = 0.88
+			lightBlue = 0.68
+			jitterMultiplier = 10.5
+			multiplierOnIva = 0.5
+		}
+		EFFECTS
+		{
+			powerflame
+			{
+				MODEL_MULTI_PARTICLE_PERSIST
+				{
+					name = flamethrust
+					modelName = MP_Nazari/FX/flamestandard
+					transformName = thrustTransform
+					emission = 0.0 0.0
+					emission = 0.05 0.99
+					emission = 0.75 1.21
+					emission = 1.0 1.25
+					speed = 0.0 1.70
+					speed = 1.0 1.65
+					energy = 0.0 0.33
+					energy = 1.0 0.99
+					fixedEmissions = false
+					logGrow
+					{
+						density = 0 8
+						density = 1 0.7
+						density = 10 0
+					}
+				}
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_rocket_hard
+					volume = 0.0 0.0
+					volume = 1.0 1.0
+					pitch = 0.0 0.2
+					pitch = 1.0 1.0
+					loop = true
+				}
+			}
+			powersmoke
+			{
+				MODEL_MULTI_PARTICLE_PERSIST
+				{
+					name = smokethrust
+					modelName = MP_Nazari/FX/smokejet
+					transformName = thrustTransform
+					emission = 0.0 0.0
+					emission = 0.07 0.0
+					emission = 0.2 0.4
+					emission = 1.0 1.1
+					energy = 0.0 0.2
+					energy = 1.0 3.2
+					speed = 0.0 1.0
+					speed = 1.0 0.8
+					grow = 0.0 0.0
+					grow = 1.0 0.15
+					scale = 0.0 1.0
+					scale = 1.0 1.0
+					offset = 0.0 0.0
+					offset = 1.0 0.5
+					size = 0.0 1.0
+					size = 1.0 1.1
+					renderMode = "Billboard"
+					collide = false
+					collideRatio = 0
+					fixedScale = 1.0
+					sizeClamp = 50
+					angle = 0.0 1.0
+					angle = 45.0 1.0
+					angle = 50.0 1.0
+					distance = 0.0 1.0
+					distance = 100.0 1.0
+					distance = 110.0 1.0
+					emission
+					{
+						mach = 0.0 1.0
+						mach = 0.8 1.0
+						mach = 1.0 1.0
+						density = 1.0 1.0
+						density = 0.4 1.0
+						density = 0.3 1.0
+						density = 0.002 1.0
+						density = 0.001 0.0
+					}
+					logGrow
+					{
+						density = 0 8
+						density = 1 0.7
+						density = 10 0
+					}
+				}
+				MODEL_MULTI_PARTICLE_PERSIST
+				{
+					name = smokelaunch
+					modelName = MP_Nazari/FX/smokelaunch
+					transformName = thrustTransform
+					emission = 0.0 0.0
+					emission = 0.05 0.0
+					emission = 0.2 0.5
+					emission = 1.0 1.8
+					energy = 0.0 0.2
+					energy = 1.0 1.1
+					speed = 0.0 0.1
+					speed = 1.0 0.15
+					grow = 0.0 0.0
+					grow = 1.0 0.75
+					size = 0.0 1.0
+					size = 1.0 1.5
+					renderMode = "Billboard"
+					collide = true
+					collideRatio = 0.12
+					fixedScale = 1.0
+					sizeClamp = 50
+					angle = 0.0 1.0
+					angle = 45.0 1.0
+					angle = 50.0 1.0
+					distance = 0.0 1.0
+					distance = 100.0 1.0
+					distance = 550.0 0.0
+					initialDensity = 2.25
+					physical = true
+					stickiness = 0.8
+					dragCoefficient = 1
+					logarithmicGrowth = 2.75
+					fixedEmissions = true
+					randomInitalVelocityOffsetMaxRadius = 15.5
+					emission
+					{
+						mach = 0.0 1.25
+						mach = 0.05 0.0
+						mach = 1.0 0.0
+					}
+					logGrow
+					{
+						power = 0 0
+						power = 1 2
+						density = 0 8
+						density = 1 0.7
+						density = 10 0
+					}
+					Grow
+					{
+						power = 0 0
+						power = 1 2
+					}
+				}
+			}
+			engage
+			{
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_vent_medium
+					volume = 1.0
+					pitch = 2.0
+					loop = false
+				}
+			}
+			disengage
+			{
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_vent_soft
+					volume = 1.0
+					pitch = 2.0
+					loop = false
+				}
+			}
+			flameout
+			{
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_explosion_low
+					volume = 1.0
+					pitch = 2.0
+					loop = false
+				}
+			}
+		}
 	}
 }
 UrlConfig
@@ -9991,15 +12068,16 @@ UrlConfig
 		radiatorMax = 0.35
 		MODULE
 		{
-			name = ModuleEngines
+			name = ModuleEnginesFX
 			thrustVectorTransformName = thrustTransform
 			exhaustDamage = True
 			ignitionThreshold = 0.1
 			minThrust = 0
 			maxThrust = 60
 			heatProduction = 250
-			fxOffset = 0, 0, 1.6
 			EngineType = Nuclear
+			spoolEffectName = powersmoke
+			powerEffectName = powerflame
 			PROPELLANT
 			{
 				name = LiquidFuel
@@ -10071,6 +12149,100 @@ UrlConfig
 			falloff = 2.5
 			thrustTransformName = thrustTransform
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = tjs_EngineLight
+			isDebug = true
+			lightPower = 1.0
+			lightRange = 40.0
+			maxLightPower = 23.0
+			lightRed = 1
+			lightGreen = 0.55
+			lightBlue = 0.93
+			jitterMultiplier = 15.3
+			multiplierOnIva = 0.5
+		}
+		EFFECTS
+		{
+			powerflame
+			{
+				MODEL_MULTI_PARTICLE_PERSIST
+				{
+					name = flamethrust
+					modelName = MP_Nazari/FX/flamenuke
+					transformName = thrustTransform
+					emission = 0.0 0.0
+					emission = 0.05 0.99
+					emission = 0.75 1.21
+					emission = 1.0 1.25
+					speed = 0.0 1.98
+					speed = 1.0 1.22
+					energy = 0.0 0.33
+					energy = 1.0 0.99
+					fixedEmissions = false
+					logGrow
+					{
+						density = 0 8
+						density = 1 0.7
+						density = 10 0
+					}
+				}
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_rocket_hard
+					volume = 0.0 0.0
+					volume = 1.0 1.0
+					pitch = 0.0 0.2
+					pitch = 1.0 1.0
+					loop = true
+				}
+			}
+			powersmoke
+			{
+			}
+			engage
+			{
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_vent_medium
+					volume = 1.0
+					pitch = 2.0
+					loop = false
+				}
+			}
+			disengage
+			{
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_vent_soft
+					volume = 1.0
+					pitch = 2.0
+					loop = false
+				}
+			}
+			flameout
+			{
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_explosion_low
+					volume = 1.0
+					pitch = 2.0
+					loop = false
+				}
+			}
+		}
 	}
 }
 UrlConfig
@@ -10118,7 +12290,7 @@ UrlConfig
 		bulkheadProfiles = size1
 		MODULE
 		{
-			name = ModuleEngines
+			name = ModuleEnginesFX
 			thrustVectorTransformName = thrustTransform
 			exhaustDamage = True
 			ignitionThreshold = 0.1
@@ -10127,6 +12299,8 @@ UrlConfig
 			heatProduction = 192
 			fxOffset = 0, 0, 0.8
 			EngineType = LiquidFuel
+			spoolEffectName = powersmoke
+			powerEffectName = powerflame
 			PROPELLANT
 			{
 				name = LiquidFuel
@@ -10185,6 +12359,205 @@ UrlConfig
 			isTweakable = false
 			hideFlow = true
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = tjs_EngineLight
+			isDebug = true
+			lightPower = 1.0
+			lightRange = 40.0
+			maxLightPower = 23.0
+			lightRed = 1
+			lightGreen = 0.88
+			lightBlue = 0.68
+			jitterMultiplier = 10.5
+			multiplierOnIva = 0.5
+		}
+		EFFECTS
+		{
+			powerflame
+			{
+				MODEL_MULTI_PARTICLE_PERSIST
+				{
+					name = flamethrust
+					modelName = MP_Nazari/FX/flamestandard
+					transformName = thrustTransform
+					emission = 0.0 0.0
+					emission = 0.05 0.99
+					emission = 0.75 1.21
+					emission = 1.0 1.25
+					speed = 0.0 1.70
+					speed = 1.0 1.65
+					energy = 0.0 0.33
+					energy = 1.0 0.99
+					fixedEmissions = false
+					logGrow
+					{
+						density = 0 8
+						density = 1 0.7
+						density = 10 0
+					}
+				}
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_rocket_hard
+					volume = 0.0 0.0
+					volume = 1.0 1.0
+					pitch = 0.0 0.2
+					pitch = 1.0 1.0
+					loop = true
+				}
+			}
+			powersmoke
+			{
+				MODEL_MULTI_PARTICLE_PERSIST
+				{
+					name = smokethrust
+					modelName = MP_Nazari/FX/smokebooster2
+					transformName = thrustTransform
+					emission = 0.0 0.0
+					emission = 0.07 0.0
+					emission = 0.2 0.4
+					emission = 1.0 1.1
+					energy = 0.0 0.2
+					energy = 1.0 3.2
+					speed = 0.0 1.0
+					speed = 1.0 0.8
+					grow = 0.0 0.0
+					grow = 1.0 0.11
+					scale = 0.0 1.0
+					scale = 1.0 1.0
+					offset = 0.0 0.0
+					offset = 1.0 0.5
+					size = 0.0 1.0
+					size = 1.0 1.1
+					renderMode = "Billboard"
+					collide = false
+					collideRatio = 0
+					fixedScale = 1.0
+					sizeClamp = 50
+					angle = 0.0 1.0
+					angle = 45.0 1.0
+					angle = 50.0 1.0
+					distance = 0.0 1.0
+					distance = 100.0 1.0
+					distance = 110.0 1.0
+					emission
+					{
+						mach = 0.0 1.0
+						mach = 0.8 1.0
+						mach = 1.0 1.0
+						density = 1.0 1.0
+						density = 0.4 1.0
+						density = 0.3 1.0
+						density = 0.002 1.0
+						density = 0.001 0.0
+					}
+					logGrow
+					{
+						density = 0 8
+						density = 1 0.7
+						density = 10 0
+					}
+				}
+				MODEL_MULTI_PARTICLE_PERSIST
+				{
+					name = smokelaunch
+					modelName = MP_Nazari/FX/smokelaunch
+					transformName = thrustTransform
+					emission = 0.0 0.0
+					emission = 0.05 0.0
+					emission = 0.2 0.5
+					emission = 1.0 1.8
+					energy = 0.0 0.2
+					energy = 1.0 1.1
+					speed = 0.0 0.1
+					speed = 1.0 0.15
+					grow = 0.0 0.0
+					grow = 1.0 0.75
+					size = 0.0 1.0
+					size = 1.0 1.5
+					renderMode = "Billboard"
+					collide = true
+					collideRatio = 0.12
+					fixedScale = 1.0
+					sizeClamp = 50
+					angle = 0.0 1.0
+					angle = 45.0 1.0
+					angle = 50.0 1.0
+					distance = 0.0 1.0
+					distance = 100.0 1.0
+					distance = 550.0 0.0
+					initialDensity = 2.25
+					physical = true
+					stickiness = 0.8
+					dragCoefficient = 1
+					logarithmicGrowth = 2.75
+					fixedEmissions = true
+					randomInitalVelocityOffsetMaxRadius = 15.5
+					emission
+					{
+						mach = 0.0 1.25
+						mach = 0.05 0.0
+						mach = 1.0 0.0
+					}
+					logGrow
+					{
+						power = 0 0
+						power = 1 2
+						density = 0 8
+						density = 1 0.7
+						density = 10 0
+					}
+					Grow
+					{
+						power = 0 0
+						power = 1 2
+					}
+				}
+			}
+			engage
+			{
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_vent_medium
+					volume = 1.0
+					pitch = 2.0
+					loop = false
+				}
+			}
+			disengage
+			{
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_vent_soft
+					volume = 1.0
+					pitch = 2.0
+					loop = false
+				}
+			}
+			flameout
+			{
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_explosion_low
+					volume = 1.0
+					pitch = 2.0
+					loop = false
+				}
+			}
+		}
 	}
 }
 UrlConfig
@@ -10231,15 +12604,16 @@ UrlConfig
 		bulkheadProfiles = size1
 		MODULE
 		{
-			name = ModuleEngines
+			name = ModuleEnginesFX
 			thrustVectorTransformName = thrustTransform
 			exhaustDamage = True
 			ignitionThreshold = 0.1
 			minThrust = 0
 			maxThrust = 200
 			heatProduction = 200
-			fxOffset = 0, 0, 0.574338
 			EngineType = LiquidFuel
+			spoolEffectName = powersmoke
+			powerEffectName = powerflame
 			PROPELLANT
 			{
 				name = LiquidFuel
@@ -10312,6 +12686,205 @@ UrlConfig
 			useStaging = True
 			useEvent = False
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = tjs_EngineLight
+			isDebug = true
+			lightPower = 1.0
+			lightRange = 40.0
+			maxLightPower = 23.0
+			lightRed = 1
+			lightGreen = 0.88
+			lightBlue = 0.68
+			jitterMultiplier = 10.5
+			multiplierOnIva = 0.5
+		}
+		EFFECTS
+		{
+			powerflame
+			{
+				MODEL_MULTI_PARTICLE_PERSIST
+				{
+					name = flamethrust
+					modelName = MP_Nazari/FX/flamestandard
+					transformName = thrustTransform
+					emission = 0.0 0.0
+					emission = 0.05 0.99
+					emission = 0.75 1.21
+					emission = 1.0 1.25
+					speed = 0.0 1.70
+					speed = 1.0 1.65
+					energy = 0.0 0.33
+					energy = 1.0 0.99
+					fixedEmissions = false
+					logGrow
+					{
+						density = 0 8
+						density = 1 0.7
+						density = 10 0
+					}
+				}
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_rocket_hard
+					volume = 0.0 0.0
+					volume = 1.0 1.0
+					pitch = 0.0 0.2
+					pitch = 1.0 1.0
+					loop = true
+				}
+			}
+			powersmoke
+			{
+				MODEL_MULTI_PARTICLE_PERSIST
+				{
+					name = smokethrust
+					modelName = MP_Nazari/FX/smokebooster2
+					transformName = thrustTransform
+					emission = 0.0 0.0
+					emission = 0.07 0.0
+					emission = 0.2 0.4
+					emission = 1.0 1.1
+					energy = 0.0 0.2
+					energy = 1.0 3.2
+					speed = 0.0 1.0
+					speed = 1.0 0.8
+					grow = 0.0 0.0
+					grow = 1.0 0.11
+					scale = 0.0 1.0
+					scale = 1.0 1.0
+					offset = 0.0 0.0
+					offset = 1.0 0.5
+					size = 0.0 1.0
+					size = 1.0 1.1
+					renderMode = "Billboard"
+					collide = false
+					collideRatio = 0
+					fixedScale = 1.0
+					sizeClamp = 50
+					angle = 0.0 1.0
+					angle = 45.0 1.0
+					angle = 50.0 1.0
+					distance = 0.0 1.0
+					distance = 100.0 1.0
+					distance = 110.0 1.0
+					emission
+					{
+						mach = 0.0 1.0
+						mach = 0.8 1.0
+						mach = 1.0 1.0
+						density = 1.0 1.0
+						density = 0.4 1.0
+						density = 0.3 1.0
+						density = 0.002 1.0
+						density = 0.001 0.0
+					}
+					logGrow
+					{
+						density = 0 8
+						density = 1 0.7
+						density = 10 0
+					}
+				}
+				MODEL_MULTI_PARTICLE_PERSIST
+				{
+					name = smokelaunch
+					modelName = MP_Nazari/FX/smokelaunch
+					transformName = thrustTransform
+					emission = 0.0 0.0
+					emission = 0.05 0.0
+					emission = 0.2 0.5
+					emission = 1.0 1.8
+					energy = 0.0 0.2
+					energy = 1.0 1.1
+					speed = 0.0 0.1
+					speed = 1.0 0.15
+					grow = 0.0 0.0
+					grow = 1.0 0.75
+					size = 0.0 1.0
+					size = 1.0 1.5
+					renderMode = "Billboard"
+					collide = true
+					collideRatio = 0.12
+					fixedScale = 1.0
+					sizeClamp = 50
+					angle = 0.0 1.0
+					angle = 45.0 1.0
+					angle = 50.0 1.0
+					distance = 0.0 1.0
+					distance = 100.0 1.0
+					distance = 550.0 0.0
+					initialDensity = 2.25
+					physical = true
+					stickiness = 0.8
+					dragCoefficient = 1
+					logarithmicGrowth = 2.75
+					fixedEmissions = true
+					randomInitalVelocityOffsetMaxRadius = 15.5
+					emission
+					{
+						mach = 0.0 1.25
+						mach = 0.05 0.0
+						mach = 1.0 0.0
+					}
+					logGrow
+					{
+						power = 0 0
+						power = 1 2
+						density = 0 8
+						density = 1 0.7
+						density = 10 0
+					}
+					Grow
+					{
+						power = 0 0
+						power = 1 2
+					}
+				}
+			}
+			engage
+			{
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_vent_medium
+					volume = 1.0
+					pitch = 2.0
+					loop = false
+				}
+			}
+			disengage
+			{
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_vent_soft
+					volume = 1.0
+					pitch = 2.0
+					loop = false
+				}
+			}
+			flameout
+			{
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_explosion_low
+					volume = 1.0
+					pitch = 2.0
+					loop = false
+				}
+			}
+		}
 	}
 }
 UrlConfig
@@ -10360,15 +12933,16 @@ UrlConfig
 		bulkheadProfiles = size2
 		MODULE
 		{
-			name = ModuleEngines
+			name = ModuleEnginesFX
 			thrustVectorTransformName = thrustTransform
 			exhaustDamage = True
 			ignitionThreshold = 0.1
 			minThrust = 0
 			maxThrust = 1500
 			heatProduction = 196
-			fxOffset = 0, 0, 1.5
 			EngineType = LiquidFuel
+			spoolEffectName = powersmoke
+			powerEffectName = powerflame
 			PROPELLANT
 			{
 				name = LiquidFuel
@@ -10434,27 +13008,216 @@ UrlConfig
 			falloff = 1.8
 			thrustTransformName = thrustTransform
 		}
-		EFFECTS
-		{
-			Thrust
-			{
-				AUDIO
-				{
-					clip = Squad/Sounds/sound_rocket_mini
-					volume = 0.0 0.0
-					volume = 1.0 1.0
-					pitch = 0.0 0.8
-					pitch = 1.0 1.0
-					loop = true
-				}
-			}
-		}
 		MODULE
 		{
 			name = ModuleTestSubject
 			environments = 15
 			useStaging = True
 			useEvent = True
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = tjs_EngineLight
+			isDebug = true
+			lightPower = 1.0
+			lightRange = 40.0
+			maxLightPower = 23.0
+			lightRed = 1
+			lightGreen = 0.88
+			lightBlue = 0.68
+			jitterMultiplier = 10.5
+			multiplierOnIva = 0.5
+		}
+		EFFECTS
+		{
+			powerflame
+			{
+				MODEL_MULTI_PARTICLE_PERSIST
+				{
+					name = flamethrust
+					modelName = MP_Nazari/FX/flamelarge
+					transformName = thrustTransform
+					emission = 0.0 0.0
+					emission = 0.05 0.99
+					emission = 0.75 1.21
+					emission = 1.0 1.25
+					speed = 0.0 1.75
+					speed = 1.0 1.65
+					energy = 0.0 0.33
+					energy = 1.0 0.99
+					fixedEmissions = false
+					logGrow
+					{
+						density = 0 8
+						density = 1 0.7
+						density = 10 0
+					}
+				}
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_rocket_hard
+					volume = 0.0 0.0
+					volume = 1.0 1.0
+					pitch = 0.0 0.2
+					pitch = 1.0 1.0
+					loop = true
+				}
+			}
+			powersmoke
+			{
+				MODEL_MULTI_PARTICLE_PERSIST
+				{
+					name = smokethrust
+					modelName = MP_Nazari/FX/smokebooster2
+					transformName = thrustTransform
+					emission = 0.0 0.0
+					emission = 0.07 0.0
+					emission = 0.2 0.4
+					emission = 1.0 1.1
+					energy = 0.0 0.2
+					energy = 1.0 3.2
+					speed = 0.0 1.0
+					speed = 1.0 0.8
+					grow = 0.0 0.0
+					grow = 1.0 0.11
+					scale = 0.0 1.0
+					scale = 1.0 1.0
+					offset = 0.0 0.0
+					offset = 1.0 0.5
+					size = 0.0 1.0
+					size = 1.0 1.1
+					renderMode = "Billboard"
+					collide = false
+					collideRatio = 0
+					fixedScale = 1.0
+					sizeClamp = 50
+					angle = 0.0 1.0
+					angle = 45.0 1.0
+					angle = 50.0 1.0
+					distance = 0.0 1.0
+					distance = 100.0 1.0
+					distance = 110.0 1.0
+					emission
+					{
+						mach = 0.0 1.0
+						mach = 0.8 1.0
+						mach = 1.0 1.0
+						density = 1.0 1.0
+						density = 0.4 1.0
+						density = 0.3 1.0
+						density = 0.002 1.0
+						density = 0.001 0.0
+					}
+					size
+					{
+						density = 1.0 2.0
+						density = 0.01 5.0
+					}
+					logGrow
+					{
+						density = 0 8
+						density = 1 0.7
+						density = 10 0
+					}
+				}
+				MODEL_MULTI_PARTICLE_PERSIST
+				{
+					name = smokelaunch
+					modelName = MP_Nazari/FX/smokelaunch
+					transformName = thrustTransform
+					emission = 0.0 0.0
+					emission = 0.05 0.0
+					emission = 0.2 0.5
+					emission = 1.0 1.8
+					energy = 0.0 0.2
+					energy = 1.0 1.1
+					speed = 0.0 0.1
+					speed = 1.0 0.15
+					grow = 0.0 0.0
+					grow = 1.0 0.75
+					size = 0.0 1.0
+					size = 1.0 1.5
+					renderMode = "Billboard"
+					collide = true
+					collideRatio = 0.12
+					fixedScale = 1.0
+					sizeClamp = 50
+					angle = 0.0 1.0
+					angle = 45.0 1.0
+					angle = 50.0 1.0
+					distance = 0.0 1.0
+					distance = 100.0 1.0
+					distance = 550.0 0.0
+					initialDensity = 2.25
+					physical = true
+					stickiness = 0.8
+					dragCoefficient = 1
+					logarithmicGrowth = 2.75
+					fixedEmissions = true
+					randomInitalVelocityOffsetMaxRadius = 15.5
+					emission
+					{
+						mach = 0.0 1.25
+						mach = 0.05 0.0
+						mach = 1.0 0.0
+					}
+					logGrow
+					{
+						power = 0 0
+						power = 1 2
+						density = 0 8
+						density = 1 0.7
+						density = 10 0
+					}
+					Grow
+					{
+						power = 0 0
+						power = 1 2
+					}
+				}
+			}
+			engage
+			{
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_vent_medium
+					volume = 1.0
+					pitch = 2.0
+					loop = false
+				}
+			}
+			disengage
+			{
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_vent_soft
+					volume = 1.0
+					pitch = 2.0
+					loop = false
+				}
+			}
+			flameout
+			{
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_explosion_low
+					volume = 1.0
+					pitch = 2.0
+					loop = false
+				}
+			}
 		}
 	}
 }
@@ -10550,6 +13313,27 @@ UrlConfig
 			falloff = 1.7
 			thrustTransformName = thrustTransform
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = tjs_EngineLight
+			isDebug = true
+			lightPower = 1.0
+			lightRange = 40.0
+			maxLightPower = 23.0
+			lightRed = 1
+			lightGreen = 0.88
+			lightBlue = 0.68
+			jitterMultiplier = 10.5
+			multiplierOnIva = 0.5
+		}
 	}
 }
 UrlConfig
@@ -10597,15 +13381,16 @@ UrlConfig
 		bulkheadProfiles = size2
 		MODULE
 		{
-			name = ModuleEngines
+			name = ModuleEnginesFX
 			thrustVectorTransformName = thrustTransform
 			exhaustDamage = True
 			ignitionThreshold = 0.1
 			minThrust = 0
 			maxThrust = 250
 			heatProduction = 83
-			fxOffset = 0, 0, 0.4
 			EngineType = LiquidFuel
+			spoolEffectName = powersmoke
+			powerEffectName = powerflame
 			PROPELLANT
 			{
 				name = LiquidFuel
@@ -10678,6 +13463,155 @@ UrlConfig
 			falloff = 1.5
 			thrustTransformName = thrustTransform
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = tjs_EngineLight
+			isDebug = true
+			lightPower = 1.0
+			lightRange = 40.0
+			maxLightPower = 23.0
+			lightRed = 1
+			lightGreen = 0.88
+			lightBlue = 0.68
+			jitterMultiplier = 10.5
+			multiplierOnIva = 0.5
+		}
+		EFFECTS
+		{
+			powerflame
+			{
+				MODEL_MULTI_PARTICLE_PERSIST
+				{
+					name = flamethrust
+					modelName = MP_Nazari/FX/flamelowlarge
+					transformName = thrustTransform
+					emission = 0.0 0.0
+					emission = 0.05 0.99
+					emission = 0.75 1.21
+					emission = 1.0 1.25
+					speed = 0.0 1.70
+					speed = 1.0 1.65
+					energy = 0.0 0.33
+					energy = 1.0 0.99
+					fixedEmissions = false
+					logGrow
+					{
+						density = 0 8
+						density = 1 0.7
+						density = 10 0
+					}
+				}
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_rocket_hard
+					volume = 0.0 0.0
+					volume = 1.0 1.0
+					pitch = 0.0 0.2
+					pitch = 1.0 1.0
+					loop = true
+				}
+			}
+			powersmoke
+			{
+				MODEL_MULTI_PARTICLE_PERSIST
+				{
+					name = smokelaunch
+					modelName = MP_Nazari/FX/smokelaunch
+					transformName = thrustTransform
+					emission = 0.0 0.0
+					emission = 0.05 0.0
+					emission = 0.2 0.5
+					emission = 1.0 1.8
+					energy = 0.0 0.2
+					energy = 1.0 1.1
+					speed = 0.0 0.1
+					speed = 1.0 0.15
+					grow = 0.0 0.0
+					grow = 1.0 0.75
+					size = 0.0 1.0
+					size = 1.0 1.5
+					renderMode = "Billboard"
+					collide = true
+					collideRatio = 0.12
+					fixedScale = 1.0
+					sizeClamp = 50
+					angle = 0.0 1.0
+					angle = 45.0 1.0
+					angle = 50.0 1.0
+					distance = 0.0 1.0
+					distance = 100.0 1.0
+					distance = 550.0 0.0
+					initialDensity = 2.25
+					physical = true
+					stickiness = 0.8
+					dragCoefficient = 1
+					logarithmicGrowth = 2.75
+					fixedEmissions = true
+					randomInitalVelocityOffsetMaxRadius = 15.5
+					emission
+					{
+						mach = 0.0 1.25
+						mach = 0.05 0.0
+						mach = 1.0 0.0
+					}
+					logGrow
+					{
+						power = 0 0
+						power = 1 2
+						density = 0 8
+						density = 1 0.7
+						density = 10 0
+					}
+					Grow
+					{
+						power = 0 0
+						power = 1 2
+					}
+				}
+			}
+			engage
+			{
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_vent_medium
+					volume = 1.0
+					pitch = 2.0
+					loop = false
+				}
+			}
+			disengage
+			{
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_vent_soft
+					volume = 1.0
+					pitch = 2.0
+					loop = false
+				}
+			}
+			flameout
+			{
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_explosion_low
+					volume = 1.0
+					pitch = 2.0
+					loop = false
+				}
+			}
+		}
 	}
 }
 UrlConfig
@@ -10726,15 +13660,16 @@ UrlConfig
 		bulkheadProfiles = size2
 		MODULE
 		{
-			name = ModuleEngines
+			name = ModuleEnginesFX
 			thrustVectorTransformName = thrustTransform
 			exhaustDamage = True
 			ignitionThreshold = 0.1
 			minThrust = 0
 			maxThrust = 650
 			heatProduction = 350
-			fxOffset = 0, 0, 1.2
 			EngineType = LiquidFuel
+			spoolEffectName = powersmoke
+			powerEffectName = powerflame
 			PROPELLANT
 			{
 				name = LiquidFuel
@@ -10806,6 +13741,210 @@ UrlConfig
 			maxDistance = 50
 			falloff = 2
 			thrustTransformName = thrustTransform
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = tjs_EngineLight
+			isDebug = true
+			lightPower = 1.0
+			lightRange = 40.0
+			maxLightPower = 23.0
+			lightRed = 1
+			lightGreen = 0.88
+			lightBlue = 0.68
+			jitterMultiplier = 10.5
+			multiplierOnIva = 0.5
+		}
+		EFFECTS
+		{
+			powerflame
+			{
+				MODEL_MULTI_PARTICLE_PERSIST
+				{
+					name = flamethrust
+					modelName = MP_Nazari/FX/flamelarge
+					transformName = thrustTransform
+					emission = 0.0 0.0
+					emission = 0.05 0.99
+					emission = 0.75 1.21
+					emission = 1.0 1.25
+					speed = 0.0 1.75
+					speed = 1.0 1.65
+					energy = 0.0 0.33
+					energy = 1.0 0.99
+					fixedEmissions = false
+					logGrow
+					{
+						density = 0 8
+						density = 1 0.7
+						density = 10 0
+					}
+				}
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_rocket_hard
+					volume = 0.0 0.0
+					volume = 1.0 1.0
+					pitch = 0.0 0.2
+					pitch = 1.0 1.0
+					loop = true
+				}
+			}
+			powersmoke
+			{
+				MODEL_MULTI_PARTICLE_PERSIST
+				{
+					name = smokethrust
+					modelName = MP_Nazari/FX/smokebooster2
+					transformName = thrustTransform
+					emission = 0.0 0.0
+					emission = 0.07 0.0
+					emission = 0.2 0.4
+					emission = 1.0 1.1
+					energy = 0.0 0.2
+					energy = 1.0 3.2
+					speed = 0.0 1.0
+					speed = 1.0 0.8
+					grow = 0.0 0.0
+					grow = 1.0 0.11
+					scale = 0.0 1.0
+					scale = 1.0 1.0
+					offset = 0.0 0.0
+					offset = 1.0 0.5
+					size = 0.0 1.0
+					size = 1.0 1.1
+					renderMode = "Billboard"
+					collide = false
+					collideRatio = 0
+					fixedScale = 1.0
+					sizeClamp = 50
+					angle = 0.0 1.0
+					angle = 45.0 1.0
+					angle = 50.0 1.0
+					distance = 0.0 1.0
+					distance = 100.0 1.0
+					distance = 110.0 1.0
+					emission
+					{
+						mach = 0.0 1.0
+						mach = 0.8 1.0
+						mach = 1.0 1.0
+						density = 1.0 1.0
+						density = 0.4 1.0
+						density = 0.3 1.0
+						density = 0.002 1.0
+						density = 0.001 0.0
+					}
+					size
+					{
+						density = 1.0 2.0
+						density = 0.01 5.0
+					}
+					logGrow
+					{
+						density = 0 8
+						density = 1 0.7
+						density = 10 0
+					}
+				}
+				MODEL_MULTI_PARTICLE_PERSIST
+				{
+					name = smokelaunch
+					modelName = MP_Nazari/FX/smokelaunch
+					transformName = thrustTransform
+					emission = 0.0 0.0
+					emission = 0.05 0.0
+					emission = 0.2 0.5
+					emission = 1.0 1.8
+					energy = 0.0 0.2
+					energy = 1.0 1.1
+					speed = 0.0 0.1
+					speed = 1.0 0.15
+					grow = 0.0 0.0
+					grow = 1.0 0.75
+					size = 0.0 1.0
+					size = 1.0 1.5
+					renderMode = "Billboard"
+					collide = true
+					collideRatio = 0.12
+					fixedScale = 1.0
+					sizeClamp = 50
+					angle = 0.0 1.0
+					angle = 45.0 1.0
+					angle = 50.0 1.0
+					distance = 0.0 1.0
+					distance = 100.0 1.0
+					distance = 550.0 0.0
+					initialDensity = 2.25
+					physical = true
+					stickiness = 0.8
+					dragCoefficient = 1
+					logarithmicGrowth = 2.75
+					fixedEmissions = true
+					randomInitalVelocityOffsetMaxRadius = 15.5
+					emission
+					{
+						mach = 0.0 1.25
+						mach = 0.05 0.0
+						mach = 1.0 0.0
+					}
+					logGrow
+					{
+						power = 0 0
+						power = 1 2
+						density = 0 8
+						density = 1 0.7
+						density = 10 0
+					}
+					Grow
+					{
+						power = 0 0
+						power = 1 2
+					}
+				}
+			}
+			engage
+			{
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_vent_medium
+					volume = 1.0
+					pitch = 2.0
+					loop = false
+				}
+			}
+			disengage
+			{
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_vent_soft
+					volume = 1.0
+					pitch = 2.0
+					loop = false
+				}
+			}
+			flameout
+			{
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_explosion_low
+					volume = 1.0
+					pitch = 2.0
+					loop = false
+				}
+			}
 		}
 	}
 }
@@ -10987,6 +14126,27 @@ UrlConfig
 			falloff = 2
 			thrustTransformName = thrustTransform
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = tjs_EngineLight
+			isDebug = true
+			lightPower = 1.0
+			lightRange = 40.0
+			maxLightPower = 23.0
+			lightRed = 1
+			lightGreen = 0.88
+			lightBlue = 0.68
+			jitterMultiplier = 10.5
+			multiplierOnIva = 0.5
+		}
 	}
 }
 UrlConfig
@@ -11060,6 +14220,27 @@ UrlConfig
 				key = 4 0.001
 			}
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = tjs_EngineLight
+			isDebug = true
+			lightPower = 1.0
+			lightRange = 40.0
+			maxLightPower = 23.0
+			lightRed = 1
+			lightGreen = 0.88
+			lightBlue = 0.68
+			jitterMultiplier = 10.5
+			multiplierOnIva = 0.5
+		}
 	}
 }
 UrlConfig
@@ -11097,124 +14278,6 @@ UrlConfig
 		description = The R.A.P.I.E.R. (Reactive Alternate-Propellant Intelligent Engine for Rockets) is a joint venture between C7 Aerospace and the Rockomax Conglomerate. Designed to fill a gap in the design requirements for sustainable single stage to orbit aircraft, this engine combines the best of rocket and air-breathing thrust technology.
 		attachRules = 1,0,1,1,0
 		bulkheadProfiles = size1
-		EFFECTS
-		{
-			running_closed
-			{
-				AUDIO
-				{
-					channel = Ship
-					clip = sound_rocket_spurts
-					volume = 0.0 0.0
-					volume = 1.0 1.0
-					pitch = 0.0 0.2
-					pitch = 1.0 1.0
-					loop = true
-				}
-				PREFAB_PARTICLE
-				{
-					prefabName = fx_smokeTrail_aeroSpike
-					transformName = smokePoint
-					emission = 0.0 0.0
-					emission = 0.05 0.0
-					emission = 0.075 0.25
-					emission = 1.0 1.25
-					speed = 0.0 0.25
-					speed = 1.0 1.0
-					localOffset = 0, 0, 1
-				}
-				MODEL_MULTI_PARTICLE
-				{
-					modelName = Squad/FX/shockExhaust_blue_small
-					transformName = thrustTransform
-					emission = 0.0 0.0
-					emission = 0.05 0.0
-					emission = 0.075 0.25
-					emission = 1.0 1.25
-					speed = 0.0 0.5
-					speed = 1.0 1.2
-				}
-			}
-			power_open
-			{
-				AUDIO
-				{
-					channel = Ship
-					clip = sound_rocket_spurts
-					volume = 0.0 0.0
-					volume = 0.05 0.0
-					volume = 1.0 1.0
-					pitch = 0.0 0.2
-					pitch = 1.0 1.0
-					loop = true
-				}
-				MODEL_MULTI_PARTICLE
-				{
-					modelName = Squad/FX/shockExhaust_red_small
-					transformName = thrustTransform
-					emission = 0.0 0.0
-					emission = 0.05 0.0
-					emission = 0.075 0.25
-					emission = 1.0 1.25
-					speed = 0.0 0.5
-					speed = 1.0 1.2
-				}
-			}
-			running_open
-			{
-				AUDIO
-				{
-					channel = Ship
-					clip = sound_jet_deep
-					volume = 0.0 0.0
-					volume = 0.05 0.6
-					volume = 1.0 1.0
-					pitch = 0.0 0.7
-					pitch = 1.0 1.4
-					loop = true
-				}
-				PREFAB_PARTICLE
-				{
-					prefabName = fx_smokeTrail_aeroSpike
-					transformName = smokePoint
-					emission = 0.0 0.0
-					emission = 0.05 0.0
-					emission = 0.075 0.25
-					emission = 1.0 1.25
-					speed = 0.0 0.25
-					speed = 1.0 1.0
-					localOffset = 0, 0, 1
-				}
-			}
-			engage
-			{
-				AUDIO
-				{
-					channel = Ship
-					clip = sound_vent_soft
-					volume = 1.0
-					pitch = 2.0
-					loop = false
-				}
-			}
-			flameout
-			{
-				PREFAB_PARTICLE
-				{
-					prefabName = fx_exhaustSparks_flameout_2
-					transformName = smokePoint
-					oneShot = true
-				}
-				AUDIO
-				{
-					channel = Ship
-					clip = sound_explosion_low
-					volume = 1.0
-					pitch = 2.0
-					loop = false
-				}
-			}
-		}
 		MODULE
 		{
 			name = MultiModeEngine
@@ -11349,6 +14412,164 @@ UrlConfig
 			falloff = 1.6
 			thrustTransformName = thrustTransform
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		EFFECTS
+		{
+			running_closed
+			{
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_rocket_spurts
+					volume = 0.0 0.0
+					volume = 1.0 1.0
+					pitch = 0.0 0.2
+					pitch = 1.0 1.0
+					loop = true
+				}
+				MODEL_MULTI_PARTICLE_PERSIST
+				{
+					modelName = MP_Nazari/FX/KWflamesmall
+					transformName = thrustTransform
+					emission = 0.0 0.0
+					emission = 0.2 0.0
+					emission = 0.9 0.8
+					emission = 1.0 2.5
+					speed = 0.0 0.2
+					speed = 1.0 0.87
+					size = 0.0 0.5
+					size = 1.0 0.5
+				}
+			}
+			power_open
+			{
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_rocket_spurts
+					volume = 0.0 0.0
+					volume = 0.05 0.0
+					volume = 1.0 1.0
+					pitch = 0.0 0.2
+					pitch = 1.0 1.0
+					loop = true
+				}
+				MODEL_MULTI_PARTICLE
+				{
+					modelName = MP_Nazari/FX/flamejet4
+					transformName = thrustTransform
+					emission = 0.0 0.0
+					emission = 0.5 0.0
+					emission = 0.8 0.21
+					emission = 1.0 0.75
+					speed = 0.0 0.2
+					speed = 1.0 0.8
+				}
+				MODEL_MULTI_PARTICLE_PERSIST
+				{
+					modelName = MP_Nazari/FX/methanolflame
+					transformName = thrustTransform
+					emission = 0.0 0.0
+					emission = 0.5 0.0
+					emission = 0.8 0.8
+					emission = 1.0 1.1
+					speed = 0.0 0.2
+					speed = 1.0 0.54
+					size = 0.0 0.44
+					size = 1.0 0.44
+				}
+			}
+			running_open
+			{
+				MODEL_MULTI_PARTICLE_PERSIST
+				{
+					name = smokethrust
+					modelName = MP_Nazari/FX/smokejet
+					transformName = thrustTransform
+					emission = 0.0 0.0
+					emission = 0.2 0.0
+					emission = 0.4 0.4
+					emission = 1.0 1.1
+					energy = 0.0 0.2
+					energy = 1.0 3.2
+					speed = 0.0 1.0
+					speed = 1.0 0.8
+					grow = 0.0 0.0
+					grow = 1.0 0.15
+					scale = 0.0 1.0
+					scale = 1.0 1.0
+					offset = 0.0 0.0
+					offset = 1.0 0.5
+					size = 0.0 1.0
+					size = 1.0 1.1
+					renderMode = "Billboard"
+					collide = false
+					collideRatio = 0
+					fixedScale = 1.0
+					sizeClamp = 50
+					angle = 0.0 1.0
+					angle = 45.0 1.0
+					angle = 50.0 1.0
+					distance = 0.0 1.0
+					distance = 100.0 1.0
+					distance = 110.0 1.0
+					energy
+					{
+						density = 1.0 1.0
+						density = 0.4 1.0
+						density = 0.3 1.0
+						density = 0.002 1.0
+						density = 0.001 0.0
+					}
+				}
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_jet_deep
+					volume = 0.0 0.0
+					volume = 0.05 0.6
+					volume = 1.0 1.0
+					pitch = 0.0 0.7
+					pitch = 1.0 1.4
+					loop = true
+				}
+			}
+			engage
+			{
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_vent_soft
+					volume = 1.0
+					pitch = 2.0
+					loop = false
+				}
+			}
+			flameout
+			{
+				PREFAB_PARTICLE
+				{
+					prefabName = fx_exhaustSparks_flameout_2
+					transformName = smokePoint
+					oneShot = true
+				}
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_explosion_low
+					volume = 1.0
+					pitch = 2.0
+					loop = false
+				}
+			}
+		}
 	}
 }
 UrlConfig
@@ -11400,78 +14621,11 @@ UrlConfig
 			amount = 3520
 			maxAmount = 3520
 		}
-		EFFECTS
-		{
-			running_closed
-			{
-				AUDIO
-				{
-					channel = Ship
-					clip = sound_rocket_spurts
-					volume = 0.0 0.0
-					volume = 1.0 1.0
-					pitch = 0.0 0.2
-					pitch = 1.0 1.0
-					loop = true
-				}
-				PREFAB_PARTICLE
-				{
-					prefabName = fx_smokeTrail_veryLarge
-					transformName = smokePoint
-					emission = 0.0 0.0
-					emission = 0.05 0.0
-					emission = 0.075 0.25
-					emission = 1.0 1.25
-					speed = 0.0 0.25
-					speed = 1.0 1.0
-					localOffset = 0, 0, 1
-				}
-				MODEL_MULTI_PARTICLE
-				{
-					modelName = Squad/FX/ks1_Exhaust
-					transformName = thrustTransform
-					emission = 0.0 0.0
-					emission = 0.05 0.0
-					emission = 0.075 0.25
-					emission = 1.0 1.25
-					speed = 0.0 0.5
-					speed = 1.0 1.2
-				}
-			}
-			engage
-			{
-				AUDIO
-				{
-					channel = Ship
-					clip = sound_vent_soft
-					volume = 1.0
-					pitch = 2.0
-					loop = false
-				}
-			}
-			flameout
-			{
-				PREFAB_PARTICLE
-				{
-					prefabName = fx_exhaustSparks_flameout_2
-					transformName = smokePoint
-					oneShot = true
-				}
-				AUDIO
-				{
-					channel = Ship
-					clip = sound_explosion_low
-					volume = 1.0
-					pitch = 2.0
-					loop = false
-				}
-			}
-		}
 		MODULE
 		{
 			name = ModuleEnginesFX
 			engineID = KSLFB
-			runningEffectName = running_closed
+			runningEffectName = powersmoke
 			thrustVectorTransformName = thrustPoint
 			exhaustDamage = True
 			ignitionThreshold = 0.1
@@ -11480,6 +14634,7 @@ UrlConfig
 			heatProduction = 375
 			fxOffset = 0, 0, 0.25
 			EngineType = SolidBooster
+			powerEffectName = powerflame
 			PROPELLANT
 			{
 				name = LiquidFuel
@@ -11530,6 +14685,179 @@ UrlConfig
 			falloff = 1.8
 			thrustTransformName = thrustPoint
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = tjs_EngineLight
+			isDebug = true
+			lightPower = 1.0
+			lightRange = 40.0
+			maxLightPower = 23.0
+			lightRed = 1
+			lightGreen = 0.88
+			lightBlue = 0.68
+			jitterMultiplier = 10.5
+			multiplierOnIva = 0.5
+		}
+		EFFECTS
+		{
+			powerflame
+			{
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_rocket_spurts
+					volume = 0.0 0.0
+					volume = 1.0 1.0
+					pitch = 0.0 0.2
+					pitch = 1.0 1.0
+					loop = true
+				}
+				MODEL_MULTI_PARTICLE_PERSIST
+				{
+					name = flamethrust
+					modelName = MP_Nazari/FX/nasa4engine
+					transformName = thrustTransform
+					emission = 0.0 0.0
+					emission = 0.05 0.0
+					emission = 0.75 1.25
+					emission = 1.0 1.75
+					speed = 0.0 1.55
+					speed = 1.0 1.65
+					energy = 0.0 0.24
+					energy = 1.0 1.33
+					size = 0.0 1.1
+					size = 1.0 1.12
+					fixedEmissions = false
+					logGrow
+					{
+						density = 0 8
+						density = 1 0.7
+						density = 10 0
+					}
+				}
+			}
+			powersmoke
+			{
+				MODEL_MULTI_PARTICLE_PERSIST
+				{
+					name = smokethrust
+					modelName = MP_Nazari/FX/smokebooster2
+					transformName = thrustTransform
+					emission = 0.0 0.0
+					emission = 0.4 0.0
+					emission = 0.7 0.4
+					emission = 1.0 1.1
+					energy = 0.0 0.2
+					energy = 1.0 1.2
+					speed = 0.0 1.0
+					speed = 1.0 0.8
+					grow = 0.0 0.0
+					grow = 1.0 0.11
+					scale = 0.0 1.0
+					scale = 1.0 1.0
+					offset = 0.0 0.0
+					offset = 1.0 0.5
+					size = 0.0 1.0
+					size = 1.0 1.22
+					renderMode = "Billboard"
+					collide = false
+					collideRatio = 0
+					fixedScale = 1.0
+					sizeClamp = 50
+					angle = 0.0 1.0
+					angle = 45.0 1.0
+					angle = 50.0 1.0
+					distance = 0.0 1.0
+					distance = 100.0 1.0
+					distance = 110.0 1.0
+					emission
+					{
+						mach = 0.0 1.0
+						mach = 0.8 1.0
+						mach = 1.0 1.0
+						density = 1.0 1.0
+						density = 0.4 1.0
+						density = 0.3 1.0
+						density = 0.002 1.0
+						density = 0.001 0.0
+					}
+					size
+					{
+						density = 1.0 1.0
+						density = 0.01 1.55
+					}
+					logGrow
+					{
+						density = 0 8
+						density = 1 0.7
+						density = 10 0
+					}
+				}
+				MODEL_MULTI_PARTICLE_PERSIST
+				{
+					name = smokelaunch
+					modelName = MP_Nazari/FX/smokelaunch
+					transformName = thrustTransform
+					emission = 0.0 0.0
+					emission = 0.05 0.0
+					emission = 0.2 0.5
+					emission = 1.0 1.8
+					energy = 0.0 0.2
+					energy = 1.0 1.1
+					speed = 0.0 0.1
+					speed = 1.0 0.15
+					grow = 0.0 0.0
+					grow = 1.0 0.75
+					size = 0.0 1.0
+					size = 1.0 1.5
+					renderMode = "Billboard"
+					collide = true
+					collideRatio = 0.12
+					fixedScale = 1.0
+					sizeClamp = 50
+					angle = 0.0 1.0
+					angle = 45.0 1.0
+					angle = 50.0 1.0
+					distance = 0.0 1.0
+					distance = 100.0 1.0
+					distance = 550.0 0.0
+					initialDensity = 2.25
+					physical = true
+					stickiness = 0.8
+					dragCoefficient = 1
+					logarithmicGrowth = 2.75
+					fixedEmissions = true
+					randomInitalVelocityOffsetMaxRadius = 15.5
+					emission
+					{
+						mach = 0.0 1.25
+						mach = 0.05 0.0
+						mach = 1.0 0.0
+					}
+					logGrow
+					{
+						power = 0 0
+						power = 1 2
+						density = 0 8
+						density = 1 0.7
+						density = 10 0
+					}
+					Grow
+					{
+						power = 0 0
+						power = 1 2
+					}
+				}
+			}
+		}
 	}
 }
 UrlConfig
@@ -11568,79 +14896,12 @@ UrlConfig
 		breakingTorque = 200
 		maxTemp = 2000
 		bulkheadProfiles = size3
-		EFFECTS
-		{
-			running_closed
-			{
-				AUDIO
-				{
-					channel = Ship
-					clip = sound_rocket_hard
-					volume = 0.0 0.0
-					volume = 1.0 1.0
-					pitch = 0.0 0.2
-					pitch = 1.0 1.0
-					loop = true
-				}
-				PREFAB_PARTICLE
-				{
-					prefabName = fx_smokeTrail_veryLarge
-					transformName = smokePoint
-					emission = 0.0 0.0
-					emission = 0.05 0.0
-					emission = 0.075 0.25
-					emission = 1.0 1.25
-					speed = 0.0 0.25
-					speed = 1.0 1.0
-					localOffset = 0, 0, 1
-				}
-				MODEL_MULTI_PARTICLE
-				{
-					modelName = Squad/FX/ksX_Exhaust
-					transformName = fxPoint
-					emission = 0.0 0.0
-					emission = 0.05 0.0
-					emission = 0.075 0.25
-					emission = 1.0 1.25
-					speed = 0.0 0.5
-					speed = 1.0 1.2
-				}
-			}
-			engage
-			{
-				AUDIO
-				{
-					channel = Ship
-					clip = sound_vent_soft
-					volume = 1.0
-					pitch = 2.0
-					loop = false
-				}
-			}
-			flameout
-			{
-				PREFAB_PARTICLE
-				{
-					prefabName = fx_exhaustSparks_flameout_2
-					transformName = fxPoint
-					oneShot = true
-				}
-				AUDIO
-				{
-					channel = Ship
-					clip = sound_explosion_low
-					volume = 1.0
-					pitch = 2.0
-					loop = false
-				}
-			}
-		}
 		MODULE
 		{
 			name = ModuleEnginesFX
 			thrustVectorTransformName = thrustTransform
 			engineID = KSX
-			runningEffectName = running_closed
+			runningEffectName = powersmoke
 			exhaustDamage = True
 			ignitionThreshold = 0.1
 			minThrust = 0
@@ -11648,6 +14909,7 @@ UrlConfig
 			heatProduction = 140
 			fxOffset = 0, 0, 1.5
 			EngineType = LiquidFuel
+			powerEffectName = powerflame
 			PROPELLANT
 			{
 				name = LiquidFuel
@@ -11725,6 +14987,181 @@ UrlConfig
 			falloff = 2
 			thrustTransformName = thrustTransform
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = tjs_EngineLight
+			isDebug = true
+			lightPower = 1.0
+			lightRange = 40.0
+			maxLightPower = 23.0
+			lightRed = 1
+			lightGreen = 0.88
+			lightBlue = 0.68
+			jitterMultiplier = 10.5
+			multiplierOnIva = 0.5
+		}
+		EFFECTS
+		{
+			powerflame
+			{
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_rocket_hard
+					volume = 0.0 0.0
+					volume = 1.0 1.0
+					pitch = 0.0 0.2
+					pitch = 1.0 1.0
+					loop = true
+				}
+				MODEL_MULTI_PARTICLE_PERSIST
+				{
+					name = flamethrust
+					modelName = MP_Nazari/FX/nasaf1
+					transformName = thrustTransform
+					emission = 0.0 0.0
+					emission = 0.05 0.0
+					emission = 0.75 1.25
+					emission = 1.0 1.75
+					speed = 0.0 1.55
+					speed = 1.0 1.65
+					energy = 0.0 0.12
+					energy = 1.0 0.45
+					size = 0.0 0.66
+					size = 1.0 0.66
+					offset = 0.0 1.7
+					offset = 1.0 1.7
+					fixedEmissions = false
+					logGrow
+					{
+						density = 0 8
+						density = 1 0.7
+						density = 10 0
+					}
+				}
+			}
+			powersmoke
+			{
+				MODEL_MULTI_PARTICLE_PERSIST
+				{
+					name = smokethrust
+					modelName = MP_Nazari/FX/smokebooster2
+					transformName = thrustTransform
+					emission = 0.0 0.0
+					emission = 0.07 0.0
+					emission = 0.2 0.4
+					emission = 1.0 1.1
+					energy = 0.0 0.2
+					energy = 1.0 1.2
+					speed = 0.0 1.0
+					speed = 1.0 0.8
+					grow = 0.0 0.0
+					grow = 1.0 0.11
+					scale = 0.0 1.0
+					scale = 1.0 1.0
+					offset = 0.0 0.0
+					offset = 1.0 0.5
+					size = 0.0 1.65
+					size = 1.0 1.85
+					renderMode = "Billboard"
+					collide = false
+					collideRatio = 0
+					fixedScale = 1.0
+					sizeClamp = 50
+					angle = 0.0 1.0
+					angle = 45.0 1.0
+					angle = 50.0 1.0
+					distance = 0.0 1.0
+					distance = 100.0 1.0
+					distance = 110.0 1.0
+					emission
+					{
+						mach = 0.0 1.0
+						mach = 0.8 1.0
+						mach = 1.0 1.0
+						density = 1.0 1.0
+						density = 0.4 1.0
+						density = 0.3 1.0
+						density = 0.002 1.0
+						density = 0.001 0.0
+					}
+					size
+					{
+						density = 1.0 3.0
+						density = 0.01 6.2
+					}
+					logGrow
+					{
+						density = 0 8
+						density = 1 0.7
+						density = 10 0
+					}
+				}
+				MODEL_MULTI_PARTICLE_PERSIST
+				{
+					name = smokelaunch
+					modelName = MP_Nazari/FX/smokelaunch
+					transformName = thrustTransform
+					emission = 0.0 0.0
+					emission = 0.05 0.0
+					emission = 0.2 0.5
+					emission = 1.0 1.8
+					energy = 0.0 0.2
+					energy = 1.0 1.1
+					speed = 0.0 0.1
+					speed = 1.0 0.15
+					grow = 0.0 0.0
+					grow = 1.0 0.75
+					size = 0.0 1.0
+					size = 1.0 1.5
+					renderMode = "Billboard"
+					collide = true
+					collideRatio = 0.12
+					fixedScale = 1.0
+					sizeClamp = 50
+					angle = 0.0 1.0
+					angle = 45.0 1.0
+					angle = 50.0 1.0
+					distance = 0.0 1.0
+					distance = 100.0 1.0
+					distance = 550.0 0.0
+					initialDensity = 2.25
+					physical = true
+					stickiness = 0.8
+					dragCoefficient = 1
+					logarithmicGrowth = 2.75
+					fixedEmissions = true
+					randomInitalVelocityOffsetMaxRadius = 15.5
+					emission
+					{
+						mach = 0.0 1.25
+						mach = 0.05 0.0
+						mach = 1.0 0.0
+					}
+					logGrow
+					{
+						power = 0 0
+						power = 1 2
+						density = 0 8
+						density = 1 0.7
+						density = 10 0
+					}
+					Grow
+					{
+						power = 0 0
+						power = 1 2
+					}
+				}
+			}
+		}
 	}
 }
 UrlConfig
@@ -11763,78 +15200,11 @@ UrlConfig
 		description = Kerbodyne engineers got fed up with having to contend with overly complicated staging arrays for lifting heavy payloads, and decided instead to just build a truly enormous engine of the highest efficiency. Strapping together four of Kerbodyne's KS-25 rocket motors in a single assembly, they created the largest rocket engine in production anywhere, and each KS-25 has the highest chamber pressure--the reason for four small nozzles and combustion chambers, not one big one (those kept going boom). It's certainly got the power to match its size, and although it excels in its main role as a first-stage engine, the lack of structural hardpoints on its underside makes it quite less suitable for other purposes. Its price tag also seems to match its size, in fact.
 		attachRules = 1,0,1,1,0
 		bulkheadProfiles = size3
-		EFFECTS
-		{
-			running_closed
-			{
-				AUDIO
-				{
-					channel = Ship
-					clip = sound_rocket_spurts
-					volume = 0.0 0.0
-					volume = 1.0 1.0
-					pitch = 0.0 0.2
-					pitch = 1.0 1.0
-					loop = true
-				}
-				PREFAB_PARTICLE
-				{
-					prefabName = fx_smokeTrail_veryLarge
-					transformName = smokePoint
-					emission = 0.0 0.0
-					emission = 0.05 0.0
-					emission = 0.075 0.25
-					emission = 1.0 1.25
-					speed = 0.0 0.25
-					speed = 1.0 1.0
-					localOffset = 0, 0, 1
-				}
-				MODEL_MULTI_PARTICLE
-				{
-					modelName = Squad/FX/ks25_Exhaust
-					transformName = thrustTransform
-					emission = 0.0 0.0
-					emission = 0.05 0.0
-					emission = 0.075 0.25
-					emission = 1.0 1.25
-					speed = 0.0 0.5
-					speed = 1.0 1.2
-				}
-			}
-			engage
-			{
-				AUDIO
-				{
-					channel = Ship
-					clip = sound_vent_soft
-					volume = 1.0
-					pitch = 2.0
-					loop = false
-				}
-			}
-			flameout
-			{
-				PREFAB_PARTICLE
-				{
-					prefabName = fx_exhaustSparks_flameout_2
-					transformName = smokePoint
-					oneShot = true
-				}
-				AUDIO
-				{
-					channel = Ship
-					clip = sound_explosion_low
-					volume = 1.0
-					pitch = 2.0
-					loop = false
-				}
-			}
-		}
 		MODULE
 		{
 			name = ModuleEnginesFX
 			engineID = KS25
-			runningEffectName = running_closed
+			runningEffectName = powersmoke
 			thrustVectorTransformName = obj_gimbal
 			exhaustDamage = True
 			ignitionThreshold = 0.1
@@ -11843,6 +15213,7 @@ UrlConfig
 			heatProduction = 192
 			fxOffset = 0, 0, 0.25
 			EngineType = LiquidFuel
+			powerEffectName = powerflame
 			PROPELLANT
 			{
 				name = LiquidFuel
@@ -11905,6 +15276,179 @@ UrlConfig
 			falloff = 1.5
 			thrustTransformName = obj_gimbal
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = tjs_EngineLight
+			isDebug = true
+			lightPower = 1.0
+			lightRange = 40.0
+			maxLightPower = 23.0
+			lightRed = 1
+			lightGreen = 0.88
+			lightBlue = 0.68
+			jitterMultiplier = 10.5
+			multiplierOnIva = 0.5
+		}
+		EFFECTS
+		{
+			powerflame
+			{
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_rocket_spurts
+					volume = 0.0 0.0
+					volume = 1.0 1.0
+					pitch = 0.0 0.2
+					pitch = 1.0 1.0
+					loop = true
+				}
+				MODEL_MULTI_PARTICLE_PERSIST
+				{
+					name = flamethrust
+					modelName = MP_Nazari/FX/nasa4engine
+					transformName = thrustTransform
+					emission = 0.0 0.0
+					emission = 0.05 0.0
+					emission = 0.75 1.25
+					emission = 1.0 1.75
+					speed = 0.0 1.55
+					speed = 1.0 1.65
+					energy = 0.0 0.24
+					energy = 1.0 1.33
+					size = 0.0 1.33
+					size = 1.0 1.45
+					fixedEmissions = false
+					logGrow
+					{
+						density = 0 8
+						density = 1 0.7
+						density = 10 0
+					}
+				}
+			}
+			powersmoke
+			{
+				MODEL_MULTI_PARTICLE_PERSIST
+				{
+					name = smokethrust
+					modelName = MP_Nazari/FX/smokebooster2
+					transformName = thrustTransform
+					emission = 0.0 0.0
+					emission = 0.07 0.0
+					emission = 0.2 0.4
+					emission = 1.0 1.1
+					energy = 0.0 0.2
+					energy = 1.0 1.2
+					speed = 0.0 1.0
+					speed = 1.0 0.8
+					grow = 0.0 0.0
+					grow = 1.0 0.11
+					scale = 0.0 1.0
+					scale = 1.0 1.0
+					offset = 0.0 0.0
+					offset = 1.0 0.5
+					size = 0.0 1.0
+					size = 1.0 1.22
+					renderMode = "Billboard"
+					collide = false
+					collideRatio = 0
+					fixedScale = 1.0
+					sizeClamp = 50
+					angle = 0.0 1.0
+					angle = 45.0 1.0
+					angle = 50.0 1.0
+					distance = 0.0 1.0
+					distance = 100.0 1.0
+					distance = 110.0 1.0
+					emission
+					{
+						mach = 0.0 1.0
+						mach = 0.8 1.0
+						mach = 1.0 1.0
+						density = 1.0 1.0
+						density = 0.4 1.0
+						density = 0.3 1.0
+						density = 0.002 1.0
+						density = 0.001 0.0
+					}
+					size
+					{
+						density = 1.0 1.2
+						density = 0.01 1.7
+					}
+					logGrow
+					{
+						density = 0 8
+						density = 1 0.7
+						density = 10 0
+					}
+				}
+				MODEL_MULTI_PARTICLE_PERSIST
+				{
+					name = smokelaunch
+					modelName = MP_Nazari/FX/smokelaunch
+					transformName = thrustTransform
+					emission = 0.0 0.0
+					emission = 0.05 0.0
+					emission = 0.2 0.5
+					emission = 1.0 1.8
+					energy = 0.0 0.2
+					energy = 1.0 1.1
+					speed = 0.0 0.1
+					speed = 1.0 0.15
+					grow = 0.0 0.0
+					grow = 1.0 0.75
+					size = 0.0 1.0
+					size = 1.0 1.5
+					renderMode = "Billboard"
+					collide = true
+					collideRatio = 0.12
+					fixedScale = 1.0
+					sizeClamp = 50
+					angle = 0.0 1.0
+					angle = 45.0 1.0
+					angle = 50.0 1.0
+					distance = 0.0 1.0
+					distance = 100.0 1.0
+					distance = 550.0 0.0
+					initialDensity = 2.25
+					physical = true
+					stickiness = 0.8
+					dragCoefficient = 1
+					logarithmicGrowth = 2.75
+					fixedEmissions = true
+					randomInitalVelocityOffsetMaxRadius = 15.5
+					emission
+					{
+						mach = 0.0 1.25
+						mach = 0.05 0.0
+						mach = 1.0 0.0
+					}
+					logGrow
+					{
+						power = 0 0
+						power = 1 2
+						density = 0 8
+						density = 1 0.7
+						density = 10 0
+					}
+					Grow
+					{
+						power = 0 0
+						power = 1 2
+					}
+				}
+			}
+		}
 	}
 }
 UrlConfig
@@ -11952,7 +15496,7 @@ UrlConfig
 		bulkheadProfiles = size1, srf
 		MODULE
 		{
-			name = ModuleEngines
+			name = ModuleEnginesFX
 			thrustVectorTransformName = thrustTransform
 			throttleLocked = True
 			exhaustDamage = True
@@ -11963,8 +15507,9 @@ UrlConfig
 			useEngineResponseTime = True
 			engineAccelerationSpeed = 8.0
 			allowShutdown = False
-			fxOffset = 0, 0, 0.35
 			EngineType = SolidBooster
+			runningEffectName = powersmoke
+			powerEffectName = powerflame
 			PROPELLANT
 			{
 				name = SolidFuel
@@ -12004,6 +15549,205 @@ UrlConfig
 			maxDistance = 50
 			falloff = 2
 			thrustTransformName = thrustTransform
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = tjs_EngineLight
+			isDebug = true
+			lightPower = 1.0
+			lightRange = 40.0
+			maxLightPower = 23.0
+			lightRed = 1
+			lightGreen = 0.88
+			lightBlue = 0.68
+			jitterMultiplier = 10.5
+			multiplierOnIva = 0.5
+		}
+		EFFECTS
+		{
+			powerflame
+			{
+				MODEL_MULTI_PARTICLE_PERSIST
+				{
+					name = flamethrust
+					modelName = MP_Nazari/FX/flamebooster2
+					transformName = thrustTransform
+					emission = 0.0 0.0
+					emission = 0.05 0.0
+					emission = 0.075 0.25
+					emission = 1.0 1.45
+					speed = 0.0 1.98
+					speed = 1.0 1.12
+					energy = 0.0 0.33
+					energy = 1.0 0.99
+					fixedEmissions = false
+					logGrow
+					{
+						density = 0 8
+						density = 1 0.7
+						density = 10 0
+					}
+				}
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_rocket_hard
+					volume = 0.0 0.0
+					volume = 1.0 1.0
+					pitch = 0.0 0.2
+					pitch = 1.0 1.0
+					loop = true
+				}
+			}
+			powersmoke
+			{
+				MODEL_MULTI_PARTICLE_PERSIST
+				{
+					name = smokethrust
+					modelName = MP_Nazari/FX/smokebooster
+					transformName = thrustTransform
+					emission = 0.0 0.0
+					emission = 0.07 0.0
+					emission = 0.2 0.4
+					emission = 1.0 1.1
+					energy = 0.0 0.2
+					energy = 1.0 3.2
+					speed = 0.0 1.0
+					speed = 1.0 0.8
+					grow = 0.0 0.0
+					grow = 1.0 0.08
+					scale = 0.0 1.0
+					scale = 1.0 1.0
+					offset = 0.0 0.0
+					offset = 1.0 0.5
+					size = 0.0 1.0
+					size = 1.0 1.4
+					renderMode = "Billboard"
+					collide = false
+					collideRatio = 0
+					fixedScale = 1.0
+					sizeClamp = 50
+					angle = 0.0 1.0
+					angle = 45.0 1.0
+					angle = 50.0 1.0
+					distance = 0.0 1.0
+					distance = 100.0 1.0
+					distance = 110.0 1.0
+					emission
+					{
+						mach = 0.0 1.0
+						mach = 0.8 1.0
+						mach = 1.0 1.0
+						density = 1.0 1.0
+						density = 0.4 1.0
+						density = 0.3 1.0
+						density = 0.002 1.0
+						density = 0.001 0.0
+					}
+					logGrow
+					{
+						density = 0 8
+						density = 1 0.7
+						density = 10 0
+					}
+				}
+				MODEL_MULTI_PARTICLE_PERSIST
+				{
+					name = smokelaunch
+					modelName = MP_Nazari/FX/smokelaunch
+					transformName = thrustTransform
+					emission = 0.0 0.0
+					emission = 0.05 0.0
+					emission = 0.2 0.5
+					emission = 1.0 1.8
+					energy = 0.0 0.2
+					energy = 1.0 1.1
+					speed = 0.0 0.1
+					speed = 1.0 0.15
+					grow = 0.0 0.0
+					grow = 1.0 0.75
+					size = 0.0 1.0
+					size = 1.0 1.5
+					renderMode = "Billboard"
+					collide = true
+					collideRatio = 0.12
+					fixedScale = 1.0
+					sizeClamp = 50
+					angle = 0.0 1.0
+					angle = 45.0 1.0
+					angle = 50.0 1.0
+					distance = 0.0 1.0
+					distance = 100.0 1.0
+					distance = 550.0 0.0
+					initialDensity = 2.25
+					physical = true
+					stickiness = 0.8
+					dragCoefficient = 1
+					logarithmicGrowth = 2.75
+					fixedEmissions = true
+					randomInitalVelocityOffsetMaxRadius = 15.5
+					emission
+					{
+						mach = 0.0 1.25
+						mach = 0.05 0.0
+						mach = 1.0 0.0
+					}
+					logGrow
+					{
+						power = 0 0
+						power = 1 2
+						density = 0 8
+						density = 1 0.7
+						density = 10 0
+					}
+					Grow
+					{
+						power = 0 0
+						power = 1 2
+					}
+				}
+			}
+			engage
+			{
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_vent_medium
+					volume = 1.0
+					pitch = 2.0
+					loop = false
+				}
+			}
+			disengage
+			{
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_vent_soft
+					volume = 1.0
+					pitch = 2.0
+					loop = false
+				}
+			}
+			flameout
+			{
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_explosion_low
+					volume = 1.0
+					pitch = 2.0
+					loop = false
+				}
+			}
 		}
 	}
 }
@@ -12051,7 +15795,7 @@ UrlConfig
 		bulkheadProfiles = size1, srf
 		MODULE
 		{
-			name = ModuleEngines
+			name = ModuleEnginesFX
 			thrustVectorTransformName = thrustTransform
 			throttleLocked = True
 			exhaustDamage = True
@@ -12062,8 +15806,9 @@ UrlConfig
 			useEngineResponseTime = True
 			engineAccelerationSpeed = 10.0
 			allowShutdown = False
-			fxOffset = 0, 0, 0.12
 			EngineType = SolidBooster
+			runningEffectName = powersmoke
+			powerEffectName = powerflame
 			PROPELLANT
 			{
 				name = SolidFuel
@@ -12103,6 +15848,205 @@ UrlConfig
 			maxDistance = 50
 			falloff = 1.8
 			thrustTransformName = thrustTransform
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = tjs_EngineLight
+			isDebug = true
+			lightPower = 1.0
+			lightRange = 40.0
+			maxLightPower = 23.0
+			lightRed = 1
+			lightGreen = 0.88
+			lightBlue = 0.68
+			jitterMultiplier = 10.5
+			multiplierOnIva = 0.5
+		}
+		EFFECTS
+		{
+			powerflame
+			{
+				MODEL_MULTI_PARTICLE_PERSIST
+				{
+					name = flamethrust
+					modelName = MP_Nazari/FX/flamebooster
+					transformName = thrustTransform
+					emission = 0.0 0.0
+					emission = 0.05 0.0
+					emission = 0.075 0.25
+					emission = 1.0 1.45
+					speed = 0.0 1.98
+					speed = 1.0 1.12
+					energy = 0.0 0.33
+					energy = 1.0 0.99
+					fixedEmissions = false
+					logGrow
+					{
+						density = 0 8
+						density = 1 0.7
+						density = 10 0
+					}
+				}
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_rocket_hard
+					volume = 0.0 0.0
+					volume = 1.0 1.0
+					pitch = 0.0 0.2
+					pitch = 1.0 1.0
+					loop = true
+				}
+			}
+			powersmoke
+			{
+				MODEL_MULTI_PARTICLE_PERSIST
+				{
+					name = smokethrust
+					modelName = MP_Nazari/FX/smokebooster
+					transformName = thrustTransform
+					emission = 0.0 0.0
+					emission = 0.07 0.0
+					emission = 0.2 0.4
+					emission = 1.0 1.1
+					energy = 0.0 0.2
+					energy = 1.0 3.0
+					speed = 0.0 1.0
+					speed = 1.0 0.8
+					grow = 0.0 0.0
+					grow = 1.0 0.08
+					scale = 0.0 1.0
+					scale = 1.0 1.0
+					offset = 0.0 0.0
+					offset = 1.0 0.5
+					size = 0.0 1.0
+					size = 1.0 1.2
+					renderMode = "Billboard"
+					collide = false
+					collideRatio = 0
+					fixedScale = 1.0
+					sizeClamp = 50
+					angle = 0.0 1.0
+					angle = 45.0 1.0
+					angle = 50.0 1.0
+					distance = 0.0 1.0
+					distance = 100.0 1.0
+					distance = 110.0 1.0
+					emission
+					{
+						mach = 0.0 1.0
+						mach = 0.8 1.0
+						mach = 1.0 1.0
+						density = 1.0 1.0
+						density = 0.4 1.0
+						density = 0.3 1.0
+						density = 0.002 1.0
+						density = 0.001 0.0
+					}
+					logGrow
+					{
+						density = 0 8
+						density = 1 0.7
+						density = 10 0
+					}
+				}
+				MODEL_MULTI_PARTICLE_PERSIST
+				{
+					name = smokelaunch
+					modelName = MP_Nazari/FX/smokelaunch
+					transformName = thrustTransform
+					emission = 0.0 0.0
+					emission = 0.05 0.0
+					emission = 0.2 0.5
+					emission = 1.0 1.8
+					energy = 0.0 0.2
+					energy = 1.0 1.1
+					speed = 0.0 0.1
+					speed = 1.0 0.15
+					grow = 0.0 0.0
+					grow = 1.0 0.75
+					size = 0.0 1.0
+					size = 1.0 1.5
+					renderMode = "Billboard"
+					collide = true
+					collideRatio = 0.12
+					fixedScale = 1.0
+					sizeClamp = 50
+					angle = 0.0 1.0
+					angle = 45.0 1.0
+					angle = 50.0 1.0
+					distance = 0.0 1.0
+					distance = 100.0 1.0
+					distance = 550.0 0.0
+					initialDensity = 2.25
+					physical = true
+					stickiness = 0.8
+					dragCoefficient = 1
+					logarithmicGrowth = 2.75
+					fixedEmissions = true
+					randomInitalVelocityOffsetMaxRadius = 15.5
+					emission
+					{
+						mach = 0.0 1.25
+						mach = 0.05 0.0
+						mach = 1.0 0.0
+					}
+					logGrow
+					{
+						power = 0 0
+						power = 1 2
+						density = 0 8
+						density = 1 0.7
+						density = 10 0
+					}
+					Grow
+					{
+						power = 0 0
+						power = 1 2
+					}
+				}
+			}
+			engage
+			{
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_vent_medium
+					volume = 1.0
+					pitch = 2.0
+					loop = false
+				}
+			}
+			disengage
+			{
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_vent_soft
+					volume = 1.0
+					pitch = 2.0
+					loop = false
+				}
+			}
+			flameout
+			{
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_explosion_low
+					volume = 1.0
+					pitch = 2.0
+					loop = false
+				}
+			}
 		}
 	}
 }
@@ -12155,7 +16099,7 @@ UrlConfig
 		}
 		MODULE
 		{
-			name = ModuleEngines
+			name = ModuleEnginesFX
 			thrustVectorTransformName = thrustTransform
 			throttleLocked = True
 			exhaustDamage = True
@@ -12166,8 +16110,9 @@ UrlConfig
 			useEngineResponseTime = True
 			engineAccelerationSpeed = 10.0
 			allowShutdown = False
-			fxOffset = 0, 0, 0.12
 			EngineType = SolidBooster
+			runningEffectName = powersmoke
+			powerEffectName = powerflame
 			PROPELLANT
 			{
 				name = SolidFuel
@@ -12202,6 +16147,205 @@ UrlConfig
 			maxDistance = 50
 			falloff = 2
 			thrustTransformName = thrustTransform
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = tjs_EngineLight
+			isDebug = true
+			lightPower = 1.0
+			lightRange = 40.0
+			maxLightPower = 23.0
+			lightRed = 1
+			lightGreen = 0.88
+			lightBlue = 0.68
+			jitterMultiplier = 10.5
+			multiplierOnIva = 0.5
+		}
+		EFFECTS
+		{
+			powerflame
+			{
+				MODEL_MULTI_PARTICLE_PERSIST
+				{
+					name = flamethrust
+					modelName = MP_Nazari/FX/KWbooster
+					transformName = thrustTransform
+					emission = 0.0 0.0
+					emission = 0.05 0.0
+					emission = 0.075 0.25
+					emission = 1.0 1.45
+					speed = 0.0 1.98
+					speed = 1.0 1.12
+					energy = 0.0 0.33
+					energy = 1.0 0.99
+					fixedEmissions = false
+					logGrow
+					{
+						density = 0 8
+						density = 1 0.7
+						density = 10 0
+					}
+				}
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_rocket_hard
+					volume = 0.0 0.0
+					volume = 1.0 1.0
+					pitch = 0.0 0.2
+					pitch = 1.0 1.0
+					loop = true
+				}
+			}
+			powersmoke
+			{
+				MODEL_MULTI_PARTICLE_PERSIST
+				{
+					name = smokethrust
+					modelName = MP_Nazari/FX/smokebooster
+					transformName = thrustTransform
+					emission = 0.0 0.0
+					emission = 0.07 0.0
+					emission = 0.2 0.4
+					emission = 1.0 1.1
+					energy = 0.0 0.2
+					energy = 1.0 3.2
+					speed = 0.0 1.0
+					speed = 1.0 0.8
+					grow = 0.0 0.0
+					grow = 1.0 0.08
+					scale = 0.0 1.0
+					scale = 1.0 1.0
+					offset = 0.0 0.0
+					offset = 1.0 0.5
+					size = 0.0 1.0
+					size = 1.0 1.4
+					renderMode = "Billboard"
+					collide = false
+					collideRatio = 0
+					fixedScale = 1.0
+					sizeClamp = 50
+					angle = 0.0 1.0
+					angle = 45.0 1.0
+					angle = 50.0 1.0
+					distance = 0.0 1.0
+					distance = 100.0 1.0
+					distance = 110.0 1.0
+					emission
+					{
+						mach = 0.0 1.0
+						mach = 0.8 1.0
+						mach = 1.0 1.0
+						density = 1.0 1.0
+						density = 0.4 1.0
+						density = 0.3 1.0
+						density = 0.002 1.0
+						density = 0.001 0.0
+					}
+					logGrow
+					{
+						density = 0 8
+						density = 1 0.7
+						density = 10 0
+					}
+				}
+				MODEL_MULTI_PARTICLE_PERSIST
+				{
+					name = smokelaunch
+					modelName = MP_Nazari/FX/smokelaunch
+					transformName = thrustTransform
+					emission = 0.0 0.0
+					emission = 0.05 0.0
+					emission = 0.2 0.5
+					emission = 1.0 1.8
+					energy = 0.0 0.2
+					energy = 1.0 1.1
+					speed = 0.0 0.1
+					speed = 1.0 0.15
+					grow = 0.0 0.0
+					grow = 1.0 0.75
+					size = 0.0 1.0
+					size = 1.0 1.5
+					renderMode = "Billboard"
+					collide = true
+					collideRatio = 0.12
+					fixedScale = 1.0
+					sizeClamp = 50
+					angle = 0.0 1.0
+					angle = 45.0 1.0
+					angle = 50.0 1.0
+					distance = 0.0 1.0
+					distance = 100.0 1.0
+					distance = 550.0 0.0
+					initialDensity = 2.25
+					physical = true
+					stickiness = 0.8
+					dragCoefficient = 1
+					logarithmicGrowth = 2.75
+					fixedEmissions = true
+					randomInitalVelocityOffsetMaxRadius = 15.5
+					emission
+					{
+						mach = 0.0 1.25
+						mach = 0.05 0.0
+						mach = 1.0 0.0
+					}
+					logGrow
+					{
+						power = 0 0
+						power = 1 2
+						density = 0 8
+						density = 1 0.7
+						density = 10 0
+					}
+					Grow
+					{
+						power = 0 0
+						power = 1 2
+					}
+				}
+			}
+			engage
+			{
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_vent_medium
+					volume = 1.0
+					pitch = 2.0
+					loop = false
+				}
+			}
+			disengage
+			{
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_vent_soft
+					volume = 1.0
+					pitch = 2.0
+					loop = false
+				}
+			}
+			flameout
+			{
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_explosion_low
+					volume = 1.0
+					pitch = 2.0
+					loop = false
+				}
+			}
 		}
 	}
 }
@@ -12283,6 +16427,27 @@ UrlConfig
 			useStaging = True
 			useEvent = False
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = tjs_EngineLight
+			isDebug = true
+			lightPower = 1.0
+			lightRange = 40.0
+			maxLightPower = 23.0
+			lightRed = 1
+			lightGreen = 0.88
+			lightBlue = 0.68
+			jitterMultiplier = 10.5
+			multiplierOnIva = 0.5
+		}
 	}
 }
 UrlConfig
@@ -12350,6 +16515,24 @@ UrlConfig
 				key = 5 0.001
 			}
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = RcsSounds
+			rcsSoundFile = RcsSounds/Sounds/RcsHeavy
+			rcsShutoffSoundFile = RcsSounds/Sounds/RcsHeavyShutoff
+			rcsVolume = 0.5
+			loopRcsSound = true
+			internalRcsSoundsOnly = false
+			useLightingEffects = true
+		}
 	}
 }
 UrlConfig
@@ -12403,6 +16586,14 @@ UrlConfig
 			name = Oxidizer
 			amount = 1100
 			maxAmount = 1100
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -12458,6 +16649,14 @@ UrlConfig
 			amount = 1375
 			maxAmount = 1375
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -12512,6 +16711,14 @@ UrlConfig
 			amount = 1375
 			maxAmount = 1375
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -12563,6 +16770,14 @@ UrlConfig
 			name = Oxidizer
 			amount = 440
 			maxAmount = 440
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -12616,6 +16831,14 @@ UrlConfig
 			amount = 440
 			maxAmount = 440
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -12667,6 +16890,14 @@ UrlConfig
 			name = Oxidizer
 			amount = 440
 			maxAmount = 440
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -12722,6 +16953,14 @@ UrlConfig
 			amount = 1375
 			maxAmount = 1375
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -12770,6 +17009,14 @@ UrlConfig
 			name = Oxidizer
 			amount = 3520
 			maxAmount = 3520
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -12820,6 +17067,14 @@ UrlConfig
 			amount = 22
 			maxAmount = 22
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -12868,6 +17123,14 @@ UrlConfig
 			name = Oxidizer
 			amount = 55
 			maxAmount = 55
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -12918,6 +17181,14 @@ UrlConfig
 			amount = 110
 			maxAmount = 110
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -12966,6 +17237,14 @@ UrlConfig
 			name = Oxidizer
 			amount = 220
 			maxAmount = 220
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -13016,6 +17295,14 @@ UrlConfig
 			amount = 440
 			maxAmount = 440
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -13063,6 +17350,14 @@ UrlConfig
 			name = Oxidizer
 			amount = 33
 			maxAmount = 33
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -13113,6 +17408,14 @@ UrlConfig
 			amount = 880
 			maxAmount = 880
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -13162,6 +17465,14 @@ UrlConfig
 			amount = 1760
 			maxAmount = 1760
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -13210,6 +17521,14 @@ UrlConfig
 			name = Oxidizer
 			amount = 440
 			maxAmount = 440
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -13276,6 +17595,14 @@ UrlConfig
 			amount = 220
 			maxAmount = 220
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -13337,6 +17664,14 @@ UrlConfig
 			name = Oxidizer
 			amount = 440
 			maxAmount = 440
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -13400,6 +17735,14 @@ UrlConfig
 			amount = 220
 			maxAmount = 220
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -13462,6 +17805,14 @@ UrlConfig
 			amount = 440
 			maxAmount = 440
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -13517,6 +17868,14 @@ UrlConfig
 			name = LiquidFuel
 			amount = 800
 			maxAmount = 800
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -13580,6 +17939,14 @@ UrlConfig
 			amount = 220
 			maxAmount = 220
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -13636,6 +18003,14 @@ UrlConfig
 			amount = 400
 			maxAmount = 400
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -13691,6 +18066,14 @@ UrlConfig
 			name = MonoPropellant
 			amount = 400
 			maxAmount = 400
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -13770,6 +18153,14 @@ UrlConfig
 			startEventGUIName = Lights On
 			endEventGUIName = Lights Off
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -13823,6 +18214,14 @@ UrlConfig
 			name = Oxidizer
 			amount = 5500
 			maxAmount = 5500
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -13878,6 +18277,14 @@ UrlConfig
 			amount = 1375
 			maxAmount = 1375
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -13932,6 +18339,14 @@ UrlConfig
 			amount = 2750
 			maxAmount = 2750
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -13979,6 +18394,14 @@ UrlConfig
 			name = LiquidFuel
 			amount = 10000
 			maxAmount = 10000
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -14028,6 +18451,14 @@ UrlConfig
 			amount = 2500
 			maxAmount = 2500
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -14075,6 +18506,14 @@ UrlConfig
 			name = LiquidFuel
 			amount = 5000
 			maxAmount = 5000
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -14124,6 +18563,14 @@ UrlConfig
 			amount = 1000
 			maxAmount = 1000
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -14163,6 +18610,14 @@ UrlConfig
 			name = MonoPropellant
 			amount = 750
 			maxAmount = 750
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -14208,6 +18663,14 @@ UrlConfig
 			amount = 80
 			maxAmount = 80
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -14249,6 +18712,14 @@ UrlConfig
 			amount = 250
 			maxAmount = 250
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -14288,6 +18759,14 @@ UrlConfig
 			amount = 60
 			maxAmount = 60
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -14325,6 +18804,14 @@ UrlConfig
 			name = MonoPropellant
 			amount = 150
 			maxAmount = 150
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -14375,6 +18862,14 @@ UrlConfig
 			amount = 7920
 			maxAmount = 7920
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -14423,6 +18918,14 @@ UrlConfig
 			name = Oxidizer
 			amount = 3960
 			maxAmount = 3960
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -14473,6 +18976,14 @@ UrlConfig
 			amount = 1980
 			maxAmount = 1980
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -14515,6 +19026,14 @@ UrlConfig
 			name = XenonGas
 			amount = 700
 			maxAmount = 700
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -14559,6 +19078,14 @@ UrlConfig
 			amount = 5250
 			maxAmount = 5250
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -14596,6 +19123,14 @@ UrlConfig
 			name = XenonGas
 			amount = 400
 			maxAmount = 400
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -14652,6 +19187,14 @@ UrlConfig
 			lowRange = 50
 			presenceChance = 100
 			resourceName = Ore
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -14723,6 +19266,14 @@ UrlConfig
 			amount = 50
 			maxAmount = 50
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -14792,6 +19343,14 @@ UrlConfig
 			name = ElectricCharge
 			amount = 300
 			maxAmount = 300
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -14968,6 +19527,14 @@ UrlConfig
 			moduleType = Converter
 			autoDeploy = true
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -15012,6 +19579,14 @@ UrlConfig
 		MODULE
 		{
 			name = ModuleFuelJettison
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -15071,6 +19646,14 @@ UrlConfig
 			deployActionName = Activate
 			retractActionName = Deactivate
 			moduleType = Scanner
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -15155,6 +19738,14 @@ UrlConfig
 			activeAnimationName = Drill_Running
 			moduleType = Drill
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -15199,6 +19790,14 @@ UrlConfig
 		MODULE
 		{
 			name = ModuleFuelJettison
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -15258,6 +19857,14 @@ UrlConfig
 			name = ModuleAnalysisResource
 			resourceName = Ore
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -15310,6 +19917,14 @@ UrlConfig
 			activeAnimationName = 
 			moduleType = Scanner
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -15361,6 +19976,14 @@ UrlConfig
 			rerunnable = True
 			usageReqMaskInternal = 1
 			usageReqMaskExternal = 8
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -15419,6 +20042,14 @@ UrlConfig
 			interactionRange = 1.2
 			usageReqMaskInternal = 1
 			usageReqMaskExternal = 8
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -15507,6 +20138,14 @@ UrlConfig
 			name = FlagDecal
 			textureQuadName = flagTransform
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -15570,6 +20209,14 @@ UrlConfig
 			usageReqMaskInternal = 1
 			usageReqMaskExternal = 8
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -15625,6 +20272,14 @@ UrlConfig
 			rerunnable = True
 			usageReqMaskInternal = 1
 			usageReqMaskExternal = 8
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -15682,6 +20337,14 @@ UrlConfig
 			usageReqMaskInternal = 1
 			usageReqMaskExternal = 8
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -15737,6 +20400,14 @@ UrlConfig
 			rerunnable = True
 			usageReqMaskInternal = 1
 			usageReqMaskExternal = 8
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -15794,6 +20465,14 @@ UrlConfig
 			usageReqMaskInternal = 1
 			usageReqMaskExternal = 8
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -15832,6 +20511,14 @@ UrlConfig
 		fuelCrossFeed = True
 		NoCrossFeedNodeKey = bottom
 		bulkheadProfiles = size2, size1
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -15872,6 +20559,14 @@ UrlConfig
 		fuelCrossFeed = True
 		NoCrossFeedNodeKey = bottom
 		bulkheadProfiles = size2, size1
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -15911,6 +20606,14 @@ UrlConfig
 		fuelCrossFeed = True
 		NoCrossFeedNodeKey = bottom
 		bulkheadProfiles = size2, size1
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -15949,6 +20652,14 @@ UrlConfig
 		fuelCrossFeed = True
 		PhysicsSignificance = 1
 		bulkheadProfiles = size0, size1
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -15986,6 +20697,14 @@ UrlConfig
 		breakingTorque = 50
 		fuelCrossFeed = True
 		bulkheadProfiles = size0, size1
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -16035,6 +20754,14 @@ UrlConfig
 			name = LiquidFuel
 			amount = 400
 			maxAmount = 400
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -16095,6 +20822,14 @@ UrlConfig
 			amount = 0.6
 			maxAmount = 0.6
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -16137,6 +20872,14 @@ UrlConfig
 		{
 			model = Squad/Parts/Structural/mk1Parts/mk1Structural
 			scale = 1.25, 1.25, 1.25
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -16190,6 +20933,24 @@ UrlConfig
 		{
 			cube = Default, 3.272327,0.7808633,1.97612, 3.272327,0.7810537,1.97612, 11.00077,0.8435503,0.4720254, 11.00077,0.8433413,0.4720254, 3.272327,0.7660723,1.97612, 3.272327,0.7661255,1.97612, -2.384186E-07,0,0, 3.7678,0.8747007,3.7678
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = tjs_DecouplerLight
+			lightMultiplier = 1.0
+			lightRange = 15.0
+			lightRed = 1
+			lightGreen = 0.88
+			lightBlue = 0.68
+			lightDuration = 0.1
+		}
 	}
 }
 UrlConfig
@@ -16230,6 +20991,14 @@ UrlConfig
 		{
 			cube = Default, 7.344658,0.7515181,1.980434, 7.344658,0.7516301,1.980434, 11.00077,0.4258759,2.35452, 11.00077,0.7470945,0.1906485, 7.3984,0.7432775,1.971122, 7.3984,0.7581861,1.971122, -1.907349E-06,0,0, 3.776463,2.301678,3.757764
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -16265,6 +21034,14 @@ UrlConfig
 		fuelCrossFeed = True
 		PhysicsSignificance = 1
 		bulkheadProfiles = srf
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -16303,6 +21080,14 @@ UrlConfig
 		crashTolerance = 15
 		maxTemp = 2000
 		bulkheadProfiles = size1
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -16341,6 +21126,14 @@ UrlConfig
 		maxTemp = 2000
 		fuelCrossFeed = False
 		bulkheadProfiles = size0, srf
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -16379,6 +21172,14 @@ UrlConfig
 		maxTemp = 2000
 		fuelCrossFeed = False
 		bulkheadProfiles = size0, srf
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -16417,6 +21218,14 @@ UrlConfig
 		maxTemp = 2000
 		fuelCrossFeed = False
 		bulkheadProfiles = size0, srf
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -16455,6 +21264,14 @@ UrlConfig
 		crashTolerance = 15
 		maxTemp = 2000
 		bulkheadProfiles = size0
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -16493,6 +21310,14 @@ UrlConfig
 		maxTemp = 2000
 		fuelCrossFeed = False
 		bulkheadProfiles = size0, srf
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -16531,6 +21356,14 @@ UrlConfig
 		maxTemp = 2000
 		fuelCrossFeed = False
 		bulkheadProfiles = size0, srf
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -16583,6 +21416,24 @@ UrlConfig
 			useStaging = True
 			useEvent = False
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = tjs_DecouplerLight
+			lightMultiplier = 1.0
+			lightRange = 15.0
+			lightRed = 1
+			lightGreen = 0.88
+			lightBlue = 0.68
+			lightDuration = 0.1
+		}
 	}
 }
 UrlConfig
@@ -16620,6 +21471,14 @@ UrlConfig
 		crashTolerance = 7
 		maxTemp = 2000
 		bulkheadProfiles = size0, srf
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -16656,6 +21515,14 @@ UrlConfig
 		crashTolerance = 7
 		maxTemp = 2000
 		bulkheadProfiles = size0
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -16692,6 +21559,14 @@ UrlConfig
 		breakingTorque = 200
 		maxTemp = 2000
 		bulkheadProfiles = size1
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -16729,6 +21604,14 @@ UrlConfig
 		breakingTorque = 200
 		maxTemp = 2000
 		bulkheadProfiles = size1, srf
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -16766,6 +21649,14 @@ UrlConfig
 		breakingTorque = 200
 		maxTemp = 2000
 		bulkheadProfiles = size1, srf
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -16821,6 +21712,14 @@ UrlConfig
 		{
 			name = ModuleActiveRadiator
 			maxEnergyTransfer = 50000
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -16878,6 +21777,14 @@ UrlConfig
 			name = ModuleActiveRadiator
 			maxEnergyTransfer = 12500
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -16934,6 +21841,14 @@ UrlConfig
 			name = ModuleActiveRadiator
 			maxEnergyTransfer = 2500
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -16974,6 +21889,14 @@ UrlConfig
 		{
 			model = Squad/Parts/Thermal/RadiatorPanels/radPanelLg
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -17013,6 +21936,14 @@ UrlConfig
 		MODEL
 		{
 			model = Squad/Parts/Thermal/RadiatorPanels/radPanelSm
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -17068,6 +21999,14 @@ UrlConfig
 			packetResourceCost = 20.0
 			requiredResource = ElectricCharge
 			DeployFxModules = 0
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -17131,6 +22070,14 @@ UrlConfig
 			DeployFxModules = 0
 			ProgressFxModules = 1
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -17186,6 +22133,14 @@ UrlConfig
 			requiredResource = ElectricCharge
 			DeployFxModules = 0
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -17237,6 +22192,24 @@ UrlConfig
 			environments = 15
 			useStaging = True
 			useEvent = False
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = tjs_DecouplerLight
+			lightMultiplier = 1.0
+			lightRange = 15.0
+			lightRed = 1
+			lightGreen = 0.88
+			lightBlue = 0.68
+			lightDuration = 0.1
 		}
 	}
 }
@@ -17291,6 +22264,24 @@ UrlConfig
 			useStaging = True
 			useEvent = False
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = tjs_DecouplerLight
+			lightMultiplier = 1.0
+			lightRange = 15.0
+			lightRed = 1
+			lightGreen = 0.88
+			lightBlue = 0.68
+			lightDuration = 0.1
+		}
 	}
 }
 UrlConfig
@@ -17343,6 +22334,24 @@ UrlConfig
 			environments = 15
 			useStaging = True
 			useEvent = False
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = tjs_DecouplerLight
+			lightMultiplier = 1.0
+			lightRange = 15.0
+			lightRed = 1
+			lightGreen = 0.88
+			lightBlue = 0.68
+			lightDuration = 0.1
 		}
 	}
 }
@@ -17401,6 +22410,24 @@ UrlConfig
 		{
 			cube = Default, 0.5473201,0.7008904,0.7968628, 0.5473201,0.7008521,0.7968628, 1.500829,0.8234898,0.2206994, 1.500829,0.8234897,0.2206994, 0.5473201,0.6968417,0.7968628, 0.5473201,0.696598,0.7968628, 0,0,0, 1.4,0.4543995,1.4
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = tjs_DecouplerLight
+			lightMultiplier = 1.0
+			lightRange = 15.0
+			lightRed = 1
+			lightGreen = 0.88
+			lightBlue = 0.68
+			lightDuration = 0.1
+		}
 	}
 }
 UrlConfig
@@ -17456,6 +22483,24 @@ UrlConfig
 		DRAG_CUBE
 		{
 			cube = Default, 0.09507747,0.7806976,0.399787, 0.09507747,0.7806976,0.399787, 0.3032565,1,0.09947453, 0.3032565,1,0.09947453, 0.09507747,0.7806976,0.399787, 0.09507747,0.7806976,0.399787, 0,0,0, 0.6027219,0.1572677,0.6027219
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = tjs_DecouplerLight
+			lightMultiplier = 1.0
+			lightRange = 15.0
+			lightRed = 1
+			lightGreen = 0.88
+			lightBlue = 0.68
+			lightDuration = 0.1
 		}
 	}
 }
@@ -17514,6 +22559,24 @@ UrlConfig
 		{
 			cube = Default, 0.6534213,0.7433718,1.441511, 0.6534213,0.7433771,1.441511, 5.167493,0.6727995,0.3518152, 5.167493,0.9597349,0.1906485, 0.6534213,0.7441965,1.441511, 0.6534213,0.7426699,1.441511, 0,-0.04487327,0, 2.694373,0.3011892,2.694373
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = tjs_DecouplerLight
+			lightMultiplier = 1.0
+			lightRange = 15.0
+			lightRed = 1
+			lightGreen = 0.88
+			lightBlue = 0.68
+			lightDuration = 0.1
+		}
 	}
 }
 UrlConfig
@@ -17567,6 +22630,24 @@ UrlConfig
 			environments = 15
 			useStaging = True
 			useEvent = False
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = tjs_DecouplerLight
+			lightMultiplier = 1.0
+			lightRange = 15.0
+			lightRed = 1
+			lightGreen = 0.88
+			lightBlue = 0.68
+			lightDuration = 0.1
 		}
 	}
 }
@@ -17625,6 +22706,24 @@ UrlConfig
 		{
 			cube = Default, 0.3840669,0.7586023,0.765933, 0.3840669,0.7586111,0.765933, 1.250829,0.890376,0.2939519, 1.250829,0.9989504,0.1118914, 0.3840669,0.7559006,0.7659331, 0.3840669,0.7590505,0.7659331, 0,7.82311E-09,-9.325873E-16, 1.337897,0.2835982,1.337897
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = tjs_DecouplerLight
+			lightMultiplier = 1.0
+			lightRange = 15.0
+			lightRed = 1
+			lightGreen = 0.88
+			lightBlue = 0.68
+			lightDuration = 0.1
+		}
 	}
 }
 UrlConfig
@@ -17681,6 +22780,24 @@ UrlConfig
 		{
 			cube = Default, 0.09477547,0.7825552,0.4936077, 0.09477547,0.7825552,0.4936077, 0.3032565,1,0.09947455, 0.3032565,1,0.09947455, 0.09477547,0.7825552,0.4936078, 0.09477547,0.7825552,0.4936078, 0,0,0, 0.8233331,0.1572677,0.8233332
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = tjs_DecouplerLight
+			lightMultiplier = 1.0
+			lightRange = 15.0
+			lightRed = 1
+			lightGreen = 0.88
+			lightBlue = 0.68
+			lightDuration = 0.1
+		}
 	}
 }
 UrlConfig
@@ -17720,6 +22837,21 @@ UrlConfig
 			name = ModuleDockingNode
 			referenceAttachNode = top
 			nodeType = size1
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = ModuleDockingNodeNamed
+			controlTransformName = not_initialized
+			portName = default
+			initialized = false
 		}
 	}
 }
@@ -17769,6 +22901,21 @@ UrlConfig
 			startEventGUIName = Open
 			endEventGUIName = Close
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = ModuleDockingNodeNamed
+			controlTransformName = not_initialized
+			portName = default
+			initialized = false
+		}
 	}
 }
 UrlConfig
@@ -17808,6 +22955,21 @@ UrlConfig
 			name = ModuleDockingNode
 			referenceAttachNode = top
 			nodeType = size0
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = ModuleDockingNodeNamed
+			controlTransformName = not_initialized
+			portName = default
+			initialized = false
 		}
 	}
 }
@@ -17859,6 +23021,21 @@ UrlConfig
 			endEventGUIName = Close Shield
 			allowAnimationWhileShielded = False
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = ModuleDockingNodeNamed
+			controlTransformName = not_initialized
+			portName = default
+			initialized = false
+		}
 	}
 }
 UrlConfig
@@ -17897,6 +23074,21 @@ UrlConfig
 			name = ModuleDockingNode
 			referenceAttachNode = top
 			nodeType = size2
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = ModuleDockingNodeNamed
+			controlTransformName = not_initialized
+			portName = default
+			initialized = false
 		}
 	}
 }
@@ -18008,6 +23200,14 @@ UrlConfig
 			name = FlagDecal
 			textureQuadName = flagTransform
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -18044,6 +23244,14 @@ UrlConfig
 		thermalMassModifier = 3
 		PhysicsSignificance = 1
 		bulkheadProfiles = srf
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -18088,6 +23296,14 @@ UrlConfig
 			ladderColliderName = ladderCollider
 			ladderRetractAnimationName = Retract
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -18131,6 +23347,14 @@ UrlConfig
 			ladderAnimationRootName = Telescopic ladder
 			ladderColliderName = ladderCollider
 			ladderRetractAnimationName = Retract
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -18181,6 +23405,14 @@ UrlConfig
 			suspensionSpring = 1.25
 			suspensionDamper = 1
 			suspensionOffset = 0, 0.02,0
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -18235,6 +23467,14 @@ UrlConfig
 			suspensionSpring = 5
 			suspensionDamper = 2
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -18281,6 +23521,14 @@ UrlConfig
 			suspensionSpring = 1
 			suspensionDamper = 1
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -18318,6 +23566,14 @@ UrlConfig
 		maxTemp = 2000
 		fuelCrossFeed = True
 		bulkheadProfiles = size1, size2
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -18355,6 +23611,14 @@ UrlConfig
 		maxTemp = 2000
 		fuelCrossFeed = True
 		bulkheadProfiles = size2, size1
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -18421,6 +23685,14 @@ UrlConfig
 			environments = 16
 			useStaging = True
 			useEvent = False
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -18552,6 +23824,27 @@ UrlConfig
 			useStaging = True
 			useEvent = False
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = tjs_EngineLight
+			isDebug = true
+			lightPower = 1.0
+			lightRange = 40.0
+			maxLightPower = 23.0
+			lightRed = 1
+			lightGreen = 0.88
+			lightBlue = 0.68
+			jitterMultiplier = 10.5
+			multiplierOnIva = 0.5
+		}
 	}
 }
 UrlConfig
@@ -18602,6 +23895,24 @@ UrlConfig
 				key = 1 100
 				key = 4 0.001
 			}
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = RcsSounds
+			rcsSoundFile = RcsSounds/Sounds/RcsHeavy
+			rcsShutoffSoundFile = RcsSounds/Sounds/RcsHeavyShutoff
+			rcsVolume = 0.5
+			loopRcsSound = true
+			internalRcsSoundsOnly = false
+			useLightingEffects = true
 		}
 	}
 }
@@ -18678,6 +23989,14 @@ UrlConfig
 			nodeInnerForeID = top2
 			nodeInnerAftID = bottom2
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -18752,6 +24071,14 @@ UrlConfig
 			nodeOuterAftID = bottom
 			nodeInnerForeID = top2
 			nodeInnerAftID = bottom2
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -18835,6 +24162,14 @@ UrlConfig
 			dragAtMaxAoA = 0.15
 			dragAtMinAoA = 0.1
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -18905,6 +24240,21 @@ UrlConfig
 			dragAtMaxAoA = 0.3
 			dragAtMinAoA = 0.1
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = ModuleDockingNodeNamed
+			controlTransformName = not_initialized
+			portName = default
+			initialized = false
+		}
 	}
 }
 UrlConfig
@@ -18971,6 +24321,14 @@ UrlConfig
 			nodeOuterAftID = bottom
 			nodeInnerForeID = top2
 			nodeInnerAftID = bottom2
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -19039,6 +24397,14 @@ UrlConfig
 			nodeInnerForeID = top2
 			nodeInnerAftID = bottom2
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -19105,6 +24471,14 @@ UrlConfig
 			NodeOuterAft = bottom
 			NodeInnerFore = top2
 			NodeInnerAft = bottom2
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -19179,6 +24553,14 @@ UrlConfig
 			name = ModuleDragModifier
 			dragCubeName = DEPLOYED
 			dragModifier = 12
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -19256,6 +24638,14 @@ UrlConfig
 			dragCubeName = DEPLOYED
 			dragModifier = 8
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -19332,6 +24722,14 @@ UrlConfig
 			dragCubeName = DEPLOYED
 			dragModifier = 25
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -19406,6 +24804,14 @@ UrlConfig
 			name = ModuleDragModifier
 			dragCubeName = DEPLOYED
 			dragModifier = 58
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -19484,6 +24890,14 @@ UrlConfig
 			dragCubeName = DEPLOYED
 			dragModifier = 3.5
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -19519,6 +24933,14 @@ UrlConfig
 		maxTemp = 2000
 		PhysicsSignificance = 1
 		bulkheadProfiles = size1, srf
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -19566,6 +24988,24 @@ UrlConfig
 				key = 1 100
 				key = 4 0.001
 			}
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = RcsSounds
+			rcsSoundFile = RcsSounds/Sounds/RcsHeavy
+			rcsShutoffSoundFile = RcsSounds/Sounds/RcsHeavyShutoff
+			rcsVolume = 0.5
+			loopRcsSound = true
+			internalRcsSoundsOnly = false
+			useLightingEffects = true
 		}
 	}
 }
@@ -19639,6 +25079,14 @@ UrlConfig
 			modifiedConductionFactor = 0.001
 			convectionFluxThreshold = 500
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -19711,6 +25159,14 @@ UrlConfig
 			modifiedConductionFactor = 0.001
 			convectionFluxThreshold = 500
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -19755,6 +25211,14 @@ UrlConfig
 			resourceAmount = 0.04
 			animationName = LightAnimation
 			useResources = true
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
@@ -19801,6 +25265,14 @@ UrlConfig
 			resourceAmount = 0.02
 			useResources = true
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -19840,6 +25312,14 @@ UrlConfig
 		fuelCrossFeed = True
 		NoCrossFeedNodeKey = bottom
 		bulkheadProfiles = size1
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -19880,6 +25360,14 @@ UrlConfig
 		fuelCrossFeed = True
 		NoCrossFeedNodeKey = bottom
 		bulkheadProfiles = size1
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -19920,6 +25408,14 @@ UrlConfig
 		fuelCrossFeed = True
 		NoCrossFeedNodeKey = bottom
 		bulkheadProfiles = size1
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
 	}
 }
 UrlConfig
@@ -19971,6 +25467,12 @@ UrlConfig
 			BrakeSpeed = 3
 			wheelName = wheel
 			hasSteering = false
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = false
+			wheelImpactSound = CollisionFX/Sounds/TyreSqueal
 		}
 	}
 }
@@ -20038,6 +25540,12 @@ UrlConfig
 				key = 30 2
 				key = 100 1
 			}
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = false
+			wheelImpactSound = CollisionFX/Sounds/TyreSqueal
 		}
 	}
 }
@@ -20114,6 +25622,12 @@ UrlConfig
 				rotatorsName = link2
 			}
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = false
+			wheelImpactSound = CollisionFX/Sounds/TyreSqueal
+		}
 	}
 }
 UrlConfig
@@ -20188,6 +25702,12 @@ UrlConfig
 				targetName = anchor1
 				rotatorsName = link2
 			}
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = false
+			wheelImpactSound = CollisionFX/Sounds/TyreSqueal
 		}
 	}
 }
@@ -20308,6 +25828,12 @@ UrlConfig
 				moversName = trackSteering
 			}
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = false
+			wheelImpactSound = CollisionFX/Sounds/TyreSqueal
+		}
 	}
 }
 UrlConfig
@@ -20406,6 +25932,12 @@ UrlConfig
 				moversName = lateral
 			}
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = false
+			wheelImpactSound = CollisionFX/Sounds/TyreSqueal
+		}
 	}
 }
 UrlConfig
@@ -20490,6 +26022,12 @@ UrlConfig
 				targetName = steering
 				moversName = trackSteering
 			}
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = false
+			wheelImpactSound = CollisionFX/Sounds/TyreSqueal
 		}
 	}
 }
@@ -20592,6 +26130,12 @@ UrlConfig
 				rotatorsName = susp1-2
 			}
 		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = false
+			wheelImpactSound = CollisionFX/Sounds/TyreSqueal
+		}
 	}
 }
 UrlConfig
@@ -20675,6 +26219,12 @@ UrlConfig
 			environments = 15
 			useStaging = False
 			useEvent = True
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = false
+			wheelImpactSound = CollisionFX/Sounds/TyreSqueal
 		}
 	}
 }
@@ -32124,6 +37674,196 @@ UrlConfig
 			maxShare = 1.0
 			minRate = 41.51324653069454982445
 			maxRate = 51.89155816336818728056
+		}
+	}
+}
+UrlConfig
+{
+	name = W485_SurfaceLight
+	type = PART
+	parentUrl = SurfaceLights/Parts/SurfaceLight/part
+	url = SurfaceLights/Parts/SurfaceLight/part/W485_SurfaceLight
+	PART
+	{
+		name = W485_SurfaceLight
+		module = Part
+		author = Why485
+		mesh = SurfaceLight.mu
+		scale = 1.0
+		rescaleFactor = 1
+		TechRequired = electrics
+		entryCost = 800
+		cost = 100
+		category = Utility
+		subcategory = 0
+		title = Surface Mounted Spotlight
+		manufacturer = Abrams LightCo
+		description = A small surface mounted spotlight designed for self illumination.
+		node_attach = 0, 0.0, 0.0, 0, -1, 0, 0
+		attachRules = 0,1,0,0,0
+		mass = 0.01
+		dragModelType = default
+		maximum_drag = 0.1
+		minimum_drag = 0.1
+		angularDrag = 1
+		crashTolerance = 8
+		maxTemp = 3200
+		MODULE
+		{
+			name = ModuleLight
+			lightName = Light
+			useAnimationDim = true
+			lightBrightenSpeed = 2.5
+			lightDimSpeed = 2.5
+			resourceAmount = 0.02
+			animationName = LightUp
+			useResources = true
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+	}
+}
+UrlConfig
+{
+	name = W485_Surface4WayLight
+	type = PART
+	parentUrl = SurfaceLights/Parts/SurfaceLight4Way/part
+	url = SurfaceLights/Parts/SurfaceLight4Way/part/W485_Surface4WayLight
+	PART
+	{
+		name = W485_Surface4WayLight
+		module = Part
+		author = Why485
+		mesh = SurfaceLight.mu
+		scale = 1.0
+		rescaleFactor = 1
+		TechRequired = electrics
+		entryCost = 800
+		cost = 100
+		category = Utility
+		subcategory = 0
+		title = Surface Mounted 4-Way Spotlight
+		manufacturer = Abrams LightCo
+		description = Shines 4 individual lights perpendicular to each other for self-illumination.
+		node_stack_bottom = 0, 0, 0, 0, 1, 0, 0
+		node_attach = 0, 0.0, 0.0, 0, -1, 0, 0
+		attachRules = 1,1,0,0,0
+		mass = 0.015
+		dragModelType = default
+		maximum_drag = 0.1
+		minimum_drag = 0.1
+		angularDrag = 1
+		crashTolerance = 8
+		maxTemp = 3200
+		MODULE
+		{
+			name = ModuleLight
+			lightName = L1
+			useAnimationDim = true
+			lightBrightenSpeed = 2.5
+			lightDimSpeed = 2.5
+			resourceAmount = 0.02
+			animationName = 4WayAnim
+			useResources = true
+		}
+		MODULE
+		{
+			name = ModuleLight
+			lightName = L2
+			useAnimationDim = true
+			lightBrightenSpeed = 2.5
+			lightDimSpeed = 2.5
+			resourceAmount = 0.02
+			animationName = 4WayAnim
+			useResources = true
+		}
+		MODULE
+		{
+			name = ModuleLight
+			lightName = L3
+			useAnimationDim = true
+			lightBrightenSpeed = 2.5
+			lightDimSpeed = 2.5
+			resourceAmount = 0.02
+			animationName = 4WayAnim
+			useResources = true
+		}
+		MODULE
+		{
+			name = ModuleLight
+			lightName = L4
+			useAnimationDim = true
+			lightBrightenSpeed = 2.5
+			lightDimSpeed = 2.5
+			resourceAmount = 0.02
+			animationName = 4WayAnim
+			useResources = true
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+	}
+}
+UrlConfig
+{
+	name = W485_SurfaceOmniLight
+	type = PART
+	parentUrl = SurfaceLights/Parts/SurfaceOmniLight/part
+	url = SurfaceLights/Parts/SurfaceOmniLight/part/W485_SurfaceOmniLight
+	PART
+	{
+		name = W485_SurfaceOmniLight
+		module = Part
+		author = Why485
+		mesh = SurfaceLight.mu
+		scale = 1.0
+		rescaleFactor = 1
+		TechRequired = electrics
+		entryCost = 800
+		cost = 100
+		category = Utility
+		subcategory = 0
+		title = Surface Mounted Omni Light
+		manufacturer = Abrams LightCo
+		description = A small light that emits in all directions. Useful for self-illumination.
+		node_attach = 0, 0.0, 0.0, 0, -1, 0, 0
+		attachRules = 0,1,0,0,0
+		mass = 0.0075
+		dragModelType = default
+		maximum_drag = 0.01
+		minimum_drag = 0.01
+		angularDrag = 1
+		crashTolerance = 8
+		maxTemp = 3200
+		MODULE
+		{
+			name = ModuleLight
+			lightName = Light
+			useAnimationDim = true
+			lightBrightenSpeed = 2.5
+			lightDimSpeed = 2.5
+			resourceAmount = 0.01
+			animationName = OmniAnim
+			useResources = true
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 	}
 }
