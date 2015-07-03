@@ -41550,17 +41550,24 @@ UrlConfig
 		forceLegacyFemales = false
 		CustomKerbals
 		{
+			Jebediah Kerman = M Orange_Suit
+			Bill Kerman = M Orange_Suit
+			Bob Kerman = M Orange_Suit
+			Valentina Kerman = F Orange_Suit
 		}
 		GenericKerbals
 		{
 			excludedHeads = 
-			excludedSuits = 
-			femaleHeads = 
+			excludedSuits = Green_Suit_Command_Informal Low_Tier_Cadet Blue_Suit_Medical Orange_Suit_Veteran
+			femaleHeads = Headf2 Headf1 Headf3 Headf4 Headf5
 			femaleSuits = 
 			eyelessHeads = 
 		}
 		ClassSuits
 		{
+			Pilot = Yellow_Suit_Command
+			Engineer = Red_Suit_EngineerSecurityComms
+			Scientist = Blue_Suit_Science
 		}
 		CabinSuits
 		{
