@@ -1,4 +1,4 @@
-patchedNodeCount = 3175
+patchedNodeCount = 3217
 catEatenCount = 0
 UrlConfig
 {
@@ -1099,6 +1099,2831 @@ UrlConfig
 }
 UrlConfig
 {
+	name = CarbonDioxide
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/CarbonDioxide
+	RESOURCE_DEFINITION
+	{
+		name = CarbonDioxide
+		density = 0.000001951
+		flowMode = ALL_VESSEL
+		transfer = PUMP
+		isTweakable = true
+		unitCost = 0.0000028637
+	}
+}
+UrlConfig
+{
+	name = Chemicals
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/Chemicals
+	RESOURCE_DEFINITION
+	{
+		name = Chemicals
+		density = 0.00250000000
+		flowMode = ALL_VESSEL
+		transfer = PUMP
+		isTweakable = true
+		unitCost = 16
+	}
+}
+UrlConfig
+{
+	name = Food
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/Food
+	RESOURCE_DEFINITION
+	{
+		name = Food
+		density = 0.00028102905982906
+		flowMode = ALL_VESSEL
+		transfer = PUMP
+		isTweakable = true
+		unitCost = 0.238874700854701
+		hsp = 600
+	}
+}
+UrlConfig
+{
+	name = Hydrates
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/Hydrates
+	RESOURCE_DEFINITION
+	{
+		name = Hydrates
+		density = 0.00150000000
+		flowMode = ALL_VESSEL
+		transfer = PUMP
+		isTweakable = true
+		unitCost = 0.5000000
+	}
+}
+UrlConfig
+{
+	name = Hydrogen
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/Hydrogen
+	RESOURCE_DEFINITION
+	{
+		name = Hydrogen
+		density = 0.00000008990
+		unitCost = 0.000055836
+		flowMode = ALL_VESSEL
+		transfer = PUMP
+		isTweakable = true
+	}
+}
+UrlConfig
+{
+	name = Karbonite
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/Karbonite
+	RESOURCE_DEFINITION
+	{
+		name = Karbonite
+		density = 0.0025
+		unitCost = 0.32
+		flowMode = STAGE_PRIORITY_FLOW
+		transfer = PUMP
+		isTweakable = true
+		color = 1,.5,0
+	}
+}
+UrlConfig
+{
+	name = Karborundum
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/Karborundum
+	RESOURCE_DEFINITION
+	{
+		name = Karborundum
+		density = 0.00580000000
+		unitCost = 400
+		flowMode = STAGE_PRIORITY_FLOW
+		transfer = PUMP
+		isTweakable = false
+		color = 1,0,0
+	}
+}
+UrlConfig
+{
+	name = LqdCO2
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/LqdCO2
+	RESOURCE_DEFINITION
+	{
+		name = LqdCO2
+		density = 0.00117325
+		unitCost = 0.0017247
+		flowMode = ALL_VESSEL
+		transfer = PUMP
+		isTweakable = true
+	}
+}
+UrlConfig
+{
+	name = LqdCO
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/LqdCO
+	RESOURCE_DEFINITION
+	{
+		name = LqdCO
+		density = 0.000790
+		unitCost = 0.0021
+		flowMode = STACK_PRIORITY_SEARCH
+		transfer = PUMP
+		isTweakable = true
+	}
+}
+UrlConfig
+{
+	name = Metals
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/Metals
+	RESOURCE_DEFINITION
+	{
+		name = Metals
+		density = 0.0078
+		unitCost = 14.24
+		flowMode = ALL_VESSEL
+		transfer = PUMP
+		isTweakable = true
+	}
+}
+UrlConfig
+{
+	name = Minerals
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/Minerals
+	RESOURCE_DEFINITION
+	{
+		name = Minerals
+		density = 0.00270000000
+		flowMode = ALL_VESSEL
+		transfer = PUMP
+		isTweakable = true
+		unitCost = 0.80
+		color = .75,0,1
+	}
+}
+UrlConfig
+{
+	name = MetallicOre
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/MetallicOre
+	RESOURCE_DEFINITION
+	{
+		name = MetallicOre
+		density = 0.00550000000
+		flowMode = ALL_VESSEL
+		transfer = PUMP
+		isTweakable = true
+		unitCost = 1.76
+		color = 0,1,1
+	}
+}
+UrlConfig
+{
+	name = Organics
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/Organics
+	RESOURCE_DEFINITION
+	{
+		name = Organics
+		density = 0.001
+		flowMode = ALL_VESSEL
+		transfer = PUMP
+		isTweakable = true
+		unitCost = 0.5
+	}
+}
+UrlConfig
+{
+	name = Oxygen
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/Oxygen
+	RESOURCE_DEFINITION
+	{
+		name = Oxygen
+		density = 0.00000141
+		flowMode = ALL_VESSEL
+		transfer = PUMP
+		isTweakable = true
+		unitCost = 0.000055836
+		color = 0,1,0
+	}
+}
+UrlConfig
+{
+	name = Polymers
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/Polymers
+	RESOURCE_DEFINITION
+	{
+		name = Polymers
+		density = 0.00104000000
+		flowMode = ALL_VESSEL
+		transfer = PUMP
+		isTweakable = true
+		unitCost = 8
+	}
+}
+UrlConfig
+{
+	name = Rock
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/Rock
+	RESOURCE_DEFINITION
+	{
+		name = Rock
+		density = 0.00005
+		flowMode = ALL_VESSEL
+		transfer = PUMP
+		isTweakable = true
+		cost = 0.00001
+	}
+}
+UrlConfig
+{
+	name = RocketParts
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/RocketParts
+	RESOURCE_DEFINITION
+	{
+		name = RocketParts
+		density = 0.0025
+		unitCost = 5
+		flowMode = ALL_VESSEL
+		transfer = PUMP
+		isTweakable = true
+	}
+}
+UrlConfig
+{
+	name = SpareParts
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/SpareParts
+	RESOURCE_DEFINITION
+	{
+		name = SpareParts
+		density = 0.00378
+		flowMode = NO_FLOW
+		transfer = NONE
+		isTweakable = true
+		unitCost = 12.6
+	}
+}
+UrlConfig
+{
+	name = Substrate
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/Substrate
+	RESOURCE_DEFINITION
+	{
+		name = Substrate
+		density = 0.0016
+		flowMode = ALL_VESSEL
+		transfer = PUMP
+		isTweakable = true
+		unitCost = 0.3
+		color = 1,1,0
+	}
+}
+UrlConfig
+{
+	name = Uraninite
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/Uraninite
+	RESOURCE_DEFINITION
+	{
+		name = Uraninite
+		density = 0.0075
+		flowMode = ALL_VESSEL
+		transfer = PUMP
+		isTweakable = true
+		unitCost = 0.7
+		color = 0,1,0
+	}
+}
+UrlConfig
+{
+	name = Waste
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/Waste
+	RESOURCE_DEFINITION
+	{
+		name = Waste
+		density = 0.00075
+		flowMode = ALL_VESSEL
+		transfer = PUMP
+		isTweakable = true
+		unitCost = 0
+		hsp = 600
+	}
+}
+UrlConfig
+{
+	name = WasteWater
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/WasteWater
+	RESOURCE_DEFINITION
+	{
+		name = WasteWater
+		density = 0.001005
+		flowMode = ALL_VESSEL
+		transfer = PUMP
+		isTweakable = true
+		unitCost = 0
+		hsp = 4183
+	}
+}
+UrlConfig
+{
+	name = Water
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/Water
+	RESOURCE_DEFINITION
+	{
+		name = Water
+		density = 0.0010000000
+		flowMode = ALL_VESSEL
+		transfer = PUMP
+		isTweakable = true
+		unitCost = 0.0008
+		color = .5,.5,1
+		hsp = 4183
+	}
+}
+UrlConfig
+{
+	name = ArgonGas
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/ArgonGas
+	RESOURCE_DEFINITION
+	{
+		name = ArgonGas
+		density = 0.00000178400
+		unitCost = 0.0105
+		flowMode = STAGE_PRIORITY_FLOW
+		transfer = PUMP
+		isTweakable = true
+		color = 1,0,0
+	}
+}
+UrlConfig
+{
+	name = Boron
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/Boron
+	RESOURCE_DEFINITION
+	{
+		name = Boron
+		density = 0.00246000000
+		unitCost = 0.851
+		flowMode = STAGE_PRIORITY_FLOW
+		transfer = PUMP
+		isTweakable = true
+	}
+}
+UrlConfig
+{
+	name = DepletedUranium
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/DepletedUranium
+	RESOURCE_DEFINITION
+	{
+		name = DepletedUranium
+		unitCost = 0
+		density = 0.01097000000
+		flowMode = NO_FLOW
+		transfer = NONE
+		isTweakable = true
+	}
+}
+UrlConfig
+{
+	name = EnrichedUranium
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/EnrichedUranium
+	RESOURCE_DEFINITION
+	{
+		name = EnrichedUranium
+		density = 0.01097000000
+		unitCost = 865.0000000
+		isTweakable = true
+		flowMode = NO_FLOW
+		transfer = NONE
+	}
+}
+UrlConfig
+{
+	name = LqdHydrogen
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/LqdHydrogen
+	RESOURCE_DEFINITION
+	{
+		name = LqdHydrogen
+		density = 0.00007085000
+		unitCost = 0.0367500
+		flowMode = STACK_PRIORITY_SEARCH
+		transfer = PUMP
+		isTweakable = true
+		hsp = 14305
+		vsp = 448500
+	}
+}
+UrlConfig
+{
+	name = StoredCharge
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/StoredCharge
+	RESOURCE_DEFINITION
+	{
+		name = StoredCharge
+		unitCost = 0
+		density = 0
+		flowMode = NO_FLOW
+		transfer = NONE
+	}
+}
+UrlConfig
+{
+	name = Actinides
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/Actinides
+	RESOURCE_DEFINITION
+	{
+		name = Actinides
+		density = 0.01097
+		flowMode = NO_FLOW
+		transfer = NONE
+		isTweakable = false
+		unitCost = 0
+	}
+}
+UrlConfig
+{
+	name = Aluminium
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/Aluminium
+	RESOURCE_DEFINITION
+	{
+		name = Aluminium
+		density = 0.00277
+		flowMode = STAGE_PRIORITY_FLOW
+		transfer = PUMP
+		isTweakable = true
+		unitCost = 1.5
+	}
+}
+UrlConfig
+{
+	name = Alumina
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/Alumina
+	RESOURCE_DEFINITION
+	{
+		name = Alumina
+		density = 0.00398
+		flowMode = STAGE_PRIORITY_FLOW
+		transfer = PUMP
+		isTweakable = true
+		unitCost = 0.5
+	}
+}
+UrlConfig
+{
+	name = Antimatter
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/Antimatter
+	RESOURCE_DEFINITION
+	{
+		name = Antimatter
+		density = 0.000000001
+		flowMode = STAGE_PRIORITY_FLOW
+		transfer = PUMP
+		isTweakable = false
+		unitCost = 100
+	}
+}
+UrlConfig
+{
+	name = ChargedParticles
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/ChargedParticles
+	RESOURCE_DEFINITION
+	{
+		name = ChargedParticles
+		density = 0
+		flowMode = ALL_VESSEL
+		transfer = NONE
+		isTweakable = false
+		unitCost = 0
+	}
+}
+UrlConfig
+{
+	name = DepletedFuel
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/DepletedFuel
+	RESOURCE_DEFINITION
+	{
+		name = DepletedFuel
+		density = 0.01097
+		flowMode = NO_FLOW
+		transfer = NONE
+		isTweakable = false
+		unitCost = 0
+	}
+}
+UrlConfig
+{
+	name = ExoticMatter
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/ExoticMatter
+	RESOURCE_DEFINITION
+	{
+		name = ExoticMatter
+		density = 0
+		flowMode = ALL_VESSEL
+		transfer = NONE
+		isTweakable = false
+		unitCost = 0
+	}
+}
+UrlConfig
+{
+	name = Fluorine
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/Fluorine
+	RESOURCE_DEFINITION
+	{
+		name = Fluorine
+		density = 0.000001696
+		flowMode = STAGE_PRIORITY_FLOW
+		transfer = PUMP
+		isTweakable = true
+		unitCost = 0.00336224
+	}
+}
+UrlConfig
+{
+	name = IntakeAtm
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/IntakeAtm
+	RESOURCE_DEFINITION
+	{
+		name = IntakeAtm
+		density = 0.005
+		flowMode = ALL_VESSEL
+		transfer = PUMP
+		isTweakable = false
+		unitCost = 0
+	}
+}
+UrlConfig
+{
+	name = KryptonGas
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/KryptonGas
+	RESOURCE_DEFINITION
+	{
+		name = KryptonGas
+		density = 0.000003749
+		flowMode = STAGE_PRIORITY_FLOW
+		transfer = PUMP
+		isTweakable = true
+		unitCost = 0.0068
+	}
+}
+UrlConfig
+{
+	name = NeonGas
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/NeonGas
+	RESOURCE_DEFINITION
+	{
+		name = NeonGas
+		density = 0.0000009002
+		flowMode = STAGE_PRIORITY_FLOW
+		transfer = PUMP
+		isTweakable = true
+		unitCost = 0.0016
+	}
+}
+UrlConfig
+{
+	name = Lithium
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/Lithium
+	RESOURCE_DEFINITION
+	{
+		name = Lithium
+		density = 0.00053400000
+		flowMode = STAGE_PRIORITY_FLOW
+		transfer = PUMP
+		isTweakable = true
+		unitCost = 0.27
+	}
+}
+UrlConfig
+{
+	name = LqdAmmonia
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/LqdAmmonia
+	RESOURCE_DEFINITION
+	{
+		name = LqdAmmonia
+		density = 0.0007021
+		flowMode = STACK_PRIORITY_SEARCH
+		transfer = PUMP
+		isTweakable = true
+		unitCost = 0.00006785
+	}
+}
+UrlConfig
+{
+	name = LqdDeuterium
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/LqdDeuterium
+	RESOURCE_DEFINITION
+	{
+		name = LqdDeuterium
+		density = 0.000086
+		flowMode = STAGE_PRIORITY_FLOW
+		transfer = PUMP
+		isTweakable = true
+		unitCost = 0.256
+	}
+}
+UrlConfig
+{
+	name = LqdHe3
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/LqdHe3
+	RESOURCE_DEFINITION
+	{
+		name = LqdHe3
+		density = 0.0001786
+		flowMode = STAGE_PRIORITY_FLOW
+		transfer = PUMP
+		isTweakable = true
+		unitCost = 2
+	}
+}
+UrlConfig
+{
+	name = LqdHelium
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/LqdHelium
+	RESOURCE_DEFINITION
+	{
+		name = LqdHelium
+		density = 0.0001786
+		flowMode = STAGE_PRIORITY_FLOW
+		transfer = PUMP
+		isTweakable = true
+		unitCost = 0.0133
+	}
+}
+UrlConfig
+{
+	name = LqdTritium
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/LqdTritium
+	RESOURCE_DEFINITION
+	{
+		name = LqdTritium
+		density = 0.000133
+		flowMode = STAGE_PRIORITY_FLOW
+		transfer = PUMP
+		isTweakable = true
+		unitCost = 188
+	}
+}
+UrlConfig
+{
+	name = LqdNitrogen
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/LqdNitrogen
+	RESOURCE_DEFINITION
+	{
+		name = LqdNitrogen
+		density = 0.000824907
+		flowMode = STACK_PRIORITY_SEARCH
+		transfer = PUMP
+		isTweakable = true
+		unitCost = 0.0008240
+	}
+}
+UrlConfig
+{
+	name = Megajoules
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/Megajoules
+	RESOURCE_DEFINITION
+	{
+		name = Megajoules
+		density = 0
+		flowMode = ALL_VESSEL
+		transfer = NONE
+		isTweakable = false
+		unitCost = 0
+	}
+}
+UrlConfig
+{
+	name = Plutonium-238
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/Plutonium-238
+	RESOURCE_DEFINITION
+	{
+		name = Plutonium-238
+		density = 0.019816
+		flowMode = NO_FLOW
+		transfer = NONE
+		isTweakable = true
+		unitCost = 0.019816
+	}
+}
+UrlConfig
+{
+	name = ThF4
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/ThF4
+	RESOURCE_DEFINITION
+	{
+		name = ThF4
+		density = 0.011724
+		flowMode = NO_FLOW
+		transfer = NONE
+		isTweakable = true
+		unitCost = 716
+	}
+}
+UrlConfig
+{
+	name = ThermalPower
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/ThermalPower
+	RESOURCE_DEFINITION
+	{
+		name = ThermalPower
+		density = 0
+		unitCost = 0
+		flowMode = ALL_VESSEL
+		transfer = NONE
+		isTweakable = false
+	}
+}
+UrlConfig
+{
+	name = UraniumNitride
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/UraniumNitride
+	RESOURCE_DEFINITION
+	{
+		name = UraniumNitride
+		density = 0.0113
+		flowMode = STAGE_PRIORITY_FLOW
+		transfer = PUMP
+		isTweakable = true
+		unitCost = 3718
+	}
+}
+UrlConfig
+{
+	name = VacuumPlasma
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/VacuumPlasma
+	RESOURCE_DEFINITION
+	{
+		name = VacuumPlasma
+		density = 0.005
+		flowMode = ALL_VESSEL
+		transfer = NONE
+		isTweakable = false
+		unitCost = 0
+	}
+}
+UrlConfig
+{
+	name = WasteHeat
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/WasteHeat
+	RESOURCE_DEFINITION
+	{
+		name = WasteHeat
+		density = 0
+		flowMode = ALL_VESSEL
+		transfer = NONE
+		isTweakable = false
+		unitCost = 0
+	}
+}
+UrlConfig
+{
+	name = Aerozine50
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/Aerozine50
+	RESOURCE_DEFINITION
+	{
+		name = Aerozine50
+		density = 0.0009
+		unitCost = 1.35
+		flowMode = STACK_PRIORITY_SEARCH
+		transfer = PUMP
+		isTweakable = True
+		ksparpicon = RealFuels/Resources/ARPIcons/Aerozine50
+		hsp = 2970.1
+	}
+}
+UrlConfig
+{
+	name = AK20
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/AK20
+	RESOURCE_DEFINITION
+	{
+		name = AK20
+		density = 0.001499
+		unitCost = 0.2998
+		flowMode = STACK_PRIORITY_SEARCH
+		transfer = PUMP
+		isTweakable = True
+		ksparpicon = RealFuels/Resources/ARPIcons/AK20
+		hsp = 1720
+	}
+}
+UrlConfig
+{
+	name = AK27
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/AK27
+	RESOURCE_DEFINITION
+	{
+		name = AK27
+		density = 0.001494
+		unitCost = 0.2988
+		flowMode = STACK_PRIORITY_SEARCH
+		transfer = PUMP
+		isTweakable = True
+		ksparpicon = RealFuels/Resources/ARPIcons/AK27
+		hsp = 1720
+	}
+}
+UrlConfig
+{
+	name = Aniline
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/Aniline
+	RESOURCE_DEFINITION
+	{
+		name = Aniline
+		density = 0.00102
+		unitCost = 0.5213333
+		flowMode = STACK_PRIORITY_SEARCH
+		transfer = PUMP
+		isTweakable = True
+		ksparpicon = RealFuels/Resources/ARPIcons/Aniline
+		hsp = 2180
+	}
+}
+UrlConfig
+{
+	name = AvGas
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/AvGas
+	RESOURCE_DEFINITION
+	{
+		name = AvGas
+		density = 0.000719
+		unitCost = 0.12
+		flowMode = STACK_PRIORITY_SEARCH
+		transfer = PUMP
+		isTweakable = True
+		ksparpicon = RealFuels/Resources/ARPIcons/AvGas
+		hsp = 2220
+	}
+}
+UrlConfig
+{
+	name = CaveaB
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/CaveaB
+	RESOURCE_DEFINITION
+	{
+		name = CaveaB
+		density = 0.001501
+		unitCost = 0.33022
+		flowMode = STACK_PRIORITY_SEARCH
+		transfer = PUMP
+		isTweakable = True
+		ksparpicon = RealFuels/Resources/ARPIcons/CaveaB
+	}
+}
+UrlConfig
+{
+	name = ClF3
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/ClF3
+	RESOURCE_DEFINITION
+	{
+		name = ClF3
+		density = 0.00177
+		unitCost = 10.62
+		flowMode = STACK_PRIORITY_SEARCH
+		transfer = PUMP
+		isTweakable = True
+		ksparpicon = RealFuels/Resources/ARPIcons/ClF3
+	}
+}
+UrlConfig
+{
+	name = ClF5
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/ClF5
+	RESOURCE_DEFINITION
+	{
+		name = ClF5
+		density = 0.0019
+		unitCost = 15.2
+		flowMode = STACK_PRIORITY_SEARCH
+		transfer = PUMP
+		isTweakable = True
+		ksparpicon = RealFuels/Resources/ARPIcons/ClF5
+	}
+}
+UrlConfig
+{
+	name = Diborane
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/Diborane
+	RESOURCE_DEFINITION
+	{
+		name = Diborane
+		density = 0.000421
+		unitCost = 4.21
+		flowMode = STACK_PRIORITY_SEARCH
+		transfer = PUMP
+		isTweakable = True
+		ksparpicon = RealFuels/Resources/ARPIcons/Diborane
+	}
+}
+UrlConfig
+{
+	name = Ethane
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/Ethane
+	RESOURCE_DEFINITION
+	{
+		name = Ethane
+		density = 0.000544
+		unitCost = 0.09248
+		flowMode = STACK_PRIORITY_SEARCH
+		transfer = PUMP
+		isTweakable = True
+		ksparpicon = RealFuels/Resources/ARPIcons/Ethane
+	}
+}
+UrlConfig
+{
+	name = Ethanol75
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/Ethanol75
+	RESOURCE_DEFINITION
+	{
+		name = Ethanol75
+		density = 0.000789
+		unitCost = 0.12624
+		flowMode = STACK_PRIORITY_SEARCH
+		transfer = PUMP
+		isTweakable = True
+		ksparpicon = RealFuels/Resources/ARPIcons/Ethanol75
+		hsp = 3087.5
+	}
+}
+UrlConfig
+{
+	name = Ethylene
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/Ethylene
+	RESOURCE_DEFINITION
+	{
+		name = Ethylene
+		density = 0.000568
+		unitCost = 0.09656
+		flowMode = STACK_PRIORITY_SEARCH
+		transfer = PUMP
+		isTweakable = True
+		ksparpicon = RealFuels/Resources/ARPIcons/Ethylene
+	}
+}
+UrlConfig
+{
+	name = FLOX30
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/FLOX30
+	RESOURCE_DEFINITION
+	{
+		name = FLOX30
+		density = 0.0012517
+		unitCost = 2.403264
+		flowMode = STACK_PRIORITY_SEARCH
+		transfer = PUMP
+		isTweakable = True
+		ksparpicon = RealFuels/Resources/ARPIcons/FLOX30
+	}
+}
+UrlConfig
+{
+	name = FLOX70
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/FLOX70
+	RESOURCE_DEFINITION
+	{
+		name = FLOX70
+		density = 0.0013993
+		unitCost = 6.184906
+		flowMode = STACK_PRIORITY_SEARCH
+		transfer = PUMP
+		isTweakable = True
+		ksparpicon = RealFuels/Resources/ARPIcons/FLOX70
+	}
+}
+UrlConfig
+{
+	name = FLOX88
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/FLOX88
+	RESOURCE_DEFINITION
+	{
+		name = FLOX88
+		density = 0.0014657
+		unitCost = 8.134635
+		flowMode = STACK_PRIORITY_SEARCH
+		transfer = PUMP
+		isTweakable = True
+		ksparpicon = RealFuels/Resources/ARPIcons/FLOX88
+	}
+}
+UrlConfig
+{
+	name = Furfuryl
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/Furfuryl
+	RESOURCE_DEFINITION
+	{
+		name = Furfuryl
+		density = 0.00113
+		unitCost = 0.1808
+		flowMode = STACK_PRIORITY_SEARCH
+		transfer = PUMP
+		isTweakable = True
+		ksparpicon = RealFuels/Resources/ARPIcons/Furfuryl
+		hsp = 2096
+	}
+}
+UrlConfig
+{
+	name = Helium
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/Helium
+	RESOURCE_DEFINITION
+	{
+		name = Helium
+		density = 0.0000001786
+		unitCost = 0.0000091
+		flowMode = STACK_PRIORITY_SEARCH
+		transfer = PUMP
+		isTweakable = True
+		ksparpicon = RealFuels/Resources/ARPIcons/Helium
+	}
+}
+UrlConfig
+{
+	name = HNIW
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/HNIW
+	RESOURCE_DEFINITION
+	{
+		name = HNIW
+		density = 0.002044
+		unitCost = 0.4504976
+		flowMode = NO_FLOW
+		transfer = NONE
+		isTweakable = True
+		ksparpicon = RealFuels/Resources/ARPIcons/HNIW
+		hsp = 920
+	}
+}
+UrlConfig
+{
+	name = HTP
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/HTP
+	RESOURCE_DEFINITION
+	{
+		name = HTP
+		density = 0.001431
+		unitCost = 2.1465
+		flowMode = STACK_PRIORITY_SEARCH
+		transfer = PUMP
+		isTweakable = True
+		ksparpicon = RealFuels/Resources/ARPIcons/HTP
+		hsp = 2721
+	}
+}
+UrlConfig
+{
+	name = HTPB
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/HTPB
+	RESOURCE_DEFINITION
+	{
+		name = HTPB
+		density = 0.00177
+		unitCost = 1.8585
+		flowMode = NO_FLOW
+		transfer = NONE
+		isTweakable = True
+		ksparpicon = RealFuels/Resources/ARPIcons/HTPB
+		hsp = 920
+	}
+}
+UrlConfig
+{
+	name = Hydrazine
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/Hydrazine
+	RESOURCE_DEFINITION
+	{
+		name = Hydrazine
+		density = 0.001004
+		unitCost = 2.008
+		flowMode = STACK_PRIORITY_SEARCH
+		transfer = PUMP
+		isTweakable = True
+		ksparpicon = RealFuels/Resources/ARPIcons/Hydrazine
+		hsp = 3120.6
+	}
+}
+UrlConfig
+{
+	name = Hydyne
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/Hydyne
+	RESOURCE_DEFINITION
+	{
+		name = Hydyne
+		density = 0.00086
+		unitCost = 0.688
+		flowMode = STACK_PRIORITY_SEARCH
+		transfer = PUMP
+		isTweakable = True
+		ksparpicon = RealFuels/Resources/ARPIcons/Hydyne
+		hsp = 2625
+	}
+}
+UrlConfig
+{
+	name = IRFNA-III
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/IRFNA-III
+	RESOURCE_DEFINITION
+	{
+		name = IRFNA-III
+		density = 0.001658
+		unitCost = 0.34818
+		flowMode = STACK_PRIORITY_SEARCH
+		transfer = PUMP
+		isTweakable = True
+		ksparpicon = RealFuels/Resources/ARPIcons/IRFNA-III
+		hsp = 1720
+	}
+}
+UrlConfig
+{
+	name = IRFNA-IV
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/IRFNA-IV
+	RESOURCE_DEFINITION
+	{
+		name = IRFNA-IV
+		density = 0.001995
+		unitCost = 0.399
+		flowMode = STACK_PRIORITY_SEARCH
+		transfer = PUMP
+		isTweakable = True
+		ksparpicon = RealFuels/Resources/ARPIcons/IRFNA-IV
+		hsp = 1720
+	}
+}
+UrlConfig
+{
+	name = IWFNA
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/IWFNA
+	RESOURCE_DEFINITION
+	{
+		name = IWFNA
+		density = 0.001513
+		unitCost = 0.31773
+		flowMode = STACK_PRIORITY_SEARCH
+		transfer = PUMP
+		isTweakable = True
+		ksparpicon = RealFuels/Resources/ARPIcons/IWFNA
+		hsp = 1720
+	}
+}
+UrlConfig
+{
+	name = Kerosene
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/Kerosene
+	RESOURCE_DEFINITION
+	{
+		name = Kerosene
+		density = 0.00082
+		unitCost = 0.041
+		flowMode = STACK_PRIORITY_SEARCH
+		transfer = PUMP
+		isTweakable = True
+		ksparpicon = RealFuels/Resources/ARPIcons/Kerosene
+		hsp = 2010
+	}
+}
+UrlConfig
+{
+	name = LeadBallast
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/LeadBallast
+	RESOURCE_DEFINITION
+	{
+		name = LeadBallast
+		density = 0.01134
+		unitCost = 0.067392
+		flowMode = STACK_PRIORITY_SEARCH
+		transfer = PUMP
+		isTweakable = True
+		ksparpicon = RealFuels/Resources/ARPIcons/LeadBallast
+		hsp = 128
+	}
+}
+UrlConfig
+{
+	name = LqdFluorine
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/LqdFluorine
+	RESOURCE_DEFINITION
+	{
+		name = LqdFluorine
+		density = 0.001505
+		unitCost = 9.03
+		flowMode = STACK_PRIORITY_SEARCH
+		transfer = PUMP
+		isTweakable = True
+		ksparpicon = RealFuels/Resources/ARPIcons/LqdFluorine
+	}
+}
+UrlConfig
+{
+	name = LqdMethane
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/LqdMethane
+	RESOURCE_DEFINITION
+	{
+		name = LqdMethane
+		density = 0.00042561
+		unitCost = 0.45
+		flowMode = STACK_PRIORITY_SEARCH
+		transfer = PUMP
+		isTweakable = True
+		ksparpicon = RealFuels/Resources/ARPIcons/LqdMethane
+	}
+}
+UrlConfig
+{
+	name = LqdOxygen
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/LqdOxygen
+	RESOURCE_DEFINITION
+	{
+		name = LqdOxygen
+		density = 0.001141
+		unitCost = 0.04564
+		flowMode = STACK_PRIORITY_SEARCH
+		transfer = PUMP
+		isTweakable = True
+		ksparpicon = RealFuels/Resources/ARPIcons/LqdOxygen
+		hsp = 918
+		vsp = 213000
+	}
+}
+UrlConfig
+{
+	name = Methane
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/Methane
+	RESOURCE_DEFINITION
+	{
+		name = Methane
+		density = 0.000000717
+		unitCost = 0.0018642
+		flowMode = STACK_PRIORITY_SEARCH
+		transfer = PUMP
+		isTweakable = True
+		ksparpicon = RealFuels/Resources/ARPIcons/Methane
+	}
+}
+UrlConfig
+{
+	name = Methanol
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/Methanol
+	RESOURCE_DEFINITION
+	{
+		name = Methanol
+		density = 0.0007918
+		unitCost = 0.126688
+		flowMode = STACK_PRIORITY_SEARCH
+		transfer = PUMP
+		isTweakable = True
+		ksparpicon = RealFuels/Resources/ARPIcons/Methanol
+		hsp = 2510
+	}
+}
+UrlConfig
+{
+	name = MMH
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/MMH
+	RESOURCE_DEFINITION
+	{
+		name = MMH
+		density = 0.00088
+		unitCost = 1.748
+		flowMode = STACK_PRIORITY_SEARCH
+		transfer = PUMP
+		isTweakable = True
+		ksparpicon = RealFuels/Resources/ARPIcons/MMH
+		hsp = 2928.8
+	}
+}
+UrlConfig
+{
+	name = MON1
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/MON1
+	RESOURCE_DEFINITION
+	{
+		name = MON1
+		density = 0.001429
+		unitCost = 0.21435
+		flowMode = STACK_PRIORITY_SEARCH
+		transfer = PUMP
+		isTweakable = True
+		ksparpicon = RealFuels/Resources/ARPIcons/MON1
+		hsp = 1521.6
+	}
+}
+UrlConfig
+{
+	name = MON10
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/MON10
+	RESOURCE_DEFINITION
+	{
+		name = MON10
+		density = 0.001407
+		unitCost = 0.23919
+		flowMode = STACK_PRIORITY_SEARCH
+		transfer = PUMP
+		isTweakable = True
+		ksparpicon = RealFuels/Resources/ARPIcons/MON10
+		hsp = 1521.6
+	}
+}
+UrlConfig
+{
+	name = MON15
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/MON15
+	RESOURCE_DEFINITION
+	{
+		name = MON15
+		density = 0.001397
+		unitCost = 0.23749
+		flowMode = STACK_PRIORITY_SEARCH
+		transfer = PUMP
+		isTweakable = True
+		ksparpicon = RealFuels/Resources/ARPIcons/MON15
+		hsp = 1521.6
+	}
+}
+UrlConfig
+{
+	name = MON20
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/MON20
+	RESOURCE_DEFINITION
+	{
+		name = MON20
+		density = 0.00138
+		unitCost = 0.2484
+		flowMode = STACK_PRIORITY_SEARCH
+		transfer = PUMP
+		isTweakable = True
+		ksparpicon = RealFuels/Resources/ARPIcons/MON20
+		hsp = 1521.6
+	}
+}
+UrlConfig
+{
+	name = MON3
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/MON3
+	RESOURCE_DEFINITION
+	{
+		name = MON3
+		density = 0.001423
+		unitCost = 0.21345
+		flowMode = STACK_PRIORITY_SEARCH
+		transfer = PUMP
+		isTweakable = True
+		ksparpicon = RealFuels/Resources/ARPIcons/MON3
+		hsp = 1521.6
+	}
+}
+UrlConfig
+{
+	name = NGNC
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/NGNC
+	RESOURCE_DEFINITION
+	{
+		name = NGNC
+		density = 0.0016
+		unitCost = 0.01
+		flowMode = NO_FLOW
+		transfer = NONE
+		isTweakable = True
+		ksparpicon = RealFuels/Resources/ARPIcons/NGNC
+		hsp = 920
+	}
+}
+UrlConfig
+{
+	name = N2F4
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/N2F4
+	RESOURCE_DEFINITION
+	{
+		name = N2F4
+		density = 0.001604
+		unitCost = 24.06
+		flowMode = STACK_PRIORITY_SEARCH
+		transfer = PUMP
+		isTweakable = True
+		ksparpicon = RealFuels/Resources/ARPIcons/N2F4
+	}
+}
+UrlConfig
+{
+	name = Nitrogen
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/Nitrogen
+	RESOURCE_DEFINITION
+	{
+		name = Nitrogen
+		density = 0.000001251
+		unitCost = 0.00005
+		flowMode = STACK_PRIORITY_SEARCH
+		transfer = PUMP
+		isTweakable = True
+		ksparpicon = RealFuels/Resources/ARPIcons/Nitrogen
+		hsp = 1039
+	}
+}
+UrlConfig
+{
+	name = NitrousOxide
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/NitrousOxide
+	RESOURCE_DEFINITION
+	{
+		name = NitrousOxide
+		density = 0.00000196
+		unitCost = 0.000392
+		flowMode = STACK_PRIORITY_SEARCH
+		transfer = PUMP
+		isTweakable = True
+		ksparpicon = RealFuels/Resources/ARPIcons/NitrousOxide
+	}
+}
+UrlConfig
+{
+	name = NTO
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/NTO
+	RESOURCE_DEFINITION
+	{
+		name = NTO
+		density = 0.00145
+		unitCost = 0.2175
+		flowMode = STACK_PRIORITY_SEARCH
+		transfer = PUMP
+		isTweakable = True
+		ksparpicon = RealFuels/Resources/ARPIcons/NTO
+		hsp = 1521.6
+	}
+}
+UrlConfig
+{
+	name = OF2
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/OF2
+	RESOURCE_DEFINITION
+	{
+		name = OF2
+		density = 0.0019
+		unitCost = 28.5
+		flowMode = STACK_PRIORITY_SEARCH
+		transfer = PUMP
+		isTweakable = True
+		ksparpicon = RealFuels/Resources/ARPIcons/OF2
+	}
+}
+UrlConfig
+{
+	name = PBAN
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/PBAN
+	RESOURCE_DEFINITION
+	{
+		name = PBAN
+		density = 0.001772
+		unitCost = 1.593
+		flowMode = NO_FLOW
+		transfer = NONE
+		isTweakable = True
+		ksparpicon = RealFuels/Resources/ARPIcons/PBAN
+		hsp = 920
+	}
+}
+UrlConfig
+{
+	name = Pentaborane
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/Pentaborane
+	RESOURCE_DEFINITION
+	{
+		name = Pentaborane
+		density = 0.000618
+		unitCost = 6.18
+		flowMode = STACK_PRIORITY_SEARCH
+		transfer = PUMP
+		isTweakable = True
+		ksparpicon = RealFuels/Resources/ARPIcons/Pentaborane
+	}
+}
+UrlConfig
+{
+	name = PSPC
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/PSPC
+	RESOURCE_DEFINITION
+	{
+		name = PSPC
+		density = 0.00174
+		unitCost = 0.01
+		flowMode = NO_FLOW
+		transfer = NONE
+		isTweakable = True
+		ksparpicon = RealFuels/Resources/ARPIcons/PSPC
+		hsp = 920
+	}
+}
+UrlConfig
+{
+	name = Syntin
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/Syntin
+	RESOURCE_DEFINITION
+	{
+		name = Syntin
+		density = 0.000851
+		unitCost = 0.4255
+		flowMode = STACK_PRIORITY_SEARCH
+		transfer = PUMP
+		isTweakable = True
+		ksparpicon = RealFuels/Resources/ARPIcons/Syntin
+	}
+}
+UrlConfig
+{
+	name = TEATEB
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/TEATEB
+	RESOURCE_DEFINITION
+	{
+		name = TEATEB
+		density = 0.00070031
+		unitCost = 2.80124
+		flowMode = STACK_PRIORITY_SEARCH
+		transfer = PUMP
+		isTweakable = True
+		ksparpicon = RealFuels/Resources/ARPIcons/TEATEB
+	}
+}
+UrlConfig
+{
+	name = Tonka250
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/Tonka250
+	RESOURCE_DEFINITION
+	{
+		name = Tonka250
+		density = 0.000873
+		unitCost = 0.4365
+		flowMode = STACK_PRIORITY_SEARCH
+		transfer = PUMP
+		isTweakable = True
+		ksparpicon = RealFuels/Resources/ARPIcons/Tonka250
+		hsp = 2180
+	}
+}
+UrlConfig
+{
+	name = Tonka500
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/Tonka500
+	RESOURCE_DEFINITION
+	{
+		name = Tonka500
+		density = 0.000811
+		unitCost = 0.44605
+		flowMode = STACK_PRIORITY_SEARCH
+		transfer = PUMP
+		isTweakable = True
+		ksparpicon = RealFuels/Resources/ARPIcons/Tonka500
+		hsp = 2180
+	}
+}
+UrlConfig
+{
+	name = UDMH
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/UDMH
+	RESOURCE_DEFINITION
+	{
+		name = UDMH
+		density = 0.000791
+		unitCost = 0.791
+		flowMode = STACK_PRIORITY_SEARCH
+		transfer = PUMP
+		isTweakable = True
+		ksparpicon = RealFuels/Resources/ARPIcons/UDMH
+		hsp = 2729.6
+	}
+}
+UrlConfig
+{
+	name = UH25
+	type = RESOURCE_DEFINITION
+	parentUrl = CommunityResourcePack/CommonResources
+	url = CommunityResourcePack/CommonResources/UH25
+	RESOURCE_DEFINITION
+	{
+		name = UH25
+		density = 0.000829
+		unitCost = 1.03625
+		flowMode = STACK_PRIORITY_SEARCH
+		transfer = PUMP
+		isTweakable = True
+		ksparpicon = RealFuels/Resources/ARPIcons/UH25
+		hsp = 2850
+	}
+}
+UrlConfig
+{
+	name = GLOBAL_RESOURCE
+	type = GLOBAL_RESOURCE
+	parentUrl = CommunityResourcePack/ResourceConfigs/ArgonGas
+	url = CommunityResourcePack/ResourceConfigs/ArgonGas/GLOBAL_RESOURCE
+	GLOBAL_RESOURCE
+	{
+		ResourceName = ArgonGas
+		ResourceType = 2
+		Distribution
+		{
+			PresenceChance = 75
+			MinAbundance = .001
+			MaxAbundance = 1
+			Variance = 5
+		}
+	}
+}
+UrlConfig
+{
+	name = PLANETARY_RESOURCE
+	type = PLANETARY_RESOURCE
+	parentUrl = CommunityResourcePack/ResourceConfigs/CarbonDioxide
+	url = CommunityResourcePack/ResourceConfigs/CarbonDioxide/PLANETARY_RESOURCE
+	PLANETARY_RESOURCE
+	{
+		ResourceName = CarbonDioxide
+		ResourceType = 2
+		PlanetName = Eve
+		Distribution
+		{
+			PresenceChance = 100
+			MinAbundance = 95
+			MaxAbundance = 97
+			Variance = 0
+		}
+	}
+}
+UrlConfig
+{
+	name = PLANETARY_RESOURCE
+	type = PLANETARY_RESOURCE
+	parentUrl = CommunityResourcePack/ResourceConfigs/CarbonDioxide
+	url = CommunityResourcePack/ResourceConfigs/CarbonDioxide/PLANETARY_RESOURCE
+	PLANETARY_RESOURCE
+	{
+		ResourceName = CarbonDioxide
+		ResourceType = 2
+		PlanetName = Kerbin
+		Distribution
+		{
+			PresenceChance = 100
+			MinAbundance = 1
+			MaxAbundance = 2
+			Variance = 0
+		}
+	}
+}
+UrlConfig
+{
+	name = PLANETARY_RESOURCE
+	type = PLANETARY_RESOURCE
+	parentUrl = CommunityResourcePack/ResourceConfigs/CarbonDioxide
+	url = CommunityResourcePack/ResourceConfigs/CarbonDioxide/PLANETARY_RESOURCE
+	PLANETARY_RESOURCE
+	{
+		ResourceName = CarbonDioxide
+		ResourceType = 2
+		PlanetName = Duna
+		Distribution
+		{
+			PresenceChance = 100
+			MinAbundance = 95
+			MaxAbundance = 97
+			Variance = 0
+		}
+	}
+}
+UrlConfig
+{
+	name = PLANETARY_RESOURCE
+	type = PLANETARY_RESOURCE
+	parentUrl = CommunityResourcePack/ResourceConfigs/CarbonDioxide
+	url = CommunityResourcePack/ResourceConfigs/CarbonDioxide/PLANETARY_RESOURCE
+	PLANETARY_RESOURCE
+	{
+		ResourceName = CarbonDioxide
+		ResourceType = 2
+		PlanetName = Laythe
+		Distribution
+		{
+			PresenceChance = 100
+			MinAbundance = 5
+			MaxAbundance = 10
+			Variance = 0
+		}
+	}
+}
+UrlConfig
+{
+	name = PLANETARY_RESOURCE
+	type = PLANETARY_RESOURCE
+	parentUrl = CommunityResourcePack/ResourceConfigs/Karbonite
+	url = CommunityResourcePack/ResourceConfigs/Karbonite/PLANETARY_RESOURCE
+	PLANETARY_RESOURCE
+	{
+		ResourceName = Karbonite
+		ResourceType = 0
+		PlanetName = Jool
+		Distribution
+		{
+			PresenceChance = 0
+			MinAbundance = 0
+			MaxAbundance = 0
+			Variance = 0
+			Dispersal = 0
+		}
+	}
+}
+UrlConfig
+{
+	name = GLOBAL_RESOURCE
+	type = GLOBAL_RESOURCE
+	parentUrl = CommunityResourcePack/ResourceConfigs/Karbonite
+	url = CommunityResourcePack/ResourceConfigs/Karbonite/GLOBAL_RESOURCE
+	GLOBAL_RESOURCE
+	{
+		ResourceName = Karbonite
+		ResourceType = 0
+		Distribution
+		{
+			PresenceChance = 70
+			MinAbundance = .001
+			MaxAbundance = 10
+			Variance = 50
+		}
+	}
+}
+UrlConfig
+{
+	name = GLOBAL_RESOURCE
+	type = GLOBAL_RESOURCE
+	parentUrl = CommunityResourcePack/ResourceConfigs/Karbonite
+	url = CommunityResourcePack/ResourceConfigs/Karbonite/GLOBAL_RESOURCE
+	GLOBAL_RESOURCE
+	{
+		ResourceName = Karbonite
+		ResourceType = 1
+		Distribution
+		{
+			PresenceChance = 80
+			MinAbundance = 1
+			MaxAbundance = 10
+			Variance = 20
+			Dispersal = 3
+		}
+	}
+}
+UrlConfig
+{
+	name = GLOBAL_RESOURCE
+	type = GLOBAL_RESOURCE
+	parentUrl = CommunityResourcePack/ResourceConfigs/Karbonite
+	url = CommunityResourcePack/ResourceConfigs/Karbonite/GLOBAL_RESOURCE
+	GLOBAL_RESOURCE
+	{
+		ResourceName = Karbonite
+		ResourceType = 2
+		Distribution
+		{
+			PresenceChance = 80
+			MinAbundance = .001
+			MaxAbundance = 1
+			Variance = 50
+			Dispersal = 3
+		}
+	}
+}
+UrlConfig
+{
+	name = GLOBAL_RESOURCE
+	type = GLOBAL_RESOURCE
+	parentUrl = CommunityResourcePack/ResourceConfigs/Karbonite
+	url = CommunityResourcePack/ResourceConfigs/Karbonite/GLOBAL_RESOURCE
+	GLOBAL_RESOURCE
+	{
+		ResourceName = Karbonite
+		ResourceType = 3
+		Distribution
+		{
+			PresenceChance = 20
+			MinAbundance = .001
+			MaxAbundance = .5
+			MinAltitude = .2
+			MaxAltitude = 2
+			MinRange = .01
+			MaxRange = .5
+		}
+	}
+}
+UrlConfig
+{
+	name = PLANETARY_RESOURCE
+	type = PLANETARY_RESOURCE
+	parentUrl = CommunityResourcePack/ResourceConfigs/Karbonite
+	url = CommunityResourcePack/ResourceConfigs/Karbonite/PLANETARY_RESOURCE
+	PLANETARY_RESOURCE
+	{
+		ResourceName = Karbonite
+		ResourceType = 2
+		PlanetName = Jool
+		Distribution
+		{
+			PresenceChance = 100
+			MinAbundance = 80
+			MaxAbundance = 80
+			Variance = 50
+		}
+	}
+}
+UrlConfig
+{
+	name = PLANETARY_RESOURCE
+	type = PLANETARY_RESOURCE
+	parentUrl = CommunityResourcePack/ResourceConfigs/Karbonite
+	url = CommunityResourcePack/ResourceConfigs/Karbonite/PLANETARY_RESOURCE
+	PLANETARY_RESOURCE
+	{
+		ResourceName = Karbonite
+		ResourceType = 1
+		PlanetName = Eve
+		Distribution
+		{
+			PresenceChance = 100
+			MinAbundance = 60
+			MaxAbundance = 60
+			Variance = 10
+		}
+	}
+}
+UrlConfig
+{
+	name = PLANETARY_RESOURCE
+	type = PLANETARY_RESOURCE
+	parentUrl = CommunityResourcePack/ResourceConfigs/Karbonite
+	url = CommunityResourcePack/ResourceConfigs/Karbonite/PLANETARY_RESOURCE
+	PLANETARY_RESOURCE
+	{
+		ResourceName = Karbonite
+		ResourceType = 0
+		PlanetName = Kerbin
+		Distribution
+		{
+			PresenceChance = 100
+			MinAbundance = 2
+			MaxAbundance = 2
+			Variance = 10
+		}
+	}
+}
+UrlConfig
+{
+	name = PLANETARY_RESOURCE
+	type = PLANETARY_RESOURCE
+	parentUrl = CommunityResourcePack/ResourceConfigs/Karbonite
+	url = CommunityResourcePack/ResourceConfigs/Karbonite/PLANETARY_RESOURCE
+	PLANETARY_RESOURCE
+	{
+		ResourceName = Karbonite
+		ResourceType = 1
+		PlanetName = Kerbin
+		Distribution
+		{
+			PresenceChance = 100
+			MinAbundance = .001
+			MaxAbundance = .001
+			Variance = 10
+		}
+	}
+}
+UrlConfig
+{
+	name = PLANETARY_RESOURCE
+	type = PLANETARY_RESOURCE
+	parentUrl = CommunityResourcePack/ResourceConfigs/Karbonite
+	url = CommunityResourcePack/ResourceConfigs/Karbonite/PLANETARY_RESOURCE
+	PLANETARY_RESOURCE
+	{
+		ResourceName = Karbonite
+		ResourceType = 2
+		PlanetName = Kerbin
+		Distribution
+		{
+			PresenceChance = 100
+			MinAbundance = .001
+			MaxAbundance = .001
+			Variance = 10
+		}
+	}
+}
+UrlConfig
+{
+	name = PLANETARY_RESOURCE
+	type = PLANETARY_RESOURCE
+	parentUrl = CommunityResourcePack/ResourceConfigs/Karbonite
+	url = CommunityResourcePack/ResourceConfigs/Karbonite/PLANETARY_RESOURCE
+	PLANETARY_RESOURCE
+	{
+		ResourceName = Karbonite
+		ResourceType = 3
+		PlanetName = Kerbin
+		Distribution
+		{
+			PresenceChance = 100
+			MinAbundance = .001
+			MaxAbundance = .001
+			MinAltitude = .245
+			MaxAltitude = .245
+			MinRange = .01
+			MaxRange = .01
+		}
+	}
+}
+UrlConfig
+{
+	name = PLANETARY_RESOURCE
+	type = PLANETARY_RESOURCE
+	parentUrl = CommunityResourcePack/ResourceConfigs/Karbonite
+	url = CommunityResourcePack/ResourceConfigs/Karbonite/PLANETARY_RESOURCE
+	PLANETARY_RESOURCE
+	{
+		ResourceName = Karbonite
+		ResourceType = 3
+		PlanetName = Jool
+		Distribution
+		{
+			PresenceChance = 100
+			MinAbundance = 1
+			MaxAbundance = 1
+			MinAltitude = .1
+			MaxAltitude = .1
+			MinRange = .1
+			MaxRange = .1
+		}
+	}
+}
+UrlConfig
+{
+	name = PLANETARY_RESOURCE
+	type = PLANETARY_RESOURCE
+	parentUrl = CommunityResourcePack/ResourceConfigs/Karborundum
+	url = CommunityResourcePack/ResourceConfigs/Karborundum/PLANETARY_RESOURCE
+	PLANETARY_RESOURCE
+	{
+		ResourceName = Karborundum
+		ResourceType = 0
+		PlanetName = Jool
+		Distribution
+		{
+			PresenceChance = 0
+			MinAbundance = 0
+			MaxAbundance = 0
+			Variance = 0
+			Dispersal = 0
+		}
+	}
+}
+UrlConfig
+{
+	name = PLANETARY_RESOURCE
+	type = PLANETARY_RESOURCE
+	parentUrl = CommunityResourcePack/ResourceConfigs/Karborundum
+	url = CommunityResourcePack/ResourceConfigs/Karborundum/PLANETARY_RESOURCE
+	PLANETARY_RESOURCE
+	{
+		ResourceName = Karborundum
+		ResourceType = 0
+		PlanetName = Eve
+		Distribution
+		{
+			PresenceChance = 100
+			MinAbundance = .001
+			MaxAbundance = .01
+			Variance = 50
+			Dispersal = 3
+		}
+	}
+}
+UrlConfig
+{
+	name = PLANETARY_RESOURCE
+	type = PLANETARY_RESOURCE
+	parentUrl = CommunityResourcePack/ResourceConfigs/Karborundum
+	url = CommunityResourcePack/ResourceConfigs/Karborundum/PLANETARY_RESOURCE
+	PLANETARY_RESOURCE
+	{
+		ResourceName = Karborundum
+		ResourceType = 0
+		PlanetName = Eeloo
+		Distribution
+		{
+			PresenceChance = 100
+			MinAbundance = .001
+			MaxAbundance = .01
+			Variance = 50
+			Dispersal = 3
+		}
+	}
+}
+UrlConfig
+{
+	name = PLANETARY_RESOURCE
+	type = PLANETARY_RESOURCE
+	parentUrl = CommunityResourcePack/ResourceConfigs/Karborundum
+	url = CommunityResourcePack/ResourceConfigs/Karborundum/PLANETARY_RESOURCE
+	PLANETARY_RESOURCE
+	{
+		ResourceName = Karborundum
+		ResourceType = 3
+		PlanetName = Sun
+		Distribution
+		{
+			PresenceChance = 100
+			MinAbundance = 1
+			MaxAbundance = 5
+			MinAltitude = 0
+			MaxAltitude = 0.00001
+			MinRange = 0.00001
+			MaxRange = 0.00001
+			Variance = 50
+		}
+	}
+}
+UrlConfig
+{
+	name = PLANETARY_RESOURCE
+	type = PLANETARY_RESOURCE
+	parentUrl = CommunityResourcePack/ResourceConfigs/MetallicOre
+	url = CommunityResourcePack/ResourceConfigs/MetallicOre/PLANETARY_RESOURCE
+	PLANETARY_RESOURCE
+	{
+		ResourceName = MetallicOre
+		ResourceType = 0
+		PlanetName = Jool
+		Distribution
+		{
+			PresenceChance = 0
+			MinAbundance = 0
+			MaxAbundance = 0
+			Variance = 0
+			Dispersal = 0
+		}
+	}
+}
+UrlConfig
+{
+	name = GLOBAL_RESOURCE
+	type = GLOBAL_RESOURCE
+	parentUrl = CommunityResourcePack/ResourceConfigs/MetallicOre
+	url = CommunityResourcePack/ResourceConfigs/MetallicOre/GLOBAL_RESOURCE
+	GLOBAL_RESOURCE
+	{
+		ResourceName = MetallicOre
+		ResourceType = 0
+		Distribution
+		{
+			PresenceChance = 70
+			MinAbundance = .001
+			MaxAbundance = 10
+			Variance = 50
+			Dispersal = 3
+		}
+	}
+}
+UrlConfig
+{
+	name = PLANETARY_RESOURCE
+	type = PLANETARY_RESOURCE
+	parentUrl = CommunityResourcePack/ResourceConfigs/MetallicOre
+	url = CommunityResourcePack/ResourceConfigs/MetallicOre/PLANETARY_RESOURCE
+	PLANETARY_RESOURCE
+	{
+		ResourceName = MetallicOre
+		ResourceType = 0
+		PlanetName = Kerbin
+		Distribution
+		{
+			PresenceChance = 100
+			MinAbundance = .001
+			MaxAbundance = 10
+			Variance = 50
+			Dispersal = 3
+		}
+	}
+}
+UrlConfig
+{
+	name = PLANETARY_RESOURCE
+	type = PLANETARY_RESOURCE
+	parentUrl = CommunityResourcePack/ResourceConfigs/Minerals
+	url = CommunityResourcePack/ResourceConfigs/Minerals/PLANETARY_RESOURCE
+	PLANETARY_RESOURCE
+	{
+		ResourceName = Minerals
+		ResourceType = 0
+		PlanetName = Jool
+		Distribution
+		{
+			PresenceChance = 0
+			MinAbundance = 0
+			MaxAbundance = 0
+			Variance = 0
+			Dispersal = 0
+		}
+	}
+}
+UrlConfig
+{
+	name = GLOBAL_RESOURCE
+	type = GLOBAL_RESOURCE
+	parentUrl = CommunityResourcePack/ResourceConfigs/Minerals
+	url = CommunityResourcePack/ResourceConfigs/Minerals/GLOBAL_RESOURCE
+	GLOBAL_RESOURCE
+	{
+		ResourceName = Minerals
+		ResourceType = 0
+		Distribution
+		{
+			PresenceChance = 70
+			MinAbundance = .001
+			MaxAbundance = 10
+			Variance = 50
+			Dispersal = 3
+		}
+	}
+}
+UrlConfig
+{
+	name = PLANETARY_RESOURCE
+	type = PLANETARY_RESOURCE
+	parentUrl = CommunityResourcePack/ResourceConfigs/Minerals
+	url = CommunityResourcePack/ResourceConfigs/Minerals/PLANETARY_RESOURCE
+	PLANETARY_RESOURCE
+	{
+		ResourceName = Minerals
+		ResourceType = 0
+		PlanetName = Kerbin
+		Distribution
+		{
+			PresenceChance = 100
+			MinAbundance = .001
+			MaxAbundance = 10
+			Variance = 50
+			Dispersal = 3
+		}
+	}
+}
+UrlConfig
+{
+	name = PLANETARY_RESOURCE
+	type = PLANETARY_RESOURCE
+	parentUrl = CommunityResourcePack/ResourceConfigs/Oxygen
+	url = CommunityResourcePack/ResourceConfigs/Oxygen/PLANETARY_RESOURCE
+	PLANETARY_RESOURCE
+	{
+		ResourceName = Oxygen
+		ResourceType = 2
+		PlanetName = Kerbin
+		Distribution
+		{
+			PresenceChance = 100
+			MinAbundance = 20
+			MaxAbundance = 30
+			Variance = 0
+		}
+	}
+}
+UrlConfig
+{
+	name = PLANETARY_RESOURCE
+	type = PLANETARY_RESOURCE
+	parentUrl = CommunityResourcePack/ResourceConfigs/Oxygen
+	url = CommunityResourcePack/ResourceConfigs/Oxygen/PLANETARY_RESOURCE
+	PLANETARY_RESOURCE
+	{
+		ResourceName = Oxygen
+		ResourceType = 2
+		PlanetName = Laythe
+		Distribution
+		{
+			PresenceChance = 100
+			MinAbundance = 20
+			MaxAbundance = 30
+			Variance = 0
+		}
+	}
+}
+UrlConfig
+{
+	name = PLANETARY_RESOURCE
+	type = PLANETARY_RESOURCE
+	parentUrl = CommunityResourcePack/ResourceConfigs/Substrate
+	url = CommunityResourcePack/ResourceConfigs/Substrate/PLANETARY_RESOURCE
+	PLANETARY_RESOURCE
+	{
+		ResourceName = Substrate
+		ResourceType = 0
+		PlanetName = Jool
+		Distribution
+		{
+			PresenceChance = 0
+			MinAbundance = 0
+			MaxAbundance = 0
+			Variance = 0
+			Dispersal = 0
+		}
+	}
+}
+UrlConfig
+{
+	name = GLOBAL_RESOURCE
+	type = GLOBAL_RESOURCE
+	parentUrl = CommunityResourcePack/ResourceConfigs/Substrate
+	url = CommunityResourcePack/ResourceConfigs/Substrate/GLOBAL_RESOURCE
+	GLOBAL_RESOURCE
+	{
+		ResourceName = Substrate
+		ResourceType = 0
+		Distribution
+		{
+			PresenceChance = 70
+			MinAbundance = .001
+			MaxAbundance = 10
+			Variance = 50
+			Dispersal = 3
+		}
+	}
+}
+UrlConfig
+{
+	name = PLANETARY_RESOURCE
+	type = PLANETARY_RESOURCE
+	parentUrl = CommunityResourcePack/ResourceConfigs/Substrate
+	url = CommunityResourcePack/ResourceConfigs/Substrate/PLANETARY_RESOURCE
+	PLANETARY_RESOURCE
+	{
+		ResourceName = Substrate
+		ResourceType = 0
+		PlanetName = Kerbin
+		Distribution
+		{
+			PresenceChance = 100
+			MinAbundance = .001
+			MaxAbundance = 10
+			Variance = 50
+			Dispersal = 3
+		}
+	}
+}
+UrlConfig
+{
+	name = PLANETARY_RESOURCE
+	type = PLANETARY_RESOURCE
+	parentUrl = CommunityResourcePack/ResourceConfigs/Uraninite
+	url = CommunityResourcePack/ResourceConfigs/Uraninite/PLANETARY_RESOURCE
+	PLANETARY_RESOURCE
+	{
+		ResourceName = Uraninite
+		ResourceType = 0
+		PlanetName = Jool
+		Distribution
+		{
+			PresenceChance = 0
+			MinAbundance = 0
+			MaxAbundance = 0
+			Variance = 0
+			Dispersal = 0
+		}
+	}
+}
+UrlConfig
+{
+	name = GLOBAL_RESOURCE
+	type = GLOBAL_RESOURCE
+	parentUrl = CommunityResourcePack/ResourceConfigs/Uraninite
+	url = CommunityResourcePack/ResourceConfigs/Uraninite/GLOBAL_RESOURCE
+	GLOBAL_RESOURCE
+	{
+		ResourceName = Uraninite
+		ResourceType = 0
+		Distribution
+		{
+			PresenceChance = 70
+			MinAbundance = .001
+			MaxAbundance = 10
+			Variance = 50
+			Dispersal = 3
+		}
+	}
+}
+UrlConfig
+{
+	name = PLANETARY_RESOURCE
+	type = PLANETARY_RESOURCE
+	parentUrl = CommunityResourcePack/ResourceConfigs/Uraninite
+	url = CommunityResourcePack/ResourceConfigs/Uraninite/PLANETARY_RESOURCE
+	PLANETARY_RESOURCE
+	{
+		ResourceName = Uraninite
+		ResourceType = 0
+		PlanetName = Kerbin
+		Distribution
+		{
+			PresenceChance = 100
+			MinAbundance = .001
+			MaxAbundance = 10
+			Variance = 50
+			Dispersal = 3
+		}
+	}
+}
+UrlConfig
+{
+	name = PLANETARY_RESOURCE
+	type = PLANETARY_RESOURCE
+	parentUrl = CommunityResourcePack/ResourceConfigs/Water
+	url = CommunityResourcePack/ResourceConfigs/Water/PLANETARY_RESOURCE
+	PLANETARY_RESOURCE
+	{
+		ResourceName = Water
+		ResourceType = 0
+		PlanetName = Jool
+		Distribution
+		{
+			PresenceChance = 0
+			MinAbundance = 0
+			MaxAbundance = 0
+			Variance = 0
+			Dispersal = 0
+		}
+	}
+}
+UrlConfig
+{
+	name = GLOBAL_RESOURCE
+	type = GLOBAL_RESOURCE
+	parentUrl = CommunityResourcePack/ResourceConfigs/Water
+	url = CommunityResourcePack/ResourceConfigs/Water/GLOBAL_RESOURCE
+	GLOBAL_RESOURCE
+	{
+		ResourceName = Water
+		ResourceType = 0
+		Distribution
+		{
+			PresenceChance = 20
+			MinAbundance = .001
+			MaxAbundance = 10
+			Variance = 50
+			Dispersal = 3
+		}
+	}
+}
+UrlConfig
+{
+	name = GLOBAL_RESOURCE
+	type = GLOBAL_RESOURCE
+	parentUrl = CommunityResourcePack/ResourceConfigs/Water
+	url = CommunityResourcePack/ResourceConfigs/Water/GLOBAL_RESOURCE
+	GLOBAL_RESOURCE
+	{
+		ResourceName = Water
+		ResourceType = 1
+		Distribution
+		{
+			PresenceChance = 20
+			MinAbundance = .1
+			MaxAbundance = 50
+			Variance = 20
+			Dispersal = 3
+		}
+	}
+}
+UrlConfig
+{
+	name = GLOBAL_RESOURCE
+	type = GLOBAL_RESOURCE
+	parentUrl = CommunityResourcePack/ResourceConfigs/Water
+	url = CommunityResourcePack/ResourceConfigs/Water/GLOBAL_RESOURCE
+	GLOBAL_RESOURCE
+	{
+		ResourceName = Water
+		ResourceType = 2
+		Distribution
+		{
+			PresenceChance = 20
+			MinAbundance = .1
+			MaxAbundance = 50
+			Variance = 20
+			Dispersal = 3
+		}
+	}
+}
+UrlConfig
+{
+	name = PLANETARY_RESOURCE
+	type = PLANETARY_RESOURCE
+	parentUrl = CommunityResourcePack/ResourceConfigs/Water
+	url = CommunityResourcePack/ResourceConfigs/Water/PLANETARY_RESOURCE
+	PLANETARY_RESOURCE
+	{
+		ResourceName = Water
+		ResourceType = 0
+		PlanetName = Kerbin
+		Distribution
+		{
+			PresenceChance = 100
+			MinAbundance = 1
+			MaxAbundance = 50
+			Variance = 20
+			Dispersal = 3
+		}
+	}
+}
+UrlConfig
+{
+	name = PLANETARY_RESOURCE
+	type = PLANETARY_RESOURCE
+	parentUrl = CommunityResourcePack/ResourceConfigs/Water
+	url = CommunityResourcePack/ResourceConfigs/Water/PLANETARY_RESOURCE
+	PLANETARY_RESOURCE
+	{
+		ResourceName = Water
+		ResourceType = 0
+		PlanetName = Laythe
+		Distribution
+		{
+			PresenceChance = 100
+			MinAbundance = 1
+			MaxAbundance = 50
+			Variance = 20
+			Dispersal = 3
+		}
+	}
+}
+UrlConfig
+{
+	name = PLANETARY_RESOURCE
+	type = PLANETARY_RESOURCE
+	parentUrl = CommunityResourcePack/ResourceConfigs/Water
+	url = CommunityResourcePack/ResourceConfigs/Water/PLANETARY_RESOURCE
+	PLANETARY_RESOURCE
+	{
+		ResourceName = Water
+		ResourceType = 1
+		PlanetName = Kerbin
+		Distribution
+		{
+			PresenceChance = 100
+			MinAbundance = 90
+			MaxAbundance = 90
+			Variance = 0
+			Dispersal = 3
+		}
+	}
+}
+UrlConfig
+{
+	name = PLANETARY_RESOURCE
+	type = PLANETARY_RESOURCE
+	parentUrl = CommunityResourcePack/ResourceConfigs/Water
+	url = CommunityResourcePack/ResourceConfigs/Water/PLANETARY_RESOURCE
+	PLANETARY_RESOURCE
+	{
+		ResourceName = Water
+		ResourceType = 2
+		PlanetName = Kerbin
+		Distribution
+		{
+			PresenceChance = 100
+			MinAbundance = 1
+			MaxAbundance = 20
+			Variance = 10
+			Dispersal = 3
+		}
+	}
+}
+UrlConfig
+{
+	name = PLANETARY_RESOURCE
+	type = PLANETARY_RESOURCE
+	parentUrl = CommunityResourcePack/ResourceConfigs/Water
+	url = CommunityResourcePack/ResourceConfigs/Water/PLANETARY_RESOURCE
+	PLANETARY_RESOURCE
+	{
+		ResourceName = Water
+		ResourceType = 1
+		PlanetName = Laythe
+		Distribution
+		{
+			PresenceChance = 100
+			MinAbundance = 10
+			MaxAbundance = 90
+			Variance = 0
+			Dispersal = 3
+		}
+	}
+}
+UrlConfig
+{
+	name = PLANETARY_RESOURCE
+	type = PLANETARY_RESOURCE
+	parentUrl = CommunityResourcePack/ResourceConfigs/Water
+	url = CommunityResourcePack/ResourceConfigs/Water/PLANETARY_RESOURCE
+	PLANETARY_RESOURCE
+	{
+		ResourceName = Water
+		ResourceType = 2
+		PlanetName = Laythe
+		Distribution
+		{
+			PresenceChance = 100
+			MinAbundance = 1
+			MaxAbundance = 20
+			Variance = 10
+			Dispersal = 3
+		}
+	}
+}
+UrlConfig
+{
+	name = BIOME_RESOURCE
+	type = BIOME_RESOURCE
+	parentUrl = CommunityResourcePack/ResourceConfigs/Water
+	url = CommunityResourcePack/ResourceConfigs/Water/BIOME_RESOURCE
+	BIOME_RESOURCE
+	{
+		ResourceName = Water
+		ResourceType = 0
+		PlanetName = Duna
+		BiomeName = Poles
+		Distribution
+		{
+			PresenceChance = 100
+			MinAbundance = 5
+			MaxAbundance = 20
+			Variance = 10
+			Dispersal = 3
+		}
+	}
+}
+UrlConfig
+{
+	name = GLOBAL_RESOURCE
+	type = GLOBAL_RESOURCE
+	parentUrl = CommunityResourcePack/ResourceConfigs/Water
+	url = CommunityResourcePack/ResourceConfigs/Water/GLOBAL_RESOURCE
+	GLOBAL_RESOURCE
+	{
+		ResourceName = Water
+		ResourceType = 3
+		Distribution
+		{
+			PresenceChance = 20
+			MinAbundance = .001
+			MaxAbundance = .5
+			MinAltitude = .2
+			MaxAltitude = 2
+			MinRange = .01
+			MaxRange = .5
+		}
+	}
+}
+UrlConfig
+{
+	name = GLOBAL_RESOURCE
+	type = GLOBAL_RESOURCE
+	parentUrl = CommunityResourcePack/ResourceConfigs/XenonGas
+	url = CommunityResourcePack/ResourceConfigs/XenonGas/GLOBAL_RESOURCE
+	GLOBAL_RESOURCE
+	{
+		ResourceName = XenonGas
+		ResourceType = 2
+		Distribution
+		{
+			PresenceChance = 75
+			MinAbundance = .001
+			MaxAbundance = 1
+			Variance = 5
+		}
+	}
+}
+UrlConfig
+{
+	name = GLOBAL_RESOURCE
+	type = GLOBAL_RESOURCE
+	parentUrl = CommunityResourcePack/ResourceConfigs/XenonGas
+	url = CommunityResourcePack/ResourceConfigs/XenonGas/GLOBAL_RESOURCE
+	GLOBAL_RESOURCE
+	{
+		ResourceName = XenonGas
+		ResourceType = 1
+		Distribution
+		{
+			PresenceChance = 75
+			MinAbundance = .001
+			MaxAbundance = 1
+			Variance = 50
+		}
+	}
+}
+UrlConfig
+{
 	name = Moho
 	type = CelestialBodyColor
 	parentUrl = DistantObject/PlanetColors
@@ -1386,8 +4211,8 @@ UrlConfig
 	url = Kerbaltek/HyperEdit/windowpos/HyperEdit
 	HyperEdit
 	{
-		x = 349
-		y = 138
+		x = 463
+		y = 130
 	}
 }
 UrlConfig
@@ -1714,6 +4539,751 @@ UrlConfig
 		updateFrequency = 2
 		quality = 3
 		stockToolbarEnabled = False
+	}
+}
+UrlConfig
+{
+	name = MFSSettings
+	type = MFSSETTINGS
+	parentUrl = RealFuels/MFSSettings
+	url = RealFuels/MFSSettings/MFSSettings
+	MFSSETTINGS
+	{
+		name = MFSSettings
+		BatteryMultiplier = 1
+		basemassUseTotalVolume = True
+		useRealisticMass = true
+		tankMassMultiplier = 4.807692308
+		unitLabel = L
+		IgnoreFuelsForFill
+		{
+			IntakeAir = True
+			KIntakeAir = True
+			U235Rods = True
+			DepU235Rods = True
+			ElectricCharge = True
+		}
+	}
+}
+UrlConfig
+{
+	name = RFSETTINGS
+	type = RFSETTINGS
+	parentUrl = RealFuels/RealSettings
+	url = RealFuels/RealSettings/RFSETTINGS
+	RFSETTINGS
+	{
+		engineMassMultiplier = 4.0
+		useRealisticMass = true
+		heatMultiplier = 1.0
+		instantThrottleProps
+		{
+			val = SolidFuel
+		}
+		RF_TECHLEVELS
+		{
+			ENGINETYPE
+			{
+				name = O
+				TLTWR0 = 18.9
+				TLCOST0 = 1.0
+				TLTECH0 = start
+				TLTHROTTLE0 = 1
+				TLTWR1 = 25.8
+				TLCOST1 = 1.2
+				TLTECH1 = basicRocketry
+				TLTHROTTLE1 = 1
+				TLTWR2 = 30.3
+				TLCOST2 = 1.4
+				TLTECH2 = generalRocketry
+				TLTHROTTLE2 = 0.75
+				TLTWR3 = 32.8
+				TLCOST3 = 1.6
+				TLTECH3 = advRocketry
+				TLTHROTTLE3 = 0.4
+				TLTWR4 = 34
+				TLCOST4 = 1.75
+				TLTECH4 = heavyRocketry
+				TLTHROTTLE4 = 0.2
+				TLTWR5 = 35.3
+				TLCOST5 = 1.85
+				TLTECH5 = heavierRocketry
+				TLTHROTTLE5 = 0.15
+				TLTWR6 = 36.5
+				TLCOST6 = 1.95
+				TLTECH6 = veryHeavyRocketry
+				TLTHROTTLE6 = 0.1
+				TLTWR7 = 37.8
+				TLCOST7 = 2.0
+				TLTECH7 = experimentalRocketry
+				TLTHROTTLE7 = 0.1
+				TLISP0
+				{
+					key = 0 286
+					key = 1 100
+				}
+				TLISP1
+				{
+					key = 0 314
+					key = 1 110
+				}
+				TLISP2
+				{
+					key = 0 332
+					key = 1 116
+				}
+				TLISP3
+				{
+					key = 0 342
+					key = 1 120
+				}
+				TLISP4
+				{
+					key = 0 347
+					key = 1 121
+				}
+				TLISP5
+				{
+					key = 0 352
+					key = 1 123
+				}
+				TLISP6
+				{
+					key = 0 357
+					key = 1 125
+				}
+				TLISP7
+				{
+					key = 0 362
+					key = 1 127
+				}
+			}
+			ENGINETYPE
+			{
+				name = U
+				TLTWR0 = 35.2
+				TLCOST0 = 1.0
+				TLTECH0 = start
+				TLTHROTTLE0 = 1
+				TLTWR1 = 48.8
+				TLCOST1 = 1.2
+				TLTECH1 = basicRocketry
+				TLTHROTTLE1 = 1
+				TLTWR2 = 56.8
+				TLCOST2 = 1.4
+				TLTECH2 = generalRocketry
+				TLTHROTTLE2 = 1
+				TLTWR3 = 61.6
+				TLCOST3 = 1.6
+				TLTECH3 = advRocketry
+				TLTHROTTLE3 = 1
+				TLTWR4 = 64
+				TLCOST4 = 1.75
+				TLTECH4 = heavyRocketry
+				TLTHROTTLE4 = 0.8
+				TLTWR5 = 66.4
+				TLCOST5 = 1.85
+				TLTECH5 = heavierRocketry
+				TLTHROTTLE5 = 0.75
+				TLTWR6 = 68.8
+				TLCOST6 = 1.95
+				TLTECH6 = veryHeavyRocketry
+				TLTHROTTLE6 = 0.7
+				TLTWR7 = 71.2
+				TLCOST7 = 2.0
+				TLTECH7 = experimentalRocketry
+				TLTHROTTLE7 = 0.6
+				TLISP0
+				{
+					key = 0 280
+					key = 1 168
+				}
+				TLISP1
+				{
+					key = 0 308
+					key = 1 185
+				}
+				TLISP2
+				{
+					key = 0 325
+					key = 1 195
+				}
+				TLISP3
+				{
+					key = 0 335
+					key = 1 201
+				}
+				TLISP4
+				{
+					key = 0 340
+					key = 1 204
+				}
+				TLISP5
+				{
+					key = 0 345
+					key = 1 207
+				}
+				TLISP6
+				{
+					key = 0 350
+					key = 1 210
+				}
+				TLISP7
+				{
+					key = 0 355
+					key = 1 213
+				}
+			}
+			ENGINETYPE
+			{
+				name = U+
+				TLTWR0 = 25.4
+				TLCOST0 = 1.0
+				TLTECH0 = start
+				TLTHROTTLE0 = 1
+				TLTWR1 = 38.5
+				TLCOST1 = 1.2
+				TLTECH1 = basicRocketry
+				TLTHROTTLE1 = 1
+				TLTWR2 = 46.2
+				TLCOST2 = 1.4
+				TLTECH2 = generalRocketry
+				TLTHROTTLE2 = 0.75
+				TLTWR3 = 50.9
+				TLCOST3 = 1.6
+				TLTECH3 = advRocketry
+				TLTHROTTLE3 = 0.4
+				TLTWR4 = 53.2
+				TLCOST4 = 1.75
+				TLTECH4 = heavyRocketry
+				TLTHROTTLE4 = 0.3
+				TLTWR5 = 55.5
+				TLCOST5 = 1.85
+				TLTECH5 = heavierRocketry
+				TLTHROTTLE5 = 0.2
+				TLTWR6 = 57.8
+				TLCOST6 = 1.95
+				TLTECH6 = veryHeavyRocketry
+				TLTHROTTLE6 = 0.15
+				TLTWR7 = 60.1
+				TLCOST7 = 2.0
+				TLTECH7 = experimentalRocketry
+				TLTHROTTLE7 = 0.1
+				TLISP0
+				{
+					key = 0 291
+					key = 1 102
+				}
+				TLISP1
+				{
+					key = 0 320
+					key = 1 112
+				}
+				TLISP2
+				{
+					key = 0 338
+					key = 1 118
+				}
+				TLISP3
+				{
+					key = 0 348
+					key = 1 122
+				}
+				TLISP4
+				{
+					key = 0 354
+					key = 1 124
+				}
+				TLISP5
+				{
+					key = 0 359
+					key = 1 126
+				}
+				TLISP6
+				{
+					key = 0 364
+					key = 1 127
+				}
+				TLISP7
+				{
+					key = 0 369
+					key = 1 129
+				}
+			}
+			ENGINETYPE
+			{
+				name = L
+				TLTWR0 = 44.7
+				TLCOST0 = 1.0
+				TLTECH0 = start
+				TLTHROTTLE0 = 1
+				TLTWR1 = 54.2
+				TLCOST1 = 1.2
+				TLTECH1 = basicRocketry
+				TLTHROTTLE1 = 1
+				TLTWR2 = 66.8
+				TLCOST2 = 1.4
+				TLTECH2 = generalRocketry
+				TLTHROTTLE2 = 1
+				TLTWR3 = 76.3
+				TLCOST3 = 1.6
+				TLTECH3 = advRocketry
+				TLTHROTTLE3 = 1
+				TLTWR4 = 82.7
+				TLCOST4 = 1.75
+				TLTECH4 = heavyRocketry
+				TLTHROTTLE4 = 0.8
+				TLTWR5 = 87.1
+				TLCOST5 = 1.85
+				TLTECH5 = heavierRocketry
+				TLTHROTTLE5 = 0.7
+				TLTWR6 = 90.3
+				TLCOST6 = 1.95
+				TLTECH6 = veryHeavyRocketry
+				TLTHROTTLE6 = 0.6
+				TLTWR7 = 93.4
+				TLCOST7 = 2.0
+				TLTECH7 = experimentalRocketry
+				TLTHROTTLE7 = 0.6
+				TLISP0
+				{
+					key = 0 260
+					key = 1 234
+				}
+				TLISP1
+				{
+					key = 0 275
+					key = 1 248
+				}
+				TLISP2
+				{
+					key = 0 295
+					key = 1 266
+				}
+				TLISP3
+				{
+					key = 0 310
+					key = 1 279
+				}
+				TLISP4
+				{
+					key = 0 320
+					key = 1 288
+				}
+				TLISP5
+				{
+					key = 0 327
+					key = 1 295
+				}
+				TLISP6
+				{
+					key = 0 332
+					key = 1 299
+				}
+				TLISP7
+				{
+					key = 0 337
+					key = 1 304
+				}
+			}
+			ENGINETYPE
+			{
+				name = L+
+				TLTWR0 = 38.3
+				TLCOST0 = 1.0
+				TLTECH0 = start
+				TLTHROTTLE0 = 1
+				TLTWR1 = 46.4
+				TLCOST1 = 1.2
+				TLTECH1 = basicRocketry
+				TLTHROTTLE1 = 1
+				TLTWR2 = 57.3
+				TLCOST2 = 1.4
+				TLTECH2 = generalRocketry
+				TLTHROTTLE2 = 0.8
+				TLTWR3 = 65.4
+				TLCOST3 = 1.6
+				TLTECH3 = advRocketry
+				TLTHROTTLE3 = 0.75
+				TLTWR4 = 70.9
+				TLCOST4 = 1.75
+				TLTECH4 = heavyRocketry
+				TLTHROTTLE4 = 0.7
+				TLTWR5 = 74.6
+				TLCOST5 = 1.85
+				TLTECH5 = heavierRocketry
+				TLTHROTTLE5 = 0.65
+				TLTWR6 = 77.4
+				TLCOST6 = 1.95
+				TLTECH6 = veryHeavyRocketry
+				TLTHROTTLE6 = 0.6
+				TLTWR7 = 80.1
+				TLCOST7 = 2.0
+				TLTECH7 = experimentalRocketry
+				TLTHROTTLE7 = 0.5
+				TLISP0
+				{
+					key = 0 268
+					key = 1 220
+				}
+				TLISP1
+				{
+					key = 0 283
+					key = 1 233
+				}
+				TLISP2
+				{
+					key = 0 304
+					key = 1 250
+				}
+				TLISP3
+				{
+					key = 0 319
+					key = 1 262
+				}
+				TLISP4
+				{
+					key = 0 330
+					key = 1 271
+				}
+				TLISP5
+				{
+					key = 0 337
+					key = 1 277
+				}
+				TLISP6
+				{
+					key = 0 342
+					key = 1 281
+				}
+				TLISP7
+				{
+					key = 0 347
+					key = 1 285
+				}
+			}
+			ENGINETYPE
+			{
+				name = A
+				TLTWR0 = 20.7
+				TLCOST0 = 1.0
+				TLTECH0 = start
+				TLTHROTTLE0 = 1
+				TLTWR1 = 31.4
+				TLCOST1 = 1.2
+				TLTECH1 = basicRocketry
+				TLTHROTTLE1 = 1
+				TLTWR2 = 37.6
+				TLCOST2 = 1.4
+				TLTECH2 = generalRocketry
+				TLTHROTTLE2 = 0.8
+				TLTWR3 = 41.4
+				TLCOST3 = 1.6
+				TLTECH3 = advRocketry
+				TLTHROTTLE3 = 0.7
+				TLTWR4 = 43.3
+				TLCOST4 = 1.75
+				TLTECH4 = heavyRocketry
+				TLTHROTTLE4 = 0.6
+				TLTWR5 = 45.2
+				TLCOST5 = 1.85
+				TLTECH5 = heavierRocketry
+				TLTHROTTLE5 = 0.5
+				TLTWR6 = 47.1
+				TLCOST6 = 1.95
+				TLTECH6 = veryHeavyRocketry
+				TLTHROTTLE6 = 0.4
+				TLTWR7 = 48.9
+				TLCOST7 = 2.0
+				TLTECH7 = experimentalRocketry
+				TLTHROTTLE7 = 0.3
+				TLISP0
+				{
+					key = 0 280
+					key = 1 252
+				}
+				TLISP1
+				{
+					key = 0 308
+					key = 1 277
+				}
+				TLISP2
+				{
+					key = 0 325
+					key = 1 293
+				}
+				TLISP3
+				{
+					key = 0 335
+					key = 1 302
+				}
+				TLISP4
+				{
+					key = 0 340
+					key = 1 306
+				}
+				TLISP5
+				{
+					key = 0 345
+					key = 1 311
+				}
+				TLISP6
+				{
+					key = 0 350
+					key = 1 315
+				}
+				TLISP7
+				{
+					key = 0 355
+					key = 1 320
+				}
+			}
+			ENGINETYPE
+			{
+				name = S
+				TLTWR0 = 4.34782608695652
+				TLCOST0 = 1.0
+				TLTECH0 = start
+				TLTHROTTLE0 = 1
+				TLGIMBAL0 = 0
+				TLTWR1 = 5.26315789473684
+				TLCOST1 = 1.2
+				TLTECH1 = basicRocketry
+				TLTHROTTLE1 = 1
+				TLGIMBAL1 = 0
+				TLTWR2 = 6.25
+				TLCOST2 = 1.4
+				TLTECH2 = generalRocketry
+				TLTHROTTLE2 = 1
+				TLGIMBAL2 = 3
+				TLTWR3 = 7.14285714285714
+				TLCOST3 = 1.6
+				TLTECH3 = advRocketry
+				TLTHROTTLE3 = 1
+				TLGIMBAL3 = 5
+				TLTWR4 = 8.33333333333333
+				TLCOST4 = 1.75
+				TLTECH4 = heavyRocketry
+				TLTHROTTLE4 = 1
+				TLGIMBAL4 = 5
+				TLTWR5 = 10
+				TLCOST5 = 1.85
+				TLTECH5 = heavierRocketry
+				TLTHROTTLE5 = 1
+				TLGIMBAL5 = 5
+				TLTWR6 = 11.1111111111111
+				TLCOST6 = 1.95
+				TLTECH6 = veryHeavyRocketry
+				TLTHROTTLE6 = 1
+				TLGIMBAL6 = 5
+				TLTWR7 = 12.5
+				TLCOST7 = 2.0
+				TLTECH7 = experimentalRocketry
+				TLTHROTTLE7 = 1
+				TLGIMBAL7 = 5
+				TLISP0
+				{
+					key = 0 220
+					key = 1 200
+				}
+				TLISP1
+				{
+					key = 0 235
+					key = 1 215
+				}
+				TLISP2
+				{
+					key = 0 250
+					key = 1 230
+				}
+				TLISP3
+				{
+					key = 0 260
+					key = 1 240
+				}
+				TLISP4
+				{
+					key = 0 268
+					key = 1 245
+				}
+				TLISP5
+				{
+					key = 0 276
+					key = 1 255
+				}
+				TLISP6
+				{
+					key = 0 284
+					key = 1 260
+				}
+				TLISP7
+				{
+					key = 0 290
+					key = 1 265
+				}
+			}
+			ENGINETYPE
+			{
+				name = S+
+				TLTWR0 = 4.76190476190476
+				TLCOST0 = 1.0
+				TLTECH0 = start
+				TLTHROTTLE0 = 1
+				TLGIMBAL0 = 0
+				TLTWR1 = 5.88235294117647
+				TLCOST1 = 1.2
+				TLTECH1 = basicRocketry
+				TLTHROTTLE1 = 1
+				TLGIMBAL1 = 0
+				TLTWR2 = 7.14285714285714
+				TLCOST2 = 1.4
+				TLTECH2 = generalRocketry
+				TLTHROTTLE2 = 1
+				TLGIMBAL2 = 0
+				TLTWR3 = 8.33333333333333
+				TLCOST3 = 1.6
+				TLTECH3 = advRocketry
+				TLTHROTTLE3 = 1
+				TLGIMBAL3 = 2
+				TLTWR4 = 10
+				TLCOST4 = 1.75
+				TLTECH4 = heavyRocketry
+				TLTHROTTLE4 = 1
+				TLGIMBAL4 = 3
+				TLTWR5 = 12.5
+				TLCOST5 = 1.85
+				TLTECH5 = heavierRocketry
+				TLTHROTTLE5 = 1
+				TLGIMBAL5 = 4
+				TLTWR6 = 14.2857142857143
+				TLCOST6 = 1.95
+				TLTECH6 = veryHeavyRocketry
+				TLTHROTTLE6 = 1
+				TLGIMBAL6 = 4
+				TLTWR7 = 16.6666666666667
+				TLCOST7 = 2.0
+				TLTECH7 = experimentalRocketry
+				TLTHROTTLE7 = 1
+				TLGIMBAL7 = 4
+				TLISP0
+				{
+					key = 0 231
+					key = 1 160
+				}
+				TLISP1
+				{
+					key = 0 247
+					key = 1 172
+				}
+				TLISP2
+				{
+					key = 0 263
+					key = 1 184
+				}
+				TLISP3
+				{
+					key = 0 273
+					key = 1 192
+				}
+				TLISP4
+				{
+					key = 0 281
+					key = 1 196
+				}
+				TLISP5
+				{
+					key = 0 290
+					key = 1 204
+				}
+				TLISP6
+				{
+					key = 0 298
+					key = 1 208
+				}
+				TLISP7
+				{
+					key = 0 305
+					key = 1 212
+				}
+			}
+			ENGINETYPE
+			{
+				name = N
+				TLTWR3 = 1.46
+				TLCOST3 = 1.6
+				TLTECH3 = heavierRocketry
+				TLTHROTTLE3 = 1
+				TLTWR4 = 2
+				TLCOST4 = 1.75
+				TLTECH4 = nuclearPropulsion
+				TLTHROTTLE4 = 1
+				TLTWR5 = 2.4241
+				TLCOST5 = 1.85
+				TLTECH5 = nuclearPropulsion
+				TLTHROTTLE5 = 1
+				TLTWR6 = 4
+				TLCOST6 = 1.95
+				TLTECH6 = veryHeavyRocketry
+				TLTHROTTLE6 = 1
+				TLTWR7 = 6
+				TLCOST7 = 2.0
+				TLTECH7 = experimentalRocketry
+				TLTHROTTLE7 = 1
+				TLTWR8 = 8
+				TLCOST8 = 2.05
+				TLTECH8 = experimentalRocketry
+				TLTHROTTLE8 = 1
+				TLISP3
+				{
+					key = 0 850
+					key = 1 380
+				}
+				TLISP4
+				{
+					key = 0 875
+					key = 1 391
+				}
+				TLISP5
+				{
+					key = 0 910
+					key = 1 407
+				}
+				TLISP6
+				{
+					key = 0 930
+					key = 1 416
+				}
+				TLISP7
+				{
+					key = 0 960
+					key = 1 429
+				}
+				TLISP8
+				{
+					key = 0 1010
+					key = 1 452
+				}
+			}
+		}
+		Ullage
+		{
+			simulateUllage = true
+			shutdownEngineWhenUnstable = true
+			explodeEngineWhenTooUnstable = false
+			stabilityPower = 0.5
+			naturalDiffusionRateX = 0.05
+			naturalDiffusionRateY = 0.06
+			translateAxialCoefficientX = 0.30
+			translateAxialCoefficientY = 0.86
+			translateSidewayCoefficientX = 0.05
+			translateSidewayCoefficientY = 0.03
+			rotateYawPitchCoefficientX = 0.018
+			rotateYawPitchCoefficientY = 0.012
+			rotateRollCoefficientX = 0.018
+			rotateRollCoefficientY = 0.024
+			ventingVelocity = 100
+			ventingAccThreshold = 0.0000001
+		}
 	}
 }
 UrlConfig
@@ -22586,6 +26156,78 @@ UrlConfig
 			scrapeSound = CollisionFX/Sounds/GroundSkid
 			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
+		MODULE
+		{
+			name = ModuleAsteroidResource
+			resourceName = Water
+			presenceChance = 100
+			lowRange = 50
+			highRange = 75
+		}
+		MODULE
+		{
+			name = ModuleAsteroidResource
+			resourceName = MetallicOre
+			presenceChance = 80
+			lowRange = 50
+			highRange = 75
+		}
+		MODULE
+		{
+			name = ModuleAsteroidResource
+			resourceName = Substrate
+			presenceChance = 80
+			lowRange = 50
+			highRange = 75
+		}
+		MODULE
+		{
+			name = ModuleAsteroidResource
+			resourceName = Minerals
+			presenceChance = 25
+			lowRange = 1
+			highRange = 10
+		}
+		MODULE
+		{
+			name = ModuleAsteroidResource
+			resourceName = Karbonite
+			presenceChance = 25
+			lowRange = 50
+			highRange = 75
+		}
+		MODULE
+		{
+			name = ModuleAsteroidResource
+			resourceName = Karborundum
+			presenceChance = 25
+			lowRange = 1
+			highRange = 10
+		}
+		MODULE
+		{
+			name = ModuleAsteroidResource
+			resourceName = Uraninite
+			presenceChance = 25
+			lowRange = 50
+			highRange = 75
+		}
+		MODULE
+		{
+			name = ModuleAsteroidResource
+			resourceName = XenonGas
+			presenceChance = 80
+			lowRange = 1
+			highRange = 10
+		}
+		MODULE
+		{
+			name = ModuleAsteroidResource
+			resourceName = ArgonGas
+			presenceChance = 80
+			lowRange = 1
+			highRange = 10
+		}
 	}
 }
 UrlConfig
@@ -23257,6 +26899,60 @@ UrlConfig
 			collisionSound = CollisionFX/Sounds/Bang1
 			scrapeSound = CollisionFX/Sounds/GroundSkid
 			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = ModuleAnalysisResource
+			resourceName = Water
+			abundance = 0
+		}
+		MODULE
+		{
+			name = ModuleAnalysisResource
+			resourceName = MetallicOre
+			abundance = 0
+		}
+		MODULE
+		{
+			name = ModuleAnalysisResource
+			resourceName = Substrate
+			abundance = 0
+		}
+		MODULE
+		{
+			name = ModuleAnalysisResource
+			resourceName = Minerals
+			abundance = 0
+		}
+		MODULE
+		{
+			name = ModuleAnalysisResource
+			resourceName = Karbonite
+			abundance = 0
+		}
+		MODULE
+		{
+			name = ModuleAnalysisResource
+			resourceName = Karborundum
+			abundance = 0
+		}
+		MODULE
+		{
+			name = ModuleAnalysisResource
+			resourceName = Uraninite
+			abundance = 0
+		}
+		MODULE
+		{
+			name = ModuleAnalysisResource
+			resourceName = XenonGas
+			abundance = 0
+		}
+		MODULE
+		{
+			name = ModuleAnalysisResource
+			resourceName = ArgonGas
+			abundance = 0
 		}
 		MODEL
 		{

@@ -438,10 +438,15 @@ GAME
 			Scientist = Blue_Trek
 		}
 	}
+	SCENARIO
+	{
+		name = RFUpgradeManager
+		scene = 6, 5
+	}
 	FLIGHTSTATE
 	{
 		version = 1.0.4
-		UT = 35362.1546184303
+		UT = 35388.5746184261
 		activeVessel = 0
 		mapViewFiltering = -1026
 		VESSEL
