@@ -91,18 +91,35 @@ GAME
 		{
 			RecordsAltitude
 			{
-				reached = 17192.7196940512
-				record = 73.0769762663404
+				reached = 18239.799505617
+				record = 100021.925614333
 			}
 			RecordsSpeed
 			{
-				reached = 17192.7996940512
-				record = 0.781547091339629
+				reached = 18658.6746185379
+				record = 2246.28913360433
 			}
 			RecordsDistance
 			{
-				reached = 16924.3196940455
-				record = 756.403933097963
+				completed = 17726.8796940629
+				record = 100000
+			}
+			Kerbin
+			{
+				reached = 17726.8596940629
+				Orbit
+				{
+					completed = 17726.8596940629
+					vessel
+					{
+						name = Untitled Space Craft
+						flag = Squad/Flags/kerbin
+					}
+					crew
+					{
+						crews = Jebediah Kerman
+					}
+				}
 			}
 		}
 	}
@@ -344,15 +361,34 @@ GAME
 	SCENARIO
 	{
 		name = KerbalAlarmClockScenario
-		scene = 6, 5, 7
+		scene = 6, 5, 7, 8
 		KACAlarmListStorage
+		{
+		}
+	}
+	SCENARIO
+	{
+		name = TRScenario
+		scene = 5
+		reflectionType = REAL
+		isHelmetRemovalEnabled = True
+		isAtmSuitEnabled = True
+		suitAssignment = RANDOM
+		Kerbals
+		{
+			Jebediah Kerman = GENERIC GENERIC
+			Bill Kerman = GENERIC GENERIC
+			Bob Kerman = GENERIC GENERIC
+			Valentina Kerman = GENERIC GENERIC
+		}
+		ClassSuits
 		{
 		}
 	}
 	FLIGHTSTATE
 	{
 		version = 1.0.4
-		UT = 17485.6596940576
+		UT = 29268.7746187694
 		activeVessel = 0
 		mapViewFiltering = -1026
 		VESSEL
@@ -934,20 +970,20 @@ GAME
 			pid = 63e9bb0ecd1b4486ace7ab16878fb070
 			name = Untitled Space Craft
 			type = Lander
-			sit = PRELAUNCH
-			landed = True
-			landedAt = KSC_LaunchPad_Platform
+			sit = ORBITING
+			landed = False
+			landedAt = 
 			splashed = False
-			met = 0
-			lct = 17481.6596940575
+			met = 1088.37492447841
+			lct = 17726.8596940629
 			root = 0
-			lat = -0.0972077861579116
-			lon = 285.442326076412
-			alt = 73.0269771021558
-			hgt = 0.562501
-			nrm = 5.264387E-06,1,-2.272439E-06
-			rot = -0.7009881,-0.09221596,-0.09726385,0.7004653
-			CoM = 2.077581E-09,0.0108209,-6.366379E-09
+			lat = 1.49707178706854E-09
+			lon = 175.575056051811
+			alt = 99953.4319274189
+			hgt = -1
+			nrm = -0.8278689,-0.5608815,-0.006724377
+			rot = -0.7072921,-0.01917508,-0.02414318,0.7062489
+			CoM = 1.594098E-06,0.3624667,-1.794083E-07
 			stg = 1
 			prst = False
 			ref = 794478237
@@ -957,13 +993,13 @@ GAME
 			cMod = 0
 			ORBIT
 			{
-				SMA = 300036.518898422
-				ECC = 1
-				INC = NaN
-				LPE = 34.556994964058
-				LAN = 161.361716385329
-				MNA = 3.14159265358979
-				EPH = 17481.6796940575
+				SMA = 699995.6624676
+				ECC = 6.42372281225621E-05
+				INC = 0
+				LPE = 12.2698114251057
+				LAN = 186.810744972427
+				MNA = 6.13128622278138
+				EPH = 18658.6746185379
 				REF = 1
 			}
 			PART
@@ -988,14 +1024,14 @@ GAME
 				attN = bottom, -1
 				attN = top, 1
 				mass = 0.6
-				temp = 292.120907334861
-				tempExt = 292.881590816931
+				temp = 293.962161678891
+				tempExt = 293.760744961777
 				expt = 0.5
 				state = 0
 				connected = True
 				attached = True
 				flag = Squad/Flags/kerbin
-				rTrf = landerCabinSmall
+				rTrf = landerCabinSmall (Untitled Space Craft)
 				modCost = 0
 				crew = Jebediah Kerman
 				EVENTS
@@ -1508,16 +1544,16 @@ GAME
 						}
 						MechJebModuleFlightRecorder
 						{
-							markUT = 17481.6596940575
+							markUT = 17726.8596940629
 							deltaVExpended = 0
-							dragLosses = 0
-							gravityLosses = 0
+							dragLosses = -7.82658561348546E-10
+							gravityLosses = -16.2002203741919
 							steeringLosses = 0
-							markLatitude = -0.0972077861598961
-							markLongitude = -74.5576739243597
-							markAltitude = 73.0377975630574
+							markLatitude = -0.097207788446228
+							markLongitude = -74.55767052876
+							markAltitude = 73.0267196571804
 							markBodyIndex = 1
-							maxDragGees = 0
+							maxDragGees = 7.38520967141131E-13
 							unlockParts = 
 							unlockTechs = 
 						}
@@ -1536,6 +1572,7 @@ GAME
 					Log
 					{
 						flight = 0
+						0 = Orbit,Kerbin
 					}
 				}
 				RESOURCE
@@ -1581,8 +1618,8 @@ GAME
 				attN = top, -1
 				attN = bottom, 0
 				mass = 0.01
-				temp = 292.218263192679
-				tempExt = 292.880664774246
+				temp = 293.959127826958
+				tempExt = 293.806150202061
 				expt = 0.5
 				state = 0
 				connected = True
@@ -1660,7 +1697,7 @@ GAME
 				trimPitch = 0
 				trimYaw = 0
 				trimRoll = 0
-				mainThrottle = 0.5
+				mainThrottle = 0
 			}
 		}
 	}
@@ -1685,6 +1722,7 @@ GAME
 			FLIGHT_LOG
 			{
 				flight = 0
+				0 = Orbit,Kerbin
 			}
 		}
 		KERBAL

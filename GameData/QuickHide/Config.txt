@@ -15,6 +15,7 @@ CanPin
 	Item = CameraTools
 	Item = KSPAlternateResourcePanel
 	Item = PlanetShine
+	Item = TextureReplacer
 }
 CanHide
 {
@@ -27,6 +28,7 @@ CanHide
 	Item = CameraTools
 	Item = KSPAlternateResourcePanel
 	Item = PlanetShine
+	Item = TextureReplacer
 }
 CanSetFalse
 {
@@ -39,6 +41,7 @@ CanSetFalse
 	Item = CameraTools
 	Item = KSPAlternateResourcePanel
 	Item = PlanetShine
+	Item = TextureReplacer
 }
 ModHasFirstConfig
 {
@@ -51,4 +54,5 @@ ModHasFirstConfig
 	Item = CameraTools
 	Item = KSPAlternateResourcePanel
 	Item = PlanetShine
+	Item = TextureReplacer
 }

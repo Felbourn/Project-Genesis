@@ -5,8 +5,8 @@ TextureReplacer
 
 * [Forum thread](http://forum.kerbalspaceprogram.com/threads/107471)
 * [GitHub page](http://github.com/ducakar/TextureReplacer)
-* [CurseForge page](http://kerbal.curseforge.com/plugins/220217)
 * [Kerbal Stuff page](https://kerbalstuff.com/mod/150/TextureReplacer)
+* [CurseForge page](http://kerbal.curseforge.com/plugins/220217-texturereplacer)
 
 TextureReplacer is a plugin for Kerbal Space Program that allows you to replace
 stock textures and customise your Kerbals. More specifically, it can:
@@ -55,65 +55,63 @@ texture inside `GameData/` (plus .dds/.png/.jpg/.tga extension, of course).
 Examples:
 
     GameData/TextureReplacer/
-      Default/kerbalHead                  // teeth and male head
-      Default/kerbalHeadNRM               // teeth and male head normal map
-      Default/kerbalGirl_06_BaseColor     // female head
-      Default/kerbalGirl_06_BaseColorNRM  // female head normal map
-      Default/kerbalMain                  // IVA suit (veteran/orange)
-      Default/kerbalMainGrey              // IVA suit (standard/grey)
-      Default/kerbalMainNRM               // IVA suit normal map
-      Default/kerbalHelmetGrey            // IVA helmet
-      Default/kerbalHelmetNRM             // IVA & EVA helmet normal map
-      Default/kerbalVisor                 // IVA helmet visor
-      Default/EVAtexture                  // EVA suit
-      Default/EVAtextureNRM               // EVA suit normal map
-      Default/EVAhelmet                   // EVA helmet
-      Default/EVAvisor                    // EVA helmet visor
-      Default/EVAjetpack                  // EVA jetpack
-      Default/EVAjetpackNRM               // EVA jetpack normal map
+      Default/kerbalHead               // default Kerbal head
+      Default/kerbalHeadNRM            // default Kerbal head normal map
+      Default/kerbalMain               // default IVA suit (veteran/orange)
+      Default/kerbalMainGrey           // default IVA suit (standard/grey)
+      Default/kerbalMainNRM            // default IVA suit normal map
+      Default/kerbalHelmetGrey         // default IVA helmet
+      Default/kerbalHelmetNRM          // default IVA & EVA helmet normal map
+      Default/kerbalVisor              // default IVA helmet visor
+      Default/EVAtexture               // default EVA suit
+      Default/EVAtextureNRM            // default EVA suit normal map
+      Default/EVAhelmet                // default EVA helmet
+      Default/EVAvisor                 // default EVA helmet visor
+      Default/EVAjetpack               // default EVA jetpack
+      Default/EVAjetpackNRM            // default EVA jetpack normal map
 
-      Default/HUDNavBall                  // HUD NavBall
-      Default/IVANavBall                  // IVA NavBall, horizontally flipped
+      Default/HUDNavBall               // HUD NavBall
+      Default/IVANavBall               // IVA NavBall, horizontally flipped
 
-      Default/GalaxyTex_PositiveX         // skybox right face
-      Default/GalaxyTex_NegativeX         // skybox left face
-      Default/GalaxyTex_PositiveY         // skybox bottom face rotated for 180°
-      Default/GalaxyTex_NegativeY         // skybox top face
-      Default/GalaxyTex_PositiveZ         // skybox front face
-      Default/GalaxyTex_NegativeZ         // skybox back face
+      Default/GalaxyTex_PositiveX      // skybox right face
+      Default/GalaxyTex_NegativeX      // skybox left face
+      Default/GalaxyTex_PositiveY      // skybox bottom face, rotated for 180°
+      Default/GalaxyTex_NegativeY      // skybox top face
+      Default/GalaxyTex_PositiveZ      // skybox front face
+      Default/GalaxyTex_NegativeZ      // skybox back face
 
-      Default/moho00                      // Moho
-      Default/moho01                      // Moho normal map
-      Default/Eve2_00                     // Eve
-      Default/Eve2_01                     // Eve normal map
-      Default/evemoon100                  // Gilly
-      Default/evemoon101                  // Gilly normal map
-      Default/KerbinScaledSpace300        // Kerbin
-      Default/KerbinScaledSpace401        // Kerbin normal map
-      Default/NewMunSurfaceMapDiffuse     // Mün
-      Default/NewMunSurfaceMapNormals     // Mün normal map
-      Default/NewMunSurfaceMap00          // Minmus
-      Default/NewMunSurfaceMap01          // Minmus normal map
-      Default/Duna5_00                    // Duna
-      Default/Duna5_01                    // Duna normal map
-      Default/desertplanetmoon00          // Ike
-      Default/desertplanetmoon01          // Ike normal map
-      Default/dwarfplanet100              // Dres
-      Default/dwarfplanet101              // Dres normal map
-      Default/gas1_clouds                 // Jool
-      Default/cloud_normal                // Jool normal map
-      Default/newoceanmoon00              // Laythe
-      Default/newoceanmoon01              // Laythe normal map
-      Default/gp1icemoon00                // Vall
-      Default/gp1icemoon01                // Vall normal map
-      Default/rockyMoon00                 // Tylo
-      Default/rockyMoon01                 // Tylo normal map
-      Default/gp1minormoon100             // Bop
-      Default/gp1minormoon101             // Bop normal map
-      Default/gp1minormoon200             // Pol
-      Default/gp1minormoon201             // Pol normal map
-      Default/snowydwarfplanet00          // Eeloo
-      Default/snowydwarfplanet01          // Eeloo normal map
+      Default/moho00                   // Moho
+      Default/moho01                   // Moho normal map
+      Default/Eve2_00                  // Eve
+      Default/Eve2_01                  // Eve normal map
+      Default/evemoon100               // Gilly
+      Default/evemoon101               // Gilly normal map
+      Default/KerbinScaledSpace300     // Kerbin
+      Default/KerbinScaledSpace401     // Kerbin normal map
+      Default/NewMunSurfaceMapDiffuse  // Mün
+      Default/NewMunSurfaceMapNormals  // Mün normal map
+      Default/NewMunSurfaceMap00       // Minmus
+      Default/NewMunSurfaceMap01       // Minmus normal map
+      Default/Duna5_00                 // Duna
+      Default/Duna5_01                 // Duna normal map
+      Default/desertplanetmoon00       // Ike
+      Default/desertplanetmoon01       // Ike normal map
+      Default/dwarfplanet100           // Dres
+      Default/dwarfplanet101           // Dres normal map
+      Default/gas1_clouds              // Jool
+      Default/cloud_normal             // Jool normal map
+      Default/newoceanmoon00           // Laythe
+      Default/newoceanmoon01           // Laythe normal map
+      Default/gp1icemoon00             // Vall
+      Default/gp1icemoon01             // Vall normal map
+      Default/rockyMoon00              // Tylo
+      Default/rockyMoon01              // Tylo normal map
+      Default/gp1minormoon100          // Bop
+      Default/gp1minormoon101          // Bop normal map
+      Default/gp1minormoon200          // Pol
+      Default/gp1minormoon201          // Pol normal map
+      Default/snowydwarfplanet00       // Eeloo
+      Default/snowydwarfplanet01       // Eeloo normal map
 
 It's also possible to replace textures from `GameData/` if one specifies
 the full directory hierarchy:
@@ -143,7 +141,7 @@ Note that all textures must be quares and have the same dimensions that are
 powers of two. Cube map textures are slow, so keep them as low-res as possible.
 
 `TRReflection` part module can be used as in the following example that adds
-reflections onto the windows of Mk1-2 pod:
+reflections onto Mk1-2 pod windows:
 
     MODULE
     {
@@ -157,10 +155,10 @@ reflections onto the windows of Mk1-2 pod:
 There are several parameters, all optional:
 
 * `shader`: Most shaders should be automatically mapped to their reflective
-  counterparts. In some cases, however, thare are no reflective version of a
-  shader, so you will have to manually specify appropriate shader.
-* `colour`: Reflection is pre-multiplied by this RGB value before added to the
-  material. "0.5 0.5 0.5" by default.
+  counterparts. In some cases, however, thare are no reflective version
+  of a shader, so you will have to manually specify appropriate shader.
+* `colour`: Reflection is pre-multiplied by this RGB value before added to
+  the material. "0.5 0.5 0.5" by default.
 * `interval`: Once in how many steps the reflection is updated. "1" by default.
 * `meshes`: Space- and/or comma-sparated list of mesh names where to apply
   reflections. Reflection is applied to whole part if this parameter is empty or
@@ -168,20 +166,23 @@ There are several parameters, all optional:
   helpful as it prints names of all meshes for each part with `TRReflection`
   module into your log.
 
-One face of one reflection cube texture is updated every `reflectionInterval`
-frames (2 by default, it can be changed in a configuration file), so each
-reflective part has to be updated six times to update all six texture faces.
-More reflective parts there are on the scene less frequently they are updated.
-`interval` field on TRReflection module can lessen the update rate for a part;
-e.g. `interval = 2` makes the part update half less frequently.
+Real reflection update occurs once in `reflectionInterval` frames (2 by default,
+it can be changed in a configuration file). Only one face of one reflection is
+updated in each step, so each reflections must be updated six times to be fully
+updated in all six directions. You can also specify individual `interval`
+property for reflective parts; if it is > 1 the reflection will not be updated
+each step. E.g. for `interval = 2` it will only be updated every second step and
+every other step it will be skipped, so the next reflective part in a row will
+be updated instead.
+
 
 ### Personalised Kerbal Textures ###
 
 Heads and suits are assigned either manually or automatically (configured in the
 GUI while configuration files can provide initial settings). "Random" assignment
 of heads and suits is based on Kerbals' names, which ensures the same head/suit
-is always assigned to a given Kerbal. Additionally, special per-class suit can
-be set for each class.
+is always assigned to a given Kerbal. Additionally, suits can also be assigned
+consecutively (based on roster index) or based on class and experience level.
 
 Head textures reside inside `Heads/` directory (and its subdirectories) and have
 arbitrary names. Normal maps are optional. To provide a normal map, name it the
@@ -232,6 +233,10 @@ inside its own directory:
 The level textures are optional. If missing, level 0 texture will be used for
 all levels for that part of suit.
 
+For generic Kerbals, heads are selected independently form suits so any head can
+be paired with any of the suits and each head has an equal chance of being
+selected.
+
 ### Configuration File ###
 
 NOTE: All options that can be configured in the GUI are saved per-game and not
@@ -255,7 +260,7 @@ custom configuration files).
 Unity uses "grey" normal maps (RGBA = YYYX) to minimise artefacts when applying
 DXT5 texture compression on them. When a normal map has a "NRM" suffix Unity
 converts it from RGB = XYZ ("blue") to RGBA = YYYX ("grey") normal map unless
-it is in DDS format.
+DDSLoader is used to load it.
 
 In short: you should supply "blue" normal maps when a texture has "NRM" suffix
 and is in PNG format (JPEGs and TGAs are not recommended for normal maps) and
@@ -268,9 +273,19 @@ DDS with DXT5nm compression or by manually shuffling its channels RGBA -> GGGR.
 Notes
 -----
 
-* Use DDS format for optimal RAM usage and loading times since DDS textures are
-  not shadowed in RAM and can be pre-compressed and can have pre-built mipmaps.
+* Use DDS format (requires DDSLoader) for optimal RAM usage and loading times
+  since DDS textures are not shadowed in RAM and can be pre-compressed and can
+  have pre-generated mipmaps.
+* TGA and JPEG images are not suitable for normal maps.
 * Try to keep dimensions of all textures powers of two.
+* KSP can only load TGAs with RGB or RGBA colours. Paletteised 256-colour TGAs
+  cause corruptions in the game database!
+* By default, texture compression and mipmap generation are handled by ATM when
+  it is present rather than by TextureReplacer.
+* KSP never generates mipmaps for PNGs and JPEGs. TextureReplacer fixes this by
+  generating mipmaps under paths specified in the configuration file. Other
+  images are omitted to avoid making UI icons of various plugins blurry when not
+  using the full texture quality.
 * The planet textures being replaced are the high-altitude textures, which are
   also used in the map mode and in the tracking station. When getting closer to
   the surface those textures are slowly interpolated into the high-resolution
@@ -280,57 +295,21 @@ Notes
 Known Issues
 ------------
 
-* Atmospheric skybox is not reflected.
-* Reflections disable part highlighting.
+* There are issues with some reflective parts: highlighting, radial attachment
+  and/or mouse click may not work.
 * Clouds from EVE are only reflected when on/near the ground or over 160 km.
-* Clouds from EVE Overhaul are not correctly reflected.
+* Clouds from development version of EVE are not properly reflected.
 * Cabin-specific IVA suits don't persist through scene switches while on EVA.
+* Reloading game database in the space centre scene resets per-game setings.
+* Reloading game database in the main menu switches IVA visor texture.
 
 
 Change Log
 ----------
 
-* 2.4.6
-    - added GUI button to reset head/suit assignments to ones from config files
-    - fixed male -> female material copy mixing IVA and EVA textures on females
-    - fixed IVA helmet personalisation when helmets are hidden on scene start
-* 2.4.5
-    - fixing female model is more consistent, female helmet normal map enabled
-    - (hopefully) fixed a rare toolbar icon crash that breaks space centre scene
-    - the top quad of atmospheric skybox is not rendered any more
-    - re-enabled texture compression, mipmap generation and unloading
-* 2.4.4
-    - disabling spawning in IVA suits also disables "Toggle EVA Suit" in
-      Kerbal's context menu
-    - disabled texture compression, mipmap generation and unloading by default,
-      these functions will be removed in the next major release
-    - fixed radial attachment and click ignoring for reflective parts
-* 2.4.3
-    - all Kerbals' teeth now use `Default/kerbalHead` texture and are not
-      personalised any more to solve the female teeth texturing problem
-* 2.4.2
-    - fixed white visors when not using visor texture
-* 2.4.1
-    - shaders on Kerbals are now changed to make them consistent between males
-      and females and fix bumpmapping and specular lighting for female suits
-    - removed consecutive suit assignment
-    - removed (now redundant) suit assignment setting, since a random suit is
-      automatically used when the class suit is not set
-    - fixed legacy females feature for tourists
-    - fixed random suit assignment when the class suit is not available
-    - fixed default veteran suit assignment for Valentina
-    - fixed skybox reflection
-* 2.4
-    - updated for KSP 1.0
-    - updated personalisation to work with stock female Kerbals
-    - added `forceLegacyFemales` option to convert all females to use male
-      models but female textures (pre-1.0 behaviour)
-    - removed gender detection from names and `femaleNames` config option
-    - fixed all issues with game database reloading
-    - fixed mipmap generation for navballs
 * 2.3.1
     - further improved IVA personalisation; it should now work with all mods
-    - addition/removal of toolbar button is now done correctly
+    - addition/removal of toolbar botton is now done correctly
 * 2.3
     - major code refactoring
     - removed most of code that had to run per-frame, mechanisms provided by
@@ -345,6 +324,8 @@ Change Log
     - new and more robust method for hiding meshes during reflection generation
     - fixed `isVisorReflectionEnabled` being ignored for real reflections
     - fixed issue with non-multiple-of-4 texture dimensions (thanks to sarbian)
+* 2.2.6
+    - fixed cloud reflections from orbit for stable version of EVE
 * 2.2.5
     - reverted immediate texture unloading
 * 2.2.4

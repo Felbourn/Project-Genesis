@@ -1291,6 +1291,54 @@ UrlConfig
 }
 UrlConfig
 {
+	name = DistantFlare
+	type = DistantFlare
+	parentUrl = DistantObject/Settings
+	url = DistantObject/Settings/DistantFlare
+	DistantFlare
+	{
+		flaresEnabled = True
+		flareSaturation = 0.65
+		flareSize = 1
+		flareBrightness = 1
+		ignoreDebrisFlare = False
+		debrisBrightness = 0.2508772
+		situations = ORBITING,SUB_ORBITAL,ESCAPING,DOCKED
+		showNames = True
+		debugMode = False
+		useToolbar = True
+		useAppLauncher = True
+		onlyInSpaceCenter = False
+	}
+}
+UrlConfig
+{
+	name = DistantVessel
+	type = DistantVessel
+	parentUrl = DistantObject/Settings
+	url = DistantObject/Settings/DistantVessel
+	DistantVessel
+	{
+		renderVessels = True
+		maxDistance = 750000
+		renderMode = 1
+		ignoreDebris = False
+	}
+}
+UrlConfig
+{
+	name = SkyboxBrightness
+	type = SkyboxBrightness
+	parentUrl = DistantObject/Settings
+	url = DistantObject/Settings/SkyboxBrightness
+	SkyboxBrightness
+	{
+		changeSkybox = True
+		maxBrightness = 0.4956141
+	}
+}
+UrlConfig
+{
 	name = ENVIRONMENTAL_VISUAL_ENHANCEMENTS
 	type = ENVIRONMENTAL_VISUAL_ENHANCEMENTS
 	parentUrl = EnvironmentalVisualEnhancements/settings
@@ -1652,19 +1700,19 @@ UrlConfig
 	url = PlanetShine/Config/Settings/PlanetShine
 	PlanetShine
 	{
-		baseAlbedoIntensity = 0.22
-		vacuumLightLevel = 0.03
+		baseAlbedoIntensity = 0.5
+		vacuumLightLevel = 0.05
 		useAreaLight = True
-		baseGroundAmbient = 0.5
+		baseGroundAmbient = 1
 		minAlbedoFadeAltitude = 0.02
 		maxAlbedoFadeAltitude = 0.1
 		minAmbientFadeAltitude = 0
 		maxAmbientFadeAltitude = 0.08
 		albedoRange = 8
 		groundAmbientOverrideRatio = 0.5
-		useVertex = True
+		useVertex = False
 		updateFrequency = 2
-		quality = 1
+		quality = 3
 		stockToolbarEnabled = False
 	}
 }
@@ -37864,6 +37912,743 @@ UrlConfig
 			collisionSound = CollisionFX/Sounds/Bang1
 			scrapeSound = CollisionFX/Sounds/GroundSkid
 			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+	}
+}
+UrlConfig
+{
+	name = TextureReplacer
+	type = TextureReplacer
+	parentUrl = TextureReplacer/@Default
+	url = TextureReplacer/@Default/TextureReplacer
+	TextureReplacer
+	{
+		isCompressionEnabled = auto
+		isMipmapGenEnabled = auto
+		generateMipmaps = /FX/ /Parts/ /Props/ /Spaces/ ^ART/ ^ASET(_Props)?/ ^FASA/
+		generateMipmaps = ^KAS/Textures/ ^Lionhead_Aerospace_Inc/ ^Regolith/Assets/
+		generateMipmaps = ^RetroFuture/ ^SnacksPartsByWhyren/ ^UmbraSpaceIndustries/
+		isUnloadingEnabled = auto
+		keepLoaded = ^BoulderCo/(Clouds|Atmosphere)/ ^CommunityResourcePack/
+		keepLoaded = ^CustomBiomes/PluginData/CustomBiomes/ ^KittopiaSpace/Textures/
+		keepLoaded = ^Kopernicus/Textures/ ^Romfarer/textures/
+		keepLoaded = ^WarpPlugin/PlanetResourceData/
+		skinningQuality = auto
+		logTextures = false
+		logReflectiveMeshes = false
+		isGUIEnabled = true
+		reflectionType = real
+		reflectionResolution = 128
+		reflectionInterval = 2
+		isVisorReflectionEnabled = true
+		visorReflectionColour = 0.5 0.5 0.5
+		isHelmetRemovalEnabled = true
+		isAtmSuitEnabled = true
+		atmSuitPressure = 50
+		atmSuitBodies = Kerbin Erin Sanctum
+		forceLegacyFemales = false
+		CustomKerbals
+		{
+		}
+		GenericKerbals
+		{
+			excludedHeads = 
+			excludedSuits = 
+			femaleHeads = 
+			femaleSuits = 
+			eyelessHeads = 
+		}
+		ClassSuits
+		{
+		}
+		CabinSuits
+		{
+		}
+	}
+}
+UrlConfig
+{
+	name = ACTIVE_TEXTURE_MANAGER_CONFIG
+	type = ACTIVE_TEXTURE_MANAGER_CONFIG
+	parentUrl = TextureReplacer/ATM
+	url = TextureReplacer/ATM/ACTIVE_TEXTURE_MANAGER_CONFIG
+	ACTIVE_TEXTURE_MANAGER_CONFIG
+	{
+		folder = TextureReplacer
+		enabled = true
+		OVERRIDES
+		{
+			TextureReplacer/EnvMap/.*
+			{
+				make_not_readable = false
+				mipmaps = false
+				compress = false
+				scale = 1
+				max_size = 0
+			}
+			TextureReplacer/Default/
+			{
+				mipmaps = false
+				scale = 1
+				max_size = 0
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Settings
+	type = Settings
+	parentUrl = TriggerTech/KerbalAlarmClock/settings
+	url = TriggerTech/KerbalAlarmClock/settings/Settings
+	Settings
+	{
+		WindowVisible = False
+		WindowMinimized = False
+		WindowVisible_SpaceCenter = False
+		WindowMinimized_SpaceCenter = False
+		WindowVisible_TrackingStation = False
+		WindowMinimized_TrackingStation = False
+		WindowVisible_EditorVAB = False
+		WindowMinimized_EditorVAB = False
+		WindowVisible_EditorSPH = False
+		WindowMinimized_EditorSPH = False
+		WindowChildPosBelow = False
+		IconShow_SpaceCenter = True
+		IconShow_TrackingStation = True
+		IconShow_EditorVAB = True
+		IconShow_EditorSPH = True
+		WindowMinimizedType = NextAlarm
+		F11KeystrokeDisabled = True
+		KillWarpOnThrottleCutOffKeystroke = True
+		AlarmsVolumeFromUI = True
+		AlarmsVolume = 0.25
+		SelectedSkin = Default
+		BehaviourChecksPerSec = 10
+		BehaviourChecksPerSec_Custom = 40
+		WarpTransitions_Instant = False
+		WarpTransitions_UpdateSecs = 5
+		WarpTransitions_UTToRateTimesOneTenths = 15
+		WarpTransitions_ShowIndicatorSecs = 4
+		WarpToEnabled = True
+		WarpToHideWhenManGizmoShown = True
+		WarpToTipsHidden = False
+		WarpToTSIconDelayMSecs = 200
+		WarpToDupeProximitySecs = 60
+		WarpToRequiresConfirm = False
+		WarpToAddMarginAp = False
+		WarpToAddMarginPe = False
+		WarpToAddMarginAN = False
+		WarpToAddMarginDN = False
+		WarpToAddMarginSOI = True
+		WarpToAddMarginManNode = True
+		WarpToLimitMaxWarp = False
+		WarpToMaxWarp = 10000
+		AllowJumpFromViewOnly = True
+		AllowJumpToAsteroid = True
+		BackupSaves = True
+		CancelFlightModeJumpOnBackupFailure = False
+		BackupSavesToKeep = 20
+		AlarmListMaxAlarms = 10
+		ConfirmAlarmDeletes = False
+		AlarmDefaultMargin = 60
+		AlarmPosition = 1
+		HideOnPause = True
+		TimeFormat = KSPString
+		DateTimeFormat = KSPFormatWithSecs
+		TimeFormatConverted = True
+		ShowTooltips = True
+		ShowEarthTime = False
+		AlarmXferRecalc = True
+		AlarmXferRecalcThreshold = 180
+		AlarmXferDisplayList = False
+		XferModelLoadData = True
+		XferModelDataLoaded = True
+		XferUseModelData = False
+		AlarmNodeRecalc = False
+		AlarmNodeRecalcThreshold = 180
+		AlarmAddSOIAuto = False
+		AlarmAddSOIAutoThreshold = 180
+		AlarmAutoSOIMargin = 900
+		AlarmAddSOIAuto_ExcludeEVA = True
+		AlarmAddSOIAuto_ExcludeDebris = True
+		AlarmSOIRecalc = False
+		AlarmSOIRecalcThreshold = 180
+		AlarmAddManAuto = False
+		AlarmAddManAuto_andRemove = False
+		AlarmAddManAutoMargin = 180
+		AlarmAddManAutoThreshold = 180
+		DefaultKERMargin = Half
+		AlarmAddManQuickMargin = 180
+		AlarmAddSOIQuickMargin = 180
+		AlarmAddNodeQuickMargin = 30
+		AlarmOnContractExpireMargin = 3600
+		AlarmOnContractDeadlineMargin = 86400
+		AlarmAddContractAutoOffered = None
+		AlarmAddContractAutoActive = None
+		ContractDeadlineDelete = True
+		ContractExpireDelete = True
+		ContractDeadlineDontCreateInsideMargin = True
+		ContractExpireDontCreateInsideMargin = True
+		AlarmCrewDefaultStoreNode = False
+		LoadManNode = 
+		LoadVesselTarget = 
+		ButtonStyleChosen = Launcher
+		ClickThroughProtect_KSC = True
+		ClickThroughProtect_Tracking = True
+		ClickThroughProtect_Editor = True
+		ClickThroughProtect_Flight = True
+		SelectedCalendar = KSPStock
+		EarthEpoch = 1951-01-01
+		ShowCalendarToggle = False
+		RSSShowCalendarToggled = False
+		AppLauncherSetTrueTimeOut = 6
+		DailyVersionCheck = True
+		VersionCheckDate_AttemptStored = 2015-07-02
+		VersionCheckDate_SuccessStored = 2015-07-02
+		VersionWeb = 3.4.0.0
+		WindowPositionStored
+		{
+			x = 3
+			y = 55
+			width = 340
+			height = 45
+		}
+		WindowPos_SpaceCenterStored
+		{
+			x = 3
+			y = 36
+			width = 340
+			height = 45
+		}
+		WindowPos_TrackingStationStored
+		{
+			x = 196
+			y = 45
+			width = 340
+			height = 45
+		}
+		WindowPos_EditorVABStored
+		{
+			x = 270
+			y = 45
+			width = 340
+			height = 45
+		}
+		WindowPos_EditorSPHStored
+		{
+			x = 270
+			y = 45
+			width = 340
+			height = 45
+		}
+		AlarmSounds
+		{
+			Item
+			{
+				Name = Raw
+				Enabled = False
+				RepeatCount = 3
+				SoundName = Alarm1
+				Types
+				{
+					Item = Raw
+				}
+			}
+			Item
+			{
+				Name = Manuever
+				Enabled = False
+				RepeatCount = 3
+				SoundName = 
+				Types
+				{
+					Item = Maneuver
+					Item = ManeuverAuto
+				}
+			}
+			Item
+			{
+				Name = AP/Pe
+				Enabled = False
+				RepeatCount = 3
+				SoundName = 
+				Types
+				{
+					Item = Apoapsis
+					Item = Periapsis
+				}
+			}
+			Item
+			{
+				Name = AN/DN
+				Enabled = False
+				RepeatCount = 3
+				SoundName = 
+				Types
+				{
+					Item = AscendingNode
+					Item = DescendingNode
+				}
+			}
+			Item
+			{
+				Name = Distance
+				Enabled = False
+				RepeatCount = 3
+				SoundName = 
+				Types
+				{
+					Item = Closest
+					Item = Distance
+				}
+			}
+			Item
+			{
+				Name = Rendezvous
+				Enabled = False
+				RepeatCount = 3
+				SoundName = 
+				Types
+				{
+					Item = LaunchRendevous
+				}
+			}
+			Item
+			{
+				Name = SOI
+				Enabled = False
+				RepeatCount = 3
+				SoundName = 
+				Types
+				{
+					Item = SOIChange
+					Item = SOIChangeAuto
+				}
+			}
+			Item
+			{
+				Name = Transfer
+				Enabled = False
+				RepeatCount = 3
+				SoundName = 
+				Types
+				{
+					Item = Transfer
+					Item = TransferModelled
+				}
+			}
+			Item
+			{
+				Name = Contract
+				Enabled = False
+				RepeatCount = 3
+				SoundName = 
+				Types
+				{
+					Item = Contract
+					Item = ContractAuto
+				}
+			}
+			Item
+			{
+				Name = Crew
+				Enabled = False
+				RepeatCount = 3
+				SoundName = 
+				Types
+				{
+					Item = Crew
+				}
+			}
+			Item
+			{
+				Name = Earth
+				Enabled = True
+				RepeatCount = 2
+				SoundName = Rooster
+				Types
+				{
+					Item = EarthTime
+				}
+			}
+		}
+		AlarmDefaultAction
+		{
+			Warp = KillWarp
+			Message = Yes
+			DeleteWhenDone = False
+			PlaySound = False
+		}
+		AlarmAddManAuto_Action
+		{
+			Warp = KillWarp
+			Message = Yes
+			DeleteWhenDone = False
+			PlaySound = False
+		}
+		AlarmAddManQuickAction
+		{
+			Warp = KillWarp
+			Message = Yes
+			DeleteWhenDone = False
+			PlaySound = False
+		}
+		AlarmAddSOIQuickAction
+		{
+			Warp = KillWarp
+			Message = Yes
+			DeleteWhenDone = False
+			PlaySound = False
+		}
+		AlarmAddNodeQuickAction
+		{
+			Warp = KillWarp
+			Message = Yes
+			DeleteWhenDone = False
+			PlaySound = False
+		}
+		AlarmOnContractExpire_Action
+		{
+			Warp = KillWarp
+			Message = Yes
+			DeleteWhenDone = False
+			PlaySound = False
+		}
+		AlarmOnContractDeadline_Action
+		{
+			Warp = KillWarp
+			Message = Yes
+			DeleteWhenDone = False
+			PlaySound = False
+		}
+		AlarmOnSOIChange_Action
+		{
+			Warp = KillWarp
+			Message = Yes
+			DeleteWhenDone = False
+			PlaySound = False
+		}
+	}
+}
+UrlConfig
+{
+	name = Settings
+	type = Settings
+	parentUrl = TriggerTech/KSPAlternateResourcePanel/settings
+	url = TriggerTech/KSPAlternateResourcePanel/settings/Settings
+	Settings
+	{
+		vectButtonPos = 1195,0,0
+		ToggleOn = True
+		DisableHover = False
+		LockLocation = True
+		WindowPosUpdatedv24 = False
+		ButtonPosUpdatedv24 = False
+		SpacerPadding = 0
+		HideEmptyResources = False
+		HideFullResources = False
+		HideAfter = 2
+		ShowRates = True
+		ShowRatesForParts = True
+		RateDisplayType = Default
+		RatesUseUT = True
+		SplitLastStage = True
+		StageBarOnRight = True
+		AlarmsEnabled = True
+		AlarmsWarningSound = _DefaultWarning
+		AlarmsWarningRepeats = 2
+		AlarmsAlertSound = _DefaultAlert
+		AlarmsAlertRepeats = 4
+		AlarmsVolumeFromUI = True
+		AlarmsVolume = 0.25
+		StagingEnabled = False
+		StagingEnabledInMapView = False
+		StagingEnabledSpaceInMapView = False
+		AutoStagingEnabled = False
+		AutoStagingDelayInTenths = 5
+		SelectedSkin = Unity
+		UseBlizzyToolbarIfAvailable = False
+		ButtonStyleChosen = Launcher
+		AppLauncherMutuallyExclusive = True
+		ReplaceStockAppTimeOut = 20
+		AppLauncherSetTrueTimeOut = 6
+		DailyVersionCheck = True
+		VersionCheckDate_AttemptStored = 2015-07-02
+		VersionCheckDate_SuccessStored = 2015-07-02
+		ShowWindowOnResourceMonitor = True
+		VersionWeb = 2.7.2.0
+		WindowPositionStored
+		{
+			x = 1260
+			y = 17
+			width = 341
+			height = 72
+		}
+		lstIconOrder
+		{
+			Item = Player
+			Item = Mod
+			Item = KSPARP
+		}
+		ResourcesStorage
+		{
+			Item
+			{
+				id = 1576437329
+				name = ElectricCharge
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 34
+				name = 
+				IsSeparator = True
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 374119730
+				name = LiquidFuel
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = -1823983486
+				name = Oxidizer
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 35
+				name = 
+				IsSeparator = True
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 2001413032
+				name = MonoPropellant
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = -792463147
+				name = EVA Propellant
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 36
+				name = 
+				IsSeparator = True
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 650317537
+				name = SolidFuel
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 45
+				name = 
+				IsSeparator = True
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 466598945
+				name = Ablator
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 61
+				name = 
+				IsSeparator = True
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 79554
+				name = Ore
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 28
+				name = 
+				IsSeparator = True
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = -1909417378
+				name = IntakeAir
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 1447111193
+				name = XenonGas
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
 		}
 	}
 }
