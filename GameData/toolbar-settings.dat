@@ -14,5 +14,47 @@ toolbars
 			buttonOrder = 
 			visibleButtons = 
 		}
+		toolbar_111464761
+		{
+			x = 300
+			y = 300
+			width = 250
+			height = 0
+			autoHide = False
+			drawBorder = True
+			useKSPSkin = False
+			buttonOrder = 
+			visibleButtons = 
+		}
+	}
+	EDITOR
+	{
+		toolbar_972013029
+		{
+			x = 448
+			y = 46
+			width = 250
+			height = 38
+			autoHide = False
+			drawBorder = True
+			useKSPSkin = False
+			buttonOrder = 
+			visibleButtons = MechJeb2.Custom_Info_Window
+		}
+	}
+	SPACECENTER
+	{
+		toolbar_1832997051
+		{
+			x = 300
+			y = 300
+			width = 250
+			height = 38
+			autoHide = False
+			drawBorder = True
+			useKSPSkin = False
+			buttonOrder = 
+			visibleButtons = 
+		}
 	}
 }
