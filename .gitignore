@@ -4,7 +4,8 @@ readme.txt
 MiniAVC.log
 KSP_Data/*
 Ships/*
-saves/*
+saves/scenarios/*
+saves/training/*
 GameData/Squad/*
 GameData/PlanetShine/Plugins/PlanetShine.log
 GameData/MechJeb2/Plugins/MechJeb2.log

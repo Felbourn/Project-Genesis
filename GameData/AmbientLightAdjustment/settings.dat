@@ -1,0 +1,13 @@
+ambience
+{
+	setting
+	{
+		useDefaultAmbience = False
+		level = 0.5053192
+	}
+	setting
+	{
+		useDefaultAmbience = True
+		level = 0.2490824
+	}
+}

@@ -26,6 +26,18 @@ toolbars
 			buttonOrder = 
 			visibleButtons = 
 		}
+		toolbar_1832997051
+		{
+			x = 300
+			y = 300
+			width = 250
+			height = 38
+			autoHide = False
+			drawBorder = True
+			useKSPSkin = False
+			buttonOrder = 
+			visibleButtons = 
+		}
 	}
 	EDITOR
 	{
@@ -39,22 +51,22 @@ toolbars
 			drawBorder = True
 			useKSPSkin = False
 			buttonOrder = 
-			visibleButtons = MechJeb2.Custom_Info_Window
+			visibleButtons = MechJeb2.Custom_Info_Window,AmbientLightAdjustment.adjustLevels
 		}
 	}
 	SPACECENTER
 	{
 		toolbar_1832997051
 		{
-			x = 300
-			y = 300
+			x = -3
+			y = 1
 			width = 250
 			height = 38
 			autoHide = False
 			drawBorder = True
 			useKSPSkin = False
 			buttonOrder = 
-			visibleButtons = 
+			visibleButtons = AmbientLightAdjustment.adjustLevels
 		}
 	}
 }
