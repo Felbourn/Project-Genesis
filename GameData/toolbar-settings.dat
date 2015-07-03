@@ -28,15 +28,15 @@ toolbars
 		}
 		toolbar_1832997051
 		{
-			x = 300
-			y = 300
+			x = -3
+			y = 1
 			width = 250
 			height = 38
 			autoHide = False
 			drawBorder = True
 			useKSPSkin = False
 			buttonOrder = 
-			visibleButtons = 
+			visibleButtons = AmbientLightAdjustment.adjustLevels
 		}
 	}
 	EDITOR
@@ -67,6 +67,33 @@ toolbars
 			useKSPSkin = False
 			buttonOrder = 
 			visibleButtons = AmbientLightAdjustment.adjustLevels
+		}
+	}
+	FLIGHT
+	{
+		toolbar_416494297
+		{
+			x = 156
+			y = -3
+			width = 250
+			height = 38
+			autoHide = False
+			drawBorder = False
+			useKSPSkin = False
+			buttonOrder = 
+			visibleButtons = AmbientLightAdjustment.adjustLevels,PlanetShine.Gui
+		}
+		toolbar_1190476479
+		{
+			x = 247
+			y = -3
+			width = 250
+			height = 38
+			autoHide = False
+			drawBorder = False
+			useKSPSkin = False
+			buttonOrder = __TOOLBAR_INTERNAL.configureVisibleButtons,MechJeb2.Smart_A_S_S_,MechJeb2.Maneuver_Planner,MechJeb2.Rendezvous_Planner
+			visibleButtons = MechJeb2.Smart_A_S_S_,MechJeb2.Rendezvous_Planner,MechJeb2.Maneuver_Planner
 		}
 	}
 }

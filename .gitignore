@@ -6,6 +6,8 @@ KSP_Data/*
 Ships/*
 saves/scenarios/*
 saves/training/*
+thumbs/*
 GameData/Squad/*
 GameData/PlanetShine/Plugins/PlanetShine.log
 GameData/MechJeb2/Plugins/MechJeb2.log
+GameData/MechJeb2/Plugins/PluginData/MechJeb2/*.cfg
