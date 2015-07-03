@@ -2,7 +2,8 @@ KSP.exe
 KSP.log
 readme.txt
 MiniAVC.log
-GameData/Squad/*
 KSP_Data/*
 Ships/*
 saves/*
+GameData/Squad/*
+GameData/PlanetShine/Plugins/PlanetShine.log
