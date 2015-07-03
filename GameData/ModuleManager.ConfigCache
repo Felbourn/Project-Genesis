@@ -1,4 +1,4 @@
-patchedNodeCount = 3073
+patchedNodeCount = 3175
 catEatenCount = 0
 UrlConfig
 {
@@ -1714,6 +1714,670 @@ UrlConfig
 		updateFrequency = 2
 		quality = 3
 		stockToolbarEnabled = False
+	}
+}
+UrlConfig
+{
+	name = RemoteTechSettings
+	type = RemoteTechSettings
+	parentUrl = RemoteTech/RemoteTech_Settings
+	url = RemoteTech/RemoteTech_Settings/RemoteTechSettings
+	RemoteTechSettings
+	{
+		ConsumptionMultiplier = 1
+		RangeMultiplier = 1
+		ActiveVesselGuid = 35b89a0d664c43c6bec8d0840afc97b2
+		SpeedOfLight = 3E+08
+		MapFilter = Omni, Dish, Path
+		EnableSignalDelay = False
+		RangeModelType = Root
+		MultipleAntennaMultiplier = 0
+		ThrottleTimeWarp = True
+		HideGroundStationsBehindBody = False
+		DishConnectionColor = 0.9960784,0.7019608,0.03137255,1
+		OmniConnectionColor = 0.5529412,0.5176471,0.4078431,1
+		ActiveConnectionColor = 0.6588235,1,0.01568628,1
+		GroundStations
+		{
+			STATION
+			{
+				Guid = 5105f5a9-d628-41c6-ad4b-21154e8fc488
+				Name = Mission Control
+				Latitude = -0.131331503391266
+				Longitude = -74.594841003418
+				Height = 75
+				Body = 1
+				MarkColor = 0.996078,0,0,1
+				Antennas
+				{
+					ANTENNA
+					{
+						Omni = 1000000000
+					}
+				}
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = RTPassiveAntennaTech
+	type = PART
+	parentUrl = RemoteTech/RemoteTech_Tech_Node
+	url = RemoteTech/RemoteTech_Tech_Node/RTPassiveAntennaTech
+	PART
+	{
+		name = RTPassiveAntennaTech
+		module = Part
+		author = Starstrider42 (config), NovaSilisko (model)
+		TechRequired = unmannedTech
+		entryCost = 0
+		cost = 0
+		category = none
+		title = Probe Core Upgrade
+		description = Allows RemoteTech probe cores to contact ships within 3 km without the need for a dedicated antenna.
+		MODEL
+		{
+			model = VenStockRevamp/Squad/Parts/Command/ProbeCores/StayP
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+	}
+}
+UrlConfig
+{
+	name = RTGigaDish1
+	type = PART
+	parentUrl = RemoteTech/Parts/GigaDish1/part
+	url = RemoteTech/Parts/GigaDish1/part/RTGigaDish1
+	PART
+	{
+		name = RTGigaDish1
+		module = Part
+		author = JDP
+		mesh = model.mu
+		scale = 0.1
+		node_stack_bottom = 0, 0, 0, 0.0, -1.0, 0.0
+		node_attach = 0, 0, 0, 0.0, -1.0, 0.0, 1
+		entryCost = 38500
+		cost = 11000
+		category = Science
+		subcategory = 0
+		title = Reflectron GX-128
+		manufacturer = Parabolic Industries
+		description = A massive medium-interplanetary class dish. Wherever you are in the Kerbol system, you'll be able to stay in contact with this.
+		attachRules = 1,1,1,0,0
+		mass = 0.5
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		angularDrag = 2
+		crashTolerance = 12
+		maxTemp = 2900
+		TechRequired = advScienceTech
+		MODULE
+		{
+			name = ModuleAnimateGeneric
+			animationName = Default Take
+			isOneShot = false
+			startEventGUIName = Extend
+			endEventGUIName = Retract
+			actionGUIName = Toggle Antenna
+			allowManualControl = false
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = ModuleRTAntenna
+			Mode0DishRange = 0
+			Mode1DishRange = 400000000000
+			EnergyCost = 2.80
+			MaxQ = 6000
+			DishAngle = 0.005
+			DeployFxModules = 0
+			TRANSMITTER
+			{
+				PacketInterval = 0.3
+				PacketSize = 2
+				PacketResourceCost = 15.0
+			}
+		}
+		MODULE
+		{
+			name = ModuleSPUPassive
+		}
+	}
+}
+UrlConfig
+{
+	name = RTGigaDish2
+	type = PART
+	parentUrl = RemoteTech/Parts/GigaDish2/part
+	url = RemoteTech/Parts/GigaDish2/part/RTGigaDish2
+	PART
+	{
+		name = RTGigaDish2
+		module = Part
+		author = Carmics
+		mesh = model.mu
+		scale = 0.1
+		specPower = 0.1
+		rimFalloff = 3
+		alphaCutoff = 0.5
+		node_stack_bottom = 0, 0, 0, 0.0, -1.0, 0.0
+		node_attach = 0, 0, 0, 0.0, -1.0, 0.0, 1
+		entryCost = 33000
+		cost = 9500
+		category = Science
+		subcategory = 0
+		title = CommTech-1
+		manufacturer = AIES Aerospace
+		description = A powerful high-gain fixed dish. It can reach almost anything in the solar system.
+		attachRules = 1,1,1,0,0
+		mass = 1
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		angularDrag = 2
+		crashTolerance = 12
+		maxTemp = 2900
+		TechRequired = specializedElectrics
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = ModuleRTAntenna
+			Mode0DishRange = 0
+			Mode1DishRange = 350000000000
+			EnergyCost = 2.60
+			DishAngle = 0.006
+			TRANSMITTER
+			{
+				PacketInterval = 0.3
+				PacketSize = 2
+				PacketResourceCost = 15.0
+			}
+		}
+		MODULE
+		{
+			name = ModuleSPUPassive
+		}
+	}
+}
+UrlConfig
+{
+	name = RTLongAntenna2
+	type = PART
+	parentUrl = RemoteTech/Parts/LongAntenna2/part
+	url = RemoteTech/Parts/LongAntenna2/part/RTLongAntenna2
+	PART
+	{
+		name = RTLongAntenna2
+		module = Part
+		author = NovaSilisko
+		mesh = model.mu
+		scale = 1
+		rescaleFactor = 1
+		node_stack_bottom = 0.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0
+		node_attach = 0.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0
+		entryCost = 1500
+		cost = 600
+		category = Science
+		subcategory = 0
+		title = Communotron 32
+		manufacturer = Ionic Protonic Electronics
+		description = The Communotron 32 is a longer range version of the last generation, now with even more spying potential. If you don't believe us, ask the Kerbal Security Agency.
+		attachRules = 1,1,0,0,1
+		mass = 0.01
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		angularDrag = 2
+		crashTolerance = 7
+		maxTemp = 3000
+		TechRequired = largeElectrics
+		MODEL
+		{
+			model = VenStockRevamp/Squad/Parts/ScienceParts/commsDish16/model
+			position = 0.0, 0.0, 0.0
+			scale = 1.0, 2.0, 1.0
+			rotation = 0.0, 0.0, 0.0
+		}
+		MODULE
+		{
+			name = ModuleAnimateGeneric
+			animationName = antenna
+			isOneShot = false
+			startEventGUIName = Extend
+			endEventGUIName = Retract
+			actionGUIName = Toggle Antenna
+			allowManualControl = false
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = ModuleRTAntenna
+			Mode0OmniRange = 0
+			Mode1OmniRange = 5000000
+			MaxQ = 3000
+			EnergyCost = 0.6
+			DeployFxModules = 0
+			TRANSMITTER
+			{
+				PacketInterval = 0.3
+				PacketSize = 2
+				PacketResourceCost = 15.0
+			}
+		}
+		MODULE
+		{
+			name = ModuleSPUPassive
+		}
+	}
+}
+UrlConfig
+{
+	name = RTLongAntenna3
+	type = PART
+	parentUrl = RemoteTech/Parts/LongAntenna3/part
+	url = RemoteTech/Parts/LongAntenna3/part/RTLongAntenna3
+	PART
+	{
+		name = RTLongAntenna3
+		module = Part
+		author = Carmics
+		mesh = model.mu
+		scale = 1
+		specPower = 0.1
+		rimFalloff = 3
+		alphaCutoff = 0.5
+		node_attach = 0.0, 0.0, 0.0, 0.0, -1.0, 0.0
+		entryCost = 1000
+		cost = 400
+		category = Science
+		subcategory = 0
+		title = CommTech EXP-VR-2T
+		manufacturer = AIES Aerospace
+		description = This effective and compact folding antenna is highly recommended for your research missions.
+		attachRules = 0,1,0,0,1
+		mass = 0.02
+		dragModelType = default
+		maximum_drag = 0.0
+		minimum_drag = 0.0
+		angularDrag = 0
+		crashTolerance = 8
+		maxTemp = 1200
+		TechRequired = specializedElectrics
+		MODULE
+		{
+			name = ModuleAnimateGeneric
+			animationName = EXTantenna
+			isOneShot = false
+			startEventGUIName = Extend
+			endEventGUIName = Retract
+			actionGUIName = Toggle Antenna
+			allowManualControl = false
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = ModuleRTAntenna
+			Mode0OmniRange = 0
+			Mode1OmniRange = 3000000
+			MaxQ = 6000
+			EnergyCost = 0.18
+			DeployFxModules = 0
+			TRANSMITTER
+			{
+				PacketInterval = 0.3
+				PacketSize = 2
+				PacketResourceCost = 15.0
+			}
+		}
+		MODULE
+		{
+			name = ModuleSPUPassive
+		}
+	}
+}
+UrlConfig
+{
+	name = RTLongDish1
+	type = PART
+	parentUrl = RemoteTech/Parts/LongDish1/part
+	url = RemoteTech/Parts/LongDish1/part/RTLongDish1
+	PART
+	{
+		name = RTLongDish1
+		module = Part
+		author = JDP | rkman
+		mesh = model.mu
+		scale = 0.1
+		specPower = 0.1
+		rimFalloff = 3
+		alphaCutoff = 0.5
+		node_stack_bottom = 0.0, -0.2, 0.0, 0.0, -1.0, 0.0, 0
+		node_attach = 0.0, -0.2, 0.0, 0.0, -1.0, 0.0
+		entryCost = 6000
+		cost = 2000
+		category = -1
+		subcategory = 0
+		title = Reflectron LL-5
+		manufacturer = Parabolic Industries
+		description = This dish will carry your signal out as far as Duna. But don't count on it working further out. Warranty void if used as a salad bowl.
+		attachRules = 1,1,0,0,1
+		mass = 1.0
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		angularDrag = 2
+		crashTolerance = 8
+		maxTemp = 1200
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = ModuleRTAntenna
+			Mode0DishRange = 0
+			Mode1DishRange = 60000000000
+			EnergyCost = 0.93
+			DishAngle = 0.04
+			TRANSMITTER
+			{
+				PacketInterval = 0.3
+				PacketSize = 2
+				PacketResourceCost = 15.0
+			}
+		}
+		MODULE
+		{
+			name = ModuleSPUPassive
+		}
+	}
+}
+UrlConfig
+{
+	name = RTLongDish2
+	type = PART
+	parentUrl = RemoteTech/Parts/LongDish2/part
+	url = RemoteTech/Parts/LongDish2/part/RTLongDish2
+	PART
+	{
+		name = RTLongDish2
+		module = Part
+		author = kommit
+		mesh = newll5.mu
+		scale = 0.1
+		specPower = 0.1
+		rimFalloff = 3
+		alphaCutoff = 0.5
+		node_stack_bottom = 0.0, -0.2, 0.0, 0.0, -1.0, 0.0, 0
+		node_attach = 0.0, -0.75, 0.0, 0.0, -1.0, 0.0
+		entryCost = 6000
+		cost = 2000
+		category = Science
+		subcategory = 0
+		title = Reflectron KR-14
+		manufacturer = Parabolic Industries
+		description = Replacing the LL-5, this dish will carry your signal beyond Duna looking fancier than ever.
+		attachRules = 1,1,0,0,1
+		mass = 1.0
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		angularDrag = 2
+		crashTolerance = 8
+		maxTemp = 1200
+		TechRequired = largeElectrics
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = ModuleRTAntenna
+			Mode0DishRange = 0
+			Mode1DishRange = 60000000000
+			EnergyCost = 0.93
+			DishAngle = 0.04
+			TRANSMITTER
+			{
+				PacketInterval = 0.3
+				PacketSize = 2
+				PacketResourceCost = 15.0
+			}
+		}
+		MODULE
+		{
+			name = ModuleSPUPassive
+		}
+	}
+}
+UrlConfig
+{
+	name = RTShortAntenna1
+	type = PART
+	parentUrl = RemoteTech/Parts/ShortAntenna1/part
+	url = RemoteTech/Parts/ShortAntenna1/part/RTShortAntenna1
+	PART
+	{
+		name = RTShortAntenna1
+		module = Part
+		author = JDP | rkman
+		mesh = model.mu
+		scale = 0.1
+		specPower = 0.1
+		rimFalloff = 3
+		alphaCutoff = 0.5
+		node_attach = 0.46, 0.0, 0.0, 1.0, 0.0, 0.0
+		entryCost = 200
+		cost = 60
+		category = Science
+		subcategory = 0
+		title = Reflectron DP-10
+		manufacturer = Parabolic Industries
+		description = When moving this antenna to a test site, engineers always forgot to turn it on. Frustrated with having to walk back and forth, they had this antenna be active by default.
+		attachRules = 0,1,0,0,0
+		mass = 0.005
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		angularDrag = 2
+		crashTolerance = 8
+		maxTemp = 1200
+		TechRequired = flightControl
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = ModuleRTAntenna
+			IsRTActive = true
+			Mode0OmniRange = 0
+			Mode1OmniRange = 500000
+			EnergyCost = 0.01
+			TRANSMITTER
+			{
+				PacketInterval = 0.3
+				PacketSize = 2
+				PacketResourceCost = 15.0
+			}
+		}
+		MODULE
+		{
+			name = ModuleSPUPassive
+		}
+	}
+}
+UrlConfig
+{
+	name = RTShortDish1
+	type = PART
+	parentUrl = RemoteTech/Parts/ShortDish1/part
+	url = RemoteTech/Parts/ShortDish1/part/RTShortDish1
+	PART
+	{
+		name = RTShortDish1
+		module = Part
+		author = JDP
+		mesh = model.mu
+		scale = 0.1
+		specPower = 0.1
+		rimFalloff = 3
+		alphaCutoff = 0.5
+		node_stack_bottom = 0.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0
+		node_attach = 0.0, 0.0, 0.0, 0.0, -1.0, 0.0
+		entryCost = 2000
+		cost = 800
+		category = -1
+		subcategory = 0
+		title = Reflectron SS-5
+		manufacturer = Parabolic Industries.
+		description = If you want to break the surly bonds of Kerbin, you will need some serious range. What once was considered a mere garbage can lid is now the cornerstone of Münar communication.
+		attachRules = 1,1,0,0,1
+		mass = 0.5
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		angularDrag = 2
+		crashTolerance = 8
+		maxTemp = 1200
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = ModuleRTAntenna
+			Mode0DishRange = 0
+			Mode1DishRange = 90000000
+			EnergyCost = 0.82
+			DishAngle = 25.0
+			TRANSMITTER
+			{
+				PacketInterval = 0.3
+				PacketSize = 2
+				PacketResourceCost = 15.0
+			}
+		}
+		MODULE
+		{
+			name = ModuleSPUPassive
+		}
+	}
+}
+UrlConfig
+{
+	name = RTShortDish2
+	type = PART
+	parentUrl = RemoteTech/Parts/ShortDish2/part
+	url = RemoteTech/Parts/ShortDish2/part/RTShortDish2
+	PART
+	{
+		name = RTShortDish2
+		module = Part
+		author = kommit
+		mesh = newss5.mu
+		scale = 0.1
+		specPower = 0.1
+		rimFalloff = 3
+		alphaCutoff = 0.5
+		node_stack_bottom = 0.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0
+		node_attach = 0.0, -0.225, 0.0, 0.0, -1.0, 0.0
+		entryCost = 2000
+		cost = 800
+		category = Science
+		subcategory = 0
+		title = Reflectron KR-7
+		manufacturer = Parabolic Industries.
+		description = Locals complained about their missing garbage lids, so our engineers quickly developed an alternative. Matching performance with the SS-5 for only double the cost!
+		attachRules = 1,1,0,0,1
+		mass = 0.5
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		angularDrag = 2
+		crashTolerance = 8
+		maxTemp = 1200
+		TechRequired = electrics
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = ModuleRTAntenna
+			Mode0DishRange = 0
+			Mode1DishRange = 90000000
+			EnergyCost = 0.82
+			DishAngle = 25.0
+			TRANSMITTER
+			{
+				PacketInterval = 0.3
+				PacketSize = 2
+				PacketResourceCost = 15.0
+			}
+		}
+		MODULE
+		{
+			name = ModuleSPUPassive
+		}
 	}
 }
 UrlConfig
@@ -8953,6 +9617,22 @@ UrlConfig
 		}
 		MODULE
 		{
+			name = ModuleSPU
+		}
+		MODULE
+		{
+			name = ModuleRTAntennaPassive
+			TechRequired = unmannedTech
+			OmniRange = 3000
+			TRANSMITTER
+			{
+				PacketInterval = 0.3
+				PacketSize = 2
+				PacketResourceCost = 15.0
+			}
+		}
+		MODULE
+		{
 			name = MechJebCore
 			blacklist = MechJebModuleAscentAutopilot MechJebModuleAscentGuidance MechJebModuleAscentPathEditor MechJebModuleAttitudeAdjustment MechJebModuleDockingAutopilot MechJebModuleDockingGuidance MechJebModuleLandingAutopilot MechJebModuleLandingGuidance MechJebModuleLandingPredictions MechJebModuleNodeEditor MechJebModuleRendezvousAutopilot MechJebModuleRendezvousAutopilotWindow MechJebModuleRoverController MechJebModuleRoverWindow MechJebModuleSpaceplaneAutopilot MechJebModuleSpaceplaneGuidance MechJebModuleTranslatron MechJebModuleWarpHelper
 			RESOURCE
@@ -9285,6 +9965,22 @@ UrlConfig
 		}
 		MODULE
 		{
+			name = ModuleSPU
+		}
+		MODULE
+		{
+			name = ModuleRTAntennaPassive
+			TechRequired = unmannedTech
+			OmniRange = 3000
+			TRANSMITTER
+			{
+				PacketInterval = 0.3
+				PacketSize = 2
+				PacketResourceCost = 15.0
+			}
+		}
+		MODULE
+		{
 			name = MechJebCore
 			blacklist = MechJebModuleAscentAutopilot MechJebModuleAscentGuidance MechJebModuleAscentPathEditor MechJebModuleAttitudeAdjustment MechJebModuleDockingAutopilot MechJebModuleDockingGuidance MechJebModuleLandingAutopilot MechJebModuleLandingGuidance MechJebModuleLandingPredictions MechJebModuleNodeEditor MechJebModuleRendezvousAutopilot MechJebModuleRendezvousAutopilotWindow MechJebModuleRoverController MechJebModuleRoverWindow MechJebModuleSpaceplaneAutopilot MechJebModuleSpaceplaneGuidance MechJebModuleTranslatron MechJebModuleWarpHelper
 			RESOURCE
@@ -9373,6 +10069,22 @@ UrlConfig
 		MODEL
 		{
 			model = VenStockRevamp/Squad/Parts/Command/ProbeCores/HECS
+		}
+		MODULE
+		{
+			name = ModuleSPU
+		}
+		MODULE
+		{
+			name = ModuleRTAntennaPassive
+			TechRequired = unmannedTech
+			OmniRange = 3000
+			TRANSMITTER
+			{
+				PacketInterval = 0.3
+				PacketSize = 2
+				PacketResourceCost = 15.0
+			}
 		}
 		MODULE
 		{
@@ -9466,6 +10178,22 @@ UrlConfig
 		}
 		MODULE
 		{
+			name = ModuleSPU
+		}
+		MODULE
+		{
+			name = ModuleRTAntennaPassive
+			TechRequired = unmannedTech
+			OmniRange = 3000
+			TRANSMITTER
+			{
+				PacketInterval = 0.3
+				PacketSize = 2
+				PacketResourceCost = 15.0
+			}
+		}
+		MODULE
+		{
 			name = MechJebCore
 			blacklist = MechJebModuleAscentAutopilot MechJebModuleAscentGuidance MechJebModuleAscentPathEditor MechJebModuleAttitudeAdjustment MechJebModuleDockingAutopilot MechJebModuleDockingGuidance MechJebModuleLandingAutopilot MechJebModuleLandingGuidance MechJebModuleLandingPredictions MechJebModuleNodeEditor MechJebModuleRendezvousAutopilot MechJebModuleRendezvousAutopilotWindow MechJebModuleRoverController MechJebModuleRoverWindow MechJebModuleSpaceplaneAutopilot MechJebModuleSpaceplaneGuidance MechJebModuleTranslatron MechJebModuleWarpHelper
 			RESOURCE
@@ -9545,6 +10273,22 @@ UrlConfig
 		}
 		MODULE
 		{
+			name = ModuleSPU
+		}
+		MODULE
+		{
+			name = ModuleRTAntennaPassive
+			TechRequired = unmannedTech
+			OmniRange = 3000
+			TRANSMITTER
+			{
+				PacketInterval = 0.3
+				PacketSize = 2
+				PacketResourceCost = 15.0
+			}
+		}
+		MODULE
+		{
 			name = MechJebCore
 			blacklist = MechJebModuleAscentAutopilot MechJebModuleAscentGuidance MechJebModuleAscentPathEditor MechJebModuleAttitudeAdjustment MechJebModuleDockingAutopilot MechJebModuleDockingGuidance MechJebModuleLandingAutopilot MechJebModuleLandingGuidance MechJebModuleLandingPredictions MechJebModuleNodeEditor MechJebModuleRendezvousAutopilot MechJebModuleRendezvousAutopilotWindow MechJebModuleRoverController MechJebModuleRoverWindow MechJebModuleSpaceplaneAutopilot MechJebModuleSpaceplaneGuidance MechJebModuleTranslatron MechJebModuleWarpHelper
 			RESOURCE
@@ -9616,6 +10360,22 @@ UrlConfig
 			collisionSound = CollisionFX/Sounds/Bang1
 			scrapeSound = CollisionFX/Sounds/GroundSkid
 			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = ModuleSPU
+		}
+		MODULE
+		{
+			name = ModuleRTAntennaPassive
+			TechRequired = unmannedTech
+			OmniRange = 3000
+			TRANSMITTER
+			{
+				PacketInterval = 0.3
+				PacketSize = 2
+				PacketResourceCost = 15.0
+			}
 		}
 		MODULE
 		{
@@ -9710,6 +10470,24 @@ UrlConfig
 		}
 		MODULE
 		{
+			name = ModuleSPU
+			IsRTCommandStation = true
+			RTCommandMinCrew = 6
+		}
+		MODULE
+		{
+			name = ModuleRTAntennaPassive
+			TechRequired = unmannedTech
+			OmniRange = 3000
+			TRANSMITTER
+			{
+				PacketInterval = 0.3
+				PacketSize = 2
+				PacketResourceCost = 15.0
+			}
+		}
+		MODULE
+		{
 			name = MechJebCore
 			blacklist = MechJebModuleAscentAutopilot MechJebModuleAscentGuidance MechJebModuleAscentPathEditor MechJebModuleAttitudeAdjustment MechJebModuleDockingAutopilot MechJebModuleDockingGuidance MechJebModuleLandingAutopilot MechJebModuleLandingGuidance MechJebModuleLandingPredictions MechJebModuleNodeEditor MechJebModuleRendezvousAutopilot MechJebModuleRendezvousAutopilotWindow MechJebModuleRoverController MechJebModuleRoverWindow MechJebModuleSpaceplaneAutopilot MechJebModuleSpaceplaneGuidance MechJebModuleTranslatron MechJebModuleWarpHelper
 			RESOURCE
@@ -9801,6 +10579,22 @@ UrlConfig
 		}
 		MODULE
 		{
+			name = ModuleSPU
+		}
+		MODULE
+		{
+			name = ModuleRTAntennaPassive
+			TechRequired = unmannedTech
+			OmniRange = 3000
+			TRANSMITTER
+			{
+				PacketInterval = 0.3
+				PacketSize = 2
+				PacketResourceCost = 15.0
+			}
+		}
+		MODULE
+		{
 			name = MechJebCore
 			blacklist = MechJebModuleAscentAutopilot MechJebModuleAscentGuidance MechJebModuleAscentPathEditor MechJebModuleAttitudeAdjustment MechJebModuleDockingAutopilot MechJebModuleDockingGuidance MechJebModuleLandingAutopilot MechJebModuleLandingGuidance MechJebModuleLandingPredictions MechJebModuleNodeEditor MechJebModuleRendezvousAutopilot MechJebModuleRendezvousAutopilotWindow MechJebModuleRoverController MechJebModuleRoverWindow MechJebModuleSpaceplaneAutopilot MechJebModuleSpaceplaneGuidance MechJebModuleTranslatron MechJebModuleWarpHelper
 			RESOURCE
@@ -9871,6 +10665,22 @@ UrlConfig
 		MODEL
 		{
 			model = VenStockRevamp/Squad/Parts/Command/ProbeCores/StayP
+		}
+		MODULE
+		{
+			name = ModuleSPU
+		}
+		MODULE
+		{
+			name = ModuleRTAntennaPassive
+			TechRequired = unmannedTech
+			OmniRange = 3000
+			TRANSMITTER
+			{
+				PacketInterval = 0.3
+				PacketSize = 2
+				PacketResourceCost = 15.0
+			}
 		}
 		MODULE
 		{
@@ -24901,15 +25711,7 @@ UrlConfig
 			endEventGUIName = Retract
 			actionGUIName = Toggle Antenna
 			allowAnimationWhileShielded = False
-		}
-		MODULE
-		{
-			name = ModuleDataTransmitter
-			packetInterval = 0.10
-			packetSize = 2
-			packetResourceCost = 20.0
-			requiredResource = ElectricCharge
-			DeployFxModules = 0
+			allowManualControl = false
 		}
 		MODULE
 		{
@@ -24918,6 +25720,26 @@ UrlConfig
 			collisionSound = CollisionFX/Sounds/Bang1
 			scrapeSound = CollisionFX/Sounds/GroundSkid
 			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = ModuleRTAntenna
+			Mode0DishRange = 0
+			Mode1DishRange = 40000000000
+			EnergyCost = 0.93
+			MaxQ = 6000
+			DishAngle = 0.06
+			DeployFxModules = 0
+			TRANSMITTER
+			{
+				PacketInterval = 0.3
+				PacketSize = 2
+				PacketResourceCost = 15.0
+			}
+		}
+		MODULE
+		{
+			name = ModuleSPUPassive
 		}
 	}
 }
@@ -24961,6 +25783,7 @@ UrlConfig
 			endEventGUIName = Retract
 			actionGUIName = Toggle Antenna
 			allowAnimationWhileShielded = False
+			allowManualControl = false
 		}
 		MODULE
 		{
@@ -24973,21 +25796,32 @@ UrlConfig
 		}
 		MODULE
 		{
-			name = ModuleDataTransmitter
-			packetInterval = 0.35
-			packetSize = 2
-			packetResourceCost = 12.0
-			requiredResource = ElectricCharge
-			DeployFxModules = 0
-			ProgressFxModules = 1
-		}
-		MODULE
-		{
 			name = CollisionFX
 			scrapeSparks = true
 			collisionSound = CollisionFX/Sounds/Bang1
 			scrapeSound = CollisionFX/Sounds/GroundSkid
 			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = ModuleRTAntenna
+			Mode0DishRange = 0
+			Mode1DishRange = 50000000
+			EnergyCost = 0.82
+			MaxQ = 6000
+			DishAngle = 45.0
+			DeployFxModules = 0
+			ProgressFxModules = 1
+			TRANSMITTER
+			{
+				PacketInterval = 0.3
+				PacketSize = 2
+				PacketResourceCost = 15.0
+			}
+		}
+		MODULE
+		{
+			name = ModuleSPUPassive
 		}
 	}
 }
@@ -25033,15 +25867,7 @@ UrlConfig
 			endEventGUIName = Retract
 			actionGUIName = Toggle Antenna
 			allowAnimationWhileShielded = False
-		}
-		MODULE
-		{
-			name = ModuleDataTransmitter
-			packetInterval = 0.6
-			packetSize = 2
-			packetResourceCost = 12.0
-			requiredResource = ElectricCharge
-			DeployFxModules = 0
+			allowManualControl = false
 		}
 		MODULE
 		{
@@ -25054,6 +25880,25 @@ UrlConfig
 		MODEL
 		{
 			model = VenStockRevamp/Squad/Parts/ScienceParts/commsDish16/model
+		}
+		MODULE
+		{
+			name = ModuleRTAntenna
+			Mode0OmniRange = 0
+			Mode1OmniRange = 2500000
+			MaxQ = 6000
+			EnergyCost = 0.13
+			DeployFxModules = 0
+			TRANSMITTER
+			{
+				PacketInterval = 0.3
+				PacketSize = 2
+				PacketResourceCost = 15.0
+			}
+		}
+		MODULE
+		{
+			name = ModuleSPUPassive
 		}
 	}
 }
@@ -27101,6 +27946,11 @@ UrlConfig
 			collisionSound = CollisionFX/Sounds/Bang1
 			scrapeSound = CollisionFX/Sounds/GroundSkid
 			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = ModuleRTAntennaPassive
+			OmniRange = 5000
 		}
 	}
 }
@@ -41550,24 +42400,24 @@ UrlConfig
 		forceLegacyFemales = false
 		CustomKerbals
 		{
-			Jebediah Kerman = M Orange_Suit
-			Bill Kerman = M Orange_Suit
-			Bob Kerman = M Orange_Suit
-			Valentina Kerman = F Orange_Suit
+			Jebediah Kerman = M JebHead  Yellow_Trek
+			Bill Kerman = M BillHead Red_Trek
+			Bob Kerman = M BobHead  Blue_Trek
+			Valentina Kerman = F ValHead  Yellow_Trek
 		}
 		GenericKerbals
 		{
-			excludedHeads = 
-			excludedSuits = Green_Suit_Command_Informal Low_Tier_Cadet Blue_Suit_Medical Orange_Suit_Veteran
-			femaleHeads = Headf2 Headf1 Headf3 Headf4 Headf5
+			excludedHeads = JebHead BobHead BillHead ValHead
+			excludedSuits = 
+			femaleHeads = kerbalGirl1 kerbalGirl3 kerbalGirl4 kerbalGirl5 kerbalGirl6 kerbalGirl7 kerbalGirl8 kerbalGirl9
 			femaleSuits = 
 			eyelessHeads = 
 		}
 		ClassSuits
 		{
-			Pilot = Yellow_Suit_Command
-			Engineer = Red_Suit_EngineerSecurityComms
-			Scientist = Blue_Suit_Science
+			Pilot = Yellow_Trek
+			Engineer = Red_Trek
+			Scientist = Blue_Trek
 		}
 		CabinSuits
 		{

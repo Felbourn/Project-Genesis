@@ -195,4 +195,19 @@ toolbars
 			visibleButtons = AmbientLightAdjustment.adjustLevels,QuickGoToSC.QuickGoToSC,QuickGoToSPH.QuickGoToSPH,QuickGoToTS.QuickGoToTS,QuickGoToVAB.QuickGoToVAB,QuickHide.QuickHide
 		}
 	}
+	FLIGHTMAP
+	{
+		toolbar_783039483
+		{
+			x = 300
+			y = 300
+			width = 250
+			height = 38
+			autoHide = False
+			drawBorder = True
+			useKSPSkin = False
+			buttonOrder = 
+			visibleButtons = 
+		}
+	}
 }
