@@ -41705,8 +41705,8 @@ UrlConfig
 		RSSShowCalendarToggled = False
 		AppLauncherSetTrueTimeOut = 6
 		DailyVersionCheck = True
-		VersionCheckDate_AttemptStored = 2015-07-02
-		VersionCheckDate_SuccessStored = 2015-07-02
+		VersionCheckDate_AttemptStored = 2015-07-03
+		VersionCheckDate_SuccessStored = 2015-07-03
 		VersionWeb = 3.4.0.0
 		WindowPositionStored
 		{
@@ -41975,8 +41975,8 @@ UrlConfig
 		ReplaceStockAppTimeOut = 20
 		AppLauncherSetTrueTimeOut = 6
 		DailyVersionCheck = True
-		VersionCheckDate_AttemptStored = 2015-07-02
-		VersionCheckDate_SuccessStored = 2015-07-02
+		VersionCheckDate_AttemptStored = 2015-07-03
+		VersionCheckDate_SuccessStored = 2015-07-03
 		ShowWindowOnResourceMonitor = True
 		VersionWeb = 2.7.2.0
 		WindowPositionStored

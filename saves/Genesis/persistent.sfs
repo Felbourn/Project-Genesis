@@ -10,7 +10,7 @@ GAME
 	scene = 5
 	editor = None
 	flag = Squad/Flags/kerbin
-	launchID = 4
+	launchID = 5
 	PARAMETERS
 	{
 		preset = Normal
@@ -370,16 +370,15 @@ GAME
 	{
 		name = TRScenario
 		scene = 5
-		reflectionType = REAL
+		reflectionType = NONE
 		isHelmetRemovalEnabled = True
 		isAtmSuitEnabled = True
-		suitAssignment = RANDOM
 		Kerbals
 		{
-			Jebediah Kerman = GENERIC GENERIC
-			Bill Kerman = GENERIC GENERIC
-			Bob Kerman = GENERIC GENERIC
-			Valentina Kerman = GENERIC GENERIC
+			Jebediah Kerman = M Head3 GENERIC
+			Bill Kerman = M GENERIC GENERIC
+			Bob Kerman = M GENERIC GENERIC
+			Valentina Kerman = M GENERIC GENERIC
 		}
 		ClassSuits
 		{
@@ -388,7 +387,7 @@ GAME
 	FLIGHTSTATE
 	{
 		version = 1.0.4
-		UT = 29269.2346187694
+		UT = 29354.9946187713
 		activeVessel = 8
 		mapViewFiltering = -1026
 		VESSEL
@@ -1702,7 +1701,7 @@ GAME
 		}
 		VESSEL
 		{
-			pid = dc7b9de6ba244ba9b972ef94175f4a80
+			pid = f1ec9fb474f146f5a00a8610039fcef5
 			name = Untitled Space Craft
 			type = Lander
 			sit = PRELAUNCH
@@ -1710,40 +1709,40 @@ GAME
 			landedAt = LaunchPad
 			splashed = False
 			met = 0
-			lct = 29269.2346187694
+			lct = 29354.9946187713
 			root = 0
-			lat = -0.0972077870915427
-			lon = 285.442325290501
-			alt = 73.0626916800393
-			hgt = 0.6311386
-			nrm = 0.0007454146,0.9999997,5.283695E-09
-			rot = -0.7009887,-0.09221786,-0.09726541,0.7004642
-			CoM = 8.281796E-11,2.008431E-11,-1.187406E-08
+			lat = -0.0972077896752205
+			lon = 285.4423249216
+			alt = 73.0468366139103
+			hgt = 0.6311387
+			nrm = 0.0007456091,0.9999999,-5.136353E-08
+			rot = -0.7009888,-0.09221791,-0.09726538,0.7004643
+			CoM = -9.397723E-09,-6.600628E-08,1.193032E-08
 			stg = 1
 			prst = False
-			ref = 3022381157
+			ref = 3231911888
 			ctrl = True
 			cPch = 0.2
 			cHdg = 0.3
 			cMod = 0
 			ORBIT
 			{
-				SMA = 300815.222462742
-				ECC = 0.994822794434313
-				INC = 0.0972077870913891
+				SMA = 300815.214452733
+				ECC = 0.99482279484469
+				INC = 0.0972077896746833
 				LPE = 90.0000000000001
-				LAN = 233.265222701554
-				MNA = 3.14159182714436
-				EPH = 29269.2346187694
+				LAN = 234.69456148829
+				MNA = 3.14159265358979
+				EPH = 29354.9946187713
 				REF = 1
 			}
 			PART
 			{
 				name = landerCabinSmall
-				cid = 4294488388
-				uid = 3022381157
-				mid = 2010004794
-				launchID = 3
+				cid = 4294616286
+				uid = 3231911888
+				mid = 3561656289
+				launchID = 4
 				parent = 0
 				position = 0,0,0
 				rotation = 0,0,0,1
@@ -1759,8 +1758,8 @@ GAME
 				attN = bottom, -1
 				attN = top, -1
 				mass = 0.6
-				temp = 287.558948546928
-				tempExt = 287.947243468513
+				temp = 287.557737041003
+				tempExt = 287.905355028577
 				expt = 0.5
 				state = 0
 				connected = True
@@ -1768,7 +1767,7 @@ GAME
 				flag = Squad/Flags/kerbin
 				rTrf = landerCabinSmall
 				modCost = 0
-				crew = Bill Kerman
+				crew = Bob Kerman
 				EVENTS
 				{
 				}
@@ -2321,14 +2320,14 @@ GAME
 						}
 						MechJebModuleFlightRecorder
 						{
-							markUT = 29269.2346187694
+							markUT = 29354.9946187713
 							deltaVExpended = 0
 							dragLosses = 0
 							gravityLosses = 0
 							steeringLosses = 0
-							markLatitude = -0.0972077882273614
-							markLongitude = -74.5576730117731
-							markAltitude = 73.0626916622277
+							markLatitude = -0.0972077908087551
+							markLongitude = -74.5576733806718
+							markAltitude = 73.0468365612905
 							markBodyIndex = 1
 							maxDragGees = 0
 							unlockParts = 
@@ -2448,6 +2447,28 @@ GAME
 			dumb = 0.8
 			badS = False
 			tour = False
+			state = Available
+			ToD = 0
+			idx = 0
+			CAREER_LOG
+			{
+				flight = 1
+				0 = Recover
+			}
+			FLIGHT_LOG
+			{
+				flight = 1
+			}
+		}
+		KERBAL
+		{
+			name = Bob Kerman
+			gender = Male
+			type = Crew
+			brave = 0.3
+			dumb = 0.1
+			badS = False
+			tour = False
 			state = Assigned
 			ToD = 0
 			idx = 0
@@ -2462,29 +2483,8 @@ GAME
 		}
 		KERBAL
 		{
-			name = Bob Kerman
-			gender = Male
-			type = Crew
-			brave = 0.3
-			dumb = 0.1
-			badS = False
-			tour = False
-			state = Available
-			ToD = 0
-			idx = -1
-			CAREER_LOG
-			{
-				flight = 0
-			}
-			FLIGHT_LOG
-			{
-				flight = 0
-			}
-		}
-		KERBAL
-		{
 			name = Valentina Kerman
-			gender = Female
+			gender = Male
 			type = Crew
 			brave = 0.55
 			dumb = 0.4
