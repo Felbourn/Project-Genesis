@@ -352,8 +352,8 @@ GAME
 	FLIGHTSTATE
 	{
 		version = 1.0.4
-		UT = 17481.6596940575
-		activeVessel = 7
+		UT = 17485.6596940576
+		activeVessel = 0
 		mapViewFiltering = -1026
 		VESSEL
 		{
@@ -952,18 +952,18 @@ GAME
 			prst = False
 			ref = 794478237
 			ctrl = True
-			cPch = 0.2
-			cHdg = 0.3
+			cPch = 
+			cHdg = 
 			cMod = 0
 			ORBIT
 			{
-				SMA = 300815.210111626
-				ECC = 0.994822793583024
-				INC = 0.0972077850255036
-				LPE = 90.0011174154708
-				LAN = 36.8037219708912
+				SMA = 300036.518898422
+				ECC = 1
+				INC = NaN
+				LPE = 34.556994964058
+				LAN = 161.361716385329
 				MNA = 3.14159265358979
-				EPH = 17481.6596940575
+				EPH = 17481.6796940575
 				REF = 1
 			}
 			PART
