@@ -1,4 +1,4 @@
-patchedNodeCount = 3217
+patchedNodeCount = 3608
 catEatenCount = 0
 UrlConfig
 {
@@ -8036,6 +8036,117 @@ UrlConfig
 }
 UrlConfig
 {
+	name = Default
+	type = TANK_DEFINITION
+	parentUrl = RealFuels/Resources/RealTankTypes
+	url = RealFuels/Resources/RealTankTypes/Default
+	TANK_DEFINITION
+	{
+		name = Default
+		highlyPressurized = False
+		basemass = 0.000016 * volume
+		TANK
+		{
+			name = LqdOxygen
+			mass = 0.000014
+			utilization = 1
+			fillable = True
+			amount = 0.0
+			maxAmount = 0.0
+			temperature = 90.15
+			loss_rate = 0.000000005
+			note = (lacks insulation)
+		}
+		TANK
+		{
+			name = Kerosene
+			mass = 0.000012
+			utilization = 1
+			fillable = True
+			amount = 0.0
+			maxAmount = 0.0
+		}
+		TANK
+		{
+			name = LqdHydrogen
+			mass = 0.000002
+			utilization = 1
+			fillable = True
+			amount = 0.0
+			maxAmount = 0.0
+			temperature = 20.15
+			loss_rate = 0.000000017
+			note = (lacks insulation)
+		}
+		TANK
+		{
+			name = NTO
+			mass = 0.000016
+			utilization = 1
+			fillable = True
+			amount = 0.0
+			maxAmount = 0.0
+		}
+		TANK
+		{
+			name = UDMH
+			mass = 0.000016
+			utilization = 1
+			fillable = True
+			amount = 0.0
+			maxAmount = 0.0
+		}
+		TANK
+		{
+			name = Hydrazine
+			mass = 0.000081
+			utilization = 1
+			fillable = True
+			amount = 0.0
+			maxAmount = 0.0
+			note = (pressurized)
+		}
+		TANK
+		{
+			name = ElectricCharge
+			mass = 0.05
+			utilization = 1000
+			fillable = True
+			amount = 0.0
+			maxAmount = 0.0
+			note = (pressurized)
+		}
+		TANK
+		{
+			name = LeadBallast
+			mass = 0
+			utilization = 1
+			fillable = True
+			amount = 0.0
+			maxAmount = 0.0
+		}
+	}
+}
+UrlConfig
+{
+	name = Solid
+	type = TANK_DEFINITION
+	parentUrl = RealFuels/Resources/SolidTanks
+	url = RealFuels/Resources/SolidTanks/Solid
+	TANK_DEFINITION
+	{
+		name = Solid
+		basemass = 0.000267 * volume
+		TANK
+		{
+			name = HTPB
+			amount = full
+			maxAmount = 100%
+		}
+	}
+}
+UrlConfig
+{
 	name = RemoteTechSettings
 	type = RemoteTechSettings
 	parentUrl = RemoteTech/RemoteTech_Settings
@@ -10818,12 +10929,6 @@ UrlConfig
 			dragAtMaxAoA = 0.6
 			dragAtMinAoA = 0.0
 		}
-		RESOURCE
-		{
-			name = LiquidFuel
-			amount = 0
-			maxAmount = 600
-		}
 		MODULE
 		{
 			name = CollisionFX
@@ -11613,12 +11718,6 @@ UrlConfig
 		emissiveConstant = 0.95
 		fuelCrossFeed = True
 		bulkheadProfiles = size0, size1
-		RESOURCE
-		{
-			name = LiquidFuel
-			amount = 80
-			maxAmount = 80
-		}
 		MODULE
 		{
 			name = ModuleAnimateHeat
@@ -11853,12 +11952,6 @@ UrlConfig
 			amount = 0.5
 			maxAmount = 0.5
 		}
-		RESOURCE
-		{
-			name = LiquidFuel
-			amount = 40
-			maxAmount = 40
-		}
 		MODULE
 		{
 			name = ModuleAnimateHeat
@@ -11876,6 +11969,13 @@ UrlConfig
 		{
 			model = VenStockRevamp/Squad/Parts/Mk1/Intercooler
 			scale = 1.25,1.25,1.25
+		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 212
+			basemass = -1
+			type = Default
 		}
 	}
 }
@@ -11929,12 +12029,6 @@ UrlConfig
 			amount = 0.5
 			maxAmount = 0.5
 		}
-		RESOURCE
-		{
-			name = LiquidFuel
-			amount = 40
-			maxAmount = 40
-		}
 		MODULE
 		{
 			name = ModuleAnimateHeat
@@ -11952,6 +12046,13 @@ UrlConfig
 		{
 			model = VenStockRevamp/Squad/Parts/Mk1/mk1Pylon
 			scale = 1.25, 1.25, 1.25
+		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 212
+			basemass = -1
+			type = Default
 		}
 	}
 }
@@ -12636,6 +12737,12 @@ UrlConfig
 		{
 			model = VenStockRevamp/Squad/Parts/Aero/LargeNosecone
 		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 2120
+			type = Default
+		}
 	}
 }
 UrlConfig
@@ -12755,12 +12862,6 @@ UrlConfig
 			deflectionLiftCoeff = 5.0
 			dragAtMaxAoA = 0.6
 			dragAtMinAoA = 0.0
-		}
-		RESOURCE
-		{
-			name = LiquidFuel
-			amount = 0
-			maxAmount = 300
 		}
 		MODULE
 		{
@@ -13066,12 +13167,6 @@ UrlConfig
 			deflectionLiftCoeff = 1.0
 			dragAtMaxAoA = 0.6
 			dragAtMinAoA = 0.0
-		}
-		RESOURCE
-		{
-			name = LiquidFuel
-			amount = 0
-			maxAmount = 100
 		}
 		MODULE
 		{
@@ -14527,12 +14622,6 @@ UrlConfig
 			evaOnlyStorage = True
 			storageRange = 1.6
 		}
-		RESOURCE
-		{
-			name = MonoPropellant
-			amount = 10
-			maxAmount = 10
-		}
 		MODULE
 		{
 			name = FlagDecal
@@ -14988,12 +15077,6 @@ UrlConfig
 			evaOnlyStorage = True
 			storageRange = 2.0
 		}
-		RESOURCE
-		{
-			name = MonoPropellant
-			amount = 30
-			maxAmount = 30
-		}
 		MODULE
 		{
 			name = FlagDecal
@@ -15141,12 +15224,6 @@ UrlConfig
 			evaOnlyStorage = True
 			storageRange = 1.3
 		}
-		RESOURCE
-		{
-			name = MonoPropellant
-			amount = 7.5
-			maxAmount = 7.5
-		}
 		MODULE
 		{
 			name = FlagDecal
@@ -15275,12 +15352,6 @@ UrlConfig
 			evaOnlyStorage = True
 			storageRange = 1.3
 		}
-		RESOURCE
-		{
-			name = MonoPropellant
-			amount = 7.5
-			maxAmount = 7.5
-		}
 		MODULE
 		{
 			name = FlagDecal
@@ -15396,12 +15467,6 @@ UrlConfig
 			storeActionName = Store Experiments
 			evaOnlyStorage = True
 			storageRange = 1.3
-		}
-		RESOURCE
-		{
-			name = MonoPropellant
-			amount = 15
-			maxAmount = 15
 		}
 		MODULE
 		{
@@ -15531,12 +15596,6 @@ UrlConfig
 			storeActionName = Store Experiments
 			evaOnlyStorage = True
 			storageRange = 1.3
-		}
-		RESOURCE
-		{
-			name = MonoPropellant
-			amount = 10
-			maxAmount = 10
 		}
 		MODULE
 		{
@@ -15676,12 +15735,6 @@ UrlConfig
 			evaOnlyStorage = True
 			storageRange = 3.0
 		}
-		RESOURCE
-		{
-			name = MonoPropellant
-			amount = 25
-			maxAmount = 25
-		}
 		MODULE
 		{
 			name = FlagDecal
@@ -15809,12 +15862,6 @@ UrlConfig
 			storeActionName = Store Experiments
 			evaOnlyStorage = True
 			storageRange = 3.0
-		}
-		RESOURCE
-		{
-			name = MonoPropellant
-			amount = 15
-			maxAmount = 15
 		}
 		MODULE
 		{
@@ -16045,12 +16092,6 @@ UrlConfig
 			evaOnlyStorage = True
 			storageRange = 2.0
 		}
-		RESOURCE
-		{
-			name = MonoPropellant
-			amount = 40
-			maxAmount = 40
-		}
 		MODULE
 		{
 			name = FlagDecal
@@ -16175,12 +16216,6 @@ UrlConfig
 			storeActionName = Store Experiments
 			evaOnlyStorage = True
 			storageRange = 4.0
-		}
-		RESOURCE
-		{
-			name = MonoPropellant
-			amount = 100
-			maxAmount = 100
 		}
 		MODULE
 		{
@@ -20166,6 +20201,80 @@ UrlConfig
 				}
 			}
 		}
+		MODULE
+		{
+			name = ModuleEngineConfigs
+			configuration = Kerolox
+			CONFIG
+			{
+				name = Kerolox
+				minThrust = 0
+				maxThrust = 60
+				PROPELLANT
+				{
+					name = Kerosene
+					ratio = 1.21951219512195
+					DrawGauge = True
+				}
+				PROPELLANT
+				{
+					name = LqdOxygen
+					ratio = 2.38387379491674
+				}
+				atmosphereCurve
+				{
+					key = 0 307
+					key = 1 76
+					key = 3 0.001
+				}
+			}
+			CONFIG
+			{
+				name = Hydrolox
+				minThrust = 0
+				maxThrust = 60
+				PROPELLANT
+				{
+					name = LqdHydrogen
+					ratio = 14.1143260409315
+					DrawGauge = True
+				}
+				PROPELLANT
+				{
+					name = LqdOxygen
+					ratio = 5.43382997370727
+				}
+				atmosphereCurve
+				{
+					key = 0 324
+					key = 1 79
+					key = 3 0.001
+				}
+			}
+			CONFIG
+			{
+				name = Hypergolic
+				minThrust = 0
+				maxThrust = 60
+				PROPELLANT
+				{
+					name = UDMH
+					ratio = 1.26422250316056
+					DrawGauge = True
+				}
+				PROPELLANT
+				{
+					name = NTO
+					ratio = 1.8
+				}
+				atmosphereCurve
+				{
+					key = 0 324
+					key = 1 79
+					key = 3 0.001
+				}
+			}
+		}
 	}
 }
 UrlConfig
@@ -22826,12 +22935,6 @@ UrlConfig
 			name = FlagDecal
 			textureQuadName = FlagTransform
 		}
-		RESOURCE
-		{
-			name = SolidFuel
-			amount = 2600
-			maxAmount = 2600
-		}
 		MODULE
 		{
 			name = ModuleTestSubject
@@ -23339,18 +23442,6 @@ UrlConfig
 		description = This liquid fuel booster system is a very purposeful piece of engineering. Instead of relying on single engines or solid rocket boosters, the KR-1x2 employs two modified KR-1 engine, fed by a built-in fuel system, as the source of its immense lifting power. All that self-contained goodness comes at the cost of not having a mounting point for its underside, and not being quite as efficient as dedicated engines. It also comes at quite a literal cost as well.
 		attachRules = 1,1,1,1,0
 		bulkheadProfiles = size2, srf
-		RESOURCE
-		{
-			name = LiquidFuel
-			amount = 2880
-			maxAmount = 2880
-		}
-		RESOURCE
-		{
-			name = Oxidizer
-			amount = 3520
-			maxAmount = 3520
-		}
 		MODULE
 		{
 			name = ModuleEnginesFX
@@ -24386,7 +24477,7 @@ UrlConfig
 			powerEffectName = powerflame
 			PROPELLANT
 			{
-				name = SolidFuel
+				name = HTPB
 				ratio = 1.0
 				DrawGauge = True
 			}
@@ -24401,12 +24492,6 @@ UrlConfig
 		{
 			name = ModuleAnimateHeat
 			ThermalAnim = HeatAnimationEmissiveSRBLong
-		}
-		RESOURCE
-		{
-			name = SolidFuel
-			amount = 820
-			maxAmount = 820
 		}
 		MODULE
 		{
@@ -24642,6 +24727,42 @@ UrlConfig
 				}
 			}
 		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 3670
+			type = Solid
+		}
+		MODULE
+		{
+			name = ModuleEngineConfigs
+			type = ModuleEngines
+			configuration = Linear
+			CONFIG
+			{
+				name = Linear
+				minThrust = 0
+				maxThrust = 300
+				curveResource = HTPB
+				PROPELLANT
+				{
+					name = HTPB
+					ratio = 1
+					DrawGauge = True
+				}
+				atmosphereCurve
+				{
+					key = 0 182
+					key = 1 151
+					key = 3 0.001
+				}
+				thrustCurve
+				{
+					key = 0 0.16
+					key = 1 1.00
+				}
+			}
+		}
 	}
 }
 UrlConfig
@@ -24718,12 +24839,6 @@ UrlConfig
 		{
 			name = ModuleAnimateHeat
 			ThermalAnim = heatAnimation
-		}
-		RESOURCE
-		{
-			name = SolidFuel
-			amount = 375
-			maxAmount = 375
 		}
 		MODULE
 		{
@@ -25035,12 +25150,6 @@ UrlConfig
 				key = 6 0.001
 			}
 		}
-		RESOURCE
-		{
-			name = SolidFuel
-			amount = 140
-			maxAmount = 140
-		}
 		MODULE
 		{
 			name = ModuleTestSubject
@@ -25339,12 +25448,6 @@ UrlConfig
 				key = 6 0.001
 			}
 		}
-		RESOURCE
-		{
-			name = SolidFuel
-			amount = 8
-			maxAmount = 8
-		}
 		MODULE
 		{
 			name = ModuleTestSubject
@@ -25488,12 +25591,6 @@ UrlConfig
 				key = 1 118
 				key = 6 0.001
 			}
-		}
-		RESOURCE
-		{
-			name = SolidFuel
-			amount = 4
-			maxAmount = 4
 		}
 		MODULE
 		{
@@ -25707,18 +25804,6 @@ UrlConfig
 		{
 			model = Squad/Parts/FuelTank/adapterTanks/Mk3-Mk2
 		}
-		RESOURCE
-		{
-			name = LiquidFuel
-			amount = 900
-			maxAmount = 900
-		}
-		RESOURCE
-		{
-			name = Oxidizer
-			amount = 1100
-			maxAmount = 1100
-		}
 		MODULE
 		{
 			name = CollisionFX
@@ -25726,6 +25811,12 @@ UrlConfig
 			collisionSound = CollisionFX/Sounds/Bang1
 			scrapeSound = CollisionFX/Sounds/GroundSkid
 			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 10600
+			type = Default
 		}
 	}
 }
@@ -25769,18 +25860,6 @@ UrlConfig
 		{
 			model = Squad/Parts/FuelTank/adapterTanks/Mk3-Size2
 		}
-		RESOURCE
-		{
-			name = LiquidFuel
-			amount = 1125
-			maxAmount = 1125
-		}
-		RESOURCE
-		{
-			name = Oxidizer
-			amount = 1375
-			maxAmount = 1375
-		}
 		MODULE
 		{
 			name = CollisionFX
@@ -25788,6 +25867,12 @@ UrlConfig
 			collisionSound = CollisionFX/Sounds/Bang1
 			scrapeSound = CollisionFX/Sounds/GroundSkid
 			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 13250
+			type = Default
 		}
 	}
 }
@@ -25831,18 +25916,6 @@ UrlConfig
 		{
 			model = Squad/Parts/FuelTank/adapterTanks/Mk3-Size2Slant
 		}
-		RESOURCE
-		{
-			name = LiquidFuel
-			amount = 1125
-			maxAmount = 1125
-		}
-		RESOURCE
-		{
-			name = Oxidizer
-			amount = 1375
-			maxAmount = 1375
-		}
 		MODULE
 		{
 			name = CollisionFX
@@ -25850,6 +25923,12 @@ UrlConfig
 			collisionSound = CollisionFX/Sounds/Bang1
 			scrapeSound = CollisionFX/Sounds/GroundSkid
 			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 13250
+			type = Default
 		}
 	}
 }
@@ -25891,18 +25970,6 @@ UrlConfig
 		{
 			model = Squad/Parts/FuelTank/adapterTanks/Size2-Mk2
 		}
-		RESOURCE
-		{
-			name = LiquidFuel
-			amount = 360
-			maxAmount = 360
-		}
-		RESOURCE
-		{
-			name = Oxidizer
-			amount = 440
-			maxAmount = 440
-		}
 		MODULE
 		{
 			name = CollisionFX
@@ -25910,6 +25977,12 @@ UrlConfig
 			collisionSound = CollisionFX/Sounds/Bang1
 			scrapeSound = CollisionFX/Sounds/GroundSkid
 			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 10600
+			type = Default
 		}
 	}
 }
@@ -25951,18 +26024,6 @@ UrlConfig
 		{
 			model = Squad/Parts/FuelTank/adapterTanks/Size2-Size1
 		}
-		RESOURCE
-		{
-			name = LiquidFuel
-			amount = 360
-			maxAmount = 360
-		}
-		RESOURCE
-		{
-			name = Oxidizer
-			amount = 440
-			maxAmount = 440
-		}
 		MODULE
 		{
 			name = CollisionFX
@@ -25970,6 +26031,12 @@ UrlConfig
 			collisionSound = CollisionFX/Sounds/Bang1
 			scrapeSound = CollisionFX/Sounds/GroundSkid
 			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 4240
+			type = Default
 		}
 	}
 }
@@ -26011,18 +26078,6 @@ UrlConfig
 		{
 			model = Squad/Parts/FuelTank/adapterTanks/Size2-Size1Slant
 		}
-		RESOURCE
-		{
-			name = LiquidFuel
-			amount = 360
-			maxAmount = 360
-		}
-		RESOURCE
-		{
-			name = Oxidizer
-			amount = 440
-			maxAmount = 440
-		}
 		MODULE
 		{
 			name = CollisionFX
@@ -26030,6 +26085,12 @@ UrlConfig
 			collisionSound = CollisionFX/Sounds/Bang1
 			scrapeSound = CollisionFX/Sounds/GroundSkid
 			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 4240
+			type = Default
 		}
 	}
 }
@@ -26073,18 +26134,6 @@ UrlConfig
 		{
 			model = Squad/Parts/FuelTank/adapterTanks/Size3-Mk3
 		}
-		RESOURCE
-		{
-			name = LiquidFuel
-			amount = 1125
-			maxAmount = 1125
-		}
-		RESOURCE
-		{
-			name = Oxidizer
-			amount = 1375
-			maxAmount = 1375
-		}
 		MODULE
 		{
 			name = CollisionFX
@@ -26092,6 +26141,12 @@ UrlConfig
 			collisionSound = CollisionFX/Sounds/Bang1
 			scrapeSound = CollisionFX/Sounds/GroundSkid
 			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 18020
+			type = Default
 		}
 	}
 }
@@ -26129,18 +26184,6 @@ UrlConfig
 		breakingTorque = 200
 		maxTemp = 2000
 		bulkheadProfiles = size2, srf
-		RESOURCE
-		{
-			name = LiquidFuel
-			amount = 2880
-			maxAmount = 2880
-		}
-		RESOURCE
-		{
-			name = Oxidizer
-			amount = 3520
-			maxAmount = 3520
-		}
 		MODULE
 		{
 			name = CollisionFX
@@ -26152,6 +26195,12 @@ UrlConfig
 		MODEL
 		{
 			model = VenStockRevamp/Squad/Parts/Propulsion/X200-64
+		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 33920
+			type = Default
 		}
 	}
 }
@@ -26190,18 +26239,6 @@ UrlConfig
 		bulkheadProfiles = size2, srf
 		scale = 1
 		rescaleFactor = 1
-		RESOURCE
-		{
-			name = LiquidFuel
-			amount = 2160
-			maxAmount = 2160
-		}
-		RESOURCE
-		{
-			name = Oxidizer
-			amount = 2640
-			maxAmount = 2640
-		}
 		MODULE
 		{
 			name = CollisionFX
@@ -26250,18 +26287,6 @@ UrlConfig
 		breakingTorque = 50
 		bulkheadProfiles = size0, srf
 		node_attach = 0.3, 0.0, 0.0, 1.0, 0.0, 0.0, 1
-		RESOURCE
-		{
-			name = LiquidFuel
-			amount = 18
-			maxAmount = 18
-		}
-		RESOURCE
-		{
-			name = Oxidizer
-			amount = 22
-			maxAmount = 22
-		}
 		MODULE
 		{
 			name = CollisionFX
@@ -26273,6 +26298,12 @@ UrlConfig
 		MODEL
 		{
 			model = VenStockRevamp/Squad/Parts/SmallParts/fuelTankOscarB
+		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 66.25
+			type = Default
 		}
 	}
 }
@@ -26311,18 +26342,6 @@ UrlConfig
 		bulkheadProfiles = size0, srf
 		scale = 1
 		rescaleFactor = 1
-		RESOURCE
-		{
-			name = LiquidFuel
-			amount = 54
-			maxAmount = 54
-		}
-		RESOURCE
-		{
-			name = Oxidizer
-			amount = 66
-			maxAmount = 66
-		}
 		MODULE
 		{
 			name = CollisionFX
@@ -26372,18 +26391,6 @@ UrlConfig
 		bulkheadProfiles = size0, srf
 		scale = 1
 		rescaleFactor = 1
-		RESOURCE
-		{
-			name = LiquidFuel
-			amount = 108
-			maxAmount = 108
-		}
-		RESOURCE
-		{
-			name = Oxidizer
-			amount = 132
-			maxAmount = 132
-		}
 		MODULE
 		{
 			name = CollisionFX
@@ -26432,18 +26439,6 @@ UrlConfig
 		breakingForce = 50
 		breakingTorque = 50
 		bulkheadProfiles = size1, srf
-		RESOURCE
-		{
-			name = LiquidFuel
-			amount = 45
-			maxAmount = 45
-		}
-		RESOURCE
-		{
-			name = Oxidizer
-			amount = 55
-			maxAmount = 55
-		}
 		MODULE
 		{
 			name = CollisionFX
@@ -26455,6 +26450,12 @@ UrlConfig
 		MODEL
 		{
 			model = VenStockRevamp/Squad/Parts/Propulsion/T100Tank
+		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 530
+			type = Default
 		}
 	}
 }
@@ -26492,18 +26493,6 @@ UrlConfig
 		breakingForce = 50
 		breakingTorque = 50
 		bulkheadProfiles = size1, srf
-		RESOURCE
-		{
-			name = LiquidFuel
-			amount = 90
-			maxAmount = 90
-		}
-		RESOURCE
-		{
-			name = Oxidizer
-			amount = 110
-			maxAmount = 110
-		}
 		MODULE
 		{
 			name = CollisionFX
@@ -26515,6 +26504,12 @@ UrlConfig
 		MODEL
 		{
 			model = VenStockRevamp/Squad/Parts/Propulsion/T200Tank
+		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 1060
+			type = Default
 		}
 	}
 }
@@ -26552,18 +26547,6 @@ UrlConfig
 		breakingTorque = 50
 		maxTemp = 2000
 		bulkheadProfiles = size1, srf
-		RESOURCE
-		{
-			name = LiquidFuel
-			amount = 180
-			maxAmount = 180
-		}
-		RESOURCE
-		{
-			name = Oxidizer
-			amount = 220
-			maxAmount = 220
-		}
 		MODULE
 		{
 			name = CollisionFX
@@ -26575,6 +26558,12 @@ UrlConfig
 		MODEL
 		{
 			model = VenStockRevamp/Squad/Parts/Propulsion/T400Tank
+		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 2120
+			type = Default
 		}
 	}
 }
@@ -26612,18 +26601,6 @@ UrlConfig
 		breakingTorque = 50
 		maxTemp = 2000
 		bulkheadProfiles = size1, srf
-		RESOURCE
-		{
-			name = LiquidFuel
-			amount = 360
-			maxAmount = 360
-		}
-		RESOURCE
-		{
-			name = Oxidizer
-			amount = 440
-			maxAmount = 440
-		}
 		MODULE
 		{
 			name = CollisionFX
@@ -26635,6 +26612,12 @@ UrlConfig
 		MODEL
 		{
 			model = VenStockRevamp/Squad/Parts/Propulsion/T800Tank
+		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 4240
+			type = Default
 		}
 	}
 }
@@ -26671,18 +26654,6 @@ UrlConfig
 		breakingForce = 50
 		breakingTorque = 50
 		bulkheadProfiles = size1
-		RESOURCE
-		{
-			name = LiquidFuel
-			amount = 27
-			maxAmount = 27
-		}
-		RESOURCE
-		{
-			name = Oxidizer
-			amount = 33
-			maxAmount = 33
-		}
 		MODULE
 		{
 			name = CollisionFX
@@ -26694,6 +26665,12 @@ UrlConfig
 		MODEL
 		{
 			model = VenStockRevamp/Squad/Parts/Propulsion/ToroidalTank
+		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 119.25
+			type = Default
 		}
 	}
 }
@@ -26732,18 +26709,6 @@ UrlConfig
 		bulkheadProfiles = size2, srf
 		scale = 1
 		rescaleFactor = 1
-		RESOURCE
-		{
-			name = LiquidFuel
-			amount = 720
-			maxAmount = 720
-		}
-		RESOURCE
-		{
-			name = Oxidizer
-			amount = 880
-			maxAmount = 880
-		}
 		MODULE
 		{
 			name = CollisionFX
@@ -26755,6 +26720,12 @@ UrlConfig
 		MODEL
 		{
 			model = VenStockRevamp/Squad/Parts/Propulsion/X200-16
+		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 8480
+			type = Default
 		}
 	}
 }
@@ -26792,18 +26763,6 @@ UrlConfig
 		breakingTorque = 200
 		maxTemp = 2000
 		bulkheadProfiles = size2, srf
-		RESOURCE
-		{
-			name = LiquidFuel
-			amount = 1440
-			maxAmount = 1440
-		}
-		RESOURCE
-		{
-			name = Oxidizer
-			amount = 1760
-			maxAmount = 1760
-		}
 		MODULE
 		{
 			name = CollisionFX
@@ -26815,6 +26774,12 @@ UrlConfig
 		MODEL
 		{
 			model = VenStockRevamp/Squad/Parts/Propulsion/X200-32
+		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 16960
+			type = Default
 		}
 	}
 }
@@ -26853,18 +26818,6 @@ UrlConfig
 		bulkheadProfiles = size2, srf
 		scale = 1
 		rescaleFactor = 1
-		RESOURCE
-		{
-			name = LiquidFuel
-			amount = 360
-			maxAmount = 360
-		}
-		RESOURCE
-		{
-			name = Oxidizer
-			amount = 440
-			maxAmount = 440
-		}
 		MODULE
 		{
 			name = CollisionFX
@@ -26880,6 +26833,12 @@ UrlConfig
 		MODEL
 		{
 			model = VenStockRevamp/Squad/Parts/Propulsion/X200-8
+		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 4240
+			type = Default
 		}
 	}
 }
@@ -26934,18 +26893,6 @@ UrlConfig
 			dragAtMaxAoA = 0.2
 			dragAtMinAoA = 0.1
 		}
-		RESOURCE
-		{
-			name = LiquidFuel
-			amount = 180
-			maxAmount = 180
-		}
-		RESOURCE
-		{
-			name = Oxidizer
-			amount = 220
-			maxAmount = 220
-		}
 		MODULE
 		{
 			name = CollisionFX
@@ -26953,6 +26900,12 @@ UrlConfig
 			collisionSound = CollisionFX/Sounds/Bang1
 			scrapeSound = CollisionFX/Sounds/GroundSkid
 			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 4240
+			type = Default
 		}
 	}
 }
@@ -27004,18 +26957,6 @@ UrlConfig
 			dragAtMaxAoA = 0.3
 			dragAtMinAoA = 0.1
 		}
-		RESOURCE
-		{
-			name = LiquidFuel
-			amount = 360
-			maxAmount = 360
-		}
-		RESOURCE
-		{
-			name = Oxidizer
-			amount = 440
-			maxAmount = 440
-		}
 		MODULE
 		{
 			name = CollisionFX
@@ -27023,6 +26964,12 @@ UrlConfig
 			collisionSound = CollisionFX/Sounds/Bang1
 			scrapeSound = CollisionFX/Sounds/GroundSkid
 			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 6254
+			type = Default
 		}
 	}
 }
@@ -27074,18 +27021,6 @@ UrlConfig
 			dragAtMaxAoA = 0.2
 			dragAtMinAoA = 0.1
 		}
-		RESOURCE
-		{
-			name = LiquidFuel
-			amount = 180
-			maxAmount = 180
-		}
-		RESOURCE
-		{
-			name = Oxidizer
-			amount = 220
-			maxAmount = 220
-		}
 		MODULE
 		{
 			name = CollisionFX
@@ -27093,6 +27028,12 @@ UrlConfig
 			collisionSound = CollisionFX/Sounds/Bang1
 			scrapeSound = CollisionFX/Sounds/GroundSkid
 			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 2650
+			type = Default
 		}
 	}
 }
@@ -27144,18 +27085,6 @@ UrlConfig
 			dragAtMaxAoA = 0.3
 			dragAtMinAoA = 0.1
 		}
-		RESOURCE
-		{
-			name = LiquidFuel
-			amount = 360
-			maxAmount = 360
-		}
-		RESOURCE
-		{
-			name = Oxidizer
-			amount = 440
-			maxAmount = 440
-		}
 		MODULE
 		{
 			name = CollisionFX
@@ -27163,6 +27092,12 @@ UrlConfig
 			collisionSound = CollisionFX/Sounds/Bang1
 			scrapeSound = CollisionFX/Sounds/GroundSkid
 			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 7632
+			type = Default
 		}
 	}
 }
@@ -27214,12 +27149,6 @@ UrlConfig
 			dragAtMaxAoA = 0.3
 			dragAtMinAoA = 0.1
 		}
-		RESOURCE
-		{
-			name = LiquidFuel
-			amount = 800
-			maxAmount = 800
-		}
 		MODULE
 		{
 			name = CollisionFX
@@ -27227,6 +27156,12 @@ UrlConfig
 			collisionSound = CollisionFX/Sounds/Bang1
 			scrapeSound = CollisionFX/Sounds/GroundSkid
 			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 7632
+			type = Default
 		}
 	}
 }
@@ -27278,18 +27213,6 @@ UrlConfig
 			dragAtMaxAoA = 0.15
 			dragAtMinAoA = 0.1
 		}
-		RESOURCE
-		{
-			name = LiquidFuel
-			amount = 180
-			maxAmount = 180
-		}
-		RESOURCE
-		{
-			name = Oxidizer
-			amount = 220
-			maxAmount = 220
-		}
 		MODULE
 		{
 			name = CollisionFX
@@ -27297,6 +27220,12 @@ UrlConfig
 			collisionSound = CollisionFX/Sounds/Bang1
 			scrapeSound = CollisionFX/Sounds/GroundSkid
 			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 3816
+			type = Default
 		}
 	}
 }
@@ -27348,12 +27277,6 @@ UrlConfig
 			dragAtMaxAoA = 0.15
 			dragAtMinAoA = 0.1
 		}
-		RESOURCE
-		{
-			name = LiquidFuel
-			amount = 400
-			maxAmount = 400
-		}
 		MODULE
 		{
 			name = CollisionFX
@@ -27361,6 +27284,12 @@ UrlConfig
 			collisionSound = CollisionFX/Sounds/Bang1
 			scrapeSound = CollisionFX/Sounds/GroundSkid
 			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 3816
+			type = Default
 		}
 	}
 }
@@ -27412,12 +27341,6 @@ UrlConfig
 			dragAtMaxAoA = 0.15
 			dragAtMinAoA = 0.1
 		}
-		RESOURCE
-		{
-			name = MonoPropellant
-			amount = 400
-			maxAmount = 400
-		}
 		MODULE
 		{
 			name = CollisionFX
@@ -27425,6 +27348,12 @@ UrlConfig
 			collisionSound = CollisionFX/Sounds/Bang1
 			scrapeSound = CollisionFX/Sounds/GroundSkid
 			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 1526.4
+			type = Default
 		}
 	}
 }
@@ -27554,18 +27483,6 @@ UrlConfig
 		{
 			model = Squad/Parts/FuelTank/mk3Fuselage/LFO_100
 		}
-		RESOURCE
-		{
-			name = LiquidFuel
-			amount = 4500
-			maxAmount = 4500
-		}
-		RESOURCE
-		{
-			name = Oxidizer
-			amount = 5500
-			maxAmount = 5500
-		}
 		MODULE
 		{
 			name = CollisionFX
@@ -27573,6 +27490,12 @@ UrlConfig
 			collisionSound = CollisionFX/Sounds/Bang1
 			scrapeSound = CollisionFX/Sounds/GroundSkid
 			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 53000
+			type = Default
 		}
 	}
 }
@@ -27616,18 +27539,6 @@ UrlConfig
 		{
 			model = Squad/Parts/FuelTank/mk3Fuselage/LFO_25
 		}
-		RESOURCE
-		{
-			name = LiquidFuel
-			amount = 1125
-			maxAmount = 1125
-		}
-		RESOURCE
-		{
-			name = Oxidizer
-			amount = 1375
-			maxAmount = 1375
-		}
 		MODULE
 		{
 			name = CollisionFX
@@ -27635,6 +27546,12 @@ UrlConfig
 			collisionSound = CollisionFX/Sounds/Bang1
 			scrapeSound = CollisionFX/Sounds/GroundSkid
 			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 13250
+			type = Default
 		}
 	}
 }
@@ -27678,18 +27595,6 @@ UrlConfig
 		{
 			model = Squad/Parts/FuelTank/mk3Fuselage/LFO_50
 		}
-		RESOURCE
-		{
-			name = LiquidFuel
-			amount = 2250
-			maxAmount = 2250
-		}
-		RESOURCE
-		{
-			name = Oxidizer
-			amount = 2750
-			maxAmount = 2750
-		}
 		MODULE
 		{
 			name = CollisionFX
@@ -27697,6 +27602,12 @@ UrlConfig
 			collisionSound = CollisionFX/Sounds/Bang1
 			scrapeSound = CollisionFX/Sounds/GroundSkid
 			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 26500
+			type = Default
 		}
 	}
 }
@@ -27740,12 +27651,6 @@ UrlConfig
 		{
 			model = Squad/Parts/FuelTank/mk3Fuselage/LF_100
 		}
-		RESOURCE
-		{
-			name = LiquidFuel
-			amount = 10000
-			maxAmount = 10000
-		}
 		MODULE
 		{
 			name = CollisionFX
@@ -27753,6 +27658,12 @@ UrlConfig
 			collisionSound = CollisionFX/Sounds/Bang1
 			scrapeSound = CollisionFX/Sounds/GroundSkid
 			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 53000
+			type = Default
 		}
 	}
 }
@@ -27796,12 +27707,6 @@ UrlConfig
 		{
 			model = Squad/Parts/FuelTank/mk3Fuselage/LF_25
 		}
-		RESOURCE
-		{
-			name = LiquidFuel
-			amount = 2500
-			maxAmount = 2500
-		}
 		MODULE
 		{
 			name = CollisionFX
@@ -27809,6 +27714,12 @@ UrlConfig
 			collisionSound = CollisionFX/Sounds/Bang1
 			scrapeSound = CollisionFX/Sounds/GroundSkid
 			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 13250
+			type = Default
 		}
 	}
 }
@@ -27852,12 +27763,6 @@ UrlConfig
 		{
 			model = Squad/Parts/FuelTank/mk3Fuselage/LF_50
 		}
-		RESOURCE
-		{
-			name = LiquidFuel
-			amount = 5000
-			maxAmount = 5000
-		}
 		MODULE
 		{
 			name = CollisionFX
@@ -27865,6 +27770,12 @@ UrlConfig
 			collisionSound = CollisionFX/Sounds/Bang1
 			scrapeSound = CollisionFX/Sounds/GroundSkid
 			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 26500
+			type = Default
 		}
 	}
 }
@@ -27908,12 +27819,6 @@ UrlConfig
 		{
 			model = Squad/Parts/FuelTank/mk3Fuselage/MONO
 		}
-		RESOURCE
-		{
-			name = MonoPropellant
-			amount = 1000
-			maxAmount = 1000
-		}
 		MODULE
 		{
 			name = CollisionFX
@@ -27921,6 +27826,12 @@ UrlConfig
 			collisionSound = CollisionFX/Sounds/Bang1
 			scrapeSound = CollisionFX/Sounds/GroundSkid
 			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 5300
+			type = Default
 		}
 	}
 }
@@ -27955,12 +27866,6 @@ UrlConfig
 		crashTolerance = 12
 		maxTemp = 2000
 		bulkheadProfiles = size2
-		RESOURCE
-		{
-			name = MonoPropellant
-			amount = 750
-			maxAmount = 750
-		}
 		MODULE
 		{
 			name = CollisionFX
@@ -27972,6 +27877,12 @@ UrlConfig
 		MODEL
 		{
 			model = VenStockRevamp/Squad/Parts/Propulsion/RCSTankR1
+		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 4982
+			type = Default
 		}
 	}
 }
@@ -28011,12 +27922,6 @@ UrlConfig
 		bulkheadProfiles = size0, srf
 		scale = 1
 		rescaleFactor = 1
-		RESOURCE
-		{
-			name = MonoPropellant
-			amount = 80
-			maxAmount = 80
-		}
 		MODULE
 		{
 			name = CollisionFX
@@ -28028,6 +27933,12 @@ UrlConfig
 		MODEL
 		{
 			model = VenStockRevamp/Squad/Parts/Propulsion/RCSFuelTankR10
+		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 84.8
+			type = Default
 		}
 	}
 }
@@ -28063,12 +27974,6 @@ UrlConfig
 		crashTolerance = 12
 		maxTemp = 2000
 		bulkheadProfiles = size1
-		RESOURCE
-		{
-			name = MonoPropellant
-			amount = 250
-			maxAmount = 250
-		}
 		MODULE
 		{
 			name = CollisionFX
@@ -28080,6 +27985,12 @@ UrlConfig
 		MODEL
 		{
 			model = VenStockRevamp/Squad/Parts/Propulsion/RCSFuelTankR25
+		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 530
+			type = Default
 		}
 	}
 }
@@ -28113,12 +28024,6 @@ UrlConfig
 		bulkheadProfiles = srf
 		scale = 1
 		rescaleFactor = 1
-		RESOURCE
-		{
-			name = MonoPropellant
-			amount = 60
-			maxAmount = 60
-		}
 		MODULE
 		{
 			name = CollisionFX
@@ -28141,6 +28046,12 @@ UrlConfig
 		MODULE
 		{
 			name = ModuleCrossFeed
+		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 80.56
+			type = Default
 		}
 	}
 }
@@ -28174,12 +28085,6 @@ UrlConfig
 		bulkheadProfiles = srf
 		scale = 1
 		rescaleFactor = 1
-		RESOURCE
-		{
-			name = LiquidFuel
-			amount = 24
-			maxAmount = 24
-		}
 		MODULE
 		{
 			name = CollisionFX
@@ -28231,12 +28136,6 @@ UrlConfig
 		bulkheadProfiles = srf
 		scale = 1
 		rescaleFactor = 1
-		RESOURCE
-		{
-			name = LiquidFuel
-			amount = 10
-			maxAmount = 10
-		}
 		MODULE
 		{
 			name = CollisionFX
@@ -28255,12 +28154,6 @@ UrlConfig
 		MODEL
 		{
 			model = VenStockRevamp/Squad/Parts/Propulsion/LFOTankRadial
-		}
-		RESOURCE
-		{
-			name = Oxidizer
-			amount = 12
-			maxAmount = 12
 		}
 	}
 }
@@ -28294,12 +28187,6 @@ UrlConfig
 		bulkheadProfiles = srf
 		scale = 1
 		rescaleFactor = 1
-		RESOURCE
-		{
-			name = MonoPropellant
-			amount = 8
-			maxAmount = 8
-		}
 		MODULE
 		{
 			name = CollisionFX
@@ -28351,12 +28238,6 @@ UrlConfig
 		bulkheadProfiles = srf
 		scale = 1
 		rescaleFactor = 1
-		RESOURCE
-		{
-			name = MonoPropellant
-			amount = 150
-			maxAmount = 150
-		}
 		MODULE
 		{
 			name = CollisionFX
@@ -28379,6 +28260,12 @@ UrlConfig
 		MODULE
 		{
 			name = ModuleCrossFeed
+		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 254.4
+			type = Default
 		}
 	}
 }
@@ -28412,12 +28299,6 @@ UrlConfig
 		bulkheadProfiles = srf
 		scale = 1
 		rescaleFactor = 1
-		RESOURCE
-		{
-			name = LiquidFuel
-			amount = 70
-			maxAmount = 70
-		}
 		MODULE
 		{
 			name = CollisionFX
@@ -28469,12 +28350,6 @@ UrlConfig
 		bulkheadProfiles = srf
 		scale = 1
 		rescaleFactor = 1
-		RESOURCE
-		{
-			name = LiquidFuel
-			amount = 30
-			maxAmount = 30
-		}
 		MODULE
 		{
 			name = CollisionFX
@@ -28493,12 +28368,6 @@ UrlConfig
 		MODEL
 		{
 			model = VenStockRevamp/Squad/Parts/Propulsion/LFOtankRadialLong
-		}
-		RESOURCE
-		{
-			name = Oxidizer
-			amount = 36
-			maxAmount = 36
 		}
 	}
 }
@@ -28537,18 +28406,6 @@ UrlConfig
 		bulkheadProfiles = size3, srf
 		scale = 1
 		rescaleFactor = 1
-		RESOURCE
-		{
-			name = LiquidFuel
-			amount = 6480
-			maxAmount = 6480
-		}
-		RESOURCE
-		{
-			name = Oxidizer
-			amount = 7920
-			maxAmount = 7920
-		}
 		MODULE
 		{
 			name = CollisionFX
@@ -28598,18 +28455,6 @@ UrlConfig
 		bulkheadProfiles = size3, srf
 		scale = 1
 		rescaleFactor = 1
-		RESOURCE
-		{
-			name = LiquidFuel
-			amount = 3240
-			maxAmount = 3240
-		}
-		RESOURCE
-		{
-			name = Oxidizer
-			amount = 3960
-			maxAmount = 3960
-		}
 		MODULE
 		{
 			name = CollisionFX
@@ -28659,18 +28504,6 @@ UrlConfig
 		bulkheadProfiles = size3, srf
 		scale = 1
 		rescaleFactor = 1
-		RESOURCE
-		{
-			name = LiquidFuel
-			amount = 1620
-			maxAmount = 1620
-		}
-		RESOURCE
-		{
-			name = Oxidizer
-			amount = 1980
-			maxAmount = 1980
-		}
 		MODULE
 		{
 			name = CollisionFX
@@ -28737,6 +28570,12 @@ UrlConfig
 		{
 			model = VenStockRevamp/Squad/Parts/Propulsion/InlineXenon
 		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 74.2
+			type = Default
+		}
 	}
 }
 UrlConfig
@@ -28791,6 +28630,12 @@ UrlConfig
 		{
 			model = VenStockRevamp/Squad/Parts/Propulsion/LargeXenonTank
 		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 508.8
+			type = Default
+		}
 	}
 }
 UrlConfig
@@ -28839,6 +28684,12 @@ UrlConfig
 		MODEL
 		{
 			model = VenStockRevamp/Squad/Parts/Propulsion/RadialXenon
+		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 34
+			type = Default
 		}
 	}
 }
@@ -30653,12 +30504,6 @@ UrlConfig
 		thermalMassModifier = 2.0
 		fuelCrossFeed = True
 		bulkheadProfiles = size1, srf
-		RESOURCE
-		{
-			name = LiquidFuel
-			amount = 400
-			maxAmount = 400
-		}
 		MODULE
 		{
 			name = CollisionFX
@@ -30671,6 +30516,12 @@ UrlConfig
 		{
 			model = VenStockRevamp/Squad/Parts/Mk1/mk1Tank
 			scale = 1.25, 1.25, 1.25
+		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 2014
+			type = Default
 		}
 	}
 }
@@ -34268,6 +34119,12 @@ UrlConfig
 		{
 			model = VenStockRevamp/Squad/Parts/Structural/LargeAdapter
 		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 1696
+			type = Default
+		}
 	}
 }
 UrlConfig
@@ -34512,12 +34369,6 @@ UrlConfig
 				key = 1 160
 				key = 8 0.001
 			}
-		}
-		RESOURCE
-		{
-			name = SolidFuel
-			amount = 30
-			maxAmount = 30
 		}
 		MODULE
 		{
@@ -34922,12 +34773,6 @@ UrlConfig
 			cube = A, 1.918621,0.4513012,2.017967, 1.927046,0.4519399,1.858654, 2.494907,0.962501,0.154902, 2.494907,0.9625011,0.154902, 3.986614,0.9374123,1.526986, 3.986614,0.8837488,1.579901, -1.192093E-07,0.0002481341,-0.1138154, 3.185405,1.250499,1.727631
 			cube = B, 1.87207,0.423032,1.344706, 1.87207,0.4207015,1.344706, 2.494907,0.962501,0.154902, 2.494907,0.9625011,0.154902, 3.132725,0.9338691,1.4, 3.132725,0.9295117,0.7000001, 0,0.0002481341,-5.960464E-08, 2.5,1.250499,1.5
 		}
-		RESOURCE
-		{
-			name = MonoPropellant
-			amount = 75
-			maxAmount = 75
-		}
 		MODULE
 		{
 			name = ModuleDockingNode
@@ -34963,6 +34808,13 @@ UrlConfig
 			controlTransformName = not_initialized
 			portName = default
 			initialized = false
+		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 657.2
+			type = Default
+			basemass = -1
 		}
 	}
 }
@@ -51697,18 +51549,6 @@ UrlConfig
 		{
 			model = VenStockRevamp/Squad/Parts/Propulsion/CryoBig
 		}
-		RESOURCE
-		{
-			name = LiquidFuel
-			amount = 3600
-			maxAmount = 3600
-		}
-		RESOURCE
-		{
-			name = Oxidizer
-			amount = 4400
-			maxAmount = 4400
-		}
 		MODULE
 		{
 			name = CollisionFX
@@ -51757,18 +51597,6 @@ UrlConfig
 		{
 			model = VenStockRevamp/Squad/Parts/Propulsion/CryoMed
 		}
-		RESOURCE
-		{
-			name = LiquidFuel
-			amount = 2160
-			maxAmount = 2160
-		}
-		RESOURCE
-		{
-			name = Oxidizer
-			amount = 2640
-			maxAmount = 2640
-		}
 		MODULE
 		{
 			name = CollisionFX
@@ -51814,18 +51642,6 @@ UrlConfig
 		MODEL
 		{
 			model = VenStockRevamp/Squad/Parts/Propulsion/CryoCap
-		}
-		RESOURCE
-		{
-			name = LiquidFuel
-			amount = 536
-			maxAmount = 536
-		}
-		RESOURCE
-		{
-			name = Oxidizer
-			amount = 636
-			maxAmount = 636
 		}
 		MODULE
 		{
@@ -51875,18 +51691,6 @@ UrlConfig
 		{
 			model = VenStockRevamp/Squad/Parts/Propulsion/CryoSmall
 		}
-		RESOURCE
-		{
-			name = LiquidFuel
-			amount = 1080
-			maxAmount = 1080
-		}
-		RESOURCE
-		{
-			name = Oxidizer
-			amount = 1320
-			maxAmount = 1320
-		}
 		MODULE
 		{
 			name = CollisionFX
@@ -51932,18 +51736,6 @@ UrlConfig
 		MODEL
 		{
 			model = VenStockRevamp/Squad/Parts/Propulsion/CryoEnd
-		}
-		RESOURCE
-		{
-			name = LiquidFuel
-			amount = 424
-			maxAmount = 424
-		}
-		RESOURCE
-		{
-			name = Oxidizer
-			amount = 518
-			maxAmount = 518
 		}
 		MODULE
 		{
@@ -52227,12 +52019,6 @@ UrlConfig
 				key = 1 100
 				key = 4 0.001
 			}
-		}
-		RESOURCE
-		{
-			name = MonoPropellant
-			amount = 15
-			maxAmount = 15
 		}
 		MODULE
 		{
@@ -52881,18 +52667,6 @@ UrlConfig
 			environments = 15
 			useStaging = True
 			useEvent = False
-		}
-		RESOURCE
-		{
-			name = LiquidFuel
-			amount = 10
-			maxAmount = 10
-		}
-		RESOURCE
-		{
-			name = Oxidizer
-			amount = 12.2
-			maxAmount = 12.2
 		}
 		MODULE
 		{
@@ -53671,12 +53445,6 @@ UrlConfig
 			name = FlagDecal
 			textureQuadName = FlagTransform
 		}
-		RESOURCE
-		{
-			name = SolidFuel
-			amount = 8000
-			maxAmount = 8000
-		}
 		MODULE
 		{
 			name = ModuleGimbal
@@ -54039,12 +53807,6 @@ UrlConfig
 			name = ModuleAnimateHeat
 			ThermalAnim = RT-2
 		}
-		RESOURCE
-		{
-			name = SolidFuel
-			amount = 75
-			maxAmount = 75
-		}
 		MODULE
 		{
 			name = ModuleTestSubject
@@ -54163,12 +53925,6 @@ UrlConfig
 			useGimbalResponseSpeed = true
 			gimbalResponseSpeed = 6
 			gimbalRange = 1.5
-		}
-		RESOURCE
-		{
-			name = SolidFuel
-			amount = 500
-			maxAmount = 500
 		}
 		MODULE
 		{
