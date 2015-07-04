@@ -1,4 +1,4 @@
-patchedNodeCount = 3890
+patchedNodeCount = 4098
 catEatenCount = 0
 UrlConfig
 {
@@ -371,6 +371,14 @@ UrlConfig
 		}
 		MODULE
 		{
+			name = ModuleTweakableReactionWheel
+		}
+		MODULE
+		{
+			name = ModuleTweakableSAS
+		}
+		MODULE
+		{
 			name = MechJebCore
 			blacklist = MechJebModuleAscentAutopilot MechJebModuleAscentGuidance MechJebModuleAscentPathEditor MechJebModuleAttitudeAdjustment MechJebModuleDockingAutopilot MechJebModuleDockingGuidance MechJebModuleLandingAutopilot MechJebModuleLandingGuidance MechJebModuleLandingPredictions MechJebModuleNodeEditor MechJebModuleRendezvousAutopilot MechJebModuleRendezvousAutopilotWindow MechJebModuleRoverController MechJebModuleRoverWindow MechJebModuleSpaceplaneAutopilot MechJebModuleSpaceplaneGuidance MechJebModuleTranslatron MechJebModuleWarpHelper
 			RESOURCE
@@ -441,6 +449,10 @@ UrlConfig
 			scrapeSound = CollisionFX/Sounds/GroundSkid
 			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
+		MODULE
+		{
+			name = ModuleTweakableAnimateGeneric
+		}
 	}
 }
 UrlConfig
@@ -493,6 +505,10 @@ UrlConfig
 			collisionSound = CollisionFX/Sounds/Bang1
 			scrapeSound = CollisionFX/Sounds/GroundSkid
 			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = ModuleTweakableSolarPanel
 		}
 	}
 }
@@ -8282,6 +8298,10 @@ UrlConfig
 		{
 			name = ModuleSPUPassive
 		}
+		MODULE
+		{
+			name = ModuleTweakableAnimateGeneric
+		}
 	}
 }
 UrlConfig
@@ -8422,6 +8442,10 @@ UrlConfig
 		{
 			name = ModuleSPUPassive
 		}
+		MODULE
+		{
+			name = ModuleTweakableAnimateGeneric
+		}
 	}
 }
 UrlConfig
@@ -8493,6 +8517,10 @@ UrlConfig
 		MODULE
 		{
 			name = ModuleSPUPassive
+		}
+		MODULE
+		{
+			name = ModuleTweakableAnimateGeneric
 		}
 	}
 }
@@ -10826,6 +10854,10 @@ UrlConfig
 		{
 			model = VenStockRevamp/Squad/Parts/Intakes/RadialIntake
 		}
+		MODULE
+		{
+			name = ModuleTweakableResourceIntake
+		}
 	}
 }
 UrlConfig
@@ -11498,6 +11530,10 @@ UrlConfig
 		{
 			model = VenStockRevamp/Squad/Parts/Intakes/BasicIntake
 		}
+		MODULE
+		{
+			name = ModuleTweakableResourceIntake
+		}
 	}
 }
 UrlConfig
@@ -11576,6 +11612,10 @@ UrlConfig
 			type = stack_square
 			defaultScale = 1.25
 		}
+		MODULE
+		{
+			name = ModuleTweakableResourceIntake
+		}
 	}
 }
 UrlConfig
@@ -11643,6 +11683,10 @@ UrlConfig
 		MODEL
 		{
 			model = VenStockRevamp/Squad/Parts/ScienceParts/AVI
+		}
+		MODULE
+		{
+			name = ModuleTweakableSAS
 		}
 	}
 }
@@ -12080,6 +12124,10 @@ UrlConfig
 			basemass = -1
 			type = Default
 		}
+		MODULE
+		{
+			name = ModuleTweakableResourceIntake
+		}
 	}
 }
 UrlConfig
@@ -12162,6 +12210,10 @@ UrlConfig
 			volume = 212
 			basemass = -1
 			type = Default
+		}
+		MODULE
+		{
+			name = ModuleTweakableResourceIntake
 		}
 	}
 }
@@ -12497,6 +12549,10 @@ UrlConfig
 			model = VenStockRevamp/Squad/Parts/Heatshields/HeatShieldS1
 			scale = 1.0,1.2,1.0
 		}
+		MODULE
+		{
+			name = ModuleTweakableJettison
+		}
 	}
 }
 UrlConfig
@@ -12583,6 +12639,10 @@ UrlConfig
 		MODEL
 		{
 			model = VenStockRevamp/Squad/Parts/Heatshields/HeatShieldS0
+		}
+		MODULE
+		{
+			name = ModuleTweakableJettison
 		}
 	}
 }
@@ -12673,6 +12733,10 @@ UrlConfig
 			model = VenStockRevamp/Squad/Parts/Heatshields/HeatShieldS2
 			scale = 1.0,1.2,1.0
 		}
+		MODULE
+		{
+			name = ModuleTweakableJettison
+		}
 	}
 }
 UrlConfig
@@ -12762,6 +12826,10 @@ UrlConfig
 			model = VenStockRevamp/Squad/Parts/Heatshields/HeatShieldS3
 			scale = 1.0,1.0,1.0
 		}
+		MODULE
+		{
+			name = ModuleTweakableJettison
+		}
 	}
 }
 UrlConfig
@@ -12826,6 +12894,10 @@ UrlConfig
 		{
 			name = TweakScale
 			type = free_square
+		}
+		MODULE
+		{
+			name = ModuleTweakableResourceIntake
 		}
 	}
 }
@@ -12961,6 +13033,10 @@ UrlConfig
 		{
 			model = VenStockRevamp/Squad/Parts/Intakes/RamIntake
 			rotation = 0, 180, 0
+		}
+		MODULE
+		{
+			name = ModuleTweakableResourceIntake
 		}
 	}
 }
@@ -14813,6 +14889,10 @@ UrlConfig
 		{
 			model = VenStockRevamp/Squad/Parts/Electrical/ReactionWheels/2_5m
 		}
+		MODULE
+		{
+			name = ModuleTweakableReactionWheel
+		}
 	}
 }
 UrlConfig
@@ -14929,6 +15009,14 @@ UrlConfig
 			animationName = WindowedPodLights
 			startEventGUIName = Lights On
 			endEventGUIName = Lights Off
+		}
+		MODULE
+		{
+			name = ModuleTweakableAnimateGeneric
+		}
+		MODULE
+		{
+			name = ModuleTweakableReactionWheel
 		}
 		MODULE
 		{
@@ -15085,6 +15173,10 @@ UrlConfig
 			startEventGUIName = Lights On
 			endEventGUIName = Lights Off
 		}
+		MODULE
+		{
+			name = ModuleTweakableAnimateGeneric
+		}
 	}
 }
 UrlConfig
@@ -15150,6 +15242,10 @@ UrlConfig
 		{
 			model = VenStockRevamp/Squad/Parts/Electrical/ReactionWheels/1_25m
 		}
+		MODULE
+		{
+			name = ModuleTweakableReactionWheel
+		}
 	}
 }
 UrlConfig
@@ -15212,6 +15308,10 @@ UrlConfig
 		MODEL
 		{
 			model = VenStockRevamp/Squad/Parts/Electrical/ReactionWheels/0_625m
+		}
+		MODULE
+		{
+			name = ModuleTweakableReactionWheel
 		}
 	}
 }
@@ -15276,6 +15376,10 @@ UrlConfig
 		{
 			model = VenStockRevamp/Squad/Parts/Electrical/ReactionWheels/Radial
 			Scale = 1.3, 1.3, 1.3
+		}
+		MODULE
+		{
+			name = ModuleTweakableReactionWheel
 		}
 	}
 }
@@ -15412,6 +15516,18 @@ UrlConfig
 		}
 		MODULE
 		{
+			name = ModuleTweakableAnimateGeneric
+		}
+		MODULE
+		{
+			name = ModuleTweakableRCS
+		}
+		MODULE
+		{
+			name = ModuleTweakableReactionWheel
+		}
+		MODULE
+		{
 			name = MechJebCore
 			blacklist = MechJebModuleAscentAutopilot MechJebModuleAscentGuidance MechJebModuleAscentPathEditor MechJebModuleAttitudeAdjustment MechJebModuleDockingAutopilot MechJebModuleDockingGuidance MechJebModuleLandingAutopilot MechJebModuleLandingGuidance MechJebModuleLandingPredictions MechJebModuleNodeEditor MechJebModuleRendezvousAutopilot MechJebModuleRendezvousAutopilotWindow MechJebModuleRoverController MechJebModuleRoverWindow MechJebModuleSpaceplaneAutopilot MechJebModuleSpaceplaneGuidance MechJebModuleTranslatron MechJebModuleWarpHelper
 			RESOURCE
@@ -15534,6 +15650,14 @@ UrlConfig
 		}
 		MODULE
 		{
+			name = ModuleTweakableAnimateGeneric
+		}
+		MODULE
+		{
+			name = ModuleTweakableReactionWheel
+		}
+		MODULE
+		{
 			name = MechJebCore
 			blacklist = MechJebModuleAscentAutopilot MechJebModuleAscentGuidance MechJebModuleAscentPathEditor MechJebModuleAttitudeAdjustment MechJebModuleDockingAutopilot MechJebModuleDockingGuidance MechJebModuleLandingAutopilot MechJebModuleLandingGuidance MechJebModuleLandingPredictions MechJebModuleNodeEditor MechJebModuleRendezvousAutopilot MechJebModuleRendezvousAutopilotWindow MechJebModuleRoverController MechJebModuleRoverWindow MechJebModuleSpaceplaneAutopilot MechJebModuleSpaceplaneGuidance MechJebModuleTranslatron MechJebModuleWarpHelper
 			RESOURCE
@@ -15642,6 +15766,14 @@ UrlConfig
 			collisionSound = CollisionFX/Sounds/Bang1
 			scrapeSound = CollisionFX/Sounds/GroundSkid
 			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = ModuleTweakableAnimateGeneric
+		}
+		MODULE
+		{
+			name = ModuleTweakableReactionWheel
 		}
 		MODULE
 		{
@@ -15762,6 +15894,14 @@ UrlConfig
 			animationName = MK1CabinLights
 			startEventGUIName = Lights On
 			endEventGUIName = Lights Off
+		}
+		MODULE
+		{
+			name = ModuleTweakableAnimateGeneric
+		}
+		MODULE
+		{
+			name = ModuleTweakableReactionWheel
 		}
 		MODULE
 		{
@@ -15894,6 +16034,14 @@ UrlConfig
 		}
 		MODULE
 		{
+			name = ModuleTweakableAnimateGeneric
+		}
+		MODULE
+		{
+			name = ModuleTweakableReactionWheel
+		}
+		MODULE
+		{
 			name = MechJebCore
 			blacklist = MechJebModuleAscentAutopilot MechJebModuleAscentGuidance MechJebModuleAscentPathEditor MechJebModuleAttitudeAdjustment MechJebModuleDockingAutopilot MechJebModuleDockingGuidance MechJebModuleLandingAutopilot MechJebModuleLandingGuidance MechJebModuleLandingPredictions MechJebModuleNodeEditor MechJebModuleRendezvousAutopilot MechJebModuleRendezvousAutopilotWindow MechJebModuleRoverController MechJebModuleRoverWindow MechJebModuleSpaceplaneAutopilot MechJebModuleSpaceplaneGuidance MechJebModuleTranslatron MechJebModuleWarpHelper
 			RESOURCE
@@ -16015,6 +16163,14 @@ UrlConfig
 			collisionSound = CollisionFX/Sounds/Bang1
 			scrapeSound = CollisionFX/Sounds/GroundSkid
 			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = ModuleTweakableAnimateGeneric
+		}
+		MODULE
+		{
+			name = ModuleTweakableReactionWheel
 		}
 		MODULE
 		{
@@ -16140,6 +16296,14 @@ UrlConfig
 		}
 		MODULE
 		{
+			name = ModuleTweakableAnimateGeneric
+		}
+		MODULE
+		{
+			name = ModuleTweakableReactionWheel
+		}
+		MODULE
+		{
 			name = MechJebCore
 			blacklist = MechJebModuleAscentAutopilot MechJebModuleAscentGuidance MechJebModuleAscentPathEditor MechJebModuleAttitudeAdjustment MechJebModuleDockingAutopilot MechJebModuleDockingGuidance MechJebModuleLandingAutopilot MechJebModuleLandingGuidance MechJebModuleLandingPredictions MechJebModuleNodeEditor MechJebModuleRendezvousAutopilot MechJebModuleRendezvousAutopilotWindow MechJebModuleRoverController MechJebModuleRoverWindow MechJebModuleSpaceplaneAutopilot MechJebModuleSpaceplaneGuidance MechJebModuleTranslatron MechJebModuleWarpHelper
 			RESOURCE
@@ -16241,6 +16405,14 @@ UrlConfig
 				PacketSize = 2
 				PacketResourceCost = 15.0
 			}
+		}
+		MODULE
+		{
+			name = ModuleTweakableReactionWheel
+		}
+		MODULE
+		{
+			name = ModuleTweakableSAS
 		}
 		MODULE
 		{
@@ -16355,6 +16527,14 @@ UrlConfig
 			animationName = light
 			startEventGUIName = Lights On
 			endEventGUIName = Lights Off
+		}
+		MODULE
+		{
+			name = ModuleTweakableAnimateGeneric
+		}
+		MODULE
+		{
+			name = ModuleTweakableReactionWheel
 		}
 		MODULE
 		{
@@ -16474,6 +16654,14 @@ UrlConfig
 		}
 		MODULE
 		{
+			name = ModuleTweakableAnimateGeneric
+		}
+		MODULE
+		{
+			name = ModuleTweakableReactionWheel
+		}
+		MODULE
+		{
 			name = MechJebCore
 			blacklist = MechJebModuleAscentAutopilot MechJebModuleAscentGuidance MechJebModuleAscentPathEditor MechJebModuleAttitudeAdjustment MechJebModuleDockingAutopilot MechJebModuleDockingGuidance MechJebModuleLandingAutopilot MechJebModuleLandingGuidance MechJebModuleLandingPredictions MechJebModuleNodeEditor MechJebModuleRendezvousAutopilot MechJebModuleRendezvousAutopilotWindow MechJebModuleRoverController MechJebModuleRoverWindow MechJebModuleSpaceplaneAutopilot MechJebModuleSpaceplaneGuidance MechJebModuleTranslatron MechJebModuleWarpHelper
 			RESOURCE
@@ -16564,6 +16752,10 @@ UrlConfig
 				PacketSize = 2
 				PacketResourceCost = 15.0
 			}
+		}
+		MODULE
+		{
+			name = ModuleTweakableSAS
 		}
 		MODULE
 		{
@@ -16673,6 +16865,14 @@ UrlConfig
 		}
 		MODULE
 		{
+			name = ModuleTweakableReactionWheel
+		}
+		MODULE
+		{
+			name = ModuleTweakableSAS
+		}
+		MODULE
+		{
 			name = MechJebCore
 			blacklist = MechJebModuleAscentAutopilot MechJebModuleAscentGuidance MechJebModuleAscentPathEditor MechJebModuleAttitudeAdjustment MechJebModuleDockingAutopilot MechJebModuleDockingGuidance MechJebModuleLandingAutopilot MechJebModuleLandingGuidance MechJebModuleLandingPredictions MechJebModuleNodeEditor MechJebModuleRendezvousAutopilot MechJebModuleRendezvousAutopilotWindow MechJebModuleRoverController MechJebModuleRoverWindow MechJebModuleSpaceplaneAutopilot MechJebModuleSpaceplaneGuidance MechJebModuleTranslatron MechJebModuleWarpHelper
 			RESOURCE
@@ -16778,6 +16978,14 @@ UrlConfig
 		}
 		MODULE
 		{
+			name = ModuleTweakableReactionWheel
+		}
+		MODULE
+		{
+			name = ModuleTweakableSAS
+		}
+		MODULE
+		{
 			name = MechJebCore
 			blacklist = MechJebModuleAscentAutopilot MechJebModuleAscentGuidance MechJebModuleAscentPathEditor MechJebModuleAttitudeAdjustment MechJebModuleDockingAutopilot MechJebModuleDockingGuidance MechJebModuleLandingAutopilot MechJebModuleLandingGuidance MechJebModuleLandingPredictions MechJebModuleNodeEditor MechJebModuleRendezvousAutopilot MechJebModuleRendezvousAutopilotWindow MechJebModuleRoverController MechJebModuleRoverWindow MechJebModuleSpaceplaneAutopilot MechJebModuleSpaceplaneGuidance MechJebModuleTranslatron MechJebModuleWarpHelper
 			RESOURCE
@@ -16872,6 +17080,10 @@ UrlConfig
 		}
 		MODULE
 		{
+			name = ModuleTweakableSAS
+		}
+		MODULE
+		{
 			name = MechJebCore
 			blacklist = MechJebModuleAscentAutopilot MechJebModuleAscentGuidance MechJebModuleAscentPathEditor MechJebModuleAttitudeAdjustment MechJebModuleDockingAutopilot MechJebModuleDockingGuidance MechJebModuleLandingAutopilot MechJebModuleLandingGuidance MechJebModuleLandingPredictions MechJebModuleNodeEditor MechJebModuleRendezvousAutopilot MechJebModuleRendezvousAutopilotWindow MechJebModuleRoverController MechJebModuleRoverWindow MechJebModuleSpaceplaneAutopilot MechJebModuleSpaceplaneGuidance MechJebModuleTranslatron MechJebModuleWarpHelper
 			RESOURCE
@@ -16958,6 +17170,10 @@ UrlConfig
 				PacketSize = 2
 				PacketResourceCost = 15.0
 			}
+		}
+		MODULE
+		{
+			name = ModuleTweakableSAS
 		}
 		MODULE
 		{
@@ -17070,6 +17286,14 @@ UrlConfig
 		}
 		MODULE
 		{
+			name = ModuleTweakableReactionWheel
+		}
+		MODULE
+		{
+			name = ModuleTweakableSAS
+		}
+		MODULE
+		{
 			name = MechJebCore
 			blacklist = MechJebModuleAscentAutopilot MechJebModuleAscentGuidance MechJebModuleAscentPathEditor MechJebModuleAttitudeAdjustment MechJebModuleDockingAutopilot MechJebModuleDockingGuidance MechJebModuleLandingAutopilot MechJebModuleLandingGuidance MechJebModuleLandingPredictions MechJebModuleNodeEditor MechJebModuleRendezvousAutopilot MechJebModuleRendezvousAutopilotWindow MechJebModuleRoverController MechJebModuleRoverWindow MechJebModuleSpaceplaneAutopilot MechJebModuleSpaceplaneGuidance MechJebModuleTranslatron MechJebModuleWarpHelper
 			RESOURCE
@@ -17174,6 +17398,14 @@ UrlConfig
 				PacketSize = 2
 				PacketResourceCost = 15.0
 			}
+		}
+		MODULE
+		{
+			name = ModuleTweakableReactionWheel
+		}
+		MODULE
+		{
+			name = ModuleTweakableSAS
 		}
 		MODULE
 		{
@@ -17476,6 +17708,10 @@ UrlConfig
 		{
 			model = VenStockRevamp/Squad/Parts/Electrical/SolarSmall/model1x6S
 		}
+		MODULE
+		{
+			name = ModuleTweakableSolarPanel
+		}
 	}
 }
 UrlConfig
@@ -17543,6 +17779,10 @@ UrlConfig
 		MODEL
 		{
 			model = VenStockRevamp/Squad/Parts/Electrical/SolarSmall/model1x6
+		}
+		MODULE
+		{
+			name = ModuleTweakableSolarPanel
 		}
 	}
 }
@@ -17612,6 +17852,10 @@ UrlConfig
 		{
 			model = VenStockRevamp/Squad/Parts/Electrical/SolarSmall/1x3W
 		}
+		MODULE
+		{
+			name = ModuleTweakableSolarPanel
+		}
 	}
 }
 UrlConfig
@@ -17680,6 +17924,10 @@ UrlConfig
 		{
 			model = VenStockRevamp/Squad/Parts/Electrical/SolarSmall/1x3S
 		}
+		MODULE
+		{
+			name = ModuleTweakableSolarPanel
+		}
 	}
 }
 UrlConfig
@@ -17746,6 +17994,10 @@ UrlConfig
 		MODEL
 		{
 			model = VenStockRevamp/Squad/Parts/Electrical/SolarSmall/model
+		}
+		MODULE
+		{
+			name = ModuleTweakableSolarPanel
 		}
 	}
 }
@@ -17815,6 +18067,10 @@ UrlConfig
 		{
 			model = VenStockRevamp/Squad/Parts/Electrical/SolarSmall/model2x3
 		}
+		MODULE
+		{
+			name = ModuleTweakableSolarPanel
+		}
 	}
 }
 UrlConfig
@@ -17882,6 +18138,10 @@ UrlConfig
 		{
 			model = VenStockRevamp/Squad/Parts/Electrical/gigantorXlSolarArray/model
 		}
+		MODULE
+		{
+			name = ModuleTweakableSolarPanel
+		}
 	}
 }
 UrlConfig
@@ -17922,7 +18182,7 @@ UrlConfig
 			pivotName = suncatcher
 			isBreakable = false
 			resourceName = ElectricCharge
-			chargeRate = 0.35
+			chargeRate = 0.011574074
 			raycastTransformName = suncatcher
 		}
 		MODULE
@@ -17947,6 +18207,10 @@ UrlConfig
 		MODEL
 		{
 			model = VenStockRevamp/Squad/Parts/Electrical/SolarSmall/modelRadial
+		}
+		MODULE
+		{
+			name = ModuleTweakableSolarPanel
 		}
 	}
 }
@@ -18060,6 +18324,12 @@ UrlConfig
 		{
 			model = VenStockRevamp/Squad/Parts/Electrical/Batteries/model100
 		}
+		RESOURCE
+		{
+			name = ElectricCharge
+			amount = 100
+			maxAmount = 100
+		}
 	}
 }
 UrlConfig
@@ -18110,6 +18380,12 @@ UrlConfig
 		MODEL
 		{
 			model = VenStockRevamp/Squad/Parts/Electrical/Batteries/model1k
+		}
+		RESOURCE
+		{
+			name = ElectricCharge
+			amount = 1000
+			maxAmount = 1000
 		}
 	}
 }
@@ -18163,6 +18439,12 @@ UrlConfig
 		{
 			model = VenStockRevamp/Squad/Parts/Electrical/Batteries/model200
 		}
+		RESOURCE
+		{
+			name = ElectricCharge
+			amount = 200
+			maxAmount = 200
+		}
 	}
 }
 UrlConfig
@@ -18212,6 +18494,12 @@ UrlConfig
 		MODEL
 		{
 			model = VenStockRevamp/Squad/Parts/Electrical/Batteries/model400
+		}
+		RESOURCE
+		{
+			name = ElectricCharge
+			amount = 400
+			maxAmount = 400
 		}
 	}
 }
@@ -18263,6 +18551,12 @@ UrlConfig
 		MODEL
 		{
 			model = VenStockRevamp/Squad/Parts/Electrical/Batteries/model
+		}
+		RESOURCE
+		{
+			name = ElectricCharge
+			amount = 4000
+			maxAmount = 4000
 		}
 	}
 }
@@ -18405,6 +18699,10 @@ UrlConfig
 					fixedEmissions = false
 				}
 			}
+		}
+		MODULE
+		{
+			name = ModuleTweakableJettison
 		}
 	}
 }
@@ -18737,6 +19035,10 @@ UrlConfig
 					}
 				}
 			}
+		}
+		MODULE
+		{
+			name = ModuleTweakableGimbal
 		}
 	}
 }
@@ -19075,6 +19377,10 @@ UrlConfig
 				}
 			}
 		}
+		MODULE
+		{
+			name = ModuleTweakableGimbal
+		}
 	}
 }
 UrlConfig
@@ -19260,6 +19566,10 @@ UrlConfig
 			lightBlue = 0.68
 			jitterMultiplier = 10.5
 			multiplierOnIva = 0.5
+		}
+		MODULE
+		{
+			name = ModuleTweakableGimbal
 		}
 	}
 }
@@ -19489,6 +19799,14 @@ UrlConfig
 			lightBlue = 0.68
 			jitterMultiplier = 10.5
 			multiplierOnIva = 0.5
+		}
+		MODULE
+		{
+			name = ModuleTweakableJettison
+		}
+		MODULE
+		{
+			name = ModuleTweakableGimbal
 		}
 	}
 }
@@ -19818,6 +20136,10 @@ UrlConfig
 				}
 			}
 		}
+		MODULE
+		{
+			name = ModuleTweakableJettison
+		}
 	}
 }
 UrlConfig
@@ -19950,6 +20272,10 @@ UrlConfig
 			lightBlue = 0.68
 			jitterMultiplier = 10.5
 			multiplierOnIva = 0.5
+		}
+		MODULE
+		{
+			name = ModuleTweakableJettison
 		}
 	}
 }
@@ -20179,6 +20505,10 @@ UrlConfig
 			lightBlue = 0.68
 			jitterMultiplier = 10.5
 			multiplierOnIva = 0.5
+		}
+		MODULE
+		{
+			name = ModuleTweakableGimbal
 		}
 	}
 }
@@ -20600,8 +20930,8 @@ UrlConfig
 				}
 				atmosphereCurve
 				{
-					key = 0 324
-					key = 1 79
+					key = 0 298
+					key = 1 73
 					key = 3 0.001
 				}
 			}
@@ -20623,11 +20953,19 @@ UrlConfig
 				}
 				atmosphereCurve
 				{
-					key = 0 324
-					key = 1 79
+					key = 0 302
+					key = 1 70
 					key = 3 0.001
 				}
 			}
+		}
+		MODULE
+		{
+			name = ModuleTweakableJettison
+		}
+		MODULE
+		{
+			name = ModuleTweakableGimbal
 		}
 	}
 }
@@ -20951,6 +21289,10 @@ UrlConfig
 				}
 			}
 		}
+		MODULE
+		{
+			name = ModuleTweakableJettison
+		}
 	}
 }
 UrlConfig
@@ -21271,6 +21613,10 @@ UrlConfig
 					loop = false
 				}
 			}
+		}
+		MODULE
+		{
+			name = ModuleTweakableJettison
 		}
 	}
 }
@@ -21690,6 +22036,14 @@ UrlConfig
 				}
 			}
 		}
+		MODULE
+		{
+			name = ModuleTweakableJettison
+		}
+		MODULE
+		{
+			name = ModuleTweakableGimbal
+		}
 	}
 }
 UrlConfig
@@ -22075,6 +22429,14 @@ UrlConfig
 				}
 			}
 		}
+		MODULE
+		{
+			name = ModuleTweakableJettison
+		}
+		MODULE
+		{
+			name = ModuleTweakableGimbal
+		}
 	}
 }
 UrlConfig
@@ -22208,6 +22570,10 @@ UrlConfig
 			lightBlue = 0.68
 			jitterMultiplier = 10.5
 			multiplierOnIva = 0.5
+		}
+		MODULE
+		{
+			name = ModuleTweakableGimbal
 		}
 	}
 }
@@ -22548,6 +22914,14 @@ UrlConfig
 					loop = false
 				}
 			}
+		}
+		MODULE
+		{
+			name = ModuleTweakableJettison
+		}
+		MODULE
+		{
+			name = ModuleTweakableGimbal
 		}
 	}
 }
@@ -22945,6 +23319,14 @@ UrlConfig
 				}
 			}
 		}
+		MODULE
+		{
+			name = ModuleTweakableJettison
+		}
+		MODULE
+		{
+			name = ModuleTweakableGimbal
+		}
 	}
 }
 UrlConfig
@@ -23154,6 +23536,14 @@ UrlConfig
 			lightBlue = 0.68
 			jitterMultiplier = 10.5
 			multiplierOnIva = 0.5
+		}
+		MODULE
+		{
+			name = ModuleTweakableJettison
+		}
+		MODULE
+		{
+			name = ModuleTweakableGimbal
 		}
 	}
 }
@@ -23366,6 +23756,10 @@ UrlConfig
 			lightBlue = 0.68
 			jitterMultiplier = 10.5
 			multiplierOnIva = 0.5
+		}
+		MODULE
+		{
+			name = ModuleTweakableGimbal
 		}
 	}
 }
@@ -23806,6 +24200,10 @@ UrlConfig
 				}
 			}
 		}
+		MODULE
+		{
+			name = ModuleTweakableGimbal
+		}
 	}
 }
 UrlConfig
@@ -24177,6 +24575,10 @@ UrlConfig
 				}
 			}
 		}
+		MODULE
+		{
+			name = ModuleTweakableGimbal
+		}
 	}
 }
 UrlConfig
@@ -24533,6 +24935,14 @@ UrlConfig
 				}
 			}
 		}
+		MODULE
+		{
+			name = ModuleTweakableJettison
+		}
+		MODULE
+		{
+			name = ModuleTweakableGimbal
+		}
 	}
 }
 UrlConfig
@@ -24826,6 +25236,10 @@ UrlConfig
 					}
 				}
 			}
+		}
+		MODULE
+		{
+			name = ModuleTweakableGimbal
 		}
 	}
 }
@@ -25226,6 +25640,10 @@ UrlConfig
 				}
 			}
 		}
+		MODULE
+		{
+			name = ModuleTweakableJettison
+		}
 	}
 }
 UrlConfig
@@ -25546,6 +25964,14 @@ UrlConfig
 				}
 			}
 		}
+		MODULE
+		{
+			name = ModuleTweakableJettison
+		}
+		MODULE
+		{
+			name = ModuleTweakableGimbal
+		}
 	}
 }
 UrlConfig
@@ -25859,6 +26285,10 @@ UrlConfig
 					loop = false
 				}
 			}
+		}
+		MODULE
+		{
+			name = ModuleTweakableJettison
 		}
 	}
 }
@@ -26255,6 +26685,10 @@ UrlConfig
 		MODEL
 		{
 			model = VenStockRevamp/Squad/Parts/Propulsion/VernierEngine
+		}
+		MODULE
+		{
+			name = ModuleTweakableRCS
 		}
 	}
 }
@@ -28097,6 +28531,10 @@ UrlConfig
 			scrapeSound = CollisionFX/Sounds/GroundSkid
 			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
+		MODULE
+		{
+			name = ModuleTweakableAnimateGeneric
+		}
 	}
 }
 UrlConfig
@@ -29351,6 +29789,11 @@ UrlConfig
 			volume = 74.2
 			type = Default
 		}
+		MODULE
+		{
+			name = ModuleTweakableFuelPump
+			ResourceNames = XenonGas
+		}
 	}
 }
 UrlConfig
@@ -29417,6 +29860,11 @@ UrlConfig
 			volume = 508.8
 			type = Default
 		}
+		MODULE
+		{
+			name = ModuleTweakableFuelPump
+			ResourceNames = XenonGas
+		}
 	}
 }
 UrlConfig
@@ -29476,6 +29924,11 @@ UrlConfig
 			name = ModuleFuelTanks
 			volume = 34
 			type = Default
+		}
+		MODULE
+		{
+			name = ModuleTweakableFuelPump
+			ResourceNames = XenonGas
 		}
 	}
 }
@@ -30576,6 +31029,10 @@ UrlConfig
 			model = VenStockRevamp/Squad/Parts/ScienceParts/MysteryGoo
 			scale = 1.2,1.2,1.2
 		}
+		MODULE
+		{
+			name = ModuleTweakableAnimateGeneric
+		}
 	}
 }
 UrlConfig
@@ -30688,6 +31145,10 @@ UrlConfig
 			startEventGUIName = Lights On
 			endEventGUIName = Lights Off
 		}
+		MODULE
+		{
+			name = ModuleTweakableAnimateGeneric
+		}
 	}
 }
 UrlConfig
@@ -30768,6 +31229,10 @@ UrlConfig
 		{
 			model = VenStockRevamp/Squad/Parts/ScienceParts/SC-9001
 			Scale = 1.3, 1.3, 1.3
+		}
+		MODULE
+		{
+			name = ModuleTweakableAnimateGeneric
 		}
 	}
 }
@@ -31454,6 +31919,10 @@ UrlConfig
 			model = VenStockRevamp/Squad/Parts/Mk1/InlineIntake
 			scale = 1.25, 1.25, 1.25
 		}
+		MODULE
+		{
+			name = ModuleTweakableResourceIntake
+		}
 	}
 }
 UrlConfig
@@ -31602,6 +32071,18 @@ UrlConfig
 			lightGreen = 0.88
 			lightBlue = 0.68
 			lightDuration = 0.1
+		}
+		MODULE
+		{
+			name = ModuleTweakableDecouple
+			decouplerModuleName = ModuleDecouple
+		}
+		MODULE
+		{
+			name = ModuleStagingToggle
+			defaultDisabled = false
+			activeInFlight = true
+			activeInEditor = true
 		}
 	}
 }
@@ -32229,6 +32710,23 @@ UrlConfig
 			lightGreen = 0.88
 			lightBlue = 0.68
 			lightDuration = 0.1
+		}
+		MODULE
+		{
+			name = ModuleTweakableDecouple
+			decouplerModuleName = ModuleAnchoredDecoupler
+		}
+		MODULE
+		{
+			name = ModuleTweakableCrossFeed
+			fuelCrossFeed = false
+		}
+		MODULE
+		{
+			name = ModuleStagingToggle
+			defaultDisabled = false
+			activeInFlight = true
+			activeInEditor = true
 		}
 	}
 }
@@ -33018,6 +33516,12 @@ UrlConfig
 		{
 			name = ModuleSPUPassive
 		}
+		MODULE
+		{
+			name = ModuleTweakableAnimateGeneric
+			fieldEnabledText = Deployed
+			fieldDisabledText = Retracted
+		}
 	}
 }
 UrlConfig
@@ -33100,6 +33604,12 @@ UrlConfig
 		{
 			name = ModuleSPUPassive
 		}
+		MODULE
+		{
+			name = ModuleTweakableAnimateGeneric
+			fieldEnabledText = Deployed
+			fieldDisabledText = Retracted
+		}
 	}
 }
 UrlConfig
@@ -33176,6 +33686,12 @@ UrlConfig
 		MODULE
 		{
 			name = ModuleSPUPassive
+		}
+		MODULE
+		{
+			name = ModuleTweakableAnimateGeneric
+			fieldEnabledText = Extended
+			fieldDisabledText = Retracted
 		}
 	}
 }
@@ -33264,6 +33780,23 @@ UrlConfig
 			lightGreen = 0.88
 			lightBlue = 0.68
 			lightDuration = 0.1
+		}
+		MODULE
+		{
+			name = ModuleTweakableDecouple
+			decouplerModuleName = ModuleAnchoredDecoupler
+		}
+		MODULE
+		{
+			name = ModuleTweakableCrossFeed
+			fuelCrossFeed = false
+		}
+		MODULE
+		{
+			name = ModuleStagingToggle
+			defaultDisabled = false
+			activeInFlight = true
+			activeInEditor = true
 		}
 	}
 }
@@ -33354,6 +33887,23 @@ UrlConfig
 			lightBlue = 0.68
 			lightDuration = 0.1
 		}
+		MODULE
+		{
+			name = ModuleTweakableDecouple
+			decouplerModuleName = ModuleAnchoredDecoupler
+		}
+		MODULE
+		{
+			name = ModuleTweakableCrossFeed
+			fuelCrossFeed = false
+		}
+		MODULE
+		{
+			name = ModuleStagingToggle
+			defaultDisabled = false
+			activeInFlight = true
+			activeInEditor = true
+		}
 	}
 }
 UrlConfig
@@ -33441,6 +33991,23 @@ UrlConfig
 			lightGreen = 0.88
 			lightBlue = 0.68
 			lightDuration = 0.1
+		}
+		MODULE
+		{
+			name = ModuleTweakableDecouple
+			decouplerModuleName = ModuleAnchoredDecoupler
+		}
+		MODULE
+		{
+			name = ModuleTweakableCrossFeed
+			fuelCrossFeed = false
+		}
+		MODULE
+		{
+			name = ModuleStagingToggle
+			defaultDisabled = false
+			activeInFlight = true
+			activeInEditor = true
 		}
 	}
 }
@@ -33530,6 +34097,23 @@ UrlConfig
 			lightGreen = 0.88
 			lightBlue = 0.68
 			lightDuration = 0.1
+		}
+		MODULE
+		{
+			name = ModuleTweakableDecouple
+			decouplerModuleName = ModuleAnchoredDecoupler
+		}
+		MODULE
+		{
+			name = ModuleTweakableCrossFeed
+			fuelCrossFeed = false
+		}
+		MODULE
+		{
+			name = ModuleStagingToggle
+			defaultDisabled = false
+			activeInFlight = true
+			activeInEditor = true
 		}
 	}
 }
@@ -33623,6 +34207,18 @@ UrlConfig
 			lightGreen = 0.88
 			lightBlue = 0.68
 			lightDuration = 0.1
+		}
+		MODULE
+		{
+			name = ModuleTweakableDecouple
+			decouplerModuleName = ModuleDecouple
+		}
+		MODULE
+		{
+			name = ModuleStagingToggle
+			defaultDisabled = false
+			activeInFlight = true
+			activeInEditor = true
 		}
 	}
 }
@@ -33720,6 +34316,18 @@ UrlConfig
 			lightBlue = 0.68
 			lightDuration = 0.1
 		}
+		MODULE
+		{
+			name = ModuleTweakableDecouple
+			decouplerModuleName = ModuleDecouple
+		}
+		MODULE
+		{
+			name = ModuleStagingToggle
+			defaultDisabled = false
+			activeInFlight = true
+			activeInEditor = true
+		}
 	}
 }
 UrlConfig
@@ -33813,6 +34421,18 @@ UrlConfig
 			lightBlue = 0.68
 			lightDuration = 0.1
 		}
+		MODULE
+		{
+			name = ModuleTweakableDecouple
+			decouplerModuleName = ModuleDecouple
+		}
+		MODULE
+		{
+			name = ModuleStagingToggle
+			defaultDisabled = false
+			activeInFlight = true
+			activeInEditor = true
+		}
 	}
 }
 UrlConfig
@@ -33902,6 +34522,18 @@ UrlConfig
 			lightGreen = 0.88
 			lightBlue = 0.68
 			lightDuration = 0.1
+		}
+		MODULE
+		{
+			name = ModuleTweakableDecouple
+			decouplerModuleName = ModuleDecouple
+		}
+		MODULE
+		{
+			name = ModuleStagingToggle
+			defaultDisabled = false
+			activeInFlight = true
+			activeInEditor = true
 		}
 	}
 }
@@ -33993,6 +34625,18 @@ UrlConfig
 			lightGreen = 0.88
 			lightBlue = 0.68
 			lightDuration = 0.1
+		}
+		MODULE
+		{
+			name = ModuleTweakableDecouple
+			decouplerModuleName = ModuleDecouple
+		}
+		MODULE
+		{
+			name = ModuleStagingToggle
+			defaultDisabled = false
+			activeInFlight = true
+			activeInEditor = true
 		}
 	}
 }
@@ -34086,6 +34730,18 @@ UrlConfig
 			lightGreen = 0.88
 			lightBlue = 0.68
 			lightDuration = 0.1
+		}
+		MODULE
+		{
+			name = ModuleTweakableDecouple
+			decouplerModuleName = ModuleDecouple
+		}
+		MODULE
+		{
+			name = ModuleStagingToggle
+			defaultDisabled = false
+			activeInFlight = true
+			activeInEditor = true
 		}
 	}
 }
@@ -34183,6 +34839,18 @@ UrlConfig
 			lightBlue = 0.68
 			lightDuration = 0.1
 		}
+		MODULE
+		{
+			name = ModuleTweakableDecouple
+			decouplerModuleName = ModuleDecouple
+		}
+		MODULE
+		{
+			name = ModuleStagingToggle
+			defaultDisabled = false
+			activeInFlight = true
+			activeInEditor = true
+		}
 	}
 }
 UrlConfig
@@ -34252,6 +34920,18 @@ UrlConfig
 			animationName = DockingPort
 			useResources = true
 		}
+		MODULE
+		{
+			name = ModuleTweakableDockingNode
+			TDNnodeName = top
+		}
+		MODULE
+		{
+			name = ModuleStagingToggle
+			defaultDisabled = true
+			activeInFlight = false
+			activeInEditor = true
+		}
 	}
 }
 UrlConfig
@@ -34284,20 +34964,22 @@ UrlConfig
 		crashTolerance = 10
 		maxTemp = 2000
 		bulkheadProfiles = size1
+		node_stack_tdn = 0, 0, -.671, 0, 0, -1, 1
 		MODULE
 		{
 			name = ModuleDockingNode
 			deployAnimationController = 1
 			nodeType = size1
 			controlTransformName = controlNode
+			referenceAttachNode = tdn
 		}
 		MODULE
 		{
 			name = ModuleAnimateGeneric
 			animationName = dockingporthull
 			actionGUIName = Toggle
-			startEventGUIName = Open
-			endEventGUIName = Close
+			startEventGUIName = Open Shield
+			endEventGUIName = Close Shield
 		}
 		MODULE
 		{
@@ -34317,6 +34999,24 @@ UrlConfig
 		MODEL
 		{
 			model = VenStockRevamp/Squad/Parts/DockingPorts/InlineDockingPort
+		}
+		MODULE
+		{
+			name = ModuleTweakableAnimateGeneric
+		}
+		MODULE
+		{
+			name = ModuleTweakableDockingNode
+			TDNnodeName = tdn
+			AlwaysAllowStack = True
+			deployAnimationControllerName = dockingporthull
+		}
+		MODULE
+		{
+			name = ModuleStagingToggle
+			defaultDisabled = true
+			activeInFlight = false
+			activeInEditor = true
 		}
 	}
 }
@@ -34387,6 +35087,18 @@ UrlConfig
 			animationName = DockingPort
 			useResources = true
 		}
+		MODULE
+		{
+			name = ModuleTweakableDockingNode
+			TDNnodeName = top
+		}
+		MODULE
+		{
+			name = ModuleStagingToggle
+			defaultDisabled = true
+			activeInFlight = false
+			activeInEditor = true
+		}
 	}
 }
 UrlConfig
@@ -34421,11 +35133,13 @@ UrlConfig
 		thermalMassModifier = 6.0
 		emissiveConstant = 0.8
 		bulkheadProfiles = size1
+		node_stack_tdn = 0, .333, 0, 0, 1, 0, 1
 		MODULE
 		{
 			name = ModuleDockingNode
 			deployAnimationController = 1
 			nodeType = size1
+			referenceAttachNode = tdn
 		}
 		MODULE
 		{
@@ -34454,6 +35168,23 @@ UrlConfig
 		MODEL
 		{
 			model = VenStockRevamp/Squad/Parts/DockingPorts/CoveredDockingPort
+		}
+		MODULE
+		{
+			name = ModuleTweakableAnimateGeneric
+		}
+		MODULE
+		{
+			name = ModuleTweakableDockingNode
+			TDNnodeName = tdn
+			deployAnimationControllerName = dockingring
+		}
+		MODULE
+		{
+			name = ModuleStagingToggle
+			defaultDisabled = true
+			activeInFlight = false
+			activeInEditor = true
 		}
 	}
 }
@@ -34523,6 +35254,18 @@ UrlConfig
 			resourceAmount = 0.04
 			animationName = DockingPortSR
 			useResources = true
+		}
+		MODULE
+		{
+			name = ModuleTweakableDockingNode
+			TDNnodeName = top
+		}
+		MODULE
+		{
+			name = ModuleStagingToggle
+			defaultDisabled = true
+			activeInFlight = false
+			activeInEditor = true
 		}
 	}
 }
@@ -34982,6 +35725,10 @@ UrlConfig
 			scrapeSound = CollisionFX/Sounds/GroundSkid
 			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
+		MODULE
+		{
+			name = ModuleTweakableLadder
+		}
 	}
 }
 UrlConfig
@@ -35033,6 +35780,10 @@ UrlConfig
 			collisionSound = CollisionFX/Sounds/Bang1
 			scrapeSound = CollisionFX/Sounds/GroundSkid
 			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = ModuleTweakableLadder
 		}
 	}
 }
@@ -35665,6 +36416,10 @@ UrlConfig
 		{
 			model = VenStockRevamp/Squad/Parts/Propulsion/RCS-Linear
 		}
+		MODULE
+		{
+			name = ModuleTweakableRCS
+		}
 	}
 }
 UrlConfig
@@ -35753,6 +36508,10 @@ UrlConfig
 			name = TweakScale
 			type = stack
 			defaultScale = 1.25
+		}
+		MODULE
+		{
+			name = ModuleTweakableAnimateGeneric
 		}
 	}
 }
@@ -35843,6 +36602,10 @@ UrlConfig
 			type = stack
 			defaultScale = 1.25
 		}
+		MODULE
+		{
+			name = ModuleTweakableAnimateGeneric
+		}
 	}
 }
 UrlConfig
@@ -35932,6 +36695,10 @@ UrlConfig
 			collisionSound = CollisionFX/Sounds/Bang1
 			scrapeSound = CollisionFX/Sounds/GroundSkid
 			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = ModuleTweakableAnimateGeneric
 		}
 	}
 }
@@ -36025,6 +36792,21 @@ UrlConfig
 			type = Default
 			basemass = -1
 		}
+		MODULE
+		{
+			name = ModuleTweakableAnimateGeneric
+		}
+		MODULE
+		{
+			name = ModuleTweakableDockingNode
+		}
+		MODULE
+		{
+			name = ModuleStagingToggle
+			defaultDisabled = true
+			activeInFlight = false
+			activeInEditor = true
+		}
 	}
 }
 UrlConfig
@@ -36105,6 +36887,10 @@ UrlConfig
 			name = TweakScale
 			type = stack
 			defaultScale = 3.75
+		}
+		MODULE
+		{
+			name = ModuleTweakableAnimateGeneric
 		}
 	}
 }
@@ -36187,6 +36973,10 @@ UrlConfig
 			type = stack
 			defaultScale = 3.75
 		}
+		MODULE
+		{
+			name = ModuleTweakableAnimateGeneric
+		}
 	}
 }
 UrlConfig
@@ -36267,6 +37057,10 @@ UrlConfig
 			name = TweakScale
 			type = stack
 			defaultScale = 3.75
+		}
+		MODULE
+		{
+			name = ModuleTweakableAnimateGeneric
 		}
 	}
 }
@@ -36358,6 +37152,12 @@ UrlConfig
 		MODEL
 		{
 			model = VenStockRevamp/Squad/Parts/DockingPorts/MK16
+		}
+		MODULE
+		{
+			name = ModuleTweakableParachute
+			deploymentFactor = 1
+			semiDeploymentFactor = 2
 		}
 	}
 }
@@ -36456,6 +37256,12 @@ UrlConfig
 			dragCubeName = DEPLOYED
 			dragModifier = 5
 		}
+		MODULE
+		{
+			name = ModuleTweakableParachute
+			deploymentFactor = 1
+			semiDeploymentFactor = 2
+		}
 	}
 }
 UrlConfig
@@ -36543,6 +37349,12 @@ UrlConfig
 		{
 			model = VenStockRevamp/Squad/Parts/DockingPorts/RadialD
 			scale = 1.2,1.2,1.2
+		}
+		MODULE
+		{
+			name = ModuleTweakableParachute
+			deploymentFactor = 1
+			semiDeploymentFactor = 2
 		}
 	}
 }
@@ -36637,6 +37449,12 @@ UrlConfig
 		{
 			model = VenStockRevamp/Squad/Parts/DockingPorts/Mk16-XL
 		}
+		MODULE
+		{
+			name = ModuleTweakableParachute
+			deploymentFactor = 1
+			semiDeploymentFactor = 2
+		}
 	}
 }
 UrlConfig
@@ -36728,6 +37546,12 @@ UrlConfig
 		{
 			model = VenStockRevamp/Squad/Parts/DockingPorts/Radial
 			scale = 0.8,0.8,0.8
+		}
+		MODULE
+		{
+			name = ModuleTweakableParachute
+			deploymentFactor = 1
+			semiDeploymentFactor = 2
 		}
 	}
 }
@@ -36822,6 +37646,12 @@ UrlConfig
 			model = VenStockRevamp/Squad/Parts/DockingPorts/RadialD
 			scale = 0.9,0.9,0.9
 		}
+		MODULE
+		{
+			name = ModuleTweakableParachute
+			deploymentFactor = 1
+			semiDeploymentFactor = 2
+		}
 	}
 }
 UrlConfig
@@ -36915,6 +37745,12 @@ UrlConfig
 		MODEL
 		{
 			model = VenStockRevamp/Squad/Parts/DockingPorts/Mk25
+		}
+		MODULE
+		{
+			name = ModuleTweakableParachute
+			deploymentFactor = 1
+			semiDeploymentFactor = 2
 		}
 	}
 }
@@ -37046,6 +37882,10 @@ UrlConfig
 		{
 			model = VenStockRevamp/Squad/Parts/Propulsion/RCS-105
 		}
+		MODULE
+		{
+			name = ModuleTweakableRCS
+		}
 	}
 }
 UrlConfig
@@ -37133,6 +37973,10 @@ UrlConfig
 			model = VenStockRevamp/Squad/Parts/Structural/ServiceBaySmall
 			scale = 1.0,1.2,1.0
 		}
+		MODULE
+		{
+			name = ModuleTweakableAnimateGeneric
+		}
 	}
 }
 UrlConfig
@@ -37219,6 +38063,10 @@ UrlConfig
 		{
 			model = VenStockRevamp/Squad/Parts/Structural/ServiceBayLarge
 			scale = 1.0,1.2,1.0
+		}
+		MODULE
+		{
+			name = ModuleTweakableAnimateGeneric
 		}
 	}
 }
@@ -50219,8 +51067,8 @@ UrlConfig
 		RSSShowCalendarToggled = False
 		AppLauncherSetTrueTimeOut = 6
 		DailyVersionCheck = True
-		VersionCheckDate_AttemptStored = 2015-07-03
-		VersionCheckDate_SuccessStored = 2015-07-03
+		VersionCheckDate_AttemptStored = 2015-07-04
+		VersionCheckDate_SuccessStored = 2015-07-04
 		VersionWeb = 3.4.0.0
 		WindowPositionStored
 		{
@@ -50489,8 +51337,8 @@ UrlConfig
 		ReplaceStockAppTimeOut = 20
 		AppLauncherSetTrueTimeOut = 6
 		DailyVersionCheck = True
-		VersionCheckDate_AttemptStored = 2015-07-03
-		VersionCheckDate_SuccessStored = 2015-07-03
+		VersionCheckDate_AttemptStored = 2015-07-04
+		VersionCheckDate_SuccessStored = 2015-07-04
 		ShowWindowOnResourceMonitor = True
 		VersionWeb = 2.7.2.0
 		WindowPositionStored
@@ -52481,6 +53329,17 @@ UrlConfig
 }
 UrlConfig
 {
+	name = ModuleTweakableEVA
+	type = EVA_MODULE
+	parentUrl = TweakableEverything/TweakableEVA
+	url = TweakableEverything/TweakableEVA/ModuleTweakableEVA
+	EVA_MODULE
+	{
+		name = ModuleTweakableEVA
+	}
+}
+UrlConfig
+{
 	name = stack
 	type = SCALETYPE
 	parentUrl = TweakScale/DefaultScales
@@ -53118,6 +53977,60 @@ UrlConfig
 }
 UrlConfig
 {
+	name = ModuleTweakableDecouple
+	type = TWEAKSCALEEXPONENTS
+	parentUrl = TweakScale/ScaleExponents
+	url = TweakScale/ScaleExponents/ModuleTweakableDecouple
+	TWEAKSCALEEXPONENTS
+	{
+		name = ModuleTweakableDecouple
+		ejectionForce = 2
+	}
+}
+UrlConfig
+{
+	name = ModuleTweakableDockingNode
+	type = TWEAKSCALEEXPONENTS
+	parentUrl = TweakScale/ScaleExponents
+	url = TweakScale/ScaleExponents/ModuleTweakableDockingNode
+	TWEAKSCALEEXPONENTS
+	{
+		name = ModuleTweakableDockingNode
+		acquireRange = 1
+		acquireForce = 2
+		acquireTorque = 2
+		undockEjectionForce = 2
+		minDistanceToReEngage = 1
+	}
+}
+UrlConfig
+{
+	name = ModuleTweakableEVA
+	type = TWEAKSCALEEXPONENTS
+	parentUrl = TweakScale/ScaleExponents
+	url = TweakScale/ScaleExponents/ModuleTweakableEVA
+	TWEAKSCALEEXPONENTS
+	{
+		name = ModuleTweakableEVA
+		thrusterPowerThrottle = 1
+	}
+}
+UrlConfig
+{
+	name = ModuleTweakableReactionWheel
+	type = TWEAKSCALEEXPONENTS
+	parentUrl = TweakScale/ScaleExponents
+	url = TweakScale/ScaleExponents/ModuleTweakableReactionWheel
+	TWEAKSCALEEXPONENTS
+	{
+		name = ModuleTweakableReactionWheel
+		RollTorque = 3
+		PitchTorque = 3
+		YawTorque = 3
+	}
+}
+UrlConfig
+{
 	name = AIES_Probe
 	type = SCALETYPE
 	parentUrl = TweakScale/patches/AIES_TweakScale
@@ -53644,6 +54557,14 @@ UrlConfig
 			jitterMultiplier = 10.5
 			multiplierOnIva = 0.5
 		}
+		MODULE
+		{
+			name = ModuleTweakableJettison
+		}
+		MODULE
+		{
+			name = ModuleTweakableGimbal
+		}
 	}
 }
 UrlConfig
@@ -53952,6 +54873,22 @@ UrlConfig
 			lightBlue = 0.68
 			lightDuration = 0.1
 		}
+		MODULE
+		{
+			name = ModuleTweakableAnimateGeneric
+		}
+		MODULE
+		{
+			name = ModuleTweakableDecouple
+			decouplerModuleName = ModuleDecouple
+		}
+		MODULE
+		{
+			name = ModuleStagingToggle
+			defaultDisabled = false
+			activeInFlight = true
+			activeInEditor = true
+		}
 	}
 }
 UrlConfig
@@ -54022,6 +54959,10 @@ UrlConfig
 			loopRcsSound = true
 			internalRcsSoundsOnly = false
 			useLightingEffects = true
+		}
+		MODULE
+		{
+			name = ModuleTweakableRCS
 		}
 	}
 }
@@ -54100,6 +55041,10 @@ UrlConfig
 			scrapeSound = CollisionFX/Sounds/GroundSkid
 			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
+		MODULE
+		{
+			name = ModuleTweakableAnimateGeneric
+		}
 	}
 }
 UrlConfig
@@ -54172,6 +55117,10 @@ UrlConfig
 			loopRcsSound = true
 			internalRcsSoundsOnly = false
 			useLightingEffects = true
+		}
+		MODULE
+		{
+			name = ModuleTweakableRCS
 		}
 	}
 }
@@ -54521,6 +55470,10 @@ UrlConfig
 			jitterMultiplier = 10.5
 			multiplierOnIva = 0.5
 		}
+		MODULE
+		{
+			name = ModuleTweakableGimbal
+		}
 	}
 }
 UrlConfig
@@ -54689,6 +55642,10 @@ UrlConfig
 			lightBlue = 0.68
 			jitterMultiplier = 10.5
 			multiplierOnIva = 0.5
+		}
+		MODULE
+		{
+			name = ModuleTweakableGimbal
 		}
 	}
 }
@@ -55047,6 +56004,14 @@ UrlConfig
 			lightBlue = 0.68
 			jitterMultiplier = 10.5
 			multiplierOnIva = 0.5
+		}
+		MODULE
+		{
+			name = ModuleTweakableJettison
+		}
+		MODULE
+		{
+			name = ModuleTweakableGimbal
 		}
 	}
 }
@@ -55617,6 +56582,10 @@ UrlConfig
 			jitterMultiplier = 10.5
 			multiplierOnIva = 0.5
 		}
+		MODULE
+		{
+			name = ModuleTweakableGimbal
+		}
 	}
 }
 UrlConfig
@@ -55692,6 +56661,10 @@ UrlConfig
 			collisionSound = CollisionFX/Sounds/Bang1
 			scrapeSound = CollisionFX/Sounds/GroundSkid
 			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = ModuleTweakableAnimateGeneric
 		}
 	}
 }
@@ -55786,6 +56759,24 @@ UrlConfig
 			portName = default
 			initialized = false
 		}
+		MODULE
+		{
+			name = ModuleTweakableDockingNode
+			TDNnodeName = top
+		}
+		MODULE
+		{
+			name = ModuleTweakableParachute
+			deploymentFactor = 1
+			semiDeploymentFactor = 2
+		}
+		MODULE
+		{
+			name = ModuleStagingToggle
+			defaultDisabled = true
+			activeInFlight = false
+			activeInEditor = true
+		}
 	}
 }
 UrlConfig
@@ -55856,6 +56847,10 @@ UrlConfig
 			loopRcsSound = true
 			internalRcsSoundsOnly = false
 			useLightingEffects = true
+		}
+		MODULE
+		{
+			name = ModuleTweakableRCS
 		}
 	}
 }
@@ -56278,6 +57273,14 @@ UrlConfig
 			jitterMultiplier = 10.5
 			multiplierOnIva = 0.5
 		}
+		MODULE
+		{
+			name = ModuleTweakableJettison
+		}
+		MODULE
+		{
+			name = ModuleTweakableGimbal
+		}
 	}
 }
 UrlConfig
@@ -56500,6 +57503,10 @@ UrlConfig
 			lightBlue = 0.68
 			jitterMultiplier = 10.5
 			multiplierOnIva = 0.5
+		}
+		MODULE
+		{
+			name = ModuleTweakableJettison
 		}
 	}
 }
