@@ -1,4 +1,4 @@
-patchedNodeCount = 4098
+patchedNodeCount = 4109
 catEatenCount = 0
 UrlConfig
 {
@@ -17681,7 +17681,7 @@ UrlConfig
 			name = ModuleDeployableSolarPanel
 			animationName = solarpanels2
 			resourceName = ElectricCharge
-			chargeRate = 1.64
+			chargeRate = 0.069444444
 			raycastTransformName = suncatcher
 		}
 		MODULE
@@ -17752,7 +17752,7 @@ UrlConfig
 			name = ModuleDeployableSolarPanel
 			animationName = solarpanels4
 			resourceName = ElectricCharge
-			chargeRate = 1.64
+			chargeRate = 0.069444444
 			retractable = false
 			raycastTransformName = suncatcher
 		}
@@ -17969,7 +17969,7 @@ UrlConfig
 			animationName = solarpanels
 			resourceName = ElectricCharge
 			raycastTransformName = suncatcher
-			chargeRate = 1.4
+			chargeRate = 0.041666667
 		}
 		MODULE
 		{
@@ -18041,7 +18041,7 @@ UrlConfig
 			resourceName = ElectricCharge
 			retractable = false
 			raycastTransformName = suncatcher
-			chargeRate = 1.4
+			chargeRate = 0.041666667
 		}
 		MODULE
 		{
@@ -18111,7 +18111,7 @@ UrlConfig
 			name = ModuleDeployableSolarPanel
 			animationName = bigsolarpanel
 			resourceName = ElectricCharge
-			chargeRate = 24.4
+			chargeRate = 0.902777778
 			raycastTransformName = suncatcher
 		}
 		MODULE
@@ -20907,8 +20907,8 @@ UrlConfig
 				}
 				atmosphereCurve
 				{
-					key = 0 307
-					key = 1 76
+					key = 0 272
+					key = 1 67
 					key = 3 0.001
 				}
 			}
@@ -20930,8 +20930,8 @@ UrlConfig
 				}
 				atmosphereCurve
 				{
-					key = 0 298
-					key = 1 73
+					key = 0 303
+					key = 1 70
 					key = 3 0.001
 				}
 			}
@@ -20953,8 +20953,8 @@ UrlConfig
 				}
 				atmosphereCurve
 				{
-					key = 0 302
-					key = 1 70
+					key = 0 276
+					key = 1 60
 					key = 3 0.001
 				}
 			}
@@ -22426,6 +22426,57 @@ UrlConfig
 					volume = 1.0
 					pitch = 2.0
 					loop = false
+				}
+			}
+		}
+		MODULE
+		{
+			name = ModuleEngineConfigs
+			configuration = Kerolox
+			CONFIG
+			{
+				name = Kerolox
+				minThrust = 0
+				maxThrust = 1500
+				PROPELLANT
+				{
+					name = Kerosene
+					ratio = 1.21951219512195
+					DrawGauge = True
+				}
+				PROPELLANT
+				{
+					name = LqdOxygen
+					ratio = 2.38387379491674
+				}
+				atmosphereCurve
+				{
+					key = 0 250
+					key = 1 230
+					key = 3 0.001
+				}
+			}
+			CONFIG
+			{
+				name = Hydrolox
+				minThrust = 0
+				maxThrust = 1500
+				PROPELLANT
+				{
+					name = LqdHydrogen
+					ratio = 14.1143260409315
+					DrawGauge = True
+				}
+				PROPELLANT
+				{
+					name = LqdOxygen
+					ratio = 5.43382997370727
+				}
+				atmosphereCurve
+				{
+					key = 0 276
+					key = 1 239
+					key = 3 0.001
 				}
 			}
 		}
@@ -25413,8 +25464,8 @@ UrlConfig
 					offset = 1 -0.25
 					size
 					{
-						density = 0 1.7
-						density = 1 1.0
+						density = 0 3
+						density = 1 1
 						density = 10 0
 					}
 					offset
