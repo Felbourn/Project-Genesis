@@ -88,30 +88,54 @@ toolbars
 		}
 		toolbar_972013029
 		{
-			x = 448
-			y = 46
+			x = 1075
+			y = 27
 			width = 250
 			height = 38
 			autoHide = False
-			drawBorder = True
+			drawBorder = False
+			useKSPSkin = False
+			buttonOrder = __TOOLBAR_INTERNAL.configureVisibleButtons,QuickGoToVAB.QuickGoToVAB,QuickGoToSPH.QuickGoToSPH,QuickGoToSC.QuickGoToSC,QuickGoToTS.QuickGoToTS
+			visibleButtons = MechJeb2.Custom_Info_Window,QuickGoToTS.QuickGoToTS,QuickGoToSPH.QuickGoToSPH,QuickGoToSC.QuickGoToSC,QuickGoToVAB.QuickGoToVAB
+		}
+		toolbar_86412879
+		{
+			x = 608
+			y = 37
+			width = 250
+			height = 38
+			autoHide = False
+			drawBorder = False
 			useKSPSkin = False
 			buttonOrder = 
-			visibleButtons = MechJeb2.Custom_Info_Window,AmbientLightAdjustment.adjustLevels
+			visibleButtons = Fusebox.FBToggle,RCSBuildAid.mainButton
 		}
 	}
 	EDITOR
 	{
 		toolbar_972013029
 		{
-			x = 448
-			y = 46
+			x = 1075
+			y = 27
 			width = 250
 			height = 38
 			autoHide = False
-			drawBorder = True
+			drawBorder = False
+			useKSPSkin = False
+			buttonOrder = __TOOLBAR_INTERNAL.configureVisibleButtons,QuickGoToVAB.QuickGoToVAB,QuickGoToSPH.QuickGoToSPH,QuickGoToSC.QuickGoToSC,QuickGoToTS.QuickGoToTS
+			visibleButtons = MechJeb2.Custom_Info_Window,QuickGoToTS.QuickGoToTS,QuickGoToSPH.QuickGoToSPH,QuickGoToSC.QuickGoToSC,QuickGoToVAB.QuickGoToVAB
+		}
+		toolbar_86412879
+		{
+			x = 608
+			y = 37
+			width = 250
+			height = 38
+			autoHide = False
+			drawBorder = False
 			useKSPSkin = False
 			buttonOrder = 
-			visibleButtons = MechJeb2.Custom_Info_Window,AmbientLightAdjustment.adjustLevels
+			visibleButtons = Fusebox.FBToggle,RCSBuildAid.mainButton
 		}
 	}
 	SPACECENTER

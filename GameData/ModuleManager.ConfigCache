@@ -1,4 +1,4 @@
-patchedNodeCount = 4109
+patchedNodeCount = 4473
 catEatenCount = 0
 UrlConfig
 {
@@ -203,6 +203,2420 @@ UrlConfig
 					key = 5 0.22 0 0
 					key = 25 0.3 0.0006807274 0
 				}
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = ACTIVE_TEXTURE_MANAGER_CONFIG
+	type = ACTIVE_TEXTURE_MANAGER_CONFIG
+	parentUrl = 000_FilterExtensions/ATM_Override
+	url = 000_FilterExtensions/ATM_Override/ACTIVE_TEXTURE_MANAGER_CONFIG
+	ACTIVE_TEXTURE_MANAGER_CONFIG
+	{
+		folder = 000_FilterExtensions
+		enabled = true
+		OVERRIDES
+		{
+			000_FilterExtensions/Icons/.*
+			{
+				compress = true
+				mipmaps = false
+				scale = 1
+				max_size = 0
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = FilterSettings
+	type = FilterSettings
+	parentUrl = 000_FilterExtensions/Settings
+	url = 000_FilterExtensions/Settings/FilterSettings
+	FilterSettings
+	{
+		hideUnpurchased = True
+		debug = False
+		setAdvanced = True
+		replaceFbM = True
+		categoryDefault = 
+		subCategoryDefault = 
+	}
+}
+UrlConfig
+{
+	name = Filter by Function
+	type = CATEGORY
+	parentUrl = 000_FilterExtensions Configs/FilterByFunction
+	url = 000_FilterExtensions Configs/FilterByFunction/Filter by Function
+	CATEGORY
+	{
+		name = Filter by Function
+		type = stock
+		value = replace
+		SUBCATEGORIES
+		{
+			list = 0,Pods
+			list = 1,Fuel Tanks
+			list = 2,Engines
+			list = 3,Command and Control
+			list = 4,Structural
+			list = 5,Aerodynamics
+			list = 6,Utility
+			list = 7,Science
+			list = 100,Adapter
+			list = 101,Multi-Coupler
+			list = 102,Decouplers
+			list = 103,Docking Ports
+			list = 104,Control Surface
+			list = 105,Air Intake
+			list = 106,Landing Gear
+			list = 107,Landing Legs
+			list = 108,Solar Panels
+			list = 109,Power Storage
+			list = 110,Data Transmitter
+			list = 0,Command and Crew
+			list = 1,Attitude Control
+			list = 2,Fuel Tanks
+			list = 3,Engines
+			list = 4,Structural
+			list = 5,General Aero
+			list = 6,Flight
+			list = 7,Misc
+			list = 8,Electrical
+			list = 9,Science
+		}
+	}
+}
+UrlConfig
+{
+	name = Ablative Heat Shields
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Aero
+	url = 000_FilterExtensions Configs/SubCategories_Aero/Ablative Heat Shields
+	SUBCATEGORY
+	{
+		name = Ablative Heat Shields
+		icon = Ablative_Shield
+		FILTER
+		{
+			CHECK
+			{
+				type = moduleName
+				value = ModuleHeatShield, ModuleAblator
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Air Intake
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Aero
+	url = 000_FilterExtensions Configs/SubCategories_Aero/Air Intake
+	SUBCATEGORY
+	{
+		name = Air Intake
+		icon = AirIntake
+		FILTER
+		{
+			CHECK
+			{
+				type = moduleName
+				value = ModuleResourceIntake
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Control Surface
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Aero
+	url = 000_FilterExtensions Configs/SubCategories_Aero/Control Surface
+	SUBCATEGORY
+	{
+		name = Control Surface
+		icon = ControlSurface
+		FILTER
+		{
+			CHECK
+			{
+				type = moduleName
+				value = ModuleControlSurface, FARControllableSurface, ModuleAeroSurface
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Fairings
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Aero
+	url = 000_FilterExtensions Configs/SubCategories_Aero/Fairings
+	SUBCATEGORY
+	{
+		name = Fairings
+		icon = Fairing
+		FILTER
+		{
+			CHECK
+			{
+				type = title
+				value = fairing
+			}
+		}
+		FILTER
+		{
+			CHECK
+			{
+				type = moduleName
+				value = ModuleProceduralFairing, ProceduralFairingBase, ProceduralFairingSide
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Nose Cones
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Aero
+	url = 000_FilterExtensions Configs/SubCategories_Aero/Nose Cones
+	SUBCATEGORY
+	{
+		name = Nose Cones
+		icon = NoseCone
+		FILTER
+		{
+			CHECK
+			{
+				type = title
+				value = nose cone, nosecone, nanocone, tail connector
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Wings
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Aero
+	url = 000_FilterExtensions Configs/SubCategories_Aero/Wings
+	SUBCATEGORY
+	{
+		name = Wings
+		icon = Wings
+		FILTER
+		{
+			CHECK
+			{
+				type = moduleName
+				value = ModuleLiftingSurface, FARWingAerodynamicModel
+			}
+			CHECK
+			{
+				type = check
+				invert = true
+				CHECK
+				{
+					type = moduleName
+					value = ModuleControlSurface, FARControllableSurface, ModuleAeroSurface
+				}
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Mk 2 [2.5 x 1.5 m]
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Bulkhead
+	url = 000_FilterExtensions Configs/SubCategories_Bulkhead/Mk 2 [2.5 x 1.5 m]
+	SUBCATEGORY
+	{
+		name = Mk 2 [2.5 x 1.5 m]
+		icon = cs_mk2
+		FILTER
+		{
+			CHECK
+			{
+				type = profile
+				value = mk2
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Mk 2 Oversized [2.5 x 2.5 m]
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Bulkhead
+	url = 000_FilterExtensions Configs/SubCategories_Bulkhead/Mk 2 Oversized [2.5 x 2.5 m]
+	SUBCATEGORY
+	{
+		name = Mk 2 Oversized [2.5 x 2.5 m]
+		icon = cs_mk2o
+		FILTER
+		{
+			CHECK
+			{
+				type = profile
+				value = mk2o
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Mk 3 [3.3 x 3.8 m]
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Bulkhead
+	url = 000_FilterExtensions Configs/SubCategories_Bulkhead/Mk 3 [3.3 x 3.8 m]
+	SUBCATEGORY
+	{
+		name = Mk 3 [3.3 x 3.8 m]
+		icon = cs_mk3
+		FILTER
+		{
+			CHECK
+			{
+				type = profile
+				value = mk3
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Mk 4 [7.3 x 3.9 m]
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Bulkhead
+	url = 000_FilterExtensions Configs/SubCategories_Bulkhead/Mk 4 [7.3 x 3.9 m]
+	SUBCATEGORY
+	{
+		name = Mk 4 [7.3 x 3.9 m]
+		icon = cs_mk4
+		FILTER
+		{
+			CHECK
+			{
+				type = profile
+				value = mk4
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Mk J [5.1 x 2.5 m]
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Bulkhead
+	url = 000_FilterExtensions Configs/SubCategories_Bulkhead/Mk J [5.1 x 2.5 m]
+	SUBCATEGORY
+	{
+		name = Mk J [5.1 x 2.5 m]
+		icon = cs_mkj
+		FILTER
+		{
+			CHECK
+			{
+				type = profile
+				value = j
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Mk K [8.2 x 3 m]
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Bulkhead
+	url = 000_FilterExtensions Configs/SubCategories_Bulkhead/Mk K [8.2 x 3 m]
+	SUBCATEGORY
+	{
+		name = Mk K [8.2 x 3 m]
+		icon = cs_mkk
+		FILTER
+		{
+			CHECK
+			{
+				type = profile
+				value = k
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Size 00 [0.35 m]
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Bulkhead
+	url = 000_FilterExtensions Configs/SubCategories_Bulkhead/Size 00 [0.35 m]
+	SUBCATEGORY
+	{
+		name = Size 00 [0.35 m]
+		icon = cs_size00
+		FILTER
+		{
+			CHECK
+			{
+				type = profile
+				value = size00
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Size 0 [0.625 m]
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Bulkhead
+	url = 000_FilterExtensions Configs/SubCategories_Bulkhead/Size 0 [0.625 m]
+	SUBCATEGORY
+	{
+		name = Size 0 [0.625 m]
+		icon = cs_size0
+		FILTER
+		{
+			CHECK
+			{
+				type = profile
+				value = size0
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Wedge [0.9 x 0.6 m]
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Bulkhead
+	url = 000_FilterExtensions Configs/SubCategories_Bulkhead/Wedge [0.9 x 0.6 m]
+	SUBCATEGORY
+	{
+		name = Wedge [0.9 x 0.6 m]
+		icon = cs_wedge
+		FILTER
+		{
+			CHECK
+			{
+				type = profile
+				value = wedge
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Size 1 [1.25 m]
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Bulkhead
+	url = 000_FilterExtensions Configs/SubCategories_Bulkhead/Size 1 [1.25 m]
+	SUBCATEGORY
+	{
+		name = Size 1 [1.25 m]
+		icon = cs_size1
+		FILTER
+		{
+			CHECK
+			{
+				type = profile
+				value = size1
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Mk 1x0.5 BoxBase [1.25 x 0.625 m]
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Bulkhead
+	url = 000_FilterExtensions Configs/SubCategories_Bulkhead/Mk 1x0.5 BoxBase [1.25 x 0.625 m]
+	SUBCATEGORY
+	{
+		name = Mk 1x0.5 BoxBase [1.25 x 0.625 m]
+		icon = cs_size1x05bb
+		FILTER
+		{
+			CHECK
+			{
+				type = profile
+				value = 1x05BoxBase
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Mk 1x1 BoxBase [1.25 x 1.25 m]
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Bulkhead
+	url = 000_FilterExtensions Configs/SubCategories_Bulkhead/Mk 1x1 BoxBase [1.25 x 1.25 m]
+	SUBCATEGORY
+	{
+		name = Mk 1x1 BoxBase [1.25 x 1.25 m]
+		icon = cs_size1x1bb
+		FILTER
+		{
+			CHECK
+			{
+				type = profile
+				value = 1x1BoxBase
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Size 1.5 [1.875 m]
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Bulkhead
+	url = 000_FilterExtensions Configs/SubCategories_Bulkhead/Size 1.5 [1.875 m]
+	SUBCATEGORY
+	{
+		name = Size 1.5 [1.875 m]
+		icon = cs_size1p5
+		FILTER
+		{
+			CHECK
+			{
+				type = profile
+				value = size1p5
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Size 2 [2.5 m]
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Bulkhead
+	url = 000_FilterExtensions Configs/SubCategories_Bulkhead/Size 2 [2.5 m]
+	SUBCATEGORY
+	{
+		name = Size 2 [2.5 m]
+		icon = cs_size2
+		FILTER
+		{
+			CHECK
+			{
+				type = profile
+				value = size2
+			}
+		}
+		FILTER
+		{
+			CHECK
+			{
+				type = profile
+				value = i
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Hex Truss [2.5 m]
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Bulkhead
+	url = 000_FilterExtensions Configs/SubCategories_Bulkhead/Hex Truss [2.5 m]
+	SUBCATEGORY
+	{
+		name = Hex Truss [2.5 m]
+		icon = cs_hextruss
+		FILTER
+		{
+			CHECK
+			{
+				type = profile
+				value = hextruss
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Modular Octo-Girder [2.5 m]
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Bulkhead
+	url = 000_FilterExtensions Configs/SubCategories_Bulkhead/Modular Octo-Girder [2.5 m]
+	SUBCATEGORY
+	{
+		name = Modular Octo-Girder [2.5 m]
+		icon = cs_octotruss
+		FILTER
+		{
+			CHECK
+			{
+				type = profile
+				value = octotruss
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Size 3 [3.75 m]
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Bulkhead
+	url = 000_FilterExtensions Configs/SubCategories_Bulkhead/Size 3 [3.75 m]
+	SUBCATEGORY
+	{
+		name = Size 3 [3.75 m]
+		icon = cs_size3
+		FILTER
+		{
+			CHECK
+			{
+				type = profile
+				value = size3
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Size 3 Octagonal [3.75 m]
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Bulkhead
+	url = 000_FilterExtensions Configs/SubCategories_Bulkhead/Size 3 Octagonal [3.75 m]
+	SUBCATEGORY
+	{
+		name = Size 3 Octagonal [3.75 m]
+		icon = cs_octo3
+		FILTER
+		{
+			CHECK
+			{
+				type = profile
+				value = octo3
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Exploration Rover System [3.1 x 2.2 m]
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Bulkhead
+	url = 000_FilterExtensions Configs/SubCategories_Bulkhead/Exploration Rover System [3.1 x 2.2 m]
+	SUBCATEGORY
+	{
+		name = Exploration Rover System [3.1 x 2.2 m]
+		icon = cs_ers
+		FILTER
+		{
+			CHECK
+			{
+				type = profile
+				value = ers
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Size 4 [5 m]
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Bulkhead
+	url = 000_FilterExtensions Configs/SubCategories_Bulkhead/Size 4 [5 m]
+	SUBCATEGORY
+	{
+		name = Size 4 [5 m]
+		icon = cs_size4
+		FILTER
+		{
+			CHECK
+			{
+				type = profile
+				value = size4
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Size 5 [7.5 m]
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Bulkhead
+	url = 000_FilterExtensions Configs/SubCategories_Bulkhead/Size 5 [7.5 m]
+	SUBCATEGORY
+	{
+		name = Size 5 [7.5 m]
+		icon = cs_size5
+		FILTER
+		{
+			CHECK
+			{
+				type = profile
+				value = size5
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = HX [7+ m]
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Bulkhead
+	url = 000_FilterExtensions Configs/SubCategories_Bulkhead/HX [7+ m]
+	SUBCATEGORY
+	{
+		name = HX [7+ m]
+		icon = cs_hx
+		FILTER
+		{
+			CHECK
+			{
+				type = profile
+				value = hx
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Size 6 [10 m]
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Bulkhead
+	url = 000_FilterExtensions Configs/SubCategories_Bulkhead/Size 6 [10 m]
+	SUBCATEGORY
+	{
+		name = Size 6 [10 m]
+		icon = cs_size6
+		FILTER
+		{
+			CHECK
+			{
+				type = profile
+				value = size6
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Surface Attach
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Bulkhead
+	url = 000_FilterExtensions Configs/SubCategories_Bulkhead/Surface Attach
+	SUBCATEGORY
+	{
+		name = Surface Attach
+		icon = cs_surface
+		FILTER
+		{
+			CHECK
+			{
+				type = profile
+				value = srf
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Drone
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Control
+	url = 000_FilterExtensions Configs/SubCategories_Control/Drone
+	SUBCATEGORY
+	{
+		name = Drone
+		icon = Drone
+		FILTER
+		{
+			CHECK
+			{
+				type = crew
+				value = 0
+			}
+			CHECK
+			{
+				type = moduleName
+				value = ModuleCommand
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = 2 Kerbals
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Control
+	url = 000_FilterExtensions Configs/SubCategories_Control/2 Kerbals
+	SUBCATEGORY
+	{
+		name = 2 Kerbals
+		icon = 2Kerbal
+		FILTER
+		{
+			CHECK
+			{
+				type = crew
+				value = 2
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = 3 Kerbals
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Control
+	url = 000_FilterExtensions Configs/SubCategories_Control/3 Kerbals
+	SUBCATEGORY
+	{
+		name = 3 Kerbals
+		icon = 3Kerbal
+		FILTER
+		{
+			CHECK
+			{
+				type = crew
+				value = 3
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Reaction Wheels without Control
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Control
+	url = 000_FilterExtensions Configs/SubCategories_Control/Reaction Wheels without Control
+	SUBCATEGORY
+	{
+		name = Reaction Wheels without Control
+		icon = Reaction_Wheels
+		FILTER
+		{
+			CHECK
+			{
+				type = moduleName
+				value = ModuleReactionWheel, RWSaturatable
+			}
+			CHECK
+			{
+				type = moduleName
+				value = ModuleCommand
+				invert = true
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Reaction Wheels with Control
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Control
+	url = 000_FilterExtensions Configs/SubCategories_Control/Reaction Wheels with Control
+	SUBCATEGORY
+	{
+		name = Reaction Wheels with Control
+		icon = ControlReactionWheels
+		FILTER
+		{
+			CHECK
+			{
+				type = moduleName
+				value = ModuleReactionWheel, RWSaturatable
+			}
+			CHECK
+			{
+				type = moduleName
+				value = ModuleCommand
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Command with RCS
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Control
+	url = 000_FilterExtensions Configs/SubCategories_Control/Command with RCS
+	SUBCATEGORY
+	{
+		name = Command with RCS
+		icon = ControlRCS
+		FILTER
+		{
+			CHECK
+			{
+				type = moduleName
+				value = ModuleRCS, ModuleRCSFX
+			}
+			CHECK
+			{
+				type = moduleName
+				value = ModuleCommand
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = RCS
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Control
+	url = 000_FilterExtensions Configs/SubCategories_Control/RCS
+	SUBCATEGORY
+	{
+		name = RCS
+		icon = RCS
+		FILTER
+		{
+			CHECK
+			{
+				type = moduleName
+				value = ModuleRCS, ModuleRCSFX
+			}
+			CHECK
+			{
+				type = moduleName
+				value = ModuleCommand
+				invert = true
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Passengers
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Control
+	url = 000_FilterExtensions Configs/SubCategories_Control/Passengers
+	SUBCATEGORY
+	{
+		name = Passengers
+		icon = Passengers
+		FILTER
+		{
+			CHECK
+			{
+				type = crew
+				value = 0
+				equality = GreaterThan
+			}
+			CHECK
+			{
+				type = moduleName
+				value = ModuleCommand
+				invert = true
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = 1 Kerbal
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Control
+	url = 000_FilterExtensions Configs/SubCategories_Control/1 Kerbal
+	SUBCATEGORY
+	{
+		name = 1 Kerbal
+		icon = 1Kerbal
+		FILTER
+		{
+			CHECK
+			{
+				type = crew
+				value = 1
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Multiple Kerbals
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Control
+	url = 000_FilterExtensions Configs/SubCategories_Control/Multiple Kerbals
+	SUBCATEGORY
+	{
+		name = Multiple Kerbals
+		icon = PlusKerbal
+		FILTER
+		{
+			CHECK
+			{
+				type = crew
+				equality = GreaterThan
+				value = 3
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Manned Command
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Control
+	url = 000_FilterExtensions Configs/SubCategories_Control/Manned Command
+	SUBCATEGORY
+	{
+		name = Manned Command
+		icon = Commanded
+		FILTER
+		{
+			CHECK
+			{
+				type = crew
+				value = 0
+				equality = GreaterThan
+			}
+			CHECK
+			{
+				type = moduleName
+				value = ModuleCommand
+			}
+		}
+		FILTER
+		{
+			CHECK
+			{
+				type = moduleName
+				value = KerbalSeat
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Generators
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Electrical
+	url = 000_FilterExtensions Configs/SubCategories_Electrical/Generators
+	SUBCATEGORY
+	{
+		name = Generators
+		icon = Generator
+		FILTER
+		{
+			CHECK
+			{
+				type = moduleName
+				value = ModuleGenerator, REGO_ModuleTrickleCharger, FNGenerator, InterstellarCatalysedFissionFusion, FNAntimatterReactor, InterstellarTokamakFusionReator, InterstellarFissionMSRGC, InterstellarFissionPBDP
+			}
+		}
+		FILTER
+		{
+			CHECK
+			{
+				type = title
+				value = Power Distribution, Generator, reactor
+			}
+			CHECK
+			{
+				type = moduleName
+				value = KolonyConverter, REGO_ModuleResourceConverter
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Lights
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Electrical
+	url = 000_FilterExtensions Configs/SubCategories_Electrical/Lights
+	SUBCATEGORY
+	{
+		name = Lights
+		icon = Light
+		FILTER
+		{
+			CHECK
+			{
+				type = moduleName
+				value = ModuleLight
+			}
+			CHECK
+			{
+				type = moduleName
+				value = ModuleCommand, ModuleLandingGear
+				invert = true
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Power Storage
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Electrical
+	url = 000_FilterExtensions Configs/SubCategories_Electrical/Power Storage
+	SUBCATEGORY
+	{
+		name = Power Storage
+		icon = PowerStorage
+		FILTER
+		{
+			CHECK
+			{
+				type = resource
+				value = ElectricCharge, StoredCharge
+			}
+			CHECK
+			{
+				type = moduleName
+				value = ModuleCommand, ModuleEngines, ModuleEnginesFX, REGO_ModuleResourceConverter, ModuleGenerator, FNGenerator
+				invert = true
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Solar Panels
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Electrical
+	url = 000_FilterExtensions Configs/SubCategories_Electrical/Solar Panels
+	SUBCATEGORY
+	{
+		name = Solar Panels
+		icon = SolarPanel
+		FILTER
+		{
+			CHECK
+			{
+				type = moduleName
+				value = ModuleDeployableSolarPanel, ModuleCurvedSolarPanel
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Resource Extractors
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_ISRU
+	url = 000_FilterExtensions Configs/SubCategories_ISRU/Resource Extractors
+	SUBCATEGORY
+	{
+		name = Resource Extractors
+		icon = Drill
+		FILTER
+		{
+			CHECK
+			{
+				type = moduleName
+				value = FNModuleResourceExtraction, ISRUScoop, ModuleResourceHarvester, ModuleAsteroidDrill, AsteroidMassConverter
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Resource Processor
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_ISRU
+	url = 000_FilterExtensions Configs/SubCategories_ISRU/Resource Processor
+	SUBCATEGORY
+	{
+		name = Resource Processor
+		icon = ResourceProcessor
+		FILTER
+		{
+			CHECK
+			{
+				type = moduleName
+				value = ModuleResourceConverter, TacGenericConverter, InterstellarRefinery, KethaneConverter, KolonyConverter, HangarResourceConverter
+			}
+			CHECK
+			{
+				type = title
+				value = Reactor, Power Distribution
+				invert = true
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Landing Gear
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Landing
+	url = 000_FilterExtensions Configs/SubCategories_Landing/Landing Gear
+	SUBCATEGORY
+	{
+		name = Landing Gear
+		icon = LandingGear
+		FILTER
+		{
+			CHECK
+			{
+				type = moduleName
+				value = ModuleLandingGear, ModuleLandingGearFixed, BDAdjustableLandingGear, FSwheel
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Landing Legs
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Landing
+	url = 000_FilterExtensions Configs/SubCategories_Landing/Landing Legs
+	SUBCATEGORY
+	{
+		name = Landing Legs
+		icon = LandingLeg
+		FILTER
+		{
+			CHECK
+			{
+				type = moduleName
+				value = ModuleLandingLeg
+			}
+		}
+		FILTER
+		{
+			CHECK
+			{
+				type = title
+				value = leg
+			}
+			CHECK
+			{
+				type = moduleName
+				value = FSanimateGeneric
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Parachutes
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Landing
+	url = 000_FilterExtensions Configs/SubCategories_Landing/Parachutes
+	SUBCATEGORY
+	{
+		name = Parachutes
+		icon = Chutes
+		FILTER
+		{
+			CHECK
+			{
+				type = moduleName
+				value = ModuleParachute, RealChuteModule, RealChuteFAR
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Rover Wheels and Tracks
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Landing
+	url = 000_FilterExtensions Configs/SubCategories_Landing/Rover Wheels and Tracks
+	SUBCATEGORY
+	{
+		name = Rover Wheels and Tracks
+		icon = Wheels
+		FILTER
+		{
+			CHECK
+			{
+				type = moduleName
+				value = ModuleWheel, ModuleTrack, TrackWheel, KFModuleWheel
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Data Transmitter
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Science
+	url = 000_FilterExtensions Configs/SubCategories_Science/Data Transmitter
+	SUBCATEGORY
+	{
+		name = Data Transmitter
+		icon = DataTransmitter
+		FILTER
+		{
+			CHECK
+			{
+				type = moduleName
+				value = ModuleDataTransmitter, ModuleLimitedDataTransmitter, ModuleRTAntenna, ModuleSPUPassive
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Experiments
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Science
+	url = 000_FilterExtensions Configs/SubCategories_Science/Experiments
+	SUBCATEGORY
+	{
+		name = Experiments
+		icon = Experiment
+		FILTER
+		{
+			CHECK
+			{
+				type = crew
+				value = 0
+			}
+			CHECK
+			{
+				type = moduleName
+				value = ModuleScienceExperiment, DMModuleScienceAnimate, DMSolarCollector, DMSoilMoisture, DMAnomalyScanner, DMBioDrill, DMRoverGooMat, DMXRayDiffract, StationExperiment, SampleAnalyzer, ModuleCostlyExperiment, PhaseExperimentCore, KEESExperiment, InterstellarTelescope
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Labs
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Science
+	url = 000_FilterExtensions Configs/SubCategories_Science/Labs
+	SUBCATEGORY
+	{
+		name = Labs
+		icon = Lab
+		FILTER
+		{
+			CHECK
+			{
+				type = moduleName
+				value = ModuleScienceLab, ResearchFacility, EquipmentRackModule, PhysicsMaterialsLab, ExposureLab, ScienceModule
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Scanners
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Science
+	url = 000_FilterExtensions Configs/SubCategories_Science/Scanners
+	SUBCATEGORY
+	{
+		name = Scanners
+		icon = SCANsat
+		FILTER
+		{
+			CHECK
+			{
+				type = moduleName
+				value = SCANsat, ModuleResourceScanner, ModuleOrbitalScanner
+			}
+			CHECK
+			{
+				type = moduleName
+				value = ModuleCommand
+				invert = true
+			}
+			CHECK
+			{
+				type = crew
+				value = 0
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Sensors
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Science
+	url = 000_FilterExtensions Configs/SubCategories_Science/Sensors
+	SUBCATEGORY
+	{
+		name = Sensors
+		icon = Sensor
+		FILTER
+		{
+			CHECK
+			{
+				type = crew
+				value = 0
+			}
+			CHECK
+			{
+				type = moduleName
+				value = ModuleEnviroSensor, DMEnviroSensor
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Pods
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Stock
+	url = 000_FilterExtensions Configs/SubCategories_Stock/Pods
+	SUBCATEGORY
+	{
+		name = Pods
+		icon = stockIcon_pods
+		FILTER
+		{
+			CHECK
+			{
+				type = category
+				value = Pods
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Fuel Tanks
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Stock
+	url = 000_FilterExtensions Configs/SubCategories_Stock/Fuel Tanks
+	SUBCATEGORY
+	{
+		name = Fuel Tanks
+		icon = stockIcon_fueltank
+		FILTER
+		{
+			CHECK
+			{
+				type = category
+				value = Fuel Tanks
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Engines
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Stock
+	url = 000_FilterExtensions Configs/SubCategories_Stock/Engines
+	SUBCATEGORY
+	{
+		name = Engines
+		icon = stockIcon_engine
+		FILTER
+		{
+			CHECK
+			{
+				type = category
+				value = Engines
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Command and Control
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Stock
+	url = 000_FilterExtensions Configs/SubCategories_Stock/Command and Control
+	SUBCATEGORY
+	{
+		name = Command and Control
+		icon = stockIcon_cmdctrl
+		FILTER
+		{
+			CHECK
+			{
+				type = category
+				value = Command and Control
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Structural
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Stock
+	url = 000_FilterExtensions Configs/SubCategories_Stock/Structural
+	SUBCATEGORY
+	{
+		name = Structural
+		icon = stockIcon_structural
+		FILTER
+		{
+			CHECK
+			{
+				type = category
+				value = Structural
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Aerodynamics
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Stock
+	url = 000_FilterExtensions Configs/SubCategories_Stock/Aerodynamics
+	SUBCATEGORY
+	{
+		name = Aerodynamics
+		icon = stockIcon_aerodynamics
+		FILTER
+		{
+			CHECK
+			{
+				type = category
+				value = Aerodynamics
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Utility
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Stock
+	url = 000_FilterExtensions Configs/SubCategories_Stock/Utility
+	SUBCATEGORY
+	{
+		name = Utility
+		icon = stockIcon_utility
+		FILTER
+		{
+			CHECK
+			{
+				type = category
+				value = Utility
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Science
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Stock
+	url = 000_FilterExtensions Configs/SubCategories_Stock/Science
+	SUBCATEGORY
+	{
+		name = Science
+		icon = stockIcon_science
+		FILTER
+		{
+			CHECK
+			{
+				type = category
+				value = Science
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Liquid Fuel
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Stock
+	url = 000_FilterExtensions Configs/SubCategories_Stock/Liquid Fuel
+	SUBCATEGORY
+	{
+		name = Liquid Fuel
+		icon = R&D_node_icon_fuelsystems
+		FILTER
+		{
+			CHECK
+			{
+				type = resource
+				value = LiquidFuel
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Oxidizer
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Stock
+	url = 000_FilterExtensions Configs/SubCategories_Stock/Oxidizer
+	SUBCATEGORY
+	{
+		name = Oxidizer
+		icon = fuels_oxidizer
+		FILTER
+		{
+			CHECK
+			{
+				type = resource
+				value = Oxidizer
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Electric Charge
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Stock
+	url = 000_FilterExtensions Configs/SubCategories_Stock/Electric Charge
+	SUBCATEGORY
+	{
+		name = Electric Charge
+		icon = R&D_node_icon_advelectrics
+		FILTER
+		{
+			CHECK
+			{
+				type = resource
+				value = ElectricCharge
+			}
+			CHECK
+			{
+				type = moduleName
+				value = ModuleCommand, ModuleEngines, ModuleEnginesFX, ModuleGenerator
+				invert = true
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Mono Propellant
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Stock
+	url = 000_FilterExtensions Configs/SubCategories_Stock/Mono Propellant
+	SUBCATEGORY
+	{
+		name = Mono Propellant
+		icon = fuels_monopropellant
+		FILTER
+		{
+			CHECK
+			{
+				type = resource
+				value = MonoPropellant
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Solid Fuel
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Stock
+	url = 000_FilterExtensions Configs/SubCategories_Stock/Solid Fuel
+	SUBCATEGORY
+	{
+		name = Solid Fuel
+		icon = fuels_solidfuel
+		FILTER
+		{
+			CHECK
+			{
+				type = resource
+				value = SolidFuel
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Xenon Gas
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Stock
+	url = 000_FilterExtensions Configs/SubCategories_Stock/Xenon Gas
+	SUBCATEGORY
+	{
+		name = Xenon Gas
+		icon = fuels_xenongas
+		FILTER
+		{
+			CHECK
+			{
+				type = resource
+				value = XenonGas
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Intake Air
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Stock
+	url = 000_FilterExtensions Configs/SubCategories_Stock/Intake Air
+	SUBCATEGORY
+	{
+		name = Intake Air
+		icon = R&D_node_icon_experimentalaerodynamics
+		FILTER
+		{
+			CHECK
+			{
+				type = resource
+				value = IntakeAir
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Adapter
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Structural
+	url = 000_FilterExtensions Configs/SubCategories_Structural/Adapter
+	SUBCATEGORY
+	{
+		name = Adapter
+		icon = Adapter
+		FILTER
+		{
+			CHECK
+			{
+				type = custom
+				value = adapter
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Cargo Bay
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Structural
+	url = 000_FilterExtensions Configs/SubCategories_Structural/Cargo Bay
+	SUBCATEGORY
+	{
+		name = Cargo Bay
+		icon = CargoBay
+		FILTER
+		{
+			CHECK
+			{
+				type = title
+				value = Cargo Bay, Payload Bay, Service Bay
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Decouplers
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Structural
+	url = 000_FilterExtensions Configs/SubCategories_Structural/Decouplers
+	SUBCATEGORY
+	{
+		name = Decouplers
+		icon = Decoupler
+		FILTER
+		{
+			CHECK
+			{
+				type = moduleName
+				value = ModuleDecouple, ModuleAnchoredDecoupler
+			}
+			CHECK
+			{
+				type = title
+				value = Fairing
+				invert = true
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Docking Ports
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Structural
+	url = 000_FilterExtensions Configs/SubCategories_Structural/Docking Ports
+	SUBCATEGORY
+	{
+		name = Docking Ports
+		icon = Docking_Port
+		FILTER
+		{
+			CHECK
+			{
+				type = moduleName
+				value = ModuleDockingNode, ModuleAdaptiveDockingNode
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Girder
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Structural
+	url = 000_FilterExtensions Configs/SubCategories_Structural/Girder
+	SUBCATEGORY
+	{
+		name = Girder
+		icon = Girder
+		FILTER
+		{
+			CHECK
+			{
+				type = title
+				value = Girder, AES Structural, Cubic Octagonal, Octagonal Strut, Cargo Frame
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Launch Clamp
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Structural
+	url = 000_FilterExtensions Configs/SubCategories_Structural/Launch Clamp
+	SUBCATEGORY
+	{
+		name = Launch Clamp
+		icon = LaunchClamp
+		FILTER
+		{
+			CHECK
+			{
+				type = moduleName
+				value = LaunchClamp, ExtendingLaunchClamp
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Ladders
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Structural
+	url = 000_FilterExtensions Configs/SubCategories_Structural/Ladders
+	SUBCATEGORY
+	{
+		name = Ladders
+		icon = Ladder
+		FILTER
+		{
+			CHECK
+			{
+				type = moduleName
+				value = RetractableLadder
+			}
+		}
+		FILTER
+		{
+			CHECK
+			{
+				type = title
+				value = Pegasus I Mobility Enhancer, handrail, Handle, Ladder
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Multi-Coupler
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Structural
+	url = 000_FilterExtensions Configs/SubCategories_Structural/Multi-Coupler
+	SUBCATEGORY
+	{
+		name = Multi-Coupler
+		icon = Coupler
+		FILTER
+		{
+			CHECK
+			{
+				type = custom
+				value = multicoupler
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Strut
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/SubCategories_Structural
+	url = 000_FilterExtensions Configs/SubCategories_Structural/Strut
+	SUBCATEGORY
+	{
+		name = Strut
+		icon = Strut
+		FILTER
+		{
+			CHECK
+			{
+				type = moduleName
+				value = QuantumStrut, KASModuleStrut, ModuleAutoStrutter, ModuleActiveStrut, CModuleStrut
+			}
+		}
+		FILTER
+		{
+			CHECK
+			{
+				type = title
+				value = EAS-4, Strut Connector
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Kerbonauts and Control
+	type = CATEGORY
+	parentUrl = 000_FilterExtensions Configs/Default/01_Kerbonauts
+	url = 000_FilterExtensions Configs/Default/01_Kerbonauts/Kerbonauts and Control
+	CATEGORY
+	{
+		name = Kerbonauts and Control
+		icon = Kerbal_Drones
+		colour = #FF90F090
+		all = true
+		SUBCATEGORIES
+		{
+			list = 0, Manned Command
+			list = 1, Drone
+			list = 2, Reaction Wheels with Control
+			list = 3, Reaction Wheels without Control
+			list = 4, RCS
+			list = 5, Command with RCS
+			list = 6, Passengers
+			list = 7, 1 Kerbal
+			list = 8, 2 Kerbals
+			list = 9, 3 Kerbals
+			list = 10, Multiple Kerbals
+		}
+	}
+}
+UrlConfig
+{
+	name = Engines
+	type = CATEGORY
+	parentUrl = 000_FilterExtensions Configs/Default/02_Engines
+	url = 000_FilterExtensions Configs/Default/02_Engines/Engines
+	CATEGORY
+	{
+		name = Engines
+		icon = EngineRocket
+		colour = #FF90F090
+		all = true
+		type = engine
+		SUBCATEGORIES
+		{
+			list = 0,Rockets
+			list = 1,SRBs
+			list = 2,Jets
+			list = 3,Ions
+			list = 4,MonoProp
+		}
+	}
+}
+UrlConfig
+{
+	name = Structural Parts
+	type = CATEGORY
+	parentUrl = 000_FilterExtensions Configs/Default/04_Structural
+	url = 000_FilterExtensions Configs/Default/04_Structural/Structural Parts
+	CATEGORY
+	{
+		name = Structural Parts
+		icon = StructuralParts
+		colour = #FF90F090
+		all = true
+		SUBCATEGORIES
+		{
+			list = 0, Adapter
+			list = 1, Multi-Coupler
+			list = 2, Decouplers
+			list = 3, Docking Ports
+			list = 4, Strut
+			list = 5, Girder
+			list = 6, Launch Clamp
+			list = 7, Ladders
+		}
+	}
+}
+UrlConfig
+{
+	name = Aero Parts
+	type = CATEGORY
+	parentUrl = 000_FilterExtensions Configs/Default/05_Aero
+	url = 000_FilterExtensions Configs/Default/05_Aero/Aero Parts
+	CATEGORY
+	{
+		name = Aero Parts
+		icon = AeroParts
+		colour = #FF90F090
+		all = true
+		SUBCATEGORIES
+		{
+			list = 0, Ablative Heat Shields
+			list = 1, Wings
+			list = 2, Control Surface
+			list = 3, Air Intake
+			list = 4, Nose Cones
+			list = 5, Fairings
+			list = 6, Cargo Bay
+		}
+	}
+}
+UrlConfig
+{
+	name = Landing Parts
+	type = CATEGORY
+	parentUrl = 000_FilterExtensions Configs/Default/06_Landing
+	url = 000_FilterExtensions Configs/Default/06_Landing/Landing Parts
+	CATEGORY
+	{
+		name = Landing Parts
+		icon = LandingParts
+		colour = #FF90F090
+		all = true
+		SUBCATEGORIES
+		{
+			list = 0, Landing Gear
+			list = 1, Landing Legs
+			list = 2, Parachutes
+			list = 3, Rover Wheels and Tracks
+		}
+	}
+}
+UrlConfig
+{
+	name = Electrical
+	type = CATEGORY
+	parentUrl = 000_FilterExtensions Configs/Default/07_Electrical
+	url = 000_FilterExtensions Configs/Default/07_Electrical/Electrical
+	CATEGORY
+	{
+		name = Electrical
+		icon = ElectricCharge
+		colour = #FF90F090
+		all = true
+		SUBCATEGORIES
+		{
+			list = 0, Solar Panels
+			list = 1, Generators
+			list = 2, Power Storage
+			list = 3, Lights
+		}
+	}
+}
+UrlConfig
+{
+	name = Science Parts
+	type = CATEGORY
+	parentUrl = 000_FilterExtensions Configs/Default/08_Science
+	url = 000_FilterExtensions Configs/Default/08_Science/Science Parts
+	CATEGORY
+	{
+		name = Science Parts
+		icon = ScienceParts
+		colour = #FF90F090
+		all = true
+		SUBCATEGORIES
+		{
+			list = 0, Data Transmitter
+			list = 1, Experiments
+			list = 2, Sensors
+			list = 3, Labs
+			list = 4, Scanners
+		}
+	}
+}
+UrlConfig
+{
+	name = ISRU
+	type = CATEGORY
+	parentUrl = 000_FilterExtensions Configs/Default/09_ISRU
+	url = 000_FilterExtensions Configs/Default/09_ISRU/ISRU
+	CATEGORY
+	{
+		name = ISRU
+		icon = Resources
+		colour = #FF90F090
+		all = true
+		SUBCATEGORIES
+		{
+			list = 0, Resource Extractors
+			list = 1, Resource Processor
+			list = 3, Scanners
+		}
+	}
+}
+UrlConfig
+{
+	name = PreCooler
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/Default/Mod_KSPI
+	url = 000_FilterExtensions Configs/Default/Mod_KSPI/PreCooler
+	SUBCATEGORY
+	{
+		name = PreCooler
+		icon = EngineJet
+		FILTER
+		{
+			CHECK
+			{
+				type = name
+				value = radialEngineBody,nacelleBody
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Squad
+	type = CATEGORY
+	parentUrl = 000_FilterExtensions Configs/Default/Mod_Squad
+	url = 000_FilterExtensions Configs/Default/Mod_Squad/Squad
+	CATEGORY
+	{
+		name = Squad
+		icon = Squad
+		colour = #FFF0F0F0
+		all = true
+		FILTER
+		{
+			CHECK
+			{
+				type = folder
+				value = Squad
+			}
+		}
+		SUBCATEGORIES
+		{
+			list = 0,Pods
+			list = 1,Fuel Tanks
+			list = 2,Engines
+			list = 3,Command and Control
+			list = 4,Structural
+			list = 5,Aerodynamics
+			list = 6,Utility
+			list = 7,Science
+		}
+	}
+}
+UrlConfig
+{
+	name = LiquidFuel/Oxidizer, Rockets
+	type = FilterRename
+	parentUrl = 000_FilterExtensions Configs/Default/NamesAndIcons
+	url = 000_FilterExtensions Configs/Default/NamesAndIcons/LiquidFuel/Oxidizer, Rockets
+	FilterRename
+	{
+		name = LiquidFuel/Oxidizer, Rockets
+		name = ElectricCharge/XenonGas, Ion - Xenon
+		name = IntakeAir/LiquidFuel, Jets
+		name = SolidFuel, SRBs
+		name = MonoPropellant, MonoProp
+		name = ArgonGas/ElectricCharge, Ion - Argon
+		name = HydrogenGas/ElectricCharge, Ion - Hydrogen
+	}
+}
+UrlConfig
+{
+	name = FilterSetIcon
+	type = FilterSetIcon
+	parentUrl = 000_FilterExtensions Configs/Default/NamesAndIcons
+	url = 000_FilterExtensions Configs/Default/NamesAndIcons/FilterSetIcon
+	FilterSetIcon
+	{
+		icon = Rockets, EngineLFO
+		icon = Ion - Xenon, EngineIon
+		icon = Jets, EngineJet
+		icon = SRBs, EngineSolid
+		icon = MonoProp, EngineMono
+		icon = Ore, fuels_ore
+		icon = Ablator, Ablative Shielding
+		icon = Ion - Argon, EngineArgon
+		icon = Ion - Hydrogen, EnginePlasma
+	}
+}
+UrlConfig
+{
+	name = FilterRemove
+	type = FilterRemove
+	parentUrl = 000_FilterExtensions Configs/Default/NamesAndIcons
+	url = 000_FilterExtensions Configs/Default/NamesAndIcons/FilterRemove
+	FilterRemove
+	{
+	}
+}
+UrlConfig
+{
+	name = LqdHydrogen, Nuclear Engines
+	type = FilterRename
+	parentUrl = 000_FilterExtensions Configs/Default/NamesAndIcons
+	url = 000_FilterExtensions Configs/Default/NamesAndIcons/LqdHydrogen, Nuclear Engines
+	FilterRename
+	{
+		name = LqdHydrogen, Nuclear Engines
+		name = LiquidFuel, Nuclear Rockets
+		name = ElectricCharge/IntakeAtm, Electric Fans
+		name = Airflow/ElectricCharge, Electric Jet
+		name = Karbonite, Karbonite Engines
+		name = IntakeAtm/Karbonite, Karbonite Jets
+		name = ElectricCharge/Karborundum, Karborundum Engines
+		name = Aluminium/LqdOxygen, Aluminium Engines
+		name = IntakeAtm, Thermal Engines
+		name = LqdHydrogen/Oxidizer, Cryo Engines
+		name = MJPropellant, MJ Propellant Engines
+		name = LqdMethane/LqdOxygen, Methane Engines
+		name = LqdDeuterium/LqdHydrogen/LqdTritium, Fusion Engines
+	}
+}
+UrlConfig
+{
+	name = FilterSetIcon
+	type = FilterSetIcon
+	parentUrl = 000_FilterExtensions Configs/Default/NamesAndIcons
+	url = 000_FilterExtensions Configs/Default/NamesAndIcons/FilterSetIcon
+	FilterSetIcon
+	{
+		icon = Nuclear Engines, NuclearRocket
+		icon = Nuclear Rockets, NuclearRocket
+		icon = Electric Fans, FanEngine
+		icon = Electric Jet, FanEngine
+		icon = Karbonite Engines, EngineKarbonite
+		icon = Karbonite Jets, EngineJetKarbonite
+		icon = Karborundum Engines, EngineKarborundum
+		icon = Aluminium Engines, EngineAluminium
+		icon = Thermal Engines, EngineThermal
+		icon = Cryo Engines, EngineCryo
+		icon = MJ Propellant Engines, EngineMJ
+		icon = Methane Engines, EngineMethane
+		icon = Fusion Engines, EngineFusion
+	}
+}
+UrlConfig
+{
+	name = Filter by Cross-Section Profile
+	type = CATEGORY
+	parentUrl = 000_FilterExtensions Configs/Default/StockCategories
+	url = 000_FilterExtensions Configs/Default/StockCategories/Filter by Cross-Section Profile
+	CATEGORY
+	{
+		name = Filter by Cross-Section Profile
+		type = stock
+		value = replace
+		SUBCATEGORIES
+		{
+			list = 0,Mk 2 [2.5 x 1.5 m]
+			list = 1,Mk 2 Oversized [2.5 x 2.5 m]
+			list = 2,Mk 3 [3.3 x 3.8 m]
+			list = 3,Mk J [5.1 x 2.5 m]
+			list = 4,Mk 4 [7.3 x 3.9 m]
+			list = 5,Mk K [8.2 x 3 m]
+			list = 6,Size 00 [0.35 m]
+			list = 7,Size 0 [0.625 m]
+			list = 8,Wedge [0.9 x 0.6 m]
+			list = 9,Size 1 [1.25 m]
+			list = 10,Mk 1x0.5 BoxBase [1.25 x 0.625 m]
+			list = 11,Mk 1x1 BoxBase [1.25 x 1.25 m]
+			list = 12,Size 1.5 [1.875 m]
+			list = 13,Size 2 [2.5 m]
+			list = 14,Hex Truss [2.5 m]
+			list = 15,Modular Octo-Girder [2.5 m]
+			list = 16,Size 3 [3.75 m]
+			list = 17,Size 3 Octagonal [3.75 m]
+			list = 18,Exploration Rover System [3.1 x 2.2 m]
+			list = 19,Size 4 [5 m]
+			list = 20,Size 5 [7.5 m]
+			list = 21,HX [7+ m]
+			list = 22,Size 6 [10 m]
+			list = 23,Surface Attach
+		}
+	}
+}
+UrlConfig
+{
+	name = Filter by Resource
+	type = CATEGORY
+	parentUrl = 000_FilterExtensions Configs/Default/StockCategories
+	url = 000_FilterExtensions Configs/Default/StockCategories/Filter by Resource
+	CATEGORY
+	{
+		name = Filter by Resource
+		type = stock
+		value = replace
+		SUBCATEGORIES
+		{
+			list = 0,Liquid Fuel
+			list = 1,Oxidizer
+			list = 2,Electric Charge
+			list = 3,Mono Propellant
+			list = 4,Solid Fuel
+			list = 5,Xenon Gas
+		}
+	}
+}
+UrlConfig
+{
+	name = Command and Crew
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/StockRework/Subcategories
+	url = 000_FilterExtensions Configs/StockRework/Subcategories/Command and Crew
+	SUBCATEGORY
+	{
+		name = Command and Crew
+		icon = stockIcon_pods
+		FILTER
+		{
+			CHECK
+			{
+				type = category
+				value = Pods
+			}
+		}
+		FILTER
+		{
+			CHECK
+			{
+				type = crew
+				value = 0
+				equality = GreaterThan
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Attitude Control
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/StockRework/Subcategories
+	url = 000_FilterExtensions Configs/StockRework/Subcategories/Attitude Control
+	SUBCATEGORY
+	{
+		name = Attitude Control
+		icon = stockIcon_cmdctrl
+		FILTER
+		{
+			CHECK
+			{
+				type = category
+				value = Command and Control
+			}
+		}
+		FILTER
+		{
+			CHECK
+			{
+				type = subcategory
+				value = Control Surface
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = General Aero
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/StockRework/Subcategories
+	url = 000_FilterExtensions Configs/StockRework/Subcategories/General Aero
+	SUBCATEGORY
+	{
+		name = General Aero
+		icon = Fairing
+		FILTER
+		{
+			CHECK
+			{
+				type = category
+				value = Aerodynamics
+			}
+			CHECK
+			{
+				type = subcategory
+				value = Wings, Control Surface
+				invert = true
+			}
+		}
+		FILTER
+		{
+			CHECK
+			{
+				type = subcategory
+				value = Parachutes, Adapter, Cargo Bay
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Flight
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/StockRework/Subcategories
+	url = 000_FilterExtensions Configs/StockRework/Subcategories/Flight
+	SUBCATEGORY
+	{
+		name = Flight
+		icon = Wings
+		FILTER
+		{
+			CHECK
+			{
+				type = subcategory
+				value = Wings, Control Surface
+			}
+		}
+		FILTER
+		{
+			CHECK
+			{
+				type = moduleName
+				value = ModuleAeroSurface
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Misc
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/StockRework/Subcategories
+	url = 000_FilterExtensions Configs/StockRework/Subcategories/Misc
+	SUBCATEGORY
+	{
+		name = Misc
+		icon = stockIcon_utility
+		FILTER
+		{
+			CHECK
+			{
+				type = category
+				value = Utility
+			}
+			CHECK
+			{
+				type = subcategory
+				value = Generators, Lights, Power Storage, Solar Panels, Cargo Bay, Parachutes
+				invert = true
+			}
+			CHECK
+			{
+				type = crew
+				value = 0
+				invert = true
+				equality = GreaterThan
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = Electrical
+	type = SUBCATEGORY
+	parentUrl = 000_FilterExtensions Configs/StockRework/Subcategories
+	url = 000_FilterExtensions Configs/StockRework/Subcategories/Electrical
+	SUBCATEGORY
+	{
+		name = Electrical
+		icon = ElectricCharge
+		FILTER
+		{
+			CHECK
+			{
+				type = subcategory
+				value = Generators, Lights, Power Storage, Solar Panels
 			}
 		}
 	}
@@ -496,7 +2910,7 @@ UrlConfig
 			pivotName = suncatcher
 			isBreakable = false
 			resourceName = ElectricCharge
-			chargeRate = 2.8
+			chargeRate = 0.013020833
 		}
 		MODULE
 		{
@@ -509,6 +2923,11 @@ UrlConfig
 		MODULE
 		{
 			name = ModuleTweakableSolarPanel
+		}
+		MODULE
+		{
+			name = TweakScale
+			type = free_square
 		}
 	}
 }
@@ -8064,8 +10483,7 @@ UrlConfig
 			amount = 0.0
 			maxAmount = 0.0
 			temperature = 90.15
-			loss_rate = 0.000000005
-			note = (lacks insulation)
+			loss_rate = 0.00000000008
 		}
 		TANK
 		{
@@ -8085,8 +10503,7 @@ UrlConfig
 			amount = 0.0
 			maxAmount = 0.0
 			temperature = 20.15
-			loss_rate = 0.000000017
-			note = (lacks insulation)
+			loss_rate = 0.0000000005
 		}
 		TANK
 		{
@@ -8114,7 +10531,6 @@ UrlConfig
 			fillable = True
 			amount = 0.0
 			maxAmount = 0.0
-			note = (pressurized)
 		}
 		TANK
 		{
@@ -8124,7 +10540,6 @@ UrlConfig
 			fillable = True
 			amount = 0.0
 			maxAmount = 0.0
-			note = (pressurized)
 		}
 		TANK
 		{
@@ -16713,7 +19128,7 @@ UrlConfig
 			RESOURCE
 			{
 				name = ElectricCharge
-				rate = 0.025
+				rate = 0.0277777777777778
 			}
 		}
 		MODULE
@@ -16756,6 +19171,12 @@ UrlConfig
 		MODULE
 		{
 			name = ModuleTweakableSAS
+		}
+		RESOURCE
+		{
+			name = ElectricCharge
+			amount = 25
+			maxAmount = 25
 		}
 		MODULE
 		{
@@ -16810,7 +19231,7 @@ UrlConfig
 			RESOURCE
 			{
 				name = ElectricCharge
-				rate = 0.025
+				rate = 0.0277777777777778
 			}
 		}
 		MODULE
@@ -16871,6 +19292,12 @@ UrlConfig
 		{
 			name = ModuleTweakableSAS
 		}
+		RESOURCE
+		{
+			name = ElectricCharge
+			amount = 25
+			maxAmount = 25
+		}
 		MODULE
 		{
 			name = MechJebCore
@@ -16924,7 +19351,7 @@ UrlConfig
 			RESOURCE
 			{
 				name = ElectricCharge
-				rate = 0.020
+				rate = 0.0277777777777778
 			}
 		}
 		MODULE
@@ -16984,6 +19411,12 @@ UrlConfig
 		{
 			name = ModuleTweakableSAS
 		}
+		RESOURCE
+		{
+			name = ElectricCharge
+			amount = 25
+			maxAmount = 25
+		}
 		MODULE
 		{
 			name = MechJebCore
@@ -17037,7 +19470,7 @@ UrlConfig
 			RESOURCE
 			{
 				name = ElectricCharge
-				rate = 0.03
+				rate = 0.0138888888888889
 			}
 		}
 		MODULE
@@ -17081,6 +19514,12 @@ UrlConfig
 		MODULE
 		{
 			name = ModuleTweakableSAS
+		}
+		RESOURCE
+		{
+			name = ElectricCharge
+			amount = 12.5
+			maxAmount = 12.5
 		}
 		MODULE
 		{
@@ -17135,7 +19574,7 @@ UrlConfig
 			RESOURCE
 			{
 				name = ElectricCharge
-				rate = 0.04
+				rate = 0.0694444444444444
 			}
 		}
 		MODULE
@@ -17174,6 +19613,12 @@ UrlConfig
 		MODULE
 		{
 			name = ModuleTweakableSAS
+		}
+		RESOURCE
+		{
+			name = ElectricCharge
+			amount = 62.5
+			maxAmount = 62.5
 		}
 		MODULE
 		{
@@ -17228,7 +19673,7 @@ UrlConfig
 			RESOURCE
 			{
 				name = ElectricCharge
-				rate = 0.08
+				rate = 0.125
 			}
 		}
 		MODULE
@@ -17292,6 +19737,12 @@ UrlConfig
 		{
 			name = ModuleTweakableSAS
 		}
+		RESOURCE
+		{
+			name = ElectricCharge
+			amount = 112.5
+			maxAmount = 112.5
+		}
 		MODULE
 		{
 			name = MechJebCore
@@ -17345,7 +19796,7 @@ UrlConfig
 			RESOURCE
 			{
 				name = ElectricCharge
-				rate = 0.05
+				rate = 0.0555555555555556
 			}
 		}
 		MODULE
@@ -17407,6 +19858,12 @@ UrlConfig
 		{
 			name = ModuleTweakableSAS
 		}
+		RESOURCE
+		{
+			name = ElectricCharge
+			amount = 50
+			maxAmount = 50
+		}
 		MODULE
 		{
 			name = MechJebCore
@@ -17459,7 +19916,7 @@ UrlConfig
 			RESOURCE
 			{
 				name = ElectricCharge
-				rate = 0.02777778
+				rate = 0.0138888888888889
 			}
 		}
 		MODULE
@@ -17495,6 +19952,12 @@ UrlConfig
 				PacketSize = 2
 				PacketResourceCost = 15.0
 			}
+		}
+		RESOURCE
+		{
+			name = ElectricCharge
+			amount = 12.5
+			maxAmount = 12.5
 		}
 		MODULE
 		{
@@ -17826,7 +20289,7 @@ UrlConfig
 			retractable = false
 			raycastTransformName = suncatcher
 			animationName = 1x3WideDeploy
-			chargeRate = 3.7
+			chargeRate = 0.052083333
 		}
 		MODULE
 		{
@@ -17898,7 +20361,7 @@ UrlConfig
 			resourceName = ElectricCharge
 			retractable = false
 			raycastTransformName = suncatcher
-			chargeRate = 0.72
+			chargeRate = 0.15625
 		}
 		MODULE
 		{
@@ -17969,7 +20432,7 @@ UrlConfig
 			animationName = solarpanels
 			resourceName = ElectricCharge
 			raycastTransformName = suncatcher
-			chargeRate = 0.041666667
+			chargeRate = 0.052083333
 		}
 		MODULE
 		{
@@ -18041,7 +20504,7 @@ UrlConfig
 			resourceName = ElectricCharge
 			retractable = false
 			raycastTransformName = suncatcher
-			chargeRate = 0.041666667
+			chargeRate = 0.052083333
 		}
 		MODULE
 		{
@@ -18111,7 +20574,7 @@ UrlConfig
 			name = ModuleDeployableSolarPanel
 			animationName = bigsolarpanel
 			resourceName = ElectricCharge
-			chargeRate = 0.902777778
+			chargeRate = 0.83125
 			raycastTransformName = suncatcher
 		}
 		MODULE
@@ -18182,7 +20645,7 @@ UrlConfig
 			pivotName = suncatcher
 			isBreakable = false
 			resourceName = ElectricCharge
-			chargeRate = 0.011574074
+			chargeRate = 0.013020833
 			raycastTransformName = suncatcher
 		}
 		MODULE
@@ -18246,7 +20709,7 @@ UrlConfig
 		angularDrag = 2
 		crashTolerance = 7
 		maxTemp = 1200
-		bulkheadProfiles = size0, srf
+		bulkheadProfiles = ,size00, srf
 		MODULE
 		{
 			name = ModuleGenerator
@@ -20180,7 +22643,7 @@ UrlConfig
 		angularDrag = 2
 		crashTolerance = 7
 		maxTemp = 2000
-		bulkheadProfiles = size0
+		bulkheadProfiles = ,size00
 		node_stack_top1 = 0.0, 0.06, 0.0, 0.0, 1.0, 0.0, 0
 		MODULE
 		{
@@ -20316,7 +22779,7 @@ UrlConfig
 		angularDrag = 2
 		crashTolerance = 4
 		maxTemp = 2000
-		bulkheadProfiles = size0
+		bulkheadProfiles = ,size00
 		MODULE
 		{
 			name = ModuleEngines
@@ -22451,8 +24914,8 @@ UrlConfig
 				}
 				atmosphereCurve
 				{
-					key = 0 250
-					key = 1 230
+					key = 0 236
+					key = 1 217
 					key = 3 0.001
 				}
 			}
@@ -22474,8 +24937,8 @@ UrlConfig
 				}
 				atmosphereCurve
 				{
-					key = 0 276
-					key = 1 239
+					key = 0 269
+					key = 1 233
 					key = 3 0.001
 				}
 			}
@@ -32334,7 +34797,7 @@ UrlConfig
 		breakingTorque = 200
 		maxTemp = 2000
 		fuelCrossFeed = False
-		bulkheadProfiles = size0, srf
+		bulkheadProfiles = ,size00, srf
 		scale = 1
 		rescaleFactor = 1
 		MODULE
@@ -32389,7 +34852,7 @@ UrlConfig
 		breakingTorque = 200
 		maxTemp = 2000
 		fuelCrossFeed = False
-		bulkheadProfiles = size0, srf
+		bulkheadProfiles = ,size00, srf
 		scale = 1
 		rescaleFactor = 1
 		MODULE
@@ -32814,7 +35277,7 @@ UrlConfig
 		angularDrag = 2
 		crashTolerance = 7
 		maxTemp = 2000
-		bulkheadProfiles = size0, srf
+		bulkheadProfiles = ,size00, srf
 		MODULE
 		{
 			name = CollisionFX
@@ -32867,7 +35330,7 @@ UrlConfig
 		angularDrag = 2
 		crashTolerance = 7
 		maxTemp = 2000
-		bulkheadProfiles = size0, srf
+		bulkheadProfiles = ,size00, srf
 		MODULE
 		{
 			name = CollisionFX
@@ -32920,7 +35383,7 @@ UrlConfig
 		angularDrag = 2
 		crashTolerance = 7
 		maxTemp = 2000
-		bulkheadProfiles = size0, srf
+		bulkheadProfiles = ,size00, srf
 		MODULE
 		{
 			name = CollisionFX
@@ -32973,7 +35436,7 @@ UrlConfig
 		angularDrag = 2
 		crashTolerance = 7
 		maxTemp = 2000
-		bulkheadProfiles = size0, srf
+		bulkheadProfiles = ,size00, srf
 		MODULE
 		{
 			name = CollisionFX
@@ -33527,7 +35990,7 @@ UrlConfig
 		crashTolerance = 7
 		maxTemp = 2000
 		PhysicsSignificance = 1
-		bulkheadProfiles = size0, srf
+		bulkheadProfiles = ,size00, srf
 		MODULE
 		{
 			name = ModuleAnimateGeneric
@@ -33695,7 +36158,7 @@ UrlConfig
 		crashTolerance = 7
 		maxTemp = 2000
 		PhysicsSignificance = 1
-		bulkheadProfiles = size0, srf
+		bulkheadProfiles = ,size00, srf
 		MODULE
 		{
 			name = ModuleAnimateGeneric
