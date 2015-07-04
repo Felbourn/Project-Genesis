@@ -48,7 +48,7 @@ toolbars
 			drawBorder = False
 			useKSPSkin = False
 			buttonOrder = 
-			visibleButtons = AmbientLightAdjustment.adjustLevels,PlanetShine.Gui
+			visibleButtons = AmbientLightAdjustment.adjustLevels,SmokeScreen.main
 		}
 		toolbar_1190476479
 		{
@@ -141,7 +141,7 @@ toolbars
 			drawBorder = False
 			useKSPSkin = False
 			buttonOrder = 
-			visibleButtons = AmbientLightAdjustment.adjustLevels,PlanetShine.Gui
+			visibleButtons = AmbientLightAdjustment.adjustLevels,SmokeScreen.main
 		}
 		toolbar_1190476479
 		{

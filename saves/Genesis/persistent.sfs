@@ -10,7 +10,7 @@ GAME
 	scene = 5
 	editor = None
 	flag = Squad/Flags/kerbin
-	launchID = 16
+	launchID = 17
 	PARAMETERS
 	{
 		preset = Normal
@@ -459,8 +459,8 @@ GAME
 	FLIGHTSTATE
 	{
 		version = 1.0.4
-		UT = 36016.5146183257
-		activeVessel = 7
+		UT = 36316.5546182777
+		activeVessel = 8
 		mapViewFiltering = -1026
 		VESSEL
 		{
@@ -1059,8 +1059,8 @@ GAME
 			prst = False
 			ref = 3750973652
 			ctrl = False
-			cPch = 0.264
-			cHdg = -0.05400004
+			cPch = 
+			cHdg = 
 			cMod = 0
 			ORBIT
 			{
