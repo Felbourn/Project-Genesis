@@ -27,7 +27,7 @@
     </rect>
     <int name="skin1">2</int>
     <bool name="toolbar1">1</bool>
-    <bool name="warphalt">1</bool>
+    <bool name="warphalt">0</bool>
     <int name="warphaltthresh">30</int>
     <bool name="showcharge1">1</bool>
     <int name="precision1">2</int>
