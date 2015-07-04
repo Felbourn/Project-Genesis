@@ -19,6 +19,8 @@ CanPin
 	Item = KerbalKonstructs
 	Item = SimplePartOrganizer
 	Item = FilterExtensions
+	Item = KolonyTools
+	Item = LightsOut
 }
 CanHide
 {
@@ -35,6 +37,8 @@ CanHide
 	Item = KerbalKonstructs
 	Item = SimplePartOrganizer
 	Item = FilterExtensions
+	Item = KolonyTools
+	Item = LightsOut
 }
 CanSetFalse
 {
@@ -51,6 +55,8 @@ CanSetFalse
 	Item = KerbalKonstructs
 	Item = SimplePartOrganizer
 	Item = FilterExtensions
+	Item = KolonyTools
+	Item = LightsOut
 }
 ModHasFirstConfig
 {
@@ -67,4 +73,6 @@ ModHasFirstConfig
 	Item = KerbalKonstructs
 	Item = SimplePartOrganizer
 	Item = FilterExtensions
+	Item = KolonyTools
+	Item = LightsOut
 }
