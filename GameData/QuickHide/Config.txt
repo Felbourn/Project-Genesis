@@ -16,6 +16,7 @@ CanPin
 	Item = KSPAlternateResourcePanel
 	Item = PlanetShine
 	Item = TextureReplacer
+	Item = KerbalKonstructs
 }
 CanHide
 {
@@ -29,6 +30,7 @@ CanHide
 	Item = KSPAlternateResourcePanel
 	Item = PlanetShine
 	Item = TextureReplacer
+	Item = KerbalKonstructs
 }
 CanSetFalse
 {
@@ -42,6 +44,7 @@ CanSetFalse
 	Item = KSPAlternateResourcePanel
 	Item = PlanetShine
 	Item = TextureReplacer
+	Item = KerbalKonstructs
 }
 ModHasFirstConfig
 {
@@ -55,4 +58,5 @@ ModHasFirstConfig
 	Item = KSPAlternateResourcePanel
 	Item = PlanetShine
 	Item = TextureReplacer
+	Item = KerbalKonstructs
 }

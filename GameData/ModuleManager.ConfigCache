@@ -4253,6 +4253,2754 @@ UrlConfig
 }
 UrlConfig
 {
+	name = LackdustShed
+	type = STATIC
+	parentUrl = LackMisc/Parts/Base/dustShed
+	url = LackMisc/Parts/Base/dustShed/LackdustShed
+	STATIC
+	{
+		name = LackdustShed
+		mesh = dustShed.mu
+		module = Part
+		category = none
+		author = Lack
+		static = true
+		scale = 1.4
+		rescaleFactor = 1
+		cost = 0
+		subcategory = 0
+		title = Dust Shed
+		manufacturer = LLL
+		description = 
+		attachRules = 1,1,1,1,0
+		mass = 1
+		dragModelType = default
+		maximum_drag = 1
+		minimum_drag = 1
+		angularDrag = 1
+		crashTolerance = 1
+		maxTemp = 1
+		breakingForce = 1
+		breakingTorque = 1
+	}
+}
+UrlConfig
+{
+	name = LackdustWall
+	type = STATIC
+	parentUrl = LackMisc/Parts/Base/dustWall
+	url = LackMisc/Parts/Base/dustWall/LackdustWall
+	STATIC
+	{
+		name = LackdustWall
+		mesh = dustWall.mu
+		module = Part
+		category = none
+		author = Lack
+		static = true
+		scale = 1.4
+		rescaleFactor = 1
+		cost = 0
+		subcategory = 0
+		title = Dust Wall
+		manufacturer = LLL
+		description = 
+		attachRules = 1,1,1,1,0
+		mass = 1
+		dragModelType = default
+		maximum_drag = 1
+		minimum_drag = 1
+		angularDrag = 1
+		crashTolerance = 1
+		maxTemp = 1
+		breakingForce = 1
+		breakingTorque = 1
+	}
+}
+UrlConfig
+{
+	name = LackdlargeHab
+	type = STATIC
+	parentUrl = LackMisc/Parts/Base/largeHab
+	url = LackMisc/Parts/Base/largeHab/LackdlargeHab
+	STATIC
+	{
+		name = LackdlargeHab
+		mesh = largeHab.mu
+		module = Part
+		category = none
+		author = Lack
+		static = true
+		scale = 1.4
+		rescaleFactor = 1
+		cost = 0
+		subcategory = 0
+		title = Large Hab
+		manufacturer = LLL
+		description = 
+		attachRules = 1,1,1,1,0
+		mass = 1
+		dragModelType = default
+		maximum_drag = 1
+		minimum_drag = 1
+		angularDrag = 1
+		crashTolerance = 1
+		maxTemp = 1
+		breakingForce = 1
+		breakingTorque = 1
+	}
+}
+UrlConfig
+{
+	name = LackdsmallHab
+	type = STATIC
+	parentUrl = LackMisc/Parts/Base/smallHab
+	url = LackMisc/Parts/Base/smallHab/LackdsmallHab
+	STATIC
+	{
+		name = LackdsmallHab
+		mesh = smallHab.mu
+		module = Part
+		category = none
+		author = Lack
+		static = true
+		scale = 1.4
+		rescaleFactor = 1
+		cost = 0
+		subcategory = 0
+		title = Small Hab
+		manufacturer = LLL
+		description = 
+		attachRules = 1,1,1,1,0
+		mass = 1
+		dragModelType = default
+		maximum_drag = 1
+		minimum_drag = 1
+		angularDrag = 1
+		crashTolerance = 1
+		maxTemp = 1
+		breakingForce = 1
+		breakingTorque = 1
+	}
+}
+UrlConfig
+{
+	name = Lacktower
+	type = STATIC
+	parentUrl = LackMisc/Parts/Base/tower
+	url = LackMisc/Parts/Base/tower/Lacktower
+	STATIC
+	{
+		name = Lacktower
+		mesh = tower.mu
+		module = Part
+		category = none
+		author = Lack
+		static = true
+		scale = 1.4
+		rescaleFactor = 1
+		cost = 0
+		subcategory = 0
+		title = Tower
+		manufacturer = LLL
+		description = 
+		attachRules = 1,1,1,1,0
+		mass = 1
+		dragModelType = default
+		maximum_drag = 1
+		minimum_drag = 1
+		angularDrag = 1
+		crashTolerance = 1
+		maxTemp = 1
+		breakingForce = 1
+		breakingTorque = 1
+	}
+}
+UrlConfig
+{
+	name = Lackcarpark
+	type = STATIC
+	parentUrl = LackMisc/Parts/Buildings/carpark
+	url = LackMisc/Parts/Buildings/carpark/Lackcarpark
+	STATIC
+	{
+		name = Lackcarpark
+		mesh = carpark.mu
+		module = Part
+		category = none
+		author = Lack
+		static = true
+		scale = 1.4
+		rescaleFactor = 1
+		cost = 0
+		subcategory = 0
+		title = Carpark
+		manufacturer = LLL
+		description = 
+		attachRules = 1,1,1,1,0
+		mass = 1
+		dragModelType = default
+		maximum_drag = 1
+		minimum_drag = 1
+		angularDrag = 1
+		crashTolerance = 1
+		maxTemp = 1
+		breakingForce = 1
+		breakingTorque = 1
+		Instances
+		{
+			RadialPosition = 158357.4,-1219.094,-578429.3
+			RotationAngle = 131.6418
+			RadiusOffset = 66.35
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 158370.9,-940.5938,-578429.3
+			RotationAngle = 77.91045
+			RadiusOffset = 66.4
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 159187.9,-428.6028,-578429.2
+			RotationAngle = 73.8806
+			RadiusOffset = 68.95
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 159061.5,-1221.125,-578429.3
+			RotationAngle = 163.8806
+			RadiusOffset = 69.17524
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 158048,-419.1252,-578429.3
+			RotationAngle = 75.22388
+			RadiusOffset = 70.5
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 158554.1,-1157.555,-578783.3
+			RotationAngle = 131.6418
+			RadiusOffset = 66.4
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 157374.8,241.8683,-578866.6
+			RotationAngle = 80.59702
+			RadiusOffset = 66.74545
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+	}
+}
+UrlConfig
+{
+	name = Lackhangers
+	type = STATIC
+	parentUrl = LackMisc/Parts/Buildings/hangers
+	url = LackMisc/Parts/Buildings/hangers/Lackhangers
+	STATIC
+	{
+		name = Lackhangers
+		mesh = hangers.mu
+		module = Part
+		category = none
+		author = Lack
+		static = true
+		scale = 1.4
+		rescaleFactor = 1
+		cost = 0
+		subcategory = 0
+		title = hangers
+		manufacturer = LLL
+		description = 
+		attachRules = 1,1,1,1,0
+		mass = 1
+		dragModelType = default
+		maximum_drag = 1
+		minimum_drag = 1
+		angularDrag = 1
+		crashTolerance = 1
+		maxTemp = 1
+		breakingForce = 1
+		breakingTorque = 1
+		Instances
+		{
+			RadialPosition = 158041.4,-394.5938,-578429.3
+			RotationAngle = 163.8806
+			RadiusOffset = 69.16187
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 158303.4,-758.0938,-578429.3
+			RotationAngle = 77.91045
+			RadiusOffset = 65.16185
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 159898.4,-1382.094,-578429.3
+			RotationAngle = 69.85075
+			RadiusOffset = 64.66186
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 159146.9,-401.6028,-578429.2
+			RotationAngle = 163.8806
+			RadiusOffset = 67.6
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 158453,-1113.117,-578429.2
+			RotationAngle = 311.6418
+			RadiusOffset = 65.2
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+	}
+}
+UrlConfig
+{
+	name = Lackhut
+	type = STATIC
+	parentUrl = LackMisc/Parts/Buildings/hut
+	url = LackMisc/Parts/Buildings/hut/Lackhut
+	STATIC
+	{
+		name = Lackhut
+		mesh = hut.mu
+		module = Part
+		category = none
+		author = Lack
+		static = true
+		scale = 1.4
+		rescaleFactor = 1
+		cost = 0
+		subcategory = 0
+		title = hut
+		manufacturer = LLL
+		description = 
+		attachRules = 1,1,1,1,0
+		mass = 1
+		dragModelType = default
+		maximum_drag = 1
+		minimum_drag = 1
+		angularDrag = 1
+		crashTolerance = 1
+		maxTemp = 1
+		breakingForce = 1
+		breakingTorque = 1
+		Instances
+		{
+			RadialPosition = 159651.9,-940.0934,-578429.3
+			RotationAngle = 107.4627
+			RadiusOffset = 68.9
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 158212.9,-1437.594,-578429.3
+			RotationAngle = 42.98507
+			RadiusOffset = 66.66187
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+	}
+}
+UrlConfig
+{
+	name = Lackjunction
+	type = STATIC
+	parentUrl = LackMisc/Parts/Buildings/junction
+	url = LackMisc/Parts/Buildings/junction/Lackjunction
+	STATIC
+	{
+		name = Lackjunction
+		mesh = junction.mu
+		module = Part
+		category = none
+		author = Lack
+		static = true
+		scale = 1.4
+		rescaleFactor = 1
+		cost = 0
+		subcategory = 0
+		title = junction
+		manufacturer = LLL
+		description = 
+		attachRules = 1,1,1,1,0
+		mass = 1
+		dragModelType = default
+		maximum_drag = 1
+		minimum_drag = 1
+		angularDrag = 1
+		crashTolerance = 1
+		maxTemp = 1
+		breakingForce = 1
+		breakingTorque = 1
+		Instances
+		{
+			RadialPosition = 157366.8,175.8683,-578866.6
+			RotationAngle = 80.59702
+			RadiusOffset = 66.9
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+	}
+}
+UrlConfig
+{
+	name = LacklandingLights
+	type = STATIC
+	parentUrl = LackMisc/Parts/Buildings/landingLights
+	url = LackMisc/Parts/Buildings/landingLights/LacklandingLights
+	STATIC
+	{
+		name = LacklandingLights
+		mesh = landingLights.mu
+		module = Part
+		category = none
+		author = Lack
+		static = true
+		scale = 1.4
+		rescaleFactor = 1
+		cost = 0
+		subcategory = 0
+		title = Landing Lights
+		manufacturer = LLL
+		description = 
+		attachRules = 1,1,1,1,0
+		mass = 1
+		dragModelType = default
+		maximum_drag = 1
+		minimum_drag = 1
+		angularDrag = 1
+		crashTolerance = 1
+		maxTemp = 1
+		breakingForce = 1
+		breakingTorque = 1
+		Instances
+		{
+			RadialPosition = 157976.8,-509.1318,-578866.7
+			RotationAngle = 165
+			RadiusOffset = 66.7795
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+	}
+}
+UrlConfig
+{
+	name = Lacklargebuilding
+	type = STATIC
+	parentUrl = LackMisc/Parts/Buildings/largebuilding
+	url = LackMisc/Parts/Buildings/largebuilding/Lacklargebuilding
+	STATIC
+	{
+		name = Lacklargebuilding
+		mesh = largebuilding.mu
+		module = Part
+		category = none
+		author = Lack
+		static = true
+		scale = 1.4
+		rescaleFactor = 1
+		cost = 0
+		subcategory = 0
+		title = Large Building
+		manufacturer = LLL
+		description = 
+		attachRules = 1,1,1,1,0
+		mass = 1
+		dragModelType = default
+		maximum_drag = 1
+		minimum_drag = 1
+		angularDrag = 1
+		crashTolerance = 1
+		maxTemp = 1
+		breakingForce = 1
+		breakingTorque = 1
+		Instances
+		{
+			RadialPosition = 158577.9,-1161.594,-578429.3
+			RotationAngle = 222.9851
+			RadiusOffset = 66.1
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 158325.9,-1118.094,-578429.3
+			RotationAngle = 220.2985
+			RadiusOffset = 66.66191
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 158434.9,-947.0938,-578429.3
+			RotationAngle = 346.5672
+			RadiusOffset = 66.66187
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 159428.9,122.8972,-578429.2
+			RotationAngle = 72.53731
+			RadiusOffset = 64.66025
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 158541.4,-1080.103,-578429.2
+			RotationAngle = 132.9851
+			RadiusOffset = 63.16025
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+	}
+}
+UrlConfig
+{
+	name = Lacklargebuilding2
+	type = STATIC
+	parentUrl = LackMisc/Parts/Buildings/largebuilding2
+	url = LackMisc/Parts/Buildings/largebuilding2/Lacklargebuilding2
+	STATIC
+	{
+		name = Lacklargebuilding2
+		mesh = largebuilding2.mu
+		module = Part
+		category = none
+		author = Lack
+		static = true
+		scale = 1.4
+		rescaleFactor = 1
+		cost = 0
+		subcategory = 0
+		title = Large Building 2
+		manufacturer = LLL
+		description = 
+		attachRules = 1,1,1,1,0
+		mass = 1
+		dragModelType = default
+		maximum_drag = 1
+		minimum_drag = 1
+		angularDrag = 1
+		crashTolerance = 1
+		maxTemp = 1
+		breakingForce = 1
+		breakingTorque = 1
+		Instances
+		{
+			RadialPosition = 157514.8,158.3683,-578869.6
+			RotationAngle = 79.25373
+			RadiusOffset = 67.3
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 158465.3,-1404.975,-578868.4
+			RotationAngle = 131.6418
+			RadiusOffset = 66.98856
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+	}
+}
+UrlConfig
+{
+	name = LackparkedVehicles
+	type = STATIC
+	parentUrl = LackMisc/Parts/Buildings/parkedVehicles
+	url = LackMisc/Parts/Buildings/parkedVehicles/LackparkedVehicles
+	STATIC
+	{
+		name = LackparkedVehicles
+		mesh = parkedVehicles.mu
+		module = Part
+		category = none
+		author = Lack
+		static = true
+		scale = 1.4
+		rescaleFactor = 1
+		cost = 0
+		subcategory = 0
+		title = Parked Vehicles
+		manufacturer = LLL
+		description = 
+		attachRules = 1,1,1,1,0
+		mass = 1
+		dragModelType = default
+		maximum_drag = 1
+		minimum_drag = 1
+		angularDrag = 1
+		crashTolerance = 1
+		maxTemp = 1
+		breakingForce = 1
+		breakingTorque = 1
+		Instances
+		{
+			RadialPosition = 158521.3,-1255.975,-578868.4
+			RotationAngle = 131.6418
+			RadiusOffset = 65.8
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 158990.8,-696.4747,-578868.4
+			RotationAngle = 45.67164
+			RadiusOffset = 68.2
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 158564.3,-1272.975,-578868.4
+			RotationAngle = 311.6418
+			RadiusOffset = 65.5
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 158546.3,-1239.975,-578868.4
+			RotationAngle = 131.6418
+			RadiusOffset = 65.48854
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 157450.3,221.0253,-578868.4
+			RotationAngle = 260.597
+			RadiusOffset = 65.9
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 158478,-1250.964,-578436.8
+			RotationAngle = 310.2985
+			RadiusOffset = 65.5
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+	}
+}
+UrlConfig
+{
+	name = Lackrail
+	type = STATIC
+	parentUrl = LackMisc/Parts/Buildings/rail
+	url = LackMisc/Parts/Buildings/rail/Lackrail
+	STATIC
+	{
+		name = Lackrail
+		mesh = rail.mu
+		module = Part
+		category = none
+		author = Lack
+		static = true
+		scale = 1.4
+		rescaleFactor = 1
+		cost = 0
+		subcategory = 0
+		title = Railway
+		manufacturer = LLL
+		description = 
+		attachRules = 1,1,1,1,0
+		mass = 1
+		dragModelType = default
+		maximum_drag = 1
+		minimum_drag = 1
+		angularDrag = 1
+		crashTolerance = 1
+		maxTemp = 1
+		breakingForce = 1
+		breakingTorque = 1
+		animationName = trainanim
+		Instances
+		{
+			RadialPosition = 157456,-2951.125,-578429.3
+			RotationAngle = 298.209
+			RadiusOffset = 63.17525
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+	}
+}
+UrlConfig
+{
+	name = LackrailTunnel
+	type = STATIC
+	parentUrl = LackMisc/Parts/Buildings/railTunnel
+	url = LackMisc/Parts/Buildings/railTunnel/LackrailTunnel
+	STATIC
+	{
+		name = LackrailTunnel
+		mesh = railTunnel.mu
+		module = Part
+		category = none
+		author = Lack
+		static = true
+		scale = 1.4
+		rescaleFactor = 1
+		cost = 0
+		subcategory = 0
+		title = Tunnel
+		manufacturer = LLL
+		description = 
+		attachRules = 1,1,1,1,0
+		mass = 1
+		dragModelType = default
+		maximum_drag = 1
+		minimum_drag = 1
+		angularDrag = 1
+		crashTolerance = 1
+		maxTemp = 1
+		breakingForce = 1
+		breakingTorque = 1
+		Instances
+		{
+			RadialPosition = 157363.6,-3169.501,-578869.5
+			RotationAngle = 118.209
+			RadiusOffset = 63.79936
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 155716.8,575.8683,-578866.6
+			RotationAngle = 182.6866
+			RadiusOffset = 64.24545
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 156921.8,-2486.132,-578866.6
+			RotationAngle = 131.6418
+			RadiusOffset = 62.24545
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+	}
+}
+UrlConfig
+{
+	name = Lackroad
+	type = STATIC
+	parentUrl = LackMisc/Parts/Buildings/road
+	url = LackMisc/Parts/Buildings/road/Lackroad
+	STATIC
+	{
+		name = Lackroad
+		mesh = road.mu
+		module = Part
+		category = none
+		author = Lack
+		static = true
+		scale = 1.4
+		rescaleFactor = 1
+		cost = 0
+		subcategory = 0
+		title = Road
+		manufacturer = LLL
+		description = 
+		attachRules = 1,1,1,1,0
+		mass = 1
+		dragModelType = default
+		maximum_drag = 1
+		minimum_drag = 1
+		angularDrag = 1
+		crashTolerance = 1
+		maxTemp = 1
+		breakingForce = 1
+		breakingTorque = 1
+		Instances
+		{
+			RadialPosition = 159854.9,-1234.103,-578429.2
+			RotationAngle = 71.19403
+			RadiusOffset = 66.4
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 158163.4,-470.5938,-578429.3
+			RotationAngle = 177.3134
+			RadiusOffset = 66.4
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+	}
+}
+UrlConfig
+{
+	name = LackroadCars
+	type = STATIC
+	parentUrl = LackMisc/Parts/Buildings/roadMovingCars
+	url = LackMisc/Parts/Buildings/roadMovingCars/LackroadCars
+	STATIC
+	{
+		name = LackroadCars
+		mesh = roadCars.mu
+		module = Part
+		category = none
+		author = Lack
+		static = true
+		scale = 1.4
+		rescaleFactor = 1
+		cost = 0
+		subcategory = 0
+		title = Road with moving cars
+		manufacturer = LLL
+		description = 
+		attachRules = 1,1,1,1,0
+		mass = 1
+		dragModelType = default
+		maximum_drag = 1
+		minimum_drag = 1
+		angularDrag = 1
+		crashTolerance = 1
+		maxTemp = 1
+		breakingForce = 1
+		breakingTorque = 1
+		animationName = drive1
+		Instances
+		{
+			RadialPosition = 158440.9,-1302.094,-578429.3
+			RotationAngle = 131.6418
+			RadiusOffset = 66.66187
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 157798.9,-1778.094,-578429.3
+			RotationAngle = 122.2388
+			RadiusOffset = 66.6619
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 158252.9,-1023.094,-578429.3
+			RotationAngle = 77.91045
+			RadiusOffset = 66.5
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 157759.4,-682.5938,-578429.3
+			RotationAngle = 72.53732
+			RadiusOffset = 66.5
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 157827.9,100.8972,-578429.2
+			RotationAngle = 85.97013
+			RadiusOffset = 66.66025
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 158259.9,121.8972,-578429.3
+			RotationAngle = 163.8806
+			RadiusOffset = 66.45
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 159082.4,132.6,-578429.2
+			RotationAngle = 163.8806
+			RadiusOffset = 66.45
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 158951.9,-141.1028,-578429.2
+			RotationAngle = 29.55224
+			RadiusOffset = 66.4
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 157157.9,-2261.103,-578429.2
+			RotationAngle = 131.6418
+			RadiusOffset = 66.45
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 157735.9,-1462.603,-578429.2
+			RotationAngle = 80.59702
+			RadiusOffset = 66.4
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 158685.5,-1018.117,-578429.2
+			RotationAngle = 167.9104
+			RadiusOffset = 66.3
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 157553.3,146.3683,-578866.6
+			RotationAngle = 169.2537
+			RadiusOffset = 66.4
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 156712.8,286.8683,-578866.6
+			RotationAngle = 360
+			RadiusOffset = 66.3
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 155959.3,500.8683,-578866.6
+			RotationAngle = 182.6866
+			RadiusOffset = 66.2
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+	}
+}
+UrlConfig
+{
+	name = LacksmallBuilding1
+	type = STATIC
+	parentUrl = LackMisc/Parts/Buildings/smallbuilding1
+	url = LackMisc/Parts/Buildings/smallbuilding1/LacksmallBuilding1
+	STATIC
+	{
+		name = LacksmallBuilding1
+		mesh = smallbuilding1.mu
+		module = Part
+		category = none
+		author = Lack
+		static = true
+		scale = 1.4
+		rescaleFactor = 1
+		cost = 0
+		subcategory = 0
+		title = Small Building 1
+		manufacturer = LLL
+		description = 
+		attachRules = 1,1,1,1,0
+		mass = 1
+		dragModelType = default
+		maximum_drag = 1
+		minimum_drag = 1
+		angularDrag = 1
+		crashTolerance = 1
+		maxTemp = 1
+		breakingForce = 1
+		breakingTorque = 1
+		Instances
+		{
+			RadialPosition = 159187.2,-349.7608,-578581.8
+			RotationAngle = 118.209
+			RadiusOffset = 62.9
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 160013.3,-1466.132,-578866.6
+			RotationAngle = 341.194
+			RadiusOffset = 62.9
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 157980.8,-197.6317,-578866.6
+			RotationAngle = 276.7164
+			RadiusOffset = 63
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+	}
+}
+UrlConfig
+{
+	name = LacksmallBuilding2
+	type = STATIC
+	parentUrl = LackMisc/Parts/Buildings/smallbuilding2
+	url = LackMisc/Parts/Buildings/smallbuilding2/LacksmallBuilding2
+	STATIC
+	{
+		name = LacksmallBuilding2
+		mesh = smallbuilding2.mu
+		module = Part
+		category = none
+		author = Lack
+		static = true
+		scale = 1.4
+		rescaleFactor = 1
+		cost = 0
+		subcategory = 0
+		title = Small Building 2
+		manufacturer = LLL
+		description = 
+		attachRules = 1,1,1,1,0
+		mass = 1
+		dragModelType = default
+		maximum_drag = 1
+		minimum_drag = 1
+		angularDrag = 1
+		crashTolerance = 1
+		maxTemp = 1
+		breakingForce = 1
+		breakingTorque = 1
+		Instances
+		{
+			RadialPosition = 159304.3,-1194.632,-578866.6
+			RotationAngle = 287.4627
+			RadiusOffset = 66
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 158063.8,-396.1317,-578866.6
+			RotationAngle = 72.53732
+			RadiusOffset = 67.64
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+	}
+}
+UrlConfig
+{
+	name = LacksmallBuilding3
+	type = STATIC
+	parentUrl = LackMisc/Parts/Buildings/smallbuilding3
+	url = LackMisc/Parts/Buildings/smallbuilding3/LacksmallBuilding3
+	STATIC
+	{
+		name = LacksmallBuilding3
+		mesh = smallbuilding3.mu
+		module = Part
+		category = none
+		author = Lack
+		static = true
+		scale = 1.4
+		rescaleFactor = 1
+		cost = 0
+		subcategory = 0
+		title = Small Building 3
+		manufacturer = LLL
+		description = 
+		attachRules = 1,1,1,1,0
+		mass = 1
+		dragModelType = default
+		maximum_drag = 1
+		minimum_drag = 1
+		angularDrag = 1
+		crashTolerance = 1
+		maxTemp = 1
+		breakingForce = 1
+		breakingTorque = 1
+		Instances
+		{
+			RadialPosition = 159280.3,-1186.132,-578869.6
+			RotationAngle = 196.1194
+			RadiusOffset = 66.015
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 158083.3,-375.1317,-578866.6
+			RotationAngle = 73.88059
+			RadiusOffset = 67.6
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 158626.8,-1219.132,-578866.6
+			RotationAngle = 41.64179
+			RadiusOffset = 63.62
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 155760.8,585.3683,-578866.6
+			RotationAngle = 5.373134
+			RadiusOffset = 63.1
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+	}
+}
+UrlConfig
+{
+	name = Lacktanks
+	type = STATIC
+	parentUrl = LackMisc/Parts/Buildings/tanks
+	url = LackMisc/Parts/Buildings/tanks/Lacktanks
+	STATIC
+	{
+		name = Lacktanks
+		mesh = tanks.mu
+		module = Part
+		category = none
+		author = Lack
+		static = true
+		scale = 1.4
+		rescaleFactor = 1
+		cost = 0
+		subcategory = 0
+		title = tanks
+		manufacturer = LLL
+		description = 
+		attachRules = 1,1,1,1,0
+		mass = 1
+		dragModelType = default
+		maximum_drag = 1
+		minimum_drag = 1
+		angularDrag = 1
+		crashTolerance = 1
+		maxTemp = 1
+		breakingForce = 1
+		breakingTorque = 1
+		RESOURCE
+		{
+			name = LiquidFuel
+			amount = 30000
+			maxAmount = 3000
+		}
+		RESOURCE
+		{
+			name = Oxidizer
+			amount = 36660
+			maxAmount = 3660
+		}
+		MODULE
+		{
+			name = ModuleGenerator
+			isAlwaysActive = true
+			OUTPUT_RESOURCE
+			{
+				name = LiquidFuel
+				rate = 1
+			}
+		}
+		MODULE
+		{
+			name = ModuleGenerator
+			isAlwaysActive = true
+			OUTPUT_RESOURCE
+			{
+				name = Oxidizer
+				rate = 1.2
+			}
+		}
+		Instances
+		{
+			RadialPosition = 157920.9,-225.5938,-578429.3
+			RotationAngle = 5.373134
+			RadiusOffset = 66.6619
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 158335.9,-908.0938,-578429.3
+			RotationAngle = 166.5672
+			RadiusOffset = 66.6619
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 158335.9,-948.5939,-578429.3
+			RotationAngle = 166.5672
+			RadiusOffset = 66.6619
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 159245.9,181.8972,-578429.3
+			RotationAngle = 163.8806
+			RadiusOffset = 66.16022
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+	}
+}
+UrlConfig
+{
+	name = LackwideTruckStationary
+	type = STATIC
+	parentUrl = LackMisc/Parts/Buildings/wideTruckStationary
+	url = LackMisc/Parts/Buildings/wideTruckStationary/LackwideTruckStationary
+	STATIC
+	{
+		name = LackwideTruckStationary
+		mesh = wideTruckStationary.mu
+		module = Part
+		category = none
+		author = Lack
+		static = true
+		scale = 1.4
+		rescaleFactor = 1
+		cost = 0
+		subcategory = 0
+		title = Parked Truck Wide
+		manufacturer = LLL
+		description = 
+		attachRules = 1,1,1,1,0
+		mass = 1
+		dragModelType = default
+		maximum_drag = 1
+		minimum_drag = 1
+		angularDrag = 1
+		crashTolerance = 1
+		maxTemp = 1
+		breakingForce = 1
+		breakingTorque = 1
+	}
+}
+UrlConfig
+{
+	name = Lackwindsock
+	type = STATIC
+	parentUrl = LackMisc/Parts/Buildings/windSock
+	url = LackMisc/Parts/Buildings/windSock/Lackwindsock
+	STATIC
+	{
+		name = Lackwindsock
+		mesh = windSock.mu
+		module = Part
+		category = none
+		author = Lack
+		static = true
+		scale = 1.4
+		rescaleFactor = 1
+		cost = 0
+		subcategory = 0
+		title = Wind Sock
+		manufacturer = LLL
+		description = 
+		attachRules = 1,1,1,1,0
+		mass = 1
+		dragModelType = default
+		maximum_drag = 1
+		minimum_drag = 1
+		angularDrag = 1
+		crashTolerance = 1
+		maxTemp = 1
+		breakingForce = 1
+		breakingTorque = 1
+		animationName = windsock
+		Instances
+		{
+			RadialPosition = 188992,-16054.96,-578436.8
+			RotationAngle = 94.02985
+			RadiusOffset = 131.8
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+	}
+}
+UrlConfig
+{
+	name = Lackwires
+	type = STATIC
+	parentUrl = LackMisc/Parts/Buildings/wires
+	url = LackMisc/Parts/Buildings/wires/Lackwires
+	STATIC
+	{
+		name = Lackwires
+		mesh = wires.mu
+		module = Part
+		category = none
+		author = Lack
+		static = true
+		scale = 1.4
+		rescaleFactor = 1
+		cost = 0
+		subcategory = 0
+		title = Wires
+		manufacturer = LLL
+		description = 
+		attachRules = 1,1,1,1,0
+		mass = 1
+		dragModelType = default
+		maximum_drag = 1
+		minimum_drag = 1
+		angularDrag = 1
+		crashTolerance = 1
+		maxTemp = 1
+		breakingForce = 1
+		breakingTorque = 1
+		Instances
+		{
+			RadialPosition = 158241,-1388.117,-578429.2
+			RotationAngle = 77.91045
+			RadiusOffset = 64.66056
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 158232.7,-867.6167,-578429.2
+			RotationAngle = 257.9104
+			RadiusOffset = 64.66058
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 157987.5,-1597.617,-578429.2
+			RotationAngle = 131.6418
+			RadiusOffset = 64.66057
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 158631,-1169.117,-578429.2
+			RotationAngle = 310.2985
+			RadiusOffset = 64.66059
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 158273.7,-1442.9,-578429.2
+			RotationAngle = 131.6418
+			RadiusOffset = 64.6606
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 159018,-1257.629,-578429.3
+			RotationAngle = 349.2538
+			RadiusOffset = 67.67558
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+	}
+}
+UrlConfig
+{
+	name = LackFence1
+	type = STATIC
+	parentUrl = LackMisc/Parts/Fence/part
+	url = LackMisc/Parts/Fence/part/LackFence1
+	STATIC
+	{
+		name = LackFence1
+		mesh = long.mu
+		module = Part
+		category = none
+		author = Lack
+		static = true
+		scale = 1.4
+		rescaleFactor = 1
+		cost = 0
+		subcategory = 0
+		title = Long Fence
+		manufacturer = LLL
+		description = 
+		attachRules = 1,1,1,1,0
+		mass = 1
+		dragModelType = default
+		maximum_drag = 1
+		minimum_drag = 1
+		angularDrag = 1
+		crashTolerance = 1
+		maxTemp = 1
+		breakingForce = 1
+		breakingTorque = 1
+		Instances
+		{
+			RadialPosition = 159609.4,-577.5923,-578429.3
+			RotationAngle = 75.22388
+			RadiusOffset = 64.67664
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 159795.9,-462.0933,-578429.3
+			RotationAngle = 75.22388
+			RadiusOffset = 64.67667
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 158290.9,-581.0929,-578429.3
+			RotationAngle = 75.22388
+			RadiusOffset = 64.67665
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 158173.4,-299.5929,-578429.3
+			RotationAngle = 96.71642
+			RadiusOffset = 64.67661
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 158240.4,-982.5929,-578429.3
+			RotationAngle = 169.2537
+			RadiusOffset = 64.67663
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 159027.9,-1512.593,-578429.3
+			RotationAngle = 94.02985
+			RadiusOffset = 64.17664
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 159830.9,-1650.093,-578429.3
+			RotationAngle = 75.22388
+			RadiusOffset = 64.67665
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 157867.3,-697.1318,-578866.7
+			RotationAngle = 162.5373
+			RadiusOffset = 64.6
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+	}
+}
+UrlConfig
+{
+	name = LacklowPolTrees
+	type = STATIC
+	parentUrl = LackMisc/Parts/Palms/lowPolTrees
+	url = LackMisc/Parts/Palms/lowPolTrees/LacklowPolTrees
+	STATIC
+	{
+		name = LacklowPolTrees
+		mesh = lowPolTrees.mu
+		module = Part
+		category = none
+		author = Lack
+		static = true
+		scale = 1.4
+		rescaleFactor = 1
+		cost = 0
+		subcategory = 0
+		title = Low Pol Trees
+		manufacturer = LLL
+		description = 
+		attachRules = 1,1,1,1,0
+		mass = 1
+		dragModelType = default
+		maximum_drag = 1
+		minimum_drag = 1
+		angularDrag = 1
+		crashTolerance = 1
+		maxTemp = 1
+		breakingForce = 1
+		breakingTorque = 1
+	}
+}
+UrlConfig
+{
+	name = LacklowPolTreesLarge
+	type = STATIC
+	parentUrl = LackMisc/Parts/Palms/lowPolTreesLarge
+	url = LackMisc/Parts/Palms/lowPolTreesLarge/LacklowPolTreesLarge
+	STATIC
+	{
+		name = LacklowPolTreesLarge
+		mesh = lowPolTreesLarge.mu
+		module = Part
+		category = none
+		author = Lack
+		static = true
+		scale = 1.4
+		rescaleFactor = 1
+		cost = 0
+		subcategory = 0
+		title = Low Pol Trees Large
+		manufacturer = LLL
+		description = 
+		attachRules = 1,1,1,1,0
+		mass = 1
+		dragModelType = default
+		maximum_drag = 1
+		minimum_drag = 1
+		angularDrag = 1
+		crashTolerance = 1
+		maxTemp = 1
+		breakingForce = 1
+		breakingTorque = 1
+	}
+}
+UrlConfig
+{
+	name = LackPalmRow
+	type = STATIC
+	parentUrl = LackMisc/Parts/Palms/palmRow
+	url = LackMisc/Parts/Palms/palmRow/LackPalmRow
+	STATIC
+	{
+		name = LackPalmRow
+		mesh = palmRow.mu
+		module = Part
+		category = none
+		author = Lack
+		static = true
+		scale = 1.4
+		rescaleFactor = 1
+		cost = 0
+		subcategory = 0
+		title = Row of Palms
+		manufacturer = LLL
+		description = 
+		attachRules = 1,1,1,1,0
+		mass = 1
+		dragModelType = default
+		maximum_drag = 1
+		minimum_drag = 1
+		angularDrag = 1
+		crashTolerance = 1
+		maxTemp = 1
+		breakingForce = 1
+		breakingTorque = 1
+		Instances
+		{
+			RadialPosition = 158838.5,229.0363,-578436.8
+			RotationAngle = 162.5373
+			RadiusOffset = 64.45247
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+	}
+}
+UrlConfig
+{
+	name = LackPalmRow2
+	type = STATIC
+	parentUrl = LackMisc/Parts/Palms/palmRow2
+	url = LackMisc/Parts/Palms/palmRow2/LackPalmRow2
+	STATIC
+	{
+		name = LackPalmRow2
+		mesh = palmRow2.mu
+		module = Part
+		category = none
+		author = Lack
+		static = true
+		scale = 1.4
+		rescaleFactor = 1
+		cost = 0
+		subcategory = 0
+		title = Row of Palms Basic
+		manufacturer = LLL
+		description = 
+		attachRules = 1,1,1,1,0
+		mass = 1
+		dragModelType = default
+		maximum_drag = 1
+		minimum_drag = 1
+		angularDrag = 1
+		crashTolerance = 1
+		maxTemp = 1
+		breakingForce = 1
+		breakingTorque = 1
+		Instances
+		{
+			RadialPosition = 158615,162.0363,-578436.8
+			RotationAngle = 343.8806
+			RadiusOffset = 64.45201
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 156737.5,201.0362,-578436.8
+			RotationAngle = 357.3134
+			RadiusOffset = 64.95114
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 159486.5,-2270.964,-578436.8
+			RotationAngle = 29.55224
+			RadiusOffset = 64.95271
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 159166.5,-2210.964,-578436.8
+			RotationAngle = 142.3881
+			RadiusOffset = 64.95401
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 156806.5,-990.9637,-578436.8
+			RotationAngle = 56.41791
+			RadiusOffset = 64.95288
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 157504.5,-2047.964,-578436.8
+			RotationAngle = 126.2687
+			RadiusOffset = 64.7
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 156826.5,-1930.964,-578436.8
+			RotationAngle = 91.34328
+			RadiusOffset = 64.7
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+	}
+}
+UrlConfig
+{
+	name = LackPalms1
+	type = STATIC
+	parentUrl = LackMisc/Parts/Palms/part
+	url = LackMisc/Parts/Palms/part/LackPalms1
+	STATIC
+	{
+		name = LackPalms1
+		mesh = model.mu
+		module = Part
+		category = none
+		author = Lack
+		static = true
+		scale = 1.4
+		rescaleFactor = 1
+		cost = 0
+		subcategory = 0
+		title = Palms
+		manufacturer = LLL
+		description = 
+		attachRules = 1,1,1,1,0
+		mass = 1
+		dragModelType = default
+		maximum_drag = 1
+		minimum_drag = 1
+		angularDrag = 1
+		crashTolerance = 1
+		maxTemp = 1
+		breakingForce = 1
+		breakingTorque = 1
+		Instances
+		{
+			RadialPosition = 158189.2,-795.7493,-578849.3
+			RotationAngle = 222.9851
+			RadiusOffset = 64.90519
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 158621.7,-740.7493,-578849.3
+			RotationAngle = 94.02985
+			RadiusOffset = 64.90518
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 157625.2,-113.7493,-578849.3
+			RotationAngle = 0
+			RadiusOffset = 64.90517
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 158213.2,-116.2493,-578849.3
+			RotationAngle = 40.29851
+			RadiusOffset = 64.90517
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 157640.2,-753.7493,-578849.3
+			RotationAngle = 330.4478
+			RadiusOffset = 64.90517
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 159525.2,-810.7494,-578849.3
+			RotationAngle = 0
+			RadiusOffset = 64.40517
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 159705.2,-1304.249,-578849.3
+			RotationAngle = 120.8955
+			RadiusOffset = 64.90517
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 160210.2,-1433.749,-578849.3
+			RotationAngle = 67.16418
+			RadiusOffset = 62.90517
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 160215.2,-763.7492,-578849.3
+			RotationAngle = 87.31343
+			RadiusOffset = 60.90518
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 160080.2,-748.7494,-578849.3
+			RotationAngle = 64.47762
+			RadiusOffset = 64.40518
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 158845.2,-173.7493,-578849.3
+			RotationAngle = 244.4776
+			RadiusOffset = 64.40517
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 158682.7,-1491.749,-578849.3
+			RotationAngle = 349.2537
+			RadiusOffset = 63.40517
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 159665.9,-88.09277,-578429.3
+			RotationAngle = 0
+			RadiusOffset = 63.17665
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 159850.9,-1928.093,-578429.3
+			RotationAngle = 64.47761
+			RadiusOffset = 65.17665
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 157245.4,-1558.093,-578429.3
+			RotationAngle = 0
+			RadiusOffset = 64.17662
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 157936,-1258.117,-578429.2
+			RotationAngle = 48.35821
+			RadiusOffset = 64.5
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 158006,-2118.117,-578429.2
+			RotationAngle = 0
+			RadiusOffset = 63.5
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+		Instances
+		{
+			RadialPosition = 159146.3,-1711.161,-578576.9
+			RotationAngle = 239.1045
+			RadiusOffset = 63.5
+			Orientation = 0,1,0
+			VisibilityRange = 100000
+			CelestialBody = Kerbin
+			LaunchSiteName = 
+			LaunchPadTransform = 
+		}
+	}
+}
+UrlConfig
+{
+	name = kkcontroltower1
+	type = STATIC
+	parentUrl = medsouz/KerbalKonstructs/Statics/kkcontroltower1
+	url = medsouz/KerbalKonstructs/Statics/kkcontroltower1/kkcontroltower1
+	STATIC
+	{
+		name = kkcontroltower1
+		mesh = kkcontroltower1.mu
+		module = Part
+		category = Airbases
+		author = AlphaAsh
+		static = true
+		cost = 0
+		title = Control Tower
+		manufacturer = KashCorp
+		description = Helps planes land.
+		Instances
+		{
+			CelestialBody = Kerbin
+			RadialPosition = -98958.78,-63098.58,589832
+			Orientation = 0,1,0
+			RadiusOffset = 1246.415
+			RotationAngle = 87.59999
+			VisibilityRange = 25000
+			Group = RoundRange
+			LaunchSiteDescription = No description available
+			Category = Other
+		}
+	}
+}
+UrlConfig
+{
+	name = kkcrawlerway1
+	type = STATIC
+	parentUrl = medsouz/KerbalKonstructs/Statics/kkcrawlerway1
+	url = medsouz/KerbalKonstructs/Statics/kkcrawlerway1/kkcrawlerway1
+	STATIC
+	{
+		name = kkcrawlerway1
+		mesh = kkcrawlerway1.mu
+		module = Part
+		category = Launchsites
+		author = AlphaAsh
+		static = true
+		cost = 0
+		title = Crawlerway
+		manufacturer = KashCorp
+		description = A way for crawlers.
+	}
+}
+UrlConfig
+{
+	name = kkfloodlights1
+	type = STATIC
+	parentUrl = medsouz/KerbalKonstructs/Statics/kkfloodlights1
+	url = medsouz/KerbalKonstructs/Statics/kkfloodlights1/kkfloodlights1
+	STATIC
+	{
+		name = kkfloodlights1
+		mesh = kkfloodlights1.mu
+		module = Part
+		category = Lights
+		author = AlphaAsh
+		static = true
+		cost = 0
+		title = Flood Lights
+		manufacturer = KashCorp
+		description = Drown in light.
+		Instances
+		{
+			CelestialBody = Kerbin
+			RadialPosition = -97850.56,-63366.01,589812.9
+			Orientation = 0,1,0
+			RadiusOffset = 1216.1
+			RotationAngle = 25
+			VisibilityRange = 25000
+			Group = Ungrouped
+			LaunchSiteDescription = No description available
+			Category = Other
+		}
+		Instances
+		{
+			CelestialBody = Kerbin
+			RadialPosition = -97847.56,-63389.01,589812.9
+			Orientation = 0,1,0
+			RadiusOffset = 1216.1
+			RotationAngle = 330
+			VisibilityRange = 25000
+			Group = Ungrouped
+			LaunchSiteDescription = No description available
+			Category = Other
+		}
+		Instances
+		{
+			CelestialBody = Kerbin
+			RadialPosition = -98928.42,-62752.5,589648
+			Orientation = 0,1,0
+			RadiusOffset = 1252
+			RotationAngle = 310
+			VisibilityRange = 25000
+			Group = RoundRange
+			LaunchSiteDescription = No description available
+			Category = Other
+		}
+		Instances
+		{
+			CelestialBody = Kerbin
+			RadialPosition = -99125.42,-62818.5,589648
+			Orientation = 0,1,0
+			RadiusOffset = 1250
+			RotationAngle = 297
+			VisibilityRange = 25000
+			Group = RoundRange
+			LaunchSiteDescription = No description available
+			Category = Other
+		}
+		Instances
+		{
+			CelestialBody = Kerbin
+			RadialPosition = -98333.42,-63416.5,589648
+			Orientation = 0,1,0
+			RadiusOffset = 1215.534
+			RotationAngle = 129.3
+			VisibilityRange = 25000
+			Group = RoundRange
+			LaunchSiteDescription = No description available
+			Category = Other
+		}
+		Instances
+		{
+			CelestialBody = Kerbin
+			RadialPosition = -98191.42,-62864.5,589653
+			Orientation = 0,1,0
+			RadiusOffset = 1250.1
+			RotationAngle = 219
+			VisibilityRange = 25000
+			Group = RoundRange
+			LaunchSiteDescription = No description available
+			Category = Other
+		}
+	}
+}
+UrlConfig
+{
+	name = kkfueltanks1
+	type = STATIC
+	parentUrl = medsouz/KerbalKonstructs/Statics/kkfueltanks1
+	url = medsouz/KerbalKonstructs/Statics/kkfueltanks1/kkfueltanks1
+	STATIC
+	{
+		name = kkfueltanks1
+		mesh = kkfueltanks1.mu
+		module = Part
+		category = Tanks
+		author = AlphaAsh
+		static = true
+		cost = 0
+		title = Rocket Fuel Tanks
+		manufacturer = KashCorp
+		description = Tanks with rocket fuel.
+		LqFMax = 9000
+		OxFMax = 11000
+		Instances
+		{
+			CelestialBody = Kerbin
+			RadialPosition = -97874.56,-63360.01,589819.9
+			Orientation = 0,1,0
+			RadiusOffset = 1215.699
+			RotationAngle = 349
+			VisibilityRange = 25000
+			Group = Ungrouped
+			LaunchSiteDescription = No description available
+			Category = Other
+			StaffCurrent = 0
+			LqFCurrent = 0
+			OxFCurrent = 0
+			MoFCurrent = 0
+			ScienceOCurrent = 0
+			FundsOCurrent = 0
+		}
+		Instances
+		{
+			CelestialBody = Kerbin
+			RadialPosition = 158295.7,-454.4835,-578868.6
+			Orientation = 0,1,0
+			RadiusOffset = 66.49929
+			RotationAngle = 158
+			VisibilityRange = 25000
+			Group = KSCUpgrades
+			LaunchSiteDescription = No description available
+			Category = Other
+		}
+		Instances
+		{
+			CelestialBody = Kerbin
+			RadialPosition = -98870.05,-63069.01,589679.2
+			Orientation = 0,1,0
+			RadiusOffset = 1246.916
+			RotationAngle = 350.4998
+			VisibilityRange = 25000
+			Group = RoundRange
+			LaunchSiteDescription = No description available
+			Category = Other
+			StaffCurrent = 0
+			LqFCurrent = 0
+			OxFCurrent = 0
+			MoFCurrent = 0
+			ScienceOCurrent = 0
+			FundsOCurrent = 0
+		}
+	}
+}
+UrlConfig
+{
+	name = kkhangar1
+	type = STATIC
+	parentUrl = medsouz/KerbalKonstructs/Statics/kkhangar1
+	url = medsouz/KerbalKonstructs/Statics/kkhangar1/kkhangar1
+	STATIC
+	{
+		name = kkhangar1
+		mesh = kkhangar1.mu
+		module = Part
+		category = Airbases
+		author = AlphaAsh
+		static = true
+		cost = 0
+		title = Large Hangar
+		manufacturer = KashCorp
+		description = Garage for planes.
+		DefaultLaunchPadTransform = kkhangar1_spawn
+		Instances
+		{
+			CelestialBody = Kerbin
+			RadialPosition = -98152.5,-62837.18,589674.6
+			Orientation = 0,1,0
+			RadiusOffset = 1250.1
+			RotationAngle = 88.09998
+			VisibilityRange = 25000
+			Group = RoundRange
+			LaunchSiteDescription = No description available
+			Category = Other
+		}
+		Instances
+		{
+			CelestialBody = Kerbin
+			RadialPosition = -98985.7,-62739.38,589665.6
+			Orientation = 0,1,0
+			RadiusOffset = 1252
+			RotationAngle = 268
+			VisibilityRange = 25000
+			Group = RoundRange
+			LaunchSiteDescription = No description available
+			Category = Other
+		}
+	}
+}
+UrlConfig
+{
+	name = kkhelipad1
+	type = STATIC
+	parentUrl = medsouz/KerbalKonstructs/Statics/kkhelipad1
+	url = medsouz/KerbalKonstructs/Statics/kkhelipad1/kkhelipad1
+	STATIC
+	{
+		name = kkhelipad1
+		mesh = kkhelipad1.mu
+		module = Part
+		category = Helipads
+		author = AlphaAsh
+		static = true
+		cost = 20000
+		title = Helipad
+		manufacturer = KashCorp
+		description = Get to da choppa.
+		DefaultLaunchPadTransform = kkhelipad1_spawn
+		DefaultLaunchSiteWidth = 17.0
+		DefaultLaunchSiteLength = 17.0
+		Instances
+		{
+			CelestialBody = Kerbin
+			RadialPosition = -98864.33,-63039.29,589658.6
+			Orientation = 0,1,0
+			RadiusOffset = 1244.759
+			RotationAngle = 43
+			RefLatitude = -6.018824
+			RefLongitude = 99.5179
+			VisibilityRange = 25000
+			Group = RoundRange
+			LaunchSiteName = Round Range Helipad
+			LaunchPadTransform = kkhelipad1_spawn
+			LaunchSiteDescription = No description available
+			LaunchSiteType = SPH
+			LaunchSiteLogo = roundrangehelipad
+			Category = Helipad
+			OpenCost = 10000
+			CloseValue = 2500
+			OpenCloseState = Open
+			CustomInstance = False
+			LaunchRefund = 20
+			RecoveryFactor = 75
+			RecoveryRange = 100000
+		}
+	}
+}
+UrlConfig
+{
+	name = kklandinglights2
+	type = STATIC
+	parentUrl = medsouz/KerbalKonstructs/Statics/kklandinglights2
+	url = medsouz/KerbalKonstructs/Statics/kklandinglights2/kklandinglights2
+	STATIC
+	{
+		name = kklandinglights2
+		mesh = kklandinglights2.mu
+		module = Part
+		category = Airbases
+		author = AlphaAsh
+		static = true
+		cost = 0
+		title = Landing Lights
+		manufacturer = KashCorp
+		description = Lights to land by.
+		Instances
+		{
+			CelestialBody = Kerbin
+			RadialPosition = -99201.56,-63190.52,589648.4
+			Orientation = 0,1,0
+			RadiusOffset = 1247.755
+			RotationAngle = 88
+			VisibilityRange = 25000
+			Group = RoundRange
+			LaunchSiteDescription = No description available
+			Category = Other
+		}
+		Instances
+		{
+			CelestialBody = Kerbin
+			RadialPosition = -99300.56,-63201.52,589648.4
+			Orientation = 0,1,0
+			RadiusOffset = 1256.755
+			RotationAngle = 88
+			VisibilityRange = 25000
+			Group = RoundRange
+			LaunchSiteDescription = No description available
+			Category = Other
+		}
+	}
+}
+UrlConfig
+{
+	name = kkrocketpad1
+	type = STATIC
+	parentUrl = medsouz/KerbalKonstructs/Statics/kkrocketpad1
+	url = medsouz/KerbalKonstructs/Statics/kkrocketpad1/kkrocketpad1
+	STATIC
+	{
+		name = kkrocketpad1
+		mesh = kkrocketpad1.mu
+		module = Part
+		category = LaunchPads
+		author = AlphaAsh
+		static = true
+		cost = 100000
+		title = Rocket Pad
+		manufacturer = KashCorp
+		description = Rockets explode here.
+		DefaultLaunchPadTransform = kkrocketpad1_spawn
+	}
+}
+UrlConfig
+{
+	name = kkrocketpad2
+	type = STATIC
+	parentUrl = medsouz/KerbalKonstructs/Statics/kkrocketpad2
+	url = medsouz/KerbalKonstructs/Statics/kkrocketpad2/kkrocketpad2
+	STATIC
+	{
+		name = kkrocketpad2
+		mesh = kkrocketpad2.mu
+		module = Part
+		category = LaunchPads
+		author = AlphaAsh
+		static = true
+		cost = 100000
+		title = Rocket Pad
+		manufacturer = KashCorp
+		description = Rockets explode here.
+		DefaultLaunchPadTransform = kkrocketpad2_spawn
+		DefaultLaunchSiteWidth = 20.0
+		DefaultLaunchSiteLength = 20.0
+		Instances
+		{
+			CelestialBody = Kerbin
+			RadialPosition = -98380.05,-63437.01,589702.2
+			Orientation = 0,1,0
+			RadiusOffset = 1212.8
+			RotationAngle = 177
+			RefLatitude = -6.056886
+			RefLongitude = 99.47143
+			VisibilityRange = 25000
+			Group = RoundRange
+			LaunchSiteName = Round Range Launchpad
+			LaunchPadTransform = kkrocketpad2_spawn
+			LaunchSiteDescription = Exclusive to Kerbal Konstructs.
+			LaunchSiteType = VAB
+			LaunchSiteLogo = roundrangelaunchpad
+			Category = RocketPad
+			OpenCost = 40000
+			CloseValue = 10000
+			OpenCloseState = Open
+			CustomInstance = False
+			LaunchRefund = 10
+			RecoveryFactor = 0
+			RecoveryRange = 100000
+		}
+	}
+}
+UrlConfig
+{
+	name = kkrunway1
+	type = STATIC
+	parentUrl = medsouz/KerbalKonstructs/Statics/kkrunway1
+	url = medsouz/KerbalKonstructs/Statics/kkrunway1/kkrunway1
+	STATIC
+	{
+		name = kkrunway1
+		mesh = kkrunway1.mu
+		module = Part
+		category = Runways
+		author = AlphaAsh
+		static = true
+		cost = 50000
+		title = Runway
+		manufacturer = KashCorp
+		description = Planes crash on it
+		DefaultLaunchPadTransform = kkrunway1_spawn
+	}
+}
+UrlConfig
+{
+	name = kkrunway1end
+	type = STATIC
+	parentUrl = medsouz/KerbalKonstructs/Statics/kkrunway1end
+	url = medsouz/KerbalKonstructs/Statics/kkrunway1end/kkrunway1end
+	STATIC
+	{
+		name = kkrunway1end
+		mesh = kkrunway1end.mu
+		module = Part
+		category = Runways
+		author = AlphaAsh
+		static = true
+		cost = 40000
+		title = Runway End
+		manufacturer = KashCorp
+		description = Planes crash on it
+	}
+}
+UrlConfig
+{
+	name = kkrunway1ramp
+	type = STATIC
+	parentUrl = medsouz/KerbalKonstructs/Statics/kkrunway1ramp
+	url = medsouz/KerbalKonstructs/Statics/kkrunway1ramp/kkrunway1ramp
+	STATIC
+	{
+		name = kkrunway1ramp
+		mesh = kkrunway1ramp.mu
+		module = Part
+		category = Runways
+		author = AlphaAsh
+		static = true
+		cost = 10000
+		title = Runway Ramp
+		manufacturer = KashCorp
+		description = Planes get on and off a runway with this
+	}
+}
+UrlConfig
+{
+	name = kkrunway1strip
+	type = STATIC
+	parentUrl = medsouz/KerbalKonstructs/Statics/kkrunway1strip
+	url = medsouz/KerbalKonstructs/Statics/kkrunway1strip/kkrunway1strip
+	STATIC
+	{
+		name = kkrunway1strip
+		mesh = kkrunway1strip.mu
+		module = Part
+		category = Runways
+		author = AlphaAsh
+		static = true
+		cost = 40000
+		title = Runway Strip
+		manufacturer = KashCorp
+		description = Planes crash on it.
+		DefaultLaunchPadTransform = kkrunway1strip_spawn
+	}
+}
+UrlConfig
+{
+	name = kkrunway2
+	type = STATIC
+	parentUrl = medsouz/KerbalKonstructs/Statics/kkrunway2
+	url = medsouz/KerbalKonstructs/Statics/kkrunway2/kkrunway2
+	STATIC
+	{
+		name = kkrunway2
+		mesh = kkrunway2.mu
+		module = Part
+		category = Runways
+		author = AlphaAsh
+		static = true
+		cost = 60000
+		title = Runway
+		manufacturer = KashCorp
+		description = Planes crash on it.
+		DefaultLaunchPadTransform = kkrunway2_spawn
+		DefaultLaunchSiteWidth = 45.0
+		DefaultLaunchSiteLength = 1700.0
+		Instances
+		{
+			CelestialBody = Kerbin
+			RadialPosition = -97641.95,-62825.11,589689
+			Orientation = 0,1,0
+			RadiusOffset = 1239
+			RotationAngle = 268
+			RefLatitude = -6.00022612550579
+			RefLongitude = 99.4018532257957
+			VisibilityRange = 25000
+			Group = RoundRange
+			LaunchSiteName = Round Range Runway
+			LaunchPadTransform = kkrunway2_spawn
+			LaunchSiteDescription = No description available
+			LaunchSiteType = SPH
+			LaunchSiteLogo = roundrangerunway
+			Category = Runway
+			OpenCost = 25000
+			CloseValue = 5000
+			OpenCloseState = Open
+			CustomInstance = False
+			LaunchRefund = 10
+			RecoveryFactor = 80
+			RecoveryRange = 100000
+		}
+	}
+}
+UrlConfig
+{
+	name = kktaxibend1
+	type = STATIC
+	parentUrl = medsouz/KerbalKonstructs/Statics/kktaxibend1
+	url = medsouz/KerbalKonstructs/Statics/kktaxibend1/kktaxibend1
+	STATIC
+	{
+		name = kktaxibend1
+		mesh = kktaxibend1.mu
+		module = Part
+		category = Runways
+		author = AlphaAsh
+		static = true
+		cost = 0
+		title = Taxiway Bend
+		manufacturer = KashCorp
+		description = A taxiway bend.
+	}
+}
+UrlConfig
+{
+	name = kktaxibend2
+	type = STATIC
+	parentUrl = medsouz/KerbalKonstructs/Statics/kktaxibend2
+	url = medsouz/KerbalKonstructs/Statics/kktaxibend2/kktaxibend2
+	STATIC
+	{
+		name = kktaxibend2
+		mesh = kktaxibend2.mu
+		module = Part
+		category = Runways
+		author = AlphaAsh
+		static = true
+		cost = 0
+		title = Taxiway Bend
+		manufacturer = KashCorp
+		description = A taxiway bend.
+	}
+}
+UrlConfig
+{
 	name = DockingPortAlignment
 	type = DockingPortAlignment
 	parentUrl = NavyFish/Plugins/Docking Port Alignment Indicator/DPAI Settings
@@ -46791,6 +49539,1718 @@ UrlConfig
 			{
 				id = 1447111193
 				name = XenonGas
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = -609904529
+				name = CarbonDioxide
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = -1607531903
+				name = Chemicals
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 2195582
+				name = Food
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = -381710816
+				name = Hydrates
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = -381306240
+				name = Hydrogen
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 141533173
+				name = Karbonite
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = -1300151334
+				name = Karborundum
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = -2011747961
+				name = LqdCO2
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 73652235
+				name = LqdCO
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = -1993694612
+				name = Metals
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = -1297976599
+				name = Minerals
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = -998641629
+				name = MetallicOre
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 1381032712
+				name = Organics
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = -1918734912
+				name = Oxygen
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 626609093
+				name = Polymers
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 2552709
+				name = Rock
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 134918220
+				name = RocketParts
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = -1383644567
+				name = SpareParts
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = -1760464671
+				name = Substrate
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 1240177643
+				name = Uraninite
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 83350266
+				name = Waste
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = -2035364291
+				name = WasteWater
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 83350775
+				name = Water
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = -1530578940
+				name = ArgonGas
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 64372292
+				name = Boron
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 1846092044
+				name = DepletedUranium
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = -513340461
+				name = EnrichedUranium
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = -598665505
+				name = LqdHydrogen
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 109903959
+				name = StoredCharge
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = -2093771616
+				name = Actinides
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 1704176441
+				name = Aluminium
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 761549017
+				name = Alumina
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 1074900163
+				name = Antimatter
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = -1522907011
+				name = ChargedParticles
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = -594506303
+				name = DepletedFuel
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = -1840868749
+				name = ExoticMatter
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = -2035556306
+				name = Fluorine
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = -1909417042
+				name = IntakeAtm
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = -1570298652
+				name = KryptonGas
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = -791753469
+				name = NeonGas
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 1847195216
+				name = Lithium
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = -1163820007
+				name = LqdAmmonia
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = -984330891
+				name = LqdDeuterium
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = -2011742473
+				name = LqdHe3
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 155437969
+				name = LqdHelium
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = -1341523047
+				name = LqdTritium
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 411171321
+				name = LqdNitrogen
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = -1960769700
+				name = Megajoules
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = -230117135
+				name = Plutonium-238
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 2604610
+				name = ThF4
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 1839823822
+				name = ThermalPower
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 566395322
+				name = UraniumNitride
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = -896077449
+				name = VacuumPlasma
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 1319372810
+				name = WasteHeat
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = -1914072318
+				name = Aerozine50
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 2010088
+				name = AK20
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 2010095
+				name = AK27
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 807695280
+				name = Aniline
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 63615556
+				name = AvGas
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 2011350126
+				name = CaveaB
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 2102006
+				name = ClF3
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 2102008
+				name = ClF5
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = -137714984
+				name = Diborane
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 2085734847
+				name = Ethane
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 835359201
+				name = Ethanol75
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = -1336430832
+				name = Ethylene
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 2076667852
+				name = FLOX30
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 2076667976
+				name = FLOX70
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 2076668015
+				name = FLOX88
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 1562908755
+				name = Furfuryl
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = -2137070734
+				name = Helium
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 2222260
+				name = HNIW
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 71876
+				name = HTP
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 2228222
+				name = HTPB
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 1052049128
+				name = Hydrazine
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = -2118823491
+				name = Hydyne
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = -1923366260
+				name = IRFNA-III
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 215050602
+				name = IRFNA-IV
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 70078603
+				name = IWFNA
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 380108096
+				name = Kerosene
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = -1513611001
+				name = LeadBallast
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 2042051725
+				name = LqdFluorine
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 673500141
+				name = LqdMethane
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 373773791
+				name = LqdOxygen
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = -1674792916
+				name = Methane
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = -378972426
+				name = Methanol
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 76456
+				name = MMH
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 2372293
+				name = MON1
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 73541131
+				name = MON10
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 73541136
+				name = MON15
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 73541162
+				name = MON20
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 2372295
+				name = MON3
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 2394414
+				name = NGNC
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 2373970
+				name = N2F4
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 628530586
+				name = Nitrogen
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 576233837
+				name = NitrousOxide
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 77641
+				name = NTO
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 78139
+				name = OF2
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 2448799
+				name = PBAN
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 1755996825
+				name = Pentaborane
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 2465590
+				name = PSPC
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = -1803609871
+				name = Syntin
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = -1824376319
+				name = TEATEB
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = -948163612
+				name = Tonka250
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = -948160884
+				name = Tonka500
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 2600042
+				name = UDMH
+				IsSeparator = False
+				Visibility = AlwaysOn
+				AlarmEnabled = False
+				HideWhenEmpty = False
+				HideWhenFull = False
+				MonitorDirection = Low
+				MonitorWarningLevel = 20
+				MonitorAlertLevel = 10
+				SplitLastStage = True
+				ShowReserveLevels = False
+				DisplayValueAs = Units
+			}
+			Item
+			{
+				id = 2603030
+				name = UH25
 				IsSeparator = False
 				Visibility = AlwaysOn
 				AlarmEnabled = False

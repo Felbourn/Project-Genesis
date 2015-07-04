@@ -10,7 +10,7 @@ GAME
 	scene = 5
 	editor = None
 	flag = Squad/Flags/kerbin
-	launchID = 11
+	launchID = 12
 	PARAMETERS
 	{
 		preset = Normal
@@ -446,8 +446,8 @@ GAME
 	FLIGHTSTATE
 	{
 		version = 1.0.4
-		UT = 35388.5746184261
-		activeVessel = 0
+		UT = 35699.6346183763
+		activeVessel = 7
 		mapViewFiltering = -1026
 		VESSEL
 		{
@@ -1023,6 +1023,3298 @@ GAME
 			{
 			}
 		}
+		VESSEL
+		{
+			pid = b423c75ee699424f92dd027f5713d0fc
+			name = Untitled Space Craft
+			type = Lander
+			sit = PRELAUNCH
+			landed = True
+			landedAt = KSC_LaunchPad_Platform
+			splashed = False
+			met = 0
+			lct = 35699.6346183763
+			root = 0
+			lat = -0.097249555157853
+			lon = 285.441780739739
+			alt = 76.4327947454294
+			hgt = 3.983649
+			nrm = -0.0004834591,0.9999998,-2.014511E-05
+			rot = -0.7009401,-0.0922499,-0.09757248,0.700466
+			CoM = -0.0001372595,0.5419379,-9.080273E-06
+			stg = 5
+			prst = False
+			ref = 3556876831
+			ctrl = True
+			cPch = 0.236
+			cHdg = -0.178
+			cMod = 0
+			ORBIT
+			{
+				SMA = 300817.198964576
+				ECC = 0.994822692279621
+				INC = 0.0972495537575725
+				LPE = 89.9974891961377
+				LAN = 340.440957132886
+				MNA = 3.14159182714441
+				EPH = 35699.6346183763
+				REF = 1
+			}
+			PART
+			{
+				name = landerCabinSmall
+				cid = 4294637942
+				uid = 3556876831
+				mid = 492048506
+				launchID = 11
+				parent = 0
+				position = 0,0,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 0
+				dstg = 0
+				sqor = -1
+				sepI = 0
+				sidx = -1
+				attm = 0
+				srfN = , -1
+				attN = bottom, 15
+				attN = top, 17
+				mass = 0.6
+				temp = 288.880732330483
+				tempExt = 289.904065659238
+				expt = 0.5
+				state = 0
+				connected = True
+				attached = True
+				flag = Squad/Flags/kerbin
+				rTrf = landerCabinSmall
+				modCost = 0
+				crew = Jebediah Kerman
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleCommand
+					isEnabled = True
+					controlSrcStatusText = Operational
+					EVENTS
+					{
+						MakeReference
+						{
+							active = True
+							guiActive = True
+							guiIcon = Control From Here
+							guiName = Control From Here
+							category = Control From Here
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+						RenameVessel
+						{
+							active = True
+							guiActive = True
+							guiIcon = Rename Vessel
+							guiName = Rename Vessel
+							category = Rename Vessel
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleReactionWheel
+					isEnabled = True
+					stateString = Idle
+					WheelState = Active
+					EVENTS
+					{
+						OnToggle
+						{
+							active = True
+							guiActive = True
+							guiActiveEditor = True
+							guiIcon = Toggle Torque
+							guiName = Toggle Torque
+							category = Toggle Torque
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+						Activate
+						{
+							actionGroup = None
+						}
+						Deactivate
+						{
+							actionGroup = None
+						}
+						Toggle
+						{
+							actionGroup = None
+						}
+					}
+				}
+				MODULE
+				{
+					name = ModuleScienceExperiment
+					isEnabled = True
+					Deployed = False
+					Inoperable = False
+					EVENTS
+					{
+						DeployExperiment
+						{
+							active = True
+							guiActive = True
+							guiIcon = Deploy
+							guiName = Crew Report
+							category = Deploy
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+						CollectDataExternalEvent
+						{
+							active = False
+							guiActive = False
+							guiIcon = 
+							guiName = Take Data
+							category = 
+							guiActiveUnfocused = True
+							unfocusedRange = 1.5
+							externalToEVAOnly = True
+						}
+						ReviewDataEvent
+						{
+							active = False
+							guiActive = True
+							guiIcon = Review Data
+							guiName = Review Report
+							category = Review Data
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+						ResetExperiment
+						{
+							active = False
+							guiActive = True
+							guiIcon = Reset
+							guiName = Discard Crew Report
+							category = Reset
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+						DeployExperimentExternal
+						{
+							active = True
+							guiActive = False
+							guiIcon = Deploy
+							guiName = Crew Report
+							category = Deploy
+							guiActiveUnfocused = True
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+						ResetExperimentExternal
+						{
+							active = False
+							guiActive = False
+							guiIcon = Reset
+							guiName = Discard Crew Report
+							category = Reset
+							guiActiveUnfocused = True
+							unfocusedRange = 1.5
+							externalToEVAOnly = True
+						}
+						CleanUpExperimentExternal
+						{
+							active = False
+							guiActive = False
+							guiIcon = Restore
+							guiName = Restore
+							category = Restore
+							guiActiveUnfocused = True
+							unfocusedRange = 1.5
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+						DeployAction
+						{
+							actionGroup = None
+						}
+						ResetAction
+						{
+							actionGroup = None
+						}
+					}
+				}
+				MODULE
+				{
+					name = ModuleScienceContainer
+					isEnabled = True
+					EVENTS
+					{
+						StoreDataExternalEvent
+						{
+							active = False
+							guiActive = False
+							guiIcon = 
+							guiName = Store Experiments (0)
+							category = 
+							guiActiveUnfocused = True
+							unfocusedRange = 1.3
+							externalToEVAOnly = True
+						}
+						CollectDataExternalEvent
+						{
+							active = False
+							guiActive = False
+							guiIcon = 
+							guiName = Take Data (0)
+							category = 
+							guiActiveUnfocused = True
+							unfocusedRange = 1.3
+							externalToEVAOnly = True
+						}
+						ReviewDataEvent
+						{
+							active = False
+							guiActive = True
+							guiIcon = Review Data
+							guiName = Review Stored Data (0)
+							category = Review Data
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = FlagDecal
+					isEnabled = True
+					flagDisplayed = True
+					EVENTS
+					{
+						ToggleFlag
+						{
+							active = True
+							guiActive = False
+							guiActiveEditor = True
+							guiIcon = Toggle Flag
+							guiName = Toggle Flag
+							category = Toggle Flag
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = CollisionFX
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = TRReflection
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleAnimateGeneric
+					isEnabled = True
+					status = Locked
+					animSwitch = True
+					animTime = 0
+					animSpeed = 1
+					EVENTS
+					{
+						Toggle
+						{
+							active = True
+							guiActive = True
+							guiActiveEditor = True
+							guiIcon = Toggle
+							guiName = Lights On
+							category = Toggle
+							guiActiveUnfocused = True
+							unfocusedRange = 5
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+						ToggleAction
+						{
+							actionGroup = None
+						}
+					}
+				}
+				MODULE
+				{
+					name = MechJebCore
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						OnOrbitProgradeAction
+						{
+							actionGroup = None
+						}
+						OnOrbitRetrogradeAction
+						{
+							actionGroup = None
+						}
+						OnOrbitNormalAction
+						{
+							actionGroup = None
+						}
+						OnOrbitAntinormalAction
+						{
+							actionGroup = None
+						}
+						OnOrbitRadialInAction
+						{
+							actionGroup = None
+						}
+						OnOrbitRadialOutAction
+						{
+							actionGroup = None
+						}
+						OnKillRotationAction
+						{
+							actionGroup = None
+						}
+						OnDeactivateSmartASSAction
+						{
+							actionGroup = None
+						}
+						OnPanicAction
+						{
+							actionGroup = None
+						}
+						OnTranslatronOffAction
+						{
+							actionGroup = None
+						}
+						OnTranslatronKeepVertAction
+						{
+							actionGroup = None
+						}
+						OnTranslatronZeroSpeedAction
+						{
+							actionGroup = None
+						}
+						OnTranslatronPlusOneSpeedAction
+						{
+							actionGroup = None
+						}
+						OnTranslatronMinusOneSpeedAction
+						{
+							actionGroup = None
+						}
+						OnTranslatronToggleHSAction
+						{
+							actionGroup = None
+						}
+					}
+					MechJebLocalSettings
+					{
+						MechJebModuleMenu
+						{
+							unlockParts = 
+							unlockTechs = 
+						}
+						MechJebModuleStageStats
+						{
+							unlockParts = 
+							unlockTechs = 
+						}
+						MechJebModuleRCSBalancerWindow
+						{
+							unlockParts = 
+							unlockTechs = 
+						}
+						MechJebModuleRendezvousGuidance
+						{
+							unlockParts = 
+							unlockTechs = 
+						}
+						MechJebModuleInfoItems
+						{
+							unlockParts = 
+							unlockTechs = 
+						}
+						MechJebModuleSmartRcs
+						{
+							unlockParts = 
+							unlockTechs = 
+						}
+						MechJebModuleDebugArrows
+						{
+							unlockParts = 
+							unlockTechs = 
+						}
+						MechJebModuleSmartASS
+						{
+							mode = ORBITAL
+							target = OFF
+							advReference = INERTIAL
+							advDirection = FORWARD
+							forceRol = False
+							unlockParts = 
+							unlockTechs = 
+							srfHdg
+							{
+								_val = 90
+								_text = 90
+							}
+							srfPit
+							{
+								_val = 90
+								_text = 90
+							}
+							srfRol
+							{
+								_val = 0
+								_text = 0
+							}
+							srfVelYaw
+							{
+								_val = 0
+								_text = 0
+							}
+							srfVelPit
+							{
+								_val = 0
+								_text = 0
+							}
+							srfVelRol
+							{
+								_val = 0
+								_text = 0
+							}
+							rol
+							{
+								_val = 0
+								_text = 0
+							}
+						}
+						MechJebModuleTargetController
+						{
+							unlockParts = 
+							unlockTechs = 
+						}
+						ModExtensionDemo
+						{
+							unlockParts = 
+							unlockTechs = 
+						}
+						MechJebModuleThrustWindow
+						{
+							autostageSavedState = False
+							unlockParts = 
+							unlockTechs = 
+						}
+						MechJebModuleManeuverPlanner
+						{
+							unlockParts = 
+							unlockTechs = 
+						}
+						MechJebModuleCustomWindowEditor
+						{
+							unlockParts = 
+							unlockTechs = 
+						}
+						MechJebModuleSettings
+						{
+							unlockParts = 
+							unlockTechs = 
+						}
+						MechJebModuleNodeExecutor
+						{
+							unlockParts = 
+							unlockTechs = 
+						}
+						MechJebModuleWaypointWindow
+						{
+							unlockParts = 
+							unlockTechs = 
+						}
+						MechJebModuleWaypointHelpWindow
+						{
+							unlockParts = 
+							unlockTechs = 
+						}
+						MechJebModuleCustomInfoWindow
+						{
+						}
+						MechJebModuleCustomInfoWindow
+						{
+						}
+						MechJebModuleWarpController
+						{
+							unlockParts = 
+							unlockTechs = 
+						}
+						MechJebModuleThrustController
+						{
+							limitThrottle = False
+							unlockParts = 
+							unlockTechs = 
+							maxThrottle
+							{
+								_val = 1
+								_text = 100
+							}
+						}
+						MechJebModuleSolarPanelController
+						{
+							prev_ShouldOpenSolarPanels = False
+							unlockParts = 
+							unlockTechs = 
+						}
+						MechJebModuleRCSController
+						{
+							unlockParts = 
+							unlockTechs = 
+							Tf
+							{
+								_val = 1
+								_text = 1
+							}
+						}
+						MechJebModuleRCSBalancer
+						{
+							unlockParts = 
+							unlockTechs = 
+						}
+						MechJebModuleAttitudeController
+						{
+							unlockParts = 
+							unlockTechs = 
+						}
+						MechJebModuleStagingController
+						{
+							unlockParts = 
+							unlockTechs = 
+						}
+						MechJebModuleFlightRecorder
+						{
+							markUT = 35699.6346183763
+							deltaVExpended = 0
+							dragLosses = 0
+							gravityLosses = 0
+							steeringLosses = 0
+							markLatitude = -0.0972495547211319
+							markLongitude = -74.558219286336
+							markAltitude = 76.9747316954075
+							markBodyIndex = 1
+							maxDragGees = 0
+							unlockParts = 
+							unlockTechs = 
+						}
+					}
+				}
+				MODULE
+				{
+					name = ModuleTripLogger
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					Log
+					{
+						flight = 0
+					}
+				}
+				RESOURCE
+				{
+					name = ElectricCharge
+					amount = 39.9314668916875
+					maxAmount = 50
+					flowState = True
+					isTweakable = True
+					hideFlow = False
+					flowMode = Both
+				}
+				RESOURCE
+				{
+					name = MonoPropellant
+					amount = 15
+					maxAmount = 15
+					flowState = True
+					isTweakable = True
+					hideFlow = False
+					flowMode = Both
+				}
+			}
+			PART
+			{
+				name = radialDecoupler
+				cid = 4294566478
+				uid = 1491433838
+				mid = 492048506
+				launchID = 11
+				parent = 0
+				position = -0.820759773254395,0.00315952301025391,1.19209289550781E-07
+				rotation = 1.256074E-15,0,2.939821E-08,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 3
+				dstg = 1
+				sqor = 3
+				sepI = 3
+				sidx = 0
+				attm = 1
+				sym = 8
+				srfN = srfAttach, 0
+				mass = 0.025
+				temp = 290.481427584845
+				tempExt = 290.675234080178
+				expt = 0.5
+				state = 0
+				connected = True
+				attached = True
+				flag = Squad/Flags/kerbin
+				rTrf = radialDecoupler
+				modCost = 0
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleAnchoredDecoupler
+					isEnabled = True
+					ejectionForcePercent = 100
+					isDecoupled = False
+					ejectionForcePercent_UIFlight
+					{
+						controlEnabled = True
+						minValue = 0
+						maxValue = 100
+						stepIncrement = 1
+					}
+					EVENTS
+					{
+						Decouple
+						{
+							active = True
+							guiActive = True
+							guiIcon = Decouple
+							guiName = Decouple
+							category = Decouple
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+						DecoupleAction
+						{
+							actionGroup = None
+						}
+					}
+				}
+				MODULE
+				{
+					name = ModuleTestSubject
+					isEnabled = True
+					EVENTS
+					{
+						RunTestEvent
+						{
+							active = False
+							guiActive = True
+							guiIcon = Run Test
+							guiName = Run Test
+							category = Run Test
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = CollisionFX
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = tjs_DecouplerLight
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = solidBooster1-1
+				cid = 4294628624
+				uid = 1948384461
+				mid = 492048506
+				launchID = 11
+				parent = 1
+				position = -1.5855917930603,0.0719194412231445,0
+				rotation = 2.078768E-08,-0.7071068,2.078768E-08,0.7071068
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 4
+				dstg = 2
+				sqor = 4
+				sepI = 3
+				sidx = 0
+				attm = 1
+				sym = 9
+				srfN = srfAttach, 1
+				attN = bottom, -1
+				attN = top, 3
+				mass = 1.5
+				temp = 290.527847003653
+				tempExt = 290.680355116657
+				expt = 0.5
+				state = 0
+				connected = True
+				attached = True
+				flag = Squad/Flags/kerbin
+				rTrf = solidBooster1-1
+				modCost = 0
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleEnginesFX
+					isEnabled = True
+					staged = False
+					flameout = False
+					EngineIgnited = False
+					engineShutdown = False
+					currentThrottle = 0
+					thrustPercentage = 54.5
+					manuallyOverridden = False
+					thrustPercentage_UIFlight
+					{
+						controlEnabled = True
+						minValue = 0
+						maxValue = 100
+						stepIncrement = 0.5
+					}
+					EVENTS
+					{
+						Activate
+						{
+							active = True
+							guiActive = True
+							guiIcon = Activate Engine
+							guiName = Activate Engine
+							category = Activate Engine
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+						Shutdown
+						{
+							active = False
+							guiActive = True
+							guiIcon = Shutdown Engine
+							guiName = Shutdown Engine
+							category = Shutdown Engine
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+						OnAction
+						{
+							actionGroup = None
+						}
+						ShutdownAction
+						{
+							actionGroup = None
+						}
+						ActivateAction
+						{
+							actionGroup = None
+						}
+					}
+				}
+				MODULE
+				{
+					name = ModuleAnimateHeat
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleTestSubject
+					isEnabled = True
+					EVENTS
+					{
+						RunTestEvent
+						{
+							active = False
+							guiActive = True
+							guiIcon = Run Test
+							guiName = Run Test
+							category = Run Test
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleSurfaceFX
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = CollisionFX
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleJettison
+					isEnabled = True
+					isJettisoned = True
+					EVENTS
+					{
+						Jettison
+						{
+							active = False
+							guiActive = True
+							guiIcon = Jettison
+							guiName = Jettison
+							category = Jettison
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+						JettisonAction
+						{
+							actionGroup = None
+						}
+					}
+				}
+				MODULE
+				{
+					name = FlagDecal
+					isEnabled = True
+					flagDisplayed = False
+					EVENTS
+					{
+						ToggleFlag
+						{
+							active = True
+							guiActive = False
+							guiActiveEditor = True
+							guiIcon = Toggle Flag
+							guiName = Toggle Flag
+							category = Toggle Flag
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = tjs_EngineLight
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				RESOURCE
+				{
+					name = SolidFuel
+					amount = 142.6087
+					maxAmount = 820
+					flowState = True
+					isTweakable = True
+					hideFlow = False
+					flowMode = Both
+				}
+			}
+			PART
+			{
+				name = probeStackSmall
+				cid = 4294473018
+				uid = 769797066
+				mid = 492048506
+				launchID = 11
+				parent = 2
+				position = -1.5855917930603,4.09191989898682,0
+				rotation = 4.385658E-23,-3.692634E-23,-4.817394E-17,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 2
+				dstg = 2
+				sqor = -1
+				sepI = 3
+				sidx = -1
+				attm = 0
+				sym = 10
+				srfN = , -1
+				attN = bottom, 2
+				attN = top, 5
+				mass = 0.1
+				temp = 290.527940149996
+				tempExt = 290.931422705894
+				expt = 0
+				state = 0
+				connected = True
+				attached = True
+				flag = Squad/Flags/kerbin
+				rTrf = probeStackSmall
+				modCost = 0
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleCommand
+					isEnabled = True
+					controlSrcStatusText = Operational
+					EVENTS
+					{
+						MakeReference
+						{
+							active = True
+							guiActive = True
+							guiIcon = Control From Here
+							guiName = Control From Here
+							category = Control From Here
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+						RenameVessel
+						{
+							active = True
+							guiActive = True
+							guiIcon = Rename Vessel
+							guiName = Rename Vessel
+							category = Rename Vessel
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleReactionWheel
+					isEnabled = True
+					stateString = Idle
+					WheelState = Active
+					EVENTS
+					{
+						OnToggle
+						{
+							active = True
+							guiActive = True
+							guiActiveEditor = True
+							guiIcon = Toggle Torque
+							guiName = Toggle Torque
+							category = Toggle Torque
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+						Activate
+						{
+							actionGroup = None
+						}
+						Deactivate
+						{
+							actionGroup = None
+						}
+						Toggle
+						{
+							actionGroup = None
+						}
+					}
+				}
+				MODULE
+				{
+					name = ModuleSAS
+					isEnabled = True
+					standaloneToggle = True
+					standaloneToggle_UIFlight
+					{
+						controlEnabled = True
+					}
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = CollisionFX
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleSPU
+					isEnabled = True
+					IsRTPowered = True
+					IsRTSignalProcessor = True
+					IsRTCommandStation = False
+					RTCommandMinCrew = 6
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					FlightComputer
+					{
+						TotalDelay = 0
+						ActiveCommands
+						{
+							AttitudeCommand
+							{
+								Mode = Off
+								Attitude = Prograde
+								Frame = World
+								Orientation = 0,0,0,1
+								Altitude = NaN
+								TimeStamp = 35699.6346183763
+								ExtraDelay = 0
+								CmdGuid = b1ae8a9f-379b-4268-b64c-cf421e18b451
+							}
+						}
+						Commands
+						{
+						}
+					}
+				}
+				MODULE
+				{
+					name = ModuleRTAntennaPassive
+					isEnabled = True
+					IsRTAntenna = True
+					IsRTActive = True
+					IsRTPowered = True
+					IsRTBroken = False
+					RTDishCosAngle = 1
+					RTOmniRange = 3000
+					RTDishRange = -1
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = MechJebCore
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						OnOrbitProgradeAction
+						{
+							actionGroup = None
+						}
+						OnOrbitRetrogradeAction
+						{
+							actionGroup = None
+						}
+						OnOrbitNormalAction
+						{
+							actionGroup = None
+						}
+						OnOrbitAntinormalAction
+						{
+							actionGroup = None
+						}
+						OnOrbitRadialInAction
+						{
+							actionGroup = None
+						}
+						OnOrbitRadialOutAction
+						{
+							actionGroup = None
+						}
+						OnKillRotationAction
+						{
+							actionGroup = None
+						}
+						OnDeactivateSmartASSAction
+						{
+							actionGroup = None
+						}
+						OnPanicAction
+						{
+							actionGroup = None
+						}
+						OnTranslatronOffAction
+						{
+							actionGroup = None
+						}
+						OnTranslatronKeepVertAction
+						{
+							actionGroup = None
+						}
+						OnTranslatronZeroSpeedAction
+						{
+							actionGroup = None
+						}
+						OnTranslatronPlusOneSpeedAction
+						{
+							actionGroup = None
+						}
+						OnTranslatronMinusOneSpeedAction
+						{
+							actionGroup = None
+						}
+						OnTranslatronToggleHSAction
+						{
+							actionGroup = None
+						}
+					}
+				}
+				MODULE
+				{
+					name = ModuleTripLogger
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					Log
+					{
+						flight = 0
+					}
+				}
+				MODULE
+				{
+					name = ModuleRTDataTransmitter
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				RESOURCE
+				{
+					name = ElectricCharge
+					amount = 4.93146689173258
+					maxAmount = 15
+					flowState = True
+					isTweakable = True
+					hideFlow = False
+					flowMode = Both
+				}
+			}
+			PART
+			{
+				name = parachuteRadial
+				cid = 4294581004
+				uid = 3179130298
+				mid = 492048506
+				launchID = 11
+				parent = 3
+				position = -1.58468580245972,4.17953968048096,-0.000242799520492554
+				rotation = -2.078768E-08,0.7071069,-0.7071069,2.078768E-08
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 0
+				dstg = 1
+				sqor = 0
+				sepI = 3
+				sidx = 0
+				attm = 1
+				sym = 11
+				srfN = srfAttach, 3
+				mass = 0.1
+				temp = 290.483582487216
+				tempExt = 291.076806248285
+				expt = 0.5
+				state = 0
+				connected = True
+				attached = True
+				flag = Squad/Flags/kerbin
+				rTrf = parachuteRadial
+				modCost = 0
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleParachute
+					isEnabled = True
+					persistentState = STOWED
+					minAirPressureToOpen = 0.04
+					deployAltitude = 1000
+					minAirPressureToOpen_UIFlight
+					{
+						controlEnabled = True
+						minValue = 0.01
+						maxValue = 0.75
+						stepIncrement = 0.01
+					}
+					deployAltitude_UIFlight
+					{
+						controlEnabled = True
+						minValue = 50
+						maxValue = 5000
+						stepIncrement = 50
+					}
+					EVENTS
+					{
+						Deploy
+						{
+							active = True
+							guiActive = True
+							guiIcon = Deploy Chute
+							guiName = Deploy Chute
+							category = Deploy Chute
+							guiActiveUnfocused = True
+							unfocusedRange = 4
+							externalToEVAOnly = True
+						}
+						CutParachute
+						{
+							active = False
+							guiActive = True
+							guiIcon = Cut Parachute
+							guiName = Cut Parachute
+							category = Cut Parachute
+							guiActiveUnfocused = True
+							unfocusedRange = 4
+							externalToEVAOnly = True
+						}
+						Repack
+						{
+							active = False
+							guiActive = False
+							guiIcon = Repack Chute
+							guiName = Repack Chute
+							category = Repack Chute
+							guiActiveUnfocused = True
+							unfocusedRange = 4
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+						DeployAction
+						{
+							actionGroup = None
+						}
+						CutAction
+						{
+							actionGroup = None
+						}
+					}
+				}
+				MODULE
+				{
+					name = ModuleTestSubject
+					isEnabled = True
+					EVENTS
+					{
+						RunTestEvent
+						{
+							active = False
+							guiActive = True
+							guiIcon = Run Test
+							guiName = Run Test
+							category = Run Test
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleDragModifier
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleDragModifier
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = CollisionFX
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = stackDecoupler
+				cid = 4294604938
+				uid = 2391582800
+				mid = 492048506
+				launchID = 11
+				parent = 3
+				position = -1.5855917930603,4.32491970062256,0
+				rotation = 4.385658E-23,-3.692634E-23,-4.817394E-17,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 1
+				dstg = 3
+				sqor = 1
+				sepI = 1
+				sidx = 0
+				attm = 0
+				sym = 12
+				srfN = , -1
+				attN = bottom, 3
+				attN = top, 6
+				mass = 0.05
+				temp = 290.546578151382
+				tempExt = 290.944171229382
+				expt = 0.5
+				state = 0
+				connected = True
+				attached = True
+				flag = Squad/Flags/kerbin
+				rTrf = stackDecoupler
+				modCost = 0
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleDecouple
+					isEnabled = True
+					ejectionForcePercent = 100
+					isDecoupled = False
+					ejectionForcePercent_UIFlight
+					{
+						controlEnabled = True
+						minValue = 0
+						maxValue = 100
+						stepIncrement = 1
+					}
+					EVENTS
+					{
+						Decouple
+						{
+							active = True
+							guiActive = True
+							guiIcon = Decouple
+							guiName = Decouple
+							category = Decouple
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+						DecoupleAction
+						{
+							actionGroup = None
+						}
+					}
+				}
+				MODULE
+				{
+					name = ModuleTestSubject
+					isEnabled = True
+					EVENTS
+					{
+						RunTestEvent
+						{
+							active = False
+							guiActive = True
+							guiIcon = Run Test
+							guiName = Run Test
+							category = Run Test
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = CollisionFX
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = tjs_DecouplerLight
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = pointyNoseConeB
+				cid = 4294622784
+				uid = 243201810
+				mid = 492048506
+				launchID = 11
+				parent = 5
+				position = -1.5855917930603,5.01496982574463,0
+				rotation = 4.385658E-23,-3.692634E-23,-4.817394E-17,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 4
+				dstg = 4
+				sqor = -1
+				sepI = 1
+				sidx = -1
+				attm = 0
+				sym = 13
+				srfN = srfAttach, -1
+				attN = bottom01, 5
+				mass = 0.075
+				temp = 290.546714769997
+				tempExt = 291.025262556259
+				expt = 0.5
+				state = 0
+				connected = True
+				attached = True
+				flag = Squad/Flags/kerbin
+				rTrf = pointyNoseConeB
+				modCost = 0
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleAnimateHeat
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = CollisionFX
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = radialDrogue
+				cid = 4294584040
+				uid = 2600584647
+				mid = 492048506
+				launchID = 11
+				parent = 6
+				position = -1.62841176986694,4.39354038238525,2.08616256713867E-07
+				rotation = -2.078768E-08,0.7071069,0.7071069,-2.078768E-08
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 2
+				dstg = 3
+				sqor = 2
+				sepI = 1
+				sidx = 0
+				attm = 1
+				sym = 14
+				srfN = srfAttach, 6
+				mass = 0.075
+				temp = 290.446332405273
+				tempExt = 291.038458264256
+				expt = 0.5
+				state = 0
+				connected = True
+				attached = True
+				flag = Squad/Flags/kerbin
+				rTrf = radialDrogue
+				modCost = 0
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleParachute
+					isEnabled = True
+					persistentState = STOWED
+					minAirPressureToOpen = 0.02
+					deployAltitude = 2500
+					minAirPressureToOpen_UIFlight
+					{
+						controlEnabled = True
+						minValue = 0.01
+						maxValue = 0.75
+						stepIncrement = 0.01
+					}
+					deployAltitude_UIFlight
+					{
+						controlEnabled = True
+						minValue = 50
+						maxValue = 5000
+						stepIncrement = 50
+					}
+					EVENTS
+					{
+						Deploy
+						{
+							active = True
+							guiActive = True
+							guiIcon = Deploy Chute
+							guiName = Deploy Chute
+							category = Deploy Chute
+							guiActiveUnfocused = True
+							unfocusedRange = 4
+							externalToEVAOnly = True
+						}
+						CutParachute
+						{
+							active = False
+							guiActive = True
+							guiIcon = Cut Parachute
+							guiName = Cut Parachute
+							category = Cut Parachute
+							guiActiveUnfocused = True
+							unfocusedRange = 4
+							externalToEVAOnly = True
+						}
+						Repack
+						{
+							active = False
+							guiActive = False
+							guiIcon = Repack Chute
+							guiName = Repack Chute
+							category = Repack Chute
+							guiActiveUnfocused = True
+							unfocusedRange = 4
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+						DeployAction
+						{
+							actionGroup = None
+						}
+						CutAction
+						{
+							actionGroup = None
+						}
+					}
+				}
+				MODULE
+				{
+					name = ModuleTestSubject
+					isEnabled = True
+					EVENTS
+					{
+						RunTestEvent
+						{
+							active = False
+							guiActive = True
+							guiIcon = Run Test
+							guiName = Run Test
+							category = Run Test
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleDragModifier
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleDragModifier
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = CollisionFX
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = radialDecoupler
+				cid = 4294566320
+				uid = 2675986863
+				mid = 492048506
+				launchID = 11
+				parent = 0
+				position = 0.820759296417236,0.00315952301025391,-8.94069671630859E-08
+				rotation = 2.939821E-08,1,-2.54111E-15,-4.371139E-08
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 3
+				dstg = 1
+				sqor = 3
+				sepI = 3
+				sidx = 1
+				attm = 1
+				sym = 1
+				srfN = srfAttach, 0
+				mass = 0.025
+				temp = 290.483791450411
+				tempExt = 290.678128146993
+				expt = 0.5
+				state = 0
+				connected = True
+				attached = True
+				flag = Squad/Flags/kerbin
+				rTrf = radialDecoupler
+				modCost = 0
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleAnchoredDecoupler
+					isEnabled = True
+					ejectionForcePercent = 100
+					isDecoupled = False
+					ejectionForcePercent_UIFlight
+					{
+						controlEnabled = True
+						minValue = 0
+						maxValue = 100
+						stepIncrement = 1
+					}
+					EVENTS
+					{
+						Decouple
+						{
+							active = True
+							guiActive = True
+							guiIcon = Decouple
+							guiName = Decouple
+							category = Decouple
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+						DecoupleAction
+						{
+							actionGroup = None
+						}
+					}
+				}
+				MODULE
+				{
+					name = ModuleTestSubject
+					isEnabled = True
+					EVENTS
+					{
+						RunTestEvent
+						{
+							active = False
+							guiActive = True
+							guiIcon = Run Test
+							guiName = Run Test
+							category = Run Test
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = CollisionFX
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = tjs_DecouplerLight
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = solidBooster1-1
+				cid = 4294565478
+				uid = 1230937028
+				mid = 492048506
+				launchID = 11
+				parent = 8
+				position = 1.58559226989746,0.0719194412231445,-8.94069671630859E-08
+				rotation = 2.078768E-08,0.7071068,-2.078768E-08,0.7071068
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 4
+				dstg = 2
+				sqor = 4
+				sepI = 3
+				sidx = 1
+				attm = 1
+				sym = 2
+				srfN = srfAttach, 8
+				attN = bottom, -1
+				attN = top, 10
+				mass = 1.5
+				temp = 290.530279002177
+				tempExt = 290.683134508129
+				expt = 0.5
+				state = 0
+				connected = True
+				attached = True
+				flag = Squad/Flags/kerbin
+				rTrf = solidBooster1-1
+				modCost = 0
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleEnginesFX
+					isEnabled = True
+					staged = False
+					flameout = False
+					EngineIgnited = False
+					engineShutdown = False
+					currentThrottle = 0
+					thrustPercentage = 54.5
+					manuallyOverridden = False
+					thrustPercentage_UIFlight
+					{
+						controlEnabled = True
+						minValue = 0
+						maxValue = 100
+						stepIncrement = 0.5
+					}
+					EVENTS
+					{
+						Activate
+						{
+							active = True
+							guiActive = True
+							guiIcon = Activate Engine
+							guiName = Activate Engine
+							category = Activate Engine
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+						Shutdown
+						{
+							active = False
+							guiActive = True
+							guiIcon = Shutdown Engine
+							guiName = Shutdown Engine
+							category = Shutdown Engine
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+						OnAction
+						{
+							actionGroup = None
+						}
+						ShutdownAction
+						{
+							actionGroup = None
+						}
+						ActivateAction
+						{
+							actionGroup = None
+						}
+					}
+				}
+				MODULE
+				{
+					name = ModuleAnimateHeat
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleTestSubject
+					isEnabled = True
+					EVENTS
+					{
+						RunTestEvent
+						{
+							active = False
+							guiActive = True
+							guiIcon = Run Test
+							guiName = Run Test
+							category = Run Test
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleSurfaceFX
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = CollisionFX
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleJettison
+					isEnabled = True
+					isJettisoned = True
+					EVENTS
+					{
+						Jettison
+						{
+							active = False
+							guiActive = True
+							guiIcon = Jettison
+							guiName = Jettison
+							category = Jettison
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+						JettisonAction
+						{
+							actionGroup = None
+						}
+					}
+				}
+				MODULE
+				{
+					name = FlagDecal
+					isEnabled = True
+					flagDisplayed = False
+					EVENTS
+					{
+						ToggleFlag
+						{
+							active = True
+							guiActive = False
+							guiActiveEditor = True
+							guiIcon = Toggle Flag
+							guiName = Toggle Flag
+							category = Toggle Flag
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = tjs_EngineLight
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				RESOURCE
+				{
+					name = SolidFuel
+					amount = 142.6087
+					maxAmount = 820
+					flowState = True
+					isTweakable = True
+					hideFlow = False
+					flowMode = Both
+				}
+			}
+			PART
+			{
+				name = probeStackSmall
+				cid = 4294471590
+				uid = 3991117173
+				mid = 492048506
+				launchID = 11
+				parent = 9
+				position = 1.58559322357178,4.09191989898682,-8.94069671630859E-08
+				rotation = -4.81741E-17,1,-2.386095E-15,4.058231E-08
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 2
+				dstg = 2
+				sqor = -1
+				sepI = 3
+				sidx = -1
+				attm = 0
+				sym = 3
+				srfN = , -1
+				attN = bottom, 9
+				attN = top, 12
+				mass = 0.1
+				temp = 290.530368935039
+				tempExt = 290.934840661615
+				expt = 0
+				state = 0
+				connected = True
+				attached = True
+				flag = Squad/Flags/kerbin
+				rTrf = probeStackSmall
+				modCost = 0
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleCommand
+					isEnabled = True
+					controlSrcStatusText = Operational
+					EVENTS
+					{
+						MakeReference
+						{
+							active = True
+							guiActive = True
+							guiIcon = Control From Here
+							guiName = Control From Here
+							category = Control From Here
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+						RenameVessel
+						{
+							active = True
+							guiActive = True
+							guiIcon = Rename Vessel
+							guiName = Rename Vessel
+							category = Rename Vessel
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleReactionWheel
+					isEnabled = True
+					stateString = Idle
+					WheelState = Active
+					EVENTS
+					{
+						OnToggle
+						{
+							active = True
+							guiActive = True
+							guiActiveEditor = True
+							guiIcon = Toggle Torque
+							guiName = Toggle Torque
+							category = Toggle Torque
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+						Activate
+						{
+							actionGroup = None
+						}
+						Deactivate
+						{
+							actionGroup = None
+						}
+						Toggle
+						{
+							actionGroup = None
+						}
+					}
+				}
+				MODULE
+				{
+					name = ModuleSAS
+					isEnabled = True
+					standaloneToggle = True
+					standaloneToggle_UIFlight
+					{
+						controlEnabled = True
+					}
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = CollisionFX
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleSPU
+					isEnabled = True
+					IsRTPowered = True
+					IsRTSignalProcessor = True
+					IsRTCommandStation = False
+					RTCommandMinCrew = 6
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					FlightComputer
+					{
+						TotalDelay = 0
+						ActiveCommands
+						{
+							AttitudeCommand
+							{
+								Mode = Off
+								Attitude = Prograde
+								Frame = World
+								Orientation = 0,0,0,1
+								Altitude = NaN
+								TimeStamp = 35699.6346183763
+								ExtraDelay = 0
+								CmdGuid = 96382b04-cf5c-4c3e-a5ef-1ff482da29c7
+							}
+						}
+						Commands
+						{
+						}
+					}
+				}
+				MODULE
+				{
+					name = ModuleRTAntennaPassive
+					isEnabled = True
+					IsRTAntenna = True
+					IsRTActive = True
+					IsRTPowered = True
+					IsRTBroken = False
+					RTDishCosAngle = 1
+					RTOmniRange = 3000
+					RTDishRange = -1
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = MechJebCore
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						OnOrbitProgradeAction
+						{
+							actionGroup = None
+						}
+						OnOrbitRetrogradeAction
+						{
+							actionGroup = None
+						}
+						OnOrbitNormalAction
+						{
+							actionGroup = None
+						}
+						OnOrbitAntinormalAction
+						{
+							actionGroup = None
+						}
+						OnOrbitRadialInAction
+						{
+							actionGroup = None
+						}
+						OnOrbitRadialOutAction
+						{
+							actionGroup = None
+						}
+						OnKillRotationAction
+						{
+							actionGroup = None
+						}
+						OnDeactivateSmartASSAction
+						{
+							actionGroup = None
+						}
+						OnPanicAction
+						{
+							actionGroup = None
+						}
+						OnTranslatronOffAction
+						{
+							actionGroup = None
+						}
+						OnTranslatronKeepVertAction
+						{
+							actionGroup = None
+						}
+						OnTranslatronZeroSpeedAction
+						{
+							actionGroup = None
+						}
+						OnTranslatronPlusOneSpeedAction
+						{
+							actionGroup = None
+						}
+						OnTranslatronMinusOneSpeedAction
+						{
+							actionGroup = None
+						}
+						OnTranslatronToggleHSAction
+						{
+							actionGroup = None
+						}
+					}
+				}
+				MODULE
+				{
+					name = ModuleTripLogger
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					Log
+					{
+						flight = 0
+					}
+				}
+				MODULE
+				{
+					name = ModuleRTDataTransmitter
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				RESOURCE
+				{
+					name = ElectricCharge
+					amount = 4.93146689173258
+					maxAmount = 15
+					flowState = True
+					isTweakable = True
+					hideFlow = False
+					flowMode = Both
+				}
+			}
+			PART
+			{
+				name = parachuteRadial
+				cid = 4294470622
+				uid = 4089752651
+				mid = 492048506
+				launchID = 11
+				parent = 10
+				position = 1.58468723297119,4.17953968048096,0.000242710113525391
+				rotation = -0.7071069,4.948371E-08,-7.908344E-09,-0.7071069
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 0
+				dstg = 1
+				sqor = 0
+				sepI = 3
+				sidx = 1
+				attm = 1
+				sym = 4
+				srfN = srfAttach, 10
+				mass = 0.1
+				temp = 290.485721332927
+				tempExt = 291.078848417146
+				expt = 0.5
+				state = 0
+				connected = True
+				attached = True
+				flag = Squad/Flags/kerbin
+				rTrf = parachuteRadial
+				modCost = 0
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleParachute
+					isEnabled = True
+					persistentState = STOWED
+					minAirPressureToOpen = 0.04
+					deployAltitude = 1000
+					minAirPressureToOpen_UIFlight
+					{
+						controlEnabled = True
+						minValue = 0.01
+						maxValue = 0.75
+						stepIncrement = 0.01
+					}
+					deployAltitude_UIFlight
+					{
+						controlEnabled = True
+						minValue = 50
+						maxValue = 5000
+						stepIncrement = 50
+					}
+					EVENTS
+					{
+						Deploy
+						{
+							active = True
+							guiActive = True
+							guiIcon = Deploy Chute
+							guiName = Deploy Chute
+							category = Deploy Chute
+							guiActiveUnfocused = True
+							unfocusedRange = 4
+							externalToEVAOnly = True
+						}
+						CutParachute
+						{
+							active = False
+							guiActive = True
+							guiIcon = Cut Parachute
+							guiName = Cut Parachute
+							category = Cut Parachute
+							guiActiveUnfocused = True
+							unfocusedRange = 4
+							externalToEVAOnly = True
+						}
+						Repack
+						{
+							active = False
+							guiActive = False
+							guiIcon = Repack Chute
+							guiName = Repack Chute
+							category = Repack Chute
+							guiActiveUnfocused = True
+							unfocusedRange = 4
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+						DeployAction
+						{
+							actionGroup = None
+						}
+						CutAction
+						{
+							actionGroup = None
+						}
+					}
+				}
+				MODULE
+				{
+					name = ModuleTestSubject
+					isEnabled = True
+					EVENTS
+					{
+						RunTestEvent
+						{
+							active = False
+							guiActive = True
+							guiIcon = Run Test
+							guiName = Run Test
+							category = Run Test
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleDragModifier
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleDragModifier
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = CollisionFX
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = stackDecoupler
+				cid = 4294469992
+				uid = 3665832843
+				mid = 492048506
+				launchID = 11
+				parent = 10
+				position = 1.58559322357178,4.32491970062256,-8.94069671630859E-08
+				rotation = -4.81741E-17,1,-2.386095E-15,4.058231E-08
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 1
+				dstg = 3
+				sqor = 1
+				sepI = 1
+				sidx = 1
+				attm = 0
+				sym = 5
+				srfN = , -1
+				attN = bottom, 10
+				attN = top, 13
+				mass = 0.05
+				temp = 290.54896707718
+				tempExt = 290.944420557795
+				expt = 0.5
+				state = 0
+				connected = True
+				attached = True
+				flag = Squad/Flags/kerbin
+				rTrf = stackDecoupler
+				modCost = 0
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleDecouple
+					isEnabled = True
+					ejectionForcePercent = 100
+					isDecoupled = False
+					ejectionForcePercent_UIFlight
+					{
+						controlEnabled = True
+						minValue = 0
+						maxValue = 100
+						stepIncrement = 1
+					}
+					EVENTS
+					{
+						Decouple
+						{
+							active = True
+							guiActive = True
+							guiIcon = Decouple
+							guiName = Decouple
+							category = Decouple
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+						DecoupleAction
+						{
+							actionGroup = None
+						}
+					}
+				}
+				MODULE
+				{
+					name = ModuleTestSubject
+					isEnabled = True
+					EVENTS
+					{
+						RunTestEvent
+						{
+							active = False
+							guiActive = True
+							guiIcon = Run Test
+							guiName = Run Test
+							category = Run Test
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = CollisionFX
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = tjs_DecouplerLight
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = pointyNoseConeB
+				cid = 4294469692
+				uid = 2395298775
+				mid = 492048506
+				launchID = 11
+				parent = 12
+				position = 1.58559322357178,5.01496982574463,-8.94069671630859E-08
+				rotation = -4.81741E-17,1,-2.386095E-15,4.058231E-08
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 4
+				dstg = 4
+				sqor = -1
+				sepI = 1
+				sidx = -1
+				attm = 0
+				sym = 6
+				srfN = srfAttach, -1
+				attN = bottom01, 12
+				mass = 0.075
+				temp = 290.549110494625
+				tempExt = 291.028952059309
+				expt = 0.5
+				state = 0
+				connected = True
+				attached = True
+				flag = Squad/Flags/kerbin
+				rTrf = pointyNoseConeB
+				modCost = 0
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleAnimateHeat
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = CollisionFX
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = radialDrogue
+				cid = 4294469644
+				uid = 3276184268
+				mid = 492048506
+				launchID = 11
+				parent = 13
+				position = 1.6284122467041,4.39354038238525,-2.98023223876953E-07
+				rotation = 0.7071069,7.908344E-09,4.948371E-08,-0.7071069
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 2
+				dstg = 3
+				sqor = 2
+				sepI = 1
+				sidx = 1
+				attm = 1
+				sym = 7
+				srfN = srfAttach, 13
+				mass = 0.075
+				temp = 290.448407376984
+				tempExt = 291.040445341896
+				expt = 0.5
+				state = 0
+				connected = True
+				attached = True
+				flag = Squad/Flags/kerbin
+				rTrf = radialDrogue
+				modCost = 0
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleParachute
+					isEnabled = True
+					persistentState = STOWED
+					minAirPressureToOpen = 0.02
+					deployAltitude = 2500
+					minAirPressureToOpen_UIFlight
+					{
+						controlEnabled = True
+						minValue = 0.01
+						maxValue = 0.75
+						stepIncrement = 0.01
+					}
+					deployAltitude_UIFlight
+					{
+						controlEnabled = True
+						minValue = 50
+						maxValue = 5000
+						stepIncrement = 50
+					}
+					EVENTS
+					{
+						Deploy
+						{
+							active = True
+							guiActive = True
+							guiIcon = Deploy Chute
+							guiName = Deploy Chute
+							category = Deploy Chute
+							guiActiveUnfocused = True
+							unfocusedRange = 4
+							externalToEVAOnly = True
+						}
+						CutParachute
+						{
+							active = False
+							guiActive = True
+							guiIcon = Cut Parachute
+							guiName = Cut Parachute
+							category = Cut Parachute
+							guiActiveUnfocused = True
+							unfocusedRange = 4
+							externalToEVAOnly = True
+						}
+						Repack
+						{
+							active = False
+							guiActive = False
+							guiIcon = Repack Chute
+							guiName = Repack Chute
+							category = Repack Chute
+							guiActiveUnfocused = True
+							unfocusedRange = 4
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+						DeployAction
+						{
+							actionGroup = None
+						}
+						CutAction
+						{
+							actionGroup = None
+						}
+					}
+				}
+				MODULE
+				{
+					name = ModuleTestSubject
+					isEnabled = True
+					EVENTS
+					{
+						RunTestEvent
+						{
+							active = False
+							guiActive = True
+							guiIcon = Run Test
+							guiName = Run Test
+							category = Run Test
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleDragModifier
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleDragModifier
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = CollisionFX
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = fuelTankSmall
+				cid = 4294555432
+				uid = 4242112093
+				mid = 492048506
+				launchID = 11
+				parent = 0
+				position = 0,-1.18025016784668,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 0
+				dstg = 0
+				sqor = -1
+				sepI = 0
+				sidx = -1
+				attm = 0
+				srfN = srfAttach, -1
+				attN = top, 0
+				attN = bottom, 16
+				mass = 0.125
+				temp = 288.647356928331
+				tempExt = 289.657726329786
+				expt = 0.5
+				state = 0
+				connected = True
+				attached = True
+				flag = Squad/Flags/kerbin
+				rTrf = fuelTankSmall
+				modCost = 0
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = CollisionFX
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				RESOURCE
+				{
+					name = LiquidFuel
+					amount = 90
+					maxAmount = 90
+					flowState = True
+					isTweakable = True
+					hideFlow = False
+					flowMode = Both
+				}
+				RESOURCE
+				{
+					name = Oxidizer
+					amount = 110
+					maxAmount = 110
+					flowState = True
+					isTweakable = True
+					hideFlow = False
+					flowMode = Both
+				}
+			}
+			PART
+			{
+				name = MK1Fuselage
+				cid = 4294553718
+				uid = 338089750
+				mid = 492048506
+				launchID = 11
+				parent = 15
+				position = 0,-2.67300033569336,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 0
+				dstg = 0
+				sqor = -1
+				sepI = 0
+				sidx = -1
+				attm = 0
+				srfN = srfAttach, -1
+				attN = top, 15
+				attN = bottom, -1
+				mass = 0.25
+				temp = 288.365372804828
+				tempExt = 289.41624396356
+				expt = 0.5
+				state = 0
+				connected = True
+				attached = True
+				flag = Squad/Flags/kerbin
+				rTrf = MK1Fuselage
+				modCost = 0
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = CollisionFX
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				RESOURCE
+				{
+					name = LiquidFuel
+					amount = 400
+					maxAmount = 400
+					flowState = True
+					isTweakable = True
+					hideFlow = False
+					flowMode = Both
+				}
+			}
+			PART
+			{
+				name = MK1Fuselage
+				cid = 4294553406
+				uid = 1994694045
+				mid = 492048506
+				launchID = 11
+				parent = 0
+				position = 0,1.56249904632568,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 0
+				dstg = 0
+				sqor = -1
+				sepI = 0
+				sidx = -1
+				attm = 0
+				srfN = srfAttach, -1
+				attN = top, 18
+				attN = bottom, 0
+				mass = 0.25
+				temp = 288.498763469263
+				tempExt = 289.552176095021
+				expt = 0.5
+				state = 0
+				connected = True
+				attached = True
+				flag = Squad/Flags/kerbin
+				rTrf = MK1Fuselage
+				modCost = 0
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = CollisionFX
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				RESOURCE
+				{
+					name = LiquidFuel
+					amount = 400
+					maxAmount = 400
+					flowState = True
+					isTweakable = True
+					hideFlow = False
+					flowMode = Both
+				}
+			}
+			PART
+			{
+				name = MK1Fuselage
+				cid = 4294553154
+				uid = 1455272379
+				mid = 492048506
+				launchID = 11
+				parent = 17
+				position = 0,3.43749904632568,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 0
+				dstg = 0
+				sqor = -1
+				sepI = 0
+				sidx = -1
+				attm = 0
+				srfN = srfAttach, -1
+				attN = top, -1
+				attN = bottom, 17
+				mass = 0.25
+				temp = 288.279937265079
+				tempExt = 289.345272967598
+				expt = 0.5
+				state = 0
+				connected = True
+				attached = True
+				flag = Squad/Flags/kerbin
+				rTrf = MK1Fuselage
+				modCost = 0
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = CollisionFX
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				RESOURCE
+				{
+					name = LiquidFuel
+					amount = 400
+					maxAmount = 400
+					flowState = True
+					isTweakable = True
+					hideFlow = False
+					flowMode = Both
+				}
+			}
+			ACTIONGROUPS
+			{
+				Stage = False, 0
+				Gear = True, 0
+				Light = False, 0
+				RCS = False, 0
+				SAS = False, 0
+				Brakes = False, 0
+				Abort = False, 0
+				Custom01 = False, 0
+				Custom02 = False, 0
+				Custom03 = False, 0
+				Custom04 = False, 0
+				Custom05 = False, 0
+				Custom06 = False, 0
+				Custom07 = False, 0
+				Custom08 = False, 0
+				Custom09 = False, 0
+				Custom10 = False, 0
+			}
+			DISCOVERY
+			{
+				state = -1
+				lastObservedTime = 0
+				lifetime = Infinity
+				refTime = Infinity
+				size = 2
+			}
+			FLIGHTPLAN
+			{
+			}
+			CTRLSTATE
+			{
+				pitch = 0
+				yaw = 0
+				roll = 0
+				trimPitch = 0
+				trimYaw = 0
+				trimRoll = 0
+				mainThrottle = 0
+			}
+		}
 	}
 	ROSTER
 	{
@@ -1035,9 +4327,9 @@ GAME
 			dumb = 0.5
 			badS = True
 			tour = False
-			state = Available
+			state = Assigned
 			ToD = 7200
-			idx = -1
+			idx = 0
 			CAREER_LOG
 			{
 				flight = 0
