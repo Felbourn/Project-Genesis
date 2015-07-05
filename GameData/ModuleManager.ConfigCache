@@ -1,4 +1,4 @@
-patchedNodeCount = 8757
+patchedNodeCount = 9295
 catEatenCount = 0
 UrlConfig
 {
@@ -3057,7 +3057,7 @@ UrlConfig
 		cost = 600
 		category = Utility
 		subcategory = 0
-		title = OX-STAT-XL Photovoltaic Panels FIX ME
+		title = : FIX ME::
 		manufacturer = Probodyne, Inc
 		description = A larger version of the OX-STAT, the XL version features a larger surface area than it's smaller cousin while retaining the cost and weight benefits of a static solar panel.
 		attachRules = 0,1,0,0,0
@@ -39462,7 +39462,7 @@ UrlConfig
 		cost = 360
 		category = Pods
 		subcategory = 0
-		title = Probodobodyne QBE FIX ME
+		title = : FIX ME::
 		manufacturer = Probodobodyne Inc
 		description = QBE is Probodobodyne's latest development in probe miniaturization. Despite it's diminutive size, the QBE is a fully-functional and incredibly lightweight command unit. All this goodness comes at a price however: The QBE's tiny enclosure means there is no room for internal reaction wheels, and battery capacity is pitiful at best. Despite all this, or perhaps because of it, many engineers have found it to be ideally suited for those 'optional return' missions.
 		attachRules = 1,0,1,1,0
@@ -39587,7 +39587,7 @@ UrlConfig
 		cost = 650
 		category = Pods
 		subcategory = 0
-		title = Probodobodyne HECS FIX ME
+		title = : FIX ME::
 		manufacturer = Probodobodyne Inc
 		description = The HECS core capabilities go far beyond its sleek, 6-sided futuristic casing. This probe core provides advanced guidance assistance technology, and comes fitted with internal reaction wheels and decently-sized batteries. Despite concerns that one day, autonomous spacecraft cores could become self-aware and turn against their creators, or even become very stubborn against opening pod bay doors, Probodobodyne insists that these unmanned AI-driven devices are the way of the future.
 		attachRules = 1,0,1,1,0
@@ -39729,7 +39729,7 @@ UrlConfig
 		cost = 450
 		category = Pods
 		subcategory = 0
-		title = Probodobodyne OKTO FIX ME
+		title = : FIX ME::
 		manufacturer = Probodobodyne Inc
 		description = The OKTO is the next step in unmanned control technology. This small unit can not only receive and relay control, it also provides automatic stabilization assistance, just as a live pilot would. Also, its 8-sided stylistic design features lots of flat surfaces for attaching equipment.
 		attachRules = 1,0,1,1,0
@@ -39870,7 +39870,7 @@ UrlConfig
 		cost = 1480
 		category = Pods
 		subcategory = 0
-		title = Probodobodyne OKTO2 FIX ME
+		title = : FIX ME::
 		manufacturer = Probodobodyne Inc
 		description = The OKTO2 is far more than a flatter variant of the original OKTO. This new iteration of the ubiquitous 8-sided probe core features a much more advanced guidance system. This new model however, does not feature built-in reaction wheels and does requires more power to run, even on standby. Its internal battery supply is also very limited, being intended mainly to keep the Standby LEDs lit.
 		attachRules = 1,0,1,1,0
@@ -39996,7 +39996,7 @@ UrlConfig
 		cost = 800
 		category = Pods
 		subcategory = 0
-		title = Probodobodyne RoveMate FIX ME
+		title = : FIX ME::
 		manufacturer = Probodobodyne Inc
 		description = A sturdy housing for a robust probe and battery system - no assembly required! Thought intended as the body for surface rovers, we've been told by our most day-dreaming of engineers that the possibilities are endless! While it has a Stability Assistance System, the RoveMate lacks reaction wheels so bring some along if you want to hold that attitude.
 		attachRules = 1,0,1,1,0
@@ -40113,7 +40113,7 @@ UrlConfig
 		cost = 3400
 		category = Pods
 		subcategory = 0
-		title = RC-L01 Remote Guidance Unit FIX ME
+		title = : FIX ME::
 		manufacturer = STEADLER Engineering Corps
 		description = A larger version of the popular RGU system, developed in partnership with the Rockomax conglomerate.
 		attachRules = 1,0,1,1,0
@@ -40258,7 +40258,7 @@ UrlConfig
 		cost = 2250
 		category = Pods
 		subcategory = 0
-		title = RC-001S Remote Guidance Unit FIX ME
+		title = : FIX ME::
 		manufacturer = STEADLER Engineering Corps
 		description = The STEADLER RGU core is one of the most complete command units available to date, featuring all the latest guidance systems, plus its own internal set of Reaction Wheels. STEADLER claims this is the closest one can get to a fully self-contained spacecraft. (Some assembly required. Spacecraft sold separately)
 		attachRules = 1,0,1,1,0
@@ -40400,7 +40400,7 @@ UrlConfig
 		cost = 300
 		category = Pods
 		subcategory = 0
-		title = Stayputnik Mk. 1 FIX ME
+		title = : FIX ME::
 		manufacturer = Probodobodyne Inc
 		description = The Stayputnik offers the ultimate solution in crew safety. A lightweight sphere equipped with remote receivers and relay control input from the ground to the craft, it carries no crew at all, thus keeping them perfectly safe from all harm. This device does require electricity to operate however, and will cease to function if the power runs out. The built-in batteries should keep it going for about 10 minutes.
 		attachRules = 1,0,1,1,0
@@ -40687,7 +40687,7 @@ UrlConfig
 		cost = 440
 		category = Utility
 		subcategory = 0
-		title = SP-L 1x5 Photovoltaic Panels FIX ME
+		title = : FIX ME::
 		manufacturer = Probodobodyne Inc
 		description = The alternate configuration of the SP Model Photovoltaic Panels.  Includes passive radiators on the reverse side for better heat dissipation.
 		attachRules = 0,1,0,0,1
@@ -40776,7 +40776,7 @@ UrlConfig
 		cost = 380
 		category = Utility
 		subcategory = 0
-		title = OX-4L 1x5 Photovoltaic Panels FIX ME
+		title = : FIX ME::
 		manufacturer = Probodobodyne Inc
 		description = The OX-4 is similar in design to the SP series solar panels, but without the heavy casing.  Includes passive radiators on the reverse side for better heat dissipation.
 		attachRules = 0,1,0,0,1
@@ -40866,7 +40866,7 @@ UrlConfig
 		cost = 730
 		category = Utility
 		subcategory = 0
-		title = OX-6L 1x3 Photovoltaic Panels FIX ME
+		title = : FIX ME::
 		manufacturer = Probodobodyne Inc
 		description = The OX-4 is similar in design to the SP series solar panels, but without the heavy casing.  Includes passive radiators on the reverse side for better heat dissipation.
 		attachRules = 0,1,0,0,1
@@ -40956,7 +40956,7 @@ UrlConfig
 		cost = 250
 		category = Utility
 		subcategory = 0
-		title = OX-2L 1x3 Photovoltaic Panels FIX ME
+		title = : FIX ME::
 		manufacturer = Probodobodyne Inc
 		description = The OX-4 is similar in design to the SP series solar panels, but without the heavy casing.  Includes passive radiators on the reverse side for better heat dissipation.
 		attachRules = 0,1,0,0,1
@@ -41046,7 +41046,7 @@ UrlConfig
 		cost = 440
 		category = Utility
 		subcategory = 0
-		title = SP-W 3x1 Photovoltaic Panels FIX ME
+		title = : FIX ME::
 		manufacturer = Probodobodyne Inc
 		description = Probodobodyne branded Photovoltaic Panels are the world standard for power generation, from your own home to the stars. The SP model comes with a protective shroud, allowing recovery when it's no longer needed.  Includes passive radiators on the reverse side for better heat dissipation.
 		attachRules = 0,1,0,0,1
@@ -41135,7 +41135,7 @@ UrlConfig
 		cost = 380
 		category = Utility
 		subcategory = 0
-		title = OX-4W 3x1 Photovoltaic Panels FIX ME
+		title = : FIX ME::
 		manufacturer = Probodobodyne Inc
 		description = The OX-4 is similar in design to the SP series solar panels, but without the heavy casing.
 		attachRules = 0,1,0,0,1
@@ -41225,7 +41225,7 @@ UrlConfig
 		cost = 3000
 		category = Utility
 		subcategory = 0
-		title = Gigantor XL Solar Array FIX ME
+		title = : FIX ME::
 		manufacturer = Probodobodyne Inc
 		description = The single largest solar array available for purchase, the Gigantor XL offers tremendous generation potential from a compact initial package.  Includes passive radiators on the reverse side for better heat dissipation.
 		attachRules = 0,1,0,0,1
@@ -41314,7 +41314,7 @@ UrlConfig
 		cost = 75
 		category = Utility
 		subcategory = 0
-		title = OX-STAT Photovoltaic Panels FIX ME
+		title = : FIX ME::
 		manufacturer = Probodobodyne Inc
 		description = The OX-STAT solar panel is a simple panel with no sun-tracking or deployment mechanics. As a result, it is very light and cheap.
 		attachRules = 0,1,0,0,1
@@ -41482,7 +41482,7 @@ UrlConfig
 		cost = 80
 		category = Utility
 		subcategory = 0
-		title = Z-100 Rechargeable Battery Pack FIX ME
+		title = : FIX ME::
 		manufacturer = Zaltonic Electronics
 		description = The Z-100 battery pack is the standard model for electrical applications. Holds two (2) AAAA batteries and holds a maximum 100 units of charge.
 		attachRules = 0,1,0,0,0
@@ -41557,7 +41557,7 @@ UrlConfig
 		cost = 880
 		category = Utility
 		subcategory = 0
-		title = Z-1k Rechargeable Battery Bank FIX ME
+		title = : FIX ME::
 		manufacturer = Zaltonic Electronics
 		description = The Z-1k is a stackable battery bank, with ten times the power capacity of the Z-100.
 		attachRules = 1,0,1,1,0
@@ -41633,7 +41633,7 @@ UrlConfig
 		cost = 360
 		category = Utility
 		subcategory = 0
-		title = Z-200 Rechargeable Battery Bank FIX ME
+		title = : FIX ME::
 		manufacturer = Zaltonic Electronics
 		description = The Z-200 is a stackable variant of the Z-100 battery pack, with increased capacity. In emergency situations, please refrain from "reversing the polarity".
 		attachRules = 1,0,1,1,0
@@ -41707,7 +41707,7 @@ UrlConfig
 		cost = 550
 		category = Utility
 		subcategory = 0
-		title = Z-400 Rechargeable Battery FIX ME
+		title = : FIX ME::
 		manufacturer = Zaltonic Electronics
 		description = The Z-400 battery pack is a versatile, compact electrical charge storage solution designed for heavier loads than AAAA batteries can handle. Holds one E-size battery with a maximum of 400 units of charge.
 		attachRules = 0,1,0,0,0
@@ -41782,7 +41782,7 @@ UrlConfig
 		cost = 4500
 		category = Utility
 		subcategory = 0
-		title = Z-4K Rechargeable Battery Bank FIX ME
+		title = : FIX ME::
 		manufacturer = Zaltonic Electronics
 		description = New advances in surge control technology made The Z-4K, the largest battery pack ever put into production a reality. While Zaltonic admits intense electrical discharges can be really cool, shorting the Z-4K's contacts should probably be avoided.
 		attachRules = 1,0,1,1,0
@@ -54514,12 +54514,6 @@ UrlConfig
 		breakingForce = 50
 		breakingTorque = 50
 		bulkheadProfiles = size0
-		RESOURCE
-		{
-			name = XenonGas
-			amount = 700
-			maxAmount = 700
-		}
 		MODULE
 		{
 			name = ExtendedPartInfo
@@ -54562,11 +54556,6 @@ UrlConfig
 			volume = 74.2
 			type = Default
 		}
-		MODULE
-		{
-			name = ModuleTweakableFuelPump
-			ResourceNames = XenonGas
-		}
 	}
 }
 UrlConfig
@@ -54603,12 +54592,6 @@ UrlConfig
 		breakingForce = 50
 		breakingTorque = 50
 		bulkheadProfiles = size0
-		RESOURCE
-		{
-			name = XenonGas
-			amount = 5250
-			maxAmount = 5250
-		}
 		MODULE
 		{
 			name = ExtendedPartInfo
@@ -54651,11 +54634,6 @@ UrlConfig
 			volume = 508.8
 			type = Default
 		}
-		MODULE
-		{
-			name = ModuleTweakableFuelPump
-			ResourceNames = XenonGas
-		}
 	}
 }
 UrlConfig
@@ -54687,12 +54665,6 @@ UrlConfig
 		crashTolerance = 12
 		maxTemp = 2000
 		bulkheadProfiles = srf
-		RESOURCE
-		{
-			name = XenonGas
-			amount = 400
-			maxAmount = 400
-		}
 		MODULE
 		{
 			name = ExtendedPartInfo
@@ -54733,11 +54705,6 @@ UrlConfig
 			name = ModuleFuelTanks
 			volume = 34
 			type = Default
-		}
-		MODULE
-		{
-			name = ModuleTweakableFuelPump
-			ResourceNames = XenonGas
 		}
 	}
 }
@@ -85528,13 +85495,6 @@ UrlConfig
 			maxAmount = 250
 			isTweakable = True
 		}
-		RESOURCE
-		{
-			name = XenonGas
-			amount = 0
-			maxAmount = 250
-			isTweakable = True
-		}
 		MODULE
 		{
 			name = MKSModule
@@ -85615,11 +85575,6 @@ UrlConfig
 				PacketSize = 2
 				PacketResourceCost = 15.0
 			}
-		}
-		MODULE
-		{
-			name = ModuleTweakableFuelPump
-			ResourceNames = XenonGas
 		}
 		MODULE
 		{
@@ -89812,13 +89767,6 @@ UrlConfig
 			maxAmount = 250
 			isTweakable = True
 		}
-		RESOURCE
-		{
-			name = XenonGas
-			amount = 0
-			maxAmount = 250
-			isTweakable = True
-		}
 		MODULE
 		{
 			name = MKSModule
@@ -89885,11 +89833,6 @@ UrlConfig
 				PacketSize = 2
 				PacketResourceCost = 15.0
 			}
-		}
-		MODULE
-		{
-			name = ModuleTweakableFuelPump
-			ResourceNames = XenonGas
 		}
 		MODULE
 		{
