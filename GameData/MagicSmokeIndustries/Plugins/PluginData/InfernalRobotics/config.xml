@@ -6,11 +6,11 @@
         <ymin>51</ymin>
         <ymax>61</ymax>
     </rect>
-    <rect name="tweakWinPos">
-        <xmin>671</xmin>
-        <xmax>681</xmax>
-        <ymin>351</ymin>
-        <ymax>361</ymax>
+    <rect name="presetWinPos">
+        <xmin>0</xmin>
+        <xmax>0</xmax>
+        <ymin>0</ymin>
+        <ymax>0</ymax>
     </rect>
     <rect name="controlWinPos">
         <xmin>692</xmin>
@@ -18,11 +18,6 @@
         <ymin>69</ymin>
         <ymax>169</ymax>
     </rect>
-    <rect name="groupEditorWinPos">
-        <xmin>689</xmin>
-        <xmax>699</xmax>
-        <ymin>167</ymin>
-        <ymax>177</ymax>
-    </rect>
     <bool name="useEC">1</bool>
+    <bool name="allowFlipHack">0</bool>
 </config>
