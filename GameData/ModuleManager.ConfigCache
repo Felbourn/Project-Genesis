@@ -1,4 +1,4 @@
-patchedNodeCount = 8754
+patchedNodeCount = 8757
 catEatenCount = 0
 UrlConfig
 {
@@ -12626,7 +12626,7 @@ UrlConfig
 		MODULE
 		{
 			name = ModuleTweakableDecouple
-			decouplerModuleName = ModuleDecouple
+			decouplerModuleName = ModuleAnimatedAnchoredDecoupler
 		}
 		MODULE
 		{
@@ -13359,7 +13359,7 @@ UrlConfig
 		MODULE
 		{
 			name = ModuleTweakableDecouple
-			decouplerModuleName = ModuleDecouple
+			decouplerModuleName = ModuleAnimatedAnchoredDecoupler
 		}
 		MODULE
 		{
@@ -13479,7 +13479,7 @@ UrlConfig
 		MODULE
 		{
 			name = ModuleTweakableDecouple
-			decouplerModuleName = ModuleDecouple
+			decouplerModuleName = ModuleAnimatedAnchoredDecoupler
 		}
 		MODULE
 		{
