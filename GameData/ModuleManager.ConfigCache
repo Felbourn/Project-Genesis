@@ -1,4 +1,4 @@
-patchedNodeCount = 10891
+patchedNodeCount = 10590
 catEatenCount = 0
 UrlConfig
 {
@@ -6806,1735 +6806,6 @@ UrlConfig
 	{
 		volumeHexRadius = 12000
 		volumeSegmentDiv = 3
-	}
-}
-UrlConfig
-{
-	name = internals_inlineCmdPodinternals
-	type = PART
-	parentUrl = Felbourn/Internals/internals
-	url = Felbourn/Internals/internals/internals_inlineCmdPodinternals
-	PART
-	{
-		name = internals_inlineCmdPodinternals
-		module = Part
-		category = Pods
-		subcategory = 0
-		vesselType = Ship
-		author = Felbourn
-		manufacturer = Felbourn Industries
-		description = test internals view
-		scale = 1
-		rescaleFactor = 1
-		node_stack_bottom = 0.0, -0.47924, 0.0, 0.0, -1.0, 0.0, 2
-		node_stack_top = 0.0, 1.19319, 0.0, 0.0, 1.0, 0.0, 1
-		attachRules = 1,0,1,1,0
-		CoPOffset = 0.0, 0.6, 0.0
-		CoLOffset = 0.0, -0.45, 0.0
-		TechRequired = commandModules
-		entryCost = 7600
-		cost = 3800
-		bulkheadProfiles = size2, size1
-		dragModelType = default
-		maximum_drag = 0.20
-		minimum_drag = 0.15
-		angularDrag = 2
-		crashTolerance = 45
-		maxTemp = 2400
-		title = inlineCmdPodinternals 6 FIX ME
-		CrewCapacity = 6
-		mass = 6
-		MODEL
-		{
-			model = VenStockRevamp/Squad/Parts/Command/CommandPods/1-2
-		}
-		MODULE
-		{
-			name = ModuleCommand
-			minimumCrew = 1
-		}
-		INTERNAL
-		{
-			name = inlineCmdPodinternals
-		}
-		MODULE
-		{
-			name = ExtendedPartInfo
-		}
-		MODULE
-		{
-			name = CollisionFX
-			scrapeSparks = true
-			collisionSound = CollisionFX/Sounds/Bang1
-			scrapeSound = CollisionFX/Sounds/GroundSkid
-			sparkSound = CollisionFX/Sounds/SparkSqueal
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Scrap Part
-			ResourceName = Recyclables
-			Efficiency = .8
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Salvage Part
-			ResourceName = SpecializedParts
-			Efficiency = .4
-		}
-		MODULE
-		{
-			name = MechJebCore
-			blacklist = MechJebModuleAscentAutopilot MechJebModuleAscentGuidance MechJebModuleAscentPathEditor MechJebModuleAttitudeAdjustment MechJebModuleDockingAutopilot MechJebModuleDockingGuidance MechJebModuleLandingAutopilot MechJebModuleLandingGuidance MechJebModuleLandingPredictions MechJebModuleNodeEditor MechJebModuleRendezvousAutopilot MechJebModuleRendezvousAutopilotWindow MechJebModuleRoverController MechJebModuleRoverWindow MechJebModuleSpaceplaneAutopilot MechJebModuleSpaceplaneGuidance MechJebModuleTranslatron MechJebModuleWarpHelper
-			RESOURCE
-			{
-				name = ElectricCharge
-				rate = 0.03
-			}
-		}
-		INTERNAL
-		{
-			name = Placeholder
-		}
-	}
-}
-UrlConfig
-{
-	name = internals_mk3-9podinternals
-	type = PART
-	parentUrl = Felbourn/Internals/internals
-	url = Felbourn/Internals/internals/internals_mk3-9podinternals
-	PART
-	{
-		name = internals_mk3-9podinternals
-		module = Part
-		category = Pods
-		subcategory = 0
-		vesselType = Ship
-		author = Felbourn
-		manufacturer = Felbourn Industries
-		description = test internals view
-		scale = 1
-		rescaleFactor = 1
-		node_stack_bottom = 0.0, -0.47924, 0.0, 0.0, -1.0, 0.0, 2
-		node_stack_top = 0.0, 1.19319, 0.0, 0.0, 1.0, 0.0, 1
-		attachRules = 1,0,1,1,0
-		CoPOffset = 0.0, 0.6, 0.0
-		CoLOffset = 0.0, -0.45, 0.0
-		TechRequired = commandModules
-		entryCost = 7600
-		cost = 3800
-		bulkheadProfiles = size2, size1
-		dragModelType = default
-		maximum_drag = 0.20
-		minimum_drag = 0.15
-		angularDrag = 2
-		crashTolerance = 45
-		maxTemp = 2400
-		title = mk3-9podinternals 6 FIX ME
-		CrewCapacity = 2
-		mass = 2
-		MODEL
-		{
-			model = VenStockRevamp/Squad/Parts/Command/CommandPods/1-2
-		}
-		MODULE
-		{
-			name = ModuleCommand
-			minimumCrew = 1
-		}
-		INTERNAL
-		{
-			name = mk3-9podinternals
-		}
-		MODULE
-		{
-			name = ExtendedPartInfo
-		}
-		MODULE
-		{
-			name = CollisionFX
-			scrapeSparks = true
-			collisionSound = CollisionFX/Sounds/Bang1
-			scrapeSound = CollisionFX/Sounds/GroundSkid
-			sparkSound = CollisionFX/Sounds/SparkSqueal
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Scrap Part
-			ResourceName = Recyclables
-			Efficiency = .8
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Salvage Part
-			ResourceName = SpecializedParts
-			Efficiency = .4
-		}
-		MODULE
-		{
-			name = MechJebCore
-			blacklist = MechJebModuleAscentAutopilot MechJebModuleAscentGuidance MechJebModuleAscentPathEditor MechJebModuleAttitudeAdjustment MechJebModuleDockingAutopilot MechJebModuleDockingGuidance MechJebModuleLandingAutopilot MechJebModuleLandingGuidance MechJebModuleLandingPredictions MechJebModuleNodeEditor MechJebModuleRendezvousAutopilot MechJebModuleRendezvousAutopilotWindow MechJebModuleRoverController MechJebModuleRoverWindow MechJebModuleSpaceplaneAutopilot MechJebModuleSpaceplaneGuidance MechJebModuleTranslatron MechJebModuleWarpHelper
-			RESOURCE
-			{
-				name = ElectricCharge
-				rate = 0.03
-			}
-		}
-		INTERNAL
-		{
-			name = Placeholder
-		}
-	}
-}
-UrlConfig
-{
-	name = internals_crewUtilityPodInternals
-	type = PART
-	parentUrl = Felbourn/Internals/internals
-	url = Felbourn/Internals/internals/internals_crewUtilityPodInternals
-	PART
-	{
-		name = internals_crewUtilityPodInternals
-		module = Part
-		category = Pods
-		subcategory = 0
-		vesselType = Ship
-		author = Felbourn
-		manufacturer = Felbourn Industries
-		description = test internals view
-		scale = 1
-		rescaleFactor = 1
-		node_stack_bottom = 0.0, -0.47924, 0.0, 0.0, -1.0, 0.0, 2
-		node_stack_top = 0.0, 1.19319, 0.0, 0.0, 1.0, 0.0, 1
-		attachRules = 1,0,1,1,0
-		CoPOffset = 0.0, 0.6, 0.0
-		CoLOffset = 0.0, -0.45, 0.0
-		TechRequired = commandModules
-		entryCost = 7600
-		cost = 3800
-		bulkheadProfiles = size2, size1
-		dragModelType = default
-		maximum_drag = 0.20
-		minimum_drag = 0.15
-		angularDrag = 2
-		crashTolerance = 45
-		maxTemp = 2400
-		title = crewUtilityPodInternals 2 FIX ME
-		CrewCapacity = 2
-		mass = 2
-		MODEL
-		{
-			model = VenStockRevamp/Squad/Parts/Command/CommandPods/1-2
-		}
-		MODULE
-		{
-			name = ModuleCommand
-			minimumCrew = 1
-		}
-		INTERNAL
-		{
-			name = crewUtilityPodInternals 2
-		}
-		MODULE
-		{
-			name = ExtendedPartInfo
-		}
-		MODULE
-		{
-			name = CollisionFX
-			scrapeSparks = true
-			collisionSound = CollisionFX/Sounds/Bang1
-			scrapeSound = CollisionFX/Sounds/GroundSkid
-			sparkSound = CollisionFX/Sounds/SparkSqueal
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Scrap Part
-			ResourceName = Recyclables
-			Efficiency = .8
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Salvage Part
-			ResourceName = SpecializedParts
-			Efficiency = .4
-		}
-		MODULE
-		{
-			name = MechJebCore
-			blacklist = MechJebModuleAscentAutopilot MechJebModuleAscentGuidance MechJebModuleAscentPathEditor MechJebModuleAttitudeAdjustment MechJebModuleDockingAutopilot MechJebModuleDockingGuidance MechJebModuleLandingAutopilot MechJebModuleLandingGuidance MechJebModuleLandingPredictions MechJebModuleNodeEditor MechJebModuleRendezvousAutopilot MechJebModuleRendezvousAutopilotWindow MechJebModuleRoverController MechJebModuleRoverWindow MechJebModuleSpaceplaneAutopilot MechJebModuleSpaceplaneGuidance MechJebModuleTranslatron MechJebModuleWarpHelper
-			RESOURCE
-			{
-				name = ElectricCharge
-				rate = 0.03
-			}
-		}
-		INTERNAL
-		{
-			name = Placeholder
-		}
-	}
-}
-UrlConfig
-{
-	name = internals_cupolaInternal
-	type = PART
-	parentUrl = Felbourn/Internals/internals
-	url = Felbourn/Internals/internals/internals_cupolaInternal
-	PART
-	{
-		name = internals_cupolaInternal
-		module = Part
-		category = Pods
-		subcategory = 0
-		vesselType = Ship
-		author = Felbourn
-		manufacturer = Felbourn Industries
-		description = test internals view
-		scale = 1
-		rescaleFactor = 1
-		node_stack_bottom = 0.0, -0.47924, 0.0, 0.0, -1.0, 0.0, 2
-		node_stack_top = 0.0, 1.19319, 0.0, 0.0, 1.0, 0.0, 1
-		attachRules = 1,0,1,1,0
-		CoPOffset = 0.0, 0.6, 0.0
-		CoLOffset = 0.0, -0.45, 0.0
-		TechRequired = commandModules
-		entryCost = 7600
-		cost = 3800
-		bulkheadProfiles = size2, size1
-		dragModelType = default
-		maximum_drag = 0.20
-		minimum_drag = 0.15
-		angularDrag = 2
-		crashTolerance = 45
-		maxTemp = 2400
-		title = cupolaInternal 1 FIX ME
-		CrewCapacity = 1
-		mass = 1
-		MODEL
-		{
-			model = VenStockRevamp/Squad/Parts/Command/CommandPods/1-2
-		}
-		MODULE
-		{
-			name = ModuleCommand
-			minimumCrew = 1
-		}
-		INTERNAL
-		{
-			name = cupolaInternal
-		}
-		MODULE
-		{
-			name = ExtendedPartInfo
-		}
-		MODULE
-		{
-			name = CollisionFX
-			scrapeSparks = true
-			collisionSound = CollisionFX/Sounds/Bang1
-			scrapeSound = CollisionFX/Sounds/GroundSkid
-			sparkSound = CollisionFX/Sounds/SparkSqueal
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Scrap Part
-			ResourceName = Recyclables
-			Efficiency = .8
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Salvage Part
-			ResourceName = SpecializedParts
-			Efficiency = .4
-		}
-		MODULE
-		{
-			name = MechJebCore
-			blacklist = MechJebModuleAscentAutopilot MechJebModuleAscentGuidance MechJebModuleAscentPathEditor MechJebModuleAttitudeAdjustment MechJebModuleDockingAutopilot MechJebModuleDockingGuidance MechJebModuleLandingAutopilot MechJebModuleLandingGuidance MechJebModuleLandingPredictions MechJebModuleNodeEditor MechJebModuleRendezvousAutopilot MechJebModuleRendezvousAutopilotWindow MechJebModuleRoverController MechJebModuleRoverWindow MechJebModuleSpaceplaneAutopilot MechJebModuleSpaceplaneGuidance MechJebModuleTranslatron MechJebModuleWarpHelper
-			RESOURCE
-			{
-				name = ElectricCharge
-				rate = 0.03
-			}
-		}
-		INTERNAL
-		{
-			name = Placeholder
-		}
-	}
-}
-UrlConfig
-{
-	name = internals_crewCabinInternals
-	type = PART
-	parentUrl = Felbourn/Internals/internals
-	url = Felbourn/Internals/internals/internals_crewCabinInternals
-	PART
-	{
-		name = internals_crewCabinInternals
-		module = Part
-		category = Pods
-		subcategory = 0
-		vesselType = Ship
-		author = Felbourn
-		manufacturer = Felbourn Industries
-		description = test internals view
-		scale = 1
-		rescaleFactor = 1
-		node_stack_bottom = 0.0, -0.47924, 0.0, 0.0, -1.0, 0.0, 2
-		node_stack_top = 0.0, 1.19319, 0.0, 0.0, 1.0, 0.0, 1
-		attachRules = 1,0,1,1,0
-		CoPOffset = 0.0, 0.6, 0.0
-		CoLOffset = 0.0, -0.45, 0.0
-		TechRequired = commandModules
-		entryCost = 7600
-		cost = 3800
-		bulkheadProfiles = size2, size1
-		dragModelType = default
-		maximum_drag = 0.20
-		minimum_drag = 0.15
-		angularDrag = 2
-		crashTolerance = 45
-		maxTemp = 2400
-		title = crewCabinInternals 4 FIX ME
-		CrewCapacity = 4
-		mass = 4
-		MODEL
-		{
-			model = VenStockRevamp/Squad/Parts/Command/CommandPods/1-2
-		}
-		MODULE
-		{
-			name = ModuleCommand
-			minimumCrew = 1
-		}
-		INTERNAL
-		{
-			name = crewCabinInternals
-		}
-		MODULE
-		{
-			name = ExtendedPartInfo
-		}
-		MODULE
-		{
-			name = CollisionFX
-			scrapeSparks = true
-			collisionSound = CollisionFX/Sounds/Bang1
-			scrapeSound = CollisionFX/Sounds/GroundSkid
-			sparkSound = CollisionFX/Sounds/SparkSqueal
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Scrap Part
-			ResourceName = Recyclables
-			Efficiency = .8
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Salvage Part
-			ResourceName = SpecializedParts
-			Efficiency = .4
-		}
-		MODULE
-		{
-			name = MechJebCore
-			blacklist = MechJebModuleAscentAutopilot MechJebModuleAscentGuidance MechJebModuleAscentPathEditor MechJebModuleAttitudeAdjustment MechJebModuleDockingAutopilot MechJebModuleDockingGuidance MechJebModuleLandingAutopilot MechJebModuleLandingGuidance MechJebModuleLandingPredictions MechJebModuleNodeEditor MechJebModuleRendezvousAutopilot MechJebModuleRendezvousAutopilotWindow MechJebModuleRoverController MechJebModuleRoverWindow MechJebModuleSpaceplaneAutopilot MechJebModuleSpaceplaneGuidance MechJebModuleTranslatron MechJebModuleWarpHelper
-			RESOURCE
-			{
-				name = ElectricCharge
-				rate = 0.03
-			}
-		}
-		INTERNAL
-		{
-			name = Placeholder
-		}
-	}
-}
-UrlConfig
-{
-	name = internals_PodCockpit
-	type = PART
-	parentUrl = Felbourn/Internals/internals
-	url = Felbourn/Internals/internals/internals_PodCockpit
-	PART
-	{
-		name = internals_PodCockpit
-		module = Part
-		category = Pods
-		subcategory = 0
-		vesselType = Ship
-		author = Felbourn
-		manufacturer = Felbourn Industries
-		description = test internals view
-		scale = 1
-		rescaleFactor = 1
-		node_stack_bottom = 0.0, -0.47924, 0.0, 0.0, -1.0, 0.0, 2
-		node_stack_top = 0.0, 1.19319, 0.0, 0.0, 1.0, 0.0, 1
-		attachRules = 1,0,1,1,0
-		CoPOffset = 0.0, 0.6, 0.0
-		CoLOffset = 0.0, -0.45, 0.0
-		TechRequired = commandModules
-		entryCost = 7600
-		cost = 3800
-		bulkheadProfiles = size2, size1
-		dragModelType = default
-		maximum_drag = 0.20
-		minimum_drag = 0.15
-		angularDrag = 2
-		crashTolerance = 45
-		maxTemp = 2400
-		title = PodCockpit 3 FIX ME
-		CrewCapacity = 3
-		mass = 3
-		MODEL
-		{
-			model = VenStockRevamp/Squad/Parts/Command/CommandPods/1-2
-		}
-		MODULE
-		{
-			name = ModuleCommand
-			minimumCrew = 1
-		}
-		INTERNAL
-		{
-			name = PodCockpit
-		}
-		MODULE
-		{
-			name = ExtendedPartInfo
-		}
-		MODULE
-		{
-			name = CollisionFX
-			scrapeSparks = true
-			collisionSound = CollisionFX/Sounds/Bang1
-			scrapeSound = CollisionFX/Sounds/GroundSkid
-			sparkSound = CollisionFX/Sounds/SparkSqueal
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Scrap Part
-			ResourceName = Recyclables
-			Efficiency = .8
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Salvage Part
-			ResourceName = SpecializedParts
-			Efficiency = .4
-		}
-		MODULE
-		{
-			name = MechJebCore
-			blacklist = MechJebModuleAscentAutopilot MechJebModuleAscentGuidance MechJebModuleAscentPathEditor MechJebModuleAttitudeAdjustment MechJebModuleDockingAutopilot MechJebModuleDockingGuidance MechJebModuleLandingAutopilot MechJebModuleLandingGuidance MechJebModuleLandingPredictions MechJebModuleNodeEditor MechJebModuleRendezvousAutopilot MechJebModuleRendezvousAutopilotWindow MechJebModuleRoverController MechJebModuleRoverWindow MechJebModuleSpaceplaneAutopilot MechJebModuleSpaceplaneGuidance MechJebModuleTranslatron MechJebModuleWarpHelper
-			RESOURCE
-			{
-				name = ElectricCharge
-				rate = 0.03
-			}
-		}
-		INTERNAL
-		{
-			name = Placeholder
-		}
-	}
-}
-UrlConfig
-{
-	name = internals_mk1CockpitInternal
-	type = PART
-	parentUrl = Felbourn/Internals/internals
-	url = Felbourn/Internals/internals/internals_mk1CockpitInternal
-	PART
-	{
-		name = internals_mk1CockpitInternal
-		module = Part
-		category = Pods
-		subcategory = 0
-		vesselType = Ship
-		author = Felbourn
-		manufacturer = Felbourn Industries
-		description = test internals view
-		scale = 1
-		rescaleFactor = 1
-		node_stack_bottom = 0.0, -0.47924, 0.0, 0.0, -1.0, 0.0, 2
-		node_stack_top = 0.0, 1.19319, 0.0, 0.0, 1.0, 0.0, 1
-		attachRules = 1,0,1,1,0
-		CoPOffset = 0.0, 0.6, 0.0
-		CoLOffset = 0.0, -0.45, 0.0
-		TechRequired = commandModules
-		entryCost = 7600
-		cost = 3800
-		bulkheadProfiles = size2, size1
-		dragModelType = default
-		maximum_drag = 0.20
-		minimum_drag = 0.15
-		angularDrag = 2
-		crashTolerance = 45
-		maxTemp = 2400
-		title = mk1CockpitInternal 1 FIX ME
-		CrewCapacity = 1
-		mass = 1
-		MODEL
-		{
-			model = VenStockRevamp/Squad/Parts/Command/CommandPods/1-2
-		}
-		MODULE
-		{
-			name = ModuleCommand
-			minimumCrew = 1
-		}
-		INTERNAL
-		{
-			name = mk1CockpitInternal
-		}
-		MODULE
-		{
-			name = ExtendedPartInfo
-		}
-		MODULE
-		{
-			name = CollisionFX
-			scrapeSparks = true
-			collisionSound = CollisionFX/Sounds/Bang1
-			scrapeSound = CollisionFX/Sounds/GroundSkid
-			sparkSound = CollisionFX/Sounds/SparkSqueal
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Scrap Part
-			ResourceName = Recyclables
-			Efficiency = .8
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Salvage Part
-			ResourceName = SpecializedParts
-			Efficiency = .4
-		}
-		MODULE
-		{
-			name = MechJebCore
-			blacklist = MechJebModuleAscentAutopilot MechJebModuleAscentGuidance MechJebModuleAscentPathEditor MechJebModuleAttitudeAdjustment MechJebModuleDockingAutopilot MechJebModuleDockingGuidance MechJebModuleLandingAutopilot MechJebModuleLandingGuidance MechJebModuleLandingPredictions MechJebModuleNodeEditor MechJebModuleRendezvousAutopilot MechJebModuleRendezvousAutopilotWindow MechJebModuleRoverController MechJebModuleRoverWindow MechJebModuleSpaceplaneAutopilot MechJebModuleSpaceplaneGuidance MechJebModuleTranslatron MechJebModuleWarpHelper
-			RESOURCE
-			{
-				name = ElectricCharge
-				rate = 0.03
-			}
-		}
-		INTERNAL
-		{
-			name = Placeholder
-		}
-	}
-}
-UrlConfig
-{
-	name = internals_MK1_Inline_Int
-	type = PART
-	parentUrl = Felbourn/Internals/internals
-	url = Felbourn/Internals/internals/internals_MK1_Inline_Int
-	PART
-	{
-		name = internals_MK1_Inline_Int
-		module = Part
-		category = Pods
-		subcategory = 0
-		vesselType = Ship
-		author = Felbourn
-		manufacturer = Felbourn Industries
-		description = test internals view
-		scale = 1
-		rescaleFactor = 1
-		node_stack_bottom = 0.0, -0.47924, 0.0, 0.0, -1.0, 0.0, 2
-		node_stack_top = 0.0, 1.19319, 0.0, 0.0, 1.0, 0.0, 1
-		attachRules = 1,0,1,1,0
-		CoPOffset = 0.0, 0.6, 0.0
-		CoLOffset = 0.0, -0.45, 0.0
-		TechRequired = commandModules
-		entryCost = 7600
-		cost = 3800
-		bulkheadProfiles = size2, size1
-		dragModelType = default
-		maximum_drag = 0.20
-		minimum_drag = 0.15
-		angularDrag = 2
-		crashTolerance = 45
-		maxTemp = 2400
-		title = MK1_Inline_Int 1 FIX ME
-		CrewCapacity = 1
-		mass = 1
-		MODEL
-		{
-			model = VenStockRevamp/Squad/Parts/Command/CommandPods/1-2
-		}
-		MODULE
-		{
-			name = ModuleCommand
-			minimumCrew = 1
-		}
-		INTERNAL
-		{
-			name = MK1_Inline_Int
-		}
-		MODULE
-		{
-			name = ExtendedPartInfo
-		}
-		MODULE
-		{
-			name = CollisionFX
-			scrapeSparks = true
-			collisionSound = CollisionFX/Sounds/Bang1
-			scrapeSound = CollisionFX/Sounds/GroundSkid
-			sparkSound = CollisionFX/Sounds/SparkSqueal
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Scrap Part
-			ResourceName = Recyclables
-			Efficiency = .8
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Salvage Part
-			ResourceName = SpecializedParts
-			Efficiency = .4
-		}
-		MODULE
-		{
-			name = MechJebCore
-			blacklist = MechJebModuleAscentAutopilot MechJebModuleAscentGuidance MechJebModuleAscentPathEditor MechJebModuleAttitudeAdjustment MechJebModuleDockingAutopilot MechJebModuleDockingGuidance MechJebModuleLandingAutopilot MechJebModuleLandingGuidance MechJebModuleLandingPredictions MechJebModuleNodeEditor MechJebModuleRendezvousAutopilot MechJebModuleRendezvousAutopilotWindow MechJebModuleRoverController MechJebModuleRoverWindow MechJebModuleSpaceplaneAutopilot MechJebModuleSpaceplaneGuidance MechJebModuleTranslatron MechJebModuleWarpHelper
-			RESOURCE
-			{
-				name = ElectricCharge
-				rate = 0.03
-			}
-		}
-		INTERNAL
-		{
-			name = Placeholder
-		}
-	}
-}
-UrlConfig
-{
-	name = internals_landerCabinSmallInternal
-	type = PART
-	parentUrl = Felbourn/Internals/internals
-	url = Felbourn/Internals/internals/internals_landerCabinSmallInternal
-	PART
-	{
-		name = internals_landerCabinSmallInternal
-		module = Part
-		category = Pods
-		subcategory = 0
-		vesselType = Ship
-		author = Felbourn
-		manufacturer = Felbourn Industries
-		description = test internals view
-		scale = 1
-		rescaleFactor = 1
-		node_stack_bottom = 0.0, -0.47924, 0.0, 0.0, -1.0, 0.0, 2
-		node_stack_top = 0.0, 1.19319, 0.0, 0.0, 1.0, 0.0, 1
-		attachRules = 1,0,1,1,0
-		CoPOffset = 0.0, 0.6, 0.0
-		CoLOffset = 0.0, -0.45, 0.0
-		TechRequired = commandModules
-		entryCost = 7600
-		cost = 3800
-		bulkheadProfiles = size2, size1
-		dragModelType = default
-		maximum_drag = 0.20
-		minimum_drag = 0.15
-		angularDrag = 2
-		crashTolerance = 45
-		maxTemp = 2400
-		title = landerCabinSmallInternal 1 FIX ME
-		CrewCapacity = 1
-		mass = 1
-		MODEL
-		{
-			model = VenStockRevamp/Squad/Parts/Command/CommandPods/1-2
-		}
-		MODULE
-		{
-			name = ModuleCommand
-			minimumCrew = 1
-		}
-		INTERNAL
-		{
-			name = landerCabinSmallInternal
-		}
-		MODULE
-		{
-			name = ExtendedPartInfo
-		}
-		MODULE
-		{
-			name = CollisionFX
-			scrapeSparks = true
-			collisionSound = CollisionFX/Sounds/Bang1
-			scrapeSound = CollisionFX/Sounds/GroundSkid
-			sparkSound = CollisionFX/Sounds/SparkSqueal
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Scrap Part
-			ResourceName = Recyclables
-			Efficiency = .8
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Salvage Part
-			ResourceName = SpecializedParts
-			Efficiency = .4
-		}
-		MODULE
-		{
-			name = MechJebCore
-			blacklist = MechJebModuleAscentAutopilot MechJebModuleAscentGuidance MechJebModuleAscentPathEditor MechJebModuleAttitudeAdjustment MechJebModuleDockingAutopilot MechJebModuleDockingGuidance MechJebModuleLandingAutopilot MechJebModuleLandingGuidance MechJebModuleLandingPredictions MechJebModuleNodeEditor MechJebModuleRendezvousAutopilot MechJebModuleRendezvousAutopilotWindow MechJebModuleRoverController MechJebModuleRoverWindow MechJebModuleSpaceplaneAutopilot MechJebModuleSpaceplaneGuidance MechJebModuleTranslatron MechJebModuleWarpHelper
-			RESOURCE
-			{
-				name = ElectricCharge
-				rate = 0.03
-			}
-		}
-		INTERNAL
-		{
-			name = Placeholder
-		}
-	}
-}
-UrlConfig
-{
-	name = internals_mk1PodCockpit
-	type = PART
-	parentUrl = Felbourn/Internals/internals
-	url = Felbourn/Internals/internals/internals_mk1PodCockpit
-	PART
-	{
-		name = internals_mk1PodCockpit
-		module = Part
-		category = Pods
-		subcategory = 0
-		vesselType = Ship
-		author = Felbourn
-		manufacturer = Felbourn Industries
-		description = test internals view
-		scale = 1
-		rescaleFactor = 1
-		node_stack_bottom = 0.0, -0.47924, 0.0, 0.0, -1.0, 0.0, 2
-		node_stack_top = 0.0, 1.19319, 0.0, 0.0, 1.0, 0.0, 1
-		attachRules = 1,0,1,1,0
-		CoPOffset = 0.0, 0.6, 0.0
-		CoLOffset = 0.0, -0.45, 0.0
-		TechRequired = commandModules
-		entryCost = 7600
-		cost = 3800
-		bulkheadProfiles = size2, size1
-		dragModelType = default
-		maximum_drag = 0.20
-		minimum_drag = 0.15
-		angularDrag = 2
-		crashTolerance = 45
-		maxTemp = 2400
-		title = mk1PodCockpit 1 FIX ME
-		CrewCapacity = 1
-		mass = 1
-		MODEL
-		{
-			model = VenStockRevamp/Squad/Parts/Command/CommandPods/1-2
-		}
-		MODULE
-		{
-			name = ModuleCommand
-			minimumCrew = 1
-		}
-		INTERNAL
-		{
-			name = mk1PodCockpit
-		}
-		MODULE
-		{
-			name = ExtendedPartInfo
-		}
-		MODULE
-		{
-			name = CollisionFX
-			scrapeSparks = true
-			collisionSound = CollisionFX/Sounds/Bang1
-			scrapeSound = CollisionFX/Sounds/GroundSkid
-			sparkSound = CollisionFX/Sounds/SparkSqueal
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Scrap Part
-			ResourceName = Recyclables
-			Efficiency = .8
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Salvage Part
-			ResourceName = SpecializedParts
-			Efficiency = .4
-		}
-		MODULE
-		{
-			name = MechJebCore
-			blacklist = MechJebModuleAscentAutopilot MechJebModuleAscentGuidance MechJebModuleAscentPathEditor MechJebModuleAttitudeAdjustment MechJebModuleDockingAutopilot MechJebModuleDockingGuidance MechJebModuleLandingAutopilot MechJebModuleLandingGuidance MechJebModuleLandingPredictions MechJebModuleNodeEditor MechJebModuleRendezvousAutopilot MechJebModuleRendezvousAutopilotWindow MechJebModuleRoverController MechJebModuleRoverWindow MechJebModuleSpaceplaneAutopilot MechJebModuleSpaceplaneGuidance MechJebModuleTranslatron MechJebModuleWarpHelper
-			RESOURCE
-			{
-				name = ElectricCharge
-				rate = 0.03
-			}
-		}
-		INTERNAL
-		{
-			name = Placeholder
-		}
-	}
-}
-UrlConfig
-{
-	name = internals_mk2CockpitStandardInternals
-	type = PART
-	parentUrl = Felbourn/Internals/internals
-	url = Felbourn/Internals/internals/internals_mk2CockpitStandardInternals
-	PART
-	{
-		name = internals_mk2CockpitStandardInternals
-		module = Part
-		category = Pods
-		subcategory = 0
-		vesselType = Ship
-		author = Felbourn
-		manufacturer = Felbourn Industries
-		description = test internals view
-		scale = 1
-		rescaleFactor = 1
-		node_stack_bottom = 0.0, -0.47924, 0.0, 0.0, -1.0, 0.0, 2
-		node_stack_top = 0.0, 1.19319, 0.0, 0.0, 1.0, 0.0, 1
-		attachRules = 1,0,1,1,0
-		CoPOffset = 0.0, 0.6, 0.0
-		CoLOffset = 0.0, -0.45, 0.0
-		TechRequired = commandModules
-		entryCost = 7600
-		cost = 3800
-		bulkheadProfiles = size2, size1
-		dragModelType = default
-		maximum_drag = 0.20
-		minimum_drag = 0.15
-		angularDrag = 2
-		crashTolerance = 45
-		maxTemp = 2400
-		title = mk2CockpitStandardInternals 2 FIX ME
-		CrewCapacity = 2
-		mass = 2
-		MODEL
-		{
-			model = VenStockRevamp/Squad/Parts/Command/CommandPods/1-2
-		}
-		MODULE
-		{
-			name = ModuleCommand
-			minimumCrew = 1
-		}
-		INTERNAL
-		{
-			name = mk2CockpitStandardInternals
-		}
-		MODULE
-		{
-			name = ExtendedPartInfo
-		}
-		MODULE
-		{
-			name = CollisionFX
-			scrapeSparks = true
-			collisionSound = CollisionFX/Sounds/Bang1
-			scrapeSound = CollisionFX/Sounds/GroundSkid
-			sparkSound = CollisionFX/Sounds/SparkSqueal
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Scrap Part
-			ResourceName = Recyclables
-			Efficiency = .8
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Salvage Part
-			ResourceName = SpecializedParts
-			Efficiency = .4
-		}
-		MODULE
-		{
-			name = MechJebCore
-			blacklist = MechJebModuleAscentAutopilot MechJebModuleAscentGuidance MechJebModuleAscentPathEditor MechJebModuleAttitudeAdjustment MechJebModuleDockingAutopilot MechJebModuleDockingGuidance MechJebModuleLandingAutopilot MechJebModuleLandingGuidance MechJebModuleLandingPredictions MechJebModuleNodeEditor MechJebModuleRendezvousAutopilot MechJebModuleRendezvousAutopilotWindow MechJebModuleRoverController MechJebModuleRoverWindow MechJebModuleSpaceplaneAutopilot MechJebModuleSpaceplaneGuidance MechJebModuleTranslatron MechJebModuleWarpHelper
-			RESOURCE
-			{
-				name = ElectricCharge
-				rate = 0.03
-			}
-		}
-		INTERNAL
-		{
-			name = Placeholder
-		}
-	}
-}
-UrlConfig
-{
-	name = internals_landerCabinInternals
-	type = PART
-	parentUrl = Felbourn/Internals/internals
-	url = Felbourn/Internals/internals/internals_landerCabinInternals
-	PART
-	{
-		name = internals_landerCabinInternals
-		module = Part
-		category = Pods
-		subcategory = 0
-		vesselType = Ship
-		author = Felbourn
-		manufacturer = Felbourn Industries
-		description = test internals view
-		scale = 1
-		rescaleFactor = 1
-		node_stack_bottom = 0.0, -0.47924, 0.0, 0.0, -1.0, 0.0, 2
-		node_stack_top = 0.0, 1.19319, 0.0, 0.0, 1.0, 0.0, 1
-		attachRules = 1,0,1,1,0
-		CoPOffset = 0.0, 0.6, 0.0
-		CoLOffset = 0.0, -0.45, 0.0
-		TechRequired = commandModules
-		entryCost = 7600
-		cost = 3800
-		bulkheadProfiles = size2, size1
-		dragModelType = default
-		maximum_drag = 0.20
-		minimum_drag = 0.15
-		angularDrag = 2
-		crashTolerance = 45
-		maxTemp = 2400
-		title = landerCabinInternals 2 FIX ME
-		CrewCapacity = 2
-		mass = 2
-		MODEL
-		{
-			model = VenStockRevamp/Squad/Parts/Command/CommandPods/1-2
-		}
-		MODULE
-		{
-			name = ModuleCommand
-			minimumCrew = 1
-		}
-		INTERNAL
-		{
-			name = landerCabinInternals
-		}
-		MODULE
-		{
-			name = ExtendedPartInfo
-		}
-		MODULE
-		{
-			name = CollisionFX
-			scrapeSparks = true
-			collisionSound = CollisionFX/Sounds/Bang1
-			scrapeSound = CollisionFX/Sounds/GroundSkid
-			sparkSound = CollisionFX/Sounds/SparkSqueal
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Scrap Part
-			ResourceName = Recyclables
-			Efficiency = .8
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Salvage Part
-			ResourceName = SpecializedParts
-			Efficiency = .4
-		}
-		MODULE
-		{
-			name = MechJebCore
-			blacklist = MechJebModuleAscentAutopilot MechJebModuleAscentGuidance MechJebModuleAscentPathEditor MechJebModuleAttitudeAdjustment MechJebModuleDockingAutopilot MechJebModuleDockingGuidance MechJebModuleLandingAutopilot MechJebModuleLandingGuidance MechJebModuleLandingPredictions MechJebModuleNodeEditor MechJebModuleRendezvousAutopilot MechJebModuleRendezvousAutopilotWindow MechJebModuleRoverController MechJebModuleRoverWindow MechJebModuleSpaceplaneAutopilot MechJebModuleSpaceplaneGuidance MechJebModuleTranslatron MechJebModuleWarpHelper
-			RESOURCE
-			{
-				name = ElectricCharge
-				rate = 0.03
-			}
-		}
-		INTERNAL
-		{
-			name = Placeholder
-		}
-	}
-}
-UrlConfig
-{
-	name = internals_MK3_Cockpit_Int
-	type = PART
-	parentUrl = Felbourn/Internals/internals
-	url = Felbourn/Internals/internals/internals_MK3_Cockpit_Int
-	PART
-	{
-		name = internals_MK3_Cockpit_Int
-		module = Part
-		category = Pods
-		subcategory = 0
-		vesselType = Ship
-		author = Felbourn
-		manufacturer = Felbourn Industries
-		description = test internals view
-		scale = 1
-		rescaleFactor = 1
-		node_stack_bottom = 0.0, -0.47924, 0.0, 0.0, -1.0, 0.0, 2
-		node_stack_top = 0.0, 1.19319, 0.0, 0.0, 1.0, 0.0, 1
-		attachRules = 1,0,1,1,0
-		CoPOffset = 0.0, 0.6, 0.0
-		CoLOffset = 0.0, -0.45, 0.0
-		TechRequired = commandModules
-		entryCost = 7600
-		cost = 3800
-		bulkheadProfiles = size2, size1
-		dragModelType = default
-		maximum_drag = 0.20
-		minimum_drag = 0.15
-		angularDrag = 2
-		crashTolerance = 45
-		maxTemp = 2400
-		title = MK3_Cockpit_Int 6 FIX ME
-		CrewCapacity = 6
-		mass = 6
-		MODEL
-		{
-			model = VenStockRevamp/Squad/Parts/Command/CommandPods/1-2
-		}
-		MODULE
-		{
-			name = ModuleCommand
-			minimumCrew = 1
-		}
-		INTERNAL
-		{
-			name = MK3_Cockpit_Int
-		}
-		MODULE
-		{
-			name = ExtendedPartInfo
-		}
-		MODULE
-		{
-			name = CollisionFX
-			scrapeSparks = true
-			collisionSound = CollisionFX/Sounds/Bang1
-			scrapeSound = CollisionFX/Sounds/GroundSkid
-			sparkSound = CollisionFX/Sounds/SparkSqueal
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Scrap Part
-			ResourceName = Recyclables
-			Efficiency = .8
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Salvage Part
-			ResourceName = SpecializedParts
-			Efficiency = .4
-		}
-		MODULE
-		{
-			name = MechJebCore
-			blacklist = MechJebModuleAscentAutopilot MechJebModuleAscentGuidance MechJebModuleAscentPathEditor MechJebModuleAttitudeAdjustment MechJebModuleDockingAutopilot MechJebModuleDockingGuidance MechJebModuleLandingAutopilot MechJebModuleLandingGuidance MechJebModuleLandingPredictions MechJebModuleNodeEditor MechJebModuleRendezvousAutopilot MechJebModuleRendezvousAutopilotWindow MechJebModuleRoverController MechJebModuleRoverWindow MechJebModuleSpaceplaneAutopilot MechJebModuleSpaceplaneGuidance MechJebModuleTranslatron MechJebModuleWarpHelper
-			RESOURCE
-			{
-				name = ElectricCharge
-				rate = 0.03
-			}
-		}
-		INTERNAL
-		{
-			name = Placeholder
-		}
-	}
-}
-UrlConfig
-{
-	name = internals_MK2_CrewCab_Int
-	type = PART
-	parentUrl = Felbourn/Internals/internals
-	url = Felbourn/Internals/internals/internals_MK2_CrewCab_Int
-	PART
-	{
-		name = internals_MK2_CrewCab_Int
-		module = Part
-		category = Pods
-		subcategory = 0
-		vesselType = Ship
-		author = Felbourn
-		manufacturer = Felbourn Industries
-		description = test internals view
-		scale = 1
-		rescaleFactor = 1
-		node_stack_bottom = 0.0, -0.47924, 0.0, 0.0, -1.0, 0.0, 2
-		node_stack_top = 0.0, 1.19319, 0.0, 0.0, 1.0, 0.0, 1
-		attachRules = 1,0,1,1,0
-		CoPOffset = 0.0, 0.6, 0.0
-		CoLOffset = 0.0, -0.45, 0.0
-		TechRequired = commandModules
-		entryCost = 7600
-		cost = 3800
-		bulkheadProfiles = size2, size1
-		dragModelType = default
-		maximum_drag = 0.20
-		minimum_drag = 0.15
-		angularDrag = 2
-		crashTolerance = 45
-		maxTemp = 2400
-		title = MK2_CrewCab_Int 4 FIX ME
-		CrewCapacity = 4
-		mass = 4
-		MODEL
-		{
-			model = VenStockRevamp/Squad/Parts/Command/CommandPods/1-2
-		}
-		MODULE
-		{
-			name = ModuleCommand
-			minimumCrew = 1
-		}
-		INTERNAL
-		{
-			name = MK2_CrewCab_Int
-		}
-		MODULE
-		{
-			name = ExtendedPartInfo
-		}
-		MODULE
-		{
-			name = CollisionFX
-			scrapeSparks = true
-			collisionSound = CollisionFX/Sounds/Bang1
-			scrapeSound = CollisionFX/Sounds/GroundSkid
-			sparkSound = CollisionFX/Sounds/SparkSqueal
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Scrap Part
-			ResourceName = Recyclables
-			Efficiency = .8
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Salvage Part
-			ResourceName = SpecializedParts
-			Efficiency = .4
-		}
-		MODULE
-		{
-			name = MechJebCore
-			blacklist = MechJebModuleAscentAutopilot MechJebModuleAscentGuidance MechJebModuleAscentPathEditor MechJebModuleAttitudeAdjustment MechJebModuleDockingAutopilot MechJebModuleDockingGuidance MechJebModuleLandingAutopilot MechJebModuleLandingGuidance MechJebModuleLandingPredictions MechJebModuleNodeEditor MechJebModuleRendezvousAutopilot MechJebModuleRendezvousAutopilotWindow MechJebModuleRoverController MechJebModuleRoverWindow MechJebModuleSpaceplaneAutopilot MechJebModuleSpaceplaneGuidance MechJebModuleTranslatron MechJebModuleWarpHelper
-			RESOURCE
-			{
-				name = ElectricCharge
-				rate = 0.03
-			}
-		}
-		INTERNAL
-		{
-			name = Placeholder
-		}
-	}
-}
-UrlConfig
-{
-	name = internals_Mobile_Processing_Lab_Int
-	type = PART
-	parentUrl = Felbourn/Internals/internals
-	url = Felbourn/Internals/internals/internals_Mobile_Processing_Lab_Int
-	PART
-	{
-		name = internals_Mobile_Processing_Lab_Int
-		module = Part
-		category = Pods
-		subcategory = 0
-		vesselType = Ship
-		author = Felbourn
-		manufacturer = Felbourn Industries
-		description = test internals view
-		scale = 1
-		rescaleFactor = 1
-		node_stack_bottom = 0.0, -0.47924, 0.0, 0.0, -1.0, 0.0, 2
-		node_stack_top = 0.0, 1.19319, 0.0, 0.0, 1.0, 0.0, 1
-		attachRules = 1,0,1,1,0
-		CoPOffset = 0.0, 0.6, 0.0
-		CoLOffset = 0.0, -0.45, 0.0
-		TechRequired = commandModules
-		entryCost = 7600
-		cost = 3800
-		bulkheadProfiles = size2, size1
-		dragModelType = default
-		maximum_drag = 0.20
-		minimum_drag = 0.15
-		angularDrag = 2
-		crashTolerance = 45
-		maxTemp = 2400
-		title = Mobile_Processing_Lab_Int 2 FIX ME
-		CrewCapacity = 2
-		mass = 2
-		MODEL
-		{
-			model = VenStockRevamp/Squad/Parts/Command/CommandPods/1-2
-		}
-		MODULE
-		{
-			name = ModuleCommand
-			minimumCrew = 1
-		}
-		INTERNAL
-		{
-			name = Mobile_Processing_Lab_Int
-		}
-		MODULE
-		{
-			name = ExtendedPartInfo
-		}
-		MODULE
-		{
-			name = CollisionFX
-			scrapeSparks = true
-			collisionSound = CollisionFX/Sounds/Bang1
-			scrapeSound = CollisionFX/Sounds/GroundSkid
-			sparkSound = CollisionFX/Sounds/SparkSqueal
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Scrap Part
-			ResourceName = Recyclables
-			Efficiency = .8
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Salvage Part
-			ResourceName = SpecializedParts
-			Efficiency = .4
-		}
-		MODULE
-		{
-			name = MechJebCore
-			blacklist = MechJebModuleAscentAutopilot MechJebModuleAscentGuidance MechJebModuleAscentPathEditor MechJebModuleAttitudeAdjustment MechJebModuleDockingAutopilot MechJebModuleDockingGuidance MechJebModuleLandingAutopilot MechJebModuleLandingGuidance MechJebModuleLandingPredictions MechJebModuleNodeEditor MechJebModuleRendezvousAutopilot MechJebModuleRendezvousAutopilotWindow MechJebModuleRoverController MechJebModuleRoverWindow MechJebModuleSpaceplaneAutopilot MechJebModuleSpaceplaneGuidance MechJebModuleTranslatron MechJebModuleWarpHelper
-			RESOURCE
-			{
-				name = ElectricCharge
-				rate = 0.03
-			}
-		}
-		INTERNAL
-		{
-			name = Placeholder
-		}
-	}
-}
-UrlConfig
-{
-	name = internals_GenericSpace1
-	type = PART
-	parentUrl = Felbourn/Internals/internals
-	url = Felbourn/Internals/internals/internals_GenericSpace1
-	PART
-	{
-		name = internals_GenericSpace1
-		module = Part
-		category = Pods
-		subcategory = 0
-		vesselType = Ship
-		author = Felbourn
-		manufacturer = Felbourn Industries
-		description = test internals view
-		scale = 1
-		rescaleFactor = 1
-		node_stack_bottom = 0.0, -0.47924, 0.0, 0.0, -1.0, 0.0, 2
-		node_stack_top = 0.0, 1.19319, 0.0, 0.0, 1.0, 0.0, 1
-		attachRules = 1,0,1,1,0
-		CoPOffset = 0.0, 0.6, 0.0
-		CoLOffset = 0.0, -0.45, 0.0
-		TechRequired = commandModules
-		entryCost = 7600
-		cost = 3800
-		bulkheadProfiles = size2, size1
-		dragModelType = default
-		maximum_drag = 0.20
-		minimum_drag = 0.15
-		angularDrag = 2
-		crashTolerance = 45
-		maxTemp = 2400
-		title = GenericSpace1 1 FIX ME
-		CrewCapacity = 1
-		mass = 1
-		MODEL
-		{
-			model = VenStockRevamp/Squad/Parts/Command/CommandPods/1-2
-		}
-		MODULE
-		{
-			name = ModuleCommand
-			minimumCrew = 1
-		}
-		INTERNAL
-		{
-			name = GenericSpace1
-		}
-		MODULE
-		{
-			name = ExtendedPartInfo
-		}
-		MODULE
-		{
-			name = CollisionFX
-			scrapeSparks = true
-			collisionSound = CollisionFX/Sounds/Bang1
-			scrapeSound = CollisionFX/Sounds/GroundSkid
-			sparkSound = CollisionFX/Sounds/SparkSqueal
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Scrap Part
-			ResourceName = Recyclables
-			Efficiency = .8
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Salvage Part
-			ResourceName = SpecializedParts
-			Efficiency = .4
-		}
-		MODULE
-		{
-			name = MechJebCore
-			blacklist = MechJebModuleAscentAutopilot MechJebModuleAscentGuidance MechJebModuleAscentPathEditor MechJebModuleAttitudeAdjustment MechJebModuleDockingAutopilot MechJebModuleDockingGuidance MechJebModuleLandingAutopilot MechJebModuleLandingGuidance MechJebModuleLandingPredictions MechJebModuleNodeEditor MechJebModuleRendezvousAutopilot MechJebModuleRendezvousAutopilotWindow MechJebModuleRoverController MechJebModuleRoverWindow MechJebModuleSpaceplaneAutopilot MechJebModuleSpaceplaneGuidance MechJebModuleTranslatron MechJebModuleWarpHelper
-			RESOURCE
-			{
-				name = ElectricCharge
-				rate = 0.03
-			}
-		}
-		INTERNAL
-		{
-			name = Placeholder
-		}
-	}
-}
-UrlConfig
-{
-	name = internals_GenericSpace3
-	type = PART
-	parentUrl = Felbourn/Internals/internals
-	url = Felbourn/Internals/internals/internals_GenericSpace3
-	PART
-	{
-		name = internals_GenericSpace3
-		module = Part
-		category = Pods
-		subcategory = 0
-		vesselType = Ship
-		author = Felbourn
-		manufacturer = Felbourn Industries
-		description = test internals view
-		scale = 1
-		rescaleFactor = 1
-		node_stack_bottom = 0.0, -0.47924, 0.0, 0.0, -1.0, 0.0, 2
-		node_stack_top = 0.0, 1.19319, 0.0, 0.0, 1.0, 0.0, 1
-		attachRules = 1,0,1,1,0
-		CoPOffset = 0.0, 0.6, 0.0
-		CoLOffset = 0.0, -0.45, 0.0
-		TechRequired = commandModules
-		entryCost = 7600
-		cost = 3800
-		bulkheadProfiles = size2, size1
-		dragModelType = default
-		maximum_drag = 0.20
-		minimum_drag = 0.15
-		angularDrag = 2
-		crashTolerance = 45
-		maxTemp = 2400
-		title = GenericSpace3 3 FIX ME
-		CrewCapacity = 3
-		mass = 3
-		MODEL
-		{
-			model = VenStockRevamp/Squad/Parts/Command/CommandPods/1-2
-		}
-		MODULE
-		{
-			name = ModuleCommand
-			minimumCrew = 1
-		}
-		INTERNAL
-		{
-			name = GenericSpace3
-		}
-		MODULE
-		{
-			name = ExtendedPartInfo
-		}
-		MODULE
-		{
-			name = CollisionFX
-			scrapeSparks = true
-			collisionSound = CollisionFX/Sounds/Bang1
-			scrapeSound = CollisionFX/Sounds/GroundSkid
-			sparkSound = CollisionFX/Sounds/SparkSqueal
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Scrap Part
-			ResourceName = Recyclables
-			Efficiency = .8
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Salvage Part
-			ResourceName = SpecializedParts
-			Efficiency = .4
-		}
-		MODULE
-		{
-			name = MechJebCore
-			blacklist = MechJebModuleAscentAutopilot MechJebModuleAscentGuidance MechJebModuleAscentPathEditor MechJebModuleAttitudeAdjustment MechJebModuleDockingAutopilot MechJebModuleDockingGuidance MechJebModuleLandingAutopilot MechJebModuleLandingGuidance MechJebModuleLandingPredictions MechJebModuleNodeEditor MechJebModuleRendezvousAutopilot MechJebModuleRendezvousAutopilotWindow MechJebModuleRoverController MechJebModuleRoverWindow MechJebModuleSpaceplaneAutopilot MechJebModuleSpaceplaneGuidance MechJebModuleTranslatron MechJebModuleWarpHelper
-			RESOURCE
-			{
-				name = ElectricCharge
-				rate = 0.03
-			}
-		}
-		INTERNAL
-		{
-			name = Placeholder
-		}
-	}
-}
-UrlConfig
-{
-	name = internals_MK3_CrewCab_Int
-	type = PART
-	parentUrl = Felbourn/Internals/internals
-	url = Felbourn/Internals/internals/internals_MK3_CrewCab_Int
-	PART
-	{
-		name = internals_MK3_CrewCab_Int
-		module = Part
-		category = Pods
-		subcategory = 0
-		vesselType = Ship
-		author = Felbourn
-		manufacturer = Felbourn Industries
-		description = test internals view
-		scale = 1
-		rescaleFactor = 1
-		node_stack_bottom = 0.0, -0.47924, 0.0, 0.0, -1.0, 0.0, 2
-		node_stack_top = 0.0, 1.19319, 0.0, 0.0, 1.0, 0.0, 1
-		attachRules = 1,0,1,1,0
-		CoPOffset = 0.0, 0.6, 0.0
-		CoLOffset = 0.0, -0.45, 0.0
-		TechRequired = commandModules
-		entryCost = 7600
-		cost = 3800
-		bulkheadProfiles = size2, size1
-		dragModelType = default
-		maximum_drag = 0.20
-		minimum_drag = 0.15
-		angularDrag = 2
-		crashTolerance = 45
-		maxTemp = 2400
-		title = MK3_CrewCab_Int 16 FIX ME
-		CrewCapacity = 16
-		mass = 16
-		MODEL
-		{
-			model = VenStockRevamp/Squad/Parts/Command/CommandPods/1-2
-		}
-		MODULE
-		{
-			name = ModuleCommand
-			minimumCrew = 1
-		}
-		INTERNAL
-		{
-			name = MK3_CrewCab_Int
-		}
-		MODULE
-		{
-			name = ExtendedPartInfo
-		}
-		MODULE
-		{
-			name = CollisionFX
-			scrapeSparks = true
-			collisionSound = CollisionFX/Sounds/Bang1
-			scrapeSound = CollisionFX/Sounds/GroundSkid
-			sparkSound = CollisionFX/Sounds/SparkSqueal
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Scrap Part
-			ResourceName = Recyclables
-			Efficiency = .8
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Salvage Part
-			ResourceName = SpecializedParts
-			Efficiency = .4
-		}
-		MODULE
-		{
-			name = MechJebCore
-			blacklist = MechJebModuleAscentAutopilot MechJebModuleAscentGuidance MechJebModuleAscentPathEditor MechJebModuleAttitudeAdjustment MechJebModuleDockingAutopilot MechJebModuleDockingGuidance MechJebModuleLandingAutopilot MechJebModuleLandingGuidance MechJebModuleLandingPredictions MechJebModuleNodeEditor MechJebModuleRendezvousAutopilot MechJebModuleRendezvousAutopilotWindow MechJebModuleRoverController MechJebModuleRoverWindow MechJebModuleSpaceplaneAutopilot MechJebModuleSpaceplaneGuidance MechJebModuleTranslatron MechJebModuleWarpHelper
-			RESOURCE
-			{
-				name = ElectricCharge
-				rate = 0.03
-			}
-		}
-		INTERNAL
-		{
-			name = Placeholder
-		}
-	}
-}
-UrlConfig
-{
-	name = internals_Placeholder
-	type = PART
-	parentUrl = Felbourn/Internals/internals
-	url = Felbourn/Internals/internals/internals_Placeholder
-	PART
-	{
-		name = internals_Placeholder
-		module = Part
-		category = Pods
-		subcategory = 0
-		vesselType = Ship
-		author = Felbourn
-		manufacturer = Felbourn Industries
-		description = test internals view
-		scale = 1
-		rescaleFactor = 1
-		node_stack_bottom = 0.0, -0.47924, 0.0, 0.0, -1.0, 0.0, 2
-		node_stack_top = 0.0, 1.19319, 0.0, 0.0, 1.0, 0.0, 1
-		attachRules = 1,0,1,1,0
-		CoPOffset = 0.0, 0.6, 0.0
-		CoLOffset = 0.0, -0.45, 0.0
-		TechRequired = commandModules
-		entryCost = 7600
-		cost = 3800
-		bulkheadProfiles = size2, size1
-		dragModelType = default
-		maximum_drag = 0.20
-		minimum_drag = 0.15
-		angularDrag = 2
-		crashTolerance = 45
-		maxTemp = 2400
-		title = Placeholder 16 FIX ME
-		CrewCapacity = 16
-		mass = 16
-		MODEL
-		{
-			model = VenStockRevamp/Squad/Parts/Command/CommandPods/1-2
-		}
-		MODULE
-		{
-			name = ModuleCommand
-			minimumCrew = 1
-		}
-		INTERNAL
-		{
-			name = Placeholder
-		}
-		MODULE
-		{
-			name = ExtendedPartInfo
-		}
-		MODULE
-		{
-			name = CollisionFX
-			scrapeSparks = true
-			collisionSound = CollisionFX/Sounds/Bang1
-			scrapeSound = CollisionFX/Sounds/GroundSkid
-			sparkSound = CollisionFX/Sounds/SparkSqueal
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Scrap Part
-			ResourceName = Recyclables
-			Efficiency = .8
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Salvage Part
-			ResourceName = SpecializedParts
-			Efficiency = .4
-		}
-		MODULE
-		{
-			name = MechJebCore
-			blacklist = MechJebModuleAscentAutopilot MechJebModuleAscentGuidance MechJebModuleAscentPathEditor MechJebModuleAttitudeAdjustment MechJebModuleDockingAutopilot MechJebModuleDockingGuidance MechJebModuleLandingAutopilot MechJebModuleLandingGuidance MechJebModuleLandingPredictions MechJebModuleNodeEditor MechJebModuleRendezvousAutopilot MechJebModuleRendezvousAutopilotWindow MechJebModuleRoverController MechJebModuleRoverWindow MechJebModuleSpaceplaneAutopilot MechJebModuleSpaceplaneGuidance MechJebModuleTranslatron MechJebModuleWarpHelper
-			RESOURCE
-			{
-				name = ElectricCharge
-				rate = 0.03
-			}
-		}
-		INTERNAL
-		{
-			name = Placeholder
-		}
 	}
 }
 UrlConfig
@@ -39271,10 +37542,6 @@ UrlConfig
 				rate = 0.03
 			}
 		}
-		INTERNAL
-		{
-			name = Placeholder
-		}
 	}
 }
 UrlConfig
@@ -39418,10 +37685,6 @@ UrlConfig
 				rate = 0.03
 			}
 		}
-		INTERNAL
-		{
-			name = Placeholder
-		}
 	}
 }
 UrlConfig
@@ -39542,10 +37805,6 @@ UrlConfig
 		MODULE
 		{
 			name = ModuleTweakableAnimateGeneric
-		}
-		INTERNAL
-		{
-			name = Placeholder
 		}
 	}
 }
@@ -55432,10 +53691,6 @@ UrlConfig
 				rate = 0.03
 			}
 		}
-		INTERNAL
-		{
-			name = Placeholder
-		}
 	}
 }
 UrlConfig
@@ -55620,10 +53875,6 @@ UrlConfig
 		MODULE
 		{
 			name = ModuleTweakableAnimateGeneric
-		}
-		INTERNAL
-		{
-			name = Placeholder
 		}
 	}
 }
@@ -55992,10 +54243,6 @@ UrlConfig
 				rate = 0.03
 			}
 		}
-		INTERNAL
-		{
-			name = Placeholder
-		}
 	}
 }
 UrlConfig
@@ -56128,10 +54375,6 @@ UrlConfig
 				rate = 0.03
 			}
 		}
-		INTERNAL
-		{
-			name = Placeholder
-		}
 	}
 }
 UrlConfig
@@ -56252,10 +54495,6 @@ UrlConfig
 				name = ElectricCharge
 				rate = 0.03
 			}
-		}
-		INTERNAL
-		{
-			name = Placeholder
 		}
 	}
 }
@@ -56386,10 +54625,6 @@ UrlConfig
 				name = ElectricCharge
 				rate = 0.03
 			}
-		}
-		INTERNAL
-		{
-			name = Placeholder
 		}
 	}
 }
@@ -56530,10 +54765,6 @@ UrlConfig
 				rate = 0.03
 			}
 		}
-		INTERNAL
-		{
-			name = Placeholder
-		}
 	}
 }
 UrlConfig
@@ -56667,10 +54898,6 @@ UrlConfig
 				rate = 0.03
 			}
 		}
-		INTERNAL
-		{
-			name = Placeholder
-		}
 	}
 }
 UrlConfig
@@ -56801,10 +55028,6 @@ UrlConfig
 				name = ElectricCharge
 				rate = 0.03
 			}
-		}
-		INTERNAL
-		{
-			name = Placeholder
 		}
 	}
 }
@@ -57044,10 +55267,6 @@ UrlConfig
 				rate = 0.03
 			}
 		}
-		INTERNAL
-		{
-			name = Placeholder
-		}
 	}
 }
 UrlConfig
@@ -57173,10 +55392,6 @@ UrlConfig
 				rate = 0.03
 			}
 		}
-		INTERNAL
-		{
-			name = Placeholder
-		}
 	}
 }
 UrlConfig
@@ -57297,10 +55512,6 @@ UrlConfig
 				name = ElectricCharge
 				rate = 0.03
 			}
-		}
-		INTERNAL
-		{
-			name = Placeholder
 		}
 	}
 }
@@ -57424,10 +55635,6 @@ UrlConfig
 				rate = 0.03
 			}
 		}
-		INTERNAL
-		{
-			name = Placeholder
-		}
 	}
 }
 UrlConfig
@@ -57548,10 +55755,6 @@ UrlConfig
 				name = ElectricCharge
 				rate = 0.03
 			}
-		}
-		INTERNAL
-		{
-			name = Placeholder
 		}
 	}
 }
@@ -57674,10 +55877,6 @@ UrlConfig
 				name = ElectricCharge
 				rate = 0.03
 			}
-		}
-		INTERNAL
-		{
-			name = Placeholder
 		}
 	}
 }
@@ -57921,10 +56120,6 @@ UrlConfig
 				rate = 0.03
 			}
 		}
-		INTERNAL
-		{
-			name = Placeholder
-		}
 	}
 }
 UrlConfig
@@ -58048,10 +56243,6 @@ UrlConfig
 				rate = 0.03
 			}
 		}
-		INTERNAL
-		{
-			name = Placeholder
-		}
 	}
 }
 UrlConfig
@@ -58164,10 +56355,6 @@ UrlConfig
 				name = ElectricCharge
 				rate = 0.03
 			}
-		}
-		INTERNAL
-		{
-			name = Placeholder
 		}
 	}
 }
@@ -70440,10 +68627,6 @@ UrlConfig
 		{
 			name = ModuleTweakableAnimateGeneric
 		}
-		INTERNAL
-		{
-			name = Placeholder
-		}
 	}
 }
 UrlConfig
@@ -73701,10 +71884,6 @@ UrlConfig
 		MODULE
 		{
 			name = ModuleTweakableAnimateGeneric
-		}
-		INTERNAL
-		{
-			name = Placeholder
 		}
 	}
 }
@@ -80642,10 +78821,6 @@ UrlConfig
 		MODULE
 		{
 			name = ModuleTweakableAnimateGeneric
-		}
-		INTERNAL
-		{
-			name = Placeholder
 		}
 	}
 }
@@ -99465,10 +97640,6 @@ UrlConfig
 				rate = 0.03
 			}
 		}
-		INTERNAL
-		{
-			name = Placeholder
-		}
 	}
 }
 UrlConfig
@@ -99611,10 +97782,6 @@ UrlConfig
 			Menu = Salvage Part
 			ResourceName = SpecializedParts
 			Efficiency = .4
-		}
-		INTERNAL
-		{
-			name = Placeholder
 		}
 	}
 }
@@ -99901,10 +98068,6 @@ UrlConfig
 			Menu = Salvage Part
 			ResourceName = SpecializedParts
 			Efficiency = .4
-		}
-		INTERNAL
-		{
-			name = Placeholder
 		}
 	}
 }
@@ -100255,10 +98418,6 @@ UrlConfig
 			ResourceName = SpecializedParts
 			Efficiency = .4
 		}
-		INTERNAL
-		{
-			name = Placeholder
-		}
 	}
 }
 UrlConfig
@@ -100544,10 +98703,6 @@ UrlConfig
 				name = ElectricCharge
 				rate = 0.03
 			}
-		}
-		INTERNAL
-		{
-			name = Placeholder
 		}
 	}
 }
@@ -100916,10 +99071,6 @@ UrlConfig
 				name = ElectricCharge
 				rate = 0.03
 			}
-		}
-		INTERNAL
-		{
-			name = Placeholder
 		}
 	}
 }
@@ -101318,10 +99469,6 @@ UrlConfig
 				name = ElectricCharge
 				rate = 0.03
 			}
-		}
-		INTERNAL
-		{
-			name = Placeholder
 		}
 	}
 }
@@ -101904,10 +100051,6 @@ UrlConfig
 			Menu = Salvage Part
 			ResourceName = SpecializedParts
 			Efficiency = .4
-		}
-		INTERNAL
-		{
-			name = Placeholder
 		}
 	}
 }
@@ -102636,10 +100779,6 @@ UrlConfig
 				rate = 0.03
 			}
 		}
-		INTERNAL
-		{
-			name = Placeholder
-		}
 	}
 }
 UrlConfig
@@ -102725,10 +100864,6 @@ UrlConfig
 			Menu = Salvage Part
 			ResourceName = SpecializedParts
 			Efficiency = .4
-		}
-		INTERNAL
-		{
-			name = Placeholder
 		}
 	}
 }
@@ -103191,10 +101326,6 @@ UrlConfig
 				rate = 0.03
 			}
 		}
-		INTERNAL
-		{
-			name = Placeholder
-		}
 	}
 }
 UrlConfig
@@ -103407,10 +101538,6 @@ UrlConfig
 			ResourceName = SpecializedParts
 			Efficiency = .4
 		}
-		INTERNAL
-		{
-			name = Placeholder
-		}
 	}
 }
 UrlConfig
@@ -103552,10 +101679,6 @@ UrlConfig
 				name = ElectricCharge
 				rate = 0.03
 			}
-		}
-		INTERNAL
-		{
-			name = Placeholder
 		}
 	}
 }
@@ -103874,10 +101997,6 @@ UrlConfig
 			ResourceName = SpecializedParts
 			Efficiency = .4
 		}
-		INTERNAL
-		{
-			name = Placeholder
-		}
 	}
 }
 UrlConfig
@@ -103998,10 +102117,6 @@ UrlConfig
 				name = ElectricCharge
 				rate = 0.03
 			}
-		}
-		INTERNAL
-		{
-			name = Placeholder
 		}
 	}
 }
@@ -104241,10 +102356,6 @@ UrlConfig
 		{
 			name = ModuleTweakableAnimateGeneric
 		}
-		INTERNAL
-		{
-			name = Placeholder
-		}
 	}
 }
 UrlConfig
@@ -104425,10 +102536,6 @@ UrlConfig
 			Menu = Salvage Part
 			ResourceName = SpecializedParts
 			Efficiency = .4
-		}
-		INTERNAL
-		{
-			name = Placeholder
 		}
 	}
 }
@@ -104887,10 +102994,6 @@ UrlConfig
 				name = ElectricCharge
 				rate = 0.03
 			}
-		}
-		INTERNAL
-		{
-			name = Placeholder
 		}
 	}
 }
@@ -105932,10 +104035,6 @@ UrlConfig
 			ResourceName = SpecializedParts
 			Efficiency = .4
 		}
-		INTERNAL
-		{
-			name = Placeholder
-		}
 	}
 }
 UrlConfig
@@ -106362,10 +104461,6 @@ UrlConfig
 				name = ElectricCharge
 				rate = 0.03
 			}
-		}
-		INTERNAL
-		{
-			name = Placeholder
 		}
 	}
 }
@@ -106818,10 +104913,6 @@ UrlConfig
 				rate = 0.03
 			}
 		}
-		INTERNAL
-		{
-			name = Placeholder
-		}
 	}
 }
 UrlConfig
@@ -106906,10 +104997,6 @@ UrlConfig
 			Menu = Salvage Part
 			ResourceName = SpecializedParts
 			Efficiency = .4
-		}
-		INTERNAL
-		{
-			name = Placeholder
 		}
 	}
 }
@@ -107174,10 +105261,6 @@ UrlConfig
 				rate = 0.03
 			}
 		}
-		INTERNAL
-		{
-			name = Placeholder
-		}
 	}
 }
 UrlConfig
@@ -107433,10 +105516,6 @@ UrlConfig
 				rate = 0.03
 			}
 		}
-		INTERNAL
-		{
-			name = Placeholder
-		}
 	}
 }
 UrlConfig
@@ -107543,10 +105622,6 @@ UrlConfig
 			Menu = Salvage Part
 			ResourceName = SpecializedParts
 			Efficiency = .4
-		}
-		INTERNAL
-		{
-			name = Placeholder
 		}
 	}
 }
@@ -109505,10 +107580,6 @@ UrlConfig
 		{
 			name = ModuleTweakableAnimateGeneric
 		}
-		INTERNAL
-		{
-			name = Placeholder
-		}
 	}
 }
 UrlConfig
@@ -109691,10 +107762,6 @@ UrlConfig
 			Menu = Salvage Part
 			ResourceName = SpecializedParts
 			Efficiency = .4
-		}
-		INTERNAL
-		{
-			name = Placeholder
 		}
 	}
 }

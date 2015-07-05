@@ -21,6 +21,7 @@ CanPin
 	Item = FilterExtensions
 	Item = KolonyTools
 	Item = LightsOut
+	Item = UbioWeldingLtd
 }
 CanHide
 {
@@ -39,6 +40,7 @@ CanHide
 	Item = FilterExtensions
 	Item = KolonyTools
 	Item = LightsOut
+	Item = UbioWeldingLtd
 }
 CanSetFalse
 {
@@ -57,6 +59,7 @@ CanSetFalse
 	Item = FilterExtensions
 	Item = KolonyTools
 	Item = LightsOut
+	Item = UbioWeldingLtd
 }
 ModHasFirstConfig
 {
@@ -75,4 +78,5 @@ ModHasFirstConfig
 	Item = FilterExtensions
 	Item = KolonyTools
 	Item = LightsOut
+	Item = UbioWeldingLtd
 }
