@@ -1,4 +1,4 @@
-patchedNodeCount = 10590
+patchedNodeCount = 10668
 catEatenCount = 0
 UrlConfig
 {
@@ -2106,6 +2106,8 @@ UrlConfig
 			list = 2,Jets
 			list = 3,Ions
 			list = 4,MonoProp
+			list = 5,Kerlox
+			list = 6,Solids
 		}
 	}
 }
@@ -2363,6 +2365,39 @@ UrlConfig
 }
 UrlConfig
 {
+	name = Robotics
+	type = CATEGORY
+	parentUrl = 000_FilterExtensions Configs/Default/Mod_Robotics
+	url = 000_FilterExtensions Configs/Default/Mod_Robotics/Robotics
+	CATEGORY
+	{
+		name = Robotics
+		icon = MagicSmokeIndustries
+		colour = #FFF0F0F0
+		all = true
+		FILTER
+		{
+			CHECK
+			{
+				type = folder
+				value = MagicSmokeIndustries
+			}
+		}
+		SUBCATEGORIES
+		{
+			list = 0,Pods
+			list = 1,Fuel Tanks
+			list = 2,Engines
+			list = 3,Command and Control
+			list = 4,Structural
+			list = 5,Aerodynamics
+			list = 6,Utility
+			list = 7,Science
+		}
+	}
+}
+UrlConfig
+{
 	name = Squad
 	type = CATEGORY
 	parentUrl = 000_FilterExtensions Configs/Default/Mod_Squad
@@ -2436,9 +2471,11 @@ UrlConfig
 	FilterRename
 	{
 		name = LiquidFuel/Oxidizer, Rockets
+		name = Kerosene/LqdOxygen, Kerolox
 		name = ElectricCharge/XenonGas, Ion - Xenon
 		name = IntakeAir/LiquidFuel, Jets
 		name = SolidFuel, SRBs
+		name = HTPB, Solids
 		name = MonoPropellant, MonoProp
 		name = ArgonGas/ElectricCharge, Ion - Argon
 		name = HydrogenGas/ElectricCharge, Ion - Hydrogen
@@ -2453,9 +2490,11 @@ UrlConfig
 	FilterSetIcon
 	{
 		icon = Rockets, EngineLFO
+		icon = Kerolox, EngineLFO
 		icon = Ion - Xenon, EngineIon
 		icon = Jets, EngineJet
 		icon = SRBs, EngineSolid
+		icon = Solids, EngineSolid
 		icon = MonoProp, EngineMono
 		icon = Ore, fuels_ore
 		icon = Ablator, Ablative Shielding
@@ -2899,7 +2938,7 @@ UrlConfig
 		cost = 4500
 		category = Pods
 		subcategory = 0
-		title = HECS-2 Probe Core FIX ME
+		title = HECS-2 Probe Core
 		manufacturer = Probodobodyne Inc
 		description = An extra-large probe core based on the popular HECS design. With integrated battery banks, advanced flight controls, and a built in reaction wheel, the HECS-2 is a suitable probe core for larger satellites.
 		attachRules = 1,0,1,1,0
@@ -2922,7 +2961,7 @@ UrlConfig
 			RESOURCE
 			{
 				name = ElectricCharge
-				rate = 0.05
+				rate = 0.125
 			}
 		}
 		MODULE
@@ -2959,6 +2998,24 @@ UrlConfig
 		MODULE
 		{
 			name = ModuleTweakableSAS
+		}
+		RESOURCE
+		{
+			name = ElectricCharge
+			amount = 112.5
+			maxAmount = 112.5
+		}
+		MODULE
+		{
+			name = ModuleReactionWheel
+			PitchTorque = 0.25
+			YawTorque = 0.25
+			RollTorque = 0.25
+			RESOURCE
+			{
+				name = ElectricCharge
+				rate = 0.017361111
+			}
 		}
 		MODULE
 		{
@@ -7669,6 +7726,142 @@ UrlConfig
 			name = TweakScale
 			type = stack
 			defaultScale = 0.625
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+	}
+}
+UrlConfig
+{
+	name = FigaroReceiver
+	type = PART
+	parentUrl = KerbalGPS/Parts/FigaroReceiver/part
+	url = KerbalGPS/Parts/FigaroReceiver/part/FigaroReceiver
+	PART
+	{
+		name = FigaroReceiver
+		module = Part
+		author = PakledHostage | MrPwner
+		mesh = model.mu
+		scale = 1
+		rescaleFactor = 0.1
+		PhysicsSignificance = 0
+		node_attach = -0.383, 0.0, 0.0, 0.0, 0.0, -1.0
+		TechRequired = electronics
+		entryCost = 5000
+		cost = 10
+		category = Science
+		subcategory = 0
+		title = Figaro GNSS Receiver FIX ME
+		manufacturer = Procyon Innovations
+		description = Let us tell you where to go and how to get there!
+		attachRules = 0,1,0,1,1,0,1
+		mass = 0.001
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		angularDrag = 2
+		crashTolerance = 7
+		maxTemp = 3000
+		MODULE
+		{
+			name = KerbalGPS
+			GNSSacronym = NONE
+			EnableSBAS = FALSE
+			EarthTime = FALSE
+		}
+		MODULE
+		{
+			name = ExtendedPartInfo
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+	}
+}
+UrlConfig
+{
+	name = FigaroTransmitter
+	type = PART
+	parentUrl = KerbalGPS/Parts/FigaroTransmitter/part
+	url = KerbalGPS/Parts/FigaroTransmitter/part/FigaroTransmitter
+	PART
+	{
+		name = FigaroTransmitter
+		module = Part
+		author = PakledHostage | MrPwner
+		mesh = FigaroTransmitter.mu
+		rescaleFactor = 0.23
+		node_stack = 0, -0.02, 0, 0, 1.0, 0, 0
+		node_attach = 0, -0.02, 0, 0, -1.0, 0, 0
+		attachRules = 1,1,1,0,0
+		TechRequired = electronics
+		entryCost = 10000
+		cost = 900
+		category = Science
+		subcategory = 0
+		title = Figaro GNSS Transmitter FIX ME
+		manufacturer = Procyon Innovations
+		description = Now every satellite in your GNSS constellation requires a transmitter. Add the Figaro transmitter part to dedicated GNSS satellites, or to multi-purpose satellites.
+		mass = 0.20
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		angularDrag = 1
+		crashTolerance = 15
+		maxTemp = 3200
+		MODULE
+		{
+			name = ModuleGenerator
+			isAlwaysActive = True
+			INPUT_RESOURCE
+			{
+				name = ElectricCharge
+				rate = 0.03
+			}
+		}
+		MODULE
+		{
+			name = ExtendedPartInfo
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
 		}
 		MODULE
 		{
@@ -28867,6 +29060,18 @@ UrlConfig
 		}
 		MODULE
 		{
+			name = TweakScale
+			type = stack
+			defaultScale = 3.75
+		}
+		MODULE
+		{
+			name = ModuleDecouple
+			ejectionForce = 100
+			explosiveNodeID = top
+		}
+		MODULE
+		{
 			name = USI_ModuleRecycleablePart
 			Menu = Scrap Part
 			ResourceName = Recyclables
@@ -28878,6 +29083,28 @@ UrlConfig
 			Menu = Salvage Part
 			ResourceName = SpecializedParts
 			Efficiency = .4
+		}
+		MODULE
+		{
+			name = tjs_DecouplerLight
+			lightMultiplier = 1.0
+			lightRange = 15.0
+			lightRed = 1
+			lightGreen = 0.88
+			lightBlue = 0.68
+			lightDuration = 0.1
+		}
+		MODULE
+		{
+			name = ModuleTweakableDecouple
+			decouplerModuleName = ModuleDecouple
+		}
+		MODULE
+		{
+			name = ModuleStagingToggle
+			defaultDisabled = false
+			activeInFlight = true
+			activeInEditor = true
 		}
 	}
 }
@@ -37542,6 +37769,10 @@ UrlConfig
 				rate = 0.03
 			}
 		}
+		INTERNAL
+		{
+			name = Placeholder
+		}
 	}
 }
 UrlConfig
@@ -37685,6 +37916,10 @@ UrlConfig
 				rate = 0.03
 			}
 		}
+		INTERNAL
+		{
+			name = Placeholder
+		}
 	}
 }
 UrlConfig
@@ -37805,6 +38040,10 @@ UrlConfig
 		MODULE
 		{
 			name = ModuleTweakableAnimateGeneric
+		}
+		INTERNAL
+		{
+			name = Placeholder
 		}
 	}
 }
@@ -38888,7 +39127,7 @@ UrlConfig
 		cost = 450
 		category = Control
 		subcategory = 0
-		title = RX-15 Bidirectional RCS Thruster Block FIX ME
+		title = : FIX ME:: FIX ME
 		manufacturer = STEADLER Engineering Corps
 		description = STEADLER's RX series of blocks sacrifice atmoshperic performance for high efficiencies in space. The -15 model comes with two nozzles angled at 45 degrees.
 		attachRules = 0,1,0,0,0
@@ -38929,6 +39168,23 @@ UrlConfig
 			collisionSound = CollisionFX/Sounds/Bang1
 			scrapeSound = CollisionFX/Sounds/GroundSkid
 			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = ModuleRCSFX
+			thrusterTransformName = thrustVector
+			thrusterPower = 0.5
+			PROPELLANT
+			{
+				name = Hydrazine
+				ratio = 1
+			}
+			atmosphereCurve
+			{
+				key = 0 150
+				key = 1 50
+				key = 3 0.001
+			}
 		}
 		MODULE
 		{
@@ -39068,7 +39324,7 @@ UrlConfig
 		cost = 650
 		category = Control
 		subcategory = 0
-		title = RX-1 Linear RCS Thruster FIX ME
+		title = : FIX ME:: FIX ME
 		manufacturer = STEADLER Engineering Corps
 		description = A single RX-series nozzle allows translation in a single direction. Place several of them, well, and the world is your unidentified mollusk.
 		attachRules = 0,1,0,0,0
@@ -39109,6 +39365,23 @@ UrlConfig
 			collisionSound = CollisionFX/Sounds/Bang1
 			scrapeSound = CollisionFX/Sounds/GroundSkid
 			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = ModuleRCSFX
+			thrusterTransformName = thrustVector
+			thrusterPower = 0.5
+			PROPELLANT
+			{
+				name = Hydrazine
+				ratio = 1
+			}
+			atmosphereCurve
+			{
+				key = 0 150
+				key = 1 50
+				key = 3 0.001
+			}
 		}
 		MODULE
 		{
@@ -53691,6 +53964,10 @@ UrlConfig
 				rate = 0.03
 			}
 		}
+		INTERNAL
+		{
+			name = Placeholder
+		}
 	}
 }
 UrlConfig
@@ -53875,6 +54152,10 @@ UrlConfig
 		MODULE
 		{
 			name = ModuleTweakableAnimateGeneric
+		}
+		INTERNAL
+		{
+			name = Placeholder
 		}
 	}
 }
@@ -54243,6 +54524,10 @@ UrlConfig
 				rate = 0.03
 			}
 		}
+		INTERNAL
+		{
+			name = Placeholder
+		}
 	}
 }
 UrlConfig
@@ -54375,6 +54660,10 @@ UrlConfig
 				rate = 0.03
 			}
 		}
+		INTERNAL
+		{
+			name = Placeholder
+		}
 	}
 }
 UrlConfig
@@ -54495,6 +54784,10 @@ UrlConfig
 				name = ElectricCharge
 				rate = 0.03
 			}
+		}
+		INTERNAL
+		{
+			name = Placeholder
 		}
 	}
 }
@@ -54625,6 +54918,10 @@ UrlConfig
 				name = ElectricCharge
 				rate = 0.03
 			}
+		}
+		INTERNAL
+		{
+			name = Placeholder
 		}
 	}
 }
@@ -54765,6 +55062,10 @@ UrlConfig
 				rate = 0.03
 			}
 		}
+		INTERNAL
+		{
+			name = Placeholder
+		}
 	}
 }
 UrlConfig
@@ -54898,6 +55199,10 @@ UrlConfig
 				rate = 0.03
 			}
 		}
+		INTERNAL
+		{
+			name = Placeholder
+		}
 	}
 }
 UrlConfig
@@ -55028,6 +55333,10 @@ UrlConfig
 				name = ElectricCharge
 				rate = 0.03
 			}
+		}
+		INTERNAL
+		{
+			name = Placeholder
 		}
 	}
 }
@@ -55267,6 +55576,10 @@ UrlConfig
 				rate = 0.03
 			}
 		}
+		INTERNAL
+		{
+			name = Placeholder
+		}
 	}
 }
 UrlConfig
@@ -55392,6 +55705,10 @@ UrlConfig
 				rate = 0.03
 			}
 		}
+		INTERNAL
+		{
+			name = Placeholder
+		}
 	}
 }
 UrlConfig
@@ -55512,6 +55829,10 @@ UrlConfig
 				name = ElectricCharge
 				rate = 0.03
 			}
+		}
+		INTERNAL
+		{
+			name = Placeholder
 		}
 	}
 }
@@ -55635,6 +55956,10 @@ UrlConfig
 				rate = 0.03
 			}
 		}
+		INTERNAL
+		{
+			name = Placeholder
+		}
 	}
 }
 UrlConfig
@@ -55755,6 +56080,10 @@ UrlConfig
 				name = ElectricCharge
 				rate = 0.03
 			}
+		}
+		INTERNAL
+		{
+			name = Placeholder
 		}
 	}
 }
@@ -55877,6 +56206,10 @@ UrlConfig
 				name = ElectricCharge
 				rate = 0.03
 			}
+		}
+		INTERNAL
+		{
+			name = Placeholder
 		}
 	}
 }
@@ -56120,128 +56453,9 @@ UrlConfig
 				rate = 0.03
 			}
 		}
-	}
-}
-UrlConfig
-{
-	name = probeStackSmall
-	type = PART
-	parentUrl = Squad/Parts/Command/probeStackSmall/probeStackSmall
-	url = Squad/Parts/Command/probeStackSmall/probeStackSmall/probeStackSmall
-	PART
-	{
-		name = probeStackSmall
-		module = Part
-		author = Ven
-		rescaleFactor = 1.0
-		CrewCapacity = 0
-		node_stack_bottom = 0.0, -0.1, 0.0, 0.0, -1.0, 0.0, 1
-		node_stack_top = 0.0, 0.1, 0.0, 0.0, 1.0, 0.0, 1
-		TechRequired = advUnmanned
-		entryCost = 17800
-		cost = 2250
-		category = Pods
-		subcategory = 0
-		title = RC-001S Remote Guidance Unit
-		manufacturer = STEADLER Engineering Corps
-		description = The STEADLER RGU core is one of the most complete command units available to date, featuring all the latest guidance systems, plus its own internal set of Reaction Wheels. STEADLER claims this is the closest one can get to a fully self-contained spacecraft. (Some assembly required. Spacecraft sold separately)
-		attachRules = 1,0,1,1,0
-		mass = 0.1
-		dragModelType = default
-		maximum_drag = 0.2
-		minimum_drag = 0.2
-		angularDrag = 2
-		crashTolerance = 9
-		maxTemp = 2000
-		explosionPotential = 0
-		vesselType = Probe
-		bulkheadProfiles = size1
-		MODULE
+		INTERNAL
 		{
-			name = ModuleCommand
-			minimumCrew = 0
-			RESOURCE
-			{
-				name = ElectricCharge
-				rate = 0.0555555555555556
-			}
-		}
-		MODULE
-		{
-			name = ModuleSAS
-			SASServiceLevel = 3
-		}
-		MODULE
-		{
-			name = ExtendedPartInfo
-		}
-		MODULE
-		{
-			name = CollisionFX
-			scrapeSparks = true
-			collisionSound = CollisionFX/Sounds/Bang1
-			scrapeSound = CollisionFX/Sounds/GroundSkid
-			sparkSound = CollisionFX/Sounds/SparkSqueal
-		}
-		MODULE
-		{
-			name = TweakScale
-			type = stack
-			defaultScale = 1.25
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Scrap Part
-			ResourceName = Recyclables
-			Efficiency = .8
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Salvage Part
-			ResourceName = SpecializedParts
-			Efficiency = .4
-		}
-		MODEL
-		{
-			model = VenStockRevamp/Squad/Parts/Command/ProbeCores/SMProbe
-		}
-		MODULE
-		{
-			name = ModuleSPU
-		}
-		MODULE
-		{
-			name = ModuleRTAntennaPassive
-			TechRequired = unmannedTech
-			OmniRange = 3000
-			TRANSMITTER
-			{
-				PacketInterval = 0.3
-				PacketSize = 2
-				PacketResourceCost = 15.0
-			}
-		}
-		MODULE
-		{
-			name = ModuleTweakableSAS
-		}
-		RESOURCE
-		{
-			name = ElectricCharge
-			amount = 50
-			maxAmount = 50
-		}
-		MODULE
-		{
-			name = MechJebCore
-			blacklist = MechJebModuleAscentAutopilot MechJebModuleAscentGuidance MechJebModuleAscentPathEditor MechJebModuleAttitudeAdjustment MechJebModuleDockingAutopilot MechJebModuleDockingGuidance MechJebModuleLandingAutopilot MechJebModuleLandingGuidance MechJebModuleLandingPredictions MechJebModuleNodeEditor MechJebModuleRendezvousAutopilot MechJebModuleRendezvousAutopilotWindow MechJebModuleRoverController MechJebModuleRoverWindow MechJebModuleSpaceplaneAutopilot MechJebModuleSpaceplaneGuidance MechJebModuleTranslatron MechJebModuleWarpHelper
-			RESOURCE
-			{
-				name = ElectricCharge
-				rate = 0.03
-			}
+			name = Placeholder
 		}
 	}
 }
@@ -56355,6 +56569,10 @@ UrlConfig
 				name = ElectricCharge
 				rate = 0.03
 			}
+		}
+		INTERNAL
+		{
+			name = Placeholder
 		}
 	}
 }
@@ -58876,6 +59094,48 @@ UrlConfig
 		}
 		MODULE
 		{
+			name = ModuleEngineConfigs
+			configuration = Hydrolox
+			configuration = Hydrolox
+			CONFIG
+			{
+				name = Monoprop
+				minThrust = 0
+				maxThrust = 18
+				minThrust = 0
+				maxThrust = 18
+				PROPELLANT
+				{
+					name = Hydrazine
+					ratio = 1
+					DrawGauge = True
+				}
+				atmosphereCurve
+				{
+					key = 0 288
+					key = 1 63
+					key = 3 0.001
+				}
+				atmosphereCurve
+				{
+					key = 0 288
+					key = 1 63
+					key = 3 0.001
+				}
+			}
+			CONFIG
+			{
+				name = Monoprop
+				PROPELLANT
+				{
+					name = Hydrazine
+					ratio = 1
+					DrawGauge = True
+				}
+			}
+		}
+		MODULE
+		{
 			name = ModuleTweakableJettison
 		}
 		MODULE
@@ -60053,9 +60313,12 @@ UrlConfig
 		{
 			name = ModuleEngineConfigs
 			configuration = Kerolox
+			configuration = Kerolox
 			CONFIG
 			{
 				name = Kerolox
+				minThrust = 0
+				maxThrust = 60
 				minThrust = 0
 				maxThrust = 60
 				PROPELLANT
@@ -60071,14 +60334,22 @@ UrlConfig
 				}
 				atmosphereCurve
 				{
-					key = 0 272
-					key = 1 67
+					key = 0 278
+					key = 1 69
+					key = 3 0.001
+				}
+				atmosphereCurve
+				{
+					key = 0 278
+					key = 1 69
 					key = 3 0.001
 				}
 			}
 			CONFIG
 			{
 				name = Hydrolox
+				minThrust = 0
+				maxThrust = 60
 				minThrust = 0
 				maxThrust = 60
 				PROPELLANT
@@ -60094,14 +60365,22 @@ UrlConfig
 				}
 				atmosphereCurve
 				{
-					key = 0 303
-					key = 1 70
+					key = 0 308
+					key = 1 71
+					key = 3 0.001
+				}
+				atmosphereCurve
+				{
+					key = 0 308
+					key = 1 71
 					key = 3 0.001
 				}
 			}
 			CONFIG
 			{
 				name = Hypergolic
+				minThrust = 0
+				maxThrust = 60
 				minThrust = 0
 				maxThrust = 60
 				PROPELLANT
@@ -60117,9 +60396,60 @@ UrlConfig
 				}
 				atmosphereCurve
 				{
-					key = 0 276
-					key = 1 60
+					key = 0 288
+					key = 1 63
 					key = 3 0.001
+				}
+				atmosphereCurve
+				{
+					key = 0 288
+					key = 1 63
+					key = 3 0.001
+				}
+			}
+			CONFIG
+			{
+				name = Kerolox
+				PROPELLANT
+				{
+					name = Kerosene
+					ratio = 1.21951219512195
+					DrawGauge = True
+				}
+				PROPELLANT
+				{
+					name = LqdOxygen
+					ratio = 2.38387379491674
+				}
+			}
+			CONFIG
+			{
+				name = Hydrolox
+				PROPELLANT
+				{
+					name = LqdHydrogen
+					ratio = 14.1143260409315
+					DrawGauge = True
+				}
+				PROPELLANT
+				{
+					name = LqdOxygen
+					ratio = 5.43382997370727
+				}
+			}
+			CONFIG
+			{
+				name = Hypergolic
+				PROPELLANT
+				{
+					name = UDMH
+					ratio = 1.26422250316056
+					DrawGauge = True
+				}
+				PROPELLANT
+				{
+					name = NTO
+					ratio = 1.8
 				}
 			}
 		}
@@ -61664,9 +61994,12 @@ UrlConfig
 		{
 			name = ModuleEngineConfigs
 			configuration = Kerolox
+			configuration = Kerolox
 			CONFIG
 			{
 				name = Kerolox
+				minThrust = 0
+				maxThrust = 1500
 				minThrust = 0
 				maxThrust = 1500
 				PROPELLANT
@@ -61686,10 +62019,18 @@ UrlConfig
 					key = 1 217
 					key = 3 0.001
 				}
+				atmosphereCurve
+				{
+					key = 0 236
+					key = 1 217
+					key = 3 0.001
+				}
 			}
 			CONFIG
 			{
 				name = Hydrolox
+				minThrust = 0
+				maxThrust = 1500
 				minThrust = 0
 				maxThrust = 1500
 				PROPELLANT
@@ -61705,9 +62046,45 @@ UrlConfig
 				}
 				atmosphereCurve
 				{
-					key = 0 269
-					key = 1 233
+					key = 0 268
+					key = 1 232
 					key = 3 0.001
+				}
+				atmosphereCurve
+				{
+					key = 0 268
+					key = 1 232
+					key = 3 0.001
+				}
+			}
+			CONFIG
+			{
+				name = Kerolox
+				PROPELLANT
+				{
+					name = Kerosene
+					ratio = 1.21951219512195
+					DrawGauge = True
+				}
+				PROPELLANT
+				{
+					name = LqdOxygen
+					ratio = 2.38387379491674
+				}
+			}
+			CONFIG
+			{
+				name = Hydrolox
+				PROPELLANT
+				{
+					name = LqdHydrogen
+					ratio = 14.1143260409315
+					DrawGauge = True
+				}
+				PROPELLANT
+				{
+					name = LqdOxygen
+					ratio = 5.43382997370727
 				}
 			}
 		}
@@ -65058,6 +65435,8 @@ UrlConfig
 			name = ModuleEngineConfigs
 			type = ModuleEnginesRF
 			configuration = Linear
+			type = ModuleEnginesRF
+			configuration = Linear
 			CONFIG
 			{
 				name = Linear
@@ -65119,6 +65498,73 @@ UrlConfig
 					key = 1.00 0.90
 				}
 			}
+			CONFIG
+			{
+				name = Linear
+				minThrust = 0
+				maxThrust = 300
+				chamberNominalTemp = 1800
+				maxEngineTemp = 2050
+				curveResource = HTPB
+				PROPELLANT
+				{
+					name = HTPB
+					ratio = 1
+					DrawGauge = True
+				}
+				atmosphereCurve
+				{
+					key = 0 182
+					key = 1 151
+					key = 3 0.001
+				}
+				thrustCurve
+				{
+					key = 0.00 0.01
+					key = 0.02 0.01
+					key = 0.03 0.16
+					key = 0.06 0.32
+					key = 1.00 1.00
+				}
+			}
+			CONFIG
+			{
+				name = MaxQ
+				minThrust = 0
+				maxThrust = 300
+				chamberNominalTemp = 1800
+				maxEngineTemp = 2050
+				curveResource = HTPB
+				PROPELLANT
+				{
+					name = HTPB
+					ratio = 1
+					DrawGauge = True
+				}
+				atmosphereCurve
+				{
+					key = 0 182
+					key = 1 151
+					key = 3 0.001
+				}
+				thrustCurve
+				{
+					key = 0.00 0.01
+					key = 0.02 0.01
+					key = 0.03 0.16
+					key = 0.04 0.20
+					key = 0.60 0.99
+					key = 0.80 0.60
+					key = 0.94 1.00
+					key = 1.00 0.90
+				}
+			}
+		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 3670
+			type = Solid
 		}
 		MODULE
 		{
@@ -68627,6 +69073,10 @@ UrlConfig
 		{
 			name = ModuleTweakableAnimateGeneric
 		}
+		INTERNAL
+		{
+			name = Placeholder
+		}
 	}
 }
 UrlConfig
@@ -71884,6 +72334,10 @@ UrlConfig
 		MODULE
 		{
 			name = ModuleTweakableAnimateGeneric
+		}
+		INTERNAL
+		{
+			name = Placeholder
 		}
 	}
 }
@@ -78821,6 +79275,10 @@ UrlConfig
 		MODULE
 		{
 			name = ModuleTweakableAnimateGeneric
+		}
+		INTERNAL
+		{
+			name = Placeholder
 		}
 	}
 }
@@ -97640,6 +98098,10 @@ UrlConfig
 				rate = 0.03
 			}
 		}
+		INTERNAL
+		{
+			name = Placeholder
+		}
 	}
 }
 UrlConfig
@@ -97782,6 +98244,10 @@ UrlConfig
 			Menu = Salvage Part
 			ResourceName = SpecializedParts
 			Efficiency = .4
+		}
+		INTERNAL
+		{
+			name = Placeholder
 		}
 	}
 }
@@ -98068,6 +98534,10 @@ UrlConfig
 			Menu = Salvage Part
 			ResourceName = SpecializedParts
 			Efficiency = .4
+		}
+		INTERNAL
+		{
+			name = Placeholder
 		}
 	}
 }
@@ -98418,6 +98888,10 @@ UrlConfig
 			ResourceName = SpecializedParts
 			Efficiency = .4
 		}
+		INTERNAL
+		{
+			name = Placeholder
+		}
 	}
 }
 UrlConfig
@@ -98703,6 +99177,10 @@ UrlConfig
 				name = ElectricCharge
 				rate = 0.03
 			}
+		}
+		INTERNAL
+		{
+			name = Placeholder
 		}
 	}
 }
@@ -99071,6 +99549,10 @@ UrlConfig
 				name = ElectricCharge
 				rate = 0.03
 			}
+		}
+		INTERNAL
+		{
+			name = Placeholder
 		}
 	}
 }
@@ -99469,6 +99951,10 @@ UrlConfig
 				name = ElectricCharge
 				rate = 0.03
 			}
+		}
+		INTERNAL
+		{
+			name = Placeholder
 		}
 	}
 }
@@ -100051,6 +100537,10 @@ UrlConfig
 			Menu = Salvage Part
 			ResourceName = SpecializedParts
 			Efficiency = .4
+		}
+		INTERNAL
+		{
+			name = Placeholder
 		}
 	}
 }
@@ -100779,6 +101269,10 @@ UrlConfig
 				rate = 0.03
 			}
 		}
+		INTERNAL
+		{
+			name = Placeholder
+		}
 	}
 }
 UrlConfig
@@ -100864,6 +101358,10 @@ UrlConfig
 			Menu = Salvage Part
 			ResourceName = SpecializedParts
 			Efficiency = .4
+		}
+		INTERNAL
+		{
+			name = Placeholder
 		}
 	}
 }
@@ -101326,6 +101824,10 @@ UrlConfig
 				rate = 0.03
 			}
 		}
+		INTERNAL
+		{
+			name = Placeholder
+		}
 	}
 }
 UrlConfig
@@ -101538,6 +102040,10 @@ UrlConfig
 			ResourceName = SpecializedParts
 			Efficiency = .4
 		}
+		INTERNAL
+		{
+			name = Placeholder
+		}
 	}
 }
 UrlConfig
@@ -101679,6 +102185,10 @@ UrlConfig
 				name = ElectricCharge
 				rate = 0.03
 			}
+		}
+		INTERNAL
+		{
+			name = Placeholder
 		}
 	}
 }
@@ -101997,6 +102507,10 @@ UrlConfig
 			ResourceName = SpecializedParts
 			Efficiency = .4
 		}
+		INTERNAL
+		{
+			name = Placeholder
+		}
 	}
 }
 UrlConfig
@@ -102117,6 +102631,10 @@ UrlConfig
 				name = ElectricCharge
 				rate = 0.03
 			}
+		}
+		INTERNAL
+		{
+			name = Placeholder
 		}
 	}
 }
@@ -102356,6 +102874,10 @@ UrlConfig
 		{
 			name = ModuleTweakableAnimateGeneric
 		}
+		INTERNAL
+		{
+			name = Placeholder
+		}
 	}
 }
 UrlConfig
@@ -102536,6 +103058,10 @@ UrlConfig
 			Menu = Salvage Part
 			ResourceName = SpecializedParts
 			Efficiency = .4
+		}
+		INTERNAL
+		{
+			name = Placeholder
 		}
 	}
 }
@@ -102994,6 +103520,10 @@ UrlConfig
 				name = ElectricCharge
 				rate = 0.03
 			}
+		}
+		INTERNAL
+		{
+			name = Placeholder
 		}
 	}
 }
@@ -104035,6 +104565,10 @@ UrlConfig
 			ResourceName = SpecializedParts
 			Efficiency = .4
 		}
+		INTERNAL
+		{
+			name = Placeholder
+		}
 	}
 }
 UrlConfig
@@ -104461,6 +104995,10 @@ UrlConfig
 				name = ElectricCharge
 				rate = 0.03
 			}
+		}
+		INTERNAL
+		{
+			name = Placeholder
 		}
 	}
 }
@@ -104913,6 +105451,10 @@ UrlConfig
 				rate = 0.03
 			}
 		}
+		INTERNAL
+		{
+			name = Placeholder
+		}
 	}
 }
 UrlConfig
@@ -104997,6 +105539,10 @@ UrlConfig
 			Menu = Salvage Part
 			ResourceName = SpecializedParts
 			Efficiency = .4
+		}
+		INTERNAL
+		{
+			name = Placeholder
 		}
 	}
 }
@@ -105261,6 +105807,10 @@ UrlConfig
 				rate = 0.03
 			}
 		}
+		INTERNAL
+		{
+			name = Placeholder
+		}
 	}
 }
 UrlConfig
@@ -105516,6 +106066,10 @@ UrlConfig
 				rate = 0.03
 			}
 		}
+		INTERNAL
+		{
+			name = Placeholder
+		}
 	}
 }
 UrlConfig
@@ -105622,6 +106176,10 @@ UrlConfig
 			Menu = Salvage Part
 			ResourceName = SpecializedParts
 			Efficiency = .4
+		}
+		INTERNAL
+		{
+			name = Placeholder
 		}
 	}
 }
@@ -107580,6 +108138,10 @@ UrlConfig
 		{
 			name = ModuleTweakableAnimateGeneric
 		}
+		INTERNAL
+		{
+			name = Placeholder
+		}
 	}
 }
 UrlConfig
@@ -107762,6 +108324,10 @@ UrlConfig
 			Menu = Salvage Part
 			ResourceName = SpecializedParts
 			Efficiency = .4
+		}
+		INTERNAL
+		{
+			name = Placeholder
 		}
 	}
 }

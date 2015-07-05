@@ -107,8 +107,8 @@ toolbars
 			autoHide = False
 			drawBorder = False
 			useKSPSkin = False
-			buttonOrder = 
-			visibleButtons = Fusebox.FBToggle,RCSBuildAid.mainButton
+			buttonOrder = __TOOLBAR_INTERNAL.configureVisibleButtons,sirkut.IREditorButton,Fusebox.FBToggle,RCSBuildAid.mainButton
+			visibleButtons = Fusebox.FBToggle,RCSBuildAid.mainButton,sirkut.IREditorButton
 		}
 	}
 	EDITOR
@@ -134,8 +134,8 @@ toolbars
 			autoHide = False
 			drawBorder = False
 			useKSPSkin = False
-			buttonOrder = 
-			visibleButtons = Fusebox.FBToggle,RCSBuildAid.mainButton
+			buttonOrder = __TOOLBAR_INTERNAL.configureVisibleButtons,sirkut.IREditorButton,Fusebox.FBToggle,RCSBuildAid.mainButton
+			visibleButtons = Fusebox.FBToggle,RCSBuildAid.mainButton,sirkut.IREditorButton
 		}
 	}
 	SPACECENTER
