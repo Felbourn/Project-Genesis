@@ -10,7 +10,7 @@ GAME
 	scene = 5
 	editor = None
 	flag = Squad/Flags/kerbin
-	launchID = 19
+	launchID = 20
 	PARAMETERS
 	{
 		preset = Normal
@@ -459,8 +459,8 @@ GAME
 	FLIGHTSTATE
 	{
 		version = 1.0.4
-		UT = 36318.8746182774
-		activeVessel = 0
+		UT = 36319.2346182773
+		activeVessel = 8
 		mapViewFiltering = -1026
 		VESSEL
 		{
@@ -2322,48 +2322,48 @@ GAME
 		}
 		VESSEL
 		{
-			pid = d3aa796df4394d9996046ebc14737074
+			pid = d798be13109e4c8f99dc90e99645bbc4
 			name = Untitled Space Craft
-			type = Ship
+			type = Probe
 			sit = PRELAUNCH
 			landed = True
-			landedAt = KSC_LaunchPad_Platform
+			landedAt = LaunchPad
 			splashed = False
 			met = 0
-			lct = 36317.1346182777
+			lct = 36319.2346182773
 			root = 0
-			lat = -0.0972077908278545
-			lon = 285.442326628516
-			alt = 72.9527678102022
-			hgt = 0.4993913
-			nrm = 3.671083E-06,1,-5.53399E-07
-			rot = -0.7009888,-0.09221706,-0.09726395,0.7004646
-			CoM = 0,0,0
-			stg = 0
+			lat = -0.0973187272386311
+			lon = 285.442307327201
+			alt = 72.7891353301238
+			hgt = 0.3575835
+			nrm = 0.0007450813,0.9999998,-1.933268E-06
+			rot = -0.7009887,-0.09221786,-0.09726541,0.7004642
+			CoM = -0.2379081,0.259672,0.06411804
+			stg = 1
 			prst = False
-			ref = 0
+			ref = 35357623
 			ctrl = True
-			cPch = 
-			cHdg = 
+			cPch = 0.2
+			cHdg = 0.3
 			cMod = 0
 			ORBIT
 			{
-				SMA = 300036.476389944
-				ECC = 1
-				INC = NaN
-				LPE = 34.5569944128059
-				LAN = 115.287577201556
+				SMA = 300815.215353885
+				ECC = 0.994822794830379
+				INC = 0.0973124467361779
+				LPE = 90.0000000000001
+				LAN = 350.76566066557
 				MNA = 3.14159265358979
-				EPH = 36317.1546182777
+				EPH = 36319.2346182773
 				REF = 1
 			}
 			PART
 			{
-				name = internals.crewUtilityPodInternals
-				cid = 4294380676
-				uid = 3915492322
-				mid = 2142111579
-				launchID = 18
+				name = probeStackLarge
+				cid = 4294270794
+				uid = 35357623
+				mid = 2842116751
+				launchID = 19
 				parent = 0
 				position = 0,0,0
 				rotation = 0,0,0,1
@@ -2376,20 +2376,18 @@ GAME
 				sidx = -1
 				attm = 0
 				srfN = , -1
-				attN = bottom, -1
-				attN = top, -1
-				mass = 2
-				temp = 287.557423026359
-				tempExt = 287.646346361175
-				expt = 0.5
+				attN = bottom, 4
+				attN = top, 1
+				mass = 0.5
+				temp = 287.559822145539
+				tempExt = 287.914982044704
+				expt = 0
 				state = 0
 				connected = True
 				attached = True
 				flag = Squad/Flags/kerbin
-				rTrf = internals.crewUtilityPodInternals
+				rTrf = probeStackLarge
 				modCost = 0
-				crew = Jebediah Kerman
-				crew = Bill Kerman
 				EVENTS
 				{
 				}
@@ -2435,6 +2433,22 @@ GAME
 				}
 				MODULE
 				{
+					name = ModuleSAS
+					isEnabled = True
+					standaloneToggle = True
+					standaloneToggle_UIFlight
+					{
+						controlEnabled = True
+					}
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
 					name = ExtendedPartInfo
 					isEnabled = True
 					EVENTS
@@ -2448,6 +2462,21 @@ GAME
 				{
 					name = CollisionFX
 					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = TweakScale
+					isEnabled = True
+					currentScale = 2.5
+					defaultScale = 2.5
+					defaultTransformScale = (1, 1, 1)
+					DryCost = 3400
 					EVENTS
 					{
 					}
@@ -2494,6 +2523,79 @@ GAME
 							unfocusedRange = 5
 							externalToEVAOnly = True
 						}
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleSPU
+					isEnabled = True
+					IsRTPowered = True
+					IsRTSignalProcessor = True
+					IsRTCommandStation = True
+					RTCommandMinCrew = 6
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					FlightComputer
+					{
+						TotalDelay = 0
+						ActiveCommands
+						{
+							AttitudeCommand
+							{
+								Mode = Off
+								Attitude = Prograde
+								Frame = World
+								Orientation = 0,0,0,1
+								Altitude = NaN
+								TimeStamp = 36319.2346182773
+								ExtraDelay = 0
+								CmdGuid = 46145261-787f-4d5d-a9ad-858dc12338c7
+							}
+						}
+						Commands
+						{
+						}
+					}
+				}
+				MODULE
+				{
+					name = ModuleRTAntennaPassive
+					isEnabled = True
+					IsRTAntenna = True
+					IsRTActive = True
+					IsRTPowered = True
+					IsRTBroken = False
+					RTDishCosAngle = 1
+					RTOmniRange = 3000
+					RTDishRange = -1
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleTweakableSAS
+					isEnabled = True
+					SASServiceLevel = 3
+					SASServiceLevel_UIFlight
+					{
+						controlEnabled = True
+						minValue = 0
+						maxValue = 3
+						incrementSlide = 1
+					}
+					EVENTS
+					{
 					}
 					ACTIONS
 					{
@@ -2752,14 +2854,14 @@ GAME
 						}
 						MechJebModuleFlightRecorder
 						{
-							markUT = 36317.1346182777
+							markUT = 36319.2346182773
 							deltaVExpended = 0
 							dragLosses = 0
 							gravityLosses = 0
 							steeringLosses = 0
-							markLatitude = -0.0972077908254427
-							markLongitude = -74.5576733714903
-							markAltitude = 72.9527680244995
+							markLatitude = -0.0973124478681257
+							markLongitude = -74.5577136661161
+							markAltitude = 73.0486298445612
 							markBodyIndex = 1
 							maxDragGees = 0
 							unlockParts = 
@@ -2784,21 +2886,950 @@ GAME
 				}
 				MODULE
 				{
-					name = ModuleKISInventory
+					name = ModuleRTDataTransmitter
 					isEnabled = True
-					invName = 
-					helmetEquipped = True
 					EVENTS
 					{
-						ShowInventory
+					}
+					ACTIONS
+					{
+					}
+				}
+				RESOURCE
+				{
+					name = ElectricCharge
+					amount = 112.464999990771
+					maxAmount = 112.5
+					flowState = True
+					isTweakable = True
+					hideFlow = False
+					flowMode = Both
+				}
+			}
+			PART
+			{
+				name = FigaroTransmitter
+				cid = 4294258680
+				uid = 3080493869
+				mid = 2842116751
+				launchID = 19
+				parent = 0
+				position = 0,0.210010528564453,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 0
+				dstg = 0
+				sqor = -1
+				sepI = 0
+				sidx = -1
+				attm = 0
+				srfN = srfAttach, -1
+				attN = , 0
+				mass = 0.1
+				temp = 287.567084790455
+				tempExt = 287.989934514425
+				expt = 0.5
+				state = 0
+				connected = True
+				attached = True
+				flag = Squad/Flags/kerbin
+				rTrf = FigaroTransmitter
+				modCost = 0
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ExtendedPartInfo
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = CollisionFX
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = USI_ModuleRecycleablePart
+					isEnabled = True
+					EVENTS
+					{
+						ScrapPart
+						{
+							active = True
+							guiActive = False
+							guiIcon = Scrap part
+							guiName = Scrap Part
+							category = Scrap part
+							guiActiveUnfocused = True
+							unfocusedRange = 5
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = USI_ModuleRecycleablePart
+					isEnabled = True
+					EVENTS
+					{
+						ScrapPart
+						{
+							active = True
+							guiActive = False
+							guiIcon = Scrap part
+							guiName = Salvage Part
+							category = Scrap part
+							guiActiveUnfocused = True
+							unfocusedRange = 5
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleRTAntenna
+					isEnabled = True
+					IsRTAntenna = True
+					IsRTActive = True
+					IsRTPowered = True
+					IsRTBroken = False
+					RTDishCosAngle = 1
+					RTOmniRange = 4000000
+					RTDishRange = -1
+					RTAntennaTarget = 00000000-0000-0000-0000-000000000000
+					EVENTS
+					{
+						EventToggle
+						{
+							active = True
+							guiActive = False
+							guiIcon = 
+							guiName = Toggle
+							category = 
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+						EventTarget
+						{
+							active = False
+							guiActive = False
+							guiIcon = Target
+							guiName = No Target
+							category = Target
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+						EventEditorOpen
+						{
+							active = True
+							guiActive = False
+							guiIcon = Start deployed
+							guiName = Start deployed
+							category = Start deployed
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+						EventEditorClose
+						{
+							active = True
+							guiActive = False
+							guiActiveEditor = True
+							guiIcon = Start retracted
+							guiName = Start retracted
+							category = Start retracted
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+						EventOpen
+						{
+							active = False
+							guiActive = False
+							guiIcon = 
+							guiName = Activate
+							category = 
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+						EventClose
 						{
 							active = True
 							guiActive = True
-							guiActiveEditor = True
 							guiIcon = 
-							guiName = 
+							guiName = Deactivate
 							category = 
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+						OverrideTarget
+						{
+							active = True
+							guiActive = False
+							guiIcon = [EVA] Set Target
+							guiName = [EVA] Set Target
+							category = [EVA] Set Target
 							guiActiveUnfocused = True
+							unfocusedRange = 5
+							externalToEVAOnly = True
+						}
+						OverrideOpen
+						{
+							active = True
+							guiActive = False
+							guiIcon = [EVA] Force Open
+							guiName = [EVA] Force Open
+							category = [EVA] Force Open
+							guiActiveUnfocused = False
+							unfocusedRange = 5
+							externalToEVAOnly = True
+						}
+						OverrideClose
+						{
+							active = True
+							guiActive = False
+							guiIcon = [EVA] Force Close
+							guiName = [EVA] Force Close
+							category = [EVA] Force Close
+							guiActiveUnfocused = True
+							unfocusedRange = 5
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+						ActionToggle
+						{
+							actionGroup = None
+						}
+						ActionOpen
+						{
+							actionGroup = None
+						}
+						ActionClose
+						{
+							actionGroup = None
+						}
+					}
+				}
+				MODULE
+				{
+					name = ModuleSPUPassive
+					isEnabled = True
+					IsRTPowered = True
+					IsRTSignalProcessor = True
+					IsRTCommandStation = False
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleRTDataTransmitter
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = rcsblock-orbital-linear-1
+				cid = 4294284386
+				uid = 3325833897
+				mid = 2842116751
+				launchID = 19
+				parent = 0
+				position = -0.902041256427765,0.218820571899414,0.520794153213501
+				rotation = -0.5000001,0.5,-0.5000001,0.4999998
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 0
+				dstg = 0
+				sqor = -1
+				sepI = 0
+				sidx = -1
+				attm = 1
+				sym = 3
+				srfN = srfAttach, 0
+				mass = 0.02
+				temp = 287.557154011205
+				tempExt = 287.790100069717
+				expt = 0.5
+				state = 0
+				connected = True
+				attached = True
+				flag = Squad/Flags/kerbin
+				rTrf = rcsblock-orbital-linear-1
+				modCost = 0
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ExtendedPartInfo
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = CollisionFX
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = RcsSounds
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = USI_ModuleRecycleablePart
+					isEnabled = True
+					EVENTS
+					{
+						ScrapPart
+						{
+							active = True
+							guiActive = False
+							guiIcon = Scrap part
+							guiName = Scrap Part
+							category = Scrap part
+							guiActiveUnfocused = True
+							unfocusedRange = 5
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = USI_ModuleRecycleablePart
+					isEnabled = True
+					EVENTS
+					{
+						ScrapPart
+						{
+							active = True
+							guiActive = False
+							guiIcon = Scrap part
+							guiName = Salvage Part
+							category = Scrap part
+							guiActiveUnfocused = True
+							unfocusedRange = 5
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleTweakableRCS
+					isEnabled = True
+					startEnabled = True
+					thrustLimit = 1
+					startEnabled_UIFlight
+					{
+						controlEnabled = True
+					}
+					thrustLimit_UIFlight
+					{
+						controlEnabled = True
+						minValue = 0
+						maxValue = 1
+						incrementSlide = 0.025
+					}
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						ActionEnableThruster
+						{
+							actionGroup = None
+						}
+						ActionDisableThruster
+						{
+							actionGroup = None
+						}
+					}
+				}
+				MODULE
+				{
+					name = ModuleRCSFX
+					isEnabled = True
+					enableYaw = True
+					enablePitch = True
+					enableRoll = True
+					enableX = True
+					enableY = True
+					enableZ = True
+					rcsEnabled = True
+					enableYaw_UIFlight
+					{
+						controlEnabled = True
+					}
+					enablePitch_UIFlight
+					{
+						controlEnabled = True
+					}
+					enableRoll_UIFlight
+					{
+						controlEnabled = True
+					}
+					enableX_UIFlight
+					{
+						controlEnabled = True
+					}
+					enableY_UIFlight
+					{
+						controlEnabled = True
+					}
+					enableZ_UIFlight
+					{
+						controlEnabled = True
+					}
+					EVENTS
+					{
+						Disable
+						{
+							active = True
+							guiActive = True
+							guiIcon = Disable RCS Port
+							guiName = Disable RCS Port
+							category = Disable RCS Port
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+						Enable
+						{
+							active = False
+							guiActive = True
+							guiIcon = Enable RCS Port
+							guiName = Enable RCS Port
+							category = Enable RCS Port
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+						ToggleAction
+						{
+							actionGroup = None
+						}
+					}
+				}
+			}
+			PART
+			{
+				name = rcsblock-orbital-linear-1
+				cid = 4294257112
+				uid = 1728061079
+				mid = 2842116751
+				launchID = 19
+				parent = 0
+				position = 0.902041375637054,0.218820571899414,-0.520793914794922
+				rotation = -0.5000001,0.4999998,0.5000001,-0.5
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 0
+				dstg = 0
+				sqor = -1
+				sepI = 0
+				sidx = -1
+				attm = 1
+				sym = 2
+				srfN = srfAttach, 0
+				mass = 0.02
+				temp = 287.557153618119
+				tempExt = 287.789831081825
+				expt = 0.5
+				state = 0
+				connected = True
+				attached = True
+				flag = Squad/Flags/kerbin
+				rTrf = rcsblock-orbital-linear-1
+				modCost = 0
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ExtendedPartInfo
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = CollisionFX
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = RcsSounds
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = USI_ModuleRecycleablePart
+					isEnabled = True
+					EVENTS
+					{
+						ScrapPart
+						{
+							active = True
+							guiActive = False
+							guiIcon = Scrap part
+							guiName = Scrap Part
+							category = Scrap part
+							guiActiveUnfocused = True
+							unfocusedRange = 5
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = USI_ModuleRecycleablePart
+					isEnabled = True
+					EVENTS
+					{
+						ScrapPart
+						{
+							active = True
+							guiActive = False
+							guiIcon = Scrap part
+							guiName = Salvage Part
+							category = Scrap part
+							guiActiveUnfocused = True
+							unfocusedRange = 5
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleTweakableRCS
+					isEnabled = True
+					startEnabled = True
+					thrustLimit = 1
+					startEnabled_UIFlight
+					{
+						controlEnabled = True
+					}
+					thrustLimit_UIFlight
+					{
+						controlEnabled = True
+						minValue = 0
+						maxValue = 1
+						incrementSlide = 0.025
+					}
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						ActionEnableThruster
+						{
+							actionGroup = None
+						}
+						ActionDisableThruster
+						{
+							actionGroup = None
+						}
+					}
+				}
+				MODULE
+				{
+					name = ModuleRCSFX
+					isEnabled = True
+					enableYaw = True
+					enablePitch = True
+					enableRoll = True
+					enableX = True
+					enableY = True
+					enableZ = True
+					rcsEnabled = True
+					enableYaw_UIFlight
+					{
+						controlEnabled = True
+					}
+					enablePitch_UIFlight
+					{
+						controlEnabled = True
+					}
+					enableRoll_UIFlight
+					{
+						controlEnabled = True
+					}
+					enableX_UIFlight
+					{
+						controlEnabled = True
+					}
+					enableY_UIFlight
+					{
+						controlEnabled = True
+					}
+					enableZ_UIFlight
+					{
+						controlEnabled = True
+					}
+					EVENTS
+					{
+						Disable
+						{
+							active = True
+							guiActive = True
+							guiIcon = Disable RCS Port
+							guiName = Disable RCS Port
+							category = Disable RCS Port
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+						Enable
+						{
+							active = False
+							guiActive = True
+							guiIcon = Enable RCS Port
+							guiName = Enable RCS Port
+							category = Enable RCS Port
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+						ToggleAction
+						{
+							actionGroup = None
+						}
+					}
+				}
+			}
+			PART
+			{
+				name = battery-375
+				cid = 4294242530
+				uid = 3362511240
+				mid = 2842116751
+				launchID = 19
+				parent = 0
+				position = 0,-0.272960662841797,0
+				rotation = 1,0,0,0
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 0
+				dstg = 0
+				sqor = -1
+				sepI = 0
+				sidx = -1
+				attm = 0
+				srfN = , -1
+				attN = top, -1
+				attN = bottom, 0
+				mass = 0.1333333
+				temp = 287.566677922075
+				tempExt = 287.97774480874
+				expt = 0.1481482
+				state = 0
+				connected = True
+				attached = True
+				flag = Squad/Flags/kerbin
+				rTrf = battery-375
+				modCost = -7388.889
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ExtendedPartInfo
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = CollisionFX
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = USI_ModuleRecycleablePart
+					isEnabled = True
+					EVENTS
+					{
+						ScrapPart
+						{
+							active = True
+							guiActive = False
+							guiIcon = Scrap part
+							guiName = Scrap Part
+							category = Scrap part
+							guiActiveUnfocused = True
+							unfocusedRange = 5
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = USI_ModuleRecycleablePart
+					isEnabled = True
+					EVENTS
+					{
+						ScrapPart
+						{
+							active = True
+							guiActive = False
+							guiIcon = Scrap part
+							guiName = Salvage Part
+							category = Scrap part
+							guiActiveUnfocused = True
+							unfocusedRange = 5
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = TweakScale
+					isEnabled = True
+					currentScale = 2.5
+					defaultScale = 3.75
+					defaultTransformScale = (1, 1, 1)
+					DryCost = 3111.111
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				RESOURCE
+				{
+					name = ElectricCharge
+					amount = 2666.63190507602
+					maxAmount = 2666.66690508525
+					flowState = True
+					isTweakable = True
+					hideFlow = False
+					flowMode = Both
+				}
+			}
+			PART
+			{
+				name = NAU.ORI69Gm
+				cid = 4294235202
+				uid = 1627073132
+				mid = 2842116751
+				launchID = 19
+				parent = 0
+				position = -1.20557427406311,-0.0931797027587891,0.323032855987549
+				rotation = 0.5609855,-0.4304594,0.4304593,0.5609857
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 0
+				dstg = 0
+				sqor = -1
+				sepI = 0
+				sidx = -1
+				attm = 1
+				srfN = srfAttach, 0
+				attN = bottom, -1
+				mass = 0.18
+				temp = 287.560520530589
+				tempExt = 287.881122363012
+				expt = 0.5
+				state = 0
+				connected = True
+				attached = True
+				flag = Squad/Flags/kerbin
+				rTrf = NAU.ORI69Gm
+				modCost = 0
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleAnimateGeneric
+					isEnabled = True
+					status = Locked
+					animSwitch = True
+					animTime = 0
+					animSpeed = 1
+					EVENTS
+					{
+						Toggle
+						{
+							active = True
+							guiActive = False
+							guiActiveEditor = True
+							guiIcon = Toggle
+							guiName = Extend
+							category = Toggle
+							guiActiveUnfocused = True
+							unfocusedRange = 5
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+						ToggleAction
+						{
+							actionGroup = None
+							active = False
+						}
+					}
+				}
+				MODULE
+				{
+					name = ModuleDataTransmitter
+					isEnabled = True
+					EVENTS
+					{
+						StartTransmission
+						{
+							active = True
+							guiActive = True
+							guiIcon = Transmit Data
+							guiName = Transmit Data
+							category = Transmit Data
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+						StopTransmission
+						{
+							active = False
+							guiActive = True
+							guiIcon = Stop Transmitting
+							guiName = Stop Transmitting
+							category = Stop Transmitting
+							guiActiveUnfocused = False
 							unfocusedRange = 2
 							externalToEVAOnly = True
 						}
@@ -2809,24 +3840,226 @@ GAME
 				}
 				MODULE
 				{
-					name = ModuleKISInventory
+					name = ExtendedPartInfo
 					isEnabled = True
-					invName = 
-					helmetEquipped = True
 					EVENTS
 					{
-						ShowInventory
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = CollisionFX
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = USI_ModuleRecycleablePart
+					isEnabled = True
+					EVENTS
+					{
+						ScrapPart
 						{
 							active = True
-							guiActive = True
-							guiActiveEditor = True
-							guiIcon = 
-							guiName = 
-							category = 
+							guiActive = False
+							guiIcon = Scrap part
+							guiName = Scrap Part
+							category = Scrap part
 							guiActiveUnfocused = True
+							unfocusedRange = 5
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = USI_ModuleRecycleablePart
+					isEnabled = True
+					EVENTS
+					{
+						ScrapPart
+						{
+							active = True
+							guiActive = False
+							guiIcon = Scrap part
+							guiName = Salvage Part
+							category = Scrap part
+							guiActiveUnfocused = True
+							unfocusedRange = 5
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleTweakableAnimateGeneric
+					isEnabled = True
+					startCompleted = False
+					startCompleted_UIFlight
+					{
+						controlEnabled = True
+					}
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleRTAntenna
+					isEnabled = True
+					IsRTAntenna = True
+					IsRTActive = False
+					IsRTPowered = False
+					IsRTBroken = False
+					RTDishCosAngle = 0.999999996192282
+					RTOmniRange = 0
+					RTDishRange = 0
+					RTAntennaTarget = 00000000-0000-0000-0000-000000000000
+					EVENTS
+					{
+						EventToggle
+						{
+							active = True
+							guiActive = False
+							guiIcon = 
+							guiName = Toggle
+							category = 
+							guiActiveUnfocused = False
 							unfocusedRange = 2
 							externalToEVAOnly = True
 						}
+						EventTarget
+						{
+							active = True
+							guiActive = True
+							guiIcon = Target
+							guiName = No Target
+							category = Target
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+						EventEditorOpen
+						{
+							active = True
+							guiActive = False
+							guiActiveEditor = True
+							guiIcon = Start deployed
+							guiName = Start deployed
+							category = Start deployed
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+						EventEditorClose
+						{
+							active = True
+							guiActive = False
+							guiIcon = Start retracted
+							guiName = Start retracted
+							category = Start retracted
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+						EventOpen
+						{
+							active = True
+							guiActive = True
+							guiIcon = 
+							guiName = Activate
+							category = 
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+						EventClose
+						{
+							active = False
+							guiActive = False
+							guiIcon = 
+							guiName = Deactivate
+							category = 
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+						OverrideTarget
+						{
+							active = True
+							guiActive = False
+							guiIcon = [EVA] Set Target
+							guiName = [EVA] Set Target
+							category = [EVA] Set Target
+							guiActiveUnfocused = True
+							unfocusedRange = 5
+							externalToEVAOnly = True
+						}
+						OverrideOpen
+						{
+							active = True
+							guiActive = False
+							guiIcon = [EVA] Force Open
+							guiName = [EVA] Force Open
+							category = [EVA] Force Open
+							guiActiveUnfocused = True
+							unfocusedRange = 5
+							externalToEVAOnly = True
+						}
+						OverrideClose
+						{
+							active = True
+							guiActive = False
+							guiIcon = [EVA] Force Close
+							guiName = [EVA] Force Close
+							category = [EVA] Force Close
+							guiActiveUnfocused = False
+							unfocusedRange = 5
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+						ActionToggle
+						{
+							actionGroup = None
+						}
+						ActionOpen
+						{
+							actionGroup = None
+						}
+						ActionClose
+						{
+							actionGroup = None
+						}
+					}
+				}
+				MODULE
+				{
+					name = ModuleSPUPassive
+					isEnabled = True
+					IsRTPowered = True
+					IsRTSignalProcessor = True
+					IsRTCommandStation = False
+					EVENTS
+					{
 					}
 					ACTIONS
 					{
@@ -2872,7 +4105,7 @@ GAME
 				trimPitch = 0
 				trimYaw = 0
 				trimRoll = 0
-				mainThrottle = 0.5
+				mainThrottle = 0
 			}
 		}
 	}
@@ -2887,12 +4120,12 @@ GAME
 			dumb = 0.5
 			badS = True
 			tour = False
-			state = Assigned
+			state = Available
 			ToD = 7200
 			idx = 0
 			CAREER_LOG
 			{
-				flight = 2
+				flight = 4
 				0 = Orbit,Kerbin
 				0 = ExitVessel,Kerbin
 				0 = Spawn
@@ -2901,10 +4134,12 @@ GAME
 				0 = Spawn
 				0 = Recover
 				1 = Recover
+				2 = Recover
+				3 = Recover
 			}
 			FLIGHT_LOG
 			{
-				flight = 2
+				flight = 4
 			}
 		}
 		KERBAL
@@ -2916,12 +4151,12 @@ GAME
 			dumb = 0.8
 			badS = False
 			tour = False
-			state = Assigned
+			state = Available
 			ToD = 7200
 			idx = 1
 			CAREER_LOG
 			{
-				flight = 4
+				flight = 6
 				0 = Recover
 				1 = Land,Kerbin
 				1 = ExitVessel,Kerbin
@@ -2932,14 +4167,16 @@ GAME
 				3 = Land,Kerbin
 				3 = BoardVessel,Kerbin
 				3 = Recover
-			}
-			FLIGHT_LOG
-			{
-				flight = 4
 				4 = Orbit,Kerbin
 				4 = ExitVessel,Kerbin
 				4 = Spawn
 				4 = Spawn
+				4 = Recover
+				5 = Recover
+			}
+			FLIGHT_LOG
+			{
+				flight = 6
 			}
 		}
 		KERBAL

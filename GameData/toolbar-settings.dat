@@ -96,7 +96,7 @@ toolbars
 			drawBorder = False
 			useKSPSkin = False
 			buttonOrder = __TOOLBAR_INTERNAL.configureVisibleButtons,QuickGoToVAB.QuickGoToVAB,QuickGoToSPH.QuickGoToSPH,QuickGoToSC.QuickGoToSC,QuickGoToTS.QuickGoToTS
-			visibleButtons = MechJeb2.Custom_Info_Window,QuickGoToTS.QuickGoToTS,QuickGoToSPH.QuickGoToSPH,QuickGoToSC.QuickGoToSC,QuickGoToVAB.QuickGoToVAB
+			visibleButtons = MechJeb2.Custom_Info_Window,QuickGoToTS.QuickGoToTS,QuickGoToSPH.QuickGoToSPH,QuickGoToSC.QuickGoToSC,QuickGoToVAB.QuickGoToVAB,CIT_NodeHelper.NodeHelperButton
 		}
 		toolbar_86412879
 		{
@@ -123,7 +123,7 @@ toolbars
 			drawBorder = False
 			useKSPSkin = False
 			buttonOrder = __TOOLBAR_INTERNAL.configureVisibleButtons,QuickGoToVAB.QuickGoToVAB,QuickGoToSPH.QuickGoToSPH,QuickGoToSC.QuickGoToSC,QuickGoToTS.QuickGoToTS
-			visibleButtons = MechJeb2.Custom_Info_Window,QuickGoToTS.QuickGoToTS,QuickGoToSPH.QuickGoToSPH,QuickGoToSC.QuickGoToSC,QuickGoToVAB.QuickGoToVAB
+			visibleButtons = MechJeb2.Custom_Info_Window,QuickGoToTS.QuickGoToTS,QuickGoToSPH.QuickGoToSPH,QuickGoToSC.QuickGoToSC,QuickGoToVAB.QuickGoToVAB,CIT_NodeHelper.NodeHelperButton
 		}
 		toolbar_86412879
 		{
