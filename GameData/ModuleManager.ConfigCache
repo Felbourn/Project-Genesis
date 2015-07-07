@@ -1,4 +1,4 @@
-patchedNodeCount = 10668
+patchedNodeCount = 10825
 catEatenCount = 0
 UrlConfig
 {
@@ -3047,11 +3047,11 @@ UrlConfig
 		cost = 1500
 		category = Science
 		subcategory = 0
-		title = HG-55 High Gain Antenna FIX ME
+		title = HG-55 High Gain Antenna
 		manufacturer = Ionic Symphonic Protonic Electronics
 		description = Designed for deep space probes, the HG-55 allows for high speed directional data transmission.
 		attachRules = 0,1,0,0,0
-		mass = 0.035
+		mass = 0.05
 		dragModelType = default
 		maximum_drag = 0.2
 		minimum_drag = 0.2
@@ -3071,15 +3071,7 @@ UrlConfig
 			endEventGUIName = Retract
 			actionGUIName = Toggle Antenna
 			allowAnimationWhileShielded = False
-		}
-		MODULE
-		{
-			name = ModuleDataTransmitter
-			packetInterval = 0.15
-			packetSize = 3
-			packetResourceCost = 20.0
-			requiredResource = ElectricCharge
-			DeployFxModules = 0
+			allowManualControl = false
 		}
 		MODULE
 		{
@@ -3110,6 +3102,26 @@ UrlConfig
 		MODULE
 		{
 			name = ModuleTweakableAnimateGeneric
+		}
+		MODULE
+		{
+			name = ModuleRTAntenna
+			Mode0DishRange = 0
+			Mode1DishRange = 8000000
+			EnergyCost = 0.08888896
+			MaxQ = 6000
+			DishAngle = 5
+			DeployFxModules = 0
+			TRANSMITTER
+			{
+				PacketInterval = 0.3
+				PacketSize = 2
+				PacketResourceCost = 15.0
+			}
+		}
+		MODULE
+		{
+			name = ModuleSPUPassive
 		}
 	}
 }
@@ -6867,6 +6879,75 @@ UrlConfig
 }
 UrlConfig
 {
+	name = Fel_EngineAdapter
+	type = PART
+	parentUrl = Felbourn/Payload Adapters/engineAdapter
+	url = Felbourn/Payload Adapters/engineAdapter/Fel_EngineAdapter
+	PART
+	{
+		name = Fel_EngineAdapter
+		module = Part
+		category = 2
+		subcategory = 0
+		title = Payload Engine Mount FIX ME
+		author = Felbourn
+		manufacturer = Felbourn Industries
+		description = Attach to your payload, then attach lower staqge, then attach engine to this mount. The engine can be as small as you want since it no longer connects to the next stage down, and it won't display its fairing either.
+		rescaleFactor = 1.0
+		scale = 1.25
+		node_stack_bottom = 0.0, 0.0, 0.0,    0.0, -1.0, 0.0,   4
+		node_stack_bottom2 = 0.0, 0.2, 0.0,   0.0, 1.0, 0.0,    4
+		node_stack_top = 0.0, 2.5145, 0.0,    0.0, 1.0, 0.0,    4
+		attachRules = 1,0,1,1,0
+		TechRequired = metaMaterials
+		entryCost = 16000
+		cost = 3200
+		mass = 2
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		angularDrag = 2
+		crashTolerance = 9
+		maxTemp = 3400
+		fuelCrossFeed = True
+		heatConductivity = 0.01
+		breakingForce = 10000
+		breakingTorque = 10000
+		MODEL
+		{
+			model = KWRocketry/Parts/Fairings/UnifiedFairings/KW_Auto_5mInterstage2
+			scale = 1.6665625, 0.1, 1.6665625
+		}
+		MODULE
+		{
+			name = ExtendedPartInfo
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+	}
+}
+UrlConfig
+{
 	name = FuseBoxMonitor
 	type = RPMCVARIABLEHANDLER
 	parentUrl = Fusebox/FuseboxVariables
@@ -7745,73 +7826,6 @@ UrlConfig
 }
 UrlConfig
 {
-	name = FigaroReceiver
-	type = PART
-	parentUrl = KerbalGPS/Parts/FigaroReceiver/part
-	url = KerbalGPS/Parts/FigaroReceiver/part/FigaroReceiver
-	PART
-	{
-		name = FigaroReceiver
-		module = Part
-		author = PakledHostage | MrPwner
-		mesh = model.mu
-		scale = 1
-		rescaleFactor = 0.1
-		PhysicsSignificance = 0
-		node_attach = -0.383, 0.0, 0.0, 0.0, 0.0, -1.0
-		TechRequired = electronics
-		entryCost = 5000
-		cost = 10
-		category = Science
-		subcategory = 0
-		title = Figaro GNSS Receiver FIX ME
-		manufacturer = Procyon Innovations
-		description = Let us tell you where to go and how to get there!
-		attachRules = 0,1,0,1,1,0,1
-		mass = 0.001
-		dragModelType = default
-		maximum_drag = 0.2
-		minimum_drag = 0.2
-		angularDrag = 2
-		crashTolerance = 7
-		maxTemp = 3000
-		MODULE
-		{
-			name = KerbalGPS
-			GNSSacronym = NONE
-			EnableSBAS = FALSE
-			EarthTime = FALSE
-		}
-		MODULE
-		{
-			name = ExtendedPartInfo
-		}
-		MODULE
-		{
-			name = CollisionFX
-			scrapeSparks = true
-			collisionSound = CollisionFX/Sounds/Bang1
-			scrapeSound = CollisionFX/Sounds/GroundSkid
-			sparkSound = CollisionFX/Sounds/SparkSqueal
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Scrap Part
-			ResourceName = Recyclables
-			Efficiency = .8
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Salvage Part
-			ResourceName = SpecializedParts
-			Efficiency = .4
-		}
-	}
-}
-UrlConfig
-{
 	name = FigaroTransmitter
 	type = PART
 	parentUrl = KerbalGPS/Parts/FigaroTransmitter/part
@@ -7822,8 +7836,8 @@ UrlConfig
 		module = Part
 		author = PakledHostage | MrPwner
 		mesh = FigaroTransmitter.mu
-		rescaleFactor = 0.23
-		node_stack = 0, -0.02, 0, 0, 1.0, 0, 0
+		rescaleFactor = 1
+		node_stack = 0, -0.02, 0,   0, -1, 0,   1
 		node_attach = 0, -0.02, 0, 0, -1.0, 0, 0
 		attachRules = 1,1,1,0,0
 		TechRequired = electronics
@@ -7831,26 +7845,16 @@ UrlConfig
 		cost = 900
 		category = Science
 		subcategory = 0
-		title = Figaro GNSS Transmitter FIX ME
+		title = Figaro GNSS Transmitter
 		manufacturer = Procyon Innovations
 		description = Now every satellite in your GNSS constellation requires a transmitter. Add the Figaro transmitter part to dedicated GNSS satellites, or to multi-purpose satellites.
-		mass = 0.20
+		mass = 0.1
 		dragModelType = default
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
 		crashTolerance = 15
 		maxTemp = 3200
-		MODULE
-		{
-			name = ModuleGenerator
-			isAlwaysActive = True
-			INPUT_RESOURCE
-			{
-				name = ElectricCharge
-				rate = 0.03
-			}
-		}
 		MODULE
 		{
 			name = ExtendedPartInfo
@@ -7876,6 +7880,24 @@ UrlConfig
 			Menu = Salvage Part
 			ResourceName = SpecializedParts
 			Efficiency = .4
+		}
+		MODULE
+		{
+			name = ModuleRTAntenna
+			IsRTActive = true
+			Mode0OmniRange = 0
+			Mode1OmniRange = 4000000
+			EnergyCost = 0.0694445
+			TRANSMITTER
+			{
+				PacketInterval = 0.3
+				PacketSize = 2
+				PacketResourceCost = 15.0
+			}
+		}
+		MODULE
+		{
+			name = ModuleSPUPassive
 		}
 	}
 }
@@ -23250,7 +23272,7 @@ UrlConfig
 		TechRequired = actuators
 		entryCost = 7800
 		cost = 250
-		category = none
+		category = Utility
 		subcategory = 0
 		title = Extendatron - Basic FIX ME
 		manufacturer = Magic Smoke Industries
@@ -23341,7 +23363,7 @@ UrlConfig
 		TechRequired = actuators
 		entryCost = 7800
 		cost = 250
-		category = none
+		category = Utility
 		subcategory = 0
 		title = Extendatron - Right-Angle FIX ME
 		manufacturer = Magic Smoke Industries
@@ -23431,7 +23453,7 @@ UrlConfig
 		TechRequired = advMetalworks
 		entryCost = 7800
 		cost = 250
-		category = none
+		category = Utility
 		subcategory = 0
 		title = Extendatron - Stackable FIX ME
 		manufacturer = Magic Smoke Industries
@@ -23521,7 +23543,7 @@ UrlConfig
 		TechRequired = advConstruction
 		entryCost = 7800
 		cost = 250
-		category = none
+		category = Utility
 		subcategory = 0
 		title = Joint Pivotron - Basic FIX ME
 		manufacturer = Magic Smoke Industries
@@ -23611,7 +23633,7 @@ UrlConfig
 		TechRequired = actuators
 		entryCost = 7800
 		cost = 250
-		category = none
+		category = Utility
 		subcategory = 0
 		title = Hinge Pivotron - Basic FIX ME
 		manufacturer = Magic Smoke Industries
@@ -23701,7 +23723,7 @@ UrlConfig
 		TechRequired = advMetalworks
 		entryCost = 7800
 		cost = 250
-		category = none
+		category = Utility
 		subcategory = 0
 		title = Hinge Pivotron - Flat FIX ME
 		manufacturer = Magic Smoke Industries
@@ -23791,7 +23813,7 @@ UrlConfig
 		TechRequired = actuators
 		entryCost = 7800
 		cost = 250
-		category = none
+		category = Utility
 		subcategory = 0
 		title = Joint Pivotron - Wide Angle FIX ME
 		manufacturer = Magic Smoke Industries
@@ -23881,7 +23903,7 @@ UrlConfig
 		TechRequired = actuators
 		entryCost = 7800
 		cost = 250
-		category = none
+		category = Utility
 		subcategory = 0
 		title = Joint Pivotron - Half Basic FIX ME
 		manufacturer = Magic Smoke Industries
@@ -23971,7 +23993,7 @@ UrlConfig
 		TechRequired = advMetalworks
 		entryCost = 7800
 		cost = 250
-		category = none
+		category = Utility
 		subcategory = 0
 		title = Joint Pivotron - Narrow Angle FIX ME
 		manufacturer = Magic Smoke Industries
@@ -24061,7 +24083,7 @@ UrlConfig
 		TechRequired = specializedConstruction
 		entryCost = 7800
 		cost = 250
-		category = none
+		category = Utility
 		subcategory = 0
 		title = Joint Pivotron - Uncontrolled FIX ME
 		manufacturer = Magic Smoke Industries
@@ -24146,7 +24168,7 @@ UrlConfig
 		TechRequired = specializedConstruction
 		entryCost = 7800
 		cost = 250
-		category = none
+		category = Utility
 		subcategory = 0
 		title = Joint Pivotron - Uncontrolled (Rev. Mount) FIX ME
 		manufacturer = Magic Smoke Industries
@@ -24231,7 +24253,7 @@ UrlConfig
 		TechRequired = advConstruction
 		entryCost = 7800
 		cost = 250
-		category = none
+		category = Utility
 		subcategory = 0
 		title = Rotatron - Basic FIX ME
 		manufacturer = Magic Smoke Industries
@@ -24322,7 +24344,7 @@ UrlConfig
 		TechRequired = advMetalworks
 		entryCost = 7800
 		cost = 250
-		category = none
+		category = Utility
 		subcategory = 0
 		title = Rotatron - Off-Axis FIX ME
 		manufacturer = Magic Smoke Industries
@@ -24413,7 +24435,7 @@ UrlConfig
 		TechRequired = actuators
 		entryCost = 7800
 		cost = 250
-		category = none
+		category = Utility
 		subcategory = 0
 		title = Rotatron - Right-Angle FIX ME
 		manufacturer = Magic Smoke Industries
@@ -24504,7 +24526,7 @@ UrlConfig
 		TechRequired = actuators
 		entryCost = 7800
 		cost = 250
-		category = none
+		category = Utility
 		subcategory = 0
 		title = Rotatron - Right-Angle (Rev. Mount) FIX ME
 		manufacturer = Magic Smoke Industries
@@ -24595,7 +24617,7 @@ UrlConfig
 		TechRequired = specializedConstruction
 		entryCost = 7800
 		cost = 250
-		category = none
+		category = Utility
 		subcategory = 0
 		title = Rotatron - Uncontrolled FIX ME
 		manufacturer = Magic Smoke Industries
@@ -26120,7 +26142,7 @@ UrlConfig
 		TechRequired = advMetalworks
 		entryCost = 7800
 		cost = 250
-		category = none
+		category = Utility
 		subcategory = 0
 		title = Adaptron - Basic FIX ME
 		manufacturer = Magic Smoke Industries
@@ -26210,7 +26232,7 @@ UrlConfig
 		TechRequired = advMetalworks
 		entryCost = 7800
 		cost = 250
-		category = none
+		category = Utility
 		subcategory = 0
 		title = Adaptron - Offset FIX ME
 		manufacturer = Magic Smoke Industries
@@ -26300,7 +26322,7 @@ UrlConfig
 		TechRequired = composites
 		entryCost = 7800
 		cost = 250
-		category = none
+		category = Utility
 		subcategory = 0
 		title = Foldatron - Basic FIX ME
 		manufacturer = Magic Smoke Industries
@@ -26390,7 +26412,7 @@ UrlConfig
 		TechRequired = composites
 		entryCost = 7800
 		cost = 250
-		category = none
+		category = Utility
 		subcategory = 0
 		title = Foldatron - Basic (Rev. Mount) FIX ME
 		manufacturer = Magic Smoke Industries
@@ -26480,7 +26502,7 @@ UrlConfig
 		TechRequired = composites
 		entryCost = 7800
 		cost = 250
-		category = none
+		category = Utility
 		subcategory = 0
 		title = Foldatron - Extended FIX ME
 		manufacturer = Magic Smoke Industries
@@ -26570,7 +26592,7 @@ UrlConfig
 		TechRequired = composites
 		entryCost = 7800
 		cost = 250
-		category = none
+		category = Utility
 		subcategory = 0
 		title = Foldatron - Extended (Rev. Mount) FIX ME
 		manufacturer = Magic Smoke Industries
@@ -26660,7 +26682,7 @@ UrlConfig
 		TechRequired = composites
 		entryCost = 7800
 		cost = 250
-		category = none
+		category = Utility
 		subcategory = 0
 		title = Foldatron - Hinge FIX ME
 		manufacturer = Magic Smoke Industries
@@ -26750,7 +26772,7 @@ UrlConfig
 		TechRequired = metaMaterials
 		entryCost = 7800
 		cost = 250
-		category = none
+		category = Utility
 		subcategory = 0
 		title = Foldatron - Inset FIX ME
 		manufacturer = Magic Smoke Industries
@@ -26842,7 +26864,7 @@ UrlConfig
 		TechRequired = metaMaterials
 		entryCost = 7800
 		cost = 250
-		category = none
+		category = Utility
 		subcategory = 0
 		title = Foldatron - Inset (End) FIX ME
 		manufacturer = Magic Smoke Industries
@@ -26933,7 +26955,7 @@ UrlConfig
 		TechRequired = metaMaterials
 		entryCost = 7800
 		cost = 250
-		category = none
+		category = Utility
 		subcategory = 0
 		title = Foldatron - Inset (Twist) FIX ME
 		manufacturer = Magic Smoke Industries
@@ -27025,7 +27047,7 @@ UrlConfig
 		TechRequired = metaMaterials
 		entryCost = 7800
 		cost = 250
-		category = none
+		category = Utility
 		subcategory = 0
 		title = Foldatron - Mini FIX ME
 		manufacturer = Magic Smoke Industries
@@ -27116,7 +27138,7 @@ UrlConfig
 		TechRequired = metaMaterials
 		entryCost = 7800
 		cost = 250
-		category = none
+		category = Utility
 		subcategory = 0
 		title = Foldatron - Mini (Rev. Mount) FIX ME
 		manufacturer = Magic Smoke Industries
@@ -27206,7 +27228,7 @@ UrlConfig
 		TechRequired = metaMaterials
 		entryCost = 7800
 		cost = 250
-		category = none
+		category = Utility
 		subcategory = 0
 		title = Foldatron - Offset FIX ME
 		manufacturer = Magic Smoke Industries
@@ -27296,7 +27318,7 @@ UrlConfig
 		TechRequired = metaMaterials
 		entryCost = 7800
 		cost = 250
-		category = none
+		category = Utility
 		subcategory = 0
 		title = Foldatron - Offset Mini FIX ME
 		manufacturer = Magic Smoke Industries
@@ -27455,7 +27477,7 @@ UrlConfig
 		TechRequired = metaMaterials
 		entryCost = 7800
 		cost = 250
-		category = Structural
+		category = 0
 		subcategory = 0
 		title = RoboAthleteTruss - 0.625m Half FIX ME
 		manufacturer = Magic Smoke Industries
@@ -27591,7 +27613,7 @@ UrlConfig
 		TechRequired = metaMaterials
 		entryCost = 7800
 		cost = 250
-		category = Structural
+		category = 0
 		subcategory = 0
 		title = RoboAthleteTruss - 1.875m Half FIX ME
 		manufacturer = Magic Smoke Industries
@@ -27727,7 +27749,7 @@ UrlConfig
 		TechRequired = metaMaterials
 		entryCost = 7800
 		cost = 250
-		category = Structural
+		category = 0
 		subcategory = 0
 		title = RoboAthleteTruss - 4.375m Half FIX ME
 		manufacturer = Magic Smoke Industries
@@ -28363,6 +28385,558 @@ UrlConfig
 		title = Taxiway Bend
 		manufacturer = KashCorp
 		description = A taxiway bend.
+	}
+}
+UrlConfig
+{
+	name = meps1stack
+	type = PART
+	parentUrl = MEPS/Parts/meps1stack
+	url = MEPS/Parts/meps1stack/meps1stack
+	PART
+	{
+		name = meps1stack
+		module = Part
+		author = ThiagoBS
+		rescaleFactor = 1
+		node_attach = 0.0, 1.635, 0.0, 0.0, 1.0, 0.0, 1
+		node_stack_right = -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, 1
+		node_stack_left = 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1
+		node_stack_top = 0.0, 1.635, 0.0, 0.0, 1.0, 0.0, 1
+		node_stack_bottom = 0.0, -1.5, 0.0, 0.0, -1.0, 0.0, 1
+		TechRequired = composites
+		entryCost = 1000
+		cost = 120
+		category = Utility
+		subcategory = 0
+		title = MEPS Stackable Frame FIX ME
+		manufacturer = ThiagoBS' Hardware Store
+		description = A MEPS frame, includes a longitudinal stack adapter. The Multipurpose Express Pallet System (MEPS) was conceived by the boffins at our Construction Hardware store when a clerk used a gardening trellis to transport heavy boxes. Created to facilitate resupply missions to space stations or planetary bases, just attach any goods to MEPS frames and ship 'em away! Warning: We are not responsible for any harm caused by using them as a cell or cage. Doors not supplied, Kerbals may be stuck forever!
+		attachRules = 1,1,1,1,0
+		stackSymmetry = 1
+		mass = 0.3
+		dragModelType = default
+		maximum_drag = 0.3
+		minimum_drag = 0.3
+		angularDrag = 3
+		crashTolerance = 30
+		maxTemp = 3400
+		fuelCrossFeed = True
+		MODEL
+		{
+			model = MEPS/Parts/meps1stack
+			scale = 1.0, 1.0, 1.0
+		}
+		MODULE
+		{
+			name = ExtendedPartInfo
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = TweakScale
+			defaultScale = 2.5
+			type = stack
+		}
+	}
+}
+UrlConfig
+{
+	name = mepsdock
+	type = PART
+	parentUrl = MEPS/Parts/mepsdock
+	url = MEPS/Parts/mepsdock/mepsdock
+	PART
+	{
+		name = mepsdock
+		module = Part
+		author = ThiagoBS
+		rescaleFactor = 1
+		node_attach = 0.0, -0.020, 0.0, 0.0, -1.0, 0.0, 1
+		node_stack_top = 0.0, 0.115, 0.0, 0.0, 1.0, 0.0, 1
+		node_stack_bottom = 0.0, -0.020, 0.0, 0.0, -1.0, 0.0, 1
+		TechRequired = composites
+		entryCost = 1000
+		cost = 50
+		category = Utility
+		subcategory = 0
+		title = MEPS Stack Adapter FIX ME
+		manufacturer = ThiagoBS' Hardware Store
+		description = A MEPS Stack Adapter. Attach a docking port on the wider side and a MEPS Frame on the narrower side. The Multipurpose Express Pallet System (MEPS) was conceived by the boffins at our Construction Hardware store when a clerk used a gardening trellis to transport heavy boxes. Created to facilitate resupply missions to space stations or planetary bases, just attach any goods to MEPS frames and ship 'em away! Warning: We are not responsible for any harm caused by using them as a cell or cage. Doors not supplied, Kerbals may be stuck forever!
+		attachRules = 1,1,1,1,0
+		stackSymmetry = 1
+		mass = 0.3
+		dragModelType = default
+		maximum_drag = 0.3
+		minimum_drag = 0.3
+		angularDrag = 3
+		crashTolerance = 30
+		maxTemp = 3400
+		fuelCrossFeed = True
+		MODEL
+		{
+			model = MEPS/Parts/mepsdock
+			scale = 1.0, 1.0, 1.0
+		}
+		MODULE
+		{
+			name = ExtendedPartInfo
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = TweakScale
+			defaultScale = 0.625
+			type = stack
+		}
+	}
+}
+UrlConfig
+{
+	name = mepsoffs
+	type = PART
+	parentUrl = MEPS/Parts/mepsoffs
+	url = MEPS/Parts/mepsoffs/mepsoffs
+	PART
+	{
+		name = mepsoffs
+		module = Part
+		author = ThiagoBS
+		rescaleFactor = 1
+		node_attach = 0.0, 1.635, -0.5, 0.0, 1.0, 0.0, 1
+		node_stack_right = -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, 1
+		node_stack_left = 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1
+		node_stack_top = 0.0, 1.635, -0.5, 0.0, 1.0, 0.0, 1
+		node_stack_bottom = 0.0, -1.5, 0.0, 0.0, -1.0, 0.0, 1
+		TechRequired = composites
+		entryCost = 1000
+		cost = 120
+		category = Utility
+		subcategory = 0
+		title = MEPS Frame with Offset Adapter FIX ME
+		manufacturer = ThiagoBS' Hardware Store
+		description = A MEPS Frame with an offset stack adapter. The Multipurpose Express Pallet System (MEPS) was conceived by the boffins at our Construction Hardware store when a clerk used a gardening trellis to transport heavy boxes. Created to facilitate resupply missions to space stations or planetary bases, just attach any goods to MEPS frames and ship 'em away! Warning: We are not responsible for any harm caused by using them as a cell or cage. Doors not supplied, Kerbals may be stuck forever!
+		attachRules = 1,1,1,1,0
+		stackSymmetry = 1
+		mass = 0.3
+		dragModelType = default
+		maximum_drag = 0.3
+		minimum_drag = 0.3
+		angularDrag = 3
+		crashTolerance = 30
+		maxTemp = 3400
+		fuelCrossFeed = True
+		MODEL
+		{
+			model = MEPS/Parts/mepsoffs
+			scale = 1.0, 1.0, 1.0
+		}
+		MODULE
+		{
+			name = ExtendedPartInfo
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = TweakScale
+			defaultScale = 2.5
+			type = stack
+		}
+	}
+}
+UrlConfig
+{
+	name = mepsp
+	type = PART
+	parentUrl = MEPS/Parts/mepsp
+	url = MEPS/Parts/mepsp/mepsp
+	PART
+	{
+		name = mepsp
+		module = Part
+		author = ThiagoBS
+		rescaleFactor = 1
+		node_attach = 0.0, 1.5, 0.0, 0.0, 1.0, 0.0, 1
+		node_stack_right = -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, 1
+		node_stack_left = 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1
+		node_stack_bottom = 0.0, -1.5, 0.0, 0.0, -1.0, 0.0, 1
+		node_stack_top = 0.0, 1.5, 0.0, 0.0, 1.0, 0.0, 1
+		TechRequired = composites
+		entryCost = 1000
+		cost = 70
+		category = Utility
+		subcategory = 0
+		title = MEPS Plain Frame FIX ME
+		manufacturer = ThiagoBS' Hardware Store
+		description = A MEPS plain frame, without adapters. The Multipurpose Express Pallet System (MEPS) was conceived by the boffins at our Construction Hardware store when a clerk used a gardening trellis to transport heavy boxes. Created to facilitate resupply missions to space stations or planetary bases, just attach any goods to MEPS frames and ship 'em away! Warning: We are not responsible for any harm caused by using them as a cell or cage. Doors not supplied, Kerbals may be stuck forever!
+		attachRules = 1,1,1,1,0
+		stackSymmetry = 1
+		mass = 0.3
+		dragModelType = default
+		maximum_drag = 0.3
+		minimum_drag = 0.3
+		angularDrag = 3
+		crashTolerance = 30
+		maxTemp = 3400
+		fuelCrossFeed = True
+		MODEL
+		{
+			model = MEPS/Parts/mepsp
+			scale = 1.0, 1.0, 1.0
+		}
+		MODULE
+		{
+			name = ExtendedPartInfo
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = TweakScale
+			defaultScale = 2.5
+			type = stack
+		}
+	}
+}
+UrlConfig
+{
+	name = mepsperp
+	type = PART
+	parentUrl = MEPS/Parts/mepsperp
+	url = MEPS/Parts/mepsperp/mepsperp
+	PART
+	{
+		name = mepsperp
+		module = Part
+		author = ThiagoBS
+		rescaleFactor = 1
+		node_attach = 0.0, 0.0, 0.615, 0.0, 0.0, -0.5, 1
+		node_stack_right = -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, 1
+		node_stack_left = 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1
+		node_stack_top = 0.0, 1.5, 0.0, 0.0, 1.0, 0.0, 1
+		node_stack_bottom = 0.0, -1.5, 0.0, 0.0, -1.0, 0.0, 1
+		node_stack_wide = 0.0, 0.0, 0.615, 0.0, 0.0, 0.5, 1
+		TechRequired = composites
+		entryCost = 1000
+		cost = 120
+		category = Utility
+		subcategory = 0
+		title = MEPS Frame with Perpendicular Stack Adapter FIX ME
+		manufacturer = ThiagoBS' Hardware Store
+		description = A MEPS Frame with Perpendicular Stack Adapter. The Multipurpose Express Pallet System (MEPS) was conceived by the boffins at our Construction Hardware store when a clerk used a gardening trellis to transport heavy boxes. Created to facilitate resupply missions to space stations or planetary bases, just attach any goods to MEPS frames and ship 'em away! Warning: We are not responsible for any harm caused by using them as a cell or cage. Doors not supplied, Kerbals may be stuck forever!
+		attachRules = 1,1,1,1,0
+		stackSymmetry = 1
+		mass = 0.3
+		dragModelType = default
+		maximum_drag = 0.3
+		minimum_drag = 0.3
+		angularDrag = 3
+		crashTolerance = 30
+		maxTemp = 3400
+		fuelCrossFeed = True
+		MODEL
+		{
+			model = MEPS/Parts/mepsperp
+			scale = 1.0, 1.0, 1.0
+		}
+		MODULE
+		{
+			name = ExtendedPartInfo
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = TweakScale
+			defaultScale = 2.5
+			type = stack
+		}
+	}
+}
+UrlConfig
+{
+	name = NAU_ORI350Gm
+	type = PART
+	parentUrl = NAU/Parts/ORI350Gm/part
+	url = NAU/Parts/ORI350Gm/part/NAU_ORI350Gm
+	PART
+	{
+		name = NAU_ORI350Gm
+		module = Part
+		author = IGNOBIL
+		mesh = model.mu
+		scale = 0.1
+		node_stack_bottom = 0, 0, 0, 0.0, 1.0, 0.0
+		node_attach = 0, 0, 0, 0.0, -1.0, 0.0, 1
+		entryCost = 38500
+		cost = 11000
+		category = Science
+		subcategory = 0
+		title = NAU ORI350GM
+		manufacturer = NAU Aerospace
+		description = A massive radial boom dish from the Origami Foldable Assets series. You’ll reach most of Kerbol, with the convenience of a folding origami.
+		attachRules = 1,1,1,0,0
+		mass = 0.275
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		angularDrag = 2
+		crashTolerance = 8
+		maxTemp = 2900
+		MODULE
+		{
+			name = ModuleAnimateGeneric
+			animationName = Deploy
+			isOneShot = false
+			startEventGUIName = Extend
+			endEventGUIName = Retract
+			actionGUIName = Toggle Antenna
+		}
+		MODULE
+		{
+			name = ExtendedPartInfo
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = ModuleTweakableAnimateGeneric
+		}
+		MODULE
+		{
+			name = ModuleRTAntenna
+			Mode0DishRange = 0
+			Mode1DishRange = 65000000000
+			EnergyCost = 0.30000024
+			MaxQ = 6000
+			DishAngle = 0.005
+			DeployFxModules = 0
+			TRANSMITTER
+			{
+				PacketInterval = 0.3
+				PacketSize = 2
+				PacketResourceCost = 15.0
+			}
+		}
+		MODULE
+		{
+			name = ModuleSPUPassive
+		}
+	}
+}
+UrlConfig
+{
+	name = NAU_ORI69Gm
+	type = PART
+	parentUrl = NAU/Parts/ORI69Gm/part
+	url = NAU/Parts/ORI69Gm/part/NAU_ORI69Gm
+	PART
+	{
+		name = NAU_ORI69Gm
+		module = Part
+		author = IGNOBIL
+		mesh = model.mu
+		scale = 0.1
+		node_stack_bottom = 0, 0, 0, 0.0, 1.0, 0.0
+		node_attach = 0, 0, 0, 0.0, -1.0, 0.0, 1
+		entryCost = 38500
+		cost = 11000
+		category = Science
+		subcategory = 0
+		title = NAU ORI69GM
+		manufacturer = NAU Aerospace
+		description = A medium radial dish from the Origami Foldable Assets series. Reaching all the rocky inner planets.
+		attachRules = 1,1,1,0,0
+		mass = 0.18
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		angularDrag = 2
+		crashTolerance = 8
+		maxTemp = 2900
+		MODULE
+		{
+			name = ModuleAnimateGeneric
+			animationName = Deploy
+			isOneShot = false
+			startEventGUIName = Extend
+			endEventGUIName = Retract
+			actionGUIName = Toggle Antenna
+			allowManualControl = false
+		}
+		MODULE
+		{
+			name = ExtendedPartInfo
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = ModuleTweakableAnimateGeneric
+		}
+		MODULE
+		{
+			name = ModuleRTAntenna
+			Mode0DishRange = 0
+			Mode1DishRange = 10000000000
+			EnergyCost = 0.20000016
+			MaxQ = 6000
+			DishAngle = 0.01
+			DeployFxModules = 0
+			TRANSMITTER
+			{
+				PacketInterval = 0.3
+				PacketSize = 2
+				PacketResourceCost = 15.0
+			}
+		}
+		MODULE
+		{
+			name = ModuleSPUPassive
+		}
 	}
 }
 UrlConfig
@@ -29024,7 +29598,7 @@ UrlConfig
 		cost = 1800
 		category = Structural
 		subcategory = 0
-		title = Rockomax Skeletal XL Structural Adapter FIX ME
+		title = Rockomax Skeletal XL Structural Adapter
 		manufacturer = Rockomax Conglomerate
 		description = Rockomax's first hurried attempt to enter the Kerbodyne-dominated extra-large parts market was met with limited applause.
 		attachRules = 1,0,1,1,0
@@ -29060,18 +29634,6 @@ UrlConfig
 		}
 		MODULE
 		{
-			name = TweakScale
-			type = stack
-			defaultScale = 3.75
-		}
-		MODULE
-		{
-			name = ModuleDecouple
-			ejectionForce = 100
-			explosiveNodeID = top
-		}
-		MODULE
-		{
 			name = USI_ModuleRecycleablePart
 			Menu = Scrap Part
 			ResourceName = Recyclables
@@ -29086,25 +29648,15 @@ UrlConfig
 		}
 		MODULE
 		{
-			name = tjs_DecouplerLight
-			lightMultiplier = 1.0
-			lightRange = 15.0
-			lightRed = 1
-			lightGreen = 0.88
-			lightBlue = 0.68
-			lightDuration = 0.1
+			name = TweakScale
+			type = stack
+			defaultScale = 3.75
 		}
 		MODULE
 		{
-			name = ModuleTweakableDecouple
-			decouplerModuleName = ModuleDecouple
-		}
-		MODULE
-		{
-			name = ModuleStagingToggle
-			defaultDisabled = false
-			activeInFlight = true
-			activeInEditor = true
+			name = ModuleDecouple
+			ejectionForce = 100
+			explosiveNodeID = top
 		}
 	}
 }
@@ -30470,12 +31022,12 @@ UrlConfig
 		cost = 3220
 		category = Utility
 		subcategory = 0
-		title = B-3K Rechargable Battery Bank FIX ME
+		title = B-3K Rechargable Battery Bank
 		manufacturer = Batt-Direct Batteries
 		description = The biggest selling point of the B-3K is its reliance on 28 AAAA batteries, for redundancy. Note, unit may not operate with any dead batteries present. Do not attempt to remove batteries while running.
 		bulkheadProfiles = size0
 		attachRules = 1,0,1,1,0
-		mass = 0.14
+		mass = 0.04375
 		dragModelType = default
 		maximum_drag = 0.2
 		minimum_drag = 0.2
@@ -30514,71 +31066,11 @@ UrlConfig
 			ResourceName = SpecializedParts
 			Efficiency = .4
 		}
-	}
-}
-UrlConfig
-{
-	name = battery-125
-	type = PART
-	parentUrl = NearFutureElectrical/Parts/Batteries/battery-125/battery-125
-	url = NearFutureElectrical/Parts/Batteries/battery-125/battery-125/battery-125
-	PART
-	{
-		name = battery-125
-		module = Part
-		author = Chris Adderley
-		mesh = battery-125.mu
-		rescaleFactor = 1.0
-		node_stack_top = 0.0, 0.51, 0.0, 0.0, 1.0, 0.0, 1
-		node_stack_bottom = 0.0, -0.51, 0.0, 0.0, -1.0, 0.0, 1
-		TechRequired = specializedElectrics
-		entryCost = 19500
-		cost = 7040
-		category = Utility
-		subcategory = 0
-		title = B-6K Rechargable Battery Bank FIX ME
-		manufacturer = Batt-Direct Batteries
-		description = The B-6K is generally more reliable than the B-3K, because it uses the less accident-prone E batteries in its inline mount. Batt-Direct also advertises replacement capability for each battery, but recommends that this not be done by anyone outside of Batt-Direct. And certainly not in space.
-		bulkheadProfiles = size1
-		attachRules = 1,0,1,1,0
-		mass = 0.32
-		dragModelType = default
-		maximum_drag = 0.2
-		minimum_drag = 0.2
-		angularDrag = 1
-		crashTolerance = 8
-		maxTemp = 2000
-		MODULE
+		RESOURCE
 		{
-			name = ExtendedPartInfo
-		}
-		MODULE
-		{
-			name = CollisionFX
-			scrapeSparks = true
-			collisionSound = CollisionFX/Sounds/Bang1
-			scrapeSound = CollisionFX/Sounds/GroundSkid
-			sparkSound = CollisionFX/Sounds/SparkSqueal
-		}
-		MODULE
-		{
-			name = TweakScale
-			type = stack
-			defaultScale = 1.25
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Scrap Part
-			ResourceName = Recyclables
-			Efficiency = .8
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Salvage Part
-			ResourceName = SpecializedParts
-			Efficiency = .4
+			name = ElectricCharge
+			amount = 875
+			maxAmount = 875
 		}
 	}
 }
@@ -30602,7 +31094,7 @@ UrlConfig
 		cost = 12600
 		category = Utility
 		subcategory = 0
-		title = B-12K Rechargable Battery Bank FIX ME
+		title = B-12K Rechargable Battery Bank
 		manufacturer = Batt-Direct Batteries
 		description = In order to undercut Zaltronic Electronics, Batt Man Batteries has begun selling its largest 12K battery pack at wholesale prices to the KSC. A key selling point? The integrated ladder.
 		attachRules = 1,0,1,1,0
@@ -30651,6 +31143,12 @@ UrlConfig
 			ResourceName = SpecializedParts
 			Efficiency = .4
 		}
+		RESOURCE
+		{
+			name = ElectricCharge
+			amount = 12000
+			maxAmount = 12000
+		}
 	}
 }
 UrlConfig
@@ -30673,12 +31171,12 @@ UrlConfig
 		cost = 10500
 		category = Utility
 		subcategory = 0
-		title = B-10K Rechargable Battery Bank FIX ME
+		title = B-10K Rechargable Battery Bank
 		manufacturer = Batt-Direct Batteries
 		description = It's likely that without the impetus for extra-large parts that Kerbodyne provided, the B-10K would have remained a faroff dream in Bandas Kerman's mind. An innovative system of removeable wedge-shaped batter platters deliver quite a large amount of charge.
 		bulkheadProfiles = size3
 		attachRules = 1,0,1,1,0
-		mass = 0.5
+		mass = 0.45
 		dragModelType = default
 		maximum_drag = 0.2
 		minimum_drag = 0.2
@@ -30715,6 +31213,18 @@ UrlConfig
 			Menu = Salvage Part
 			ResourceName = SpecializedParts
 			Efficiency = .4
+		}
+		MODULE
+		{
+			name = TweakScale
+			type = stack
+			defaultScale = 3.75
+		}
+		RESOURCE
+		{
+			name = ElectricCharge
+			amount = 9000
+			maxAmount = 9000
 		}
 	}
 }
@@ -36308,7 +36818,7 @@ UrlConfig
 		cost = 60000
 		category = Utility
 		subcategory = 0
-		title = OKEB-500 Blanket Photovoltaic Array FIX ME
+		title = OKEB-500 Blanket Photovoltaic Array
 		manufacturer = The Organization of Kerbal Electric Blanket Producers
 		description = OKEB offers a new take on solar arrays - really, really big. Their first entry into the market dwarfs every solar panel on the market. Due to its unique construction methods, the panel is relatively cheap and light, but can't match the smaller panels in power density. Cannot be retracted.
 		attachRules = 0,1,0,0,1
@@ -36338,7 +36848,7 @@ UrlConfig
 			retractable = false
 			resourceName = ElectricCharge
 			trackingSpeed = 0.02
-			chargeRate = 500
+			chargeRate = 29.999999808
 		}
 		MODULE
 		{
@@ -36476,7 +36986,7 @@ UrlConfig
 		cost = 4800
 		category = Utility
 		subcategory = 0
-		title = NIV-18 Curved Solar Array FIX ME
+		title = NIV-18 Curved Solar Array
 		manufacturer = Joint Extraplanetary Business Coalition
 		description = Someday, we hope to be able to spray-paint an entire rocket stage with solar panels. For now, this is the best we can do.
 		attachRules = 0,1,0,0,1
@@ -36498,7 +37008,7 @@ UrlConfig
 		{
 			name = ModuleCurvedSolarPanel
 			PanelTransformName = sunCatcher
-			TotalEnergyRate = 30
+			TotalEnergyRate = 0.20416666536
 			ResourceName = ElectricCharge
 			powerCurve
 			{
@@ -36560,7 +37070,7 @@ UrlConfig
 		cost = 1800
 		category = Utility
 		subcategory = 0
-		title = NIV-3 Curved Solar Array FIX ME
+		title = NIV-3 Curved Solar Array
 		manufacturer = Joint Extraplanetary Business Coalition
 		description = Building a curved solar panel wasn't easy, but the folks at the Coalition tell us that it works *almost* as well as a flat one.
 		attachRules = 0,1,0,0,1
@@ -36608,7 +37118,7 @@ UrlConfig
 		{
 			name = TweakScale
 			type = stack_square
-			defaultScale = 2.5
+			defaultScale = 3.75
 		}
 		MODULE
 		{
@@ -36644,7 +37154,7 @@ UrlConfig
 		cost = 5460
 		category = Utility
 		subcategory = 0
-		title = SOL-A Expanding Curved Solar Array FIX ME
+		title = SOL-A Expanding Curved Solar Array
 		manufacturer = Joint Extraplanetary Business Coalition
 		description = Strong and compact when undeployed, the SOL-series solar arrays sure look cool and are quite strong, but suffer from a poor power to mass ratio.
 		attachRules = 0,1,0,0,1
@@ -36731,7 +37241,7 @@ UrlConfig
 		cost = 1230
 		category = Utility
 		subcategory = 0
-		title = KRX 1x3 Concentrating Photovoltaic Panels FIX ME
+		title = KRX 1x3 Concentrating Photovoltaic Panels
 		manufacturer = Kerb Kastra
 		description = As a follow up to the underwhelmingly popular 1x4 series, the KRX also includes concentrator lenses and sacrifices its ability to retract. The result is a panel that is quite light for its generation capabilities. Just don't sneeze on it.
 		attachRules = 0,1,0,0,1
@@ -36759,7 +37269,7 @@ UrlConfig
 			pivotName = pivot
 			isBreakable = true
 			resourceName = ElectricCharge
-			chargeRate = 5
+			chargeRate = 0.1128472215
 			retractable = false
 		}
 		MODULE
@@ -36817,7 +37327,7 @@ UrlConfig
 		cost = 1845
 		category = Utility
 		subcategory = 0
-		title = KRK 1x4 Concentrating Photovoltaic Panels FIX ME
+		title = KRK 1x4 Concentrating Photovoltaic Panels
 		manufacturer = Kerb Kastra
 		description = Kerb Kastra's solar panel offering includes special lenses that concentrate sunlight onto fewer, stronger solar cells. This increases power density by around 50%, but also increases panel mass.
 		attachRules = 0,1,0,0,1
@@ -36845,7 +37355,7 @@ UrlConfig
 			pivotName = pivot
 			isBreakable = true
 			resourceName = ElectricCharge
-			chargeRate = 7
+			chargeRate = 0.17361111
 		}
 		MODULE
 		{
@@ -36902,7 +37412,7 @@ UrlConfig
 		cost = 2500
 		category = Utility
 		subcategory = 0
-		title = KRQ 1x4 High-Efficiency Photovoltaic Panels FIX ME
+		title = KRQ 1x4 High-Efficiency Photovoltaic Panels
 		manufacturer = Kerb Kastra
 		description = The most advanced solar panel technology available to Kerbalkind! This panel improves on concentrator lenses by incorporating much more sensitive photodiodes. Do you really need to look at the price tag? Studies disagree. Cannot be retracted.
 		attachRules = 0,1,0,0,1
@@ -36931,7 +37441,7 @@ UrlConfig
 			isBreakable = true
 			retractable = false
 			resourceName = ElectricCharge
-			chargeRate = 8
+			chargeRate = 0.5642361075
 		}
 		MODULE
 		{
@@ -36987,7 +37497,7 @@ UrlConfig
 		cost = 3690
 		category = Utility
 		subcategory = 0
-		title = T65 1x5 Concentrating Photovoltaic Panels FIX ME
+		title = T65 1x5 Concentrating Photovoltaic Panels
 		manufacturer = Kerbal Electric Drive Yards
 		description = This versatile light panel provides a moderate amount of power without breaking the bank, or the back of the Kerbals assigned to carry it. It's a win-win for Finance and HR! Cannot be retracted.
 		attachRules = 0,1,0,0,1
@@ -37016,7 +37526,7 @@ UrlConfig
 			pivotName = pivot
 			isBreakable = true
 			resourceName = ElectricCharge
-			chargeRate = 14
+			chargeRate = 0.21961805415
 			retractable = false
 		}
 		MODULE
@@ -37073,7 +37583,7 @@ UrlConfig
 		cost = 6150
 		category = Utility
 		subcategory = 0
-		title = T225 1x5 Concentrating Photovoltaic Panels FIX ME
+		title = T225 1x5 Concentrating Photovoltaic Panels
 		manufacturer = Kerbal Electric Drive Yards
 		description = A bendier but larger version of the T65, the KEDY engineers have created this largish panel set for those power-hungry governments and spacecraft out there. Panel cannot be retracted.
 		attachRules = 0,1,0,0,1
@@ -37104,7 +37614,7 @@ UrlConfig
 			isBreakable = true
 			resourceName = ElectricCharge
 			retractable = false
-			chargeRate = 22
+			chargeRate = 0.3541666644
 		}
 		MODULE
 		{
@@ -37161,7 +37671,7 @@ UrlConfig
 		cost = 14760
 		category = Utility
 		subcategory = 0
-		title = KR-XL Megalador Concentrating Solar Array FIX ME
+		title = KR-XL Megalador Concentrating Solar Array
 		manufacturer = Kerb Kastra
 		description = Disputing the Gigantor-XL's claim of 'single largest solar array available*', the Megalador is large and unwieldy - but, if you can get past all that, is packed with loads of advanced solar cells. Cannot be retracted.
 		attachRules = 0,1,0,0,1
@@ -37189,7 +37699,7 @@ UrlConfig
 			pivotName = pivot
 			isBreakable = true
 			resourceName = ElectricCharge
-			chargeRate = 55
+			chargeRate = 1.944444432
 			retractable = false
 		}
 		MODULE
@@ -37247,7 +37757,7 @@ UrlConfig
 		cost = 8200
 		category = Utility
 		subcategory = 0
-		title = KR-SL Solo Concentrating Solar Array FIX ME
+		title = KR-SL Solo Concentrating Solar Array
 		manufacturer = Kerb Kastra
 		description = A compact, pared down (with shears!) version of the Trio. Comes in a box advertising something about the odds, and how you shouldn't worry about them or even mention them.
 		attachRules = 0,1,0,0,1
@@ -37276,7 +37786,7 @@ UrlConfig
 			pivotName = pivot
 			isBreakable = true
 			resourceName = ElectricCharge
-			chargeRate = 30
+			chargeRate = 0.7499999952
 		}
 		MODULE
 		{
@@ -37333,7 +37843,7 @@ UrlConfig
 		cost = 24600
 		category = Utility
 		subcategory = 0
-		title = KR-ML Trio Concentrating Solar Array FIX ME
+		title = KR-ML Trio Concentrating Solar Array
 		manufacturer = Kerb Kastra
 		description = A slightly larger alternative to the Megalador, the Trio mounts a trio of paired solar panels for efficient generation. Tradeoffs include a more fragile structure and a larger undeployed footprint.
 		attachRules = 0,1,0,0,1
@@ -37361,7 +37871,7 @@ UrlConfig
 			pivotName = pivot
 			isBreakable = true
 			resourceName = ElectricCharge
-			chargeRate = 90
+			chargeRate = 2.187499986
 		}
 		MODULE
 		{
@@ -37418,7 +37928,7 @@ UrlConfig
 		cost = 2460
 		category = Utility
 		subcategory = 0
-		title = YF-1 Circular Concentrating Photovoltaic Array FIX ME
+		title = YF-1 Circular Concentrating Photovoltaic Array
 		manufacturer = Kerbal Techsystems
 		description = A new paradigm in solar array deployment with more than 66% additional bending capability, the compact initial size of this solar array could be very attractive in certain situations. This method also results in some weight savings.
 		attachRules = 0,1,0,0,1
@@ -37446,7 +37956,7 @@ UrlConfig
 			pivotName = pivot
 			isBreakable = true
 			resourceName = ElectricCharge
-			chargeRate = 8
+			chargeRate = 0.218166155131514
 		}
 		MODULE
 		{
@@ -37503,7 +38013,7 @@ UrlConfig
 		cost = 1560
 		category = Utility
 		subcategory = 0
-		title = PX-STAT 1x4 Photovoltaic Truss FIX ME
+		title = PX-STAT 1x4 Photovoltaic Truss
 		manufacturer = Probodobodyne Inc.
 		description = Two IX-STAT 1x2s, welded together? Madness!
 		attachRules = 0,1,0,0,1
@@ -37526,7 +38036,7 @@ UrlConfig
 			pivotName = Suncatcher
 			isBreakable = false
 			resourceName = ElectricCharge
-			chargeRate = 8
+			chargeRate = 0.208333332
 		}
 		MODULE
 		{
@@ -37582,7 +38092,7 @@ UrlConfig
 		cost = 780
 		category = Utility
 		subcategory = 0
-		title = PX-STAT 1x2 Photovoltaic Truss FIX ME
+		title = PX-STAT 1x2 Photovoltaic Truss
 		manufacturer = Probodobodyne Inc.
 		description = As a follow-on to the well-regarded OX-STAT, the PX-STAT could allow Probodobodyne to regain the lead in static solar panel technology.
 		attachRules = 0,1,0,0,1
@@ -37606,7 +38116,7 @@ UrlConfig
 			pivotName = Suncatcher
 			isBreakable = false
 			resourceName = ElectricCharge
-			chargeRate = 4
+			chargeRate = 0.0677083329
 		}
 		MODULE
 		{
@@ -39127,7 +39637,7 @@ UrlConfig
 		cost = 450
 		category = Control
 		subcategory = 0
-		title = : FIX ME:: FIX ME
+		title = RX-15 Bidirectional RCS Thruster Block
 		manufacturer = STEADLER Engineering Corps
 		description = STEADLER's RX series of blocks sacrifice atmoshperic performance for high efficiencies in space. The -15 model comes with two nozzles angled at 45 degrees.
 		attachRules = 0,1,0,0,0
@@ -39147,18 +39657,6 @@ UrlConfig
 		}
 		MODULE
 		{
-			name = ModuleRCS
-			thrusterTransformName = thrustVector
-			thrusterPower = 1
-			resourceName = MonoPropellant
-			atmosphereCurve
-			{
-				key = 0 290
-				key = 1 70
-			}
-		}
-		MODULE
-		{
 			name = ExtendedPartInfo
 		}
 		MODULE
@@ -39168,23 +39666,6 @@ UrlConfig
 			collisionSound = CollisionFX/Sounds/Bang1
 			scrapeSound = CollisionFX/Sounds/GroundSkid
 			sparkSound = CollisionFX/Sounds/SparkSqueal
-		}
-		MODULE
-		{
-			name = ModuleRCSFX
-			thrusterTransformName = thrustVector
-			thrusterPower = 0.5
-			PROPELLANT
-			{
-				name = Hydrazine
-				ratio = 1
-			}
-			atmosphereCurve
-			{
-				key = 0 150
-				key = 1 50
-				key = 3 0.001
-			}
 		}
 		MODULE
 		{
@@ -39213,6 +39694,23 @@ UrlConfig
 		MODULE
 		{
 			name = ModuleTweakableRCS
+		}
+		MODULE
+		{
+			name = ModuleRCSFX
+			thrusterTransformName = thrustVector
+			thrusterPower = 0.5
+			PROPELLANT
+			{
+				name = Hydrazine
+				ratio = 1
+			}
+			atmosphereCurve
+			{
+				key = 0 150
+				key = 1 50
+				key = 3 0.001
+			}
 		}
 	}
 }
@@ -39324,7 +39822,7 @@ UrlConfig
 		cost = 650
 		category = Control
 		subcategory = 0
-		title = : FIX ME:: FIX ME
+		title = RX-1 Linear RCS Thruster
 		manufacturer = STEADLER Engineering Corps
 		description = A single RX-series nozzle allows translation in a single direction. Place several of them, well, and the world is your unidentified mollusk.
 		attachRules = 0,1,0,0,0
@@ -39344,18 +39842,6 @@ UrlConfig
 		}
 		MODULE
 		{
-			name = ModuleRCS
-			thrusterTransformName = thrustVector
-			thrusterPower = 1
-			resourceName = MonoPropellant
-			atmosphereCurve
-			{
-				key = 0 290
-				key = 1 70
-			}
-		}
-		MODULE
-		{
 			name = ExtendedPartInfo
 		}
 		MODULE
@@ -39365,23 +39851,6 @@ UrlConfig
 			collisionSound = CollisionFX/Sounds/Bang1
 			scrapeSound = CollisionFX/Sounds/GroundSkid
 			sparkSound = CollisionFX/Sounds/SparkSqueal
-		}
-		MODULE
-		{
-			name = ModuleRCSFX
-			thrusterTransformName = thrustVector
-			thrusterPower = 0.5
-			PROPELLANT
-			{
-				name = Hydrazine
-				ratio = 1
-			}
-			atmosphereCurve
-			{
-				key = 0 150
-				key = 1 50
-				key = 3 0.001
-			}
 		}
 		MODULE
 		{
@@ -39410,6 +39879,23 @@ UrlConfig
 		MODULE
 		{
 			name = ModuleTweakableRCS
+		}
+		MODULE
+		{
+			name = ModuleRCSFX
+			thrusterTransformName = thrustVector
+			thrusterPower = 0.5
+			PROPELLANT
+			{
+				name = Hydrazine
+				ratio = 1
+			}
+			atmosphereCurve
+			{
+				key = 0 150
+				key = 1 50
+				key = 3 0.001
+			}
 		}
 	}
 }
@@ -45918,11 +46404,11 @@ UrlConfig
 		cost = 11000
 		category = Science
 		subcategory = 0
-		title = Reflectron GX-128 FIX ME
+		title = Reflectron GX-128
 		manufacturer = Parabolic Industries
 		description = A massive medium-interplanetary class dish. Wherever you are in the Kerbol system, you'll be able to stay in contact with this.
 		attachRules = 1,1,1,0,0
-		mass = 0.5
+		mass = 0.4
 		dragModelType = default
 		maximum_drag = 0.2
 		minimum_drag = 0.2
@@ -45970,11 +46456,11 @@ UrlConfig
 		{
 			name = ModuleRTAntenna
 			Mode0DishRange = 0
-			Mode1DishRange = 400000000000
-			EnergyCost = 2.80
 			MaxQ = 6000
-			DishAngle = 0.005
 			DeployFxModules = 0
+			Mode1DishRange = 575000000000
+			EnergyCost = 0.45000036
+			DishAngle = 0.01
 			TRANSMITTER
 			{
 				PacketInterval = 0.3
@@ -46014,11 +46500,11 @@ UrlConfig
 		cost = 9500
 		category = Science
 		subcategory = 0
-		title = CommTech-1 FIX ME
+		title = CommTech-1
 		manufacturer = AIES Aerospace
 		description = A powerful high-gain fixed dish. It can reach almost anything in the solar system.
 		attachRules = 1,1,1,0,0
-		mass = 1
+		mass = 0.12
 		dragModelType = default
 		maximum_drag = 0.2
 		minimum_drag = 0.2
@@ -46056,9 +46542,9 @@ UrlConfig
 		{
 			name = ModuleRTAntenna
 			Mode0DishRange = 0
-			Mode1DishRange = 350000000000
-			EnergyCost = 2.60
-			DishAngle = 0.006
+			Mode1DishRange = 250000000
+			EnergyCost = 0.13333344
+			DishAngle = 5
 			TRANSMITTER
 			{
 				PacketInterval = 0.3
@@ -46092,7 +46578,7 @@ UrlConfig
 		cost = 600
 		category = Science
 		subcategory = 0
-		title = Communotron 32 FIX ME
+		title = Communotron 32
 		manufacturer = Ionic Protonic Electronics
 		description = The Communotron 32 is a longer range version of the last generation, now with even more spying potential. If you don't believe us, ask the Kerbal Security Agency.
 		attachRules = 1,1,0,0,1
@@ -46151,10 +46637,10 @@ UrlConfig
 		{
 			name = ModuleRTAntenna
 			Mode0OmniRange = 0
-			Mode1OmniRange = 5000000
 			MaxQ = 3000
-			EnergyCost = 0.6
 			DeployFxModules = 0
+			Mode1OmniRange = 1000000
+			EnergyCost = 0.00138889
 			TRANSMITTER
 			{
 				PacketInterval = 0.3
@@ -46193,11 +46679,11 @@ UrlConfig
 		cost = 400
 		category = Science
 		subcategory = 0
-		title = CommTech EXP-VR-2T FIX ME
+		title = CommTech EXP-VR-2T
 		manufacturer = AIES Aerospace
 		description = This effective and compact folding antenna is highly recommended for your research missions.
 		attachRules = 0,1,0,0,1
-		mass = 0.02
+		mass = 0.1
 		dragModelType = default
 		maximum_drag = 0.0
 		minimum_drag = 0.0
@@ -46245,10 +46731,10 @@ UrlConfig
 		{
 			name = ModuleRTAntenna
 			Mode0OmniRange = 0
-			Mode1OmniRange = 3000000
 			MaxQ = 6000
-			EnergyCost = 0.18
 			DeployFxModules = 0
+			Mode1OmniRange = 4000000
+			EnergyCost = 0.02222224
 			TRANSMITTER
 			{
 				PacketInterval = 0.3
@@ -46263,85 +46749,6 @@ UrlConfig
 		MODULE
 		{
 			name = ModuleTweakableAnimateGeneric
-		}
-	}
-}
-UrlConfig
-{
-	name = RTLongDish1
-	type = PART
-	parentUrl = RemoteTech/Parts/LongDish1/part
-	url = RemoteTech/Parts/LongDish1/part/RTLongDish1
-	PART
-	{
-		name = RTLongDish1
-		module = Part
-		author = JDP | rkman
-		mesh = model.mu
-		scale = 0.1
-		specPower = 0.1
-		rimFalloff = 3
-		alphaCutoff = 0.5
-		node_stack_bottom = 0.0, -0.2, 0.0, 0.0, -1.0, 0.0, 0
-		node_attach = 0.0, -0.2, 0.0, 0.0, -1.0, 0.0
-		entryCost = 6000
-		cost = 2000
-		category = -1
-		subcategory = 0
-		title = Reflectron LL-5 FIX ME
-		manufacturer = Parabolic Industries
-		description = This dish will carry your signal out as far as Duna. But don't count on it working further out. Warranty void if used as a salad bowl.
-		attachRules = 1,1,0,0,1
-		mass = 1.0
-		dragModelType = default
-		maximum_drag = 0.2
-		minimum_drag = 0.2
-		angularDrag = 2
-		crashTolerance = 8
-		maxTemp = 1200
-		MODULE
-		{
-			name = ExtendedPartInfo
-		}
-		MODULE
-		{
-			name = CollisionFX
-			scrapeSparks = true
-			collisionSound = CollisionFX/Sounds/Bang1
-			scrapeSound = CollisionFX/Sounds/GroundSkid
-			sparkSound = CollisionFX/Sounds/SparkSqueal
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Scrap Part
-			ResourceName = Recyclables
-			Efficiency = .8
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Salvage Part
-			ResourceName = SpecializedParts
-			Efficiency = .4
-		}
-		MODULE
-		{
-			name = ModuleRTAntenna
-			Mode0DishRange = 0
-			Mode1DishRange = 60000000000
-			EnergyCost = 0.93
-			DishAngle = 0.04
-			TRANSMITTER
-			{
-				PacketInterval = 0.3
-				PacketSize = 2
-				PacketResourceCost = 15.0
-			}
-		}
-		MODULE
-		{
-			name = ModuleSPUPassive
 		}
 	}
 }
@@ -46367,11 +46774,11 @@ UrlConfig
 		cost = 2000
 		category = Science
 		subcategory = 0
-		title = Reflectron KR-14 FIX ME
+		title = Reflectron KR-14
 		manufacturer = Parabolic Industries
 		description = Replacing the LL-5, this dish will carry your signal beyond Duna looking fancier than ever.
 		attachRules = 1,1,0,0,1
-		mass = 1.0
+		mass = 0.05
 		dragModelType = default
 		maximum_drag = 0.2
 		minimum_drag = 0.2
@@ -46409,9 +46816,9 @@ UrlConfig
 		{
 			name = ModuleRTAntenna
 			Mode0DishRange = 0
-			Mode1DishRange = 60000000000
-			EnergyCost = 0.93
-			DishAngle = 0.04
+			Mode1DishRange = 8000000
+			EnergyCost = 0.08888896
+			DishAngle = 10
 			TRANSMITTER
 			{
 				PacketInterval = 0.3
@@ -46444,7 +46851,7 @@ UrlConfig
 		node_attach = 0.46, 0.0, 0.0, 1.0, 0.0, 0.0
 		entryCost = 200
 		cost = 60
-		category = Science
+		category = -1
 		subcategory = 0
 		title = Reflectron DP-10 FIX ME
 		manufacturer = Parabolic Industries
@@ -46506,85 +46913,6 @@ UrlConfig
 }
 UrlConfig
 {
-	name = RTShortDish1
-	type = PART
-	parentUrl = RemoteTech/Parts/ShortDish1/part
-	url = RemoteTech/Parts/ShortDish1/part/RTShortDish1
-	PART
-	{
-		name = RTShortDish1
-		module = Part
-		author = JDP
-		mesh = model.mu
-		scale = 0.1
-		specPower = 0.1
-		rimFalloff = 3
-		alphaCutoff = 0.5
-		node_stack_bottom = 0.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0
-		node_attach = 0.0, 0.0, 0.0, 0.0, -1.0, 0.0
-		entryCost = 2000
-		cost = 800
-		category = -1
-		subcategory = 0
-		title = Reflectron SS-5 FIX ME
-		manufacturer = Parabolic Industries.
-		description = If you want to break the surly bonds of Kerbin, you will need some serious range. What once was considered a mere garbage can lid is now the cornerstone of Münar communication.
-		attachRules = 1,1,0,0,1
-		mass = 0.5
-		dragModelType = default
-		maximum_drag = 0.2
-		minimum_drag = 0.2
-		angularDrag = 2
-		crashTolerance = 8
-		maxTemp = 1200
-		MODULE
-		{
-			name = ExtendedPartInfo
-		}
-		MODULE
-		{
-			name = CollisionFX
-			scrapeSparks = true
-			collisionSound = CollisionFX/Sounds/Bang1
-			scrapeSound = CollisionFX/Sounds/GroundSkid
-			sparkSound = CollisionFX/Sounds/SparkSqueal
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Scrap Part
-			ResourceName = Recyclables
-			Efficiency = .8
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Salvage Part
-			ResourceName = SpecializedParts
-			Efficiency = .4
-		}
-		MODULE
-		{
-			name = ModuleRTAntenna
-			Mode0DishRange = 0
-			Mode1DishRange = 90000000
-			EnergyCost = 0.82
-			DishAngle = 25.0
-			TRANSMITTER
-			{
-				PacketInterval = 0.3
-				PacketSize = 2
-				PacketResourceCost = 15.0
-			}
-		}
-		MODULE
-		{
-			name = ModuleSPUPassive
-		}
-	}
-}
-UrlConfig
-{
 	name = RTShortDish2
 	type = PART
 	parentUrl = RemoteTech/Parts/ShortDish2/part
@@ -46605,11 +46933,11 @@ UrlConfig
 		cost = 800
 		category = Science
 		subcategory = 0
-		title = Reflectron KR-7 FIX ME
+		title = Reflectron KR-7
 		manufacturer = Parabolic Industries.
 		description = Locals complained about their missing garbage lids, so our engineers quickly developed an alternative. Matching performance with the SS-5 for only double the cost!
 		attachRules = 1,1,0,0,1
-		mass = 0.5
+		mass = 0.03
 		dragModelType = default
 		maximum_drag = 0.2
 		minimum_drag = 0.2
@@ -46647,9 +46975,9 @@ UrlConfig
 		{
 			name = ModuleRTAntenna
 			Mode0DishRange = 0
-			Mode1DishRange = 90000000
-			EnergyCost = 0.82
-			DishAngle = 25.0
+			Mode1DishRange = 6000000
+			EnergyCost = 0.05000004
+			DishAngle = 15
 			TRANSMITTER
 			{
 				PacketInterval = 0.3
@@ -57635,7 +57963,7 @@ UrlConfig
 		manufacturer = Zaltonic Electronics
 		description = The Z-400 battery pack is a versatile, compact electrical charge storage solution designed for heavier loads than AAAA batteries can handle. Holds one E-size battery with a maximum of 400 units of charge.
 		attachRules = 0,1,0,0,0
-		mass = 0.02
+		mass = 0.009
 		dragModelType = default
 		maximum_drag = 0.2
 		minimum_drag = 0.2
@@ -58866,7 +59194,7 @@ UrlConfig
 		cost = 200
 		category = Engine
 		subcategory = 0
-		title = 48-7S "Spark" Liquid Fuel Engine FIX ME
+		title = 48-7S "Spark" Liquid Fuel Engine
 		manufacturer = Rockomax Conglomerate
 		description = The 48-7S may be small, but it packs quite a punch for its size. This little engine is a testament to how larger does not always means more advanced, at least according to Rockomax's marketing department. The box it comes in is pretty cool, in any case.
 		attachRules = 1,0,1,0,0
@@ -59094,53 +59422,57 @@ UrlConfig
 		}
 		MODULE
 		{
-			name = ModuleEngineConfigs
-			configuration = Hydrolox
-			configuration = Hydrolox
-			CONFIG
-			{
-				name = Monoprop
-				minThrust = 0
-				maxThrust = 18
-				minThrust = 0
-				maxThrust = 18
-				PROPELLANT
-				{
-					name = Hydrazine
-					ratio = 1
-					DrawGauge = True
-				}
-				atmosphereCurve
-				{
-					key = 0 288
-					key = 1 63
-					key = 3 0.001
-				}
-				atmosphereCurve
-				{
-					key = 0 288
-					key = 1 63
-					key = 3 0.001
-				}
-			}
-			CONFIG
-			{
-				name = Monoprop
-				PROPELLANT
-				{
-					name = Hydrazine
-					ratio = 1
-					DrawGauge = True
-				}
-			}
-		}
-		MODULE
-		{
 			name = ModuleTweakableJettison
 		}
 		MODULE
 		{
 			name = ModuleTweakableGimbal
+		}
+		MODULE
+		{
+			name = ModuleEngineConfigs
+			configuration = Hypergolic
+			CONFIG
+			{
+				name = Hypergolic
+				minThrust = 0
+				maxThrust = 18
+				PROPELLANT
+				{
+					name = UDMH
+					ratio = 1.26422250316056
+					DrawGauge = True
+				}
+				PROPELLANT
+				{
+					name = NTO
+					ratio = 1.8
+				}
+				atmosphereCurve
+				{
+					key = 0 254
+					key = 1 202
+					key = 3 0.001
+				}
+			}
+			CONFIG
+			{
+				name = Monoprop
+				minThrust = 0
+				maxThrust = 18
+				PROPELLANT
+				{
+					name = Hydrazine
+					ratio = 1
+					DrawGauge = True
+				}
+				atmosphereCurve
+				{
+					key = 0 243
+					key = 1 186
+					key = 3 0.001
+				}
+			}
 		}
 	}
 }
@@ -59944,7 +60276,7 @@ UrlConfig
 		cost = 390
 		category = Engine
 		subcategory = 0
-		title = LV-909 "Terrier" Liquid Fuel Engine FIX ME
+		title = LV-909 "Terrier" Liquid Fuel Engine
 		manufacturer = Jebediah Kerman's Junkyard and Spacecraft Parts Co
 		description = The 909 model was initially received with some skepticism by spacecraft engineers, as it defied the long-standing convention that "More Power!" is always better. Despite this, the 909 series has found its place in the spacecraft construction world, being particularly useful as a final stage and landing engine.
 		attachRules = 1,0,1,0,0
@@ -60311,155 +60643,85 @@ UrlConfig
 		}
 		MODULE
 		{
-			name = ModuleEngineConfigs
-			configuration = Kerolox
-			configuration = Kerolox
-			CONFIG
-			{
-				name = Kerolox
-				minThrust = 0
-				maxThrust = 60
-				minThrust = 0
-				maxThrust = 60
-				PROPELLANT
-				{
-					name = Kerosene
-					ratio = 1.21951219512195
-					DrawGauge = True
-				}
-				PROPELLANT
-				{
-					name = LqdOxygen
-					ratio = 2.38387379491674
-				}
-				atmosphereCurve
-				{
-					key = 0 278
-					key = 1 69
-					key = 3 0.001
-				}
-				atmosphereCurve
-				{
-					key = 0 278
-					key = 1 69
-					key = 3 0.001
-				}
-			}
-			CONFIG
-			{
-				name = Hydrolox
-				minThrust = 0
-				maxThrust = 60
-				minThrust = 0
-				maxThrust = 60
-				PROPELLANT
-				{
-					name = LqdHydrogen
-					ratio = 14.1143260409315
-					DrawGauge = True
-				}
-				PROPELLANT
-				{
-					name = LqdOxygen
-					ratio = 5.43382997370727
-				}
-				atmosphereCurve
-				{
-					key = 0 308
-					key = 1 71
-					key = 3 0.001
-				}
-				atmosphereCurve
-				{
-					key = 0 308
-					key = 1 71
-					key = 3 0.001
-				}
-			}
-			CONFIG
-			{
-				name = Hypergolic
-				minThrust = 0
-				maxThrust = 60
-				minThrust = 0
-				maxThrust = 60
-				PROPELLANT
-				{
-					name = UDMH
-					ratio = 1.26422250316056
-					DrawGauge = True
-				}
-				PROPELLANT
-				{
-					name = NTO
-					ratio = 1.8
-				}
-				atmosphereCurve
-				{
-					key = 0 288
-					key = 1 63
-					key = 3 0.001
-				}
-				atmosphereCurve
-				{
-					key = 0 288
-					key = 1 63
-					key = 3 0.001
-				}
-			}
-			CONFIG
-			{
-				name = Kerolox
-				PROPELLANT
-				{
-					name = Kerosene
-					ratio = 1.21951219512195
-					DrawGauge = True
-				}
-				PROPELLANT
-				{
-					name = LqdOxygen
-					ratio = 2.38387379491674
-				}
-			}
-			CONFIG
-			{
-				name = Hydrolox
-				PROPELLANT
-				{
-					name = LqdHydrogen
-					ratio = 14.1143260409315
-					DrawGauge = True
-				}
-				PROPELLANT
-				{
-					name = LqdOxygen
-					ratio = 5.43382997370727
-				}
-			}
-			CONFIG
-			{
-				name = Hypergolic
-				PROPELLANT
-				{
-					name = UDMH
-					ratio = 1.26422250316056
-					DrawGauge = True
-				}
-				PROPELLANT
-				{
-					name = NTO
-					ratio = 1.8
-				}
-			}
-		}
-		MODULE
-		{
 			name = ModuleTweakableJettison
 		}
 		MODULE
 		{
 			name = ModuleTweakableGimbal
+		}
+		MODULE
+		{
+			name = ModuleEngineConfigs
+			configuration = Kerolox
+			CONFIG
+			{
+				name = Kerolox
+				minThrust = 0
+				maxThrust = 60
+				PROPELLANT
+				{
+					name = Kerosene
+					ratio = 1.21951219512195
+					DrawGauge = True
+				}
+				PROPELLANT
+				{
+					name = LqdOxygen
+					ratio = 2.38387379491674
+				}
+				atmosphereCurve
+				{
+					key = 0 278
+					key = 1 69
+					key = 3 0.001
+				}
+			}
+			CONFIG
+			{
+				name = Hydrolox
+				minThrust = 0
+				maxThrust = 60
+				PROPELLANT
+				{
+					name = LqdHydrogen
+					ratio = 14.1143260409315
+					DrawGauge = True
+				}
+				PROPELLANT
+				{
+					name = LqdOxygen
+					ratio = 5.43382997370727
+				}
+				atmosphereCurve
+				{
+					key = 0 308
+					key = 1 71
+					key = 3 0.001
+				}
+			}
+			CONFIG
+			{
+				name = Hypergolic
+				minThrust = 0
+				maxThrust = 60
+				PROPELLANT
+				{
+					name = UDMH
+					ratio = 1.26422250316056
+					DrawGauge = True
+				}
+				PROPELLANT
+				{
+					name = NTO
+					ratio = 1.8
+				}
+				atmosphereCurve
+				{
+					key = 0 288
+					key = 1 63
+					key = 3 0.001
+				}
+			}
 		}
 	}
 }
@@ -61616,7 +61878,7 @@ UrlConfig
 		cost = 13000
 		category = Engine
 		subcategory = 0
-		title = RE-M3 "Mainsail" Liquid Engine FIX ME
+		title = RE-M3 "Mainsail" Liquid Engine
 		manufacturer = Rockomax Conglomerate
 		description = A monster of an engine for heavy lifting purposes, the Mainsail's power rivals that of entire small nations. Now equipped with a stylish aerodynamic shroud, the Mainsail cuts through the air with ease while keeping your rocket looking as stylish as ever.
 		attachRules = 1,0,1,1,0
@@ -61992,109 +62254,62 @@ UrlConfig
 		}
 		MODULE
 		{
-			name = ModuleEngineConfigs
-			configuration = Kerolox
-			configuration = Kerolox
-			CONFIG
-			{
-				name = Kerolox
-				minThrust = 0
-				maxThrust = 1500
-				minThrust = 0
-				maxThrust = 1500
-				PROPELLANT
-				{
-					name = Kerosene
-					ratio = 1.21951219512195
-					DrawGauge = True
-				}
-				PROPELLANT
-				{
-					name = LqdOxygen
-					ratio = 2.38387379491674
-				}
-				atmosphereCurve
-				{
-					key = 0 236
-					key = 1 217
-					key = 3 0.001
-				}
-				atmosphereCurve
-				{
-					key = 0 236
-					key = 1 217
-					key = 3 0.001
-				}
-			}
-			CONFIG
-			{
-				name = Hydrolox
-				minThrust = 0
-				maxThrust = 1500
-				minThrust = 0
-				maxThrust = 1500
-				PROPELLANT
-				{
-					name = LqdHydrogen
-					ratio = 14.1143260409315
-					DrawGauge = True
-				}
-				PROPELLANT
-				{
-					name = LqdOxygen
-					ratio = 5.43382997370727
-				}
-				atmosphereCurve
-				{
-					key = 0 268
-					key = 1 232
-					key = 3 0.001
-				}
-				atmosphereCurve
-				{
-					key = 0 268
-					key = 1 232
-					key = 3 0.001
-				}
-			}
-			CONFIG
-			{
-				name = Kerolox
-				PROPELLANT
-				{
-					name = Kerosene
-					ratio = 1.21951219512195
-					DrawGauge = True
-				}
-				PROPELLANT
-				{
-					name = LqdOxygen
-					ratio = 2.38387379491674
-				}
-			}
-			CONFIG
-			{
-				name = Hydrolox
-				PROPELLANT
-				{
-					name = LqdHydrogen
-					ratio = 14.1143260409315
-					DrawGauge = True
-				}
-				PROPELLANT
-				{
-					name = LqdOxygen
-					ratio = 5.43382997370727
-				}
-			}
-		}
-		MODULE
-		{
 			name = ModuleTweakableJettison
 		}
 		MODULE
 		{
 			name = ModuleTweakableGimbal
+		}
+		MODULE
+		{
+			name = ModuleEngineConfigs
+			configuration = Kerolox
+			CONFIG
+			{
+				name = Kerolox
+				minThrust = 0
+				maxThrust = 1500
+				PROPELLANT
+				{
+					name = Kerosene
+					ratio = 1.21951219512195
+					DrawGauge = True
+				}
+				PROPELLANT
+				{
+					name = LqdOxygen
+					ratio = 2.38387379491674
+				}
+				atmosphereCurve
+				{
+					key = 0 236
+					key = 1 217
+					key = 3 0.001
+				}
+			}
+			CONFIG
+			{
+				name = Hydrolox
+				minThrust = 0
+				maxThrust = 1500
+				PROPELLANT
+				{
+					name = LqdHydrogen
+					ratio = 14.1143260409315
+					DrawGauge = True
+				}
+				PROPELLANT
+				{
+					name = LqdOxygen
+					ratio = 5.43382997370727
+				}
+				atmosphereCurve
+				{
+					key = 0 268
+					key = 1 232
+					key = 3 0.001
+				}
+			}
 		}
 	}
 }
@@ -65109,7 +65324,7 @@ UrlConfig
 		cost = 850
 		category = Engine
 		subcategory = 0
-		title = BACC "Thumper" Solid Fuel Booster FIX ME
+		title = BACC "Thumper" Solid Fuel Booster
 		manufacturer = Rockomax Conglomerate
 		description = Filled with a new, even more volatile fuel, the BACC offers semi-reliable performance at a good price.
 		attachRules = 1,1,1,1,0
@@ -65426,6 +65641,10 @@ UrlConfig
 		}
 		MODULE
 		{
+			name = ModuleTweakableJettison
+		}
+		MODULE
+		{
 			name = ModuleFuelTanks
 			volume = 3670
 			type = Solid
@@ -65435,8 +65654,6 @@ UrlConfig
 			name = ModuleEngineConfigs
 			type = ModuleEnginesRF
 			configuration = Linear
-			type = ModuleEnginesRF
-			configuration = Linear
 			CONFIG
 			{
 				name = Linear
@@ -65498,77 +65715,6 @@ UrlConfig
 					key = 1.00 0.90
 				}
 			}
-			CONFIG
-			{
-				name = Linear
-				minThrust = 0
-				maxThrust = 300
-				chamberNominalTemp = 1800
-				maxEngineTemp = 2050
-				curveResource = HTPB
-				PROPELLANT
-				{
-					name = HTPB
-					ratio = 1
-					DrawGauge = True
-				}
-				atmosphereCurve
-				{
-					key = 0 182
-					key = 1 151
-					key = 3 0.001
-				}
-				thrustCurve
-				{
-					key = 0.00 0.01
-					key = 0.02 0.01
-					key = 0.03 0.16
-					key = 0.06 0.32
-					key = 1.00 1.00
-				}
-			}
-			CONFIG
-			{
-				name = MaxQ
-				minThrust = 0
-				maxThrust = 300
-				chamberNominalTemp = 1800
-				maxEngineTemp = 2050
-				curveResource = HTPB
-				PROPELLANT
-				{
-					name = HTPB
-					ratio = 1
-					DrawGauge = True
-				}
-				atmosphereCurve
-				{
-					key = 0 182
-					key = 1 151
-					key = 3 0.001
-				}
-				thrustCurve
-				{
-					key = 0.00 0.01
-					key = 0.02 0.01
-					key = 0.03 0.16
-					key = 0.04 0.20
-					key = 0.60 0.99
-					key = 0.80 0.60
-					key = 0.94 1.00
-					key = 1.00 0.90
-				}
-			}
-		}
-		MODULE
-		{
-			name = ModuleFuelTanks
-			volume = 3670
-			type = Solid
-		}
-		MODULE
-		{
-			name = ModuleTweakableJettison
 		}
 	}
 }
@@ -69887,7 +70033,7 @@ UrlConfig
 		cost = 200
 		category = FuelTank
 		subcategory = 0
-		title = Stratus-V Roundified Monopropellant Tank FIX ME
+		title = Stratus-VI Roundified Tank
 		description = Despite its fanciful name, the Stratus-V is quite simple - a small, radially attachable RCS tank.
 		attachRules = 0,1,0,0,1
 		mass = 0.075
@@ -69952,6 +70098,12 @@ UrlConfig
 			volume = 80.56
 			type = Default
 		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 75
+			type = Default
+		}
 	}
 }
 UrlConfig
@@ -69971,7 +70123,7 @@ UrlConfig
 		cost = 425
 		category = FuelTank
 		subcategory = 0
-		title = Stratus-VI Roundified Liquid Fuel Tank FIX ME
+		title = Stratus-VI Roundified Tank
 		description = A Repourposed Stratus-V tank, the Stratus-VI now stores LF instead of Monopropellant.
 		attachRules = 0,1,0,1,1
 		mass = 0.05
@@ -70026,6 +70178,12 @@ UrlConfig
 		{
 			model = VenStockRevamp/Squad/Parts/Propulsion/LFTankRadial
 		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 75
+			type = Default
+		}
 	}
 }
 UrlConfig
@@ -70045,7 +70203,7 @@ UrlConfig
 		cost = 425
 		category = FuelTank
 		subcategory = 0
-		title = Stratus-VI Roundified LFO Tank FIX ME
+		title = Stratus-VI Roundified Tank
 		description = A Repourposed Stratus-V tank, the Stratus-VI now stores Liquid Fuel and Liquid Oxidizer instead of Monopropellant.
 		attachRules = 0,1,0,1,1
 		mass = 0.05
@@ -70099,6 +70257,12 @@ UrlConfig
 		MODEL
 		{
 			model = VenStockRevamp/Squad/Parts/Propulsion/LFOTankRadial
+		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 75
+			type = Default
 		}
 	}
 }
@@ -70193,7 +70357,7 @@ UrlConfig
 		cost = 450
 		category = FuelTank
 		subcategory = 0
-		title = Stratus-V Cylindrified Monopropellant Tank FIX ME
+		title = Stratus-VI Cylindrified Tank
 		description = After years of research and development, the Stratus corporation has developed a revolutionary upgrade to their Stratus-V fuel tank line. Cylinders. This tank holds a moderate supply of monopropellant for RCS thrusters.
 		attachRules = 0,1,0,0,1
 		mass = 0.15
@@ -70258,6 +70422,12 @@ UrlConfig
 			volume = 254.4
 			type = Default
 		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 250
+			type = Default
+		}
 	}
 }
 UrlConfig
@@ -70277,7 +70447,7 @@ UrlConfig
 		cost = 425
 		category = FuelTank
 		subcategory = 0
-		title = Stratus-VI Cylindrified LF Tank FIX ME
+		title = Stratus-VI Cylindrified Tank
 		description = A Repourposed Stratus-V tank, the Stratus-VI now stores Liquid Fuel instead of Monopropellant.
 		attachRules = 0,1,0,1,1
 		mass = 0.15
@@ -70332,6 +70502,12 @@ UrlConfig
 		{
 			model = VenStockRevamp/Squad/Parts/Propulsion/LFtankRadialLong
 		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 250
+			type = Default
+		}
 	}
 }
 UrlConfig
@@ -70351,7 +70527,7 @@ UrlConfig
 		cost = 425
 		category = FuelTank
 		subcategory = 0
-		title = Stratus-VI Cylindrified LFO Tank FIX ME
+		title = Stratus-VI Cylindrified Tank
 		description = A Repourposed Stratus-V tank, the Stratus-VI now stores Liquid Fuel and Liquid Oxidizer instead of Monopropellant.
 		attachRules = 0,1,0,1,1
 		mass = 0.15
@@ -70405,6 +70581,12 @@ UrlConfig
 		MODEL
 		{
 			model = VenStockRevamp/Squad/Parts/Propulsion/LFOtankRadialLong
+		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 250
+			type = Default
 		}
 	}
 }
@@ -75338,11 +75520,11 @@ UrlConfig
 		cost = 1100
 		category = Science
 		subcategory = 0
-		title = Communotron 88-88 FIX ME
+		title = Communotron 88-88
 		manufacturer = Ionic Symphonic Protonic Electronics
 		description = The Communotron High-Gain Antenna, model 88-88 allows for long-range, high-speed communication.
 		attachRules = 1,1,0,0,0
-		mass = 0.025
+		mass = 0.12
 		dragModelType = default
 		maximum_drag = 0.2
 		minimum_drag = 0.2
@@ -75392,11 +75574,11 @@ UrlConfig
 		{
 			name = ModuleRTAntenna
 			Mode0DishRange = 0
-			Mode1DishRange = 40000000000
-			EnergyCost = 0.93
 			MaxQ = 6000
-			DishAngle = 0.06
 			DeployFxModules = 0
+			Mode1DishRange = 250000000
+			EnergyCost = 0.13333344
+			DishAngle = 10
 			TRANSMITTER
 			{
 				PacketInterval = 0.3
@@ -75435,7 +75617,7 @@ UrlConfig
 		cost = 600
 		category = Science
 		subcategory = 0
-		title = Comms DTS-M1 FIX ME
+		title = Comms DTS-M1
 		manufacturer = Ionic Symphonic Protonic Electronics
 		description = The DTS-M1 is a fully deployable communications and data transmission system. It has been designed to have a minimal form factor when stowed. Occasional antenna tweaking and swift kicks to the main assembly may be required for optimal performance.
 		attachRules = 0,1,0,0,0
@@ -75497,12 +75679,12 @@ UrlConfig
 		{
 			name = ModuleRTAntenna
 			Mode0DishRange = 0
-			Mode1DishRange = 50000000
-			EnergyCost = 0.82
 			MaxQ = 6000
-			DishAngle = 45.0
 			DeployFxModules = 0
 			ProgressFxModules = 1
+			Mode1DishRange = 6000000
+			EnergyCost = 0.05000004
+			DishAngle = 15
 			TRANSMITTER
 			{
 				PacketInterval = 0.3
@@ -75540,7 +75722,7 @@ UrlConfig
 		TechRequired = engineering101
 		entryCost = 240
 		cost = 300
-		category = Science
+		category = -1
 		subcategory = 0
 		title = Communotron 16 FIX ME
 		manufacturer = Ionic Symphonic Protonic Electronics
@@ -94223,8 +94405,8 @@ UrlConfig
 		RSSShowCalendarToggled = False
 		AppLauncherSetTrueTimeOut = 6
 		DailyVersionCheck = True
-		VersionCheckDate_AttemptStored = 2015-07-05
-		VersionCheckDate_SuccessStored = 2015-07-05
+		VersionCheckDate_AttemptStored = 2015-07-06
+		VersionCheckDate_SuccessStored = 2015-07-06
 		VersionWeb = 3.4.0.0
 		WindowPositionStored
 		{
@@ -94493,8 +94675,8 @@ UrlConfig
 		ReplaceStockAppTimeOut = 20
 		AppLauncherSetTrueTimeOut = 6
 		DailyVersionCheck = True
-		VersionCheckDate_AttemptStored = 2015-07-05
-		VersionCheckDate_SuccessStored = 2015-07-05
+		VersionCheckDate_AttemptStored = 2015-07-06
+		VersionCheckDate_SuccessStored = 2015-07-06
 		ShowWindowOnResourceMonitor = True
 		VersionWeb = 2.7.2.0
 		WindowPositionStored
