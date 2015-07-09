@@ -1,0 +1,393 @@
+PART
+{
+// Kerbal Space Program - Part Config
+// LV-T45 Liquid Fuel Engine
+// 
+
+// --- general parameters ---
+name = LVT1D
+module = Part
+author = blackheart612
+
+// --- asset parameters ---
+mesh = model.mu
+scale = 1
+
+
+// --- node definitions ---
+node_stack_top = 0.0, 0.02, 0.0, 0.0, 1.0, 0.0
+node_stack_original = 0.0, -0.42, 0.0, 0.0, 1.0, 0.0
+node_stack_mid = 0.0, -2.02, 0.0, 0.0, 1.0, 0.0
+node_stack_bottom = 0.0, -2.02, 0.0, 0.0, 1.0, 0.0
+
+
+// --- FX definitions ---
+
+fx_exhaustFlame_blue = 0.0, -5.74338, 0.0, 0.0, 1.0, 0.0, running
+fx_exhaustLight_blue = 0.0, -5.74338, 0.0, 0.0, 0.0, 1.0, running
+fx_smokeTrail_light  = 0.0, -5.74338, 0.0, 0.0, 1.0, 0.0, running
+fx_exhaustSparks_flameout  = 0.0, -5.74338, 0.0, 0.0, 1.0, 0.0, flameout
+
+// --- Sound FX definition ---
+
+sound_vent_medium = engage
+sound_rocket_hard = running
+sound_vent_soft = disengage
+sound_explosion_low = flameout
+
+// --- editor parameters ---
+TechRequired = generalRocketry
+entryCost = 2100
+cost = 950
+category = Propulsion
+subcategory = 0
+title = LV-T1D Liquid Fuel Engine
+manufacturer = LVT Inc
+description = The LV-T45 engine was considered another breakthrough in the LV-T series, due to its Thrust Vectoring feature. The LV-T45 can deflect its thrust to aid in craft control. All these added mechanics however, make for a slightly smaller and less powerful engine in comparison with earlier LV-T models.
+
+// attachment rules: stack, srfAttach, allowStack, allowSrfAttach, allowCollision
+attachRules = 1,0,1,0,0
+
+// --- standard part parameters ---
+mass = 1.5
+dragModelType = default
+maximum_drag = 0.2
+minimum_drag = 0.2
+angularDrag = 2
+crashTolerance = 7
+maxTemp = 3600
+
+MODULE
+{
+       name = ModuleJettison
+       jettisonName = ShortFairing
+       bottomNodeName = bottom
+       isFairing = True
+       jettisonedObjectMass = 0.1
+       jettisonForce = 5
+       jettisonDirection = 0 0 1
+	
+}
+
+MODULE
+{
+       name = ModuleJettison
+       jettisonName = LongFairing
+       bottomNodeName = mid
+       isFairing = True
+       jettisonedObjectMass = 0.1
+       jettisonForce = 5
+       jettisonDirection = 0 0 1
+	
+}
+MODULE
+{
+       name = ModuleJettison
+       jettisonName = TankButt
+       bottomNodeName = top
+       isFairing = True
+       jettisonedObjectMass = 0.1
+       jettisonForce = 5
+       jettisonDirection = 0 0 1
+	
+}
+
+EFFECTS
+{
+        powerflame
+        {
+            MODEL_MULTI_PARTICLE_PERSIST
+            {
+                name = flamethrust
+                modelName = KerbalStockLauncherOverhaul/FX/ExhaustFlame
+                transformName = exhaustTransform
+                emission = 0.0 0.0
+                emission = 0.05 0.0
+                emission = 0.075 0.25
+                emission = 1.0 1.25
+                speed = 0.0 1.98
+                speed = 1.0 1.12
+		energy = 0.0 0.33 // Same for energy
+		energy = 1.0 0.99 // Same for energy
+            }
+            AUDIO
+            {
+                channel = Ship
+                clip = sound_rocket_hard
+                volume = 0.0 0.0
+                volume = 1.0 1.0
+                pitch = 0.0 0.2
+                pitch = 1.0 1.0
+                loop = true
+            }
+        }
+        powersmoke
+        {
+MODEL_MULTI_PARTICLE_PERSIST
+{
+	name = smokethrust
+	modelName = KerbalStockLauncherOverhaul/FX/Exhaust
+	transformName = exhaustTransform
+	emission = 0.0 0.0  // Curve for emission like stock
+        emission = 0.07 0.0  // Curve for emission like stock
+        emission = 0.2 0.4  // Curve for emission like stock
+	emission = 1.0 1.1  // Curve for emission like stock
+	energy = 0.0 0.2 // Same for energy
+	energy = 1.0 3.2 // Same for energy
+	speed = 0.0 0.5  // And speed
+	speed = 0.5 0.4  // And speed
+	grow = 0.0 0.0 // Grow the particles at 0% per seconds ( 0.02 would be 2% )
+	grow = 1.0 0.08 // Grow the particles at 0% per seconds ( 0.02 would be 2% )
+	scale = 0.0 1.0 // Rescale the emitters to +0%
+	scale = 1.0 1.0 // Rescale the emitters to +0%
+	offset = 0.0 0.0  // Move the particle emitter away from its default position by x meters
+	offset = 1.0 0.5  // Move the particle emitter away from its default position by x meters	
+	size = 0.0 0.05 // Rescale the particles to +0%
+	size = 0.15 0.50 // Rescale the particles to +0%
+		
+	renderMode = "Billboard"  // Render mode : Billboard / SortedBillboard / HorizontalBillboard / VerticalBillboard / Stretch
+	collide = false // Collision active or not
+	collideRatio = 0 // how the particles react on collision. 1 is a mirror bounce, 0 is go parallel to the hit surface
+	fixedScale = 1.0 // Fixed rescale of the particle emitter (for when you rescale the model)
+	
+	sizeClamp = 50 // Limits particle size. Default to 50
+
+	// ***************
+	// From here the value are not the default anymore. 
+	// ***************
+
+
+	angle = 0.0 1.0 // Display if the angle between the emitter transform and camera is lower than 45° 	
+	angle = 45.0 1.0
+	angle = 50.0 1.0
+	distance = 0.0 1.0 // Display if the distance to camera is higher than 110
+	distance = 100.0 1.0
+	distance = 110.0 1.0
+	
+	emission  // Modulate emission from mach and density curve. You can add other section for size, energy, speed, grow, offset and scale 
+	{
+		mach = 0.0 1.0 
+		mach = 0.8 1.0 // don't display until mach .8
+		mach = 1.0 1.0
+		density = 1.0 1.0
+		density = 0.4 1.0 // don't display over .4 atmo
+		density = 0.3 1.0 
+		density = 0.002 1.0
+		density = 0.001 0.0 // and stop under .001
+	}	
+}
+        }
+        engage
+        {
+            AUDIO
+            {
+                channel = Ship
+                clip = sound_vent_medium
+                volume = 1.0
+                pitch = 2.0
+                loop = false
+            }
+        }
+        disengage
+        {
+            AUDIO
+            {
+                channel = Ship
+                clip = sound_vent_soft
+                volume = 1.0
+                pitch = 2.0
+                loop = false
+            }
+        }
+        flameout
+        {
+            AUDIO
+            {
+                channel = Ship
+                clip = sound_explosion_low
+                volume = 1.0
+                pitch = 2.0
+                loop = false
+            }
+        }
+    }
+MODULE
+{
+	name = ModuleEnginesFX
+	//engineID = T1D
+	runningEffectName = powersmoke
+	directThrottleEffectName = powerflame
+	thrustVectorTransformName = exhaustTransform
+	exhaustDamage = False
+	throttleLocked = False
+	ignitionThreshold = 0.1
+	minThrust = 0
+	maxThrust = 0
+	heatProduction = 200
+	PROPELLANT
+	{
+		name = LiquidFuel
+        ratio = 0.0
+		DrawGauge = True
+	}
+	PROPELLANT
+	{
+		name = Oxidizer
+		ratio = 0.0
+	}
+	atmosphereCurve
+ 	{
+   	 key = 0 370
+  	 key = 1 320
+ 	}
+	
+}        
+
+EFFECTS
+{
+        powerflame2
+        {
+            MODEL_MULTI_PARTICLE_PERSIST
+            {
+                name = flamethrust2
+                modelName = KerbalStockLauncherOverhaul/FX/T1DFlame
+                transformName = thrustTransform
+                emission = 0.0 0.0
+                emission = 0.05 0.0
+                emission = 0.075 0.25
+                emission = 1.0 1.25
+                speed = 0.0 1.98
+                speed = 1.0 1.12
+		energy = 0.0 0.33 // Same for energy
+		energy = 1.0 0.99 // Same for energy
+            	fixedEmissions = false
+            }
+            AUDIO
+            {
+                channel = Ship
+                clip = sound_rocket_hard
+                volume = 0.0 0.0
+                volume = 1.0 1.0
+                pitch = 0.0 0.2
+                pitch = 1.0 1.0
+                loop = true
+            }
+        }
+	powersmoke2
+        {
+	
+	}
+        engage
+        {
+            AUDIO
+            {
+                channel = Ship
+                clip = sound_vent_medium
+                volume = 1.0
+                pitch = 2.0
+                loop = false
+            }
+        }
+        disengage
+        {
+            AUDIO
+            {
+                channel = Ship
+                clip = sound_vent_soft
+                volume = 1.0
+                pitch = 2.0
+                loop = false
+            }
+        }
+        flameout
+        {
+            AUDIO
+            {
+                channel = Ship
+                clip = sound_explosion_low
+                volume = 1.0
+                pitch = 2.0
+                loop = false
+            }
+        }
+    }
+MODULE
+{
+	name = ModuleEnginesFX
+	//engineID = T1D2
+	runningEffectName = powersmoke2
+	directThrottleEffectName = powerflame2
+	thrustVectorTransformName = thrustTransform
+	exhaustDamage = False
+	throttleLocked = False
+	ignitionThreshold = 0.1
+	minThrust = 0
+	maxThrust = 200
+	heatProduction = 400
+	PROPELLANT
+	{
+		name = LiquidFuel
+        ratio = 0.9
+		DrawGauge = True
+	}
+	PROPELLANT
+	{
+		name = Oxidizer
+		ratio = 1.1
+	}
+	atmosphereCurve
+ 	{
+   	 key = 0 370
+  	 key = 1 320
+ 	}
+	
+}
+	
+MODULE
+{
+	name = ModuleGimbal
+	gimbalTransformName = thrustTransform
+	gimbalRange = 1
+}
+
+MODULE
+{
+      name = ModuleAnimateHeat
+      ThermalAnim = T1DHeat
+}
+
+MODULE
+{
+	name = ModuleAlternator	
+	RESOURCE
+	{
+		name = ElectricCharge
+		rate = 6.0
+	}
+}
+RESOURCE
+{
+	name = ElectricCharge
+	amount = 0
+	maxAmount = 0
+  	isTweakable = false
+	hideFlow = true
+}
+
+
+MODULE
+{
+	name = ModuleTestSubject
+	
+	// nowhere: 0, srf: 1, ocean: 2, atmo: 4, space: 8
+	environments = 15
+	
+	useStaging = True
+	useEvent = False
+}
+
+MODULE
+    {
+        name = NodeToggle
+    }
+}
