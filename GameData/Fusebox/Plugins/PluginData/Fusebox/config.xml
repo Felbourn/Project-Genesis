@@ -20,10 +20,10 @@
         <ymax>324</ymax>
     </rect>
     <rect name="drkWin1">
-        <xmin>1280</xmin>
-        <xmax>1440</xmax>
-        <ymin>50</ymin>
-        <ymax>60</ymax>
+        <xmin>1246</xmin>
+        <xmax>1406</xmax>
+        <ymin>163</ymin>
+        <ymax>290</ymax>
     </rect>
     <int name="skin1">2</int>
     <bool name="toolbar1">1</bool>

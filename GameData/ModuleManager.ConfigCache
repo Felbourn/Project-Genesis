@@ -1,4 +1,4 @@
-patchedNodeCount = 10825
+patchedNodeCount = 12140
 catEatenCount = 0
 UrlConfig
 {
@@ -3004,6 +3004,10 @@ UrlConfig
 			name = ElectricCharge
 			amount = 112.5
 			maxAmount = 112.5
+		}
+		MODULE
+		{
+			name = ModuleSPU
 		}
 		MODULE
 		{
@@ -6879,44 +6883,196 @@ UrlConfig
 }
 UrlConfig
 {
-	name = Fel_EngineAdapter
+	name = Fel_DeepFairingBase
 	type = PART
-	parentUrl = Felbourn/Payload Adapters/engineAdapter
-	url = Felbourn/Payload Adapters/engineAdapter/Fel_EngineAdapter
+	parentUrl = Felbourn/Fairings/deepBase
+	url = Felbourn/Fairings/deepBase/Fel_DeepFairingBase
 	PART
 	{
-		name = Fel_EngineAdapter
+		name = Fel_DeepFairingBase
 		module = Part
-		category = 2
+		category = Aero
 		subcategory = 0
-		title = Payload Engine Mount FIX ME
+		title = Deep Fairing Base
 		author = Felbourn
 		manufacturer = Felbourn Industries
-		description = Attach to your payload, then attach lower staqge, then attach engine to this mount. The engine can be as small as you want since it no longer connects to the next stage down, and it won't display its fairing either.
-		rescaleFactor = 1.0
-		scale = 1.25
-		node_stack_bottom = 0.0, 0.0, 0.0,    0.0, -1.0, 0.0,   4
-		node_stack_bottom2 = 0.0, 0.2, 0.0,   0.0, 1.0, 0.0,    4
-		node_stack_top = 0.0, 2.5145, 0.0,    0.0, 1.0, 0.0,    4
-		attachRules = 1,0,1,1,0
-		TechRequired = metaMaterials
-		entryCost = 16000
-		cost = 3200
-		mass = 2
+		description = The base upon which to mount your payload and expanded fairings.
+		scale = 1
+		rescaleFactor = 1
+		node_stack_payload = 0,-1.5,0,       0,1,0,4
+		node_stack_connect1 = 4.5,11.99796,0,  0,1,0,4
+		node_stack_connect2 = -4.5,11.99796,0,  0,1,0,4
+		node_stack_connect3 = 4.5,18.32238,0,  0,1,0,4
+		node_stack_connect4 = -4.5,18.32238,0,  0,1,0,4
+		node_stack_connect5 = 4.5,24.64682,0,  0,1,0,4
+		node_stack_connect6 = -4.5,24.64682,0,  0,1,0,4
+		node_stack_bottom = 0,-2.0761,0,   0,-1,0,4
+		attachRules = 1,0,1,1,0,0,0
+		stackSymmetry = 1
+		fx_gasBurst_white = 0.0, 0.985, 0.0, 0.0, 1.0, 0.0, decouple
+		sound_vent_large = decouple
+		CrewCapacity = 0
+		TechRequired = heavyAerodynamics
+		entryCost = 28000
+		cost = 8000
+		mass = 7.35
 		dragModelType = default
-		maximum_drag = 0.2
-		minimum_drag = 0.2
-		angularDrag = 2
+		maximum_drag = 0.15
+		minimum_drag = 0.15
+		angularDrag = 1.5
 		crashTolerance = 9
-		maxTemp = 3400
-		fuelCrossFeed = True
-		heatConductivity = 0.01
-		breakingForce = 10000
-		breakingTorque = 10000
+		breakingForce = 20000
+		breakingTorque = 20000
+		maxTemp = 2000
+		fuelCrossFeed = False
+		thermalMassModifier = 2.0
+		skinMassPerArea = 4.0
+		skinInternalConductionMult = 0.25
+		heatConductivity = 0.003
+		emissiveConstant = 0.8
+		bulkheadProfiles = size3
+		stageOffset = 1
+		childStageOffset = 1
+		MODEL
+		{
+			model = KWRocketry/Parts/Fairings/UnifiedFairings5m/KW_Fairing_ExpandingBase5m
+			position = 0, 2.16261, 0
+			scale = 1.25, 1.25, 1.25
+		}
 		MODEL
 		{
 			model = KWRocketry/Parts/Fairings/UnifiedFairings/KW_Auto_5mInterstage2
-			scale = 1.6665625, 0.1, 1.6665625
+			position = 0, -2.0761, 0
+			scale = 1.66656, 1.66656, 1.66656
+		}
+		MODULE
+		{
+			name = ModuleAnimatedAnchoredDecoupler
+			ejectionForce = 1500
+			explosiveNodeID = payload
+		}
+		MODULE
+		{
+			name = TweakScale
+			type = stack
+			defaultScale = 5
+		}
+		MODULE
+		{
+			name = ExtendedPartInfo
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = tjs_DecouplerLight
+			lightMultiplier = 1.0
+			lightRange = 15.0
+			lightRed = 1
+			lightGreen = 0.88
+			lightBlue = 0.68
+			lightDuration = 0.1
+		}
+		MODULE
+		{
+			name = ModuleTweakableDecouple
+			decouplerModuleName = ModuleAnimatedAnchoredDecoupler
+		}
+		MODULE
+		{
+			name = ModuleStagingToggle
+			defaultDisabled = false
+			activeInFlight = true
+			activeInEditor = true
+		}
+		MODULE
+		{
+			name = ModuleCargoBay
+			DeployModuleIndex = 0
+			closedPosition = 0
+			lookupRadius = 2.5
+		}
+		INTERNAL
+		{
+			name = Placeholder
+		}
+	}
+}
+UrlConfig
+{
+	name = Fel_KW3MediumOrangeA
+	type = PART
+	parentUrl = Felbourn/Fuel/KW3A
+	url = Felbourn/Fuel/KW3A/Fel_KW3MediumOrangeA
+	PART
+	{
+		name = Fel_KW3MediumOrangeA
+		module = Part
+		category = 0
+		subcategory = 0
+		title = Felbourn SC-4A Medium Tank
+		description = short version of LW fuel tank
+		author = Felbourn
+		manufacturer = Felburn Industries
+		rescaleFactor = 1.0
+		scale = 1.25
+		node_stack_top = 0.0, 1.44, 0.0,      0.0, 1.0, 0.0,     3
+		node_stack_bottom = 0.0, -1.44, 0.0,  0.0, -1.0, 0.0,    3
+		node_attach = 0.0, 0.0, -1.515,      0.0, 0.0, 0.0,      3
+		TechRequired = veryHeavyRocketry
+		entryCost = 25920
+		cost = 51840
+		attachRules = 1,1,1,1,0
+		mass = 1
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.3
+		angularDrag = 2
+		crashTolerance = 6
+		maxTemp = 2000
+		breakingForce = 60000
+		breakingTorque = 60000
+		MODEL
+		{
+			model = KWRocketry/Parts/Fuel/KW_Universal_Tanks/KW_Fuel_3mL4A
+			scale = 1.25, 0.3, 1.25
+		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 32857.8684808009
+			@volume / = 2
+			@volume ! = 2
+			@volume * = 3.141592654
+			@volume * = 850
+			@volume * = 3.5
+			type = Default
+		}
+		MODULE
+		{
+			name = TweakScale
+			type = stack
+			defaultScale = 3.75
 		}
 		MODULE
 		{
@@ -6948,6 +7104,277 @@ UrlConfig
 }
 UrlConfig
 {
+	name = Fel_KW3MediumOrangeB
+	type = PART
+	parentUrl = Felbourn/Fuel/KW3B
+	url = Felbourn/Fuel/KW3B/Fel_KW3MediumOrangeB
+	PART
+	{
+		name = Fel_KW3MediumOrangeB
+		module = Part
+		category = 0
+		subcategory = 0
+		title = Felbourn SC-4A Short Tank
+		description = short version of LW fuel tank
+		author = Felbourn
+		manufacturer = Felburn Industries
+		rescaleFactor = 1.0
+		scale = 1.25
+		node_stack_top = 0.0, 3.6, 0.0,      0.0, 1.0, 0.0,     3
+		node_stack_bottom = 0.0, -3.6, 0.0,  0.0, -1.0, 0.0,    3
+		node_attach = 0.0, 0.0, -1.515,      0.0, 0.0, 0.0,     3
+		TechRequired = veryHeavyRocketry
+		entryCost = 25920
+		cost = 51840
+		attachRules = 1,1,1,1,0
+		mass = 1
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.3
+		angularDrag = 2
+		crashTolerance = 6
+		maxTemp = 2000
+		breakingForce = 60000
+		breakingTorque = 60000
+		MODEL
+		{
+			model = KWRocketry/Parts/Fuel/KW_Universal_Tanks/KW_Fuel_3mL4A
+			scale = 1.25, 0.75, 1.25
+		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			MFT_dia = 3.75
+			MFT_hgt = 6
+			type = Default
+			volume = 9387.96242308598
+		}
+		MODULE
+		{
+			name = TweakScale
+			type = stack
+			defaultScale = 3.75
+		}
+		MODULE
+		{
+			name = ExtendedPartInfo
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+	}
+}
+UrlConfig
+{
+	name = Fel_EngineAdapter
+	type = PART
+	parentUrl = Felbourn/Payload Adapters/engineAdapter
+	url = Felbourn/Payload Adapters/engineAdapter/Fel_EngineAdapter
+	PART
+	{
+		name = Fel_EngineAdapter
+		module = Part
+		category = 2
+		subcategory = 0
+		title = Payload Engine Mount
+		author = Felbourn
+		manufacturer = Felbourn Industries
+		description = Attach to your payload, then attach lower staqge, then attach engine to this mount. The engine can be as small as you want since it no longer connects to the next stage down, and it won't display its fairing either.
+		rescaleFactor = 1
+		scale = 1
+		node_stack_bottom = 0.0, 0.00, 0.0,    0, -1, 0,    4
+		node_stack_engine = 0.0, 0.19, 0.0,    0, -1, 0,    3
+		node_stack_top = 0.0, 0.19, 0.0,       0,  1, 0,    4
+		attachRules = 1,0,1,1,0
+		TechRequired = metaMaterials
+		entryCost = 16000
+		cost = 3200
+		mass = 2
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		angularDrag = 2
+		crashTolerance = 9
+		maxTemp = 3400
+		fuelCrossFeed = True
+		heatConductivity = 0.01
+		breakingForce = 10000
+		breakingTorque = 10000
+		MODEL
+		{
+			model = KWRocketry/Parts/Fairings/UnifiedFairings/KW_Auto_5mInterstage2
+			scale = 1.65, 0.1, 1.65
+		}
+		MODULE
+		{
+			name = TweakScale
+			type = stack
+			defaultScale = 5
+		}
+		MODULE
+		{
+			name = ExtendedPartInfo
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+	}
+}
+UrlConfig
+{
+	name = Fel_LoadFairing
+	type = PART
+	parentUrl = Felbourn/Payload Adapters/loadFairing
+	url = Felbourn/Payload Adapters/loadFairing/Fel_LoadFairing
+	PART
+	{
+		name = Fel_LoadFairing
+		module = Part
+		category = Aero
+		subcategory = 0
+		title = Adapter Load Fairing
+		author = Felbourn
+		manufacturer = Felbourn Industries
+		description = Attach to payload adapter, then strut to KW fairing.
+		scale = 1
+		rescaleFactor = 1
+		node_stack_side = 0, 0, 0,      0, -1, 0,    4
+		attachRules = 1,0,1,1,0
+		stackSymmetry = 1
+		TechRequired = heavyAerodynamics
+		entryCost = 2800
+		cost = 800
+		mass = 0.05
+		dragModelType = default
+		maximum_drag = 0.1
+		minimum_drag = 0.1
+		angularDrag = 1
+		crashTolerance = 8
+		maxTemp = 2000
+		MODEL
+		{
+			model = KWRocketry/Parts/Fairings/UnifiedFairings5m/KW_Fairing_ExpandingWall5m
+			scale = 0.76, 0.038, 0.76
+		}
+		MODEL
+		{
+			model = KWRocketry/Parts/Fairings/UnifiedFairings5m/KW_Fairing_ExpandingWall5m
+			scale = 0.684, 0.038, 0.684
+			position = 0.0836, 0, 0
+		}
+		MODEL
+		{
+			model = KWRocketry/Parts/Fairings/UnifiedFairings5m/KW_Fairing_ExpandingWall5m
+			scale = 0.608, 0.038, 0.608
+			position = 0.1672, 0, 0
+		}
+		MODEL
+		{
+			model = KWRocketry/Parts/Fairings/UnifiedFairings5m/KW_Fairing_ExpandingWall5m
+			scale = 0.532, 0.038, 0.532
+			position = 0.2508, 0, 0
+		}
+		MODULE
+		{
+			name = ModuleDecouple
+			ejectionForce = 50
+			explosiveNodeID = side
+		}
+		MODULE
+		{
+			name = TweakScale
+			type = free
+		}
+		MODULE
+		{
+			name = ExtendedPartInfo
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = tjs_DecouplerLight
+			lightMultiplier = 1.0
+			lightRange = 15.0
+			lightRed = 1
+			lightGreen = 0.88
+			lightBlue = 0.68
+			lightDuration = 0.1
+		}
+		MODULE
+		{
+			name = ModuleTweakableDecouple
+			decouplerModuleName = ModuleDecouple
+		}
+		MODULE
+		{
+			name = ModuleStagingToggle
+			defaultDisabled = false
+			activeInFlight = true
+			activeInEditor = true
+		}
+	}
+}
+UrlConfig
+{
 	name = FuseBoxMonitor
 	type = RPMCVARIABLEHANDLER
 	parentUrl = Fusebox/FuseboxVariables
@@ -6961,6 +7388,184 @@ UrlConfig
 		variable = ELECTRICPRODUCTION,0
 		variable = ELECTRICDELTA,0
 		variable = ELECTRICSTATUS
+	}
+}
+UrlConfig
+{
+	name = InterstellarGasTank_PB-Stack
+	type = PART
+	parentUrl = InterstellarFuelSwitch/Parts/InterstellarGasTank/InterstellarGasTank-PB-Stack
+	url = InterstellarFuelSwitch/Parts/InterstellarGasTank/InterstellarGasTank-PB-Stack/InterstellarGasTank_PB-Stack
+	PART
+	{
+		name = InterstellarGasTank_PB-Stack
+		module = Part
+		author = FreeThinker
+		scale = 1
+		rescaleFactor = 4
+		node_stack_top = 0.0, 0.1404661, 0.0, 0.0, 1.0, 0.0, 2
+		node_stack_bottom = 0.0, -0.1404661, 0.0, 0.0, -1.0, 0.0, 2
+		TechRequired = ionPropulsion
+		entryCost = 10000
+		cost = 27250
+		category = FuelTank
+		subcategory = 0
+		title = Interstellar Gas Tank FIX ME
+		manufacturer = Probodobodyne Inc.
+		description = Like Xenon, Argon is an inert gas but occurs in much greater quantities in nature.  It offers superior specific impulse but lower thrust to the heavier Xenon.
+		attachRules = 1,0,1,1,0
+		mass = 0.5
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.3
+		angularDrag = 2
+		crashTolerance = 6
+		maxTemp = 1600
+		breakingForce = 300
+		breakingTorque = 300
+		MODEL
+		{
+			model = VenStockRevamp/Squad/Parts/Propulsion/InlineXenon
+			scale = 1, 1, 1
+		}
+		MODULE
+		{
+			name = InterstellarFuelSwitch
+			resourceGui = Argon;CarbonDioxide;Hydrogen;Krypton;Neon;Nitrogen;Oxygen;Xenon;LifeSupport;Nothing
+			resourceNames = ArgonGas;CarbonDioxide;Hydrogen;KryptonGas;NeonGas;Nitrogen;Oxygen;XenonGas;Oxygen,CarbonDioxide;Structural
+			resourceAmounts = 224000;224000;224000;224000;224000;224000;224000;44800;112000,112000;0
+			basePartMass = 0.5
+			tankMass = 0.5;0.5;0;0.5;0.5;0.5;0.5;1.1;0.5;0.5
+			boilOffTemp = 10;20;30;40;50;60;70;80;90,95;100
+			resourcesToIgnore = ElectricCharge;MonoPropellant
+			volumeMultiplier = 1
+			volumeExponent = 3
+			massMultiplier = 1
+			massExponent = 3
+			displayCurrentTankCost = false
+			displayCurrentBoilOffTemp = true
+			hasGUI = true
+			availableInFlight = true
+			availableInEditor = true
+			showInfo = true
+		}
+		MODULE
+		{
+			name = TweakScale
+			type = stack
+			defaultScale = 2.5
+		}
+		MODULE
+		{
+			name = ExtendedPartInfo
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+	}
+}
+UrlConfig
+{
+	name = InterstellarGasTank-PB-X50R
+	type = PART
+	parentUrl = InterstellarFuelSwitch/Parts/InterstellarGasTank/InterstellarGasTank-PB-X50R
+	url = InterstellarFuelSwitch/Parts/InterstellarGasTank/InterstellarGasTank-PB-X50R/InterstellarGasTank-PB-X50R
+	PART
+	{
+		name = InterstellarGasTank-PB-X50R
+		module = Part
+		author = FreeThinker
+		scale = 0.5
+		rescaleFactor = 4
+		node_attach = 0.0, 0.0, -0.1875, 0.0, 0.0, -1.0
+		TechRequired = ionPropulsion
+		entryCost = 5000
+		cost = 13625
+		category = FuelTank
+		subcategory = 0
+		title = Interstellar Gas Tank PB-X50R FIX ME
+		manufacturer = Probodobodyne Inc.
+		description = The X50R is a Universal Gas container, heralded by engineers for being ideally suited for any spacecraft, and also for having thoroughly disproved management in their notion that a static fuel tank would make the fuel cheaper.
+		attachRules = 0,1,0,0,1
+		mass = 0.25
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		angularDrag = 2
+		crashTolerance = 12
+		maxTemp = 1600
+		MODEL
+		{
+			model = VenStockRevamp/Squad/Parts/Propulsion/RadialXenon
+		}
+		MODULE
+		{
+			name = InterstellarFuelSwitch
+			resourceGui = Argon;CarbonDioxide;Hydrogen;Krypton;Neon;Nitrogen;Oxygen;LifeSupport;Xenon;Nothing
+			resourceNames = ArgonGas;CarbonDioxide;Hydrogen;KryptonGas;NeonGas;Nitrogen;Oxygen;XenonGas;Oxygen,CarbonDioxide;Structural
+			resourceAmounts = 128000;128000;128000;128000;128000;128000;128000;25600;64000,64000;0
+			basePartMass = 0.25
+			tankMass = 0.25;0.25;0;0.25;0.25;0.25;0.25;0.25;0.55;0.25
+			volumeMultiplier = 1
+			volumeExponent = 3
+			massMultiplier = 1
+			massExponent = 3
+			displayCurrentTankCost = false
+			hasGUI = true
+			availableInFlight = true
+			availableInEditor = true
+			showInfo = true
+		}
+		MODULE
+		{
+			name = TweakScale
+			type = surface
+		}
+		MODULE
+		{
+			name = ExtendedPartInfo
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
 	}
 }
 UrlConfig
@@ -7898,6 +8503,2596 @@ UrlConfig
 		MODULE
 		{
 			name = ModuleSPUPassive
+		}
+	}
+}
+UrlConfig
+{
+	name = KE180
+	type = PART
+	parentUrl = KerbalStockLauncherOverhaul/Parts/Engine/KX KE-180/part
+	url = KerbalStockLauncherOverhaul/Parts/Engine/KX KE-180/part/KE180
+	PART
+	{
+		name = KE180
+		module = Part
+		author = blackheart612
+		mesh = model.mu
+		rescaleFactor = 1
+		node_stack_top = 0.0, 0.93, 0.0, 0.0, 1.0, 0.0, 2
+		fx_exhaustFlame_blue = 0.0, -2, 0.0, 0.0, 1.0, 0.0, running
+		fx_exhaustLight_blue = 0.0, -2, 0.0, 0.0, 0.0, 1.0, running
+		fx_smokeTrail_light = 0.0, -2, 0.0, 0.0, 1.0, 0.0, running
+		fx_exhaustSparks_flameout = 0.0, -2, 0.0, 0.0, 1.0, 0.0, flameout
+		sound_vent_medium = engage
+		sound_rocket_hard = running
+		sound_vent_soft = disengage
+		sound_explosion_low = flameout
+		TechRequired = veryHeavyRocketry
+		entryCost = 24000
+		cost = 2850
+		category = Propulsion
+		subcategory = 0
+		title = KE-180 Liquid Fuel Engine FIX ME
+		manufacturer = Aerojet Kerbodyne/KKKP
+		description = Ever been felt the lack of power in your rocket arsenal? Think no more! We present to you the powerful KE-180 engine, why settle for a single nozzled powerful rocket when you can have two!
+		attachRules = 1,0,1,0,0
+		emissiveConstant = 0.8
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		angularDrag = 2
+		crashTolerance = 7
+		breakingForce = 200
+		breakingTorque = 200
+		maxTemp = 2000
+		bulkheadProfiles = size2
+		EFFECTS
+		{
+			powerflame
+			{
+				MODEL_MULTI_PARTICLE_PERSIST
+				{
+					name = flamethrust
+					modelName = KerbalStockLauncherOverhaul/FX/KR1
+					transformName = thrustTransform
+					emission = 0.0 0.0
+					emission = 0.05 0.0
+					emission = 0.075 0.25
+					emission = 1.0 1.25
+					speed = 0.0 1.98
+					speed = 1.0 1.12
+					energy = 0.0 0.33
+					energy = 1.0 0.99
+					fixedEmissions = false
+					logGrow
+					{
+						density = 0 8
+						density = 1 0.7
+						density = 10 0
+					}
+				}
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_rocket_hard
+					volume = 0.0 0.0
+					volume = 1.0 1.0
+					pitch = 0.0 0.2
+					pitch = 1.0 1.0
+					loop = true
+				}
+			}
+			powersmoke
+			{
+				MODEL_MULTI_PARTICLE_PERSIST
+				{
+					name = smokelaunch
+					modelName = MP_Nazari/FX/smokelaunch
+					transformName = thrustTransform
+					emission = 0.0 0.0
+					emission = 0.05 0.0
+					emission = 0.2 0.5
+					emission = 1.0 1.8
+					energy = 0.0 0.2
+					energy = 1.0 1.1
+					speed = 0.0 0.1
+					speed = 1.0 0.15
+					grow = 0.0 0.0
+					grow = 1.0 0.75
+					size = 0.0 1.0
+					size = 1.0 1.5
+					renderMode = "Billboard"
+					collide = true
+					collideRatio = 0.12
+					fixedScale = 1.0
+					sizeClamp = 50
+					angle = 0.0 1.0
+					angle = 45.0 1.0
+					angle = 50.0 1.0
+					distance = 0.0 1.0
+					distance = 100.0 1.0
+					distance = 550.0 0.0
+					initialDensity = 2.25
+					physical = true
+					stickiness = 0.8
+					dragCoefficient = 1
+					logarithmicGrowth = 2.75
+					fixedEmissions = true
+					randomInitalVelocityOffsetMaxRadius = 15.5
+					emission
+					{
+						mach = 0.0 1.25
+						mach = 0.05 0.0
+						mach = 1.0 0.0
+					}
+					logGrow
+					{
+						power = 0 0
+						power = 1 2
+						density = 0 8
+						density = 1 0.7
+						density = 10 0
+					}
+					Grow
+					{
+						power = 0 0
+						power = 1 2
+					}
+				}
+			}
+			engage
+			{
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_vent_medium
+					volume = 1.0
+					pitch = 2.0
+					loop = false
+				}
+			}
+			disengage
+			{
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_vent_soft
+					volume = 1.0
+					pitch = 2.0
+					loop = false
+				}
+			}
+			flameout
+			{
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_explosion_low
+					volume = 1.0
+					pitch = 2.0
+					loop = false
+				}
+			}
+		}
+		MODULE
+		{
+			name = ModuleEnginesFX
+			runningEffectName = powersmoke
+			directThrottleEffectName = powerflame
+			thrustVectorTransformName = thrustTransform
+			exhaustDamage = True
+			ignitionThreshold = 0.1
+			minThrust = 0
+			maxThrust = 1600
+			heatProduction = 800
+			EngineType = LiquidFuel
+			PROPELLANT
+			{
+				name = LiquidFuel
+				ratio = 0.9
+				DrawGauge = True
+			}
+			PROPELLANT
+			{
+				name = Oxidizer
+				ratio = 1.1
+			}
+			atmosphereCurve
+			{
+				key = 0 300
+				key = 1 250
+				key = 9 0.001
+			}
+		}
+		MODULE
+		{
+			name = ModuleGimbal
+			gimbalTransformName = thrustTransform
+			gimbalRange = 1
+		}
+		MODULE
+		{
+			name = ModuleAnimateHeat
+			ThermalAnim = KE180Heat
+		}
+		MODULE
+		{
+			name = ModuleAlternator
+			RESOURCE
+			{
+				name = ElectricCharge
+				rate = 12.0
+			}
+		}
+		EFFECTS
+		{
+			Thrust
+			{
+				AUDIO
+				{
+					clip = Squad/Sounds/sound_rocket_mini
+					volume = 0.0 0.0
+					volume = 1.0 1.0
+					pitch = 0.0 0.8
+					pitch = 1.0 1.0
+					loop = true
+				}
+			}
+		}
+		MODULE
+		{
+			name = FSmeshSwitch
+			moduleID = 0
+			buttonName = Toggle Cover
+			previousButtonName = Toggle Cover
+			objectDisplayNames = Cover Off;Cover On
+			objects = Engine;Engine, Cover
+			updateSymmetry = true
+		}
+		MODULE
+		{
+			name = ModuleSurfaceFX
+			thrustProviderModuleIndex = 0
+			fxMax = 0.8
+			maxDistance = 50
+			falloff = 1.8
+			thrustTransformName = thrustTransform
+		}
+		MODULE
+		{
+			name = ExtendedPartInfo
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = tjs_EngineLight
+			isDebug = true
+			lightPower = 1.0
+			lightRange = 40.0
+			maxLightPower = 23.0
+			lightRed = 1
+			lightGreen = 0.88
+			lightBlue = 0.68
+			jitterMultiplier = 10.5
+			multiplierOnIva = 0.5
+		}
+		MODULE
+		{
+			name = ModuleTweakableGimbal
+		}
+	}
+}
+UrlConfig
+{
+	name = KE4
+	type = PART
+	parentUrl = KerbalStockLauncherOverhaul/Parts/Engine/KX KE-4/part
+	url = KerbalStockLauncherOverhaul/Parts/Engine/KX KE-4/part/KE4
+	PART
+	{
+		name = KE4
+		module = Part
+		author = blackheart612
+		mesh = model.mu
+		rescaleFactor = 1.0
+		node_stack_top = 0.0, 0.90, 0.0, 0.0, 1.0, 0.0, 2
+		node_stack_top1 = 0.0, 0.75, 0.0, 0.0, 1.0, 0.0, 2
+		node_stack_bottom = 0.0, -2.52, 0.0, 0.0, -1.0, 0.0, 2
+		fx_exhaustFlame_blue = 0.0, -2.2, 0.0, 0.0, 1.0, 0.0, running
+		fx_exhaustLight_blue = 0.0, -2.2, 0.0, 0.0, 0.0, 1.0, running
+		fx_smokeTrail_light = 0.0, -2.2, 0.0, 0.0, 1.0, 0.0, running
+		fx_exhaustSparks_flameout = 0.0, -2.2, 0.0, 0.0, 1.0, 0.0, flameout
+		sound_vent_medium = engage
+		sound_rocket_hard = running
+		sound_vent_soft = disengage
+		sound_explosion_low = flameout
+		TechRequired = heavyRocketry
+		entryCost = 9000
+		cost = 2850
+		category = Propulsion
+		subcategory = 0
+		title = KE-4 Liquid Fuel Engine FIX ME
+		manufacturer = Aerojet Kerbodyne
+		description = The smaller sibling of the Mainsail, the Skipper's power rivals that of... large cities. Combining high thrust with reasonable efficiency, this engine excels when used as a mid-stage booster.
+		attachRules = 1,0,1,0,0
+		mass = 3
+		emissiveConstant = 0.8
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		angularDrag = 2
+		crashTolerance = 8
+		breakingForce = 200
+		breakingTorque = 200
+		maxTemp = 2000
+		bulkheadProfiles = size2
+		EFFECTS
+		{
+			powerflame
+			{
+				MODEL_MULTI_PARTICLE_PERSIST
+				{
+					name = flamethrust
+					modelName = KerbalStockLauncherOverhaul/FX/BE4
+					transformName = thrustTransform
+					emission = 0.0 0.0
+					emission = 0.05 0.0
+					emission = 0.075 0.25
+					emission = 1.0 1.25
+					speed = 0.0 1.98
+					speed = 1.0 1.12
+					energy = 0.0 0.33
+					energy = 1.0 0.99
+					fixedEmissions = false
+					logGrow
+					{
+						density = 0 8
+						density = 1 0.7
+						density = 10 0
+					}
+				}
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_rocket_hard
+					volume = 0.0 0.0
+					volume = 1.0 1.0
+					pitch = 0.0 0.2
+					pitch = 1.0 1.0
+					loop = true
+				}
+			}
+			powersmoke
+			{
+				MODEL_MULTI_PARTICLE_PERSIST
+				{
+					name = smokelaunch
+					modelName = MP_Nazari/FX/smokelaunch
+					transformName = thrustTransform
+					emission = 0.0 0.0
+					emission = 0.05 0.0
+					emission = 0.2 0.5
+					emission = 1.0 1.8
+					energy = 0.0 0.2
+					energy = 1.0 1.1
+					speed = 0.0 0.1
+					speed = 1.0 0.15
+					grow = 0.0 0.0
+					grow = 1.0 0.75
+					size = 0.0 1.0
+					size = 1.0 1.5
+					renderMode = "Billboard"
+					collide = true
+					collideRatio = 0.12
+					fixedScale = 1.0
+					sizeClamp = 50
+					angle = 0.0 1.0
+					angle = 45.0 1.0
+					angle = 50.0 1.0
+					distance = 0.0 1.0
+					distance = 100.0 1.0
+					distance = 550.0 0.0
+					initialDensity = 2.25
+					physical = true
+					stickiness = 0.8
+					dragCoefficient = 1
+					logarithmicGrowth = 2.75
+					fixedEmissions = true
+					randomInitalVelocityOffsetMaxRadius = 15.5
+					emission
+					{
+						mach = 0.0 1.25
+						mach = 0.05 0.0
+						mach = 1.0 0.0
+					}
+					logGrow
+					{
+						power = 0 0
+						power = 1 2
+						density = 0 8
+						density = 1 0.7
+						density = 10 0
+					}
+					Grow
+					{
+						power = 0 0
+						power = 1 2
+					}
+				}
+			}
+			engage
+			{
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_vent_medium
+					volume = 1.0
+					pitch = 2.0
+					loop = false
+				}
+			}
+			disengage
+			{
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_vent_soft
+					volume = 1.0
+					pitch = 2.0
+					loop = false
+				}
+			}
+			flameout
+			{
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_explosion_low
+					volume = 1.0
+					pitch = 2.0
+					loop = false
+				}
+			}
+		}
+		MODULE
+		{
+			name = ModuleEnginesFX
+			runningEffectName = powersmoke
+			directThrottleEffectName = powerflame
+			thrustVectorTransformName = thrustTransform
+			exhaustDamage = True
+			ignitionThreshold = 0.1
+			minThrust = 0
+			maxThrust = 650
+			heatProduction = 350
+			fxOffset = 0, 0, 1.2
+			EngineType = LiquidFuel
+			PROPELLANT
+			{
+				name = LiquidFuel
+				ratio = 0.9
+				DrawGauge = True
+			}
+			PROPELLANT
+			{
+				name = Oxidizer
+				ratio = 1.1
+			}
+			atmosphereCurve
+			{
+				key = 0 320
+				key = 1 280
+				key = 6 0.001
+			}
+		}
+		MODULE
+		{
+			name = ModuleJettison
+			jettisonName = Fairing
+			bottomNodeName = bottom
+			isFairing = True
+			jettisonedObjectMass = 0.5
+			jettisonForce = 15
+			jettisonDirection = 0 0 1
+		}
+		MODULE
+		{
+			name = ModuleJettison
+			jettisonName = TankButt
+			bottomNodeName = top
+			isFairing = True
+			jettisonedObjectMass = 0.5
+			jettisonForce = 15
+			jettisonDirection = 0 0 1
+		}
+		MODULE
+		{
+			name = ModuleGimbal
+			gimbalTransformName = thrustTransform
+			gimbalRange = 2
+		}
+		MODULE
+		{
+			name = ModuleAnimateHeat
+			ThermalAnim = KE4heat
+		}
+		MODULE
+		{
+			name = ModuleAlternator
+			RESOURCE
+			{
+				name = ElectricCharge
+				rate = 10.0
+			}
+		}
+		MODULE
+		{
+			name = ModuleTestSubject
+			environments = 15
+			useStaging = True
+			useEvent = True
+		}
+		MODULE
+		{
+			name = ModuleSurfaceFX
+			thrustProviderModuleIndex = 0
+			fxMax = 0.8
+			maxDistance = 50
+			falloff = 2
+			thrustTransformName = thrustTransform
+		}
+		MODULE
+		{
+			name = TweakScale
+			type = stack
+			defaultScale = 2.5
+		}
+		MODULE
+		{
+			name = ExtendedPartInfo
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = tjs_EngineLight
+			isDebug = true
+			lightPower = 1.0
+			lightRange = 40.0
+			maxLightPower = 23.0
+			lightRed = 1
+			lightGreen = 0.88
+			lightBlue = 0.68
+			jitterMultiplier = 10.5
+			multiplierOnIva = 0.5
+		}
+		MODULE
+		{
+			name = ModuleTweakableJettison
+		}
+		MODULE
+		{
+			name = ModuleTweakableGimbal
+		}
+	}
+}
+UrlConfig
+{
+	name = KE68
+	type = PART
+	parentUrl = KerbalStockLauncherOverhaul/Parts/Engine/KX KE-68/part
+	url = KerbalStockLauncherOverhaul/Parts/Engine/KX KE-68/part/KE68
+	PART
+	{
+		name = KE68
+		module = Part
+		author = blackheart612
+		mesh = model.mu
+		rescaleFactor = 1
+		node_stack_top = 0.0, 1.085, 0.0, 0.0, 1.0, 0.0, 2
+		node_stack_top1 = 0.0, 0.9, 0.0, 0.0, 1.0, 0.0, 2
+		node_stack_bottom = 0.0, -2.25, 0.0, 0.0, -1.0, 0.0, 2
+		fx_exhaustFlame_blue = 0.0, -2, 0.0, 0.0, 1.0, 0.0, running
+		fx_exhaustLight_blue = 0.0, -2, 0.0, 0.0, 0.0, 1.0, running
+		fx_smokeTrail_light = 0.0, -2, 0.0, 0.0, 1.0, 0.0, running
+		fx_exhaustSparks_flameout = 0.0, -2, 0.0, 0.0, 1.0, 0.0, flameout
+		sound_vent_medium = engage
+		sound_rocket_hard = running
+		sound_vent_soft = disengage
+		sound_explosion_low = flameout
+		TechRequired = veryHeavyRocketry
+		entryCost = 24000
+		cost = 2850
+		category = Propulsion
+		subcategory = 0
+		title = KE-68 Liquid Fuel Engine FIX ME
+		manufacturer = Aerojet Kerbodyne
+		description = So you think some company's so called "Mainsail" is capitalizing with being the only powerful heavy-lifter engine? Think again! We have a better looking, a little less powerful engine, more efficient and heavier.
+		attachRules = 1,0,1,0,0
+		mass = 6
+		emissiveConstant = 0.8
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		angularDrag = 2
+		crashTolerance = 7
+		breakingForce = 200
+		breakingTorque = 200
+		maxTemp = 2000
+		bulkheadProfiles = size2
+		EFFECTS
+		{
+			powerflame
+			{
+				MODEL_MULTI_PARTICLE_PERSIST
+				{
+					name = flamethrust
+					modelName = KerbalStockLauncherOverhaul/FX/KR1
+					transformName = thrustTransform
+					emission = 0.0 0.0
+					emission = 0.05 0.0
+					emission = 0.075 0.25
+					emission = 1.0 1.25
+					speed = 0.0 1.98
+					speed = 1.0 1.12
+					energy = 0.0 0.33
+					energy = 1.0 0.99
+					fixedEmissions = false
+					logGrow
+					{
+						density = 0 8
+						density = 1 0.7
+						density = 10 0
+					}
+				}
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_rocket_hard
+					volume = 0.0 0.0
+					volume = 1.0 1.0
+					pitch = 0.0 0.2
+					pitch = 1.0 1.0
+					loop = true
+				}
+			}
+			powersmoke
+			{
+				MODEL_MULTI_PARTICLE_PERSIST
+				{
+					name = smokelaunch
+					modelName = MP_Nazari/FX/smokelaunch
+					transformName = thrustTransform
+					emission = 0.0 0.0
+					emission = 0.05 0.0
+					emission = 0.2 0.5
+					emission = 1.0 1.8
+					energy = 0.0 0.2
+					energy = 1.0 1.1
+					speed = 0.0 0.1
+					speed = 1.0 0.15
+					grow = 0.0 0.0
+					grow = 1.0 0.75
+					size = 0.0 1.0
+					size = 1.0 1.5
+					renderMode = "Billboard"
+					collide = true
+					collideRatio = 0.12
+					fixedScale = 1.0
+					sizeClamp = 50
+					angle = 0.0 1.0
+					angle = 45.0 1.0
+					angle = 50.0 1.0
+					distance = 0.0 1.0
+					distance = 100.0 1.0
+					distance = 550.0 0.0
+					initialDensity = 2.25
+					physical = true
+					stickiness = 0.8
+					dragCoefficient = 1
+					logarithmicGrowth = 2.75
+					fixedEmissions = true
+					randomInitalVelocityOffsetMaxRadius = 15.5
+					emission
+					{
+						mach = 0.0 1.25
+						mach = 0.05 0.0
+						mach = 1.0 0.0
+					}
+					logGrow
+					{
+						power = 0 0
+						power = 1 2
+						density = 0 8
+						density = 1 0.7
+						density = 10 0
+					}
+					Grow
+					{
+						power = 0 0
+						power = 1 2
+					}
+				}
+			}
+			engage
+			{
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_vent_medium
+					volume = 1.0
+					pitch = 2.0
+					loop = false
+				}
+			}
+			disengage
+			{
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_vent_soft
+					volume = 1.0
+					pitch = 2.0
+					loop = false
+				}
+			}
+			flameout
+			{
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_explosion_low
+					volume = 1.0
+					pitch = 2.0
+					loop = false
+				}
+			}
+		}
+		MODULE
+		{
+			name = ModuleEnginesFX
+			runningEffectName = powersmoke
+			directThrottleEffectName = powerflame
+			thrustVectorTransformName = thrustTransform
+			exhaustDamage = True
+			ignitionThreshold = 0.1
+			minThrust = 0
+			maxThrust = 1500
+			heatProduction = 196
+			EngineType = LiquidFuel
+			PROPELLANT
+			{
+				name = LiquidFuel
+				ratio = 0.9
+				DrawGauge = True
+			}
+			PROPELLANT
+			{
+				name = Oxidizer
+				ratio = 1.1
+			}
+			atmosphereCurve
+			{
+				key = 0 310
+				key = 1 285
+				key = 9 0.001
+			}
+		}
+		MODULE
+		{
+			name = ModuleJettison
+			jettisonName = Fairing
+			bottomNodeName = bottom
+			isFairing = True
+			jettisonedObjectMass = 0.5
+			jettisonForce = 15
+			jettisonDirection = 0 0 1
+		}
+		MODULE
+		{
+			name = ModuleJettison
+			jettisonName = TankButt
+			bottomNodeName = top
+			isFairing = True
+			jettisonedObjectMass = 0.5
+			jettisonForce = 15
+			jettisonDirection = 0 0 1
+		}
+		MODULE
+		{
+			name = ModuleGimbal
+			gimbalTransformName = thrustTransform
+			gimbalRange = 2
+		}
+		MODULE
+		{
+			name = ModuleAnimateHeat
+			ThermalAnim = KE68Heat
+		}
+		MODULE
+		{
+			name = ModuleAlternator
+			RESOURCE
+			{
+				name = ElectricCharge
+				rate = 12.0
+			}
+		}
+		MODULE
+		{
+			name = ModuleSurfaceFX
+			thrustProviderModuleIndex = 0
+			fxMax = 0.8
+			maxDistance = 50
+			falloff = 1.8
+			thrustTransformName = thrustTransform
+		}
+		EFFECTS
+		{
+			Thrust
+			{
+				AUDIO
+				{
+					clip = Squad/Sounds/sound_rocket_mini
+					volume = 0.0 0.0
+					volume = 1.0 1.0
+					pitch = 0.0 0.8
+					pitch = 1.0 1.0
+					loop = true
+				}
+			}
+		}
+		MODULE
+		{
+			name = TweakScale
+			type = stack
+			defaultScale = 2.5
+		}
+		MODULE
+		{
+			name = ExtendedPartInfo
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = tjs_EngineLight
+			isDebug = true
+			lightPower = 1.0
+			lightRange = 40.0
+			maxLightPower = 23.0
+			lightRed = 1
+			lightGreen = 0.88
+			lightBlue = 0.68
+			jitterMultiplier = 10.5
+			multiplierOnIva = 0.5
+		}
+		MODULE
+		{
+			name = ModuleTweakableJettison
+		}
+		MODULE
+		{
+			name = ModuleTweakableGimbal
+		}
+	}
+}
+UrlConfig
+{
+	name = LVT1C
+	type = PART
+	parentUrl = KerbalStockLauncherOverhaul/Parts/Engine/KX LV-T1C/part
+	url = KerbalStockLauncherOverhaul/Parts/Engine/KX LV-T1C/part/LVT1C
+	PART
+	{
+		name = LVT1C
+		module = Part
+		author = blackheart612
+		mesh = model.mu
+		rescaleFactor = 1
+		node_stack_top = 0.0, 0.02, 0.0, 0.0, 1.0, 0.0
+		node_stack_original = 0.0, -0.26, 0.0, 0.0, 1.0, 0.0
+		node_stack_mid = 0.0, -2.02, 0.0, 0.0, -1.0, 0.0
+		node_stack_bottom = 0.0, -2.02, 0.0, 0.0, -1.0, 0.0
+		fx_exhaustFlame_blue = 0.0, -10.3, 0.0, 0.0, 1.0, 0.0, running
+		fx_exhaustLight_blue = 0.0, -10.3, 0.0, 0.0, 0.0, 1.0, running
+		fx_smokeTrail_light = 0.0, -10.3, 0.0, 0.0, 1.0, 0.0, running
+		fx_exhaustSparks_flameout = 0.0, -10.3, 0.0, 0.0, 1.0, 0.0, flameout
+		sound_vent_medium = engage
+		sound_rocket_hard = running
+		sound_vent_soft = disengage
+		sound_explosion_low = flameout
+		TechRequired = start
+		entryCost = 0
+		cost = 850
+		category = Propulsion
+		subcategory = 0
+		title = LV-T1C Liquid Fuel Engine FIX ME
+		manufacturer = LVT Inc
+		description = Although criticized by some due to its not unsignificant use of so-called "pieces found lying about", the LV-T series has proven itself as a comparatively reliable engine. The T30 model boasts a failure ratio below the 50% mark. This has been considered a major improvement over previous models by engineers and LV-T enthusiasts.
+		attachRules = 1,0,1,0,0
+		mass = 1.25
+		emissiveConstant = 0.8
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		angularDrag = 2
+		crashTolerance = 7
+		maxTemp = 2000
+		stagingIcon = LIQUID_ENGINE
+		bulkheadProfiles = size1
+		stagingIcon = LIQUID_ENGINE
+		MODULE
+		{
+			name = ModuleJettison
+			jettisonName = ShortFairing
+			bottomNodeName = bottom
+			isFairing = True
+			jettisonedObjectMass = 0.1
+			jettisonForce = 5
+			jettisonDirection = 0 0 1
+		}
+		MODULE
+		{
+			name = ModuleJettison
+			jettisonName = LongFairing
+			bottomNodeName = mid
+			isFairing = True
+			jettisonedObjectMass = 0.1
+			jettisonForce = 5
+			jettisonDirection = 0 0 1
+		}
+		MODULE
+		{
+			name = ModuleJettison
+			jettisonName = TankButt
+			bottomNodeName = top
+			isFairing = True
+			jettisonedObjectMass = 0.1
+			jettisonForce = 5
+			jettisonDirection = 0 0 1
+		}
+		EFFECTS
+		{
+			powerflame
+			{
+				MODEL_MULTI_PARTICLE_PERSIST
+				{
+					name = flamethrust2
+					modelName = KerbalStockLauncherOverhaul/FX/T1DFlame
+					transformName = thrustTransform
+					emission = 0.0 0.0
+					emission = 0.05 0.0
+					emission = 0.075 0.25
+					emission = 1.0 1.25
+					speed = 0.0 1.98
+					speed = 1.0 1.12
+					energy = 0.0 0.33
+					energy = 1.0 0.99
+					fixedEmissions = false
+					logGrow
+					{
+						density = 0 8
+						density = 1 0.7
+						density = 10 0
+					}
+				}
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_rocket_hard
+					volume = 0.0 0.0
+					volume = 1.0 1.0
+					pitch = 0.0 0.2
+					pitch = 1.0 1.0
+					loop = true
+				}
+			}
+			powersmoke
+			{
+				MODEL_MULTI_PARTICLE_PERSIST
+				{
+					name = smokelaunch
+					modelName = MP_Nazari/FX/smokelaunch
+					transformName = thrustTransform
+					emission = 0.0 0.0
+					emission = 0.05 0.0
+					emission = 0.2 0.5
+					emission = 1.0 1.8
+					energy = 0.0 0.2
+					energy = 1.0 1.1
+					speed = 0.0 0.1
+					speed = 1.0 0.15
+					grow = 0.0 0.0
+					grow = 1.0 0.75
+					size = 0.0 1.0
+					size = 1.0 1.5
+					renderMode = "Billboard"
+					collide = true
+					collideRatio = 0.12
+					fixedScale = 1.0
+					sizeClamp = 50
+					angle = 0.0 1.0
+					angle = 45.0 1.0
+					angle = 50.0 1.0
+					distance = 0.0 1.0
+					distance = 100.0 1.0
+					distance = 550.0 0.0
+					initialDensity = 2.25
+					physical = true
+					stickiness = 0.8
+					dragCoefficient = 1
+					logarithmicGrowth = 2.75
+					fixedEmissions = true
+					randomInitalVelocityOffsetMaxRadius = 15.5
+					emission
+					{
+						mach = 0.0 1.25
+						mach = 0.05 0.0
+						mach = 1.0 0.0
+					}
+					logGrow
+					{
+						power = 0 0
+						power = 1 2
+						density = 0 8
+						density = 1 0.7
+						density = 10 0
+					}
+					Grow
+					{
+						power = 0 0
+						power = 1 2
+					}
+				}
+			}
+			engage
+			{
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_vent_medium
+					volume = 1.0
+					pitch = 2.0
+					loop = false
+				}
+			}
+			disengage
+			{
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_vent_soft
+					volume = 1.0
+					pitch = 2.0
+					loop = false
+				}
+			}
+			flameout
+			{
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_explosion_low
+					volume = 1.0
+					pitch = 2.0
+					loop = false
+				}
+			}
+		}
+		MODULE
+		{
+			name = ModuleEnginesFX
+			runningEffectName = powersmoke
+			directThrottleEffectName = powerflame
+			thrustVectorTransformName = thrustTransform
+			exhaustDamage = True
+			ignitionThreshold = 0.1
+			minThrust = 0
+			maxThrust = 215
+			heatProduction = 192
+			fxOffset = 0, 0, 0.8
+			PROPELLANT
+			{
+				name = LiquidFuel
+				ratio = 0.9
+				DrawGauge = True
+			}
+			PROPELLANT
+			{
+				name = Oxidizer
+				ratio = 1.1
+			}
+			atmosphereCurve
+			{
+				key = 0 300
+				key = 1 280
+				key = 7 0.001
+			}
+		}
+		MODULE
+		{
+			name = ModuleJettison
+			jettisonName = fairing
+			bottomNodeName = bottom
+			isFairing = True
+			jettisonedObjectMass = 0.1
+			jettisonForce = 5
+			jettisonDirection = 0 0 1
+		}
+		MODULE
+		{
+			name = ModuleAnimateHeat
+			ThermalAnim = LVT1Cheat
+		}
+		MODULE
+		{
+			name = ModuleAlternator
+			RESOURCE
+			{
+				name = ElectricCharge
+				rate = 7
+			}
+		}
+		MODULE
+		{
+			name = ModuleSurfaceFX
+			thrustProviderModuleIndex = 0
+			fxMax = 0.5
+			maxDistance = 30
+			falloff = 1.5
+			thrustTransformName = thrustTransform
+		}
+		MODULE
+		{
+			name = TweakScale
+			type = stack
+			defaultScale = 1.25
+		}
+		MODULE
+		{
+			name = ExtendedPartInfo
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = tjs_EngineLight
+			isDebug = true
+			lightPower = 1.0
+			lightRange = 40.0
+			maxLightPower = 23.0
+			lightRed = 1
+			lightGreen = 0.88
+			lightBlue = 0.68
+			jitterMultiplier = 10.5
+			multiplierOnIva = 0.5
+		}
+		MODULE
+		{
+			name = ModuleTweakableJettison
+		}
+	}
+}
+UrlConfig
+{
+	name = LVT1D
+	type = PART
+	parentUrl = KerbalStockLauncherOverhaul/Parts/Engine/KX LV-T1D/part
+	url = KerbalStockLauncherOverhaul/Parts/Engine/KX LV-T1D/part/LVT1D
+	PART
+	{
+		name = LVT1D
+		module = Part
+		author = blackheart612
+		mesh = model.mu
+		rescaleFactor = 1
+		node_stack_top = 0.0, 0.02, 0.0, 0.0, 1.0, 0.0
+		node_stack_original = 0.0, -0.26, 0.0, 0.0, 1.0, 0.0
+		node_stack_mid = 0.0, -2.02, 0.0, 0.0, -1.0, 0.0
+		node_stack_bottom = 0.0, -2.02, 0.0, 0.0, -1.0, 0.0
+		fx_exhaustFlame_blue = 0.0, -5.74338, 0.0, 0.0, 1.0, 0.0, running
+		fx_exhaustLight_blue = 0.0, -5.74338, 0.0, 0.0, 0.0, 1.0, running
+		fx_smokeTrail_light = 0.0, -5.74338, 0.0, 0.0, 1.0, 0.0, running
+		fx_exhaustSparks_flameout = 0.0, -5.74338, 0.0, 0.0, 1.0, 0.0, flameout
+		sound_vent_medium = engage
+		sound_rocket_hard = running
+		sound_vent_soft = disengage
+		sound_explosion_low = flameout
+		TechRequired = generalRocketry
+		entryCost = 2100
+		cost = 950
+		category = Propulsion
+		subcategory = 0
+		title = LV-T1D Liquid Fuel Engine FIX ME
+		manufacturer = LVT Inc
+		description = The LV-T45 engine was considered another breakthrough in the LV-T series, due to its Thrust Vectoring feature. The LV-T45 can deflect its thrust to aid in craft control. All these added mechanics however, make for a slightly smaller and less powerful engine in comparison with earlier LV-T models.
+		attachRules = 1,0,1,0,0
+		mass = 1.5
+		emissiveConstant = 0.8
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		angularDrag = 2
+		crashTolerance = 7
+		maxTemp = 2000
+		bulkheadProfiles = size1
+		MODULE
+		{
+			name = ModuleJettison
+			jettisonName = ShortFairing
+			bottomNodeName = bottom
+			isFairing = True
+			jettisonedObjectMass = 0.1
+			jettisonForce = 5
+			jettisonDirection = 0 0 1
+		}
+		MODULE
+		{
+			name = ModuleJettison
+			jettisonName = LongFairing
+			bottomNodeName = mid
+			isFairing = True
+			jettisonedObjectMass = 0.1
+			jettisonForce = 5
+			jettisonDirection = 0 0 1
+		}
+		MODULE
+		{
+			name = ModuleJettison
+			jettisonName = TankButt
+			bottomNodeName = top
+			isFairing = True
+			jettisonedObjectMass = 0.1
+			jettisonForce = 5
+			jettisonDirection = 0 0 1
+		}
+		EFFECTS
+		{
+			powerflame
+			{
+				MODEL_MULTI_PARTICLE_PERSIST
+				{
+					name = flamethrust2
+					modelName = KerbalStockLauncherOverhaul/FX/T1DFlame
+					transformName = thrustTransform
+					emission = 0.0 0.0
+					emission = 0.05 0.0
+					emission = 0.075 0.25
+					emission = 1.0 1.25
+					speed = 0.0 1.98
+					speed = 1.0 1.12
+					energy = 0.0 0.33
+					energy = 1.0 0.99
+					fixedEmissions = false
+					logGrow
+					{
+						density = 0 8
+						density = 1 0.7
+						density = 10 0
+					}
+				}
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_rocket_hard
+					volume = 0.0 0.0
+					volume = 1.0 1.0
+					pitch = 0.0 0.2
+					pitch = 1.0 1.0
+					loop = true
+				}
+			}
+			powersmoke
+			{
+				MODEL_MULTI_PARTICLE_PERSIST
+				{
+					name = smokelaunch
+					modelName = MP_Nazari/FX/smokelaunch
+					transformName = thrustTransform
+					emission = 0.0 0.0
+					emission = 0.05 0.0
+					emission = 0.2 0.5
+					emission = 1.0 1.8
+					energy = 0.0 0.2
+					energy = 1.0 1.1
+					speed = 0.0 0.1
+					speed = 1.0 0.15
+					grow = 0.0 0.0
+					grow = 1.0 0.75
+					size = 0.0 1.0
+					size = 1.0 1.5
+					renderMode = "Billboard"
+					collide = true
+					collideRatio = 0.12
+					fixedScale = 1.0
+					sizeClamp = 50
+					angle = 0.0 1.0
+					angle = 45.0 1.0
+					angle = 50.0 1.0
+					distance = 0.0 1.0
+					distance = 100.0 1.0
+					distance = 550.0 0.0
+					initialDensity = 2.25
+					physical = true
+					stickiness = 0.8
+					dragCoefficient = 1
+					logarithmicGrowth = 2.75
+					fixedEmissions = true
+					randomInitalVelocityOffsetMaxRadius = 15.5
+					emission
+					{
+						mach = 0.0 1.25
+						mach = 0.05 0.0
+						mach = 1.0 0.0
+					}
+					logGrow
+					{
+						power = 0 0
+						power = 1 2
+						density = 0 8
+						density = 1 0.7
+						density = 10 0
+					}
+					Grow
+					{
+						power = 0 0
+						power = 1 2
+					}
+				}
+			}
+			engage
+			{
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_vent_medium
+					volume = 1.0
+					pitch = 2.0
+					loop = false
+				}
+			}
+			disengage
+			{
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_vent_soft
+					volume = 1.0
+					pitch = 2.0
+					loop = false
+				}
+			}
+			flameout
+			{
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_explosion_low
+					volume = 1.0
+					pitch = 2.0
+					loop = false
+				}
+			}
+		}
+		MODULE
+		{
+			name = ModuleEnginesFX
+			runningEffectName = powersmoke
+			directThrottleEffectName = powerflame
+			thrustVectorTransformName = thrustTransform
+			exhaustDamage = False
+			throttleLocked = False
+			ignitionThreshold = 0.1
+			minThrust = 0
+			maxThrust = 200
+			heatProduction = 200
+			EngineType = LiquidFuel
+			PROPELLANT
+			{
+				name = LiquidFuel
+				ratio = 0.9
+				DrawGauge = True
+			}
+			PROPELLANT
+			{
+				name = Oxidizer
+				ratio = 1.1
+			}
+			atmosphereCurve
+			{
+				key = 0 320
+				key = 1 270
+				key = 6 0.001
+			}
+		}
+		MODULE
+		{
+			name = ModuleGimbal
+			gimbalTransformName = thrustTransform
+			gimbalRange = 3
+		}
+		MODULE
+		{
+			name = ModuleAlternator
+			RESOURCE
+			{
+				name = ElectricCharge
+				rate = 6.0
+			}
+		}
+		MODULE
+		{
+			name = ModuleAnimateHeat
+			ThermalAnim = LVT1Dheat
+		}
+		MODULE
+		{
+			name = ModuleTestSubject
+			environments = 15
+			useStaging = True
+			useEvent = False
+		}
+		MODULE
+		{
+			name = TweakScale
+			type = stack
+			defaultScale = 2.5
+		}
+		MODULE
+		{
+			name = ExtendedPartInfo
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = tjs_EngineLight
+			isDebug = true
+			lightPower = 1.0
+			lightRange = 40.0
+			maxLightPower = 23.0
+			lightRed = 1
+			lightGreen = 0.88
+			lightBlue = 0.68
+			jitterMultiplier = 10.5
+			multiplierOnIva = 0.5
+		}
+		MODULE
+		{
+			name = ModuleTweakableJettison
+		}
+		MODULE
+		{
+			name = ModuleTweakableGimbal
+		}
+	}
+}
+UrlConfig
+{
+	name = LVTA
+	type = PART
+	parentUrl = KerbalStockLauncherOverhaul/Parts/Engine/KX LVT-A/part
+	url = KerbalStockLauncherOverhaul/Parts/Engine/KX LVT-A/part/LVTA
+	PART
+	{
+		name = LVTA
+		module = Part
+		author = blackheart612
+		mesh = model.mu
+		rescaleFactor = 1
+		node_stack_top = 0.0, 0.41, 0.0, 0.0, 1.0, 0.0, 2
+		node_stack_bottom = 0.0, -1.74, 0.0, 0.0, -1.0, 0.0, 2
+		fx_exhaustFlame_blue_small = 0.0, -0.8, 0.0, 0.0, 1.0, 0.0, running
+		fx_exhaustLight_blue = 0.0, -0.8, 0.0, 0.0, 0.0, 1.0, running
+		fx_smokeTrail_light = 0.0, -1.3, 0.0, 0.0, 1.0, 0.0, running
+		sound_vent_medium = engage
+		sound_rocket_hard = running
+		sound_vent_soft = disengage
+		sound_explosion_low = flameout
+		TechRequired = heavyRocketry
+		entryCost = 4200
+		cost = 1600
+		category = Propulsion
+		subcategory = 0
+		title = LVT-A Liquid Fuel Engine FIX ME
+		manufacturer = LVT Inc.
+		description = Our engineers were criticizing how Brand X Poodle was looking like a balloon. So we made one that performs just as good and looks less like a balloon. Engineers forgot to remove the clamp holders on the nozzle when they were deflating it so there we go.
+		attachRules = 1,0,1,0,0
+		mass = 1.75
+		emissiveConstant = 0.8
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		angularDrag = 2
+		crashTolerance = 7
+		breakingForce = 200
+		breakingTorque = 200
+		maxTemp = 2000
+		EFFECTS
+		{
+			powerflame
+			{
+				MODEL_MULTI_PARTICLE_PERSIST
+				{
+					name = flamethrust
+					modelName = KerbalStockLauncherOverhaul/FX/LVTAFlame
+					transformName = thrustTransform
+					emission = 0.0 0.0
+					emission = 0.05 0.0
+					emission = 0.075 0.25
+					emission = 1.0 1.25
+					speed = 0.0 1.0
+					speed = 1.0 1.0
+					energy = 0.0 0.33
+					energy = 1.0 0.99
+					fixedEmissions = false
+					logGrow
+					{
+						density = 0 8
+						density = 1 0.7
+						density = 10 0
+					}
+				}
+				AUDIO
+				{
+					channel = Ship
+					clip = KerbalStockLauncherOverhaul/Sounds/upperloop
+					volume = 0.0 0.0
+					volume = 1.0 1.0
+					pitch = 0.0 0.2
+					pitch = 1.0 1.0
+					loop = true
+				}
+			}
+			powersmoke
+			{
+				MODEL_MULTI_PARTICLE_PERSIST
+				{
+					name = smokelaunch
+					modelName = MP_Nazari/FX/smokelaunch
+					transformName = thrustTransform
+					emission = 0.0 0.0
+					emission = 0.05 0.0
+					emission = 0.2 0.5
+					emission = 1.0 1.8
+					energy = 0.0 0.2
+					energy = 1.0 1.1
+					speed = 0.0 0.1
+					speed = 1.0 0.15
+					grow = 0.0 0.0
+					grow = 1.0 0.75
+					size = 0.0 1.0
+					size = 1.0 1.5
+					renderMode = "Billboard"
+					collide = true
+					collideRatio = 0.12
+					fixedScale = 1.0
+					sizeClamp = 50
+					angle = 0.0 1.0
+					angle = 45.0 1.0
+					angle = 50.0 1.0
+					distance = 0.0 1.0
+					distance = 100.0 1.0
+					distance = 550.0 0.0
+					initialDensity = 2.25
+					physical = true
+					stickiness = 0.8
+					dragCoefficient = 1
+					logarithmicGrowth = 2.75
+					fixedEmissions = true
+					randomInitalVelocityOffsetMaxRadius = 15.5
+					emission
+					{
+						mach = 0.0 1.25
+						mach = 0.05 0.0
+						mach = 1.0 0.0
+					}
+					logGrow
+					{
+						power = 0 0
+						power = 1 2
+						density = 0 8
+						density = 1 0.7
+						density = 10 0
+					}
+					Grow
+					{
+						power = 0 0
+						power = 1 2
+					}
+				}
+			}
+			engage
+			{
+				AUDIO
+				{
+					channel = Ship
+					clip = KerbalStockLauncherOverhaul/Sounds/upperstart
+					volume = 1.0
+					pitch = 2.0
+					loop = false
+				}
+			}
+			disengage
+			{
+				AUDIO
+				{
+					channel = Ship
+					clip = KerbalStockLauncherOverhaul/Sounds/upperout
+					volume = 1.0
+					pitch = 2.0
+					loop = false
+				}
+			}
+			flameout
+			{
+				AUDIO
+				{
+					channel = Ship
+					clip = KerbalStockLauncherOverhaul/Sounds/upperout
+					volume = 1.0
+					pitch = 2.0
+					loop = false
+				}
+			}
+		}
+		MODULE
+		{
+			name = ModuleEnginesFX
+			runningEffectName = powersmoke
+			directThrottleEffectName = powerflame
+			thrustVectorTransformName = thrustTransform
+			exhaustDamage = True
+			ignitionThreshold = 0.1
+			minThrust = 0
+			maxThrust = 250
+			heatProduction = 83
+			fxOffset = 0, 0, 0.21
+			PROPELLANT
+			{
+				name = LiquidFuel
+				ratio = 0.9
+				DrawGauge = True
+			}
+			PROPELLANT
+			{
+				name = Oxidizer
+				ratio = 1.1
+			}
+			atmosphereCurve
+			{
+				key = 0 350
+				key = 1 85
+				key = 3 0.001
+			}
+		}
+		MODULE
+		{
+			name = ModuleJettison
+			jettisonName = Fairing
+			bottomNodeName = bottom
+			isFairing = True
+			jettisonedObjectMass = 0.5
+			jettisonForce = 15
+			jettisonDirection = 0 0 1
+		}
+		MODULE
+		{
+			name = ModuleGimbal
+			gimbalTransformName = thrustTransform
+			gimbalRange = 4.5
+		}
+		MODULE
+		{
+			name = ModuleAnimateHeat
+			ThermalAnim = LVTAheat
+		}
+		MODULE
+		{
+			name = ModuleAlternator
+			RESOURCE
+			{
+				name = ElectricCharge
+				rate = 8.0
+			}
+		}
+		MODULE
+		{
+			name = ModuleSurfaceFX
+			thrustProviderModuleIndex = 0
+			fxMax = 0.6
+			maxDistance = 30
+			falloff = 1.5
+			thrustTransformName = thrustTransform
+		}
+		MODULE
+		{
+			name = TweakScale
+			type = stack
+			defaultScale = 2.5
+		}
+		MODULE
+		{
+			name = ExtendedPartInfo
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = tjs_EngineLight
+			isDebug = true
+			lightPower = 1.0
+			lightRange = 40.0
+			maxLightPower = 23.0
+			lightRed = 1
+			lightGreen = 0.88
+			lightBlue = 0.68
+			jitterMultiplier = 10.5
+			multiplierOnIva = 0.5
+		}
+		MODULE
+		{
+			name = ModuleTweakableJettison
+		}
+		MODULE
+		{
+			name = ModuleTweakableGimbal
+		}
+	}
+}
+UrlConfig
+{
+	name = RTA
+	type = PART
+	parentUrl = KerbalStockLauncherOverhaul/Parts/Engine/KX RT-A/part
+	url = KerbalStockLauncherOverhaul/Parts/Engine/KX RT-A/part/RTA
+	PART
+	{
+		name = RTA
+		module = Part
+		author = blackheart612
+		mesh = model.mu
+		rescaleFactor = 1
+		node_stack_bottom = 0.0, -1.82, 0.0, 0.0, 1.0, 0.0, 1
+		node_stack_top = 0.0, 1.34, 0.0, 0.0, 1.0, 0.0, 1
+		node_attach = 0.0, 0.0, -0.65, 0.0, 0.0, 1.0, 1
+		fx_exhaustFlame_yellow = 0.0, -11.2673, 0.0, 0.0, 1.0, 0.0, running
+		fx_exhaustSparks_yellow = 0.0, -11.2673, 0.0, 0.0, 1.0, 0.0, running
+		fx_smokeTrail_medium = 0.0, -11.2673, 0.0, 0.0, 1.0, 0.0, running
+		sound_vent_medium = engage
+		sound_rocket_hard = running
+		sound_vent_soft = disengage
+		sound_explosion_low = flameout
+		TechRequired = start
+		entryCost = 0
+		cost = 325
+		category = Engine
+		subcategory = 0
+		title = RT-A Solid Fuel Booster FIX ME
+		description = After a suggestion of improving the rockets of the current program, the voting upon whether the company should make better a better designed RT-10 or a better performing one, it came to a decisive outcome of a better design. It might not be better performing but at least it looks better. At least the engineers think.
+		attachRules = 1,1,1,1,0
+		emissiveConstant = 0.5
+		mass = 0.5
+		dragModelType = default
+		maximum_drag = 0.3
+		minimum_drag = 0.2
+		angularDrag = 2
+		crashTolerance = 7
+		maxTemp = 2000
+		stagingIcon = SOLID_BOOSTER
+		bulkheadProfiles = size1, srf
+		stagingIcon = SOLID_BOOSTER
+		MODULE
+		{
+			name = FlagDecal
+			textureQuadName = flagDecal
+		}
+		EFFECTS
+		{
+			powerflame
+			{
+				MODEL_MULTI_PARTICLE_PERSIST
+				{
+					name = flamethrust
+					modelName = KerbalStockLauncherOverhaul/FX/RTAFlame
+					transformName = thrustTransform
+					emission = 0.0 0.0
+					emission = 0.05 0.0
+					emission = 0.075 0.25
+					emission = 1.0 1.25
+					speed = 0.0 1.98
+					speed = 1.0 1.12
+					energy = 0.0 0.33
+					energy = 1.0 0.99
+					fixedEmissions = false
+					logGrow
+					{
+						density = 0 8
+						density = 1 0.7
+						density = 10 0
+					}
+				}
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_rocket_hard
+					volume = 0.0 0.0
+					volume = 1.0 1.0
+					pitch = 0.0 0.2
+					pitch = 1.0 1.0
+					loop = true
+				}
+			}
+			powersmoke
+			{
+				MODEL_MULTI_PARTICLE_PERSIST
+				{
+					name = smokethrust
+					modelName = KerbalStockLauncherOverhaul/FX/RTASmoke
+					transformName = thrustTransform
+					emission = 0.0 0.0
+					emission = 0.07 0.0
+					emission = 0.2 0.4
+					emission = 1.0 1.1
+					energy = 0.0 0.2
+					energy = 1.0 3.0
+					speed = 0.0 1.0
+					speed = 1.0 0.8
+					grow = 0.0 0.0
+					grow = 1.0 0.08
+					scale = 0.0 1.0
+					scale = 1.0 1.0
+					offset = 0.0 0.0
+					offset = 1.0 0.5
+					size = 0.0 1.0
+					size = 1.0 1.2
+					renderMode = "Billboard"
+					collide = false
+					collideRatio = 0
+					fixedScale = 1.0
+					sizeClamp = 50
+					angle = 0.0 1.0
+					angle = 45.0 1.0
+					angle = 50.0 1.0
+					distance = 0.0 1.0
+					distance = 100.0 1.0
+					distance = 110.0 1.0
+					emission
+					{
+						mach = 0.0 1.0
+						mach = 0.8 1.0
+						mach = 1.0 1.0
+						density = 1.0 1.0
+						density = 0.4 1.0
+						density = 0.3 1.0
+						density = 0.002 1.0
+						density = 0.001 0.0
+					}
+					logGrow
+					{
+						density = 0 8
+						density = 1 0.7
+						density = 10 0
+					}
+				}
+				MODEL_MULTI_PARTICLE_PERSIST
+				{
+					name = smokelaunch
+					modelName = MP_Nazari/FX/smokelaunch
+					transformName = thrustTransform
+					emission = 0.0 0.0
+					emission = 0.05 0.0
+					emission = 0.2 0.5
+					emission = 1.0 1.8
+					energy = 0.0 0.2
+					energy = 1.0 1.1
+					speed = 0.0 0.1
+					speed = 1.0 0.15
+					grow = 0.0 0.0
+					grow = 1.0 0.75
+					size = 0.0 1.0
+					size = 1.0 1.5
+					renderMode = "Billboard"
+					collide = true
+					collideRatio = 0.12
+					fixedScale = 1.0
+					sizeClamp = 50
+					angle = 0.0 1.0
+					angle = 45.0 1.0
+					angle = 50.0 1.0
+					distance = 0.0 1.0
+					distance = 100.0 1.0
+					distance = 550.0 0.0
+					initialDensity = 2.25
+					physical = true
+					stickiness = 0.8
+					dragCoefficient = 1
+					logarithmicGrowth = 2.75
+					fixedEmissions = true
+					randomInitalVelocityOffsetMaxRadius = 15.5
+					emission
+					{
+						mach = 0.0 1.25
+						mach = 0.05 0.0
+						mach = 1.0 0.0
+					}
+					logGrow
+					{
+						power = 0 0
+						power = 1 2
+						density = 0 8
+						density = 1 0.7
+						density = 10 0
+					}
+					Grow
+					{
+						power = 0 0
+						power = 1 2
+					}
+				}
+			}
+			engage
+			{
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_vent_medium
+					volume = 1.0
+					pitch = 2.0
+					loop = false
+				}
+			}
+			disengage
+			{
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_vent_soft
+					volume = 1.0
+					pitch = 2.0
+					loop = false
+				}
+			}
+			flameout
+			{
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_explosion_low
+					volume = 1.0
+					pitch = 2.0
+					loop = false
+				}
+			}
+		}
+		MODULE
+		{
+			name = ModuleEnginesFX
+			thrustVectorTransformName = thrustTransform
+			runningEffectName = powersmoke
+			directThrottleEffectName = powerflame
+			throttleLocked = True
+			exhaustDamage = True
+			ignitionThreshold = 0.1
+			minThrust = 0
+			maxThrust = 250
+			heatProduction = 550
+			useEngineResponseTime = True
+			engineAccelerationSpeed = 10.0
+			allowShutdown = False
+			fxOffset = 0, 0, 0.12
+			EngineType = SolidBooster
+			PROPELLANT
+			{
+				name = SolidFuel
+				ratio = 1.0
+				DrawGauge = True
+			}
+			atmosphereCurve
+			{
+				key = 0 162
+				key = 1 150
+				key = 6 0.001
+			}
+		}
+		MODULE
+		{
+			name = ModuleAnimateHeat
+			ThermalAnim = RTAHeat
+		}
+		MODULE
+		{
+			name = FSmeshSwitch
+			moduleID = 0
+			buttonName = Next
+			previousButtonName = Previous
+			objectDisplayNames = Strap-on Guard Off;Strap-On Guard On
+			objects = RTA;RTA, StraponGuard
+			updateSymmetry = true
+		}
+		MODULE
+		{
+			name = FStextureSwitch2
+			moduleID = 0
+			objectNames = RTA
+			textureRootFolder = KerbalStockLauncherOverhaul/Parts/Engine/KX RT-A/
+			textureNames = RTA1Diffuse;RTA2Diffuse;RTA3Diffuse;RTA4Diffuse
+			textureDisplayNames = Original;Rugged Original;Plain;Rugged Plain
+			switchableInFlight = false
+			repaintableEVA = false
+			useFuelSwitchModule = false
+		}
+		MODULE
+		{
+			name = ModuleTestSubject
+			environments = 15
+			useStaging = True
+			useEvent = False
+		}
+		MODULE
+		{
+			name = ModuleSurfaceFX
+			thrustProviderModuleIndex = 0
+			fxMax = 0.75
+			maxDistance = 50
+			falloff = 1.8
+			thrustTransformName = thrustTransform
+		}
+		MODULE
+		{
+			name = ExtendedPartInfo
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = tjs_EngineLight
+			isDebug = true
+			lightPower = 1.0
+			lightRange = 40.0
+			maxLightPower = 23.0
+			lightRed = 1
+			lightGreen = 0.88
+			lightBlue = 0.68
+			jitterMultiplier = 10.5
+			multiplierOnIva = 0.5
+		}
+	}
+}
+UrlConfig
+{
+	name = KerbalXTank
+	type = PART
+	parentUrl = KerbalStockLauncherOverhaul/Parts/FuelTank/KXtank/part
+	url = KerbalStockLauncherOverhaul/Parts/FuelTank/KXtank/part/KerbalXTank
+	PART
+	{
+		name = KerbalXTank
+		module = Part
+		author = blackheart612
+		mesh = model.mu
+		rescaleFactor = 1
+		node_stack_top = 0.0, 5.58, 0.0, 0.0, 1.0, 0.0, 2
+		node_stack_bottom = 0.0, -5.58, 0.0, 0.0, -1.0, 0.0, 2
+		node_attach = 1.25, 0.0, 0.0, 1.0, 0.0, 0.0, 1
+		TechRequired = heavyRocketry
+		entryCost = 8800
+		cost = 15000
+		category = Propulsion
+		subcategory = 0
+		title = Kerbomax X300 Fuel Tank FIX ME
+		manufacturer = Kerbomax
+		description = This tank is designated for Kerbal X use, it is made to take over the current Kerbal X tanks on the main stage.
+		attachRules = 1,1,1,1,0
+		mass = 6
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.3
+		angularDrag = 2
+		crashTolerance = 6
+		breakingForce = 200
+		breakingTorque = 200
+		maxTemp = 2000
+		bulkheadProfiles = size2, srf
+		MODULE
+		{
+			name = FStextureSwitch2
+			moduleID = 0
+			objectNames = kxlong
+			textureRootFolder = KerbalStockLauncherOverhaul/Parts/FuelTank/KXtank/
+			textureNames = texture1;texture2;texture4;texture3;texture5;texture6
+			mapNames = texture1_NRM;texture2_NRM;texture2_NRM;texture2_NRM;texture2_NRM;texture3_NRM
+			textureDisplayNames = Kerbal X;No Decal;Kerbodyne;Rockomax;Black;FLT
+			switchableInFlight = false
+			mapIsNormal = true
+			repaintableEVA = false
+			useFuelSwitchModule = false
+		}
+		MODULE
+		{
+			name = TweakScale
+			type = stack
+			defaultScale = 2.5
+		}
+		MODULE
+		{
+			name = ExtendedPartInfo
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+	}
+}
+UrlConfig
+{
+	name = midtank
+	type = PART
+	parentUrl = KerbalStockLauncherOverhaul/Parts/FuelTank/KXuppermidtank/part
+	url = KerbalStockLauncherOverhaul/Parts/FuelTank/KXuppermidtank/part/midtank
+	PART
+	{
+		name = midtank
+		module = Part
+		author = blackheart612
+		rescaleFactor = 1.0
+		node_stack_top = 0.0, 2.36, 0.0, 0.0, 1.0, 0.0, 2
+		node_stack_bottom = 0.0, -2.36, 0.0, 0.0, -1.0, 0.0, 2
+		node_attach = 1.25, 0.0, 0.0, 1.0, 0.0, 0.0, 1
+		TechRequired = veryHeavyRocketry
+		cost = 6000
+		category = 0
+		subcategory = 0
+		title = Kerbal X Midstage Tank
+		manufacturer = Kerbodyne
+		description = Commonly called "The drum of the 2.5m tanks" it's based off the drum where we stored our water. It isn't half bad as a fuel tank for Kerbal X, right?
+		attachRules = 1,1,1,1,0
+		mass = 2
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.3
+		angularDrag = 2
+		crashTolerance = 6
+		maxTemp = 2000
+		breakingForce = 200
+		breakingTorque = 200
+		bulkheadProfiles = size2, srf
+		MODEL
+		{
+			model = KerbalStockLauncherOverhaul/Parts/FuelTank/KXuppermidtank/model
+		}
+		MODULE
+		{
+			name = FStextureSwitch2
+			moduleID = 0
+			objectNames = kxmid
+			textureRootFolder = KerbalStockLauncherOverhaul/Parts/FuelTank/KXuppermidtank/
+			textureNames = texture1shared;texture2shared;texture3shared;texture5shared
+			mapNames = texture1shared_NRM;texture1shared_NRM;texture1shared_NRM;texture1shared_NRM
+			textureDisplayNames = No Decal;Kerbal X;Rockomax;Black
+			switchableInFlight = false
+			mapIsNormal = true
+			repaintableEVA = false
+			useFuelSwitchModule = false
+		}
+		MODULE
+		{
+			name = TweakScale
+			type = stack
+			defaultScale = 2.5
+		}
+		MODULE
+		{
+			name = ExtendedPartInfo
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			MFT_dia = 2.5
+			MFT_hgt = 4.6
+			volume = 20000
+			type = Default
+		}
+	}
+}
+UrlConfig
+{
+	name = uptank
+	type = PART
+	parentUrl = KerbalStockLauncherOverhaul/Parts/FuelTank/KXuppermidtank/partupper
+	url = KerbalStockLauncherOverhaul/Parts/FuelTank/KXuppermidtank/partupper/uptank
+	PART
+	{
+		name = uptank
+		module = Part
+		author = blackheart612
+		rescaleFactor = 1.0
+		node_stack_top = 0.0, 0.92, 0.0, 0.0, 1.0, 0.0, 2
+		node_stack_bottom = 0.0, -0.92, 0.0, 0.0, -1.0, 0.0, 2
+		node_attach = 1.25, 0.0, 0.0, 1.0, 0.0, 0.0, 1
+		TechRequired = heavyRocketry
+		entryCost = 4200
+		cost = 3200
+		category = Propulsion
+		subcategory = 0
+		title = Kerbomax S2-16
+		manufacturer = Kerbomax
+		description = Initially set as the Mk1-2's Service Tank but a little repaint would make it be duct taped to anywhere you like.
+		attachRules = 1,1,1,1,0
+		mass = 1
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.3
+		angularDrag = 2
+		crashTolerance = 6
+		breakingForce = 200
+		breakingTorque = 200
+		maxTemp = 2000
+		bulkheadProfiles = size2, srf
+		MODEL
+		{
+			model = KerbalStockLauncherOverhaul/Parts/FuelTank/KXuppermidtank/modelupper
+		}
+		MODULE
+		{
+			name = FStextureSwitch2
+			moduleID = 0
+			objectNames = kxupper
+			textureRootFolder = KerbalStockLauncherOverhaul/Parts/FuelTank/KXuppermidtank/
+			textureNames = texture1shared;texture2shared;texture3shared;texture5shared
+			mapNames = texture1shared_NRM;texture2shared_NRM;texture1shared_NRM;texture1shared_NRM
+			textureDisplayNames = No Decal;Kerbodyne;Rockomax;Black
+			switchableInFlight = false
+			mapIsNormal = true
+			repaintableEVA = false
+			useFuelSwitchModule = false
+		}
+		MODULE
+		{
+			name = TweakScale
+			type = stack
+			defaultScale = 2.5
+		}
+		MODULE
+		{
+			name = ExtendedPartInfo
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			MFT_dia = 2.5
+			MFT_hgt = 1.9
+			volume = 4000
+			type = Default
+		}
+	}
+}
+UrlConfig
+{
+	name = PayloadDec
+	type = PART
+	parentUrl = KerbalStockLauncherOverhaul/Parts/KXpayloaddecoupler/part
+	url = KerbalStockLauncherOverhaul/Parts/KXpayloaddecoupler/part/PayloadDec
+	PART
+	{
+		name = PayloadDec
+		module = Part
+		author = blackheart612
+		mesh = model.mu
+		rescaleFactor = 1
+		node_stack_top = 0.0, 0.191, 0.0,      0.0, 1, 0.0,    3
+		node_stack_bottom = 0.0, -0.55, 0.0,   0.0, -1, 0.0,   3
+		node_stack_connect01 = -0.93, -0.5, 0,  0, 1, 0,   3
+		node_stack_connect02 = 0.93, -0.5, 0,   0, -1, 0,  3
+		stackSymmetry = 1
+		fx_gasBurst_white = 0.0, 0.444, 0.0, 0.0, 1.0, 0.0, activate
+		sound_decoupler_fire = activate
+		TechRequired = flightControl
+		cost = 1100
+		category = Aero
+		subcategory = 0
+		title = Kerbal X Payload Decoupler
+		manufacturer = O.M.B. Demolition Enterprises
+		description = You just put your payload on top and away it goes. Remember to detach the fairings first. If you attached one, that is.
+		attachRules = 1,0,1,1,1
+		mass = 0.35
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		angularDrag = 2
+		crashTolerance = 9
+		maxTemp = 3400
+		fuelCrossFeed = False
+		stageOffset = 1
+		childStageOffset = 1
+		MODULE
+		{
+			name = FStextureSwitch
+			DisplayName = Paint Decoupler
+			showListButton = False
+			moduleID = 0
+			switchableInFlight = False
+			debugMode = False
+			textures
+			{
+				name = KerbalStockLauncherOverhaul/Parts/Aero/KXpayloaddecoupler/Kerbodyne Original
+				name = KerbalStockLauncherOverhaul/Parts/Aero/KXpayloaddecoupler/Gold Plated
+			}
+			objects
+			{
+				name = payloaddecoupler
+			}
+		}
+		MODULE
+		{
+			name = ModuleDecouple
+			ejectionForce = 500
+			explosiveNodeID = top
+		}
+		MODULE
+		{
+			name = ExtendedPartInfo
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = true
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = tjs_DecouplerLight
+			lightMultiplier = 1.0
+			lightRange = 15.0
+			lightRed = 1
+			lightGreen = 0.88
+			lightBlue = 0.68
+			lightDuration = 0.1
+		}
+		MODULE
+		{
+			name = ModuleTweakableDecouple
+			decouplerModuleName = ModuleDecouple
+		}
+		MODULE
+		{
+			name = ModuleStagingToggle
+			defaultDisabled = false
+			activeInFlight = true
+			activeInEditor = true
+		}
+		MODULE
+		{
+			name = TweakScale
+			type = stack
+			defaultScale = 2.5
+		}
+		MODULE
+		{
+			name = ModuleDecouple
+			ejectionForce = 100
+			explosiveNodeID = top
 		}
 	}
 }
@@ -9279,7 +12474,7 @@ UrlConfig
 		name = KW1mengineVestaVR1
 		module = Part
 		author = KW Rocketry
-		scale = 0.1
+		scale = 0.15
 		node_stack_top = 0.0, 5.0, 0.0, 0.0, 1.0, 0.0, 1
 		node_stack_top2 = 0.0, 5.0, 0.0, 0.0, 1.0, 0.0, 1
 		node_stack_bottom = 0.0, -7.38, 0.0, 0.0, -1.0, 0.0, 1
@@ -9292,11 +12487,11 @@ UrlConfig
 		cost = 1100
 		category = 0
 		subcategory = 0
-		title = KW Rocketry Vesta VR-1 FIX ME
+		title = KW Rocketry Vesta VR-1
 		manufacturer = KW Rocketry
 		description = A small, efficient upper stage motor for probe and satellite launch vehicles.
 		attachRules = 1,0,1,1,0
-		mass = 0.75
+		mass = 1.5
 		dragModelType = default
 		maximum_drag = 0.2
 		minimum_drag = 0.2
@@ -9311,145 +12506,12 @@ UrlConfig
 		MODEL
 		{
 			model = KWRocketry/Parts/Engines/1mVestaVR1/KW_1mEngine_VestaVR1_M
-			scale = 1, 1, 1
+			scale = 1.5, 1.5, 1.5
 		}
 		MODEL
 		{
 			model = KWRocketry/Parts/Fairings/UnifiedFairings/KW_Auto_1mVestaShroud
-			scale = 1, 1, 1
-		}
-		EFFECTS
-		{
-			running_closed
-			{
-				AUDIO
-				{
-					channel = Ship
-					clip = sound_rocket_hard
-					volume = 0.0 0.0
-					volume = 0.8 0.8
-					pitch = 0.0 0.2
-					pitch = 1.5 1.5
-					loop = true
-				}
-				MODEL_MULTI_PARTICLE_PERSIST
-				{
-					name = flamelarge
-					modelName = MP_Nazari/FX/KWflamesmall
-					transformName = NozzleTransform
-					emission = 0.0 0.0
-					emission = 0.25 0.99
-					emission = 0.75 1.21
-					emission = 1.0 1.25
-					speed = 0.0 1.98
-					speed = 1.0 1.72
-					energy = 0.0 0.33
-					energy = 1.0 0.99
-					fixedEmissions = false
-					logGrow
-					{
-						density = 1.0 -1.0
-						density = 0.005 40.0
-					}
-					linGrow
-					{
-						density = 1.0 0.0
-						density = 0.1 0.0
-						density = 0.005 6.0
-						density = 0.0 75.0
-					}
-					offset
-					{
-						density = 1.0 0.2
-						density = 0.005 0.3
-						density = 0.0 0.35
-					}
-					emission
-					{
-						density = 1.0 1.0
-						density = 0.005 0.6
-						density = 0.0 0.25
-					}
-					energy
-					{
-						density = 1.0 1.0
-						density = 0.005 0.8
-						density = 0.0 0.6
-					}
-					size
-					{
-						density = 1.0 1.0
-						density = 0.01 0.6
-						density = 0.0 0.5
-					}
-				}
-				MODEL_MULTI_PARTICLE_PERSIST
-				{
-					name = smokethrust
-					modelName = MP_Nazari/FX/smokebooster2
-					transformName = NozzleTransform
-					emission = 0.0 0.0
-					emission = 0.07 0.0
-					emission = 0.2 0.4
-					emission = 1.0 1.1
-					energy = 0.0 0.2
-					energy = 1.0 3.2
-					speed = 0.0 1.0
-					speed = 1.0 0.8
-					grow = 0.0 0.0
-					grow = 1.0 0.11
-					scale = 0.0 1.0
-					scale = 1.0 1.0
-					offset = 0.0 0.0
-					offset = 1.0 0.5
-					size = 0.0 1.0
-					size = 1.0 1.1
-					renderMode = "Billboard"
-					collide = true
-					collideRatio = 0
-					fixedScale = 1.0
-					sizeClamp = 50
-					emission
-					{
-						mach = 0.0 1.0
-						mach = 0.8 1.0
-						mach = 1.0 1.0
-						density = 1.0 1.0
-						density = 0.4 1.0
-						density = 0.3 1.0
-						density = 0.002 1.0
-						density = 0.001 0.0
-					}
-				}
-			}
-			engage
-			{
-				AUDIO
-				{
-					channel = Ship
-					clip = KWRocketry/Soundbank/sound_liq7
-					volume = 0.8
-					pitch = 1.0
-					loop = false
-				}
-			}
-			flameout
-			{
-				PREFAB_PARTICLE
-				{
-					prefabName = fx_exhaustSparks_flameout_2
-					transformName = NozzleTransform
-					oneShot = true
-				}
-				AUDIO
-				{
-					channel = Ship
-					clip = sound_explosion_low
-					volume = 1.0
-					pitch = 2.0
-					loop = false
-				}
-			}
+			scale = 1.5, 1.5, 1.5
 		}
 		MODULE
 		{
@@ -9540,16 +12602,6 @@ UrlConfig
 		}
 		MODULE
 		{
-			name = TweakScale
-			type = stack
-			defaultScale = 1.25
-			TWEAKSCALEEXPONENTS
-			{
-				mass = 2.5
-			}
-		}
-		MODULE
-		{
 			name = USI_ModuleRecycleablePart
 			Menu = Scrap Part
 			ResourceName = Recyclables
@@ -9582,6 +12634,175 @@ UrlConfig
 		MODULE
 		{
 			name = ModuleTweakableGimbal
+		}
+		MODULE
+		{
+			name = ModuleEngineConfigs
+			configuration = Hydrolox
+			CONFIG
+			{
+				name = Kerolox
+				minThrust = 0
+				maxThrust = 250
+				PROPELLANT
+				{
+					name = Kerosene
+					ratio = 1.21951219512195
+					DrawGauge = True
+				}
+				PROPELLANT
+				{
+					name = LqdOxygen
+					ratio = 2.38387379491674
+				}
+				atmosphereCurve
+				{
+					key = 0 278
+					key = 1 69
+					key = 3 0.001
+				}
+			}
+			CONFIG
+			{
+				name = Hydrolox
+				minThrust = 0
+				maxThrust = 250
+				PROPELLANT
+				{
+					name = LqdHydrogen
+					ratio = 14.1143260409315
+					DrawGauge = True
+				}
+				PROPELLANT
+				{
+					name = LqdOxygen
+					ratio = 5.43382997370727
+				}
+				atmosphereCurve
+				{
+					key = 0 308
+					key = 1 71
+					key = 3 0.001
+				}
+			}
+			CONFIG
+			{
+				name = Hypergolic
+				minThrust = 0
+				maxThrust = 250
+				PROPELLANT
+				{
+					name = UDMH
+					ratio = 1.26422250316056
+					DrawGauge = True
+				}
+				PROPELLANT
+				{
+					name = NTO
+					ratio = 1.8
+				}
+				atmosphereCurve
+				{
+					key = 0 288
+					key = 1 63
+					key = 3 0.001
+				}
+			}
+		}
+		EFFECTS
+		{
+			running_closed
+			{
+				
+				{
+					AUDIO
+					{
+						channel = Ship
+						clip = sound_rocket_hard
+						volume = 0.0 0.0
+						volume = 0.8 0.8
+						pitch = 0.0 0.2
+						pitch = 1.5 1.5
+						loop = true
+					}
+					PREFAB_PARTICLE
+					{
+						name = Smoke
+						prefabName = fx_smokeTrail_light
+						transformName = OldFXTransform
+						emission = 0.0 0.0
+						emission = 0.05 0.0
+						emission = 0.075 0.25
+						emission = 1.0 1.25
+						speed = 0.0 0.25
+						speed = 1.0 1.0
+						localOffset = 0, 0, 0
+					}
+					MODEL_MULTI_PARTICLE_PERSIST
+					{
+						name = flamethrust
+						modelName = MP_Nazari/FX/flamef1fx
+						transformName = OldFXTransform
+						localRotation = 90,0,0
+						offsetDirection = 0,1,0
+						emission = 0.0 0.0
+						emission = 0.05 0.49
+						emission = 1.0 1.8
+						speed = 0.0 1.4
+						speed = 1.0 1.8
+						energy = 0.0 0.5
+						energy = 1.0 1.2
+						offset = 0 1
+						offset = 1 1
+						grow = 0 -1
+						grow = 1 -0.5
+						fixedEmissions = false
+						grow
+						{
+							density = 0 -0.5
+							density = 1 0
+						}
+						size
+						{
+							density = 0 3
+							density = 1 1
+						}
+						offset
+						{
+							density = 0 5
+							density = 1 1
+						}
+					}
+				}
+				engage
+				{
+					AUDIO
+					{
+						channel = Ship
+						clip = KWRocketry/Soundbank/sound_liq7
+						volume = 0.8
+						pitch = 1.0
+						loop = false
+					}
+				}
+				flameout
+				{
+					PREFAB_PARTICLE
+					{
+						prefabName = fx_exhaustSparks_flameout_2
+						transformName = NozzleTransform
+						oneShot = true
+					}
+					AUDIO
+					{
+						channel = Ship
+						clip = sound_explosion_low
+						volume = 1.0
+						pitch = 2.0
+						loop = false
+					}
+				}
+			}
 		}
 	}
 }
@@ -13867,6 +17088,13 @@ UrlConfig
 			ResourceName = SpecializedParts
 			Efficiency = .4
 		}
+		MODEL
+		{
+			model = VenStockRevamp/Squad/Parts/Structural/Panel1x1
+			position = -1.10, -0.65, 0
+			scale = 0.3, 0.3, 0.3
+			rotation = 0, 180, 90
+		}
 	}
 }
 UrlConfig
@@ -13940,6 +17168,12 @@ UrlConfig
 			ResourceName = SpecializedParts
 			Efficiency = .4
 		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 500
+			type = Default
+		}
 	}
 }
 UrlConfig
@@ -14011,6 +17245,12 @@ UrlConfig
 			Menu = Salvage Part
 			ResourceName = SpecializedParts
 			Efficiency = .4
+		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 450
+			type = Default
 		}
 	}
 }
@@ -14085,6 +17325,12 @@ UrlConfig
 			ResourceName = SpecializedParts
 			Efficiency = .4
 		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 1000
+			type = Default
+		}
 	}
 }
 UrlConfig
@@ -14157,6 +17403,12 @@ UrlConfig
 			Menu = Salvage Part
 			ResourceName = SpecializedParts
 			Efficiency = .4
+		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 2000
+			type = Default
 		}
 	}
 }
@@ -14236,6 +17488,12 @@ UrlConfig
 			ResourceName = SpecializedParts
 			Efficiency = .4
 		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 4000
+			type = Default
+		}
 	}
 }
 UrlConfig
@@ -14308,6 +17566,12 @@ UrlConfig
 			Menu = Salvage Part
 			ResourceName = SpecializedParts
 			Efficiency = .4
+		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 500
+			type = Default
 		}
 	}
 }
@@ -14382,6 +17646,12 @@ UrlConfig
 			ResourceName = SpecializedParts
 			Efficiency = .4
 		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 4000
+			type = Default
+		}
 	}
 }
 UrlConfig
@@ -14453,6 +17723,12 @@ UrlConfig
 			Menu = Salvage Part
 			ResourceName = SpecializedParts
 			Efficiency = .4
+		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 3375
+			type = Default
 		}
 	}
 }
@@ -14527,6 +17803,12 @@ UrlConfig
 			ResourceName = SpecializedParts
 			Efficiency = .4
 		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 8100
+			type = Default
+		}
 	}
 }
 UrlConfig
@@ -14599,6 +17881,12 @@ UrlConfig
 			Menu = Salvage Part
 			ResourceName = SpecializedParts
 			Efficiency = .4
+		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 16200
+			type = Default
 		}
 	}
 }
@@ -14678,6 +17966,12 @@ UrlConfig
 			ResourceName = SpecializedParts
 			Efficiency = .4
 		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 32400
+			type = Default
+		}
 	}
 }
 UrlConfig
@@ -14749,6 +18043,12 @@ UrlConfig
 			Menu = Salvage Part
 			ResourceName = SpecializedParts
 			Efficiency = .4
+		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 32400
+			type = Default
 		}
 	}
 }
@@ -14823,6 +18123,12 @@ UrlConfig
 			ResourceName = SpecializedParts
 			Efficiency = .4
 		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 4000
+			type = Default
+		}
 	}
 }
 UrlConfig
@@ -14896,6 +18202,12 @@ UrlConfig
 			ResourceName = SpecializedParts
 			Efficiency = .4
 		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 13700
+			type = Default
+		}
 	}
 }
 UrlConfig
@@ -14967,6 +18279,12 @@ UrlConfig
 			Menu = Salvage Part
 			ResourceName = SpecializedParts
 			Efficiency = .4
+		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 4500
+			type = Default
 		}
 	}
 }
@@ -15041,6 +18359,12 @@ UrlConfig
 			ResourceName = SpecializedParts
 			Efficiency = .4
 		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 27000
+			type = Default
+		}
 	}
 }
 UrlConfig
@@ -15113,6 +18437,12 @@ UrlConfig
 			Menu = Salvage Part
 			ResourceName = SpecializedParts
 			Efficiency = .4
+		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 54700
+			type = Default
 		}
 	}
 }
@@ -15192,6 +18522,12 @@ UrlConfig
 			ResourceName = SpecializedParts
 			Efficiency = .4
 		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 130000
+			type = Default
+		}
 	}
 }
 UrlConfig
@@ -15264,6 +18600,12 @@ UrlConfig
 			Menu = Salvage Part
 			ResourceName = SpecializedParts
 			Efficiency = .4
+		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 1300000
+			type = Default
 		}
 	}
 }
@@ -15338,6 +18680,12 @@ UrlConfig
 			ResourceName = SpecializedParts
 			Efficiency = .4
 		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 13600
+			type = Default
+		}
 	}
 }
 UrlConfig
@@ -15411,6 +18759,12 @@ UrlConfig
 			ResourceName = SpecializedParts
 			Efficiency = .4
 		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 32400
+			type = Default
+		}
 	}
 }
 UrlConfig
@@ -15483,6 +18837,12 @@ UrlConfig
 			Menu = Salvage Part
 			ResourceName = SpecializedParts
 			Efficiency = .4
+		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 97200
+			type = Default
 		}
 	}
 }
@@ -15561,6 +18921,12 @@ UrlConfig
 			Menu = Salvage Part
 			ResourceName = SpecializedParts
 			Efficiency = .4
+		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 226800
+			type = Default
 		}
 	}
 }
@@ -18836,6 +22202,12 @@ UrlConfig
 			ResourceName = SpecializedParts
 			Efficiency = .4
 		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 5000
+			type = Default
+		}
 	}
 }
 UrlConfig
@@ -18907,6 +22279,12 @@ UrlConfig
 			Menu = Salvage Part
 			ResourceName = SpecializedParts
 			Efficiency = .4
+		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 2560
+			type = Default
 		}
 	}
 }
@@ -18980,6 +22358,12 @@ UrlConfig
 			ResourceName = SpecializedParts
 			Efficiency = .4
 		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 18500
+			type = Default
+		}
 	}
 }
 UrlConfig
@@ -19051,6 +22435,12 @@ UrlConfig
 			Menu = Salvage Part
 			ResourceName = SpecializedParts
 			Efficiency = .4
+		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 9300
+			type = Default
 		}
 	}
 }
@@ -19124,6 +22514,12 @@ UrlConfig
 			ResourceName = SpecializedParts
 			Efficiency = .4
 		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 13500
+			type = Default
+		}
 	}
 }
 UrlConfig
@@ -19195,6 +22591,12 @@ UrlConfig
 			Menu = Salvage Part
 			ResourceName = SpecializedParts
 			Efficiency = .4
+		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 3375
+			type = Default
 		}
 	}
 }
@@ -19268,6 +22670,12 @@ UrlConfig
 			ResourceName = SpecializedParts
 			Efficiency = .4
 		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 31600
+			type = Default
+		}
 	}
 }
 UrlConfig
@@ -19339,6 +22747,12 @@ UrlConfig
 			Menu = Salvage Part
 			ResourceName = SpecializedParts
 			Efficiency = .4
+		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 23800
+			type = Default
 		}
 	}
 }
@@ -21971,7 +25385,7 @@ UrlConfig
 		cost = 100
 		category = Utility
 		subcategory = 0
-		title = Adjustable Rail FIX ME
+		title = Adjustable Rail
 		manufacturer = Magic Smoke Industries
 		description = Heavy duty hydraulic rail.
 		attachRules = 1,1,1,1,1
@@ -22059,7 +25473,7 @@ UrlConfig
 		cost = 900
 		category = Utility
 		subcategory = 0
-		title = Docking Washer Standard FIX ME
+		title = Docking Washer Standard
 		manufacturer = Magic Smoke Industries
 		description = Motorized docking washer. HINT: The red spot designates the fixed base.
 		node_attach = 0.0, -0.035, 0.0 , 0.0, -1.0, 0.0
@@ -22252,7 +25666,7 @@ UrlConfig
 		cost = 100
 		category = Utility
 		subcategory = 0
-		title = Gantry Rail FIX ME
+		title = Gantry Rail
 		manufacturer = Magic Smoke Industries
 		description = Attach parts. Move it back and forth.
 		attachRules = 1,1,1,1,0
@@ -22350,7 +25764,7 @@ UrlConfig
 		cost = 100
 		category = Utility
 		subcategory = 0
-		title = Gantry Rail Variant FIX ME
+		title = Gantry Rail Variant
 		manufacturer = Magic Smoke Industries
 		description = Attach parts. Move it back and forth. Base/Platform movement swapped.
 		attachRules = 1,1,1,1,0
@@ -22441,7 +25855,7 @@ UrlConfig
 		cost = 50
 		category = Utility
 		subcategory = 0
-		title = Closed Powered Hinge FIX ME
+		title = Closed Powered Hinge
 		manufacturer = Magic Smoke Industries
 		description = Closed Powered Hinge
 		attachRules = 1,1,1,1,0
@@ -22532,7 +25946,7 @@ UrlConfig
 		cost = 50
 		category = Utility
 		subcategory = 0
-		title = Open Powered Hinge FIX ME
+		title = Open Powered Hinge
 		manufacturer = Magic Smoke Industries
 		description = Open Powered Hinge
 		attachRules = 1,1,1,1,0
@@ -22630,7 +26044,7 @@ UrlConfig
 		cost = 50
 		category = Utility
 		subcategory = 0
-		title = Powered Hinge FIX ME
+		title = Powered Hinge
 		manufacturer = Magic Smoke Industries
 		description = Taller motorized hinge.
 		attachRules = 1,1,1,1,0
@@ -22917,7 +26331,7 @@ UrlConfig
 		cost = 50
 		category = Utility
 		subcategory = 0
-		title = IR Rotatron FIX ME
+		title = IR Rotatron
 		manufacturer = Magic Smoke Industries
 		description = It rotates! What more can you ask for? PS. Don't tell Jebediah's children that we stole the motor from the carousel.
 		attachRules = 1,1,1,1,0
@@ -22954,274 +26368,6 @@ UrlConfig
 			fixedMesh = Clamp1
 			servoName = New Rotatron
 			partMassOriginal = 0.1
-			motorSndPath = MagicSmokeIndustries/Sounds/infernalRoboticMotor
-			electricChargeRequired = 2.0
-		}
-		MODULE
-		{
-			name = ExtendedPartInfo
-		}
-		MODULE
-		{
-			name = CollisionFX
-			scrapeSparks = true
-			collisionSound = CollisionFX/Sounds/Bang1
-			scrapeSound = CollisionFX/Sounds/GroundSkid
-			sparkSound = CollisionFX/Sounds/SparkSqueal
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Scrap Part
-			ResourceName = Recyclables
-			Efficiency = .8
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Salvage Part
-			ResourceName = SpecializedParts
-			Efficiency = .4
-		}
-	}
-}
-UrlConfig
-{
-	name = IR_Rotatronmk2Scaleable
-	type = PART
-	parentUrl = MagicSmokeIndustries/Parts/Legacy/IR_RotatronMK2/part
-	url = MagicSmokeIndustries/Parts/Legacy/IR_RotatronMK2/part/IR_Rotatronmk2Scaleable
-	PART
-	{
-		name = IR_Rotatronmk2Scaleable
-		module = Part
-		author = r4m0n (code) ||Sirkut (code) Devo (model/texture)
-		mesh = model.mu
-		scale = 1.0
-		node_attach = 0.0, 0.0, 0.0, 0.0, -1.0, 0.0
-		node_stack_top = 0.0, 0.7, 0.0, 0.0, 1.0, 0.0, 2
-		TechRequired = metaMaterials
-		entryCost = 0
-		cost = 50
-		category = Utility
-		subcategory = 0
-		title = IR Rotatron Mk2 FIX ME
-		manufacturer = Wayland/MSI
-		description = Capable of amazing feats, this rotator can rotate a thrusting Engine for Vector control.
-		attachRules = 1,1,1,1,0
-		mass = 0.1
-		dragModelType = default
-		maximum_drag = 0.2
-		minimum_drag = 0.2
-		angularDrag = 2
-		crashTolerance = 999
-		maxTemp = 3000
-		breakingForce = 999
-		breakingTorque = 999
-		MODULE
-		{
-			name = TweakScale
-			type = IR_Free
-		}
-		MODULE
-		{
-			name = MuMechToggle
-			rotateJoint = True
-			rotateAxis = 0, -1, 0
-			keyRotateSpeed = 50.0
-			rotateLimits = False
-			limitTweakable = True
-			rotateMin = -360
-			rotateMax = 360
-			jointSpring = 0
-			jointDamping = 0
-			onActivate = False
-			rotateKey = 
-			revRotateKey = 
-			fixedMesh = Base
-			servoName = New Rotatron
-			partMassOriginal = 0.1
-			motorSndPath = MagicSmokeIndustries/Sounds/infernalRoboticMotor
-			electricChargeRequired = 2.0
-		}
-		MODULE
-		{
-			name = ExtendedPartInfo
-		}
-		MODULE
-		{
-			name = CollisionFX
-			scrapeSparks = true
-			collisionSound = CollisionFX/Sounds/Bang1
-			scrapeSound = CollisionFX/Sounds/GroundSkid
-			sparkSound = CollisionFX/Sounds/SparkSqueal
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Scrap Part
-			ResourceName = Recyclables
-			Efficiency = .8
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Salvage Part
-			ResourceName = SpecializedParts
-			Efficiency = .4
-		}
-	}
-}
-UrlConfig
-{
-	name = IR_RotatronVTOLScaleable
-	type = PART
-	parentUrl = MagicSmokeIndustries/Parts/Legacy/IR_RotatronVTOL/part
-	url = MagicSmokeIndustries/Parts/Legacy/IR_RotatronVTOL/part/IR_RotatronVTOLScaleable
-	PART
-	{
-		name = IR_RotatronVTOLScaleable
-		module = Part
-		author = r4m0n (code) || Sirkut (code) Devo (model/texture)
-		mesh = model.mu
-		scale = 1.0
-		rescaleFactor = 1
-		node_stack_top = 0.0, 1.19, 1.72, 0.0, 0.0, 1.0, 2
-		TechRequired = metaMaterials
-		entryCost = 0
-		cost = 50
-		category = Utility
-		subcategory = 0
-		title = VTOL Rotor Mk1 FIX ME
-		manufacturer = Wayland/MSI
-		description = Using advanced mag-lev rare Duna magnets, this rotor is capable of rotating a thrusting engine.
-		attachRules = 1,1,1,1,0
-		mass = 0.1
-		dragModelType = default
-		maximum_drag = 0.2
-		minimum_drag = 0.2
-		angularDrag = 2
-		crashTolerance = 999
-		maxTemp = 3000
-		breakingForce = 9999
-		breakingTorque = 9999
-		MODULE
-		{
-			name = TweakScale
-			type = IR_Free
-		}
-		MODULE
-		{
-			name = MuMechToggle
-			rotateJoint = True
-			rotateAxis = 0, -1, 0
-			keyRotateSpeed = 50.0
-			rotateLimits = False
-			limitTweakable = True
-			rotateMin = -360
-			rotateMax = 360
-			jointSpring = -1
-			jointDamping = -1
-			onActivate = False
-			rotateKey = 
-			revRotateKey = 
-			fixedMesh = Base
-			servoName = New IR Rotor
-			partMassOriginal = 0.1
-			motorSndPath = MagicSmokeIndustries/Sounds/infernalRoboticMotor
-			electricChargeRequired = 2.0
-		}
-		MODULE
-		{
-			name = ExtendedPartInfo
-		}
-		MODULE
-		{
-			name = CollisionFX
-			scrapeSparks = true
-			collisionSound = CollisionFX/Sounds/Bang1
-			scrapeSound = CollisionFX/Sounds/GroundSkid
-			sparkSound = CollisionFX/Sounds/SparkSqueal
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Scrap Part
-			ResourceName = Recyclables
-			Efficiency = .8
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Salvage Part
-			ResourceName = SpecializedParts
-			Efficiency = .4
-		}
-	}
-}
-UrlConfig
-{
-	name = TelescopeFullAScaleable
-	type = PART
-	parentUrl = MagicSmokeIndustries/Parts/Legacy/TPS/part
-	url = MagicSmokeIndustries/Parts/Legacy/TPS/part/TelescopeFullAScaleable
-	PART
-	{
-		name = TelescopeFullAScaleable
-		module = Part
-		author = Sirkut & Zodius
-		mesh = model.mu
-		scale = 1
-		rescaleFactor = 1
-		specPower = 0.1
-		rimFalloff = 3
-		alphaCutoff = 0
-		node_stack_bottom = 0.0, -0.05, 0.0, 0.0, -1.0, 0.0, 1
-		node_stack_top = 0.0, 0.13, 0.0, 0.0, 1.0, 0.0, 1
-		node_attach = 0.0, -0.05, 0.0, 0.0, -1.0, 0.0, 0
-		TechRequired = composites
-		entryCost = 0
-		cost = 100
-		category = Utility
-		subcategory = 0
-		title = Telescopic Piston FIX ME
-		manufacturer = Magic Smoke Industries
-		description = Telescopic Piston Segment
-		attachRules = 1,1,1,1,0
-		mass = 0.2
-		dragModelType = default
-		maximum_drag = 0.2
-		minimum_drag = 0.2
-		angularDrag = 2
-		crashTolerance = 15
-		maxTemp = 3000
-		breakingForce = 999
-		breakingTorque = 999
-		MODULE
-		{
-			name = TweakScale
-			type = IR_Telescopic
-		}
-		MODULE
-		{
-			name = MuMechToggle
-			translateJoint = True
-			translateAxis = 0, -1, 0
-			keyTranslateSpeed = 0.30
-			translateLimits = True
-			translateMin = 0
-			translateMax = 1.8
-			stepIncrement = 0.01
-			translateLimitsRevertKey = False
-			jointSpring = 0
-			jointDamping = 0
-			onActivate = False
-			translateKey = 
-			revTranslateKey = 
-			fixedMesh = Base
-			invertSymmetry = False
-			servoName = TelescopicPiston
-			partMassOriginal = 0.2
 			motorSndPath = MagicSmokeIndustries/Sounds/infernalRoboticMotor
 			electricChargeRequired = 2.0
 		}
@@ -24725,7 +27871,7 @@ UrlConfig
 		MODULE
 		{
 			name = TweakScale
-			type = Rework_LargeOnly
+			type = Rework_Standard
 		}
 		MODULE
 		{
@@ -24797,7 +27943,7 @@ UrlConfig
 		MODULE
 		{
 			name = TweakScale
-			type = Rework_LargeOnly
+			type = Rework_Standard
 		}
 		MODULE
 		{
@@ -24869,7 +28015,7 @@ UrlConfig
 		MODULE
 		{
 			name = TweakScale
-			type = Rework_LargeOnly
+			type = Rework_Standard
 		}
 		MODULE
 		{
@@ -24941,7 +28087,7 @@ UrlConfig
 		MODULE
 		{
 			name = TweakScale
-			type = Rework_LargeOnly
+			type = Rework_Standard
 		}
 		MODULE
 		{
@@ -25013,7 +28159,7 @@ UrlConfig
 		MODULE
 		{
 			name = TweakScale
-			type = Rework_LargeOnly
+			type = Rework_Standard
 		}
 		MODULE
 		{
@@ -25280,7 +28426,7 @@ UrlConfig
 		cost = 250
 		category = Structural
 		subcategory = 0
-		title = RoboTruss Pro - 1.25m FIX ME
+		title = RoboTruss Pro - Short
 		manufacturer = Magic Smoke Industries
 		description = Introducing MSI's new range of structural segments designed especially for robotics use, the RoboTruss! These trusses are the larger Pro version and are available in multiple sizes to suit almost any application.
 		attachRules = 1,1,1,1,0
@@ -25301,7 +28447,7 @@ UrlConfig
 		MODULE
 		{
 			name = TweakScale
-			type = Rework_LargeOnly
+			type = Rework_Standard
 		}
 		MODULE
 		{
@@ -25352,7 +28498,7 @@ UrlConfig
 		cost = 250
 		category = Structural
 		subcategory = 0
-		title = RoboTruss Pro - 2.5m FIX ME
+		title = RoboTruss Pro - Medium
 		manufacturer = Magic Smoke Industries
 		description = Introducing MSI's new range of structural segments designed especially for robotics use, the RoboTruss! These trusses are the larger Pro version and are available in multiple sizes to suit almost any application.
 		attachRules = 1,1,1,1,0
@@ -25373,7 +28519,7 @@ UrlConfig
 		MODULE
 		{
 			name = TweakScale
-			type = Rework_LargeOnly
+			type = Rework_Standard
 		}
 		MODULE
 		{
@@ -25424,7 +28570,7 @@ UrlConfig
 		cost = 250
 		category = Structural
 		subcategory = 0
-		title = RoboTruss Pro - 5m FIX ME
+		title = RoboTruss Pro - Long
 		manufacturer = Magic Smoke Industries
 		description = Introducing MSI's new range of structural segments designed especially for robotics use, the RoboTruss! These trusses are the larger Pro version and are available in multiple sizes to suit almost any application.
 		attachRules = 1,1,1,1,0
@@ -25445,223 +28591,7 @@ UrlConfig
 		MODULE
 		{
 			name = TweakScale
-			type = Rework_LargeOnly
-		}
-		MODULE
-		{
-			name = ExtendedPartInfo
-		}
-		MODULE
-		{
-			name = CollisionFX
-			scrapeSparks = true
-			collisionSound = CollisionFX/Sounds/Bang1
-			scrapeSound = CollisionFX/Sounds/GroundSkid
-			sparkSound = CollisionFX/Sounds/SparkSqueal
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Scrap Part
-			ResourceName = Recyclables
-			Efficiency = .8
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Salvage Part
-			ResourceName = SpecializedParts
-			Efficiency = .4
-		}
-	}
-}
-UrlConfig
-{
-	name = IR_Segment_TrussSmall_0m625
-	type = PART
-	parentUrl = MagicSmokeIndustries/Parts/Rework_Core/Probe/Structural/IR_Segment_TrussSmall_0m625/part
-	url = MagicSmokeIndustries/Parts/Rework_Core/Probe/Structural/IR_Segment_TrussSmall_0m625/part/IR_Segment_TrussSmall_0m625
-	PART
-	{
-		name = IR_Segment_TrussSmall_0m625
-		module = Part
-		author = Zodius (model) | Porkjet (texture)
-		scale = 1
-		rescaleFactor = 1
-		node_stack_bottom = 0.0, -0.3125, 0.0, 0.0, -1.0, 0.0, 0
-		node_stack_top = 0.0, 0.3125, 0.0, 0.0, 1.0, 0.0, 0
-		node_attach = 0.0, -0.3125, 0.0, 0.0, -1.0, 0.0
-		TechRequired = composites
-		entryCost = 7800
-		cost = 250
-		category = Structural
-		subcategory = 0
-		title = RoboTruss Lite - 0.625m FIX ME
-		manufacturer = Magic Smoke Industries
-		description = Introducing MSI's new range of structural segments designed especially for robotics use, the RoboTruss! These trusses are the smaller Lite version and are available in multiple sizes to suit almost any application.
-		attachRules = 1,1,1,1,0
-		mass = 0.02
-		dragModelType = default
-		maximum_drag = 0.2
-		minimum_drag = 0.2
-		angularDrag = 1
-		crashTolerance = 80
-		breakingForce = 200
-		breakingTorque = 200
-		maxTemp = 2000
-		MODEL
-		{
-			model = MagicSmokeIndustries/Parts/Rework_Core/Probe/Structural/IR_Segment_TrussSmall_0m625/model
-			texture = IR_Structural, MagicSmokeIndustries/Parts/Rework_Core/Probe/Structural/IR_Structural
-		}
-		MODULE
-		{
-			name = TweakScale
-			type = Rework_MediumOnly
-		}
-		MODULE
-		{
-			name = ExtendedPartInfo
-		}
-		MODULE
-		{
-			name = CollisionFX
-			scrapeSparks = true
-			collisionSound = CollisionFX/Sounds/Bang1
-			scrapeSound = CollisionFX/Sounds/GroundSkid
-			sparkSound = CollisionFX/Sounds/SparkSqueal
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Scrap Part
-			ResourceName = Recyclables
-			Efficiency = .8
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Salvage Part
-			ResourceName = SpecializedParts
-			Efficiency = .4
-		}
-	}
-}
-UrlConfig
-{
-	name = IR_Segment_TrussSmall_1m25
-	type = PART
-	parentUrl = MagicSmokeIndustries/Parts/Rework_Core/Probe/Structural/IR_Segment_TrussSmall_1m25/part
-	url = MagicSmokeIndustries/Parts/Rework_Core/Probe/Structural/IR_Segment_TrussSmall_1m25/part/IR_Segment_TrussSmall_1m25
-	PART
-	{
-		name = IR_Segment_TrussSmall_1m25
-		module = Part
-		author = Zodius (model) | Porkjet (texture)
-		scale = 1
-		rescaleFactor = 1
-		node_stack_bottom = 0.0, -0.625, 0.0, 0.0, -1.0, 0.0, 0
-		node_stack_top = 0.0, 0.625, 0.0, 0.0, 1.0, 0.0, 0
-		node_attach = 0.0, -0.625, 0.0, 0.0, -1.0, 0.0
-		TechRequired = composites
-		entryCost = 7800
-		cost = 250
-		category = Structural
-		subcategory = 0
-		title = RoboTruss Lite - 1.25m FIX ME
-		manufacturer = Magic Smoke Industries
-		description = Introducing MSI's new range of structural segments designed especially for robotics use, the RoboTruss! These trusses are the smaller Lite version and are available in multiple sizes to suit almost any application.
-		attachRules = 1,1,1,1,0
-		mass = 0.04
-		dragModelType = default
-		maximum_drag = 0.2
-		minimum_drag = 0.2
-		angularDrag = 1
-		crashTolerance = 80
-		breakingForce = 200
-		breakingTorque = 200
-		maxTemp = 2000
-		MODEL
-		{
-			model = MagicSmokeIndustries/Parts/Rework_Core/Probe/Structural/IR_Segment_TrussSmall_1m25/model
-			texture = IR_Structural, MagicSmokeIndustries/Parts/Rework_Core/Probe/Structural/IR_Structural
-		}
-		MODULE
-		{
-			name = TweakScale
-			type = Rework_MediumOnly
-		}
-		MODULE
-		{
-			name = ExtendedPartInfo
-		}
-		MODULE
-		{
-			name = CollisionFX
-			scrapeSparks = true
-			collisionSound = CollisionFX/Sounds/Bang1
-			scrapeSound = CollisionFX/Sounds/GroundSkid
-			sparkSound = CollisionFX/Sounds/SparkSqueal
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Scrap Part
-			ResourceName = Recyclables
-			Efficiency = .8
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Salvage Part
-			ResourceName = SpecializedParts
-			Efficiency = .4
-		}
-	}
-}
-UrlConfig
-{
-	name = IR_Segment_TrussSmall_2m50
-	type = PART
-	parentUrl = MagicSmokeIndustries/Parts/Rework_Core/Probe/Structural/IR_Segment_TrussSmall_2m50/part
-	url = MagicSmokeIndustries/Parts/Rework_Core/Probe/Structural/IR_Segment_TrussSmall_2m50/part/IR_Segment_TrussSmall_2m50
-	PART
-	{
-		name = IR_Segment_TrussSmall_2m50
-		module = Part
-		author = Zodius (model) | Porkjet (texture)
-		scale = 1
-		rescaleFactor = 1
-		node_stack_bottom = 0.0, -1.25, 0.0, 0.0, -1.0, 0.0, 0
-		node_stack_top = 0.0, 1.25, 0.0, 0.0, 1.0, 0.0, 0
-		node_attach = 0.0, -1.25, 0.0, 0.0, -1.0, 0.0
-		TechRequired = composites
-		entryCost = 7800
-		cost = 250
-		category = Structural
-		subcategory = 0
-		title = RoboTruss Lite - 2.5m FIX ME
-		manufacturer = Magic Smoke Industries
-		description = Introducing MSI's new range of structural segments designed especially for robotics use, the RoboTruss! These trusses are the smaller Lite version and are available in multiple sizes to suit almost any application.
-		attachRules = 1,1,1,1,0
-		mass = 0.08
-		dragModelType = default
-		maximum_drag = 0.2
-		minimum_drag = 0.2
-		angularDrag = 1
-		crashTolerance = 80
-		breakingForce = 200
-		breakingTorque = 200
-		maxTemp = 2000
-		MODEL
-		{
-			model = MagicSmokeIndustries/Parts/Rework_Core/Probe/Structural/IR_Segment_TrussSmall_2m50/model
-			texture = IR_Structural, MagicSmokeIndustries/Parts/Rework_Core/Probe/Structural/IR_Structural
-		}
-		MODULE
-		{
-			name = TweakScale
-			type = Rework_MediumOnly
+			type = Rework_Standard
 		}
 		MODULE
 		{
@@ -26234,7 +29164,7 @@ UrlConfig
 		cost = 250
 		category = Utility
 		subcategory = 0
-		title = Adaptron - Offset FIX ME
+		title = Adaptron - Offset
 		manufacturer = Magic Smoke Industries
 		description = Originally designed to support camera cranes in Kollywood, these MSI Adaptrons were delivered to Kerbal Space Center by mistake! Hurry up, before they realise where the missing shipment went. This part is able to rotate from 0 to +240 degrees at 26.666 deg/s. Best used as a base for your robotic arms.
 		attachRules = 1,1,1,1,0
@@ -26274,1500 +29204,6 @@ UrlConfig
 			fixedMesh = Base
 			servoName = Adaptron - Offset
 			motorSndPath = MagicSmokeIndustries/Sounds/infernalRoboticMotor
-		}
-		MODULE
-		{
-			name = ExtendedPartInfo
-		}
-		MODULE
-		{
-			name = CollisionFX
-			scrapeSparks = true
-			collisionSound = CollisionFX/Sounds/Bang1
-			scrapeSound = CollisionFX/Sounds/GroundSkid
-			sparkSound = CollisionFX/Sounds/SparkSqueal
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Scrap Part
-			ResourceName = Recyclables
-			Efficiency = .8
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Salvage Part
-			ResourceName = SpecializedParts
-			Efficiency = .4
-		}
-	}
-}
-UrlConfig
-{
-	name = IR_Foldatron_Basic
-	type = PART
-	parentUrl = MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Robotic/IR_Foldatron_Basic/part
-	url = MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Robotic/IR_Foldatron_Basic/part/IR_Foldatron_Basic
-	PART
-	{
-		name = IR_Foldatron_Basic
-		module = Part
-		author = Zodius (model) | Sirkut (plugin)
-		scale = 1
-		rescaleFactor = 1
-		node_stack_top = 0.0, 0.0, -0.4525, 0.0, 0.0, -1.0, 1
-		node_stack_bottom = 0.0, -0.14, 0.16, 0.0, -1.0, 0.0, 1
-		node_attach = 0.0, -0.14, 0.16, 0.0, -1.0, 0.0
-		TechRequired = composites
-		entryCost = 7800
-		cost = 250
-		category = Utility
-		subcategory = 0
-		title = Foldatron - Basic FIX ME
-		manufacturer = Magic Smoke Industries
-		description = They say one cannot fold a sheet of paper in half more than 8 times. Try the new Foldatron series from MSI instead! This part is able to rotate from -90 to +90 degrees at 10.0 deg/s.
-		attachRules = 1,1,1,1,0
-		mass = 0.1
-		dragModelType = default
-		maximum_drag = 0.2
-		minimum_drag = 0.2
-		angularDrag = 2
-		crashTolerance = 15
-		maxTemp = 2000
-		breakingForce = 999
-		breakingTorque = 999
-		MODEL
-		{
-			model = MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Robotic/IR_Foldatron_Basic/model
-			texture = IR_Robotic, MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Robotic/IR_Robotic
-			texture = IR_Robotic_e, MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Robotic/IR_Robotic_e
-		}
-		MODULE
-		{
-			name = TweakScale
-			type = Rework_Foldatron
-		}
-		MODULE
-		{
-			name = MuMechToggle
-			rotateJoint = True
-			rotateAxis = 1, 0, 0
-			keyRotateSpeed = 10.0
-			rotateLimits = True
-			rotateMin = -90.0
-			rotateMax = 90.0
-			presetPositionsSerialized = -90.0|-45.0|0.0|45.0|90.0
-			invertSymmetry = False
-			jointSpring = 0
-			jointDamping = 0
-			fixedMesh = Base
-			servoName = Foldatron - Basic
-			motorSndPath = MagicSmokeIndustries/Sounds/infernalRoboticMotor
-		}
-		MODULE
-		{
-			name = ExtendedPartInfo
-		}
-		MODULE
-		{
-			name = CollisionFX
-			scrapeSparks = true
-			collisionSound = CollisionFX/Sounds/Bang1
-			scrapeSound = CollisionFX/Sounds/GroundSkid
-			sparkSound = CollisionFX/Sounds/SparkSqueal
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Scrap Part
-			ResourceName = Recyclables
-			Efficiency = .8
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Salvage Part
-			ResourceName = SpecializedParts
-			Efficiency = .4
-		}
-	}
-}
-UrlConfig
-{
-	name = IR_Foldatron_BasicRev
-	type = PART
-	parentUrl = MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Robotic/IR_Foldatron_BasicRev/part
-	url = MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Robotic/IR_Foldatron_BasicRev/part/IR_Foldatron_BasicRev
-	PART
-	{
-		name = IR_Foldatron_BasicRev
-		module = Part
-		author = Zodius (model) | Sirkut (plugin)
-		scale = 1
-		rescaleFactor = 1
-		node_stack_top = 0.0, 0.16, -0.14, 0.0, 0.0, -1.0, 1
-		node_stack_bottom = 0.0, -0.4525, 0.0, 0.0, -1.0, 0.0, 1
-		node_attach = 0.0, -0.4525, 0.0, 0.0, -1.0, 0.0
-		TechRequired = composites
-		entryCost = 7800
-		cost = 250
-		category = Utility
-		subcategory = 0
-		title = Foldatron - Basic (Rev. Mount) FIX ME
-		manufacturer = Magic Smoke Industries
-		description = They say one cannot fold a sheet of paper in half more than 8 times. Try the new Foldatron series from MSI instead! This part is able to rotate from -90 to +90 degrees at 10.0 deg/s.
-		attachRules = 1,1,1,1,0
-		mass = 0.1
-		dragModelType = default
-		maximum_drag = 0.2
-		minimum_drag = 0.2
-		angularDrag = 2
-		crashTolerance = 15
-		maxTemp = 2000
-		breakingForce = 999
-		breakingTorque = 999
-		MODEL
-		{
-			model = MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Robotic/IR_Foldatron_BasicRev/model
-			texture = IR_Robotic, MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Robotic/IR_Robotic
-			texture = IR_Robotic_e, MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Robotic/IR_Robotic_e
-		}
-		MODULE
-		{
-			name = TweakScale
-			type = Rework_Foldatron
-		}
-		MODULE
-		{
-			name = MuMechToggle
-			rotateJoint = True
-			rotateAxis = 1, 0, 0
-			keyRotateSpeed = 10.0
-			rotateLimits = True
-			rotateMin = -90.0
-			rotateMax = 90.0
-			presetPositionsSerialized = -90.0|-45.0|0.0|45.0|90.0
-			invertSymmetry = False
-			jointSpring = 0
-			jointDamping = 0
-			fixedMesh = Base
-			servoName = Foldatron - Basic (Rev.)
-			motorSndPath = MagicSmokeIndustries/Sounds/infernalRoboticMotor
-		}
-		MODULE
-		{
-			name = ExtendedPartInfo
-		}
-		MODULE
-		{
-			name = CollisionFX
-			scrapeSparks = true
-			collisionSound = CollisionFX/Sounds/Bang1
-			scrapeSound = CollisionFX/Sounds/GroundSkid
-			sparkSound = CollisionFX/Sounds/SparkSqueal
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Scrap Part
-			ResourceName = Recyclables
-			Efficiency = .8
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Salvage Part
-			ResourceName = SpecializedParts
-			Efficiency = .4
-		}
-	}
-}
-UrlConfig
-{
-	name = IR_Foldatron_Extended
-	type = PART
-	parentUrl = MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Robotic/IR_Foldatron_Extended/part
-	url = MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Robotic/IR_Foldatron_Extended/part/IR_Foldatron_Extended
-	PART
-	{
-		name = IR_Foldatron_Extended
-		module = Part
-		author = Zodius (model) | Sirkut (plugin)
-		scale = 1
-		rescaleFactor = 1
-		node_stack_top = 0.0, 0.0, -0.6125, 0.0, 0.0, -1.0, 1
-		node_stack_bottom = 0.0, -0.14, 0.0, 0.0, -1.0, 0.0, 1
-		node_attach = 0.0, -0.14, 0.0, 0.0, -1.0, 0.0
-		TechRequired = composites
-		entryCost = 7800
-		cost = 250
-		category = Utility
-		subcategory = 0
-		title = Foldatron - Extended FIX ME
-		manufacturer = Magic Smoke Industries
-		description = They say one cannot fold a sheet of paper in half more than 8 times. Try the new Foldatron series from MSI instead! This part is able to rotate from 0 to +180 degrees at 20.0 deg/s.
-		attachRules = 1,1,1,1,0
-		mass = 0.1
-		dragModelType = default
-		maximum_drag = 0.2
-		minimum_drag = 0.2
-		angularDrag = 2
-		crashTolerance = 15
-		maxTemp = 2000
-		breakingForce = 999
-		breakingTorque = 999
-		MODEL
-		{
-			model = MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Robotic/IR_Foldatron_Extended/model
-			texture = IR_Robotic, MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Robotic/IR_Robotic
-			texture = IR_Robotic_e, MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Robotic/IR_Robotic_e
-		}
-		MODULE
-		{
-			name = TweakScale
-			type = Rework_Foldatron
-		}
-		MODULE
-		{
-			name = MuMechToggle
-			rotateJoint = True
-			rotateAxis = 1, 0, 0
-			keyRotateSpeed = 20.0
-			rotateLimits = True
-			rotateMin = 0.0
-			rotateMax = 180.0
-			presetPositionsSerialized = 0.0|90.0|180.0
-			invertSymmetry = False
-			jointSpring = 0
-			jointDamping = 0
-			fixedMesh = Base
-			servoName = Foldatron - Extended
-			motorSndPath = MagicSmokeIndustries/Sounds/infernalRoboticMotor
-		}
-		MODULE
-		{
-			name = ExtendedPartInfo
-		}
-		MODULE
-		{
-			name = CollisionFX
-			scrapeSparks = true
-			collisionSound = CollisionFX/Sounds/Bang1
-			scrapeSound = CollisionFX/Sounds/GroundSkid
-			sparkSound = CollisionFX/Sounds/SparkSqueal
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Scrap Part
-			ResourceName = Recyclables
-			Efficiency = .8
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Salvage Part
-			ResourceName = SpecializedParts
-			Efficiency = .4
-		}
-	}
-}
-UrlConfig
-{
-	name = IR_Foldatron_ExtendedRev
-	type = PART
-	parentUrl = MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Robotic/IR_Foldatron_ExtendedRev/part
-	url = MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Robotic/IR_Foldatron_ExtendedRev/part/IR_Foldatron_ExtendedRev
-	PART
-	{
-		name = IR_Foldatron_ExtendedRev
-		module = Part
-		author = Zodius (model) | Sirkut (plugin)
-		scale = 1
-		rescaleFactor = 1
-		node_stack_top = 0.0, 0.0, -0.14, 0.0, 0.0, -1.0, 1
-		node_stack_bottom = 0.0, -0.6125, 0.0, 0.0, -1.0, 0.0, 1
-		node_attach = 0.0, -0.6125, 0.0, 0.0, -1.0, 0.0
-		TechRequired = composites
-		entryCost = 7800
-		cost = 250
-		category = Utility
-		subcategory = 0
-		title = Foldatron - Extended (Rev. Mount) FIX ME
-		manufacturer = Magic Smoke Industries
-		description = They say one cannot fold a sheet of paper in half more than 8 times. Try the new Foldatron series from MSI instead! This part is able to rotate from 0 to +180 degrees at 20.0 deg/s.
-		attachRules = 1,1,1,1,0
-		mass = 0.1
-		dragModelType = default
-		maximum_drag = 0.2
-		minimum_drag = 0.2
-		angularDrag = 2
-		crashTolerance = 15
-		maxTemp = 2000
-		breakingForce = 999
-		breakingTorque = 999
-		MODEL
-		{
-			model = MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Robotic/IR_Foldatron_ExtendedRev/model
-			texture = IR_Robotic, MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Robotic/IR_Robotic
-			texture = IR_Robotic_e, MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Robotic/IR_Robotic_e
-		}
-		MODULE
-		{
-			name = TweakScale
-			type = Rework_Foldatron
-		}
-		MODULE
-		{
-			name = MuMechToggle
-			rotateJoint = True
-			rotateAxis = 1, 0, 0
-			keyRotateSpeed = 20.0
-			rotateLimits = True
-			rotateMin = 0.0
-			rotateMax = 180.0
-			presetPositionsSerialized = 0.0|90.0|180.0
-			invertSymmetry = False
-			jointSpring = 0
-			jointDamping = 0
-			fixedMesh = Base
-			servoName = Foldatron - Extended (Rev.)
-			motorSndPath = MagicSmokeIndustries/Sounds/infernalRoboticMotor
-		}
-		MODULE
-		{
-			name = ExtendedPartInfo
-		}
-		MODULE
-		{
-			name = CollisionFX
-			scrapeSparks = true
-			collisionSound = CollisionFX/Sounds/Bang1
-			scrapeSound = CollisionFX/Sounds/GroundSkid
-			sparkSound = CollisionFX/Sounds/SparkSqueal
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Scrap Part
-			ResourceName = Recyclables
-			Efficiency = .8
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Salvage Part
-			ResourceName = SpecializedParts
-			Efficiency = .4
-		}
-	}
-}
-UrlConfig
-{
-	name = IR_Foldatron_Hinge
-	type = PART
-	parentUrl = MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Robotic/IR_Foldatron_Hinge/part
-	url = MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Robotic/IR_Foldatron_Hinge/part/IR_Foldatron_Hinge
-	PART
-	{
-		name = IR_Foldatron_Hinge
-		module = Part
-		author = Zodius (model) | Sirkut (plugin)
-		scale = 1
-		rescaleFactor = 1
-		node_stack_top = 0.0, -0.6125, -0.16, 0.0, -1.0, .0, 1
-		node_stack_bottom = 0.0, -0.6125, 0.16, 0.0, -1.0, 0.0, 1
-		node_attach = 0.0, -0.6125, 0.16, 0.0, -1.0, 0.0
-		TechRequired = composites
-		entryCost = 7800
-		cost = 250
-		category = Utility
-		subcategory = 0
-		title = Foldatron - Hinge FIX ME
-		manufacturer = Magic Smoke Industries
-		description = They say one cannot fold a sheet of paper in half more than 8 times. Try the new Foldatron series from MSI instead! This part is able to rotate from 0 to +180 degrees at 20.0 deg/s.
-		attachRules = 1,1,1,1,0
-		mass = 0.1
-		dragModelType = default
-		maximum_drag = 0.2
-		minimum_drag = 0.2
-		angularDrag = 2
-		crashTolerance = 15
-		maxTemp = 2000
-		breakingForce = 999
-		breakingTorque = 999
-		MODEL
-		{
-			model = MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Robotic/IR_Foldatron_Hinge/model
-			texture = IR_Robotic, MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Robotic/IR_Robotic
-			texture = IR_Robotic_e, MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Robotic/IR_Robotic_e
-		}
-		MODULE
-		{
-			name = TweakScale
-			type = Rework_Foldatron
-		}
-		MODULE
-		{
-			name = MuMechToggle
-			rotateJoint = True
-			rotateAxis = 1, 0, 0
-			keyRotateSpeed = 20.0
-			rotateLimits = True
-			rotateMin = 0.0
-			rotateMax = 180.0
-			presetPositionsSerialized = 0.0|90.0|180.0
-			invertSymmetry = False
-			jointSpring = 0
-			jointDamping = 0
-			fixedMesh = Base
-			servoName = Foldatron - Hinge
-			motorSndPath = MagicSmokeIndustries/Sounds/infernalRoboticMotor
-		}
-		MODULE
-		{
-			name = ExtendedPartInfo
-		}
-		MODULE
-		{
-			name = CollisionFX
-			scrapeSparks = true
-			collisionSound = CollisionFX/Sounds/Bang1
-			scrapeSound = CollisionFX/Sounds/GroundSkid
-			sparkSound = CollisionFX/Sounds/SparkSqueal
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Scrap Part
-			ResourceName = Recyclables
-			Efficiency = .8
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Salvage Part
-			ResourceName = SpecializedParts
-			Efficiency = .4
-		}
-	}
-}
-UrlConfig
-{
-	name = IR_Foldatron_Inset
-	type = PART
-	parentUrl = MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Robotic/IR_Foldatron_Inset/part
-	url = MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Robotic/IR_Foldatron_Inset/part/IR_Foldatron_Inset
-	PART
-	{
-		name = IR_Foldatron_Inset
-		module = Part
-		author = Zodius (model) | Sirkut (plugin)
-		scale = 1
-		rescaleFactor = 1
-		node_stack_top = 0.0, -0.4025, 0.0, 0.0, -1.0, 0.0, 1
-		node_stack_bottom = 0.0, -0.5725, 0.0, 0.0, -1.0, 0.0, 1
-		node_attach = 0.0, -0.5725, 0.0, 0.0, -1.0, 0.0
-		TechRequired = metaMaterials
-		entryCost = 7800
-		cost = 250
-		category = Utility
-		subcategory = 0
-		title = Foldatron - Inset FIX ME
-		manufacturer = Magic Smoke Industries
-		description = They say one cannot fold a sheet of paper in half more than 8 times. Try the new Foldatron series from MSI instead! This part is able to continuously rotate at 20 deg/s, and can have limits enabled to restrict its movement to any range between -360 and +360 degrees.
-		attachRules = 1,1,1,1,0
-		mass = 0.1
-		dragModelType = default
-		maximum_drag = 0.2
-		minimum_drag = 0.2
-		angularDrag = 2
-		crashTolerance = 15
-		maxTemp = 2000
-		breakingForce = 999
-		breakingTorque = 999
-		MODEL
-		{
-			model = MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Robotic/IR_Foldatron_Inset/model
-			texture = IR_Robotic, MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Robotic/IR_Robotic
-			texture = IR_Robotic_e, MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Robotic/IR_Robotic_e
-		}
-		MODULE
-		{
-			name = TweakScale
-			type = Rework_Foldatron
-		}
-		MODULE
-		{
-			name = MuMechToggle
-			rotateJoint = True
-			rotateAxis = 1, 0, 0
-			keyRotateSpeed = 20.0
-			rotateLimits = False
-			limitTweakable = True
-			rotateMin = -360.0
-			rotateMax = 360.0
-			presetPositionsSerialized = -180|-90|0.0|90.0|180.0
-			invertSymmetry = False
-			jointSpring = 0
-			jointDamping = 0
-			fixedMesh = Base
-			servoName = Foldatron - Inset
-			motorSndPath = MagicSmokeIndustries/Sounds/infernalRoboticMotor
-		}
-		MODULE
-		{
-			name = ExtendedPartInfo
-		}
-		MODULE
-		{
-			name = CollisionFX
-			scrapeSparks = true
-			collisionSound = CollisionFX/Sounds/Bang1
-			scrapeSound = CollisionFX/Sounds/GroundSkid
-			sparkSound = CollisionFX/Sounds/SparkSqueal
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Scrap Part
-			ResourceName = Recyclables
-			Efficiency = .8
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Salvage Part
-			ResourceName = SpecializedParts
-			Efficiency = .4
-		}
-	}
-}
-UrlConfig
-{
-	name = IR_Foldatron_InsetEnd
-	type = PART
-	parentUrl = MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Robotic/IR_Foldatron_InsetEnd/part
-	url = MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Robotic/IR_Foldatron_InsetEnd/part/IR_Foldatron_InsetEnd
-	PART
-	{
-		name = IR_Foldatron_InsetEnd
-		module = Part
-		author = Zodius (model) | Sirkut (plugin)
-		mesh = model.mu
-		scale = 1
-		rescaleFactor = 1
-		node_stack_top = 0.0, 0.08, 0.0, 0.0, 1.0, 0.0, 0
-		node_stack_bottom = 0.0, 0.4125, 0.0, 0.0, 1.0, 0.0, 1
-		node_attach = 0.0, 0.4125, 0.0, 0.0, 1.0, 0.0
-		TechRequired = metaMaterials
-		entryCost = 7800
-		cost = 250
-		category = Utility
-		subcategory = 0
-		title = Foldatron - Inset (End) FIX ME
-		manufacturer = Magic Smoke Industries
-		description = They say one cannot fold a sheet of paper in half more than 8 times. Try the new Foldatron series from MSI instead! This part is able to continuously rotate at 20 deg/s, and can have limits enabled to restrict its movement to any range between -360 and +360 degrees.
-		attachRules = 1,1,1,1,0
-		mass = 0.1
-		dragModelType = default
-		maximum_drag = 0.2
-		minimum_drag = 0.2
-		angularDrag = 2
-		crashTolerance = 15
-		maxTemp = 2000
-		breakingForce = 999
-		breakingTorque = 999
-		MODEL
-		{
-			model = MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Robotic/IR_Foldatron_InsetEnd/model
-			texture = IR_Robotic, MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Robotic/IR_Robotic
-			texture = IR_Robotic_e, MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Robotic/IR_Robotic_e
-		}
-		MODULE
-		{
-			name = TweakScale
-			type = Rework_Foldatron
-		}
-		MODULE
-		{
-			name = MuMechToggle
-			rotateJoint = True
-			rotateAxis = 1, 0, 0
-			keyRotateSpeed = 20.0
-			rotateLimits = False
-			limitTweakable = True
-			rotateMin = -360.0
-			rotateMax = 360.0
-			presetPositionsSerialized = -180|-90|0.0|90.0|180.0
-			invertSymmetry = False
-			jointSpring = 0
-			jointDamping = 0
-			fixedMesh = Base
-			servoName = Foldatron - Inset (End)
-			motorSndPath = MagicSmokeIndustries/Sounds/infernalRoboticMotor
-		}
-		MODULE
-		{
-			name = ExtendedPartInfo
-		}
-		MODULE
-		{
-			name = CollisionFX
-			scrapeSparks = true
-			collisionSound = CollisionFX/Sounds/Bang1
-			scrapeSound = CollisionFX/Sounds/GroundSkid
-			sparkSound = CollisionFX/Sounds/SparkSqueal
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Scrap Part
-			ResourceName = Recyclables
-			Efficiency = .8
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Salvage Part
-			ResourceName = SpecializedParts
-			Efficiency = .4
-		}
-	}
-}
-UrlConfig
-{
-	name = IR_Foldatron_InsetTwist
-	type = PART
-	parentUrl = MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Robotic/IR_Foldatron_InsetTwist/part
-	url = MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Robotic/IR_Foldatron_InsetTwist/part/IR_Foldatron_InsetTwist
-	PART
-	{
-		name = IR_Foldatron_InsetTwist
-		module = Part
-		author = Zodius (model) | Sirkut (plugin)
-		scale = 1
-		rescaleFactor = 1
-		node_stack_top = 0.0, -0.4025, 0.0, 0.0, -1.0, 0.0, 1
-		node_stack_bottom = 0.0, 0.2225, 0.0, 0.0, 1.0, 0.0, 1
-		node_attach = 0.0, 0.2225, 0.0, 0.0, 1.0, 0.0
-		TechRequired = metaMaterials
-		entryCost = 7800
-		cost = 250
-		category = Utility
-		subcategory = 0
-		title = Foldatron - Inset (Twist) FIX ME
-		manufacturer = Magic Smoke Industries
-		description = They say one cannot fold a sheet of paper in half more than 8 times. Try the new Foldatron series from MSI instead! This part is able to continuously rotate at 20 deg/s, and can have limits enabled to restrict its movement to any range between -360 and +360 degrees.
-		attachRules = 1,1,1,1,0
-		mass = 0.1
-		dragModelType = default
-		maximum_drag = 0.2
-		minimum_drag = 0.2
-		angularDrag = 2
-		crashTolerance = 15
-		maxTemp = 2000
-		breakingForce = 999
-		breakingTorque = 999
-		MODEL
-		{
-			model = MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Robotic/IR_Foldatron_InsetTwist/model
-			texture = IR_Robotic, MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Robotic/IR_Robotic
-			texture = IR_Robotic_e, MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Robotic/IR_Robotic_e
-		}
-		MODULE
-		{
-			name = TweakScale
-			type = Rework_Foldatron
-		}
-		MODULE
-		{
-			name = MuMechToggle
-			rotateJoint = True
-			rotateAxis = 0, -1, 0
-			keyRotateSpeed = 20.0
-			rotateLimits = False
-			limitTweakable = True
-			rotateMin = -360.0
-			rotateMax = 360.0
-			presetPositionsSerialized = -180.0|-90.0|0.0|90.0|180.0
-			invertSymmetry = False
-			jointSpring = 0
-			jointDamping = 0
-			fixedMesh = Base
-			servoName = Foldatron - Inset (Twist)
-			motorSndPath = MagicSmokeIndustries/Sounds/infernalRoboticMotor
-		}
-		MODULE
-		{
-			name = ExtendedPartInfo
-		}
-		MODULE
-		{
-			name = CollisionFX
-			scrapeSparks = true
-			collisionSound = CollisionFX/Sounds/Bang1
-			scrapeSound = CollisionFX/Sounds/GroundSkid
-			sparkSound = CollisionFX/Sounds/SparkSqueal
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Scrap Part
-			ResourceName = Recyclables
-			Efficiency = .8
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Salvage Part
-			ResourceName = SpecializedParts
-			Efficiency = .4
-		}
-	}
-}
-UrlConfig
-{
-	name = IR_Foldatron_Mini
-	type = PART
-	parentUrl = MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Robotic/IR_Foldatron_Mini/part
-	url = MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Robotic/IR_Foldatron_Mini/part/IR_Foldatron_Mini
-	PART
-	{
-		name = IR_Foldatron_Mini
-		module = Part
-		author = Zodius (model) | Sirkut (plugin)
-		mesh = model.mu
-		scale = 1
-		rescaleFactor = 1
-		node_stack_top = 0.0, 0.0, -0.4525, 0.0, 0.0, -1.0, 1
-		node_stack_bottom = 0.0, -0.14, 0.0, 0.0, -1.0, 0.0, 0
-		node_attach = 0.0, -0.14, 0.0, 0.0, -1.0, 0.0
-		TechRequired = metaMaterials
-		entryCost = 7800
-		cost = 250
-		category = Utility
-		subcategory = 0
-		title = Foldatron - Mini FIX ME
-		manufacturer = Magic Smoke Industries
-		description = They say one cannot fold a sheet of paper in half more than 8 times. Try the new Foldatron series from MSI instead! This part is able to rotate from 0 to +180 degrees at 20.0 deg/s.
-		attachRules = 1,1,1,1,0
-		mass = 0.1
-		dragModelType = default
-		maximum_drag = 0.2
-		minimum_drag = 0.2
-		angularDrag = 2
-		crashTolerance = 15
-		maxTemp = 2000
-		breakingForce = 999
-		breakingTorque = 999
-		MODEL
-		{
-			model = MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Robotic/IR_Foldatron_Mini/model
-			texture = IR_Robotic, MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Robotic/IR_Robotic
-			texture = IR_Robotic_e, MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Robotic/IR_Robotic_e
-		}
-		MODULE
-		{
-			name = TweakScale
-			type = Rework_Foldatron
-		}
-		MODULE
-		{
-			name = MuMechToggle
-			rotateJoint = True
-			rotateAxis = 1, 0, 0
-			keyRotateSpeed = 20.0
-			rotateLimits = True
-			rotateMin = 0.0
-			rotateMax = 180.0
-			presetPositionsSerialized = 0.0|90.0|180.0
-			invertSymmetry = False
-			jointSpring = 0
-			jointDamping = 0
-			fixedMesh = Base
-			servoName = Foldatron - Mini
-			motorSndPath = MagicSmokeIndustries/Sounds/infernalRoboticMotor
-		}
-		MODULE
-		{
-			name = ExtendedPartInfo
-		}
-		MODULE
-		{
-			name = CollisionFX
-			scrapeSparks = true
-			collisionSound = CollisionFX/Sounds/Bang1
-			scrapeSound = CollisionFX/Sounds/GroundSkid
-			sparkSound = CollisionFX/Sounds/SparkSqueal
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Scrap Part
-			ResourceName = Recyclables
-			Efficiency = .8
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Salvage Part
-			ResourceName = SpecializedParts
-			Efficiency = .4
-		}
-	}
-}
-UrlConfig
-{
-	name = IR_Foldatron_MiniRev
-	type = PART
-	parentUrl = MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Robotic/IR_Foldatron_MiniRev/part
-	url = MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Robotic/IR_Foldatron_MiniRev/part/IR_Foldatron_MiniRev
-	PART
-	{
-		name = IR_Foldatron_MiniRev
-		module = Part
-		author = Zodius (model) | Sirkut (plugin)
-		mesh = model.mu
-		scale = 1
-		rescaleFactor = 1
-		node_stack_top = 0.0, 0.0, -0.14, 0.0, 0.0, -1.0, 0
-		node_stack_bottom = 0.0, -0.4525, 0.0, 0.0, -1.0, 0.0, 1
-		node_attach = 0.0, -0.4525, 0.0, 0.0, -1.0, 0.0
-		TechRequired = metaMaterials
-		entryCost = 7800
-		cost = 250
-		category = Utility
-		subcategory = 0
-		title = Foldatron - Mini (Rev. Mount) FIX ME
-		manufacturer = Magic Smoke Industries
-		description = They say one cannot fold a sheet of paper in half more than 8 times. Try the new Foldatron series from MSI instead! This part is able to rotate from 0 to +180 degrees at 20.0 deg/s.
-		attachRules = 1,1,1,1,0
-		mass = 0.1
-		dragModelType = default
-		maximum_drag = 0.2
-		minimum_drag = 0.2
-		angularDrag = 2
-		crashTolerance = 15
-		maxTemp = 2000
-		breakingForce = 999
-		breakingTorque = 999
-		MODEL
-		{
-			model = MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Robotic/IR_Foldatron_MiniRev/model
-			texture = IR_Robotic, MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Robotic/IR_Robotic
-			texture = IR_Robotic_e, MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Robotic/IR_Robotic_e
-		}
-		MODULE
-		{
-			name = TweakScale
-			type = Rework_Foldatron
-		}
-		MODULE
-		{
-			name = MuMechToggle
-			rotateJoint = True
-			rotateAxis = 1, 0, 0
-			keyRotateSpeed = 20.0
-			rotateLimits = True
-			rotateMin = 0.0
-			rotateMax = 180.0
-			presetPositionsSerialized = 0.0|90.0|180.0
-			invertSymmetry = False
-			jointSpring = 0
-			jointDamping = 0
-			fixedMesh = Base
-			servoName = Foldatron - Mini (Rev.)
-			motorSndPath = MagicSmokeIndustries/Sounds/infernalRoboticMotor
-		}
-		MODULE
-		{
-			name = ExtendedPartInfo
-		}
-		MODULE
-		{
-			name = CollisionFX
-			scrapeSparks = true
-			collisionSound = CollisionFX/Sounds/Bang1
-			scrapeSound = CollisionFX/Sounds/GroundSkid
-			sparkSound = CollisionFX/Sounds/SparkSqueal
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Scrap Part
-			ResourceName = Recyclables
-			Efficiency = .8
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Salvage Part
-			ResourceName = SpecializedParts
-			Efficiency = .4
-		}
-	}
-}
-UrlConfig
-{
-	name = IR_Foldatron_Offset
-	type = PART
-	parentUrl = MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Robotic/IR_Foldatron_Offset/part
-	url = MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Robotic/IR_Foldatron_Offset/part/IR_Foldatron_Offset
-	PART
-	{
-		name = IR_Foldatron_Offset
-		module = Part
-		author = Zodius (model) | Sirkut (plugin)
-		scale = 1
-		rescaleFactor = 1
-		node_stack_top = 0.0, -0.09, -0.04, 0.0, -1.0, 0.0, 1
-		node_stack_bottom = 0.0, -0.6125, 0.06, 0.0, -1.0, 0.0, 1
-		node_attach = 0.0, -0.6125, 0.06, 0.0, -1.0, 0.0
-		TechRequired = metaMaterials
-		entryCost = 7800
-		cost = 250
-		category = Utility
-		subcategory = 0
-		title = Foldatron - Offset FIX ME
-		manufacturer = Magic Smoke Industries
-		description = They say one cannot fold a sheet of paper in half more than 8 times. Try the new Foldatron series from MSI instead! This part is able to rotate from 0 to +180 degrees at 20.0 deg/s.
-		attachRules = 1,1,1,1,0
-		mass = 0.1
-		dragModelType = default
-		maximum_drag = 0.2
-		minimum_drag = 0.2
-		angularDrag = 2
-		crashTolerance = 15
-		maxTemp = 2000
-		breakingForce = 999
-		breakingTorque = 999
-		MODEL
-		{
-			model = MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Robotic/IR_Foldatron_Offset/model
-			texture = IR_Robotic, MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Robotic/IR_Robotic
-			texture = IR_Robotic_e, MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Robotic/IR_Robotic_e
-		}
-		MODULE
-		{
-			name = TweakScale
-			type = Rework_Foldatron
-		}
-		MODULE
-		{
-			name = MuMechToggle
-			rotateJoint = True
-			rotateAxis = 1, 0, 0
-			keyRotateSpeed = 20.0
-			rotateLimits = True
-			rotateMin = 0.0
-			rotateMax = 180.0
-			presetPositionsSerialized = 0.0|90.0|180.0
-			invertSymmetry = False
-			jointSpring = 0
-			jointDamping = 0
-			fixedMesh = Base
-			servoName = Foldatron - Offset
-			motorSndPath = MagicSmokeIndustries/Sounds/infernalRoboticMotor
-		}
-		MODULE
-		{
-			name = ExtendedPartInfo
-		}
-		MODULE
-		{
-			name = CollisionFX
-			scrapeSparks = true
-			collisionSound = CollisionFX/Sounds/Bang1
-			scrapeSound = CollisionFX/Sounds/GroundSkid
-			sparkSound = CollisionFX/Sounds/SparkSqueal
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Scrap Part
-			ResourceName = Recyclables
-			Efficiency = .8
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Salvage Part
-			ResourceName = SpecializedParts
-			Efficiency = .4
-		}
-	}
-}
-UrlConfig
-{
-	name = IR_Foldatron_OffsetMini
-	type = PART
-	parentUrl = MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Robotic/IR_Foldatron_OffsetMini/part
-	url = MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Robotic/IR_Foldatron_OffsetMini/part/IR_Foldatron_OffsetMini
-	PART
-	{
-		name = IR_Foldatron_OffsetMini
-		module = Part
-		author = Zodius (model) | Sirkut (plugin)
-		scale = 1
-		rescaleFactor = 1
-		node_stack_top = 0.0, -0.14, -0.00, 0.0, -1.0, .0, 0
-		node_stack_bottom = 0.0, -0.5725, 0.06, 0.0, -1.0, 0.0, 1
-		node_attach = 0.0, -0.5725, 0.06, 0.0, -1.0, 0.0
-		TechRequired = metaMaterials
-		entryCost = 7800
-		cost = 250
-		category = Utility
-		subcategory = 0
-		title = Foldatron - Offset Mini FIX ME
-		manufacturer = Magic Smoke Industries
-		description = They say one cannot fold a sheet of paper in half more than 8 times. Try the new Foldatron series from MSI instead! This part is able to rotate from 0 to +180 degrees at 20.0 deg/s.
-		attachRules = 1,1,1,1,0
-		mass = 0.1
-		dragModelType = default
-		maximum_drag = 0.2
-		minimum_drag = 0.2
-		angularDrag = 2
-		crashTolerance = 15
-		maxTemp = 2000
-		breakingForce = 999
-		breakingTorque = 999
-		MODEL
-		{
-			model = MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Robotic/IR_Foldatron_OffsetMini/model
-			texture = IR_Robotic, MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Robotic/IR_Robotic
-			texture = IR_Robotic_e, MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Robotic/IR_Robotic_e
-		}
-		MODULE
-		{
-			name = TweakScale
-			type = Rework_Foldatron
-		}
-		MODULE
-		{
-			name = MuMechToggle
-			rotateJoint = True
-			rotateAxis = 1, 0, 0
-			keyRotateSpeed = 20.0
-			rotateLimits = True
-			rotateMin = 0.0
-			rotateMax = 180.0
-			presetPositionsSerialized = 0.0|90.0|180.0
-			invertSymmetry = False
-			jointSpring = 0
-			jointDamping = 0
-			fixedMesh = Base
-			servoName = Foldatron - Offset Mini
-			motorSndPath = MagicSmokeIndustries/Sounds/infernalRoboticMotor
-		}
-		MODULE
-		{
-			name = ExtendedPartInfo
-		}
-		MODULE
-		{
-			name = CollisionFX
-			scrapeSparks = true
-			collisionSound = CollisionFX/Sounds/Bang1
-			scrapeSound = CollisionFX/Sounds/GroundSkid
-			sparkSound = CollisionFX/Sounds/SparkSqueal
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Scrap Part
-			ResourceName = Recyclables
-			Efficiency = .8
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Salvage Part
-			ResourceName = SpecializedParts
-			Efficiency = .4
-		}
-	}
-}
-UrlConfig
-{
-	name = IR_AthleteTruss_0m625
-	type = PART
-	parentUrl = MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Structural/IR_AthleteTruss_0m625/part
-	url = MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Structural/IR_AthleteTruss_0m625/part/IR_AthleteTruss_0m625
-	PART
-	{
-		name = IR_AthleteTruss_0m625
-		module = Part
-		author = Zodius (model)
-		mesh = model.mu
-		scale = 1
-		rescaleFactor = 1
-		node_stack_bottom = 0.0, -0.3125, 0.0, 0.0, -1.0, 0.0, 1
-		node_stack_top = 0.0, 0.3125, 0.0, 0.0, 1.0, 0.0, 1
-		node_attach = 0.0, -0.3125, 0.0, 0.0, -1.0, 0.0
-		TechRequired = metaMaterials
-		entryCost = 7800
-		cost = 250
-		category = Structural
-		subcategory = 0
-		title = RoboAthleteTruss - 0.625m FIX ME
-		manufacturer = Magic Smoke Industries
-		description = WIP
-		attachRules = 1,1,1,1,0
-		mass = 0.02
-		dragModelType = default
-		maximum_drag = 0.2
-		minimum_drag = 0.2
-		angularDrag = 1
-		crashTolerance = 80
-		breakingForce = 200
-		breakingTorque = 200
-		maxTemp = 2000
-		MODULE
-		{
-			name = TweakScale
-			type = Rework_LargeOnly
-		}
-		MODULE
-		{
-			name = ExtendedPartInfo
-		}
-		MODULE
-		{
-			name = CollisionFX
-			scrapeSparks = true
-			collisionSound = CollisionFX/Sounds/Bang1
-			scrapeSound = CollisionFX/Sounds/GroundSkid
-			sparkSound = CollisionFX/Sounds/SparkSqueal
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Scrap Part
-			ResourceName = Recyclables
-			Efficiency = .8
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Salvage Part
-			ResourceName = SpecializedParts
-			Efficiency = .4
-		}
-	}
-}
-UrlConfig
-{
-	name = IR_AthleteTruss_0m625_Half
-	type = PART
-	parentUrl = MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Structural/IR_AthleteTruss_0m625/part
-	url = MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Structural/IR_AthleteTruss_0m625/part/IR_AthleteTruss_0m625_Half
-	PART
-	{
-		name = IR_AthleteTruss_0m625_Half
-		module = Part
-		author = Zodius (model)
-		mesh = model.mu
-		scale = 1
-		rescaleFactor = 0.5
-		node_stack_bottom = 0.0, -0.3125, 0.0, 0.0, -1.0, 0.0, 0
-		node_stack_top = 0.0, 0.3125, 0.0, 0.0, 1.0, 0.0, 0
-		node_attach = 0.0, -0.3125, 0.0, 0.0, -1.0, 0.0
-		TechRequired = metaMaterials
-		entryCost = 7800
-		cost = 250
-		category = 0
-		subcategory = 0
-		title = RoboAthleteTruss - 0.625m Half FIX ME
-		manufacturer = Magic Smoke Industries
-		description = Introducing MSI's new range of structural segments designed especially for robotics use, the RoboTruss! These trusses are the smaller Lite version and are available in multiple sizes to suit almost any application.
-		attachRules = 1,1,1,1,0
-		mass = 0.01
-		dragModelType = default
-		maximum_drag = 0.2
-		minimum_drag = 0.2
-		angularDrag = 1
-		crashTolerance = 80
-		breakingForce = 200
-		breakingTorque = 200
-		maxTemp = 5000
-		MODULE
-		{
-			name = TweakScale
-			type = Rework_MediumOnly
-		}
-		MODULE
-		{
-			name = ExtendedPartInfo
-		}
-		MODULE
-		{
-			name = CollisionFX
-			scrapeSparks = true
-			collisionSound = CollisionFX/Sounds/Bang1
-			scrapeSound = CollisionFX/Sounds/GroundSkid
-			sparkSound = CollisionFX/Sounds/SparkSqueal
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Scrap Part
-			ResourceName = Recyclables
-			Efficiency = .8
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Salvage Part
-			ResourceName = SpecializedParts
-			Efficiency = .4
-		}
-	}
-}
-UrlConfig
-{
-	name = IR_AthleteTruss_1m875
-	type = PART
-	parentUrl = MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Structural/IR_AthleteTruss_1m875/part
-	url = MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Structural/IR_AthleteTruss_1m875/part/IR_AthleteTruss_1m875
-	PART
-	{
-		name = IR_AthleteTruss_1m875
-		module = Part
-		author = Zodius (model)
-		mesh = model.mu
-		scale = 1
-		rescaleFactor = 1
-		node_stack_bottom = 0.0, -0.9375, 0.0, 0.0, -1.0, 0.0, 1
-		node_stack_top = 0.0, 0.9375, 0.0, 0.0, 1.0, 0.0, 1
-		node_attach = 0.0, -0.9375, 0.0, 0.0, -1.0, 0.0
-		TechRequired = metaMaterials
-		entryCost = 7800
-		cost = 250
-		category = Structural
-		subcategory = 0
-		title = RoboAthleteTruss - 1.875m FIX ME
-		manufacturer = Magic Smoke Industries
-		description = WIP
-		attachRules = 1,1,1,1,0
-		mass = 0.06
-		dragModelType = default
-		maximum_drag = 0.2
-		minimum_drag = 0.2
-		angularDrag = 1
-		crashTolerance = 80
-		breakingForce = 200
-		breakingTorque = 200
-		maxTemp = 2000
-		MODULE
-		{
-			name = TweakScale
-			type = Rework_LargeOnly
-		}
-		MODULE
-		{
-			name = ExtendedPartInfo
-		}
-		MODULE
-		{
-			name = CollisionFX
-			scrapeSparks = true
-			collisionSound = CollisionFX/Sounds/Bang1
-			scrapeSound = CollisionFX/Sounds/GroundSkid
-			sparkSound = CollisionFX/Sounds/SparkSqueal
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Scrap Part
-			ResourceName = Recyclables
-			Efficiency = .8
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Salvage Part
-			ResourceName = SpecializedParts
-			Efficiency = .4
-		}
-	}
-}
-UrlConfig
-{
-	name = IR_AthleteTruss_1m875_Half
-	type = PART
-	parentUrl = MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Structural/IR_AthleteTruss_1m875/part
-	url = MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Structural/IR_AthleteTruss_1m875/part/IR_AthleteTruss_1m875_Half
-	PART
-	{
-		name = IR_AthleteTruss_1m875_Half
-		module = Part
-		author = Zodius (model)
-		mesh = model.mu
-		scale = 1
-		rescaleFactor = 0.5
-		node_stack_bottom = 0.0, -0.9375, 0.0, 0.0, -1.0, 0.0, 0
-		node_stack_top = 0.0, 0.9375, 0.0, 0.0, 1.0, 0.0, 0
-		node_attach = 0.0, -0.9375, 0.0, 0.0, -1.0, 0.0
-		TechRequired = metaMaterials
-		entryCost = 7800
-		cost = 250
-		category = 0
-		subcategory = 0
-		title = RoboAthleteTruss - 1.875m Half FIX ME
-		manufacturer = Magic Smoke Industries
-		description = WIP
-		attachRules = 1,1,1,1,0
-		mass = 0.03
-		dragModelType = default
-		maximum_drag = 0.2
-		minimum_drag = 0.2
-		angularDrag = 1
-		crashTolerance = 80
-		breakingForce = 200
-		breakingTorque = 200
-		maxTemp = 5000
-		MODULE
-		{
-			name = TweakScale
-			type = Rework_MediumOnly
-		}
-		MODULE
-		{
-			name = ExtendedPartInfo
-		}
-		MODULE
-		{
-			name = CollisionFX
-			scrapeSparks = true
-			collisionSound = CollisionFX/Sounds/Bang1
-			scrapeSound = CollisionFX/Sounds/GroundSkid
-			sparkSound = CollisionFX/Sounds/SparkSqueal
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Scrap Part
-			ResourceName = Recyclables
-			Efficiency = .8
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Salvage Part
-			ResourceName = SpecializedParts
-			Efficiency = .4
-		}
-	}
-}
-UrlConfig
-{
-	name = IR_AthleteTruss_4m375
-	type = PART
-	parentUrl = MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Structural/IR_AthleteTruss_4m375/part
-	url = MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Structural/IR_AthleteTruss_4m375/part/IR_AthleteTruss_4m375
-	PART
-	{
-		name = IR_AthleteTruss_4m375
-		module = Part
-		author = Zodius (model)
-		mesh = model.mu
-		scale = 1
-		rescaleFactor = 1
-		node_stack_bottom = 0.0, -2.1875, 0.0, 0.0, -1.0, 0.0, 1
-		node_stack_top = 0.0, 2.1875, 0.0, 0.0, 1.0, 0.0, 1
-		node_attach = 0.0, -2.1875, 0.0, 0.0, -1.0, 0.0
-		TechRequired = metaMaterials
-		entryCost = 7800
-		cost = 250
-		category = Structural
-		subcategory = 0
-		title = RoboAthleteTruss - 4.375m FIX ME
-		manufacturer = Magic Smoke Industries
-		description = WIP
-		attachRules = 1,1,1,1,0
-		mass = 0.14
-		dragModelType = default
-		maximum_drag = 0.2
-		minimum_drag = 0.2
-		angularDrag = 1
-		crashTolerance = 80
-		breakingForce = 200
-		breakingTorque = 200
-		maxTemp = 2000
-		MODULE
-		{
-			name = TweakScale
-			type = Rework_LargeOnly
-		}
-		MODULE
-		{
-			name = ExtendedPartInfo
-		}
-		MODULE
-		{
-			name = CollisionFX
-			scrapeSparks = true
-			collisionSound = CollisionFX/Sounds/Bang1
-			scrapeSound = CollisionFX/Sounds/GroundSkid
-			sparkSound = CollisionFX/Sounds/SparkSqueal
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Scrap Part
-			ResourceName = Recyclables
-			Efficiency = .8
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Salvage Part
-			ResourceName = SpecializedParts
-			Efficiency = .4
-		}
-	}
-}
-UrlConfig
-{
-	name = IR_AthleteTruss_4m375_Half
-	type = PART
-	parentUrl = MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Structural/IR_AthleteTruss_4m375/part
-	url = MagicSmokeIndustries/Parts/Rework_Expansion/Probe/Structural/IR_AthleteTruss_4m375/part/IR_AthleteTruss_4m375_Half
-	PART
-	{
-		name = IR_AthleteTruss_4m375_Half
-		module = Part
-		author = Zodius (model)
-		mesh = model.mu
-		scale = 1
-		rescaleFactor = 0.5
-		node_stack_bottom = 0.0, -2.1875, 0.0, 0.0, -1.0, 0.0, 0
-		node_stack_top = 0.0, 2.1875, 0.0, 0.0, 1.0, 0.0, 0
-		node_attach = 0.0, -2.1875, 0.0, 0.0, -1.0, 0.0
-		TechRequired = metaMaterials
-		entryCost = 7800
-		cost = 250
-		category = 0
-		subcategory = 0
-		title = RoboAthleteTruss - 4.375m Half FIX ME
-		manufacturer = Magic Smoke Industries
-		description = WIP
-		attachRules = 1,1,1,1,0
-		mass = 0.07
-		dragModelType = default
-		maximum_drag = 0.2
-		minimum_drag = 0.2
-		angularDrag = 1
-		crashTolerance = 80
-		breakingForce = 200
-		breakingTorque = 200
-		maxTemp = 5000
-		MODULE
-		{
-			name = TweakScale
-			type = Rework_MediumOnly
 		}
 		MODULE
 		{
@@ -31120,11 +32556,6 @@ UrlConfig
 		}
 		MODULE
 		{
-			name = ModuleConnectedLivingSpace
-			passable = true
-		}
-		MODULE
-		{
 			name = TweakScale
 			type = stack
 			defaultScale = 2.5
@@ -31194,11 +32625,6 @@ UrlConfig
 			collisionSound = CollisionFX/Sounds/Bang1
 			scrapeSound = CollisionFX/Sounds/GroundSkid
 			sparkSound = CollisionFX/Sounds/SparkSqueal
-		}
-		MODULE
-		{
-			name = ModuleConnectedLivingSpace
-			passable = true
 		}
 		MODULE
 		{
@@ -34508,12 +35934,6 @@ UrlConfig
 			model = NearFuturePropulsion/Parts/Argon/argon-0625/argon-0625-1
 			scale = 1.0, 1.0, 1.0
 		}
-		RESOURCE
-		{
-			name = ArgonGas
-			amount = 46000
-			maxAmount = 46000
-		}
 		MODULE
 		{
 			name = ExtendedPartInfo
@@ -34582,12 +36002,6 @@ UrlConfig
 		{
 			model = NearFuturePropulsion/Parts/Argon/argon-0625/argon-0625-2
 			scale = 1.0, 1.0, 1.0
-		}
-		RESOURCE
-		{
-			name = ArgonGas
-			amount = 24000
-			maxAmount = 24000
 		}
 		MODULE
 		{
@@ -34658,12 +36072,6 @@ UrlConfig
 			model = NearFuturePropulsion/Parts/Argon/argon-0625/argon-0625-3
 			scale = 1.0, 1.0, 1.0
 		}
-		RESOURCE
-		{
-			name = ArgonGas
-			amount = 10000
-			maxAmount = 10000
-		}
 		MODULE
 		{
 			name = ExtendedPartInfo
@@ -34733,12 +36141,6 @@ UrlConfig
 			model = NearFuturePropulsion/Parts/Argon/argon-125/argon-125-1
 			scale = 1.0, 1.0, 1.0
 		}
-		RESOURCE
-		{
-			name = ArgonGas
-			amount = 800000
-			maxAmount = 800000
-		}
 		MODULE
 		{
 			name = ExtendedPartInfo
@@ -34807,12 +36209,6 @@ UrlConfig
 		{
 			model = NearFuturePropulsion/Parts/Argon/argon-125/argon-125-2
 			scale = 1.0, 1.0, 1.0
-		}
-		RESOURCE
-		{
-			name = ArgonGas
-			amount = 400000
-			maxAmount = 400000
 		}
 		MODULE
 		{
@@ -34889,12 +36285,6 @@ UrlConfig
 			model = NearFuturePropulsion/Parts/Argon/argon-125/argon-125-3
 			scale = 1.0, 1.0, 1.0
 		}
-		RESOURCE
-		{
-			name = ArgonGas
-			amount = 200000
-			maxAmount = 200000
-		}
 		MODULE
 		{
 			name = ExtendedPartInfo
@@ -34964,12 +36354,6 @@ UrlConfig
 			model = NearFuturePropulsion/Parts/Argon/argon-25/argon-25-1
 			scale = 1.0, 1.0, 1.0
 		}
-		RESOURCE
-		{
-			name = ArgonGas
-			amount = 6450000
-			maxAmount = 6450000
-		}
 		MODULE
 		{
 			name = ExtendedPartInfo
@@ -35038,12 +36422,6 @@ UrlConfig
 		{
 			model = NearFuturePropulsion/Parts/Argon/argon-25/argon-25-2
 			scale = 1.0, 1.0, 1.0
-		}
-		RESOURCE
-		{
-			name = ArgonGas
-			amount = 2932000
-			maxAmount = 2932000
 		}
 		MODULE
 		{
@@ -35120,12 +36498,6 @@ UrlConfig
 			model = NearFuturePropulsion/Parts/Argon/argon-25/argon-25-3
 			scale = 1.0, 1.0, 1.0
 		}
-		RESOURCE
-		{
-			name = ArgonGas
-			amount = 1174000
-			maxAmount = 1174000
-		}
 		MODULE
 		{
 			name = ExtendedPartInfo
@@ -35193,12 +36565,6 @@ UrlConfig
 			model = NearFuturePropulsion/Parts/Argon/argon-radial/argon-radial-0625-1
 			scale = 1.0, 1.0, 1.0
 		}
-		RESOURCE
-		{
-			name = ArgonGas
-			amount = 4000
-			maxAmount = 4000
-		}
 		MODULE
 		{
 			name = ExtendedPartInfo
@@ -35265,12 +36631,6 @@ UrlConfig
 		{
 			model = NearFuturePropulsion/Parts/Argon/argon-radial/argon-radial-125-1
 			scale = 1.0, 1.0, 1.0
-		}
-		RESOURCE
-		{
-			name = ArgonGas
-			amount = 22000
-			maxAmount = 22000
 		}
 		MODULE
 		{
@@ -38248,11 +39608,6 @@ UrlConfig
 		}
 		MODULE
 		{
-			name = ModuleConnectedLivingSpace
-			passable = true
-		}
-		MODULE
-		{
 			name = USI_ModuleRecycleablePart
 			Menu = Scrap Part
 			ResourceName = Recyclables
@@ -38384,11 +39739,6 @@ UrlConfig
 			collisionSound = CollisionFX/Sounds/Bang1
 			scrapeSound = CollisionFX/Sounds/GroundSkid
 			sparkSound = CollisionFX/Sounds/SparkSqueal
-		}
-		MODULE
-		{
-			name = ModuleConnectedLivingSpace
-			passable = true
 		}
 		MODULE
 		{
@@ -38527,11 +39877,6 @@ UrlConfig
 			collisionSound = CollisionFX/Sounds/Bang1
 			scrapeSound = CollisionFX/Sounds/GroundSkid
 			sparkSound = CollisionFX/Sounds/SparkSqueal
-		}
-		MODULE
-		{
-			name = ModuleConnectedLivingSpace
-			passable = true
 		}
 		MODULE
 		{
@@ -38964,12 +40309,6 @@ UrlConfig
 			collisionSound = CollisionFX/Sounds/Bang1
 			scrapeSound = CollisionFX/Sounds/GroundSkid
 			sparkSound = CollisionFX/Sounds/SparkSqueal
-		}
-		MODULE
-		{
-			name = ModuleConnectedLivingSpace
-			passable = true
-			impassablenodes = bottom
 		}
 		MODULE
 		{
@@ -54508,11 +55847,11 @@ UrlConfig
 		cost = 1200
 		category = Control
 		subcategory = 0
-		title = Advanced Inline Stabilizer FIX ME
+		title = Advanced Inline Stabilizer
 		manufacturer = STEADLER Engineering Corps
 		description = The Advanced Inline Stabilizer module containing a larger, heavier array of reaction wheels. These spin very quickly to create torque without wasting propellant. These larger wheels are driven by proportionally larger electric motors, so keep an eye on your Electricity levels.
 		attachRules = 1,0,1,1,0
-		mass = 0.1
+		mass = 0.3
 		dragModelType = default
 		maximum_drag = 0.2
 		minimum_drag = 0.2
@@ -54556,6 +55895,18 @@ UrlConfig
 		{
 			model = VenStockRevamp/Squad/Parts/Electrical/ReactionWheels/1_25m
 		}
+		MODULE
+		{
+			name = ModuleReactionWheel
+			PitchTorque = 5
+			YawTorque = 5
+			RollTorque = 5
+			RESOURCE
+			{
+				name = ElectricCharge
+				rate = 0.347222222222222
+			}
+		}
 	}
 }
 UrlConfig
@@ -54578,10 +55929,10 @@ UrlConfig
 		cost = 600
 		category = Control
 		subcategory = 0
-		title = Small Inline Reaction Wheel FIX ME
+		title = Small Inline Reaction Wheel
 		description = The inline reaction wheel system uses a series of spinning discs that are going "Very Fast", to generate the torque necessary to control a spacecraft without wasting any propellant. Please do not attempt to service this device while it is running.
 		attachRules = 1,0,1,1,0
-		mass = 0.05
+		mass = 0.03
 		dragModelType = default
 		maximum_drag = 0.2
 		minimum_drag = 0.2
@@ -54624,6 +55975,18 @@ UrlConfig
 		MODEL
 		{
 			model = VenStockRevamp/Squad/Parts/Electrical/ReactionWheels/0_625m
+		}
+		MODULE
+		{
+			name = ModuleReactionWheel
+			PitchTorque = 0.5
+			YawTorque = 0.5
+			RollTorque = 0.5
+			RESOURCE
+			{
+				name = ElectricCharge
+				rate = 0.0347222222222222
+			}
 		}
 	}
 }
@@ -56746,8 +58109,6 @@ UrlConfig
 		MODULE
 		{
 			name = ModuleSPU
-			IsRTCommandStation = true
-			RTCommandMinCrew = 6
 		}
 		MODULE
 		{
@@ -59211,49 +60572,6 @@ UrlConfig
 		maxTemp = 2000
 		bulkheadProfiles = size0
 		node_stack_top1 = 0.0, 0.06, 0.0, 0.0, 1.0, 0.0, 0
-		EFFECTS
-		{
-			running
-			{
-				AUDIO
-				{
-					channel = Ship
-					clip = sound_rocket_mini
-					volume = 0.0 0.0
-					volume = 1.0 1.0
-					pitch = 0.0 0.75
-					pitch = 1.0 0.95
-					loop = true
-				}
-				PREFAB_PARTICLE
-				{
-					prefabName = fx_exhaustFlame_yellow_tiny_Z
-					transformName = thrustTransform
-					emission = 0.0 0.0
-					emission = 1.0 1.0
-					speed = 0.0 0.8
-					speed = 1.0 1.0
-				}
-			}
-			engage
-			{
-				AUDIO
-				{
-					channel = Ship
-					clip = sound_vent_medium
-					loop = false
-				}
-			}
-			disengage
-			{
-				AUDIO
-				{
-					channel = Ship
-					clip = sound_vent_soft
-					loop = false
-				}
-			}
-		}
 		MODULE
 		{
 			name = ModuleEnginesFX
@@ -59263,8 +60581,9 @@ UrlConfig
 			minThrust = 0
 			maxThrust = 18
 			heatProduction = 150
-			fxOffset = 0, 0, 0.125
 			EngineType = LiquidFuel
+			runningEffectName = powersmoke
+			powerEffectName = powerflame
 			PROPELLANT
 			{
 				name = LiquidFuel
@@ -59319,16 +60638,6 @@ UrlConfig
 			collisionSound = CollisionFX/Sounds/Bang1
 			scrapeSound = CollisionFX/Sounds/GroundSkid
 			sparkSound = CollisionFX/Sounds/SparkSqueal
-		}
-		MODULE
-		{
-			name = TweakScale
-			type = stack
-			defaultScale = 0.625
-			TWEAKSCALEEXPONENTS
-			{
-				mass = 2.5
-			}
 		}
 		MODULE
 		{
@@ -59471,6 +60780,60 @@ UrlConfig
 					key = 0 243
 					key = 1 186
 					key = 3 0.001
+				}
+			}
+		}
+		EFFECTS
+		{
+			powerflame
+			{
+				AUDIO
+				{
+					channel = Ship
+					clip = KWRocketry/Soundbank/sound_spsloop
+					volume = 0.0 0.0
+					volume = 1.0 1.0
+					pitch = 0.0 0.8
+					pitch = 1.0 1.5
+					loop = true
+				}
+				MODEL_MULTI_PARTICLE_PERSIST
+				{
+					name = flamethrust
+					modelName = MP_Nazari/FX/nasa4engine
+					transformName = thrustTransform
+					emission = 0.0 0.2
+					emission = 0.05 0.13
+					emission = 1.0 0.5
+					speed = 0.0 0.2
+					speed = 1.0 0.3
+					energy = 0.0 1.0
+					energy = 1.0 1.5
+					offset = 0 1.5
+					offset = 1 1.0
+					grow = 0 4
+					grow = 1 5
+					size = 0 0.1
+					size = 1 0.5
+					fixedEmissions = false
+				}
+			}
+			engage
+			{
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_vent_medium
+					loop = false
+				}
+			}
+			disengage
+			{
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_vent_soft
+					loop = false
 				}
 			}
 		}
@@ -60373,16 +61736,6 @@ UrlConfig
 		}
 		MODULE
 		{
-			name = TweakScale
-			type = stack
-			defaultScale = 1.25
-			TWEAKSCALEEXPONENTS
-			{
-				mass = 2.5
-			}
-		}
-		MODULE
-		{
 			name = USI_ModuleRecycleablePart
 			Menu = Scrap Part
 			ResourceName = Recyclables
@@ -61117,8 +62470,8 @@ UrlConfig
 			heatProduction = 192
 			fxOffset = 0, 0, 0.8
 			EngineType = LiquidFuel
-			spoolEffectName = powersmoke
-			powerEffectName = powerflame
+			runningEffectName = powersmoke
+			directThrottleEffectName = powerflame
 			PROPELLANT
 			{
 				name = LiquidFuel
@@ -61986,16 +63339,6 @@ UrlConfig
 		}
 		MODULE
 		{
-			name = TweakScale
-			type = stack
-			defaultScale = 2.5
-			TWEAKSCALEEXPONENTS
-			{
-				mass = 2.5
-			}
-		}
-		MODULE
-		{
 			name = USI_ModuleRecycleablePart
 			Menu = Scrap Part
 			ResourceName = Recyclables
@@ -62069,6 +63412,65 @@ UrlConfig
 			jitterMultiplier = 10.5
 			multiplierOnIva = 0.5
 		}
+		MODULE
+		{
+			name = ModuleTweakableJettison
+		}
+		MODULE
+		{
+			name = ModuleTweakableGimbal
+		}
+		MODULE
+		{
+			name = ModuleEngineConfigs
+			configuration = Kerolox
+			CONFIG
+			{
+				name = Kerolox
+				minThrust = 0
+				maxThrust = 1500
+				PROPELLANT
+				{
+					name = Kerosene
+					ratio = 1.21951219512195
+					DrawGauge = True
+				}
+				PROPELLANT
+				{
+					name = LqdOxygen
+					ratio = 2.38387379491674
+				}
+				atmosphereCurve
+				{
+					key = 0 236
+					key = 1 217
+					key = 3 0.001
+				}
+			}
+			CONFIG
+			{
+				name = Hydrolox
+				minThrust = 0
+				maxThrust = 1500
+				PROPELLANT
+				{
+					name = LqdHydrogen
+					ratio = 14.1143260409315
+					DrawGauge = True
+				}
+				PROPELLANT
+				{
+					name = LqdOxygen
+					ratio = 5.43382997370727
+				}
+				atmosphereCurve
+				{
+					key = 0 268
+					key = 1 232
+					key = 3 0.001
+				}
+			}
+		}
 		EFFECTS
 		{
 			powerflame
@@ -62079,25 +63481,37 @@ UrlConfig
 					modelName = MP_Nazari/FX/flamelarge
 					transformName = thrustTransform
 					emission = 0.0 0.0
-					emission = 0.05 0.99
-					emission = 0.75 1.21
-					emission = 1.0 1.25
-					speed = 0.0 1.75
-					speed = 1.0 1.65
-					energy = 0.0 0.33
-					energy = 1.0 0.99
+					emission = 0.05 0.49
+					emission = 1.0 1.8
+					speed = 0.0 1.4
+					speed = 1.0 1.8
+					energy = 0.0 0.5
+					energy = 1.0 1.2
+					offset = 0 1
+					offset = 1 1
+					grow = 0 -1
+					grow = 1 -0.5
 					fixedEmissions = false
-					logGrow
+					grow
 					{
-						density = 0 8
-						density = 1 0.7
-						density = 10 0
+						density = 0 -0.5
+						density = 1 0
+					}
+					size
+					{
+						density = 0 3
+						density = 1 1
+					}
+					offset
+					{
+						density = 0 5
+						density = 1 1
 					}
 				}
 				AUDIO
 				{
 					channel = Ship
-					clip = sound_rocket_hard
+					clip = Felbourn/Sounds/DeltaLoop
 					volume = 0.0 0.0
 					volume = 1.0 1.0
 					pitch = 0.0 0.2
@@ -62155,67 +63569,6 @@ UrlConfig
 						density = 1.0 2.0
 						density = 0.01 5.0
 					}
-					logGrow
-					{
-						density = 0 8
-						density = 1 0.7
-						density = 10 0
-					}
-				}
-				MODEL_MULTI_PARTICLE_PERSIST
-				{
-					name = smokelaunch
-					modelName = MP_Nazari/FX/smokelaunch
-					transformName = thrustTransform
-					emission = 0.0 0.0
-					emission = 0.05 0.0
-					emission = 0.2 0.5
-					emission = 1.0 1.8
-					energy = 0.0 0.2
-					energy = 1.0 1.1
-					speed = 0.0 0.1
-					speed = 1.0 0.15
-					grow = 0.0 0.0
-					grow = 1.0 0.75
-					size = 0.0 1.0
-					size = 1.0 1.5
-					renderMode = "Billboard"
-					collide = true
-					collideRatio = 0.12
-					fixedScale = 1.0
-					sizeClamp = 50
-					angle = 0.0 1.0
-					angle = 45.0 1.0
-					angle = 50.0 1.0
-					distance = 0.0 1.0
-					distance = 100.0 1.0
-					distance = 550.0 0.0
-					initialDensity = 2.25
-					physical = true
-					stickiness = 0.8
-					dragCoefficient = 1
-					logarithmicGrowth = 2.75
-					fixedEmissions = true
-					randomInitalVelocityOffsetMaxRadius = 15.5
-					emission
-					{
-						mach = 0.0 1.25
-						mach = 0.05 0.0
-						mach = 1.0 0.0
-					}
-					logGrow
-					{
-						power = 0 0
-						power = 1 2
-						density = 0 8
-						density = 1 0.7
-						density = 10 0
-					}
-					Grow
-					{
-						power = 0 0
-						power = 1 2
-					}
 				}
 			}
 			engage
@@ -62223,9 +63576,9 @@ UrlConfig
 				AUDIO
 				{
 					channel = Ship
-					clip = sound_vent_medium
-					volume = 1.0
-					pitch = 2.0
+					clip = Felbourn/Sounds/ShuttleStart
+					volume = 1
+					pitch = 1
 					loop = false
 				}
 			}
@@ -62249,65 +63602,6 @@ UrlConfig
 					volume = 1.0
 					pitch = 2.0
 					loop = false
-				}
-			}
-		}
-		MODULE
-		{
-			name = ModuleTweakableJettison
-		}
-		MODULE
-		{
-			name = ModuleTweakableGimbal
-		}
-		MODULE
-		{
-			name = ModuleEngineConfigs
-			configuration = Kerolox
-			CONFIG
-			{
-				name = Kerolox
-				minThrust = 0
-				maxThrust = 1500
-				PROPELLANT
-				{
-					name = Kerosene
-					ratio = 1.21951219512195
-					DrawGauge = True
-				}
-				PROPELLANT
-				{
-					name = LqdOxygen
-					ratio = 2.38387379491674
-				}
-				atmosphereCurve
-				{
-					key = 0 236
-					key = 1 217
-					key = 3 0.001
-				}
-			}
-			CONFIG
-			{
-				name = Hydrolox
-				minThrust = 0
-				maxThrust = 1500
-				PROPELLANT
-				{
-					name = LqdHydrogen
-					ratio = 14.1143260409315
-					DrawGauge = True
-				}
-				PROPELLANT
-				{
-					name = LqdOxygen
-					ratio = 5.43382997370727
-				}
-				atmosphereCurve
-				{
-					key = 0 268
-					key = 1 232
-					key = 3 0.001
 				}
 			}
 		}
@@ -66584,7 +67878,7 @@ UrlConfig
 		cost = 37.5
 		category = Engine
 		subcategory = 0
-		title = SnubOtron FIX ME
+		title = SnubOtron
 		manufacturer = Periapsis Rocket Supplies Co
 		description = Recent demand for an even smaller Sepatron has led to the quick development of the SnubOtron, a snappy little rocket aptly described as, "About half as good as a sepatron in nearly every way."
 		attachRules = 0,1,0,0,0
@@ -66604,7 +67898,7 @@ UrlConfig
 		rescaleFactor = 1
 		MODULE
 		{
-			name = ModuleEnginesFX
+			name = ModuleEnginesRF
 			thrustVectorTransformName = thrustTransform
 			throttleLocked = True
 			exhaustDamage = True
@@ -66617,7 +67911,7 @@ UrlConfig
 			EngineType = SolidBooster
 			PROPELLANT
 			{
-				name = SolidFuel
+				name = HTPB
 				ratio = 1.0
 				DrawGauge = True
 			}
@@ -66732,6 +68026,79 @@ UrlConfig
 			lightBlue = 0.68
 			jitterMultiplier = 10.5
 			multiplierOnIva = 0.5
+		}
+		MODULE
+		{
+			name = ModuleFuelTanks
+			volume = 1.5
+			type = Solid
+		}
+		MODULE
+		{
+			name = ModuleEngineConfigs
+			type = ModuleEnginesRF
+			configuration = Linear
+			CONFIG
+			{
+				name = Linear
+				minThrust = 0
+				maxThrust = 1
+				chamberNominalTemp = 1800
+				maxEngineTemp = 2050
+				curveResource = HTPB
+				PROPELLANT
+				{
+					name = HTPB
+					ratio = 1
+					DrawGauge = True
+				}
+				atmosphereCurve
+				{
+					key = 0 182
+					key = 1 151
+					key = 3 0.001
+				}
+				thrustCurve
+				{
+					key = 0.00 0.01
+					key = 0.02 0.01
+					key = 0.03 0.16
+					key = 0.06 0.32
+					key = 1.00 1.00
+				}
+			}
+			CONFIG
+			{
+				name = MaxQ
+				minThrust = 0
+				maxThrust = 1
+				chamberNominalTemp = 1800
+				maxEngineTemp = 2050
+				curveResource = HTPB
+				PROPELLANT
+				{
+					name = HTPB
+					ratio = 1
+					DrawGauge = True
+				}
+				atmosphereCurve
+				{
+					key = 0 182
+					key = 1 151
+					key = 3 0.001
+				}
+				thrustCurve
+				{
+					key = 0.00 0.01
+					key = 0.02 0.01
+					key = 0.03 0.16
+					key = 0.04 0.20
+					key = 0.60 0.99
+					key = 0.80 0.60
+					key = 0.94 1.00
+					key = 1.00 0.90
+				}
+			}
 		}
 	}
 }
@@ -74386,7 +75753,7 @@ UrlConfig
 		cost = 90
 		category = Structural
 		subcategory = 0
-		title = M-2x2 Structural Panel FIX ME
+		title = M-2x2 Structural Panel
 		manufacturer = Dinkelstein Kerman's Construction Emporium
 		description = Four M-1x1 have been arranged in a 2x2 layout for this part, then stuck together with super glue.
 		attachRules = 1,1,1,1,1
@@ -74574,7 +75941,7 @@ UrlConfig
 		cost = 16
 		category = Structural
 		subcategory = 0
-		title = Cubic Octagonal Strut Mk I FIX ME
+		title = Cubic Octagonal Strut Mk I
 		manufacturer = StrutCo
 		description = Now, with advances in technology, StrutCo brings you the Cubic Octagonal Strut - it's like a regular Octagonal Strut, but in the shape of a cube!
 		attachRules = 1,1,1,1,0
@@ -74586,6 +75953,7 @@ UrlConfig
 		crashTolerance = 7
 		maxTemp = 2000
 		bulkheadProfiles = ,size00, srf
+		fuelCrossFeed = True
 		MODULE
 		{
 			name = ExtendedPartInfo
@@ -75452,7 +76820,7 @@ UrlConfig
 		cost = 150
 		category = Utility
 		subcategory = 0
-		title = Radiator Panel (small) FIX ME
+		title = Radiator Panel
 		description = A radially attachable radiator panel to help dissipate heat into space.
 		attachRules = 0,1,0,1,1
 		mass = 0.01
@@ -94158,7 +95526,7 @@ UrlConfig
 		cost = 100
 		category = Utility
 		subcategory = 0
-		title = Surface Mounted Omni Light FIX ME
+		title = Surface Mounted Omni Light
 		manufacturer = Abrams LightCo
 		description = A small light that emits in all directions. Useful for self-illumination.
 		node_attach = 0, 0.0, 0.0, 0, -1, 0, 0
@@ -94177,7 +95545,7 @@ UrlConfig
 			useAnimationDim = true
 			lightBrightenSpeed = 2.5
 			lightDimSpeed = 2.5
-			resourceAmount = 0.01
+			resourceAmount = 0.00277777777777778
 			animationName = OmniAnim
 			useResources = true
 		}
@@ -94405,8 +95773,8 @@ UrlConfig
 		RSSShowCalendarToggled = False
 		AppLauncherSetTrueTimeOut = 6
 		DailyVersionCheck = True
-		VersionCheckDate_AttemptStored = 2015-07-06
-		VersionCheckDate_SuccessStored = 2015-07-06
+		VersionCheckDate_AttemptStored = 2015-07-08
+		VersionCheckDate_SuccessStored = 2015-07-08
 		VersionWeb = 3.4.0.0
 		WindowPositionStored
 		{
@@ -94675,8 +96043,8 @@ UrlConfig
 		ReplaceStockAppTimeOut = 20
 		AppLauncherSetTrueTimeOut = 6
 		DailyVersionCheck = True
-		VersionCheckDate_AttemptStored = 2015-07-06
-		VersionCheckDate_SuccessStored = 2015-07-06
+		VersionCheckDate_AttemptStored = 2015-07-08
+		VersionCheckDate_SuccessStored = 2015-07-08
 		ShowWindowOnResourceMonitor = True
 		VersionWeb = 2.7.2.0
 		WindowPositionStored
@@ -96816,8 +98184,8 @@ UrlConfig
 		freeScale = true
 		defaultScale = 1.25
 		suffix = m
-		scaleFactors = 0.1,  0.3,   0.625, 1.25,  2.5,  3.75, 5.0, 7.5, 10, 20
-		incrementSlide = 0.01, 0.025, 0.025, 0.025, 0.05, 0.05, 0.1, 0.1, 0.2
+		scaleFactors = 0.1,  0.3,   0.625, 1.25,  1.875, 2.5,  3.75, 5.0, 7.5, 10, 20
+		incrementSlide = 0.01, 0.025, 0.025, 0.025, 0.025, 0.05, 0.05, 0.1, 0.1, 0.2
 	}
 }
 UrlConfig
@@ -96832,8 +98200,8 @@ UrlConfig
 		freeScale = true
 		defaultScale = 1.25
 		suffix = m
-		scaleFactors = 0.1,  0.3,   0.625, 1.25,  2.5,  3.75, 5.0, 7.5, 10, 20
-		incrementSlide = 0.01, 0.025, 0.025, 0.025, 0.05, 0.05, 0.1, 0.1, 0.2
+		scaleFactors = 0.1,  0.3,   0.625, 1.25,  1.875, 2.5,  3.75, 5.0, 7.5, 10, 20
+		incrementSlide = 0.01, 0.025, 0.025, 0.025, 0.025, 0.05, 0.05, 0.1, 0.1, 0.2
 		TWEAKSCALEEXPONENTS
 		{
 			mass = 2
@@ -96854,6 +98222,8 @@ UrlConfig
 		scaleFactors = 0.1,  0.5,  1,    2,   4
 		incrementSlide = 0.01, 0.01, 0.02, 0.05
 		suffix = 
+		scaleFactors = 0.1,  0.75, 0.5,  1, 1.5,   2,  3, 4
+		incrementSlide = 0.01, 0.01, 0.01, 0.02, 0.02, 0.02, 0.05
 	}
 }
 UrlConfig
@@ -97898,6 +99268,108 @@ UrlConfig
 }
 UrlConfig
 {
+	name = weldedpart
+	type = PART
+	parentUrl = UbioWeldingLtd/Parts/Aero/weldedpart/weldedpart
+	url = UbioWeldingLtd/Parts/Aero/weldedpart/weldedpart/weldedpart
+	PART
+	{
+		name = weldedpart
+		module = Part
+		author = UbioZurWeldingLtd
+		rescaleFactor = 1
+		PhysicsSignificance = -1
+		node_stack_topstructuralPanel11 = -1.45632,-0.70563,0,1,0,0,0
+		node_stack_bottomstructuralPanel11 = -1.47282,-0.70563,0,-1,0,0,0
+		node_stack_topKW5mExpFairingWall0 = -1.61813,3.19948,0,0,1,0,3
+		node_stack_bottomKW5mExpFairingWall0 = -1.61813,-3.12496,0,0,-1,0,3
+		node_attach = 0,0,0,0,0,0,0
+		CrewCapacity = 0
+		stackSymmetry = 0
+		TechRequired = heavyAerodynamics
+		entryCost = 10000
+		cost = 830
+		category = Aero
+		subcategory = 0
+		title = My welded part FIX ME
+		manufacturer = UbioZur Welding Ltd
+		description = Warranty void during re-entry.
+		attachRules = 1,1,1,1,0,0,0
+		mass = 1.44675
+		dragModelType = default
+		maximum_drag = 0.125
+		minimum_drag = 0.125
+		angularDrag = 0.75
+		crashTolerance = 8.33593
+		breakingForce = 21.98134
+		breakingTorque = 21.98134
+		maxTemp = 2000
+		fuelCrossFeed = True
+		explosionPotential = 0.25675
+		thermalMassModifier = 1
+		heatConductivity = 0.12
+		emissiveConstant = 0.4
+		radiatorHeadroom = 0.25
+		bulkheadProfiles = size0, srf
+		MODEL
+		{
+			model = KWRocketry/Parts/Fairings/UnifiedFairings5m/KW_Fairing_ExpandingWall5m
+			position = 0.00687,0.00331,0
+			scale = 1.25,1.25,1.25
+			rotation = 0,0,0
+		}
+		MODEL
+		{
+			model = VenStockRevamp/Squad/Parts/Structural/Panel1x1
+			position = -1.46457,-0.70563,0
+			scale = 0.3,0.3,0.3
+			rotation = 0,180,90.00001
+		}
+		MODULE
+		{
+			name = ExtendedPartInfo
+		}
+		MODULE
+		{
+			name = CollisionFX
+			scrapeSparks = True
+			collisionSound = CollisionFX/Sounds/Bang1
+			scrapeSound = CollisionFX/Sounds/GroundSkid
+			sparkSound = CollisionFX/Sounds/SparkSqueal
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = 2.4
+		}
+		MODULE
+		{
+			name = ExtendedPartInfo
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		INTERNAL
+		{
+			name = Placeholder
+		}
+	}
+}
+UrlConfig
+{
 	name = ACTIVE_TEXTURE_MANAGER_CONFIG
 	type = ACTIVE_TEXTURE_MANAGER_CONFIG
 	parentUrl = UmbraSpaceIndustries/Kolonization/ATM
@@ -98376,11 +99848,6 @@ UrlConfig
 		}
 		MODULE
 		{
-			name = ModuleConnectedLivingSpace
-			passable = true
-		}
-		MODULE
-		{
 			name = ExWorkshop
 			ProductivityFactor = 5
 		}
@@ -98680,11 +100147,6 @@ UrlConfig
 			workSpace = 5
 			livingSpace = 0
 			efficiencyPart = MKV_Workshop,1,OKS_Workspace,1
-		}
-		MODULE
-		{
-			name = ModuleConnectedLivingSpace
-			passable = true
 		}
 		MODULE
 		{
@@ -99036,11 +100498,6 @@ UrlConfig
 		}
 		MODULE
 		{
-			name = ModuleConnectedLivingSpace
-			passable = true
-		}
-		MODULE
-		{
 			name = ExWorkshop
 			ProductivityFactor = 5
 		}
@@ -99313,11 +100770,6 @@ UrlConfig
 			workSpace = 5
 			livingSpace = 0
 			efficiencyPart = MKV_Smelter,1,MKV_Sifter,1,OKS_Workspace,1
-		}
-		MODULE
-		{
-			name = ModuleConnectedLivingSpace
-			passable = true
 		}
 		MODULE
 		{
@@ -99650,12 +101102,6 @@ UrlConfig
 			workSpace = 1
 			livingSpace = 0
 			efficiencyPart = MKS_AgModule,2,MKV_AgModule,2,USILS_Greenhouse_LG,4
-		}
-		MODULE
-		{
-			name = ModuleConnectedLivingSpace
-			passable = true
-			impassablenodes = bottom
 		}
 		MODULE
 		{
@@ -100049,12 +101495,6 @@ UrlConfig
 		}
 		MODULE
 		{
-			name = ModuleConnectedLivingSpace
-			passable = true
-			impassablenodes = bottom
-		}
-		MODULE
-		{
 			name = ExWorkshop
 			ProductivityFactor = 1
 		}
@@ -100228,12 +101668,6 @@ UrlConfig
 			acquireTorque = 3.5
 			acquireRange = 3.0
 			captureRange = 1.5
-		}
-		MODULE
-		{
-			name = ModuleConnectedLivingSpace
-			passable = true
-			passableWhenSurfaceAttached = true
 		}
 		MODULE
 		{
@@ -100691,11 +102125,6 @@ UrlConfig
 		}
 		MODULE
 		{
-			name = ModuleConnectedLivingSpace
-			passable = true
-		}
-		MODULE
-		{
 			name = ExtendedPartInfo
 		}
 		MODULE
@@ -100824,13 +102253,6 @@ UrlConfig
 		}
 		MODULE
 		{
-			name = ModuleConnectedLivingSpace
-			passable = true
-			passableWhenSurfaceAttached = true
-			surfaceAttachmentsPassable = true
-		}
-		MODULE
-		{
 			name = ExtendedPartInfo
 		}
 		MODULE
@@ -100952,13 +102374,6 @@ UrlConfig
 			EVArange = 5
 			layer = 3
 			playAnimationOnEditorSpawn = False
-		}
-		MODULE
-		{
-			name = ModuleConnectedLivingSpace
-			passable = true
-			passableWhenSurfaceAttached = true
-			surfaceAttachmentsPassable = true
 		}
 		MODULE
 		{
@@ -101086,13 +102501,6 @@ UrlConfig
 		}
 		MODULE
 		{
-			name = ModuleConnectedLivingSpace
-			passable = true
-			passableWhenSurfaceAttached = true
-			surfaceAttachmentsPassable = true
-		}
-		MODULE
-		{
 			name = ExtendedPartInfo
 		}
 		MODULE
@@ -101202,14 +102610,6 @@ UrlConfig
 			equipDir = (0, 0, 0)
 			carriable = true
 			allowAttachOnStatic = false
-		}
-		MODULE
-		{
-			name = ModuleConnectedLivingSpace
-			passable = true
-			passableWhenSurfaceAttached = true
-			surfaceAttachmentsPassable = true
-			passableDockingNodeTypes = top,bottom
 		}
 		MODULE
 		{
@@ -101369,12 +102769,6 @@ UrlConfig
 			workSpace = 1
 			livingSpace = 0
 			efficiencyPart = MKV_HabModule,2,MKS_HabDome,2
-		}
-		MODULE
-		{
-			name = ModuleConnectedLivingSpace
-			passable = true
-			impassablenodes = bottom
 		}
 		MODULE
 		{
@@ -101593,14 +102987,6 @@ UrlConfig
 		}
 		MODULE
 		{
-			name = ModuleConnectedLivingSpace
-			passable = true
-			passableWhenSurfaceAttached = true
-			impassablenodes = bottom
-			surfaceAttachmentsPassable = true
-		}
-		MODULE
-		{
 			name = ModuleKISInventory
 			maxVolume = 5000
 			externalAccess = true
@@ -101719,14 +103105,6 @@ UrlConfig
 		{
 			name = USIAnimation
 			animationName = Deploy
-		}
-		MODULE
-		{
-			name = ModuleConnectedLivingSpace
-			passable = true
-			passableWhenSurfaceAttached = true
-			impassablenodes = bottom
-			surfaceAttachmentsPassable = true
 		}
 		MODULE
 		{
@@ -101923,12 +103301,6 @@ UrlConfig
 		}
 		MODULE
 		{
-			name = ModuleConnectedLivingSpace
-			passable = true
-			impassablenodes = bottom
-		}
-		MODULE
-		{
 			name = ExWorkshop
 			ProductivityFactor = 1
 		}
@@ -102050,13 +103422,6 @@ UrlConfig
 		MODEL
 		{
 			model = UmbraSpaceIndustries/Kolonization/Assets/RigidTube
-		}
-		MODULE
-		{
-			name = ModuleConnectedLivingSpace
-			passable = true
-			passableWhenSurfaceAttached = true
-			surfaceAttachmentsPassable = true
 		}
 		MODULE
 		{
@@ -102305,11 +103670,6 @@ UrlConfig
 			workSpace = 2
 			livingSpace = 0
 			hasGenerators = false
-		}
-		MODULE
-		{
-			name = ModuleConnectedLivingSpace
-			passable = true
 		}
 		MODULE
 		{
@@ -104794,14 +106154,6 @@ UrlConfig
 		}
 		MODULE
 		{
-			name = ModuleConnectedLivingSpace
-			passable = true
-			passableWhenSurfaceAttached = true
-			impassablenodes = bottom
-			surfaceAttachmentsPassable = true
-		}
-		MODULE
-		{
 			name = ModuleKISInventory
 			maxVolume = 5000
 			externalAccess = true
@@ -105113,11 +106465,6 @@ UrlConfig
 		}
 		MODULE
 		{
-			name = ModuleConnectedLivingSpace
-			passable = true
-		}
-		MODULE
-		{
 			name = ExWorkshop
 			ProductivityFactor = 1
 		}
@@ -105229,11 +106576,6 @@ UrlConfig
 		}
 		MODULE
 		{
-			name = ModuleConnectedLivingSpace
-			passable = true
-		}
-		MODULE
-		{
 			name = FStextureSwitch2
 			textureNames = UmbraSpaceIndustries/Kolonization/Assets/FrostedGlass30;UmbraSpaceIndustries/Kolonization/Assets/OpaqueGlass;
 			objectNames = Glass;Glass_001;Glass_002;Glass_003;
@@ -105335,13 +106677,6 @@ UrlConfig
 		breakingTorque = 280
 		maxTemp = 1700
 		bulkheadProfiles = size2, size1
-		MODULE
-		{
-			name = ModuleConnectedLivingSpace
-			passable = true
-			passableWhenSurfaceAttached = true
-			surfaceAttachmentsPassable = true
-		}
 		MODEL
 		{
 			model = UmbraSpaceIndustries/Kolonization/Assets/StationCap
@@ -105562,11 +106897,6 @@ UrlConfig
 		}
 		MODULE
 		{
-			name = ModuleConnectedLivingSpace
-			passable = true
-		}
-		MODULE
-		{
 			name = ExWorkshop
 			ProductivityFactor = 1
 		}
@@ -105686,11 +107016,6 @@ UrlConfig
 		}
 		MODULE
 		{
-			name = ModuleConnectedLivingSpace
-			passable = true
-		}
-		MODULE
-		{
 			name = MKSModule
 			workSpace = 0
 			livingSpace = 10
@@ -105763,13 +107088,6 @@ UrlConfig
 		breakingTorque = 280
 		maxTemp = 1700
 		bulkheadProfiles = size2
-		MODULE
-		{
-			name = ModuleConnectedLivingSpace
-			passable = true
-			passableWhenSurfaceAttached = true
-			surfaceAttachmentsPassable = true
-		}
 		MODEL
 		{
 			model = UmbraSpaceIndustries/Kolonization/Assets/StationHub
@@ -105924,11 +107242,6 @@ UrlConfig
 		}
 		MODULE
 		{
-			name = ModuleConnectedLivingSpace
-			passable = true
-		}
-		MODULE
-		{
 			name = ExWorkshop
 			ProductivityFactor = 1
 		}
@@ -106030,13 +107343,6 @@ UrlConfig
 		breakingTorque = 280
 		maxTemp = 1700
 		bulkheadProfiles = size2
-		MODULE
-		{
-			name = ModuleConnectedLivingSpace
-			passable = true
-			passableWhenSurfaceAttached = true
-			surfaceAttachmentsPassable = true
-		}
 		MODEL
 		{
 			model = UmbraSpaceIndustries/Kolonization/Assets/LgStationHub
@@ -106176,11 +107482,6 @@ UrlConfig
 			name = MKSModule
 			workSpace = 1
 			livingSpace = 0
-		}
-		MODULE
-		{
-			name = ModuleConnectedLivingSpace
-			passable = true
 		}
 		MODULE
 		{
@@ -106398,13 +107699,6 @@ UrlConfig
 		breakingTorque = 280
 		maxTemp = 1700
 		bulkheadProfiles = size1
-		MODULE
-		{
-			name = ModuleConnectedLivingSpace
-			passable = true
-			passableWhenSurfaceAttached = true
-			surfaceAttachmentsPassable = true
-		}
 		MODEL
 		{
 			model = UmbraSpaceIndustries/Kolonization/Assets/StationTube
@@ -106470,13 +107764,6 @@ UrlConfig
 		breakingTorque = 280
 		maxTemp = 1700
 		bulkheadProfiles = size2
-		MODULE
-		{
-			name = ModuleConnectedLivingSpace
-			passable = true
-			passableWhenSurfaceAttached = true
-			surfaceAttachmentsPassable = true
-		}
 		MODEL
 		{
 			model = UmbraSpaceIndustries/Kolonization/Assets/StationTube_Lg
@@ -106553,11 +107840,6 @@ UrlConfig
 			workSpace = 4
 			livingSpace = 0
 			hasGenerators = false
-		}
-		MODULE
-		{
-			name = ModuleConnectedLivingSpace
-			passable = true
 		}
 		MODULE
 		{
