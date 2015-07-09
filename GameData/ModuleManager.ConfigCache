@@ -1,4 +1,4 @@
-patchedNodeCount = 12140
+patchedNodeCount = 12142
 catEatenCount = 0
 UrlConfig
 {
@@ -6883,6 +6883,18 @@ UrlConfig
 }
 UrlConfig
 {
+	name = MM_VARS
+	type = MM_VARS
+	parentUrl = Felbourn/MM_vars
+	url = Felbourn/MM_vars/MM_VARS
+	MM_VARS
+	{
+		LitersPerCM = 850
+		PI = 3.14159265358979
+	}
+}
+UrlConfig
+{
 	name = Fel_DeepFairingBase
 	type = PART
 	parentUrl = Felbourn/Fairings/deepBase
@@ -7060,13 +7072,10 @@ UrlConfig
 		MODULE
 		{
 			name = ModuleFuelTanks
-			volume = 32857.8684808009
-			@volume / = 2
-			@volume ! = 2
-			@volume * = 3.141592654
-			@volume * = 850
-			@volume * = 3.5
 			type = Default
+			MFT_dia = 3.75
+			MFT_hgt = 3.5
+			volume = 14.0625
 		}
 		MODULE
 		{
@@ -7144,10 +7153,10 @@ UrlConfig
 		MODULE
 		{
 			name = ModuleFuelTanks
+			type = Default
 			MFT_dia = 3.75
 			MFT_hgt = 6
-			type = Default
-			volume = 9387.96242308598
+			volume = 3.75
 		}
 		MODULE
 		{
@@ -7321,7 +7330,8 @@ UrlConfig
 		MODULE
 		{
 			name = TweakScale
-			type = free
+			type = stack
+			defaultScale = 2.5
 		}
 		MODULE
 		{
@@ -10871,10 +10881,10 @@ UrlConfig
 		MODULE
 		{
 			name = ModuleFuelTanks
+			type = Default
 			MFT_dia = 2.5
 			MFT_hgt = 4.6
-			volume = 20000
-			type = Default
+			volume = 7.85398163397447
 		}
 	}
 }
@@ -10965,10 +10975,10 @@ UrlConfig
 		MODULE
 		{
 			name = ModuleFuelTanks
+			type = Default
 			MFT_dia = 2.5
 			MFT_hgt = 1.9
-			volume = 4000
-			type = Default
+			volume = 7.85398163397447
 		}
 	}
 }
@@ -12713,94 +12723,100 @@ UrlConfig
 		{
 			running_closed
 			{
-				
+				AUDIO
 				{
-					AUDIO
+					channel = Ship
+					clip = sound_rocket_hard
+					volume = 0.0 0.0
+					volume = 0.8 0.8
+					pitch = 0.0 0.2
+					pitch = 1.5 1.5
+					loop = true
+				}
+				PREFAB_PARTICLE
+				{
+					name = Smoke
+					prefabName = fx_smokeTrail_light
+					transformName = OldFXTransform
+					emission = 0.0 0.0
+					emission = 0.05 0.0
+					emission = 0.075 0.25
+					emission = 1.0 1.25
+					speed = 0.0 0.25
+					speed = 1.0 1.0
+					localOffset = 0, 0, 0
+				}
+				MODEL_MULTI_PARTICLE_PERSIST
+				{
+					name = flamethrust
+					modelName = MP_Nazari/FX/flamef1fx
+					transformName = OldFXTransform
+					localRotation = 90,0,0
+					offsetDirection = 0,1,0
+					fixedEmissions = false
+					emission
 					{
-						channel = Ship
-						clip = sound_rocket_hard
-						volume = 0.0 0.0
-						volume = 0.8 0.8
-						pitch = 0.0 0.2
-						pitch = 1.5 1.5
-						loop = true
+						power = 0.0 0.0
+						power = 0.05 0.27
+						power = 1.0 1
 					}
-					PREFAB_PARTICLE
+					speed
 					{
-						name = Smoke
-						prefabName = fx_smokeTrail_light
-						transformName = OldFXTransform
-						emission = 0.0 0.0
-						emission = 0.05 0.0
-						emission = 0.075 0.25
-						emission = 1.0 1.25
-						speed = 0.0 0.25
-						speed = 1.0 1.0
-						localOffset = 0, 0, 0
+						power = 0.0 1.4
+						power = 1.0 1.8
 					}
-					MODEL_MULTI_PARTICLE_PERSIST
+					energy
 					{
-						name = flamethrust
-						modelName = MP_Nazari/FX/flamef1fx
-						transformName = OldFXTransform
-						localRotation = 90,0,0
-						offsetDirection = 0,1,0
-						emission = 0.0 0.0
-						emission = 0.05 0.49
-						emission = 1.0 1.8
-						speed = 0.0 1.4
-						speed = 1.0 1.8
-						energy = 0.0 0.5
-						energy = 1.0 1.2
-						offset = 0 1
-						offset = 1 1
-						grow = 0 -1
-						grow = 1 -0.5
-						fixedEmissions = false
-						grow
-						{
-							density = 0 -0.5
-							density = 1 0
-						}
-						size
-						{
-							density = 0 3
-							density = 1 1
-						}
-						offset
-						{
-							density = 0 5
-							density = 1 1
-						}
+						power = 0.0 0.5
+						power = 1.0 1.2
+					}
+					grow
+					{
+						power = 0 -1
+						power = 1 -0.5
+						density = 0 -0.5
+						density = 1 0
+					}
+					size
+					{
+						density = 0 1
+						density = 1 1
+					}
+					offset
+					{
+						power = 0 1
+						power = 1 1
+						density = 0 -0.5
+						density = 1 1
 					}
 				}
-				engage
+			}
+			engage
+			{
+				AUDIO
 				{
-					AUDIO
-					{
-						channel = Ship
-						clip = KWRocketry/Soundbank/sound_liq7
-						volume = 0.8
-						pitch = 1.0
-						loop = false
-					}
+					channel = Ship
+					clip = KWRocketry/Soundbank/sound_liq7
+					volume = 0.8
+					pitch = 1.0
+					loop = false
 				}
-				flameout
+			}
+			flameout
+			{
+				PREFAB_PARTICLE
 				{
-					PREFAB_PARTICLE
-					{
-						prefabName = fx_exhaustSparks_flameout_2
-						transformName = NozzleTransform
-						oneShot = true
-					}
-					AUDIO
-					{
-						channel = Ship
-						clip = sound_explosion_low
-						volume = 1.0
-						pitch = 2.0
-						loop = false
-					}
+					prefabName = fx_exhaustSparks_flameout_2
+					transformName = NozzleTransform
+					oneShot = true
+				}
+				AUDIO
+				{
+					channel = Ship
+					clip = sound_explosion_low
+					volume = 1.0
+					pitch = 2.0
+					loop = false
 				}
 			}
 		}
@@ -17091,7 +17107,7 @@ UrlConfig
 		MODEL
 		{
 			model = VenStockRevamp/Squad/Parts/Structural/Panel1x1
-			position = -1.10, -0.65, 0
+			position = -1.16, -0.53, 0
 			scale = 0.3, 0.3, 0.3
 			rotation = 0, 180, 90
 		}
@@ -60802,18 +60818,18 @@ UrlConfig
 					name = flamethrust
 					modelName = MP_Nazari/FX/nasa4engine
 					transformName = thrustTransform
-					emission = 0.0 0.2
-					emission = 0.05 0.13
-					emission = 1.0 0.5
+					emission = 0.0 0.0
+					emission = 0.05 0.35
+					emission = 1.0 1.2
 					speed = 0.0 0.2
 					speed = 1.0 0.3
-					energy = 0.0 1.0
+					energy = 0.0 1.2
 					energy = 1.0 1.5
-					offset = 0 1.5
-					offset = 1 1.0
+					offset = 0 1
+					offset = 1 1
 					grow = 0 4
 					grow = 1 5
-					size = 0 0.1
+					size = 0 0.3
 					size = 1 0.5
 					fixedEmissions = false
 				}
@@ -63553,6 +63569,18 @@ UrlConfig
 					distance = 0.0 1.0
 					distance = 100.0 1.0
 					distance = 110.0 1.0
+					energy
+					{
+						mach = 0 1
+						mach = 1 2
+						mach = 2 10
+					}
+					speed
+					{
+						mach = 0 1
+						mach = 1 0.5
+						mach = 2 0.1
+					}
 					emission
 					{
 						mach = 0.0 1.0
