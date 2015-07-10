@@ -164,19 +164,19 @@ toolbars
 			autoHide = False
 			drawBorder = False
 			useKSPSkin = False
-			buttonOrder = 
-			visibleButtons = AmbientLightAdjustment.adjustLevels,SmokeScreen.main
+			buttonOrder = __TOOLBAR_INTERNAL.configureVisibleButtons,AmbientLightAdjustment.adjustLevels,SmokeScreen.main,sirkut.IREditorButton,AGX.AGXBtn
+			visibleButtons = SmokeScreen.main,sirkut.IREditorButton,AGX.AGXBtn
 		}
 		toolbar_1190476479
 		{
-			x = 247
+			x = 343
 			y = -3
 			width = 250
 			height = 38
 			autoHide = False
 			drawBorder = False
 			useKSPSkin = False
-			buttonOrder = __TOOLBAR_INTERNAL.configureVisibleButtons,MechJeb2.Smart_A_S_S_,MechJeb2.Maneuver_Planner,MechJeb2.Rendezvous_Planner
+			buttonOrder = __TOOLBAR_INTERNAL.configureVisibleButtons,MechJeb2.Maneuver_Planner,MechJeb2.Rendezvous_Planner,MechJeb2.Smart_A_S_S_
 			visibleButtons = MechJeb2.Smart_A_S_S_,MechJeb2.Rendezvous_Planner,MechJeb2.Maneuver_Planner
 		}
 		toolbar_512637643
@@ -223,15 +223,39 @@ toolbars
 	{
 		toolbar_783039483
 		{
-			x = 300
-			y = 300
+			x = 1196
+			y = -3
 			width = 250
 			height = 38
 			autoHide = False
-			drawBorder = True
+			drawBorder = False
 			useKSPSkin = False
 			buttonOrder = 
-			visibleButtons = 
+			visibleButtons = Fusebox.FBToggle
+		}
+		toolbar_1550087102
+		{
+			x = 308
+			y = -3
+			width = 250
+			height = 38
+			autoHide = False
+			drawBorder = False
+			useKSPSkin = False
+			buttonOrder = __TOOLBAR_INTERNAL.configureVisibleButtons,MechJeb2.Maneuver_Planner,MechJeb2.Rendezvous_Planner,MechJeb2.Flight_Computer,MechJeb2.Smart_A_S_S_
+			visibleButtons = MechJeb2.Flight_Computer,MechJeb2.Maneuver_Planner,MechJeb2.Smart_A_S_S_,MechJeb2.Rendezvous_Planner
+		}
+		toolbar_899616873
+		{
+			x = 956
+			y = -3
+			width = 250
+			height = 38
+			autoHide = False
+			drawBorder = False
+			useKSPSkin = False
+			buttonOrder = __TOOLBAR_INTERNAL.configureVisibleButtons,QuickGoToTS.QuickGoToTS,QuickGoToVAB.QuickGoToVAB,QuickGoToSPH.QuickGoToSPH,QuickGoToSC.QuickGoToSC
+			visibleButtons = QuickGoToSC.QuickGoToSC,QuickGoToTS.QuickGoToTS,QuickGoToVAB.QuickGoToVAB,QuickGoToSPH.QuickGoToSPH
 		}
 	}
 }

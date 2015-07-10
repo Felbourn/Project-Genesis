@@ -14,9 +14,9 @@
     </rect>
     <rect name="controlWinPos">
         <xmin>692</xmin>
-        <xmax>992</xmax>
+        <xmax>993</xmax>
         <ymin>69</ymin>
-        <ymax>169</ymax>
+        <ymax>163</ymax>
     </rect>
     <bool name="useEC">1</bool>
     <bool name="allowFlipHack">0</bool>
