@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <config>
-    <bool name="showToolbar">0</bool>
+    <bool name="showToolbar">1</bool>
     <bool name="showAppLauncher">1</bool>
-    <int name="ResourceWindow.x">675</int>
-    <int name="ResourceWindow.y">425</int>
+    <int name="ResourceWindow.x">1277</int>
+    <int name="ResourceWindow.y">685</int>
     <bool name="showTotalMass">1</bool>
     <bool name="showDryMass">1</bool>
     <bool name="showCrewCapacity">1</bool>
     <bool name="showPartCount">1</bool>
-    <bool name="showTWR">0</bool>
+    <bool name="showTWR">1</bool>
     <int name="SettingsWindow.x">700</int>
     <int name="SettingsWindow.y">370</int>
 </config>

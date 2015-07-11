@@ -10,7 +10,7 @@ GAME
 	scene = 5
 	editor = None
 	flag = Squad/Flags/kerbin
-	launchID = 33
+	launchID = 39
 	PARAMETERS
 	{
 		preset = Normal
@@ -108,8 +108,8 @@ GAME
 			}
 			RecordsSpeed
 			{
-				reached = 35333.454618435
-				record = 2246.50248850722
+				completed = 38679.6397106733
+				record = 2500
 			}
 			RecordsDistance
 			{
@@ -460,16 +460,25 @@ GAME
 	{
 		name = AGextScenario
 		scene = 7
+		LastSave = 17
 	}
 	SCENARIO
 	{
 		name = AGextScenarioEditor
 		scene = 6
 	}
+	SCENARIO
+	{
+		name = DMScienceScenario
+		scene = 7, 5, 8, 6
+		Asteroid_Science
+		{
+		}
+	}
 	FLIGHTSTATE
 	{
 		version = 1.0.4
-		UT = 38207.219710749
+		UT = 50213.9540550345
 		activeVessel = 0
 		mapViewFiltering = -1026
 		VESSEL
@@ -1063,7 +1072,7 @@ GAME
 			idx = 0
 			CAREER_LOG
 			{
-				flight = 4
+				flight = 6
 				0 = Orbit,Kerbin
 				0 = ExitVessel,Kerbin
 				0 = Spawn
@@ -1074,10 +1083,14 @@ GAME
 				1 = Recover
 				2 = Recover
 				3 = Recover
+				4 = Flight,Kerbin
+				4 = Land,Kerbin
+				4 = Recover
+				5 = Recover
 			}
 			FLIGHT_LOG
 			{
-				flight = 4
+				flight = 6
 			}
 		}
 		KERBAL

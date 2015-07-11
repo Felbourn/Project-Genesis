@@ -47,19 +47,19 @@ toolbars
 			autoHide = False
 			drawBorder = False
 			useKSPSkin = False
-			buttonOrder = 
-			visibleButtons = AmbientLightAdjustment.adjustLevels,SmokeScreen.main
+			buttonOrder = __TOOLBAR_INTERNAL.configureVisibleButtons,AmbientLightAdjustment.adjustLevels,SmokeScreen.main,sirkut.IREditorButton,AGX.AGXBtn
+			visibleButtons = SmokeScreen.main,sirkut.IREditorButton,AGX.AGXBtn
 		}
 		toolbar_1190476479
 		{
-			x = 247
+			x = 343
 			y = -3
 			width = 250
 			height = 38
 			autoHide = False
 			drawBorder = False
 			useKSPSkin = False
-			buttonOrder = __TOOLBAR_INTERNAL.configureVisibleButtons,MechJeb2.Smart_A_S_S_,MechJeb2.Maneuver_Planner,MechJeb2.Rendezvous_Planner
+			buttonOrder = __TOOLBAR_INTERNAL.configureVisibleButtons,MechJeb2.Maneuver_Planner,MechJeb2.Rendezvous_Planner,MechJeb2.Smart_A_S_S_
 			visibleButtons = MechJeb2.Smart_A_S_S_,MechJeb2.Rendezvous_Planner,MechJeb2.Maneuver_Planner
 		}
 		toolbar_512637643
@@ -108,7 +108,7 @@ toolbars
 			drawBorder = False
 			useKSPSkin = False
 			buttonOrder = __TOOLBAR_INTERNAL.configureVisibleButtons,sirkut.IREditorButton,Fusebox.FBToggle,RCSBuildAid.mainButton
-			visibleButtons = Fusebox.FBToggle,RCSBuildAid.mainButton,sirkut.IREditorButton
+			visibleButtons = Fusebox.FBToggle,RCSBuildAid.mainButton,sirkut.IREditorButton,RO.ROButton
 		}
 	}
 	EDITOR
@@ -135,7 +135,7 @@ toolbars
 			drawBorder = False
 			useKSPSkin = False
 			buttonOrder = __TOOLBAR_INTERNAL.configureVisibleButtons,sirkut.IREditorButton,Fusebox.FBToggle,RCSBuildAid.mainButton
-			visibleButtons = Fusebox.FBToggle,RCSBuildAid.mainButton,sirkut.IREditorButton
+			visibleButtons = Fusebox.FBToggle,RCSBuildAid.mainButton,sirkut.IREditorButton,RO.ROButton
 		}
 	}
 	SPACECENTER
@@ -242,8 +242,8 @@ toolbars
 			autoHide = False
 			drawBorder = False
 			useKSPSkin = False
-			buttonOrder = __TOOLBAR_INTERNAL.configureVisibleButtons,MechJeb2.Maneuver_Planner,MechJeb2.Rendezvous_Planner,MechJeb2.Flight_Computer,MechJeb2.Smart_A_S_S_
-			visibleButtons = MechJeb2.Flight_Computer,MechJeb2.Maneuver_Planner,MechJeb2.Smart_A_S_S_,MechJeb2.Rendezvous_Planner
+			buttonOrder = __TOOLBAR_INTERNAL.configureVisibleButtons,MechJeb2.Maneuver_Planner,MechJeb2.Rendezvous_Planner,MechJeb2.Flight_Computer,KerbalAlarmClock.btnToolbarIcon,MechJeb2.Smart_A_S_S_
+			visibleButtons = MechJeb2.Flight_Computer,MechJeb2.Maneuver_Planner,MechJeb2.Smart_A_S_S_,MechJeb2.Rendezvous_Planner,KerbalAlarmClock.btnToolbarIcon
 		}
 		toolbar_899616873
 		{
