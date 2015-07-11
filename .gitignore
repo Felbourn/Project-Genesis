@@ -7,8 +7,9 @@ KSP_Data/*
 Ships/*
 saves/scenarios/*
 saves/training/*
-saves/Genesis/Ships/*/Auto-Saved Ship.craft
-saves/Genesis/Ships/*/Untitled Space Craft.craft
+saves/*/Ships/*/Auto-Saved Ship.craft
+saves/*/Untitled Space Craft.craft
+saves/*/AGExt*.cfg
 thumbs/*
 GameData/Squad/*
 GameData/PlanetShine/Plugins/PlanetShine.log
