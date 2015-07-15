@@ -10,7 +10,7 @@ GAME
 	scene = 5
 	editor = None
 	flag = Squad/Flags/kerbin
-	launchID = 40
+	launchID = 44
 	PARAMETERS
 	{
 		preset = Normal
@@ -460,7 +460,7 @@ GAME
 	{
 		name = AGextScenario
 		scene = 7
-		LastSave = 20
+		LastSave = 30
 	}
 	SCENARIO
 	{
@@ -615,7 +615,7 @@ GAME
 	FLIGHTSTATE
 	{
 		version = 1.0.4
-		UT = 50372.2340550091
+		UT = 50715.4940549547
 		activeVessel = 0
 		mapViewFiltering = -1026
 		VESSEL
@@ -1209,7 +1209,7 @@ GAME
 			idx = 0
 			CAREER_LOG
 			{
-				flight = 6
+				flight = 8
 				0 = Orbit,Kerbin
 				0 = ExitVessel,Kerbin
 				0 = Spawn
@@ -1224,10 +1224,12 @@ GAME
 				4 = Land,Kerbin
 				4 = Recover
 				5 = Recover
+				6 = Recover
+				7 = Recover
 			}
 			FLIGHT_LOG
 			{
-				flight = 6
+				flight = 8
 			}
 		}
 		KERBAL

@@ -100,15 +100,27 @@ toolbars
 		}
 		toolbar_86412879
 		{
-			x = 608
-			y = 37
+			x = 562
+			y = 36
 			width = 250
 			height = 38
 			autoHide = False
 			drawBorder = False
 			useKSPSkin = False
 			buttonOrder = __TOOLBAR_INTERNAL.configureVisibleButtons,sirkut.IREditorButton,Fusebox.FBToggle,RCSBuildAid.mainButton
-			visibleButtons = Fusebox.FBToggle,RCSBuildAid.mainButton,sirkut.IREditorButton,RO.ROButton
+			visibleButtons = RCSBuildAid.mainButton,sirkut.IREditorButton,AGX.AGXBtn
+		}
+		toolbar_2059823047
+		{
+			x = 1292
+			y = 27
+			width = 250
+			height = 38
+			autoHide = False
+			drawBorder = False
+			useKSPSkin = False
+			buttonOrder = 
+			visibleButtons = Fusebox.FBToggle,RO.ROButton
 		}
 	}
 	EDITOR
@@ -127,15 +139,27 @@ toolbars
 		}
 		toolbar_86412879
 		{
-			x = 608
-			y = 37
+			x = 562
+			y = 36
 			width = 250
 			height = 38
 			autoHide = False
 			drawBorder = False
 			useKSPSkin = False
 			buttonOrder = __TOOLBAR_INTERNAL.configureVisibleButtons,sirkut.IREditorButton,Fusebox.FBToggle,RCSBuildAid.mainButton
-			visibleButtons = Fusebox.FBToggle,RCSBuildAid.mainButton,sirkut.IREditorButton,RO.ROButton
+			visibleButtons = RCSBuildAid.mainButton,sirkut.IREditorButton,AGX.AGXBtn
+		}
+		toolbar_2059823047
+		{
+			x = 1292
+			y = 27
+			width = 250
+			height = 38
+			autoHide = False
+			drawBorder = False
+			useKSPSkin = False
+			buttonOrder = 
+			visibleButtons = Fusebox.FBToggle,RO.ROButton
 		}
 	}
 	SPACECENTER
