@@ -1,4 +1,4 @@
-patchedNodeCount = 26640
+patchedNodeCount = 29927
 catEatenCount = 0
 UrlConfig
 {
@@ -6355,7 +6355,7 @@ UrlConfig
 		ACTIONS
 		{
 			action = reduce maxTemp
-			action = remove ModuleRCS
+			action = remove old RCS modules
 			action = clear mass
 		}
 		MODULE
@@ -6674,7 +6674,7 @@ UrlConfig
 		ACTIONS
 		{
 			action = reduce maxTemp
-			action = remove ModuleRCS
+			action = remove old RCS modules
 			action = clear mass
 		}
 		MODULE
@@ -6989,7 +6989,7 @@ UrlConfig
 		ACTIONS
 		{
 			action = reduce maxTemp
-			action = remove ModuleRCS
+			action = remove old RCS modules
 			action = clear mass
 		}
 		MODULE
@@ -9798,10 +9798,6 @@ UrlConfig
 		{
 			name = ModuleTweakableSAS
 		}
-		INTERNAL
-		{
-			name = Placeholder
-		}
 	}
 }
 UrlConfig
@@ -9903,10 +9899,6 @@ UrlConfig
 		{
 			name = ModuleTweakableSAS
 		}
-		INTERNAL
-		{
-			name = Placeholder
-		}
 	}
 }
 UrlConfig
@@ -10006,10 +9998,6 @@ UrlConfig
 		MODULE
 		{
 			name = ModuleTweakableSAS
-		}
-		INTERNAL
-		{
-			name = Placeholder
 		}
 	}
 }
@@ -10224,10 +10212,6 @@ UrlConfig
 		{
 			name = ModuleTweakableSAS
 		}
-		INTERNAL
-		{
-			name = Placeholder
-		}
 	}
 }
 UrlConfig
@@ -10327,10 +10311,6 @@ UrlConfig
 		MODULE
 		{
 			name = ModuleTweakableSAS
-		}
-		INTERNAL
-		{
-			name = Placeholder
 		}
 	}
 }
@@ -10544,10 +10524,6 @@ UrlConfig
 		{
 			name = ModuleTweakableSAS
 		}
-		INTERNAL
-		{
-			name = Placeholder
-		}
 	}
 }
 UrlConfig
@@ -10647,10 +10623,6 @@ UrlConfig
 		MODULE
 		{
 			name = ModuleTweakableSAS
-		}
-		INTERNAL
-		{
-			name = Placeholder
 		}
 	}
 }
@@ -10753,10 +10725,6 @@ UrlConfig
 		MODULE
 		{
 			name = ModuleTweakableSAS
-		}
-		INTERNAL
-		{
-			name = Placeholder
 		}
 	}
 }
@@ -14435,7 +14403,7 @@ UrlConfig
 		ACTIONS
 		{
 			action = reduce maxTemp
-			action = remove ModuleRCS
+			action = remove old RCS modules
 			action = clear mass
 		}
 		MODULE
@@ -14535,7 +14503,7 @@ UrlConfig
 		ACTIONS
 		{
 			action = reduce maxTemp
-			action = remove ModuleRCS
+			action = remove old RCS modules
 			action = clear mass
 		}
 		MODULE
@@ -14632,7 +14600,7 @@ UrlConfig
 		ACTIONS
 		{
 			action = reduce maxTemp
-			action = remove ModuleRCS
+			action = remove old RCS modules
 			action = clear mass
 		}
 		MODULE
@@ -18702,10 +18670,10 @@ UrlConfig
 		{
 			action = removing fuel resources
 			action = remove ModuleReactionWheel
-			action = add command, SAS, SPU, and MJ
 			action = clear mass
 			action = add mass from CPU battery
 			action = add mass from cylinder volume
+			action = add command, SAS, SPU, and MJ
 		}
 		MODULE
 		{
@@ -20484,7 +20452,7 @@ UrlConfig
 		ACTIONS
 		{
 			action = reduce maxTemp
-			action = remove ModuleRCS
+			action = remove old RCS modules
 			action = clear mass
 		}
 		MODULE
@@ -20587,7 +20555,7 @@ UrlConfig
 		ACTIONS
 		{
 			action = reduce maxTemp
-			action = remove ModuleRCS
+			action = remove old RCS modules
 			action = clear mass
 		}
 		MODULE
@@ -20902,7 +20870,7 @@ UrlConfig
 		ACTIONS
 		{
 			action = reduce maxTemp
-			action = remove ModuleRCS
+			action = remove old RCS modules
 			action = clear mass
 		}
 		MODULE
@@ -34936,11 +34904,11 @@ UrlConfig
 		cost = 3500
 		category = Pods
 		subcategory = 0
-		title = Stage Instrument Unit FIX ME
+		title = Stage Instrument Unit
 		manufacturer = FASA
 		description = The Instrument Unit provides command and control for 3.75m rockets and the final stages of the Saturn series.
 		attachRules = 1,0,1,1,0
-		mass = 0.0542623852123404
+		mass = 0.115621616727766
 		dragModelType = default
 		maximum_drag = 0.2
 		minimum_drag = 0.2
@@ -34951,7 +34919,7 @@ UrlConfig
 		breakingForce = 200
 		breakingTorque = 200
 		vesselType = Probe
-		Can_dia = 2.5
+		Can_dia = 3.75
 		Can_hgt = 0.25
 		Can_density = 0.04
 		commandWatts = 25
@@ -35000,7 +34968,7 @@ UrlConfig
 		{
 			name = TweakScale
 			type = stack
-			defaultScale = 2.5
+			defaultScale = 3.75
 		}
 		MODULE
 		{
@@ -35018,10 +34986,10 @@ UrlConfig
 		{
 			action = removing fuel resources
 			action = remove ModuleReactionWheel
-			action = add command, SAS, SPU, and MJ
 			action = clear mass
 			action = add mass from CPU battery
 			action = add mass from cylinder volume
+			action = add command, SAS, SPU, and MJ
 		}
 		MODULE
 		{
@@ -36045,10 +36013,6 @@ UrlConfig
 			action = add mass from cylinder volume
 			action = add mass from truncated cone volume
 		}
-		INTERNAL
-		{
-			name = Placeholder
-		}
 	}
 }
 UrlConfig
@@ -36072,6 +36036,7 @@ UrlConfig
 		SolarMass = 0.03
 		ISAMass = 0.04
 		TrussMass = 0.28
+		RadiatorMass = 0.35
 		FairingMass = 0.47
 		PanelMass = 1.35
 		TorqueMass = 2.00
@@ -36086,12 +36051,14 @@ UrlConfig
 		WattHoursPerM3 = 300000
 		WattsPerTorque = 500
 		KSPBattery = 0.1
-		FuelMassPerLiter = 1.1
-		SolidMassPerLiter = 2.1787
+		FuelMassPerLiter = 0.8707
+		SolidMassPerLiter = 2.0805
 		CylinderTankUtil = 0.87
 		SphereTankUtil = 0.92
 		PillTankUtil = 0.92
 		SolidFuelUtil = 0.46
+		SolidTWR = 4
+		RCS_TWR = 15
 		LowerTWR_12 = 21.1
 		LowerTWR_18 = 23.2
 		LowerTWR_25 = 25.5
@@ -36103,15 +36070,29 @@ UrlConfig
 		UpperTWR_18 = 25.5
 		UpperTWR_25 = 28.1
 		UpperTWR_37 = 30.9
-		SolidTWR = 4
+		NTRIspSL = 0.1
+		UpperIspSL = 0.25
+		RCSIspSL = 0.35
+		SolidIspSL = 0.7
+		HypergolicIspSL = 0.8
+		LowerIspSL = 0.9
 		BatteryTemp = 1000
 		LqdOxygen2Kerosene = 2.72
 		LqdOxygen2LqdHydrogen = 6.2
 		NTO2UDMH = 2.61
+		isp_RCS = 150
 		isp_solid_fuel = 182
 		isp_kerolox = 231, 232, 233, 234, 235, 236,   237, 238, 239, 240, 241, 242
 		isp_hypergolic = 266, 267, 268, 269, 270, 271,   272, 273, 274, 275, 276, 277
 		isp_hydralox = 300, 301, 302, 303, 304, 305,   306, 307, 308, 309, 310, 311
+		omni_weak = 1000000
+		omni_KSO_gnd = 4000000
+		dish_KSO_link = 8000000, 15.00
+		dish_Mun = 16000000, 10.00
+		dish_Molniya = 250000000,  5.00
+		dish_KerbinL4 = 10000000000,  1.00
+		dish_Duna = 65000000000,  0.10
+		dish_Jool = 575000000000,  0.01
 		TonsPerWatt = 7E-06
 		isp_lower_0635_kerolox = 231
 		isp_lower_1250_kerolox =  232
@@ -36173,11 +36154,10 @@ UrlConfig
 		node_stack_top = 0,7.75186,0,      0,1,0,   2
 		node_attach = 1.25,0,0,  1,0,0,  2
 		attachRules = 1,1,1,1,0,0,0
-		CrewCapacity = 0
-		TechRequired = finished
+		TechRequired = inProgress
 		entryCost = 94760
 		cost = 165268
-		mass = 81.7393321078852
+		mass = 64.7003967875779
 		dragModelType = default
 		maximum_drag = 0.2
 		minimum_drag = 0.3
@@ -36188,11 +36168,12 @@ UrlConfig
 		maxTemp = 2000
 		fuelCrossFeed = True
 		bulkheadProfiles = size3, srf
-		solid_fuel_engine = 1
 		MFT_dia = 2.5
 		MFT_hgt = 17.4
 		MFT_util = 0.87
+		solid_fuel_engine = 5
 		isp_v = 182
+		isp_sl = 127.4
 		MODEL
 		{
 			model = CMES/Propulsion/NOVA-CHAKA-TANK-FOAM2/model
@@ -36261,12 +36242,6 @@ UrlConfig
 			type = stack
 			defaultScale = 2.5
 		}
-		RESOURCE
-		{
-			name = HTPB
-			amount = 6
-			maxAmount = 6
-		}
 		MODULE
 		{
 			name = ModuleEnginesRF
@@ -36276,7 +36251,7 @@ UrlConfig
 			allowShutdown = False
 			ignitionThreshold = 0.4
 			minThrust = 0
-			maxThrust = 0.03924
+			maxThrust = 5
 			heatProduction = 2200
 			fxOffset = 0, 0, 0.02
 			EngineType = SolidBooster
@@ -36290,7 +36265,7 @@ UrlConfig
 			}
 			atmosphereCurve
 			{
-				key = 0 182
+				key = 0,182
 				key = 1,151
 				key = 6,0.001
 			}
@@ -36354,15 +36329,20 @@ UrlConfig
 			jitterMultiplier = 10.5
 			multiplierOnIva = 0.5
 		}
+		RESOURCE
+		{
+			name = HTPB
+			amount = 6
+			maxAmount = 6
+		}
 		ACTIONS
 		{
 			action = removing fuel resources
-			action = set solid thrust isp SL
-			action = set isp curve
 			action = add empty cylinder ModuleFuelTanks
 			action = add cylinder ModuleFuelTanks
 			action = finalize fuel tank volume
-			action = ensure ModuleEnginesRF & set thrust
+			action = ensure ModuleEnginesRF
+			action = override solid rocket maxThrust
 			action = define ModuleEngineConfigs for solid thrust curves
 			action = set RF plume effect name
 			action = clear mass
@@ -36383,7 +36363,7 @@ UrlConfig
 			{
 				name = Linear Thrust
 				minThrust = 0
-				maxThrust = 0.03924
+				maxThrust = 5
 				chamberNominalTemp = 1800
 				maxEngineTemp = 2050
 				curveResource = HTPB
@@ -36405,7 +36385,7 @@ UrlConfig
 				atmosphereCurve
 				{
 					key = 0 182
-					key = 1 151
+					key = 1 127.4
 					key = 3 0.001
 				}
 			}
@@ -36413,7 +36393,7 @@ UrlConfig
 			{
 				name = MaxQ Reduced
 				minThrust = 0
-				maxThrust = 0.03924
+				maxThrust = 5
 				chamberNominalTemp = 1800
 				maxEngineTemp = 2050
 				curveResource = HTPB
@@ -36438,7 +36418,7 @@ UrlConfig
 				atmosphereCurve
 				{
 					key = 0 182
-					key = 1 151
+					key = 1 127.4
 					key = 3 0.001
 				}
 			}
@@ -36446,7 +36426,7 @@ UrlConfig
 			{
 				name = Delayed Fuse
 				minThrust = 0
-				maxThrust = 0.03924
+				maxThrust = 5
 				chamberNominalTemp = 1800
 				maxEngineTemp = 2050
 				curveResource = HTPB
@@ -36470,7 +36450,7 @@ UrlConfig
 				atmosphereCurve
 				{
 					key = 0 182
-					key = 1 151
+					key = 1 127.4
 					key = 3 0.001
 				}
 			}
@@ -36601,10 +36581,6 @@ UrlConfig
 				}
 			}
 		}
-		INTERNAL
-		{
-			name = Placeholder
-		}
 	}
 }
 UrlConfig
@@ -36632,7 +36608,7 @@ UrlConfig
 		entryCost = 25920
 		cost = 51840
 		attachRules = 1,1,1,1,0
-		mass = 36.9940942729652
+		mass = 29.2825071667916
 		dragModelType = default
 		maximum_drag = 0.2
 		minimum_drag = 0.3
@@ -36733,7 +36709,7 @@ UrlConfig
 		entryCost = 25920
 		cost = 51840
 		attachRules = 1,1,1,1,0
-		mass = 63.4184473250832
+		mass = 50.1985837144999
 		dragModelType = default
 		maximum_drag = 0.2
 		minimum_drag = 0.3
@@ -37140,10 +37116,6 @@ UrlConfig
 		{
 			action = clear mass
 			action = add mass from box volume
-		}
-		INTERNAL
-		{
-			name = Placeholder
 		}
 	}
 }
@@ -39741,7 +39713,7 @@ UrlConfig
 		{
 			action = reduce maxTemp
 			action = removing fuel resources
-			action = remove ModuleRCS
+			action = remove old RCS modules
 			action = clear mass
 		}
 		MODULE
@@ -44990,7 +44962,7 @@ UrlConfig
 		node_stack_top = 0.0, 2.36, 0.0, 0.0, 1.0, 0.0, 2
 		node_stack_bottom = 0.0, -2.36, 0.0, 0.0, -1.0, 0.0, 2
 		node_attach = 1.25, 0.0, 0.0, 1.0, 0.0, 0.0, 1
-		TechRequired = inProgress
+		TechRequired = finished
 		cost = 6000
 		category = 0
 		subcategory = 0
@@ -44998,7 +44970,7 @@ UrlConfig
 		manufacturer = Kerbodyne
 		description = Commonly called "The drum of the 2.5m tanks" it's based off the drum where we stored our water. It isn't half bad as a fuel tank for Kerbal X, right?
 		attachRules = 1,1,1,1,0
-		mass = 21.6092487181765
+		mass = 17.1047025990148
 		dragModelType = default
 		maximum_drag = 0.2
 		minimum_drag = 0.3
@@ -45103,7 +45075,7 @@ UrlConfig
 		node_stack_top = 0.0, 0.92, 0.0, 0.0, 1.0, 0.0, 2
 		node_stack_bottom = 0.0, -0.92, 0.0, 0.0, -1.0, 0.0, 2
 		node_attach = 1.25, 0.0, 0.0, 1.0, 0.0, 0.0, 1
-		TechRequired = inProgress
+		TechRequired = finished
 		entryCost = 4200
 		cost = 3200
 		category = Propulsion
@@ -45112,7 +45084,7 @@ UrlConfig
 		manufacturer = Kerbomax
 		description = Initially set as the Mk1-2's Service Tank but a little repaint would make it be duct taped to anywhere you like.
 		attachRules = 1,1,1,1,0
-		mass = 8.92555925315988
+		mass = 7.06498585611482
 		dragModelType = default
 		maximum_drag = 0.2
 		minimum_drag = 0.3
@@ -46953,7 +46925,7 @@ UrlConfig
 		manufacturer = KW Rocketry
 		description = A small, efficient upper stage motor for probe and satellite launch vehicles. Plume configured by RealPlume.
 		attachRules = 1,0,1,1,0
-		mass = 9999
+		mass = 0.359776938298255
 		dragModelType = default
 		maximum_drag = 0.2
 		minimum_drag = 0.2
@@ -46968,10 +46940,6 @@ UrlConfig
 		massTypeEngine = 1
 		TWR_type = 25.5
 		isp_v =  308
-		engine_thrust = 250
-		mass = 250
-		test1 = 0
-		test2 = 0
 		MODEL
 		{
 			model = KWRocketry/Parts/Engines/1mVestaVR1/KW_1mEngine_VestaVR1_M
@@ -46991,9 +46959,8 @@ UrlConfig
 			exhaustDamage = True
 			ignitionThreshold = 0.1
 			minThrust = 0
-			maxThrust = 250
+			maxThrust = 90
 			heatProduction = 250
-			isp_sl = 77
 			powerEffectName = Hydrolox-Upper
 			PROPELLANT
 			{
@@ -47009,7 +46976,7 @@ UrlConfig
 			atmosphereCurve
 			{
 				key = 0  308
-				key = 1 77
+				key = 1 260
 				key = 3 0.001
 			}
 		}
@@ -47114,20 +47081,23 @@ UrlConfig
 			type = stack
 			defaultScale = 1.875
 		}
+		VARS
+		{
+			engine_thrust = 250
+		}
 		PLUME
 		{
 			name = Hydrolox-Upper
 			transformName = NozzleTransform
 			localRotation = 0,0,0
-			localPosition = 0,0,5
-			fixedScale = 1.4
+			localPosition = 0,0,0.5
+			fixedScale = 1.3
 			energy = 1
 			speed = 1
 		}
 		ACTIONS
 		{
 			action = removing fuel resources
-			action = set new engine thrust
 			action = set upper stage isp SL
 			action = set Hydrolox stats
 			action = set isp curve
@@ -47154,8 +47124,8 @@ UrlConfig
 				{
 					transformName = NozzleTransform
 					localRotation = 0,0,0
-					localPosition = 0,0,5
-					fixedScale = 1.4
+					localPosition = 0,0,0.5
+					fixedScale = 1.3
 					energy = 1
 					speed = 1
 					name = plume
@@ -47231,8 +47201,8 @@ UrlConfig
 				{
 					transformName = NozzleTransform
 					localRotation = 0,0,0
-					localPosition = 0,0,5
-					fixedScale = 1.4
+					localPosition = 0,0,0.5
+					fixedScale = 1.3
 					name = flare
 					modelName = RealPlume/MP_Nazari_FX/flamessme
 					emission = 0.0 0
@@ -53342,7 +53312,7 @@ UrlConfig
 		ACTIONS
 		{
 			action = reduce maxTemp
-			action = remove ModuleRCS
+			action = remove old RCS modules
 			action = clear mass
 		}
 		MODULE
@@ -53443,7 +53413,7 @@ UrlConfig
 		ACTIONS
 		{
 			action = reduce maxTemp
-			action = remove ModuleRCS
+			action = remove old RCS modules
 			action = clear mass
 		}
 		MODULE
@@ -53544,7 +53514,7 @@ UrlConfig
 		ACTIONS
 		{
 			action = reduce maxTemp
-			action = remove ModuleRCS
+			action = remove old RCS modules
 			action = clear mass
 		}
 		MODULE
@@ -77663,7 +77633,7 @@ UrlConfig
 		}
 		ACTIONS
 		{
-			action = remove ModuleRCS
+			action = remove old RCS modules
 			action = clear mass
 		}
 	}
@@ -77686,7 +77656,7 @@ UrlConfig
 		cost = 450
 		category = Control
 		subcategory = 0
-		title = RX-15 Bidirectional RCS Thruster Block FIX_MASS
+		title = RX-15 Bidirectional RCS Thruster Block
 		manufacturer = STEADLER Engineering Corps
 		description = STEADLER's RX series of blocks sacrifice atmoshperic performance for high efficiencies in space. The -15 model comes with two nozzles angled at 45 degrees.
 		attachRules = 0,1,0,0,0
@@ -77697,6 +77667,10 @@ UrlConfig
 		angularDrag = 2
 		crashTolerance = 15
 		maxTemp = 1700
+		massTypeRCS = 1
+		RCS_directions = 2
+		RCS_power = 0.5
+		isp_sl = 52.5
 		MODEL
 		{
 			model = NearFutureSpacecraft/Parts/RCS/rcsblock-orbital/rcsblock-orbital-2way-45-1
@@ -77752,9 +77726,20 @@ UrlConfig
 		}
 		MODULE
 		{
+			name = ModuleTweakableRCS
+		}
+		ACTIONS
+		{
+			action = remove old RCS modules
+			action = set RCS stats
+			action = add ModuleRCSFX
+			action = clear mass
+			action = add mass from RCS
+		}
+		MODULE
+		{
 			name = ModuleRCSFX
 			thrusterPower = 0.5
-			thrusterTransformName = thrustVector
 			PROPELLANT
 			{
 				name = Hydrazine
@@ -77763,19 +77748,9 @@ UrlConfig
 			atmosphereCurve
 			{
 				key = 0 150
-				key = 1 50
+				key = 1 52.5
 				key = 3 0.001
 			}
-		}
-		MODULE
-		{
-			name = ModuleTweakableRCS
-		}
-		ACTIONS
-		{
-			action = remove ModuleRCS
-			action = set ModuleRCSFX stats
-			action = clear mass
 		}
 	}
 }
@@ -77867,7 +77842,7 @@ UrlConfig
 		}
 		ACTIONS
 		{
-			action = remove ModuleRCS
+			action = remove old RCS modules
 			action = clear mass
 		}
 	}
@@ -77890,7 +77865,7 @@ UrlConfig
 		cost = 650
 		category = Control
 		subcategory = 0
-		title = RX-1 Linear RCS Thruster FIX_MASS
+		title = RX-1 Linear RCS Thruster
 		manufacturer = STEADLER Engineering Corps
 		description = A single RX-series nozzle allows translation in a single direction. Place several of them, well, and the world is your unidentified mollusk.
 		attachRules = 0,1,0,0,0
@@ -77901,6 +77876,10 @@ UrlConfig
 		angularDrag = 2
 		crashTolerance = 15
 		maxTemp = 1700
+		massTypeRCS = 1
+		RCS_directions = 1
+		RCS_power = 0.5
+		isp_sl = 52.5
 		MODEL
 		{
 			model = NearFutureSpacecraft/Parts/RCS/rcsblock-orbital/rcsblock-orbital-linear-1
@@ -77956,9 +77935,20 @@ UrlConfig
 		}
 		MODULE
 		{
+			name = ModuleTweakableRCS
+		}
+		ACTIONS
+		{
+			action = remove old RCS modules
+			action = set RCS stats
+			action = add ModuleRCSFX
+			action = clear mass
+			action = add mass from RCS
+		}
+		MODULE
+		{
 			name = ModuleRCSFX
 			thrusterPower = 0.5
-			thrusterTransformName = thrustVector
 			PROPELLANT
 			{
 				name = Hydrazine
@@ -77967,19 +77957,9 @@ UrlConfig
 			atmosphereCurve
 			{
 				key = 0 150
-				key = 1 50
+				key = 1 52.5
 				key = 3 0.001
 			}
-		}
-		MODULE
-		{
-			name = ModuleTweakableRCS
-		}
-		ACTIONS
-		{
-			action = remove ModuleRCS
-			action = set ModuleRCSFX stats
-			action = clear mass
 		}
 	}
 }
@@ -84241,7 +84221,7 @@ UrlConfig
 		}
 		ACTIONS
 		{
-			action = remove ModuleRCS
+			action = remove old RCS modules
 			action = clear mass
 		}
 	}
@@ -90707,7 +90687,7 @@ UrlConfig
 		}
 		ACTIONS
 		{
-			action = remove ModuleRCS
+			action = remove old RCS modules
 			action = clear mass
 		}
 	}
@@ -90843,7 +90823,7 @@ UrlConfig
 		}
 		ACTIONS
 		{
-			action = remove ModuleRCS
+			action = remove old RCS modules
 			action = clear mass
 		}
 	}
@@ -90937,7 +90917,7 @@ UrlConfig
 		}
 		ACTIONS
 		{
-			action = remove ModuleRCS
+			action = remove old RCS modules
 			action = clear mass
 		}
 	}
@@ -101880,7 +101860,7 @@ UrlConfig
 		ACTIONS
 		{
 			action = removing fuel resources
-			action = remove ModuleRCS
+			action = remove old RCS modules
 			action = remove ModuleReactionWheel
 			action = clear mass
 		}
@@ -103163,10 +103143,10 @@ UrlConfig
 		ACTIONS
 		{
 			action = removing fuel resources
-			action = add command, SAS, SPU, and MJ
 			action = clear mass
 			action = add mass from box volume
 			action = add mass from CPU battery
+			action = add command, SAS, SPU, and MJ
 		}
 		MODULE
 		{
@@ -103216,10 +103196,6 @@ UrlConfig
 				name = ElectricCharge
 				rate = 0.001
 			}
-		}
-		INTERNAL
-		{
-			name = Placeholder
 		}
 	}
 }
@@ -103311,10 +103287,10 @@ UrlConfig
 		{
 			action = removing fuel resources
 			action = remove ModuleReactionWheel
-			action = add command, SAS, SPU, and MJ
 			action = clear mass
 			action = add mass from CPU battery
 			action = add mass from cylinder volume
+			action = add command, SAS, SPU, and MJ
 		}
 		MODULE
 		{
@@ -103364,10 +103340,6 @@ UrlConfig
 				name = ElectricCharge
 				rate = 0.001
 			}
-		}
-		INTERNAL
-		{
-			name = Placeholder
 		}
 	}
 }
@@ -103459,10 +103431,10 @@ UrlConfig
 		{
 			action = removing fuel resources
 			action = remove ModuleReactionWheel
-			action = add command, SAS, SPU, and MJ
 			action = clear mass
 			action = add mass from CPU battery
 			action = add mass from cylinder volume
+			action = add command, SAS, SPU, and MJ
 		}
 		MODULE
 		{
@@ -103512,10 +103484,6 @@ UrlConfig
 				name = ElectricCharge
 				rate = 0.001
 			}
-		}
-		INTERNAL
-		{
-			name = Placeholder
 		}
 	}
 }
@@ -103606,10 +103574,10 @@ UrlConfig
 		ACTIONS
 		{
 			action = removing fuel resources
-			action = add command, SAS, SPU, and MJ
 			action = clear mass
 			action = add mass from CPU battery
 			action = add mass from cylinder volume
+			action = add command, SAS, SPU, and MJ
 		}
 		MODULE
 		{
@@ -103659,10 +103627,6 @@ UrlConfig
 				name = ElectricCharge
 				rate = 0.001
 			}
-		}
-		INTERNAL
-		{
-			name = Placeholder
 		}
 	}
 }
@@ -103750,10 +103714,10 @@ UrlConfig
 		ACTIONS
 		{
 			action = removing fuel resources
-			action = add command, SAS, SPU, and MJ
 			action = clear mass
 			action = add mass from box volume
 			action = add mass from CPU battery
+			action = add command, SAS, SPU, and MJ
 		}
 		MODULE
 		{
@@ -103895,10 +103859,10 @@ UrlConfig
 		{
 			action = removing fuel resources
 			action = remove ModuleReactionWheel
-			action = add command, SAS, SPU, and MJ
 			action = clear mass
 			action = add mass from CPU battery
 			action = add mass from cylinder volume
+			action = add command, SAS, SPU, and MJ
 		}
 		MODULE
 		{
@@ -103948,10 +103912,6 @@ UrlConfig
 				name = ElectricCharge
 				rate = 0.001
 			}
-		}
-		INTERNAL
-		{
-			name = Placeholder
 		}
 	}
 }
@@ -104042,10 +104002,10 @@ UrlConfig
 		ACTIONS
 		{
 			action = removing fuel resources
-			action = add command, SAS, SPU, and MJ
 			action = clear mass
 			action = add mass from sphere volume
 			action = add mass from CPU battery
+			action = add command, SAS, SPU, and MJ
 		}
 		MODULE
 		{
@@ -104091,10 +104051,6 @@ UrlConfig
 				name = ElectricCharge
 				rate = 0.001
 			}
-		}
-		INTERNAL
-		{
-			name = Placeholder
 		}
 	}
 }
@@ -106634,7 +106590,7 @@ UrlConfig
 		manufacturer = Rockomax Conglomerate
 		description = The 48-7S may be small, but it packs quite a punch for its size. This little engine is a testament to how larger does not always means more advanced, at least according to Rockomax's marketing department. The box it comes in is pretty cool, in any case. Plume configured by RealPlume.
 		attachRules = 1,0,1,0,0
-		mass = 9999
+		mass = 0.0790888959190129
 		skinInternalConductionMult = 4.0
 		emissiveConstant = 0.8
 		dragModelType = default
@@ -106650,10 +106606,6 @@ UrlConfig
 		massTypeEngine = 1
 		TWR_type = 23.2
 		isp_v =  273
-		engine_thrust = 18
-		mass = 18
-		test1 = 0
-		test2 = 0
 		EFFECTS
 		{
 			running
@@ -106702,8 +106654,8 @@ UrlConfig
 				{
 					transformName = thrustTransform
 					localRotation = 0,0,0
-					localPosition = 0,0,-0.5
-					fixedScale = 3
+					localPosition = 0,0,-0.7
+					fixedScale = 2
 					energy = 1
 					speed = 1
 					name = plume
@@ -106804,7 +106756,6 @@ UrlConfig
 			heatProduction = 150
 			fxOffset = 0, 0, 0.125
 			EngineType = LiquidFuel
-			isp_sl = 218.4
 			powerEffectName = Hypergolic-OMS-White
 			PROPELLANT
 			{
@@ -106820,7 +106771,7 @@ UrlConfig
 			atmosphereCurve
 			{
 				key = 0  273
-				key = 1 218.4
+				key = 1 270
 				key = 7 0.001
 			}
 		}
@@ -106961,13 +106912,17 @@ UrlConfig
 			jitterMultiplier = 10.5
 			multiplierOnIva = 0.5
 		}
+		VARS
+		{
+			engine_thrust = 18
+		}
 		PLUME
 		{
 			name = Hypergolic-OMS-White
 			transformName = thrustTransform
 			localRotation = 0,0,0
-			localPosition = 0,0,-0.5
-			fixedScale = 3
+			localPosition = 0,0,-0.7
+			fixedScale = 2
 			energy = 1
 			speed = 1
 		}
@@ -106981,7 +106936,6 @@ UrlConfig
 		}
 		ACTIONS
 		{
-			action = set new engine thrust
 			action = set hypergolic isp SL
 			action = set Hypergolic stats
 			action = set isp curve
@@ -107685,23 +107639,17 @@ UrlConfig
 		massTypeEngine = 1
 		TWR_type = 23.2
 		isp_v =  238
-		engine_thrust = 60
-		mass = 60
-		test1 = 0
-		test2 = 0
 		MODULE
 		{
-			name = ModuleEnginesFX
+			name = ModuleEngines
 			thrustVectorTransformName = thrustTransform
 			exhaustDamage = True
 			ignitionThreshold = 0.1
 			minThrust = 0
 			maxThrust = 60
-			heatProduction = 80
+			heatProduction = 180
 			fxOffset = 0, 0, 0.21
 			EngineType = LiquidFuel
-			isp_sl = 59.5
-			powerEffectName = Kerolox-Upper
 			PROPELLANT
 			{
 				name = Kerosene
@@ -107716,7 +107664,7 @@ UrlConfig
 			atmosphereCurve
 			{
 				key = 0  238
-				key = 1 59.5
+				key = 1 85
 				key = 3 0.001
 			}
 		}
@@ -107863,13 +107811,17 @@ UrlConfig
 			jitterMultiplier = 10.5
 			multiplierOnIva = 0.5
 		}
+		VARS
+		{
+			engine_thrust = 60
+		}
 		PLUME
 		{
 			name = Kerolox-Upper
 			transformName = thrustTransform
 			localRotation = 0,0,0
-			localPosition = 0,0,4
-			fixedScale = 1
+			localPosition = 0,0,0.25
+			fixedScale = 0.3
 			energy = 1
 			speed = 1
 		}
@@ -107883,11 +107835,9 @@ UrlConfig
 		}
 		ACTIONS
 		{
-			action = set new engine thrust
 			action = set upper stage isp SL
 			action = set Kerolox fuels
 			action = set isp curve
-			action = set FX plume effect name
 			action = clear mass
 			action = add mass from maxThrust
 		}
@@ -107899,8 +107849,8 @@ UrlConfig
 				{
 					transformName = thrustTransform
 					localRotation = 0,0,0
-					localPosition = 0,0,4
-					fixedScale = 1
+					localPosition = 0,0,0.25
+					fixedScale = 0.3
 					energy = 1
 					speed = 1
 					name = plume
@@ -108012,8 +107962,8 @@ UrlConfig
 				{
 					transformName = thrustTransform
 					localRotation = 0,0,0
-					localPosition = 0,0,4
-					fixedScale = 1
+					localPosition = 0,0,0.25
+					fixedScale = 0.3
 					name = flare
 					modelName = RealPlume/MP_Nazari_FX/KWbooster
 					emission = 0.0 0
@@ -108033,8 +107983,8 @@ UrlConfig
 				{
 					transformName = thrustTransform
 					localRotation = 0,0,0
-					localPosition = 0,0,4
-					fixedScale = 1
+					localPosition = 0,0,0.25
+					fixedScale = 0.3
 					name = smoke
 					modelName = RealPlume/MP_Nazari_FX/smokebooster2
 					energy = 0.0 5
@@ -108923,23 +108873,17 @@ UrlConfig
 		massTypeEngine = 1
 		TWR_type = 25.5
 		isp_v =  234
-		engine_thrust = 1800
-		mass = 1800
-		test1 = 0
-		test2 = 0
 		MODULE
 		{
-			name = ModuleEnginesFX
+			name = ModuleEngines
 			thrustVectorTransformName = thrustTransform
 			exhaustDamage = True
 			ignitionThreshold = 0.1
 			minThrust = 0
-			maxThrust = 1800
+			maxThrust = 1500
 			heatProduction = 196
 			fxOffset = 0, 0, 4
 			EngineType = LiquidFuel
-			isp_sl = 210.6
-			powerEffectName = Kerolox-Lower
 			PROPELLANT
 			{
 				name = Kerosene
@@ -108954,7 +108898,7 @@ UrlConfig
 			atmosphereCurve
 			{
 				key = 0  234
-				key = 1 210.6
+				key = 1 285
 				key = 9 0.001
 			}
 		}
@@ -109019,8 +108963,8 @@ UrlConfig
 				{
 					transformName = thrustTransform
 					localRotation = 0,0,0
-					localPosition = 0,0,4
-					fixedScale = 1
+					localPosition = 0,0,5
+					fixedScale = 0.8
 					energy = 1
 					speed = 1
 					name = plume
@@ -109126,8 +109070,8 @@ UrlConfig
 				{
 					transformName = thrustTransform
 					localRotation = 0,0,0
-					localPosition = 0,0,4
-					fixedScale = 1
+					localPosition = 0,0,5
+					fixedScale = 0.8
 					name = flare
 					modelName = RealPlume/MP_Nazari_FX/KWbooster
 					emission = 0.0 0
@@ -109147,8 +109091,8 @@ UrlConfig
 				{
 					transformName = thrustTransform
 					localRotation = 0,0,0
-					localPosition = 0,0,4
-					fixedScale = 1
+					localPosition = 0,0,5
+					fixedScale = 0.8
 					name = smoke
 					modelName = RealPlume/MP_Nazari_FX/smokebooster2
 					energy = 0.0 5
@@ -109352,21 +109296,23 @@ UrlConfig
 		ACTIONS
 		{
 			action = removing fuel resources
-			action = set new engine thrust
 			action = set lower stage isp SL
 			action = set Kerolox fuels
 			action = set isp curve
-			action = set FX plume effect name
 			action = clear mass
 			action = add mass from maxThrust
+		}
+		VARS
+		{
+			engine_thrust = 1800
 		}
 		PLUME
 		{
 			name = Kerolox-Lower
 			transformName = thrustTransform
 			localRotation = 0,0,0
-			localPosition = 0,0,4
-			fixedScale = 1
+			localPosition = 0,0,5
+			fixedScale = 0.8
 			energy = 1
 			speed = 1
 		}
@@ -111952,8 +111898,9 @@ UrlConfig
 		MFT_hgt = 6.5
 		MFT_type = Solid
 		MFT_util = 0.46
-		solid_fuel_engine = 1
+		solid_fuel_engine = default
 		isp_v = 182
+		isp_sl = 127.4
 		MODULE
 		{
 			name = ModuleEnginesRF
@@ -111962,7 +111909,7 @@ UrlConfig
 			exhaustDamage = True
 			ignitionThreshold = 0.1
 			minThrust = 0
-			maxThrust = 0.05886
+			maxThrust = 299.555856370164
 			heatProduction = 390
 			useEngineResponseTime = True
 			engineAccelerationSpeed = 8.0
@@ -111977,7 +111924,7 @@ UrlConfig
 			}
 			atmosphereCurve
 			{
-				key = 0 182
+				key = 0 210
 				key = 1 175
 				key = 6 0.001
 			}
@@ -112074,14 +112021,12 @@ UrlConfig
 		ACTIONS
 		{
 			action = removing fuel resources
-			action = set lower stage isp SL
-			action = set solid thrust isp SL
-			action = set isp curve
 			action = add empty cylinder ModuleFuelTanks
 			action = add cylinder ModuleFuelTanks
 			action = finalize fuel tank volume
 			action = change default fuel tank type
-			action = ensure ModuleEnginesRF & set thrust
+			action = ensure ModuleEnginesRF
+			action = calculate solid rocket maxThrust
 			action = define ModuleEngineConfigs for solid thrust curves
 			action = set RF plume effect name
 			action = clear mass
@@ -112092,8 +112037,8 @@ UrlConfig
 			name = Solid-Lower
 			transformName = thrustTransform
 			localRotation = 0,0,0
-			localPosition = 0,0,4
-			fixedScale = 1
+			localPosition = 0,0,-0.8
+			fixedScale = 0.5
 			energy = 1
 			speed = 1
 		}
@@ -112116,7 +112061,7 @@ UrlConfig
 			{
 				name = Linear Thrust
 				minThrust = 0
-				maxThrust = 0.05886
+				maxThrust = 299.555856370164
 				chamberNominalTemp = 1800
 				maxEngineTemp = 2050
 				curveResource = HTPB
@@ -112138,7 +112083,7 @@ UrlConfig
 				atmosphereCurve
 				{
 					key = 0 182
-					key = 1 151
+					key = 1 127.4
 					key = 3 0.001
 				}
 			}
@@ -112146,7 +112091,7 @@ UrlConfig
 			{
 				name = MaxQ Reduced
 				minThrust = 0
-				maxThrust = 0.05886
+				maxThrust = 299.555856370164
 				chamberNominalTemp = 1800
 				maxEngineTemp = 2050
 				curveResource = HTPB
@@ -112171,7 +112116,7 @@ UrlConfig
 				atmosphereCurve
 				{
 					key = 0 182
-					key = 1 151
+					key = 1 127.4
 					key = 3 0.001
 				}
 			}
@@ -112179,7 +112124,7 @@ UrlConfig
 			{
 				name = Delayed Fuse
 				minThrust = 0
-				maxThrust = 0.05886
+				maxThrust = 299.555856370164
 				chamberNominalTemp = 1800
 				maxEngineTemp = 2050
 				curveResource = HTPB
@@ -112203,7 +112148,7 @@ UrlConfig
 				atmosphereCurve
 				{
 					key = 0 182
-					key = 1 151
+					key = 1 127.4
 					key = 3 0.001
 				}
 			}
@@ -112216,8 +112161,8 @@ UrlConfig
 				{
 					transformName = thrustTransform
 					localRotation = 0,0,0
-					localPosition = 0,0,4
-					fixedScale = 1
+					localPosition = 0,0,-0.8
+					fixedScale = 0.5
 					energy = 1
 					speed = 1
 					name = plume
@@ -112286,8 +112231,8 @@ UrlConfig
 				{
 					transformName = thrustTransform
 					localRotation = 0,0,0
-					localPosition = 0,0,4
-					fixedScale = 1
+					localPosition = 0,0,-0.8
+					fixedScale = 0.5
 					name = slag
 					modelName = RealPlume/MP_Nazari_FX/flamesrblarge
 					emission = 0.0 0
@@ -112319,8 +112264,8 @@ UrlConfig
 				{
 					transformName = thrustTransform
 					localRotation = 0,0,0
-					localPosition = 0,0,4
-					fixedScale = 1
+					localPosition = 0,0,-0.8
+					fixedScale = 0.5
 					name = flare
 					modelName = RealPlume/MP_Nazari_FX/KWbooster
 					emission = 0.0 0
@@ -112340,8 +112285,8 @@ UrlConfig
 				{
 					transformName = thrustTransform
 					localRotation = 0,0,0
-					localPosition = 0,0,4
-					fixedScale = 1
+					localPosition = 0,0,-0.8
+					fixedScale = 0.5
 					name = smoke
 					modelName = RealPlume/MP_Nazari_FX/smokelaunch
 					energy = 0.0 1
@@ -113031,9 +112976,9 @@ UrlConfig
 		MFT_hgt = 0.1
 		MFT_type = Solid
 		MFT_util = 0.46
-		solid_fuel_engine = 1
-		solid_engine_thrust = 5
+		solid_fuel_engine = 5
 		isp_v = 182
+		isp_sl = 127.4
 		MODULE
 		{
 			name = ModuleEnginesRF
@@ -113055,7 +113000,7 @@ UrlConfig
 			}
 			atmosphereCurve
 			{
-				key = 0 182
+				key = 0 154
 				key = 1 118
 				key = 6 0.001
 			}
@@ -113162,10 +113107,10 @@ UrlConfig
 				{
 					transformName = thrustTransform
 					localRotation = 0,0,0
-					localPosition = 0,0,0.3
-					fixedScale = 1
+					localPosition = 0,0,0.5
+					fixedScale = 0.5
 					energy = 1
-					speed = 1
+					speed = 0.5
 					name = plume
 					modelName = RealPlume/MP_Nazari_FX/KWflamesmall
 					fixedEmissions = false
@@ -113263,14 +113208,12 @@ UrlConfig
 		ACTIONS
 		{
 			action = removing fuel resources
-			action = set solid thrust isp SL
-			action = set isp curve
 			action = add empty cylinder ModuleFuelTanks
 			action = add cylinder ModuleFuelTanks
 			action = finalize fuel tank volume
 			action = change default fuel tank type
-			action = ensure ModuleEnginesRF & set thrust
-			action = override default solid rocket thrust
+			action = ensure ModuleEnginesRF
+			action = override solid rocket maxThrust
 			action = define ModuleEngineConfigs for solid thrust curves
 			action = set RF plume effect name
 			action = clear mass
@@ -113281,10 +113224,10 @@ UrlConfig
 			name = Solid-Sepmotor
 			transformName = thrustTransform
 			localRotation = 0,0,0
-			localPosition = 0,0,0.3
-			fixedScale = 1
+			localPosition = 0,0,0.5
+			fixedScale = 0.5
 			energy = 1
-			speed = 1
+			speed = 0.5
 		}
 		MODULE
 		{
@@ -113323,7 +113266,7 @@ UrlConfig
 				atmosphereCurve
 				{
 					key = 0 182
-					key = 1 151
+					key = 1 127.4
 					key = 3 0.001
 				}
 			}
@@ -113356,7 +113299,7 @@ UrlConfig
 				atmosphereCurve
 				{
 					key = 0 182
-					key = 1 151
+					key = 1 127.4
 					key = 3 0.001
 				}
 			}
@@ -113388,7 +113331,7 @@ UrlConfig
 				atmosphereCurve
 				{
 					key = 0 182
-					key = 1 151
+					key = 1 127.4
 					key = 3 0.001
 				}
 			}
@@ -113497,7 +113440,7 @@ UrlConfig
 		}
 		ACTIONS
 		{
-			action = remove ModuleRCS
+			action = remove old RCS modules
 			action = clear mass
 		}
 	}
@@ -117023,7 +116966,7 @@ UrlConfig
 		manufacturer = Jebediah Kerman's Junkyard and Spacecraft Parts Co
 		description = These fuel tanks monopropellant for RCS thrusters. New advances in plumbing technology made it possible to route RCS lines to any point in the ship. So unlike liquid fuel tanks, RCS Fuel tanks can be placed anywhere.
 		attachRules = 1,0,1,1,0
-		mass = 0.845579297667778
+		mass = 0.669314449526668
 		dragModelType = default
 		maximum_drag = 0.2
 		minimum_drag = 0.2
@@ -117109,7 +117052,7 @@ UrlConfig
 		module = Part
 		author = NovaSilisko
 		node_attach = 0.0, 0.0, 0.22, 0.0, 0.0, -1.0
-		TechRequired = inProgress
+		TechRequired = finished
 		entryCost = 6200
 		cost = 200
 		category = FuelTank
@@ -117117,7 +117060,7 @@ UrlConfig
 		title = Stratus-V Roundified Tank
 		description = Despite its fanciful name, the Stratus-V is quite simple - a small, radially attachable RCS tank.
 		attachRules = 0,1,0,0,1
-		mass = 0.0662352451131846
+		mass = 0.0524282072000453
 		dragModelType = default
 		maximum_drag = 0.2
 		minimum_drag = 0.2
@@ -117215,7 +117158,7 @@ UrlConfig
 		module = Part
 		author = Ven
 		node_attach = 0.0, 0.0, 0.22, 0.0, 0.0, -1.0
-		TechRequired = inProgress
+		TechRequired = finished
 		entryCost = 6200
 		cost = 425
 		category = FuelTank
@@ -117223,7 +117166,7 @@ UrlConfig
 		title = Stratus-VI Roundified Liquid Fuel Tank
 		description = A Repourposed Stratus-V tank, the Stratus-VI now stores LF instead of Monopropellant.
 		attachRules = 0,1,0,1,1
-		mass = 0.0662352451131846
+		mass = 0.0524282072000453
 		dragModelType = default
 		maximum_drag = 0.2
 		minimum_drag = 0.2
@@ -117316,7 +117259,7 @@ UrlConfig
 		module = Part
 		author = Ven
 		node_attach = 0.0, 0.0, 0.22, 0.0, 0.0, -1.0
-		TechRequired = inProgress
+		TechRequired = finished
 		entryCost = 6200
 		cost = 425
 		category = FuelTank
@@ -117324,7 +117267,7 @@ UrlConfig
 		title = Stratus-VI Roundified Tank
 		description = A Repourposed Stratus-V tank, the Stratus-VI now stores Liquid Fuel and Liquid Oxidizer instead of Monopropellant.
 		attachRules = 0,1,0,1,1
-		mass = 0.0662352451131846
+		mass = 0.0524282072000453
 		dragModelType = default
 		maximum_drag = 0.2
 		minimum_drag = 0.2
@@ -117506,7 +117449,7 @@ UrlConfig
 		module = Part
 		author = Squad
 		node_attach = 0.0, 0.0, -0.3125, 0.0, 0.0, -1.0
-		TechRequired = inProgress
+		TechRequired = finished
 		entryCost = 5400
 		cost = 450
 		category = FuelTank
@@ -117514,7 +117457,7 @@ UrlConfig
 		title = Stratus-V Cylindrified Tank
 		description = After years of research and development, the Stratus corporation has developed a revolutionary upgrade to their Stratus-V fuel tank line. Cylinders. This tank holds a moderate supply of monopropellant for RCS thrusters.
 		attachRules = 0,1,0,0,1
-		mass = 0.264940980452739
+		mass = 0.209712828800181
 		dragModelType = default
 		maximum_drag = 0.2
 		minimum_drag = 0.2
@@ -117616,7 +117559,7 @@ UrlConfig
 		module = Part
 		author = Ven
 		node_attach = 0.0, 0.0, -0.3125, 0.0, 0.0, -1.0
-		TechRequired = inProgress
+		TechRequired = finished
 		entryCost = 5400
 		cost = 425
 		category = FuelTank
@@ -117624,7 +117567,7 @@ UrlConfig
 		title = Stratus-VI Cylindrified Tank
 		description = A Repourposed Stratus-V tank, the Stratus-VI now stores Liquid Fuel instead of Monopropellant.
 		attachRules = 0,1,0,1,1
-		mass = 0.264940980452739
+		mass = 0.209712828800181
 		dragModelType = default
 		maximum_drag = 0.2
 		minimum_drag = 0.2
@@ -117721,7 +117664,7 @@ UrlConfig
 		module = Part
 		author = Ven
 		node_attach = 0.0, 0.0, -0.3125, 0.0, 0.0, -1.0
-		TechRequired = inProgress
+		TechRequired = finished
 		entryCost = 5400
 		cost = 425
 		category = FuelTank
@@ -117729,7 +117672,7 @@ UrlConfig
 		title = Stratus-VI Cylindrified Tank
 		description = A Repourposed Stratus-V tank, the Stratus-VI now stores Liquid Fuel and Liquid Oxidizer instead of Monopropellant.
 		attachRules = 0,1,0,1,1
-		mass = 0.264940980452739
+		mass = 0.209712828800181
 		dragModelType = default
 		maximum_drag = 0.2
 		minimum_drag = 0.2
@@ -118275,7 +118218,7 @@ UrlConfig
 		title = PB-X50R Xenon Container FIX ME
 		description = The X50R is a small-volume Xenon container, heralded by engineers for being ideally suited for small ion-driven spacecraft, and also for having thoroughly disproved management in their notion that a smaller fuel tank would make the fuel cheaper.
 		attachRules = 0,1,0,0,1
-		mass = 0.0357670323611197
+		mass = 0.0283112318880245
 		dragModelType = default
 		maximum_drag = 0.2
 		minimum_drag = 0.2
@@ -123529,10 +123472,10 @@ UrlConfig
 		cost = 150
 		category = Utility
 		subcategory = 0
-		title = Radiator Panel (small) FIX ME FIX_MASS
+		title = Radiator Panel (small)
 		description = A radially attachable radiator panel to help dissipate heat into space.
 		attachRules = 0,1,0,1,1
-		mass = 9999
+		mass = 0.0371100632205292
 		dragModelType = default
 		maximum_drag = 0.2
 		minimum_drag = 0.2
@@ -123544,6 +123487,12 @@ UrlConfig
 		heatConductivity = 0.75
 		thermalMassModifier = 5
 		radiatorHeadroom = 0.5
+		Can_dia = 1.875
+		Can_hgt = 0.9
+		Can_dep = 0.2
+		Can_density = 0.35
+		Can_arcs = 10
+		Can_ends = 0
 		MODEL
 		{
 			model = Squad/Parts/Thermal/RadiatorPanels/radPanelSm
@@ -123587,6 +123536,7 @@ UrlConfig
 		ACTIONS
 		{
 			action = clear mass
+			action = set mass from cylinder surface area
 		}
 	}
 }
@@ -127651,7 +127601,7 @@ UrlConfig
 		ACTIONS
 		{
 			action = reduce maxTemp
-			action = remove ModuleRCS
+			action = remove old RCS modules
 			action = clear mass
 		}
 		MODULE
@@ -129669,7 +129619,7 @@ UrlConfig
 		}
 		ACTIONS
 		{
-			action = remove ModuleRCS
+			action = remove old RCS modules
 			action = clear mass
 		}
 	}
@@ -143258,18 +143208,21 @@ UrlConfig
 		cost = 100
 		category = Utility
 		subcategory = 0
-		title = Surface Mounted Omni Light FIX_MASS
+		title = Surface Mounted Omni Light
 		manufacturer = Abrams LightCo
 		description = A small light that emits in all directions. Useful for self-illumination.
 		node_attach = 0, 0.0, 0.0, 0, -1, 0, 0
 		attachRules = 0,1,0,0,0
-		mass = 9999
+		mass = 0.000219911485751285
 		dragModelType = default
 		maximum_drag = 0.01
 		minimum_drag = 0.01
 		angularDrag = 1
 		crashTolerance = 8
 		maxTemp = 1400
+		Can_dia = 0.1
+		Can_hgt = 0.1
+		Can_density = 0.28
 		MODULE
 		{
 			name = ModuleLight
@@ -143297,6 +143250,7 @@ UrlConfig
 		{
 			action = reduce maxTemp
 			action = clear mass
+			action = add mass from cylinder volume
 		}
 		MODULE
 		{
@@ -144190,7 +144144,7 @@ UrlConfig
 		}
 		ACTIONS
 		{
-			action = remove ModuleRCS
+			action = remove old RCS modules
 			action = clear mass
 		}
 	}
@@ -144693,7 +144647,7 @@ UrlConfig
 		}
 		ACTIONS
 		{
-			action = remove ModuleRCS
+			action = remove old RCS modules
 			action = clear mass
 		}
 	}
@@ -146510,7 +146464,7 @@ UrlConfig
 		}
 		ACTIONS
 		{
-			action = remove ModuleRCS
+			action = remove old RCS modules
 			action = clear mass
 		}
 	}
@@ -146670,7 +146624,7 @@ UrlConfig
 		ACTIONS
 		{
 			action = reduce maxTemp
-			action = remove ModuleRCS
+			action = remove old RCS modules
 			action = clear mass
 		}
 		MODULE
@@ -147293,7 +147247,7 @@ UrlConfig
 		}
 		ACTIONS
 		{
-			action = remove ModuleRCS
+			action = remove old RCS modules
 			action = clear mass
 		}
 	}
@@ -147507,7 +147461,7 @@ UrlConfig
 		}
 		ACTIONS
 		{
-			action = remove ModuleRCS
+			action = remove old RCS modules
 			action = clear mass
 		}
 	}
@@ -148045,7 +147999,7 @@ UrlConfig
 		}
 		ACTIONS
 		{
-			action = remove ModuleRCS
+			action = remove old RCS modules
 			action = clear mass
 		}
 	}
@@ -153311,7 +153265,7 @@ UrlConfig
 		{
 			action = reduce maxTemp
 			action = removing fuel resources
-			action = remove ModuleRCS
+			action = remove old RCS modules
 			action = clear mass
 		}
 		MODULE
@@ -153601,7 +153555,7 @@ UrlConfig
 		ACTIONS
 		{
 			action = removing fuel resources
-			action = remove ModuleRCS
+			action = remove old RCS modules
 			action = clear mass
 		}
 		MODULE
@@ -154509,7 +154463,7 @@ UrlConfig
 		}
 		ACTIONS
 		{
-			action = remove ModuleRCS
+			action = remove old RCS modules
 			action = clear mass
 		}
 	}
@@ -159406,7 +159360,7 @@ UrlConfig
 		}
 		ACTIONS
 		{
-			action = remove ModuleRCS
+			action = remove old RCS modules
 			action = clear mass
 		}
 	}
@@ -162515,40 +162469,6 @@ UrlConfig
 		}
 		MODULE
 		{
-			name = ModuleRCSFX
-			thrusterTransformName = vernierTransform
-			thrusterPower = 20
-			resourceFlowMode = STAGE_PRIORITY_FLOW
-			thrusterTransformName = thrustVector
-			atmosphereCurve
-			{
-				key = 0 354
-				key = 1 124
-			}
-			PROPELLANT
-			{
-				name = UDMH
-				ratio = 0.46607309
-			}
-			PROPELLANT
-			{
-				name = NTO
-				ratio = 0.53392691
-			}
-			PROPELLANT
-			{
-				name = Hydrazine
-				ratio = 1
-			}
-			atmosphereCurve
-			{
-				key = 0 150
-				key = 1 50
-				key = 3 0.001
-			}
-		}
-		MODULE
-		{
 			name = ModuleAlternator
 			RESOURCE
 			{
@@ -162631,7 +162551,7 @@ UrlConfig
 		ACTIONS
 		{
 			action = remove ModuleEngineConfigs
-			action = set ModuleRCSFX stats
+			action = remove old RCS modules
 			action = clear mass
 		}
 	}
@@ -168787,8 +168707,8 @@ UrlConfig
 		RSSShowCalendarToggled = False
 		AppLauncherSetTrueTimeOut = 6
 		DailyVersionCheck = True
-		VersionCheckDate_AttemptStored = 2015-07-15
-		VersionCheckDate_SuccessStored = 2015-07-15
+		VersionCheckDate_AttemptStored = 2015-07-17
+		VersionCheckDate_SuccessStored = 2015-07-17
 		VersionWeb = 3.4.0.0
 		WindowPositionStored
 		{
@@ -169057,8 +168977,8 @@ UrlConfig
 		ReplaceStockAppTimeOut = 20
 		AppLauncherSetTrueTimeOut = 6
 		DailyVersionCheck = True
-		VersionCheckDate_AttemptStored = 2015-07-15
-		VersionCheckDate_SuccessStored = 2015-07-15
+		VersionCheckDate_AttemptStored = 2015-07-17
+		VersionCheckDate_SuccessStored = 2015-07-17
 		ShowWindowOnResourceMonitor = True
 		VersionWeb = 2.7.2.0
 		WindowPositionStored
@@ -176106,10 +176026,6 @@ UrlConfig
 		{
 			action = clear mass
 		}
-		INTERNAL
-		{
-			name = Placeholder
-		}
 	}
 }
 UrlConfig
@@ -176806,10 +176722,6 @@ UrlConfig
 		ACTIONS
 		{
 			action = clear mass
-		}
-		INTERNAL
-		{
-			name = Placeholder
 		}
 	}
 }
@@ -179662,7 +179574,7 @@ UrlConfig
 		}
 		ACTIONS
 		{
-			action = remove ModuleRCS
+			action = remove old RCS modules
 			action = clear mass
 		}
 	}
@@ -181119,10 +181031,6 @@ UrlConfig
 		ACTIONS
 		{
 			action = clear mass
-		}
-		INTERNAL
-		{
-			name = Placeholder
 		}
 	}
 }
@@ -183112,7 +183020,7 @@ UrlConfig
 		}
 		ACTIONS
 		{
-			action = remove ModuleRCS
+			action = remove old RCS modules
 			action = clear mass
 		}
 	}
@@ -183322,7 +183230,7 @@ UrlConfig
 		ACTIONS
 		{
 			action = removing fuel resources
-			action = remove ModuleRCS
+			action = remove old RCS modules
 			action = clear mass
 		}
 		MODULE
@@ -184889,7 +184797,7 @@ UrlConfig
 		}
 		ACTIONS
 		{
-			action = remove ModuleRCS
+			action = remove old RCS modules
 			action = clear mass
 		}
 	}
