@@ -1,4 +1,4 @@
-patchedNodeCount = 29927
+patchedNodeCount = 29925
 catEatenCount = 0
 UrlConfig
 {
@@ -111883,7 +111883,7 @@ UrlConfig
 		manufacturer = Rockomax Conglomerate
 		description = Filled with a new, even more volatile fuel, the BACC offers semi-reliable performance at a good price. Plume configured by RealPlume.
 		attachRules = 1,1,1,1,0
-		mass = 9999
+		mass = 15.267882587674
 		skinInternalConductionMult = 4.0
 		emissiveConstant = 0.5
 		dragModelType = default
@@ -112958,7 +112958,7 @@ UrlConfig
 		manufacturer = Periapsis Rocket Supplies Co
 		description = Recent demand for an even smaller Sepatron has led to the quick development of the SnubOtron, a snappy little rocket aptly described as, "About half as good as a sepatron in nearly every way." Plume configured by RealPlume.
 		attachRules = 0,1,0,0,0
-		mass = 9999
+		mass = 0.00150329920863252
 		skinInternalConductionMult = 4.0
 		emissiveConstant = 0.5
 		dragModelType = default
