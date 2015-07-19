@@ -13,4 +13,5 @@
   <MaxTempCalcMethod>Lowest</MaxTempCalcMethod>
   <clearEditor>true</clearEditor>
   <advancedDebug>true</advancedDebug>
+  <weldNumberOfFractionalDigits>2</weldNumberOfFractionalDigits>
 </WeldingConfiguration>
