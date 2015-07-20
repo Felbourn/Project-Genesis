@@ -8,10 +8,10 @@
         <ymax>237</ymax>
     </rect>
     <rect name="filterWin1">
-        <xmin>1228</xmin>
-        <xmax>1364</xmax>
-        <ymin>217</ymin>
-        <ymax>544</ymax>
+        <xmin>1242</xmin>
+        <xmax>1378</xmax>
+        <ymin>254</ymin>
+        <ymax>581</ymax>
     </rect>
     <rect name="setWin1">
         <xmin>1217</xmin>
@@ -47,7 +47,7 @@
     <bool name="filtArr12">1</bool>
     <bool name="filtArr13">1</bool>
     <bool name="filtArr14">1</bool>
-    <bool name="filtArr15">1</bool>
+    <bool name="filtArr15">0</bool>
     <bool name="filtArr16">1</bool>
     <bool name="filtArr17">1</bool>
     <bool name="filtArr18">1</bool>
