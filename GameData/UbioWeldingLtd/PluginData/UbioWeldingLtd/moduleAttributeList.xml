@@ -51,6 +51,8 @@
     <ModuleAttribute AttributeName="ModuleSPU" />
     <ModuleAttribute AttributeName="MechJebCore" />
     <ModuleAttribute AttributeName="ModuleSAS" />
+    <ModuleAttribute AttributeName="tjs_DecouplerLight" />
+    <ModuleAttribute AttributeName="ModuleTweakableDecouple" />
   </ModulesToIgnore>
   <ModulesToMultiply>
     <ModuleAttribute AttributeName="AntimatterCollector" />

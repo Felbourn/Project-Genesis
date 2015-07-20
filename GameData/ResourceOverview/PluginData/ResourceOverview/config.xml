@@ -2,8 +2,8 @@
 <config>
     <bool name="showToolbar">1</bool>
     <bool name="showAppLauncher">1</bool>
-    <int name="ResourceWindow.x">1277</int>
-    <int name="ResourceWindow.y">685</int>
+    <int name="ResourceWindow.x">1286</int>
+    <int name="ResourceWindow.y">602</int>
     <bool name="showTotalMass">1</bool>
     <bool name="showDryMass">1</bool>
     <bool name="showCrewCapacity">1</bool>
