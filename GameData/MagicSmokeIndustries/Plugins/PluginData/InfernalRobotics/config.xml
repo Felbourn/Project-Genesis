@@ -1,20 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <config>
     <rect name="editorWinPos">
-        <xmin>424</xmin>
-        <xmax>825</xmax>
-        <ymin>310</ymin>
-        <ymax>760</ymax>
+        <xmin>1172</xmin>
+        <xmax>1573</xmax>
+        <ymin>295</ymin>
+        <ymax>745</ymax>
     </rect>
     <rect name="presetWinPos">
         <xmin>1190</xmin>
         <xmax>1390</xmax>
         <ymin>220</ymin>
-        <ymax>382</ymax>
+        <ymax>356</ymax>
     </rect>
     <rect name="controlWinPos">
         <xmin>692</xmin>
-        <xmax>993</xmax>
+        <xmax>1032</xmax>
         <ymin>69</ymin>
         <ymax>163</ymax>
     </rect>

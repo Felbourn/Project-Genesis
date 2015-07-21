@@ -281,5 +281,17 @@ toolbars
 			buttonOrder = __TOOLBAR_INTERNAL.configureVisibleButtons,QuickGoToTS.QuickGoToTS,QuickGoToVAB.QuickGoToVAB,QuickGoToSPH.QuickGoToSPH,QuickGoToSC.QuickGoToSC
 			visibleButtons = QuickGoToSC.QuickGoToSC,QuickGoToTS.QuickGoToTS,QuickGoToVAB.QuickGoToVAB,QuickGoToSPH.QuickGoToSPH
 		}
+		toolbar_51494397
+		{
+			x = 162
+			y = -3
+			width = 250
+			height = 38
+			autoHide = False
+			drawBorder = False
+			useKSPSkin = False
+			buttonOrder = 
+			visibleButtons = Trajectories.ToggleUI
+		}
 	}
 }
