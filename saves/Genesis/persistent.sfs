@@ -10,7 +10,7 @@ GAME
 	scene = 5
 	editor = None
 	flag = Squad/Flags/kerbin
-	launchID = 61
+	launchID = 62
 	PARAMETERS
 	{
 		preset = Normal
@@ -489,7 +489,7 @@ GAME
 	{
 		name = AGextScenario
 		scene = 7
-		LastSave = 112
+		LastSave = 117
 	}
 	SCENARIO
 	{
@@ -656,8 +656,8 @@ GAME
 	FLIGHTSTATE
 	{
 		version = 1.0.4
-		UT = 83117.3882837982
-		activeVessel = 0
+		UT = 83117.8482837983
+		activeVessel = 10
 		mapViewFiltering = -1026
 		VESSEL
 		{

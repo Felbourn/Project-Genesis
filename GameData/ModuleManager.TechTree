@@ -1305,29 +1305,4 @@ TechTree
 			lineTo = LEFT
 		}
 	}
-	RDNode
-	{
-		id = massiveRocketry
-		title = Massive Rocketry
-		description = Significantly larger rockets are sometimes needed. For those times, we have these.
-		cost = 1000
-		hideEmpty = True
-		nodeName = node8_massiveRocketry
-		anyToUnlock = False
-		icon = RDicon_rocketry-veryHeavy
-		pos = -952,1550,-1
-		scale = 0.6
-		Parent
-		{
-			parentID = highPerformanceFuelSystems
-			lineFrom = RIGHT
-			lineTo = LEFT
-		}
-		Parent
-		{
-			parentID = veryHeavyRocketry
-			lineFrom = RIGHT
-			lineTo = LEFT
-		}
-	}
 }
