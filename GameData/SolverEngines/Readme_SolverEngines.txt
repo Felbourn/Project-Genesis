@@ -27,6 +27,24 @@ SolverEngines includes a GUI to display useful information about engines in flig
 See AJE or RealFuels for examples of how to implement SolverEngines in practice.
 
 Changelog:
+v1.8
+* Fix for GUI issues in 1.7.
+* To avoid the "can't restart engine once propellant is provided again" issue, shutdown and then activate your engine. That will clear its memory of flameouts.
+
+v1.7
+* Remove duplicate GUI entries.
+* Avoid some NREs.
+
+v1.6
+* Finally fix the "can't start when shielded" thing. Activate/toggle was fixed but staging wasn't.
+* Improve fitting code.
+* Fix version file
+
+v1.5
+* EngineThermodynamics improvements (docs, track mass flow, allow mixing streams).
+* Add functionality to fit an engine's performance parameters to a set of database parameters.
+* Add SFC as a base solver member (in force/weight-hr).
+
 v1.4
 * Make the "can't start engine in fairing/bay" functionality toggleable ( noShieldedStart in the MODULE), and default to off.
 * Speed things up a little in the GUI/VesselModule
