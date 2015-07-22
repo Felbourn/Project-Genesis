@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <bool name="DisplayTargetGUI">0</bool>
+    <bool name="DisplayDescentProfileGUI">0</bool>
+    <bool name="DisplaySettingsGUI">0</bool>
+    <bool name="UseBlizzyToolbar">1</bool>
+    <bool name="DisplayTrajectories">1</bool>
+    <bool name="DisplayCompleteTrajectory">0</bool>
+    <bool name="BodyFixedMode">0</bool>
+    <bool name="AutoUpdateAerodynamicModel">1</bool>
+    <rect name="MapGUIWindowPos">
+        <xmin>677</xmin>
+        <xmax>678</xmax>
+        <ymin>380</ymin>
+        <ymax>613</ymax>
+    </rect>
+    <bool name="GUIEnabled">0</bool>
+    <int name="MaxPatchCount">3</int>
+    <int name="MaxFramesPerPatch">20</int>
+    <bool name="AutoPilotAvailable">0</bool>
+</config>
