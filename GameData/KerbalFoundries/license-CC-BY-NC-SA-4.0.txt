@@ -1,0 +1,12 @@
+content licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+
+You may modify for personal use. 
+You may redistribute WITHOUT modification with attribution to original author nli2work, plus any other attribution where required. 
+You may redistribute WITH modification with attribution to yourself in addition to original author nli2work, plus any other attribution where required. 
+You must redistribute under identical license, CC-BY-NC-SA. 
+
+UtilPlugins by lo-fi
+http://forum.kerbalspaceprogram.com/threads/84102-WIP-PARTS-PLUGIN-0-25-Kerbal-Foundries-wheels-anti-grav-repulsors-and-tracks
+
+Firespitter by Snjo
+http://snjo.github.io/
