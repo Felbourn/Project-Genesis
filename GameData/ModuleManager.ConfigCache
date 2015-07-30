@@ -1,4 +1,4 @@
-patchedNodeCount = 29801
+patchedNodeCount = 29860
 catEatenCount = 0
 UrlConfig
 {
@@ -4675,7 +4675,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 800
+		maxTemp = 875
 		fuelCrossFeed = False
 		stageOffset = 1
 		childStageOffset = 1
@@ -4803,7 +4803,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 800
+		maxTemp = 875
 		fuelCrossFeed = False
 		stageOffset = 1
 		childStageOffset = 1
@@ -4929,7 +4929,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		fuelCrossFeed = True
 		stageOffset = 1
 		childStageOffset = 1
@@ -5257,7 +5257,7 @@ UrlConfig
 		maximum_drag = 0.3
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 800
+		maxTemp = 875
 		fuelCrossFeed = true
 		stageOffset = 1
 		childStageOffset = 1
@@ -5363,7 +5363,7 @@ UrlConfig
 		maximum_drag = 0.1
 		minimum_drag = 0.1
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -5475,7 +5475,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		fuelCrossFeed = true
 		stageOffset = 1
 		childStageOffset = 1
@@ -5594,7 +5594,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -5686,7 +5686,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -5776,7 +5776,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 1000
+		maxTemp = 1100
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -6113,7 +6113,7 @@ UrlConfig
 		maximum_drag = 0.01
 		minimum_drag = 0.01
 		angularDrag = 0.1
-		maxTemp = 1000
+		maxTemp = 1100
 		fuelCrossFeed = True
 		PhysicsSignificance = 1
 		crashTolerance = 8
@@ -6456,7 +6456,7 @@ UrlConfig
 		minimum_drag = 0.0
 		angularDrag = 0
 		impactTolerance = 8
-		maxTemp = 650
+		maxTemp = 725
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -6541,6 +6541,7 @@ UrlConfig
 			action = no crashTolerance set, use default
 			action = no breakingForce set, use default
 			action = no breakingTorque set, use default
+			action = change maxTemp to 'communications'
 		}
 		MODULE
 		{
@@ -8140,7 +8141,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -8238,7 +8239,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -8336,7 +8337,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -8434,7 +8435,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -8578,7 +8579,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -8797,6 +8798,10 @@ UrlConfig
 				rate = 0.001
 			}
 		}
+		MODULE
+		{
+			name = RCSLandingAidModule
+		}
 	}
 }
 UrlConfig
@@ -8826,7 +8831,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 725
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -8919,6 +8924,7 @@ UrlConfig
 			action = no crashTolerance set, use default
 			action = no breakingForce set, use default
 			action = no breakingTorque set, use default
+			action = change maxTemp to 'communications'
 		}
 		MODULE
 		{
@@ -8969,7 +8975,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 725
+		maxTemp = 800
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -9085,7 +9091,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		CoMOffset = 0,-1.5549,0
 		crashTolerance = 8
 		breakingForce = 25
@@ -9324,7 +9330,7 @@ UrlConfig
 		maximum_drag = 0.25
 		minimum_drag = 0.25
 		angularDrag = 0.5
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -9430,7 +9436,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -9511,7 +9517,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -9589,7 +9595,7 @@ UrlConfig
 		maximum_drag = 0.25
 		minimum_drag = 0.25
 		angularDrag = 0.5
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -10224,6 +10230,19 @@ UrlConfig
 }
 UrlConfig
 {
+	name = Settings
+	type = Settings
+	parentUrl = ChuteSafetyIndicator/ChuteSafetyIndicator
+	url = ChuteSafetyIndicator/ChuteSafetyIndicator/Settings
+	Settings
+	{
+		safeColor = 0,1,0,1
+		riskyColor = 1,0.9215686,0.01568628,1
+		unSafeColor = 1,0,0,1
+	}
+}
+UrlConfig
+{
 	name = BasketTrussCX
 	type = PART
 	parentUrl = CMES/AerojetKerbodyne/Parts/ICPS/partBasket
@@ -10251,7 +10270,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = .1
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -10335,7 +10354,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = .2
-		maxTemp = 650
+		maxTemp = 1
 		fuelCrossFeed = True
 		stageOffset = 1
 		childStageOffset = 1
@@ -10430,7 +10449,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 725
+		maxTemp = 800
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -10538,7 +10557,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -10623,7 +10642,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -10708,7 +10727,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -10797,7 +10816,7 @@ UrlConfig
 		maximum_drag = 0.25
 		minimum_drag = 0.25
 		angularDrag = 0.5
-		maxTemp = 650
+		maxTemp = 1
 		stackSymmetry = 3
 		CoMOffset = 0, -0.84375, 0
 		CrewCapacity = 2
@@ -10946,7 +10965,7 @@ UrlConfig
 		maximum_drag = 0.25
 		minimum_drag = 0.25
 		angularDrag = 0.5
-		maxTemp = 650
+		maxTemp = 1
 		fuelCrossFeed = False
 		CrewCapacity = 3
 		crashTolerance = 8
@@ -11098,7 +11117,7 @@ UrlConfig
 		maximum_drag = 0.25
 		minimum_drag = 0.25
 		angularDrag = 0.5
-		maxTemp = 650
+		maxTemp = 1
 		fuelCrossFeed = True
 		CrewCapacity = 4
 		crashTolerance = 8
@@ -11249,7 +11268,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		vesselType = Ship
 		CrewCapacity = 2
 		crashTolerance = 8
@@ -11407,7 +11426,7 @@ UrlConfig
 		maximum_drag = 0.25
 		minimum_drag = 0.25
 		angularDrag = 0.5
-		maxTemp = 650
+		maxTemp = 1
 		stackSymmetry = 3
 		CoMOffset = 0, -0.84375, 0
 		CrewCapacity = 2
@@ -11555,7 +11574,7 @@ UrlConfig
 		maximum_drag = 0.30
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		vesselType = Probe
 		stagingIcon = COMMAND_POD
 		CrewCapacity = 3
@@ -16885,7 +16904,7 @@ UrlConfig
 		maximum_drag = 0.25
 		minimum_drag = 0.25
 		angularDrag = 0.5
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -17003,7 +17022,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -17466,7 +17485,7 @@ UrlConfig
 		minimum_drag = 0.3
 		angularDrag = 2
 		fuelCrossFeed = True
-		maxTemp = 650
+		maxTemp = 1
 		fuelCrossFeed = True
 		crashTolerance = 8
 		breakingForce = 25
@@ -17568,7 +17587,7 @@ UrlConfig
 		minimum_drag = 0.3
 		angularDrag = 2
 		fuelCrossFeed = True
-		maxTemp = 650
+		maxTemp = 1
 		fuelCrossFeed = True
 		crashTolerance = 8
 		breakingForce = 25
@@ -17831,7 +17850,7 @@ UrlConfig
 		maximum_drag = 0.12
 		minimum_drag = 0.12
 		angularDrag = .3
-		maxTemp = 650
+		maxTemp = 1
 		fuelCrossFeed = True
 		crashTolerance = 8
 		breakingForce = 25
@@ -17928,7 +17947,7 @@ UrlConfig
 		maximum_drag = 0.1
 		minimum_drag = 0.1
 		angularDrag = 0.5
-		maxTemp = 650
+		maxTemp = 1
 		CrewCapacity = 2
 		vesselType = Ship
 		TechRequired = inProgress
@@ -18028,7 +18047,7 @@ UrlConfig
 		maximum_drag = 0.01
 		minimum_drag = 0.01
 		angularDrag = 0.5
-		maxTemp = 650
+		maxTemp = 1
 		explosionPotential = 0
 		maxLength = 10
 		crashTolerance = 8
@@ -18134,7 +18153,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = .2
-		maxTemp = 650
+		maxTemp = 1
 		fuelCrossFeed = True
 		stageOffset = 1
 		childStageOffset = 1
@@ -18221,7 +18240,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 0.2
-		maxTemp = 800
+		maxTemp = 875
 		fuelCrossFeed = False
 		stageOffset = 1
 		childStageOffset = 1
@@ -18343,7 +18362,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 800
+		maxTemp = 875
 		fuelCrossFeed = False
 		stageOffset = 1
 		childStageOffset = 1
@@ -18461,7 +18480,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = .2
-		maxTemp = 650
+		maxTemp = 1
 		fuelCrossFeed = False
 		crashTolerance = 8
 		breakingForce = 25
@@ -18542,7 +18561,7 @@ UrlConfig
 		maximum_drag = 0.00
 		minimum_drag = 0.00
 		angularDrag = 0
-		maxTemp = 800
+		maxTemp = 875
 		explosionPotential = 0
 		linearStrength = 92000
 		angularStrength = 92000
@@ -18662,7 +18681,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 800
+		maxTemp = 875
 		fuelCrossFeed = False
 		crashTolerance = 8
 		breakingForce = 25
@@ -18784,7 +18803,7 @@ UrlConfig
 		maximum_drag = 0.001
 		minimum_drag = 0.001
 		angularDrag = 0.001
-		maxTemp = 800
+		maxTemp = 875
 		stagingIcon = DECOUPLER_HOR
 		stageOffset = 1
 		childStageOffset = 1
@@ -18905,7 +18924,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 800
+		maxTemp = 875
 		fuelCrossFeed = False
 		stageOffset = 1
 		childStageOffset = 1
@@ -19023,7 +19042,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 800
+		maxTemp = 875
 		fuelCrossFeed = False
 		stageOffset = 1
 		childStageOffset = 1
@@ -19131,7 +19150,7 @@ UrlConfig
 		cost = 20
 		category = Structural
 		subcategory = 0
-		title = CHAKA / IUS Basket
+		title = Octo Truss
 		manufacturer = StrutCo
 		description = StrutCo presents: Octagonal struts! Use them to mount stop signs or octopi.
 		attachRules = 1,0,1,1,0
@@ -19140,7 +19159,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1000
 		fuelCrossFeed = True
 		crashTolerance = 8
 		breakingForce = 25
@@ -19165,6 +19184,7 @@ UrlConfig
 		VARS
 		{
 			TechRequired = composites
+			maxTemp = truss
 			old_mass = 1
 		}
 		MODULE
@@ -19201,6 +19221,7 @@ UrlConfig
 			action = no crashTolerance set, use default
 			action = no breakingForce set, use default
 			action = no breakingTorque set, use default
+			action = change maxTemp to 'truss'
 		}
 	}
 }
@@ -19233,7 +19254,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -24175,7 +24196,7 @@ UrlConfig
 		maximum_drag = 0.25
 		minimum_drag = 0.25
 		angularDrag = 0.75
-		maxTemp = 650
+		maxTemp = 1
 		fuelCrossFeed = True
 		crashTolerance = 8
 		breakingForce = 25
@@ -24280,7 +24301,7 @@ UrlConfig
 		maximum_drag = 0.25
 		minimum_drag = 0.25
 		angularDrag = 0.75
-		maxTemp = 650
+		maxTemp = 1
 		fuelCrossFeed = True
 		crashTolerance = 8
 		breakingForce = 25
@@ -24385,7 +24406,7 @@ UrlConfig
 		maximum_drag = 1.0
 		minimum_drag = 1.0
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		fuelCrossFeed = True
 		crashTolerance = 8
 		breakingForce = 25
@@ -25378,7 +25399,7 @@ UrlConfig
 		description = The ASERT is an asteroid-only experiment used to study the interior composition of asteroids. It must be paired with a second module placed on the opposite side of an asteroid. When two modules are properly positioned the experiment can be conducted with the science amount dependent on how much of the asteroid the signal passed through.
 		mass = 9999
 		bulkheadProfiles = srf
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.85
 		thermalMassModifier = 4.0
 		angularDrag = 1
@@ -25506,7 +25527,7 @@ UrlConfig
 		description = The Global Orbital Radiance Experiment Satellite (GORESat) monitors the total light reflected from a planet's surface across multiple wavelengths using four cavity radiometers. Can only be used from high orbit.
 		mass = 9999
 		bulkheadProfiles = srf
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.85
 		thermalMassModifier = 4.0
 		angularDrag = 1
@@ -25640,7 +25661,7 @@ UrlConfig
 		attachRules = 0,1,0,0,0
 		mass = 9999
 		bulkheadProfiles = srf
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.85
 		thermalMassModifier = 4.0
 		angularDrag = 1
@@ -25828,7 +25849,7 @@ UrlConfig
 		attachRules = 1,1,0,0,0
 		mass = 9999
 		bulkheadProfiles = srf
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.85
 		thermalMassModifier = 4.0
 		angularDrag = 1
@@ -26017,7 +26038,7 @@ UrlConfig
 		attachRules = 0,1,0,0,0
 		mass = 9999
 		bulkheadProfiles = srf
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.85
 		thermalMassModifier = 4.0
 		angularDrag = 1
@@ -26153,7 +26174,7 @@ UrlConfig
 		attachRules = 1,1,0,0,0
 		mass = 9999
 		bulkheadProfiles = srf
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.85
 		thermalMassModifier = 4.0
 		angularDrag = 2
@@ -26289,7 +26310,7 @@ UrlConfig
 		attachRules = 1,0,1,1,0
 		mass = 9999
 		bulkheadProfiles = size1
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.95
 		thermalMassModifier = 2.0
 		heatConductivity = 0.04
@@ -26461,7 +26482,7 @@ UrlConfig
 		attachRules = 1,1,0,0,0
 		mass = 9999
 		bulkheadProfiles = size1, srf
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.85
 		thermalMassModifier = 4.0
 		angularDrag = 0.5
@@ -29152,7 +29173,7 @@ UrlConfig
 		attachRules = 1,1,0,0,0
 		mass = 9999
 		bulkheadProfiles = srf
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.85
 		thermalMassModifier = 4.0
 		angularDrag = 1
@@ -29297,7 +29318,7 @@ UrlConfig
 		attachRules = 1,1,0,0,0
 		mass = 9999
 		bulkheadProfiles = srf
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.85
 		thermalMassModifier = 4.0
 		angularDrag = 1
@@ -29436,7 +29457,7 @@ UrlConfig
 		attachRules = 0,1,0,0,0
 		mass = 9999
 		bulkheadProfiles = srf
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.85
 		thermalMassModifier = 4.0
 		angularDrag = 1
@@ -29573,7 +29594,7 @@ UrlConfig
 		attachRules = 1,1,0,0,0
 		mass = 9999
 		bulkheadProfiles = srf
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.85
 		thermalMassModifier = 4.0
 		angularDrag = 1
@@ -29710,7 +29731,7 @@ UrlConfig
 		attachRules = 1,1,0,0,0
 		mass = 9999
 		bulkheadProfiles = srf
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.85
 		thermalMassModifier = 4.0
 		angularDrag = 1
@@ -29850,7 +29871,7 @@ UrlConfig
 		attachRules = 1,1,0,1,0
 		mass = 9999
 		bulkheadProfiles = srf
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.85
 		thermalMassModifier = 4.0
 		angularDrag = 1
@@ -29989,7 +30010,7 @@ UrlConfig
 		attachRules = 0,1,0,0,0
 		mass = 9999
 		bulkheadProfiles = srf
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.85
 		thermalMassModifier = 4.0
 		angularDrag = 1
@@ -30138,7 +30159,7 @@ UrlConfig
 		description = The ASERT is an asteroid-only experiment used to study the interior composition of asteroids. It must be paired with a second module placed on the opposite side of an asteroid. When two modules are properly positioned the experiment can be conducted with the science amount dependent on how much of the asteroid the signal passed through.
 		mass = 9999
 		bulkheadProfiles = wedge
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.95
 		thermalMassModifier = 4.0
 		angularDrag = 1
@@ -30273,7 +30294,7 @@ UrlConfig
 		description = This unit was something one of our engineers came upon while dumpster divin-- Erm, while researching alternative applications for existing technologies. It's a sealed container which appears to be filled with a strange looking substance. We couldn't reach in or break the canister open, but watching how the Goo behaves when subjected to different situations could be very educational.
 		mass = 9999
 		bulkheadProfiles = wedge
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.95
 		thermalMassModifier = 4.0
 		angularDrag = 1
@@ -30415,7 +30436,7 @@ UrlConfig
 		description = The US-SC-9001 is a cutting edge, self contained laboratory. Have you ever wondered what happens to something in zero G? Or, have you ever pondered the truly meaningful questions? Such as what would happen if I exposed this to the rigors of stellar radiation and an unforgiving vacuum? Comes with complimentary notepad. Recommended for ages 4-8. Small parts inside make it not suitable for small children.
 		mass = 9999
 		bulkheadProfiles = wedge
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.95
 		thermalMassModifier = 4.0
 		angularDrag = 1
@@ -30557,7 +30578,7 @@ UrlConfig
 		description = The Global Orbital Radiance Experiment Satellite (GORESat) monitors the total light reflected from a planet's surface across multiple wavelengths using four cavity radiometers. Can only be used from high orbit.
 		mass = 9999
 		bulkheadProfiles = wedge
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.95
 		thermalMassModifier = 4.0
 		angularDrag = 1
@@ -30698,7 +30719,7 @@ UrlConfig
 		description = This multi-spectral imaging platform is used to study the surface and composition of planets. Use only in orbit.
 		mass = 9999
 		bulkheadProfiles = wedge
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.95
 		thermalMassModifier = 4.0
 		angularDrag = 1
@@ -30855,7 +30876,7 @@ UrlConfig
 		description = The magnetometer instruments are used to determine the magnitude and direction of planetary magnetic fields. The long boom separates these instruments from any interference caused by magnetic elements in the probe. Use in low to high orbit or on the surface. Not for use during atmospheric flight. Use with New Horizon's Universal Storage system.
 		mass = 9999
 		bulkheadProfiles = wedge
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.95
 		thermalMassModifier = 4.0
 		angularDrag = 1
@@ -31018,7 +31039,7 @@ UrlConfig
 		description = The Radio and Plasma Wave Science instrument measures electrostatic and electromagnetic fields generated by the interaction of planetary magnetospheres and the interplanetary plasma medium. Deploy and use while in low to high orbit. Not for use during atmospheric flight or surface deployment. Use with New Horizon's Universal Storage system.
 		mass = 9999
 		bulkheadProfiles = wedge
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.95
 		thermalMassModifier = 4.0
 		angularDrag = 1
@@ -31157,7 +31178,7 @@ UrlConfig
 		description = This telescope makes things that are far away look like they are less far away. Use in low to high orbits. Not for use during atmospheric flight or on the surface.
 		mass = 9999
 		bulkheadProfiles = wedge
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.95
 		thermalMassModifier = 4.0
 		angularDrag = 1
@@ -31296,7 +31317,7 @@ UrlConfig
 		description = This orbital sensor deploys a large L-band microwave detector comprised of 82 individual antenna elements. It can be used to study the water content of the upper soil layers and the salinity levels of large water features. Can only be used in low orbit.
 		mass = 9999
 		bulkheadProfiles = wedge
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.95
 		thermalMassModifier = 2.0
 		heatConductivity = 0.04
@@ -31441,7 +31462,7 @@ UrlConfig
 		description = This instrument is designed to collect and store several samples of solar particles.
 		mass = 9999
 		bulkheadProfiles = wedge
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.95
 		thermalMassModifier = 4.0
 		angularDrag = 1
@@ -31588,7 +31609,7 @@ UrlConfig
 		description = Combines the Double-C Seismic Accelerometer and Gravmax Negative Gravioli Detector into one convenient and aerodynamic container. Use with New Horizon's Universal Storage system.
 		mass = 9999
 		bulkheadProfiles = wedge
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.95
 		thermalMassModifier = 4.0
 		angularDrag = 1
@@ -31781,7 +31802,7 @@ UrlConfig
 		description = The latest in R&D enabled the development of this little marvel, The Sensor Array Computing Nose Cone. It is outfitted with many "quality" sensors and a computer salvaged from the highest quality aircraft scrap, enabling it to collect atmospheric data while in flight.
 		mass = 9999
 		bulkheadProfiles = wedge
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.95
 		thermalMassModifier = 4.0
 		angularDrag = 1
@@ -31922,7 +31943,7 @@ UrlConfig
 		description = Combines the PresMat Barometer and 2Hot Temperature Sensor into one convenient and aerodynamic container. Use with New Horizon's Universal Storage system.
 		mass = 9999
 		bulkheadProfiles = wedge
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.95
 		thermalMassModifier = 4.0
 		angularDrag = 1
@@ -32126,7 +32147,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 675
+		maxTemp = 750
 		explosionPotential = 0.5
 		vesselType = Probe
 		crashTolerance = 12
@@ -32242,6 +32263,10 @@ UrlConfig
 				name = ElectricCharge
 				rate = 0.001
 			}
+		}
+		MODULE
+		{
+			name = RCSLandingAidModule
 		}
 	}
 }
@@ -32683,7 +32708,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 2000
+		maxTemp = 725
 		fuelCrossFeed = False
 		explosionPotential = 0.1
 		stageOffset = 0
@@ -32791,6 +32816,7 @@ UrlConfig
 			action = use author's mass
 			action = add mass from comm antenna
 			action = change maxTemp to 'launch clamp'
+			action = change maxTemp to 'communications'
 		}
 		MODULE
 		{
@@ -32842,7 +32868,7 @@ UrlConfig
 		maximum_drag = 0.20
 		minimum_drag = 0.20
 		angularDrag = 2
-		maxTemp = 2000
+		maxTemp = 725
 		fuelCrossFeed = False
 		explosionPotential = 0.1
 		stageOffset = 9
@@ -32936,6 +32962,7 @@ UrlConfig
 			action = use author's mass
 			action = add mass from comm antenna
 			action = change maxTemp to 'launch clamp'
+			action = change maxTemp to 'communications'
 		}
 		MODULE
 		{
@@ -33192,7 +33219,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 725
+		maxTemp = 800
 		bulkheadProfiles = srf
 		heatConductivity = 0.01
 		thermalMassModifier = 2.0
@@ -33863,7 +33890,6 @@ UrlConfig
 		UpperTWR_25 = 28.1
 		UpperTWR_37 = 30.9
 		NTRIspSL = 0.10
-		UpperIspSL = 0.25
 		RCSIspSL = 0.35
 		SolidIspSL = 0.65
 		HydroloxIspSL = 0.70
@@ -33874,12 +33900,12 @@ UrlConfig
 		LqdOxygen2Kerosene = 2.72
 		LqdOxygen2LqdHydrogen = 6.2
 		NTO2UDMH = 2.61
-		isp_RCS = 150
+		isp_RCS = 170
 		isp_solid_fuel = 182
-		isp_hydrazine = 214, 215, 216, 217, 218, 219,   220, 221, 222, 223, 224, 225
-		isp_kerolox = 231, 232, 233, 234, 235, 236,   237, 238, 239, 240, 241, 242
+		isp_hydrazine = 201, 202, 203, 204, 205, 206,   207, 208, 209, 210, 211, 212
+		isp_kerolox = 213, 214, 215, 216, 217, 218,   219, 220, 221, 222, 223, 224
 		isp_hypergolic = 266, 267, 268, 269, 270, 271,   272, 273, 274, 275, 276, 277
-		isp_hydrolox = 418, 419, 420, 421, 422, 423,   424, 425, 426, 427, 428, 429
+		isp_hydrolox = 370, 371, 372, 373, 374, 375,   376, 377, 378, 379, 380, 381
 		comm_near1 = 75000, 90.00,   10, 0.006, 0.005, 0.004, 0.003
 		comm_near2 = 250000, 90.00,   25, 0.010, 0.009, 0.008, 0.007
 		comm_near3 = 1000000, 90.00,   50, 0.014, 0.013, 0.012, 0.011
@@ -33905,42 +33931,42 @@ UrlConfig
 		battery_structural = 0.15
 		TonsPerWattHour = 7E-06
 		TonsPerTorque = 0.2
-		isp_lower_0635_hydrazine = 214
-		isp_lower_1250_hydrazine =  215
-		isp_lower_1875_hydrazine =  216
-		isp_lower_2500_hydrazine =  217
-		isp_lower_3750_hydrazine =  218
-		isp_lower_5000_hydrazine =  219
-		isp_upper_0635_hydrazine =    220
-		isp_upper_1250_hydrazine =  221
-		isp_upper_1875_hydrazine =  222
-		isp_upper_2500_hydrazine =  223
-		isp_upper_3750_hydrazine =  224
-		isp_upper_5000_hydrazine =  225
-		isp_lower_0635_kerolox = 231
-		isp_lower_1250_kerolox =  232
-		isp_lower_1875_kerolox =  233
-		isp_lower_2500_kerolox =  234
-		isp_lower_3750_kerolox =  235
-		isp_lower_5000_kerolox =  236
-		isp_upper_0635_kerolox =    237
-		isp_upper_1250_kerolox =  238
-		isp_upper_1875_kerolox =  239
-		isp_upper_2500_kerolox =  240
-		isp_upper_3750_kerolox =  241
-		isp_upper_5000_kerolox =  242
-		isp_lower_0635_hydrolox = 418
-		isp_lower_1250_hydrolox =  419
-		isp_lower_1875_hydrolox =  420
-		isp_lower_2500_hydrolox =  421
-		isp_lower_3750_hydrolox =  422
-		isp_lower_5000_hydrolox =  423
-		isp_upper_0635_hydrolox =    424
-		isp_upper_1250_hydrolox =  425
-		isp_upper_1875_hydrolox =  426
-		isp_upper_2500_hydrolox =  427
-		isp_upper_3750_hydrolox =  428
-		isp_upper_5000_hydrolox =  429
+		isp_lower_0635_hydrazine = 201
+		isp_lower_1250_hydrazine =  202
+		isp_lower_1875_hydrazine =  203
+		isp_lower_2500_hydrazine =  204
+		isp_lower_3750_hydrazine =  205
+		isp_lower_5000_hydrazine =  206
+		isp_upper_0635_hydrazine =    207
+		isp_upper_1250_hydrazine =  208
+		isp_upper_1875_hydrazine =  209
+		isp_upper_2500_hydrazine =  210
+		isp_upper_3750_hydrazine =  211
+		isp_upper_5000_hydrazine =  212
+		isp_lower_0635_kerolox = 213
+		isp_lower_1250_kerolox =  214
+		isp_lower_1875_kerolox =  215
+		isp_lower_2500_kerolox =  216
+		isp_lower_3750_kerolox =  217
+		isp_lower_5000_kerolox =  218
+		isp_upper_0635_kerolox =    219
+		isp_upper_1250_kerolox =  220
+		isp_upper_1875_kerolox =  221
+		isp_upper_2500_kerolox =  222
+		isp_upper_3750_kerolox =  223
+		isp_upper_5000_kerolox =  224
+		isp_lower_0635_hydrolox = 370
+		isp_lower_1250_hydrolox =  371
+		isp_lower_1875_hydrolox =  372
+		isp_lower_2500_hydrolox =  373
+		isp_lower_3750_hydrolox =  374
+		isp_lower_5000_hydrolox =  375
+		isp_upper_0635_hydrolox =    376
+		isp_upper_1250_hydrolox =  377
+		isp_upper_1875_hydrolox =  378
+		isp_upper_2500_hydrolox =  379
+		isp_upper_3750_hydrolox =  380
+		isp_upper_5000_hydrolox =  381
 		isp_lower_0635_hypergolic = 266
 		isp_lower_1250_hypergolic =  267
 		isp_lower_1875_hypergolic =  268
@@ -34344,7 +34370,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		vesselType = Ship
 		bulkheadProfiles = size2
 		crashTolerance = 8
@@ -34437,7 +34463,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		vesselType = Ship
 		bulkheadProfiles = size2
 		crashTolerance = 8
@@ -34530,7 +34556,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		vesselType = Ship
 		bulkheadProfiles = size2
 		crashTolerance = 8
@@ -34623,7 +34649,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		vesselType = Ship
 		bulkheadProfiles = size2
 		crashTolerance = 8
@@ -34716,7 +34742,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		vesselType = Ship
 		bulkheadProfiles = size2
 		crashTolerance = 8
@@ -34809,7 +34835,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		vesselType = Ship
 		bulkheadProfiles = size2
 		crashTolerance = 8
@@ -34902,7 +34928,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		vesselType = Ship
 		bulkheadProfiles = size2
 		crashTolerance = 8
@@ -34995,7 +35021,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		vesselType = Ship
 		bulkheadProfiles = size2
 		crashTolerance = 8
@@ -35088,7 +35114,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		vesselType = Ship
 		bulkheadProfiles = size2
 		crashTolerance = 8
@@ -35181,7 +35207,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		vesselType = Ship
 		bulkheadProfiles = size2
 		crashTolerance = 8
@@ -35274,7 +35300,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		vesselType = Ship
 		bulkheadProfiles = size2
 		crashTolerance = 8
@@ -35367,7 +35393,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		vesselType = Ship
 		bulkheadProfiles = size2
 		crashTolerance = 8
@@ -35460,7 +35486,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		vesselType = Ship
 		bulkheadProfiles = size2
 		crashTolerance = 8
@@ -35553,7 +35579,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		vesselType = Ship
 		bulkheadProfiles = size2
 		crashTolerance = 8
@@ -35646,7 +35672,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		vesselType = Ship
 		bulkheadProfiles = size2
 		crashTolerance = 8
@@ -35739,7 +35765,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		vesselType = Ship
 		bulkheadProfiles = size2
 		crashTolerance = 8
@@ -35832,7 +35858,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		vesselType = Ship
 		bulkheadProfiles = size2
 		crashTolerance = 8
@@ -35925,7 +35951,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		vesselType = Ship
 		bulkheadProfiles = size2
 		crashTolerance = 8
@@ -36018,7 +36044,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		vesselType = Ship
 		bulkheadProfiles = size2
 		crashTolerance = 8
@@ -36111,7 +36137,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		vesselType = Ship
 		bulkheadProfiles = size2
 		crashTolerance = 8
@@ -36204,7 +36230,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		vesselType = Ship
 		bulkheadProfiles = size2
 		crashTolerance = 8
@@ -36297,7 +36323,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		vesselType = Ship
 		bulkheadProfiles = size2
 		crashTolerance = 8
@@ -36390,7 +36416,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		vesselType = Ship
 		bulkheadProfiles = size2
 		crashTolerance = 8
@@ -36483,7 +36509,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		vesselType = Ship
 		bulkheadProfiles = size2
 		crashTolerance = 8
@@ -36576,7 +36602,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		vesselType = Ship
 		bulkheadProfiles = size2
 		crashTolerance = 8
@@ -36669,7 +36695,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		vesselType = Ship
 		bulkheadProfiles = size2
 		crashTolerance = 8
@@ -36762,7 +36788,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		vesselType = Ship
 		bulkheadProfiles = size2
 		crashTolerance = 8
@@ -36856,7 +36882,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1000
 		fuelCrossFeed = True
 		heatConductivity = 0.01
 		crashTolerance = 12
@@ -36871,6 +36897,7 @@ UrlConfig
 		VARS
 		{
 			strength = strong
+			maxTemp = truss
 			TechRequired = metaMaterials
 			old_mass = 2
 		}
@@ -36928,6 +36955,7 @@ UrlConfig
 			action = clear mass
 			action = set CanArea mass defaults
 			action = set mass from cylinder surface area
+			action = change maxTemp to 'truss'
 		}
 	}
 }
@@ -36960,7 +36988,7 @@ UrlConfig
 		maximum_drag = 0.1
 		minimum_drag = 0.1
 		angularDrag = 1
-		maxTemp = 800
+		maxTemp = 875
 		crashTolerance = 12
 		breakingForce = 100
 		breakingTorque = 100
@@ -37159,6 +37187,7 @@ UrlConfig
 		VARS
 		{
 			TechRequired = inProgress
+			maxTemp = truss
 			old_mass = 0.375
 		}
 		MODULE
@@ -37191,6 +37220,7 @@ UrlConfig
 			action = no crashTolerance set, use default
 			action = no breakingForce set, use default
 			action = no breakingTorque set, use default
+			action = change maxTemp to 'truss'
 		}
 	}
 }
@@ -37241,7 +37271,7 @@ UrlConfig
 		minimum_drag = 0
 		angularDrag = 0
 		impactTolerance = 8
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -37362,7 +37392,7 @@ UrlConfig
 		minimum_drag = 0
 		angularDrag = 0
 		impactTolerance = 8
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -37483,7 +37513,7 @@ UrlConfig
 		minimum_drag = 0
 		angularDrag = 0
 		impactTolerance = 8
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -37644,7 +37674,7 @@ UrlConfig
 		minimum_drag = 0.1
 		angularDrag = 0.1
 		impactTolerance = 120
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -37765,7 +37795,7 @@ UrlConfig
 		minimum_drag = 0.0
 		angularDrag = 0.0
 		impactTolerance = 5
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -37889,7 +37919,7 @@ UrlConfig
 		minimum_drag = 0.0
 		angularDrag = 0
 		impactTolerance = 8
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -38048,7 +38078,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -38159,7 +38189,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -38322,7 +38352,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = srf
 		crashTolerance = 8
 		breakingForce = 25
@@ -38429,7 +38459,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size1
 		crashTolerance = 8
 		breakingForce = 25
@@ -38530,7 +38560,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size1
 		crashTolerance = 8
 		breakingForce = 25
@@ -38634,7 +38664,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size1
 		crashTolerance = 8
 		breakingForce = 25
@@ -38733,7 +38763,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size1
 		crashTolerance = 8
 		breakingForce = 25
@@ -38840,7 +38870,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size1, srf
 		crashTolerance = 8
 		breakingForce = 25
@@ -38932,7 +38962,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = srf
 		crashTolerance = 8
 		breakingForce = 25
@@ -39037,7 +39067,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size1
 		crashTolerance = 8
 		breakingForce = 25
@@ -39161,7 +39191,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size1, srf
 		crashTolerance = 8
 		breakingForce = 25
@@ -39418,7 +39448,7 @@ UrlConfig
 		maximum_drag = 0.3
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -39572,7 +39602,7 @@ UrlConfig
 		maximum_drag = 0.3
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -39796,7 +39826,7 @@ UrlConfig
 		maximum_drag = 0.3
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -39970,7 +40000,7 @@ UrlConfig
 		maximum_drag = 0.3
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -40136,7 +40166,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 725
 		node_stack_bottom = 0,    -0.02,    0,    0, -1,    0,  1
 		crashTolerance = 8
 		breakingForce = 25
@@ -40209,6 +40239,7 @@ UrlConfig
 			action = no crashTolerance set, use default
 			action = no breakingForce set, use default
 			action = no breakingTorque set, use default
+			action = change maxTemp to 'communications'
 		}
 		MODULE
 		{
@@ -40291,8 +40322,8 @@ UrlConfig
 			}
 			atmosphereCurve
 			{
-				key = 0  234
-				key = 1 210.6
+				key = 0  216
+				key = 1 194.4
 				key = 9 0.001
 			}
 		}
@@ -40360,9 +40391,9 @@ UrlConfig
 			engine_type = Kerolox
 			engine_thrust = 1550
 			TWR_type = 25.5
-			isp_v =  234
+			isp_v =  216
 			strength = strong
-			isp_sl = 210.6
+			isp_sl = 194.4
 		}
 		MODULE
 		{
@@ -40406,7 +40437,7 @@ UrlConfig
 			transformName = thrustTransform
 			localRotation = 0,0,0
 			localPosition = 0,0,1
-			fixedScale = 0.5
+			fixedScale = 0.6
 			energy = 1
 			speed = 1
 		}
@@ -40438,7 +40469,7 @@ UrlConfig
 					transformName = thrustTransform
 					localRotation = 0,0,0
 					localPosition = 0,0,1
-					fixedScale = 0.5
+					fixedScale = 0.6
 					energy = 1
 					speed = 1
 					name = plume
@@ -40455,26 +40486,31 @@ UrlConfig
 					}
 					speed
 					{
-						power = 0 1.3
-						power = 1 2.2
-						density = 0 5
-						density = 1 1
+						power = 0 2.0
+						power = 1 3.5
+						density = 0 1.5
+						density = 1 1.0
 					}
 					energy
 					{
-						power = 0 1
-						power = 1 2
-						density = 0 0.2
-						density = 1 1
+						power = 0 1.0
+						power = 1 1.5
+						density = 0 0.5
+						density = 1 1.0
 					}
 					size
 					{
-						density = 0 5
+						density = 0 3
 						density = 1 1
 					}
 					offset
 					{
 						density = 0 1.5
+						density = 1 0.0
+					}
+					grow
+					{
+						density = 0 2
 						density = 1 0
 					}
 				}
@@ -40483,7 +40519,7 @@ UrlConfig
 					transformName = thrustTransform
 					localRotation = 0,0,0
 					localPosition = 0,0,1
-					fixedScale = 0.5
+					fixedScale = 0.6
 					name = flare
 					modelName = RealPlume/MP_Nazari_FX/KWbooster
 					fixedEmissions = false
@@ -40513,7 +40549,7 @@ UrlConfig
 					transformName = thrustTransform
 					localRotation = 0,0,0
 					localPosition = 0,0,1
-					fixedScale = 0.5
+					fixedScale = 0.6
 					name = smoke
 					modelName = RealPlume/MP_Nazari_FX/smokebooster2
 					energy = 0.0 5
@@ -42265,7 +42301,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size2, srf
 		crashTolerance = 8
 		breakingForce = 25
@@ -42365,7 +42401,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 750
+		maxTemp = 825
 		bulkheadProfiles = size2, srf
 		crashTolerance = 8
 		breakingForce = 25
@@ -42489,7 +42525,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 750
+		maxTemp = 825
 		bulkheadProfiles = size2, srf
 		crashTolerance = 8
 		breakingForce = 25
@@ -42616,7 +42652,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 800
+		maxTemp = 875
 		fuelCrossFeed = False
 		stageOffset = 1
 		childStageOffset = 1
@@ -42871,6 +42907,7 @@ UrlConfig
 			moduleName = USI_ModuleRecycleablePart
 			moduleName = CollisionFX
 			moduleName = ModuleAGX
+			moduleName = RCSLandingAidModule
 		}
 		StackableItemOverride
 		{
@@ -42907,7 +42944,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		PhysicsSignificance = 1
 		bulkheadProfiles = srf
 		crashTolerance = 8
@@ -43003,7 +43040,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size1, srf
 		crashTolerance = 8
 		breakingForce = 25
@@ -43091,7 +43128,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size1, srf
 		crashTolerance = 8
 		breakingForce = 25
@@ -43205,7 +43242,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size2
 		crashTolerance = 8
 		breakingForce = 25
@@ -43312,7 +43349,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size2
 		crashTolerance = 8
 		breakingForce = 25
@@ -43413,7 +43450,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = srf
 		crashTolerance = 8
 		breakingForce = 25
@@ -43506,7 +43543,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		PhysicsSignificance = 1
 		bulkheadProfiles = srf
 		crashTolerance = 8
@@ -43603,7 +43640,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		PhysicsSignificance = 1
 		bulkheadProfiles = srf
 		crashTolerance = 8
@@ -43707,7 +43744,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		PhysicsSignificance = 1
 		bulkheadProfiles = srf
 		crashTolerance = 8
@@ -43816,7 +43853,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		PhysicsSignificance = 1
 		bulkheadProfiles = srf
 		crashTolerance = 8
@@ -44049,7 +44086,7 @@ UrlConfig
 		maximum_drag = 0.3
 		minimum_drag = 0.3
 		angularDrag = 0.5
-		maxTemp = 650
+		maxTemp = 1
 		fuelCrossFeed = True
 		crashTolerance = 8
 		breakingForce = 25
@@ -44464,8 +44501,8 @@ UrlConfig
 			}
 			atmosphereCurve
 			{
-				key = 0  426
-				key = 1 298.2
+				key = 0  378
+				key = 1 264.6
 				key = 3 0.001
 			}
 		}
@@ -44538,9 +44575,9 @@ UrlConfig
 			engine_type = Hydrolox
 			engine_thrust =   215
 			TWR_type = 25.5
-			isp_v =  426
+			isp_v =  378
 			strength = strong
-			isp_sl = 298.2
+			isp_sl = 264.6
 			old_mass = 0.75
 		}
 		MODULE
@@ -47516,17 +47553,16 @@ UrlConfig
 		stackSymmetry = 1
 		mass = 0.00930615011317288
 		dragModelType = default
-		maxTemp = 800
+		maxTemp = 875
 		fuelCrossFeed = False
+		heatConductivity = 0.003
 		stageOffset = 1
 		childStageOffset = 1
 		maximum_drag = 0.01
 		minimum_drag = 0.01
 		angularDrag = 0.05
-		thermalMassModifier = 2
-		emissiveConstant = 0.8
-		heatConductivity = 0.04
-		skinInternalConductionMult = 0.25
+		thermalMassModifier = 6
+		emissiveConstant = 0.65
 		crashTolerance = 12
 		breakingForce = 100
 		breakingTorque = 100
@@ -47653,17 +47689,15 @@ UrlConfig
 		stackSymmetry = 1
 		mass = 0.01241383487469
 		dragModelType = default
-		maxTemp = 800
+		maxTemp = 875
 		stagingIcon = DECOUPLER_HOR
 		stageOffset = 1
 		childStageOffset = 1
 		maximum_drag = 0.01
 		minimum_drag = 0.01
 		angularDrag = 0.05
-		thermalMassModifier = 2
-		emissiveConstant = 0.8
-		heatConductivity = 0.04
-		skinInternalConductionMult = 0.25
+		thermalMassModifier = 6
+		emissiveConstant = 0.65
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -47794,17 +47828,15 @@ UrlConfig
 		stackSymmetry = 1
 		mass = 0.963631429425809
 		dragModelType = default
-		maxTemp = 800
+		maxTemp = 875
 		stagingIcon = DECOUPLER_HOR
 		stageOffset = 1
 		childStageOffset = 1
 		maximum_drag = 0.01
 		minimum_drag = 0.01
 		angularDrag = 0.05
-		thermalMassModifier = 2
-		emissiveConstant = 0.8
-		heatConductivity = 0.04
-		skinInternalConductionMult = 0.25
+		thermalMassModifier = 6
+		emissiveConstant = 0.65
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -47947,17 +47979,15 @@ UrlConfig
 		stackSymmetry = 1
 		mass = 0.306573317981307
 		dragModelType = default
-		maxTemp = 800
+		maxTemp = 875
 		stagingIcon = DECOUPLER_HOR
 		stageOffset = 1
 		childStageOffset = 1
 		maximum_drag = 0.01
 		minimum_drag = 0.01
 		angularDrag = 0.05
-		thermalMassModifier = 2
-		emissiveConstant = 0.8
-		heatConductivity = 0.04
-		skinInternalConductionMult = 0.25
+		thermalMassModifier = 6
+		emissiveConstant = 0.65
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -48092,10 +48122,8 @@ UrlConfig
 		maximum_drag = 0.01
 		minimum_drag = 0.01
 		angularDrag = 0.05
-		thermalMassModifier = 2
-		emissiveConstant = 0.8
-		heatConductivity = 0.04
-		skinInternalConductionMult = 0.25
+		thermalMassModifier = 6
+		emissiveConstant = 0.65
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -48202,7 +48230,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 800
+		maxTemp = 875
 		fuelCrossFeed = False
 		heatConductivity = 0.003
 		stageOffset = 1
@@ -48327,7 +48355,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 800
+		maxTemp = 875
 		fuelCrossFeed = False
 		heatConductivity = 0.003
 		stageOffset = 1
@@ -48462,17 +48490,16 @@ UrlConfig
 		stackSymmetry = 3
 		mass = 1.3892960472215
 		dragModelType = default
-		maxTemp = 800
+		maxTemp = 875
 		fuelCrossFeed = False
+		heatConductivity = 0.003
 		stageOffset = 1
 		childStageOffset = 1
 		maximum_drag = 0.01
 		minimum_drag = 0.01
 		angularDrag = 0.05
-		thermalMassModifier = 2
-		emissiveConstant = 0.8
-		heatConductivity = 0.04
-		skinInternalConductionMult = 0.25
+		thermalMassModifier = 6
+		emissiveConstant = 0.65
 		crashTolerance = 12
 		breakingForce = 100
 		breakingTorque = 100
@@ -48606,17 +48633,16 @@ UrlConfig
 		stackSymmetry = 1
 		mass = 3.16319110308322
 		dragModelType = default
-		maxTemp = 800
+		maxTemp = 875
 		fuelCrossFeed = False
+		heatConductivity = 0.003
 		stageOffset = 1
 		childStageOffset = 1
 		maximum_drag = 0.01
 		minimum_drag = 0.01
 		angularDrag = 0.05
-		thermalMassModifier = 2
-		emissiveConstant = 0.8
-		heatConductivity = 0.04
-		skinInternalConductionMult = 0.25
+		thermalMassModifier = 6
+		emissiveConstant = 0.65
 		crashTolerance = 12
 		breakingForce = 100
 		breakingTorque = 100
@@ -48753,10 +48779,8 @@ UrlConfig
 		maximum_drag = 0.01
 		minimum_drag = 0.01
 		angularDrag = 0.05
-		thermalMassModifier = 2
-		emissiveConstant = 0.8
-		heatConductivity = 0.04
-		skinInternalConductionMult = 0.25
+		thermalMassModifier = 6
+		emissiveConstant = 0.65
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -48861,10 +48885,8 @@ UrlConfig
 		maximum_drag = 0.01
 		minimum_drag = 0.01
 		angularDrag = 0.05
-		thermalMassModifier = 2
-		emissiveConstant = 0.8
-		heatConductivity = 0.04
-		skinInternalConductionMult = 0.25
+		thermalMassModifier = 6
+		emissiveConstant = 0.65
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -48980,7 +49002,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -49073,7 +49095,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		fuelCrossFeed = True
 		crashTolerance = 8
 		breakingForce = 25
@@ -49167,7 +49189,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -49260,7 +49282,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -49353,7 +49375,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -49451,7 +49473,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -49544,7 +49566,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -49637,7 +49659,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		fuelCrossFeed = True
 		crashTolerance = 8
 		breakingForce = 25
@@ -49731,7 +49753,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -49824,7 +49846,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -49917,7 +49939,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -50014,7 +50036,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -50107,7 +50129,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -50200,7 +50222,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -50293,7 +50315,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		fuelCrossFeed = True
 		crashTolerance = 8
 		breakingForce = 25
@@ -50387,7 +50409,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -50480,7 +50502,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -50573,7 +50595,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -50671,7 +50693,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -50764,7 +50786,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -50857,7 +50879,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -50950,7 +50972,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -51043,7 +51065,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -53550,7 +53572,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 800
+		maxTemp = 875
 		fuelCrossFeed = False
 		stageOffset = 1
 		childStageOffset = 1
@@ -53674,7 +53696,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 800
+		maxTemp = 875
 		fuelCrossFeed = False
 		stageOffset = 1
 		childStageOffset = 1
@@ -53798,7 +53820,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 800
+		maxTemp = 875
 		fuelCrossFeed = False
 		heatConductivity = 0.003
 		stageOffset = 1
@@ -53929,7 +53951,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		fuelCrossFeed = True
 		stageOffset = 1
 		childStageOffset = 1
@@ -54021,7 +54043,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		fuelCrossFeed = True
 		stageOffset = 1
 		childStageOffset = 1
@@ -54113,7 +54135,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		fuelCrossFeed = True
 		stageOffset = 1
 		childStageOffset = 1
@@ -54206,7 +54228,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -54298,7 +54320,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -54390,7 +54412,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -54482,7 +54504,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -54574,7 +54596,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -54666,7 +54688,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -54758,7 +54780,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -54850,7 +54872,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -54944,7 +54966,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 800
+		maxTemp = 875
 		fuelCrossFeed = False
 		heatConductivity = 0.003
 		stageOffset = 1
@@ -57570,7 +57592,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 875
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -57622,6 +57644,7 @@ UrlConfig
 		VARS
 		{
 			TechRequired = actuators
+			maxTemp = robotic
 			old_mass = 0.2
 		}
 		MODULE
@@ -57650,6 +57673,7 @@ UrlConfig
 			action = no crashTolerance set, use default
 			action = no breakingForce set, use default
 			action = no breakingTorque set, use default
+			action = change maxTemp to 'robotic'
 		}
 	}
 }
@@ -57684,7 +57708,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 875
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -57735,6 +57759,7 @@ UrlConfig
 		VARS
 		{
 			TechRequired = composites
+			maxTemp = robotic
 			old_mass = 0.025
 		}
 		MODULE
@@ -57763,6 +57788,7 @@ UrlConfig
 			action = no crashTolerance set, use default
 			action = no breakingForce set, use default
 			action = no breakingTorque set, use default
+			action = change maxTemp to 'robotic'
 		}
 	}
 }
@@ -57796,7 +57822,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -57915,7 +57941,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 875
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -57967,6 +57993,7 @@ UrlConfig
 		VARS
 		{
 			TechRequired = metaMaterials
+			maxTemp = robotic
 			old_mass = 0.8
 		}
 		MODULE
@@ -57995,6 +58022,7 @@ UrlConfig
 			action = no crashTolerance set, use default
 			action = no breakingForce set, use default
 			action = no breakingTorque set, use default
+			action = change maxTemp to 'robotic'
 		}
 	}
 }
@@ -58036,7 +58064,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 875
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -58088,6 +58116,7 @@ UrlConfig
 		VARS
 		{
 			TechRequired = metaMaterials
+			maxTemp = robotic
 			old_mass = 0.8
 		}
 		MODULE
@@ -58116,6 +58145,7 @@ UrlConfig
 			action = no crashTolerance set, use default
 			action = no breakingForce set, use default
 			action = no breakingTorque set, use default
+			action = change maxTemp to 'robotic'
 		}
 	}
 }
@@ -58150,7 +58180,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 875
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -58203,6 +58233,7 @@ UrlConfig
 		VARS
 		{
 			TechRequired = composites
+			maxTemp = robotic
 			old_mass = 0.1
 		}
 		MODULE
@@ -58231,6 +58262,7 @@ UrlConfig
 			action = no crashTolerance set, use default
 			action = no breakingForce set, use default
 			action = no breakingTorque set, use default
+			action = change maxTemp to 'robotic'
 		}
 	}
 }
@@ -58264,7 +58296,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 875
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -58322,6 +58354,7 @@ UrlConfig
 		VARS
 		{
 			TechRequired = composites
+			maxTemp = robotic
 			old_mass = 0.1
 		}
 		MODULE
@@ -58350,6 +58383,7 @@ UrlConfig
 			action = no crashTolerance set, use default
 			action = no breakingForce set, use default
 			action = no breakingTorque set, use default
+			action = change maxTemp to 'robotic'
 		}
 	}
 }
@@ -58385,7 +58419,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 875
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -58443,6 +58477,7 @@ UrlConfig
 		VARS
 		{
 			TechRequired = actuators
+			maxTemp = robotic
 			old_mass = 0.1
 		}
 		MODULE
@@ -58471,6 +58506,7 @@ UrlConfig
 			action = no crashTolerance set, use default
 			action = no breakingForce set, use default
 			action = no breakingTorque set, use default
+			action = change maxTemp to 'robotic'
 		}
 	}
 }
@@ -58506,7 +58542,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -58622,7 +58658,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -58731,7 +58767,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 875
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -58782,6 +58818,7 @@ UrlConfig
 		VARS
 		{
 			TechRequired = actuators
+			maxTemp = robotic
 			old_mass = 0.1
 		}
 		MODULE
@@ -58810,6 +58847,7 @@ UrlConfig
 			action = no crashTolerance set, use default
 			action = no breakingForce set, use default
 			action = no breakingTorque set, use default
+			action = change maxTemp to 'robotic'
 		}
 	}
 }
@@ -58843,7 +58881,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -58957,7 +58995,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -59070,7 +59108,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -59183,7 +59221,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -59296,7 +59334,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -59409,7 +59447,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -59522,7 +59560,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -59635,7 +59673,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -59748,7 +59786,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -59861,7 +59899,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -59969,7 +60007,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -60077,7 +60115,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -60191,7 +60229,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -60305,7 +60343,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -60419,7 +60457,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -60533,7 +60571,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -60641,7 +60679,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -60736,7 +60774,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -60831,7 +60869,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -60926,7 +60964,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -61021,7 +61059,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -61116,7 +61154,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -61211,7 +61249,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -61306,7 +61344,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -61401,7 +61439,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1000
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -61435,6 +61473,7 @@ UrlConfig
 		VARS
 		{
 			TechRequired = specializedConstruction
+			maxTemp = truss
 			old_mass = 0.08
 		}
 		MODULE
@@ -61472,6 +61511,7 @@ UrlConfig
 			action = no crashTolerance set, use default
 			action = no breakingForce set, use default
 			action = no breakingTorque set, use default
+			action = change maxTemp to 'truss'
 		}
 	}
 }
@@ -61505,7 +61545,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1000
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -61539,6 +61579,7 @@ UrlConfig
 		VARS
 		{
 			TechRequired = specializedConstruction
+			maxTemp = truss
 			old_mass = 0.16
 		}
 		MODULE
@@ -61576,6 +61617,7 @@ UrlConfig
 			action = no crashTolerance set, use default
 			action = no breakingForce set, use default
 			action = no breakingTorque set, use default
+			action = change maxTemp to 'truss'
 		}
 	}
 }
@@ -61609,7 +61651,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1000
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -61643,6 +61685,7 @@ UrlConfig
 		VARS
 		{
 			TechRequired = specializedConstruction
+			maxTemp = truss
 			old_mass = 0.32
 		}
 		MODULE
@@ -61680,6 +61723,7 @@ UrlConfig
 			action = no crashTolerance set, use default
 			action = no breakingForce set, use default
 			action = no breakingTorque set, use default
+			action = change maxTemp to 'truss'
 		}
 	}
 }
@@ -61713,7 +61757,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -61808,7 +61852,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -61903,7 +61947,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -61998,7 +62042,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -62093,7 +62137,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -62188,7 +62232,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -62283,7 +62327,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -62396,7 +62440,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 875
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -62448,6 +62492,7 @@ UrlConfig
 		VARS
 		{
 			TechRequired = advMetalworks
+			maxTemp = robotic
 			old_mass = 0.08
 		}
 		MODULE
@@ -62476,6 +62521,7 @@ UrlConfig
 			action = no crashTolerance set, use default
 			action = no breakingForce set, use default
 			action = no breakingTorque set, use default
+			action = change maxTemp to 'robotic'
 		}
 	}
 }
@@ -63272,7 +63318,7 @@ UrlConfig
 		maximum_drag = 0.3
 		minimum_drag = 0.3
 		angularDrag = 3
-		maxTemp = 650
+		maxTemp = 1
 		fuelCrossFeed = True
 		crashTolerance = 8
 		breakingForce = 25
@@ -63364,7 +63410,7 @@ UrlConfig
 		maximum_drag = 0.3
 		minimum_drag = 0.3
 		angularDrag = 3
-		maxTemp = 650
+		maxTemp = 1
 		fuelCrossFeed = True
 		crashTolerance = 8
 		breakingForce = 25
@@ -63458,7 +63504,7 @@ UrlConfig
 		maximum_drag = 0.3
 		minimum_drag = 0.3
 		angularDrag = 3
-		maxTemp = 650
+		maxTemp = 1
 		fuelCrossFeed = True
 		crashTolerance = 8
 		breakingForce = 25
@@ -63552,7 +63598,7 @@ UrlConfig
 		maximum_drag = 0.3
 		minimum_drag = 0.3
 		angularDrag = 3
-		maxTemp = 650
+		maxTemp = 1
 		fuelCrossFeed = True
 		crashTolerance = 8
 		breakingForce = 25
@@ -63647,7 +63693,7 @@ UrlConfig
 		maximum_drag = 0.3
 		minimum_drag = 0.3
 		angularDrag = 3
-		maxTemp = 650
+		maxTemp = 1
 		fuelCrossFeed = True
 		crashTolerance = 8
 		breakingForce = 25
@@ -63752,7 +63798,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.15
 		angularDrag = 1.5
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = srf
 		explosionPotential = 0
 		vesselType = Probe
@@ -63862,7 +63908,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.15
 		angularDrag = 1.5
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = srf
 		explosionPotential = 0
 		vesselType = Probe
@@ -63978,7 +64024,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -64140,7 +64186,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -64294,7 +64340,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = srf
 		PhysicsSignificance = 1
 		crashTolerance = 8
@@ -64381,7 +64427,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size2
 		crashTolerance = 8
 		breakingForce = 25
@@ -64466,7 +64512,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 725
 		TechRequired = inProgress
 		crashTolerance = 8
 		breakingForce = 25
@@ -64518,6 +64564,7 @@ UrlConfig
 			action = no crashTolerance set, use default
 			action = no breakingForce set, use default
 			action = no breakingTorque set, use default
+			action = change maxTemp to 'communications'
 		}
 		MODULE
 		{
@@ -64607,7 +64654,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 725
 		TechRequired = inProgress
 		crashTolerance = 8
 		breakingForce = 25
@@ -64659,6 +64706,7 @@ UrlConfig
 			action = no crashTolerance set, use default
 			action = no breakingForce set, use default
 			action = no breakingTorque set, use default
+			action = change maxTemp to 'communications'
 		}
 		MODULE
 		{
@@ -64762,7 +64810,7 @@ UrlConfig
 		maximum_drag = 0.3
 		minimum_drag = 0.3
 		angularDrag = 3
-		maxTemp = 650
+		maxTemp = 1
 		thermalMassModifier = 0.4
 		fuelCrossFeed = True
 		NoCrossFeedNodeKey = bottom
@@ -64860,7 +64908,7 @@ UrlConfig
 		maximum_drag = 0.3
 		minimum_drag = 0.3
 		angularDrag = 3
-		maxTemp = 650
+		maxTemp = 1
 		thermalMassModifier = 0.4
 		fuelCrossFeed = True
 		NoCrossFeedNodeKey = bottom
@@ -64959,7 +65007,7 @@ UrlConfig
 		maximum_drag = 0.3
 		minimum_drag = 0.3
 		angularDrag = 3
-		maxTemp = 650
+		maxTemp = 1
 		thermalMassModifier = 0.4
 		fuelCrossFeed = True
 		NoCrossFeedNodeKey = bottom
@@ -65059,7 +65107,7 @@ UrlConfig
 		maximum_drag = 0.3
 		minimum_drag = 0.3
 		angularDrag = 3
-		maxTemp = 650
+		maxTemp = 1
 		thermalMassModifier = 0.4
 		fuelCrossFeed = True
 		NoCrossFeedNodeKey = bottom
@@ -65161,7 +65209,7 @@ UrlConfig
 		maximum_drag = 0.3
 		minimum_drag = 0.3
 		angularDrag = 3
-		maxTemp = 650
+		maxTemp = 1
 		thermalMassModifier = 0.4
 		fuelCrossFeed = True
 		NoCrossFeedNodeKey = bottom
@@ -65265,7 +65313,7 @@ UrlConfig
 		maximum_drag = 0.3
 		minimum_drag = 0.3
 		angularDrag = 3
-		maxTemp = 650
+		maxTemp = 1
 		thermalMassModifier = 0.4
 		fuelCrossFeed = True
 		NoCrossFeedNodeKey = bottom
@@ -65363,7 +65411,7 @@ UrlConfig
 		maximum_drag = 0.3
 		minimum_drag = 0.3
 		angularDrag = 3
-		maxTemp = 650
+		maxTemp = 1
 		thermalMassModifier = 0.4
 		fuelCrossFeed = True
 		NoCrossFeedNodeKey = bottom
@@ -65459,7 +65507,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		fuelCrossFeed = True
 		crashTolerance = 8
 		breakingForce = 25
@@ -65546,7 +65594,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 800
+		maxTemp = 875
 		fuelCrossFeed = True
 		thermalMassModifier = 0.4
 		crashTolerance = 12
@@ -65669,7 +65717,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -65763,7 +65811,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -65856,7 +65904,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		thermalMassModifier = 0.4
 		crashTolerance = 8
 		breakingForce = 25
@@ -65965,7 +66013,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		thermalMassModifier = 0.4
 		crashTolerance = 8
 		breakingForce = 25
@@ -66074,7 +66122,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		thermalMassModifier = 0.4
 		crashTolerance = 8
 		breakingForce = 25
@@ -66161,7 +66209,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		thermalMassModifier = 0.4
 		crashTolerance = 8
 		breakingForce = 25
@@ -66249,7 +66297,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		thermalMassModifier = 0.8
 		crashTolerance = 8
 		breakingForce = 25
@@ -66348,7 +66396,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		thermalMassModifier = 0.8
 		crashTolerance = 8
 		breakingForce = 25
@@ -66450,7 +66498,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -66540,7 +66588,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -66626,7 +66674,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		fuelCrossFeed = True
 		thermalMassModifier = 0.4
 		crashTolerance = 8
@@ -66714,7 +66762,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		fuelCrossFeed = True
 		thermalMassModifier = 0.8
 		crashTolerance = 8
@@ -66804,7 +66852,7 @@ UrlConfig
 		maximum_drag = 0.25
 		minimum_drag = 0.25
 		angularDrag = 0.5
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -66916,7 +66964,7 @@ UrlConfig
 		maximum_drag = 0.25
 		minimum_drag = 0.25
 		angularDrag = 0.5
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -67034,7 +67082,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		fuelCrossFeed = True
 		crashTolerance = 8
 		breakingForce = 25
@@ -67126,7 +67174,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		fuelCrossFeed = True
 		crashTolerance = 8
 		breakingForce = 25
@@ -67216,7 +67264,7 @@ UrlConfig
 		maximum_drag = 0.25
 		minimum_drag = 0.25
 		angularDrag = 0.5
-		maxTemp = 650
+		maxTemp = 1
 		thermalMassModifier = 0.4
 		crashTolerance = 8
 		breakingForce = 25
@@ -67322,7 +67370,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 675
+		maxTemp = 750
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -67429,7 +67477,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 675
+		maxTemp = 750
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -67537,7 +67585,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 675
+		maxTemp = 750
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -67644,7 +67692,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -67726,7 +67774,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = srf, size0
 		crashTolerance = 8
 		breakingForce = 25
@@ -70925,7 +70973,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.3
 		bulkheadProfiles = size0,srf
 		crashTolerance = 8
@@ -71013,7 +71061,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.3
 		bulkheadProfiles = size0,srf
 		crashTolerance = 8
@@ -71101,7 +71149,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.3
 		bulkheadProfiles = size0,srf
 		crashTolerance = 8
@@ -71189,7 +71237,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.3
 		bulkheadProfiles = size1,srf
 		crashTolerance = 8
@@ -71277,7 +71325,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.3
 		bulkheadProfiles = size1,srf
 		crashTolerance = 8
@@ -71371,7 +71419,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.3
 		bulkheadProfiles = size1,srf
 		crashTolerance = 8
@@ -71459,7 +71507,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.3
 		bulkheadProfiles = size2,srf
 		crashTolerance = 8
@@ -71547,7 +71595,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.3
 		bulkheadProfiles = size2,srf
 		crashTolerance = 8
@@ -71641,7 +71689,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.3
 		bulkheadProfiles = size2,srf
 		crashTolerance = 8
@@ -71727,7 +71775,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.3
 		bulkheadProfiles = srf
 		crashTolerance = 8
@@ -71813,7 +71861,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.3
 		bulkheadProfiles = srf
 		crashTolerance = 8
@@ -71901,7 +71949,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.2
 		bulkheadProfiles = size5,srf
 		crashTolerance = 8
@@ -71999,7 +72047,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.2
 		bulkheadProfiles = size1,srf
 		crashTolerance = 8
@@ -72097,7 +72145,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.2
 		bulkheadProfiles = size1,srf
 		crashTolerance = 8
@@ -72195,7 +72243,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.2
 		bulkheadProfiles = size2,srf
 		crashTolerance = 8
@@ -72293,7 +72341,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.2
 		bulkheadProfiles = size2,srf
 		crashTolerance = 8
@@ -72391,7 +72439,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.2
 		bulkheadProfiles = size2,srf
 		crashTolerance = 8
@@ -72489,7 +72537,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.2
 		bulkheadProfiles = size3,srf
 		crashTolerance = 8
@@ -72587,7 +72635,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.2
 		bulkheadProfiles = size3,srf
 		crashTolerance = 8
@@ -72685,7 +72733,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.2
 		bulkheadProfiles = size3,srf
 		crashTolerance = 8
@@ -72781,7 +72829,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.2
 		bulkheadProfiles = srf
 		crashTolerance = 8
@@ -72877,7 +72925,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.2
 		bulkheadProfiles = srf
 		crashTolerance = 8
@@ -72973,7 +73021,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.2
 		bulkheadProfiles = srf
 		crashTolerance = 8
@@ -73071,7 +73119,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.3
 		bulkheadProfiles = size1,srf
 		crashTolerance = 8
@@ -73159,7 +73207,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.3
 		bulkheadProfiles = size1,srf
 		crashTolerance = 8
@@ -73253,7 +73301,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.3
 		bulkheadProfiles = size1,srf
 		crashTolerance = 8
@@ -73341,7 +73389,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.3
 		bulkheadProfiles = size2, srf
 		crashTolerance = 8
@@ -73429,7 +73477,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.3
 		bulkheadProfiles = size2,srf
 		crashTolerance = 8
@@ -73523,7 +73571,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.3
 		bulkheadProfiles = size2,srf
 		crashTolerance = 8
@@ -73609,7 +73657,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.3
 		bulkheadProfiles = srf
 		crashTolerance = 8
@@ -73759,7 +73807,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 725
+		maxTemp = 800
 		thermalMassModifier = 2.0
 		emissiveConstant = 0.95
 		heatConductivity = 0.04
@@ -73879,7 +73927,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 725
+		maxTemp = 800
 		thermalMassModifier = 2.0
 		emissiveConstant = 0.95
 		heatConductivity = 0.04
@@ -73983,7 +74031,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 725
+		maxTemp = 800
 		thermalMassModifier = 2.0
 		heatConductivity = 0.04
 		crashTolerance = 8
@@ -74101,7 +74149,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 725
+		maxTemp = 800
 		thermalMassModifier = 2.0
 		heatConductivity = 0.04
 		crashTolerance = 8
@@ -74219,7 +74267,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 725
+		maxTemp = 800
 		thermalMassModifier = 2.0
 		emissiveConstant = 0.95
 		heatConductivity = 0.04
@@ -74340,7 +74388,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 725
+		maxTemp = 800
 		thermalMassModifier = 2.0
 		emissiveConstant = 0.95
 		heatConductivity = 0.04
@@ -74459,7 +74507,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 725
+		maxTemp = 800
 		thermalMassModifier = 2.0
 		emissiveConstant = 0.95
 		heatConductivity = 0.04
@@ -74577,7 +74625,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 725
+		maxTemp = 800
 		thermalMassModifier = 2.0
 		emissiveConstant = 0.95
 		heatConductivity = 0.04
@@ -74695,7 +74743,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 725
+		maxTemp = 800
 		thermalMassModifier = 2.0
 		emissiveConstant = 0.95
 		heatConductivity = 0.04
@@ -74814,7 +74862,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 725
+		maxTemp = 800
 		thermalMassModifier = 2.0
 		emissiveConstant = 0.95
 		heatConductivity = 0.04
@@ -74935,7 +74983,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 725
+		maxTemp = 800
 		thermalMassModifier = 2.0
 		emissiveConstant = 0.95
 		heatConductivity = 0.04
@@ -75062,7 +75110,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 725
+		maxTemp = 800
 		thermalMassModifier = 2.0
 		emissiveConstant = 0.95
 		heatConductivity = 0.04
@@ -75181,7 +75229,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 725
+		maxTemp = 800
 		thermalMassModifier = 2.0
 		emissiveConstant = 0.95
 		heatConductivity = 0.04
@@ -75299,7 +75347,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 725
+		maxTemp = 800
 		thermalMassModifier = 2.0
 		emissiveConstant = 0.95
 		heatConductivity = 0.04
@@ -75415,7 +75463,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 725
+		maxTemp = 800
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -75527,7 +75575,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 725
+		maxTemp = 800
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -75645,7 +75693,7 @@ UrlConfig
 		maximum_drag = 0.20
 		minimum_drag = 0.15
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		vesselType = Ship
 		CrewCapacity = 6
 		crashTolerance = 8
@@ -75781,7 +75829,7 @@ UrlConfig
 		maximum_drag = 0.20
 		minimum_drag = 0.15
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		vesselType = Ship
 		CrewCapacity = 2
 		crashTolerance = 8
@@ -75921,7 +75969,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		vesselType = Ship
 		crashTolerance = 8
 		breakingForce = 25
@@ -76893,7 +76941,7 @@ UrlConfig
 		maximum_drag = 0.3
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		heatConductivity = 0.04
 		thermalMassModifier = 5.0
 		emissiveConstant = 0.95
@@ -77010,7 +77058,7 @@ UrlConfig
 		maximum_drag = 0.3
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		heatConductivity = 0.04
 		thermalMassModifier = 5.0
 		emissiveConstant = 0.95
@@ -77124,7 +77172,7 @@ UrlConfig
 		maximum_drag = 0.001
 		minimum_drag = 0.001
 		angularDrag = 2
-		maxTemp = 1000
+		maxTemp = 1100
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -77234,7 +77282,7 @@ UrlConfig
 		maximum_drag = 0.001
 		minimum_drag = 0.001
 		angularDrag = 2
-		maxTemp = 1000
+		maxTemp = 1100
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -77258,8 +77306,8 @@ UrlConfig
 			}
 			atmosphereCurve
 			{
-				key = 0 150
-				key = 1 52.5
+				key = 0 170
+				key = 1 59.5
 				key = 3 0.001
 			}
 		}
@@ -77285,7 +77333,7 @@ UrlConfig
 			TechRequired = specializedControl
 			RCS_directions = 2
 			RCS_power = 0.5
-			isp_sl = 52.5
+			isp_sl = 59.5
 			old_mass = 0.04
 		}
 		MODULE
@@ -77359,7 +77407,7 @@ UrlConfig
 		maximum_drag = 0.001
 		minimum_drag = 0.001
 		angularDrag = 2
-		maxTemp = 1000
+		maxTemp = 1100
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -77469,7 +77517,7 @@ UrlConfig
 		maximum_drag = 0.001
 		minimum_drag = 0.001
 		angularDrag = 2
-		maxTemp = 1000
+		maxTemp = 1100
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -77493,8 +77541,8 @@ UrlConfig
 			}
 			atmosphereCurve
 			{
-				key = 0 150
-				key = 1 52.5
+				key = 0 170
+				key = 1 59.5
 				key = 3 0.001
 			}
 		}
@@ -77520,7 +77568,7 @@ UrlConfig
 			TechRequired = specializedControl
 			RCS_directions = 1
 			RCS_power = 0.5
-			isp_sl = 52.5
+			isp_sl = 59.5
 			old_mass = 0.02
 		}
 		MODULE
@@ -77597,7 +77645,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -83740,7 +83788,7 @@ UrlConfig
 		maximum_drag = 0.25
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 1000
+		maxTemp = 1100
 		bulkheadProfiles = size1
 		crashTolerance = 8
 		breakingForce = 25
@@ -85077,7 +85125,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 725
 		TechRequired = inProgress
 		crashTolerance = 8
 		breakingForce = 25
@@ -85120,6 +85168,7 @@ UrlConfig
 			action = no crashTolerance set, use default
 			action = no breakingForce set, use default
 			action = no breakingTorque set, use default
+			action = change maxTemp to 'communications'
 		}
 		MODULE
 		{
@@ -85212,7 +85261,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 725
 		TechRequired = inProgress
 		crashTolerance = 8
 		breakingForce = 25
@@ -85245,6 +85294,7 @@ UrlConfig
 			action = no crashTolerance set, use default
 			action = no breakingForce set, use default
 			action = no breakingTorque set, use default
+			action = change maxTemp to 'communications'
 		}
 		MODULE
 		{
@@ -85329,7 +85379,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 725
 		TechRequired = inProgress
 		crashTolerance = 8
 		breakingForce = 25
@@ -85378,6 +85428,7 @@ UrlConfig
 			action = no crashTolerance set, use default
 			action = no breakingForce set, use default
 			action = no breakingTorque set, use default
+			action = change maxTemp to 'communications'
 		}
 		MODULE
 		{
@@ -85468,7 +85519,7 @@ UrlConfig
 		maximum_drag = 0.0
 		minimum_drag = 0.0
 		angularDrag = 0
-		maxTemp = 650
+		maxTemp = 725
 		TechRequired = inProgress
 		crashTolerance = 8
 		breakingForce = 25
@@ -85510,6 +85561,7 @@ UrlConfig
 			action = no crashTolerance set, use default
 			action = no breakingForce set, use default
 			action = no breakingTorque set, use default
+			action = change maxTemp to 'communications'
 		}
 		MODULE
 		{
@@ -85601,7 +85653,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 725
 		TechRequired = inProgress
 		crashTolerance = 8
 		breakingForce = 25
@@ -85634,6 +85686,7 @@ UrlConfig
 			action = no crashTolerance set, use default
 			action = no breakingForce set, use default
 			action = no breakingTorque set, use default
+			action = change maxTemp to 'communications'
 		}
 		MODULE
 		{
@@ -85719,7 +85772,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		TechRequired = inProgress
 		crashTolerance = 8
 		breakingForce = 25
@@ -85802,7 +85855,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 725
 		TechRequired = inProgress
 		crashTolerance = 8
 		breakingForce = 25
@@ -85835,6 +85888,7 @@ UrlConfig
 			action = no crashTolerance set, use default
 			action = no breakingForce set, use default
 			action = no breakingTorque set, use default
+			action = change maxTemp to 'communications'
 		}
 		MODULE
 		{
@@ -85918,7 +85972,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.95
 		thermalMassModifier = 4.0
 		crashTolerance = 8
@@ -86016,7 +86070,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -86113,7 +86167,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.95
 		thermalMassModifier = 4.0
 		crashTolerance = 8
@@ -86212,7 +86266,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.95
 		thermalMassModifier = 4.0
 		crashTolerance = 8
@@ -86311,7 +86365,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.95
 		thermalMassModifier = 4.0
 		crashTolerance = 8
@@ -88148,7 +88202,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size2, size3
 		fuelCrossFeed = False
 		crashTolerance = 8
@@ -88278,7 +88332,7 @@ UrlConfig
 		maximum_drag = 0.25
 		minimum_drag = 0.25
 		angularDrag = 0.5
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size3
 		crashTolerance = 8
 		breakingForce = 25
@@ -89253,7 +89307,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size3
 		crashTolerance = 8
 		breakingForce = 25
@@ -89345,7 +89399,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size4
 		fuelCrossFeed = True
 		explosionPotential = 0
@@ -89445,7 +89499,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = srf
 		explosionPotential = 0
 		crashTolerance = 8
@@ -89546,7 +89600,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 2000
+		maxTemp = 725
 		bulkheadProfiles = srf
 		fuelCrossFeed = False
 		explosionPotential = 0.1
@@ -89658,6 +89712,7 @@ UrlConfig
 			action = use author's mass
 			action = add mass from comm antenna
 			action = change maxTemp to 'launch clamp'
+			action = change maxTemp to 'communications'
 		}
 		MODULE
 		{
@@ -89757,7 +89812,7 @@ UrlConfig
 		maximum_drag = 0.001
 		minimum_drag = 0.001
 		angularDrag = 2
-		maxTemp = 1000
+		maxTemp = 1100
 		bulkheadProfiles = size0, srf
 		crashTolerance = 8
 		breakingForce = 25
@@ -89913,7 +89968,7 @@ UrlConfig
 		maximum_drag = 0.001
 		minimum_drag = 0.001
 		angularDrag = 2
-		maxTemp = 1000
+		maxTemp = 1100
 		bulkheadProfiles = size1, srf
 		crashTolerance = 8
 		breakingForce = 25
@@ -90063,7 +90118,7 @@ UrlConfig
 		maximum_drag = 0.001
 		minimum_drag = 0.001
 		angularDrag = 2
-		maxTemp = 1000
+		maxTemp = 1100
 		bulkheadProfiles = srf
 		PhysicsSignificance = 1
 		crashTolerance = 8
@@ -90661,7 +90716,7 @@ UrlConfig
 		maximum_drag = 0.3
 		minimum_drag = 0.3
 		angularDrag = 3
-		maxTemp = 650
+		maxTemp = 1000
 		bulkheadProfiles = size1, size2
 		fuelCrossFeed = True
 		NoCrossFeedNodeKey = bottom
@@ -90716,6 +90771,7 @@ UrlConfig
 		{
 			TechRequired = advConstruction
 			strength = strong
+			maxTemp = truss
 			old_mass = 0.1
 		}
 		MODULE
@@ -90765,6 +90821,7 @@ UrlConfig
 			action = node bottom++
 			action = node bottom1++
 			action = node top++
+			action = change maxTemp to 'truss'
 		}
 	}
 }
@@ -90799,7 +90856,7 @@ UrlConfig
 		maximum_drag = 0.3
 		minimum_drag = 0.3
 		angularDrag = 3
-		maxTemp = 650
+		maxTemp = 1000
 		bulkheadProfiles = size2, size3
 		fuelCrossFeed = True
 		NoCrossFeedNodeKey = bottom
@@ -90844,6 +90901,7 @@ UrlConfig
 		{
 			TechRequired = composites
 			strength = strong
+			maxTemp = truss
 			old_mass = 0.5
 		}
 		MODULE
@@ -90891,6 +90949,7 @@ UrlConfig
 			action = add mass from truncated cone volume
 			action = node bottom1++
 			action = node top++
+			action = change maxTemp to 'truss'
 		}
 	}
 }
@@ -93148,7 +93207,7 @@ UrlConfig
 		maximum_drag = 0.1
 		minimum_drag = 0.1
 		angularDrag = 0.5
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.7
 		thermalMassModifier = 6.0
 		fuelCrossFeed = False
@@ -93244,7 +93303,7 @@ UrlConfig
 		maximum_drag = 0.02
 		minimum_drag = 0.02
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		explosionPotential = 0.1
 		fuelCrossFeed = True
 		bulkheadProfiles = srf
@@ -93358,7 +93417,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = srf
 		crashTolerance = 8
 		breakingForce = 25
@@ -93470,7 +93529,7 @@ UrlConfig
 		maximum_drag = 0.02
 		minimum_drag = 0.02
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		explosionPotential = 0.1
 		fuelCrossFeed = True
 		bulkheadProfiles = srf
@@ -93575,7 +93634,7 @@ UrlConfig
 		maximum_drag = 0.02
 		minimum_drag = 0.02
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		explosionPotential = 0.1
 		fuelCrossFeed = True
 		bulkheadProfiles = srf
@@ -93679,7 +93738,7 @@ UrlConfig
 		maximum_drag = 0.02
 		minimum_drag = 0.02
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		explosionPotential = 0.1
 		fuelCrossFeed = True
 		bulkheadProfiles = srf
@@ -93783,7 +93842,7 @@ UrlConfig
 		maximum_drag = 0.02
 		minimum_drag = 0.02
 		angularDrag = 3
-		maxTemp = 650
+		maxTemp = 1
 		explosionPotential = 0.1
 		fuelCrossFeed = True
 		bulkheadProfiles = srf
@@ -93887,7 +93946,7 @@ UrlConfig
 		maximum_drag = 0.02
 		minimum_drag = 0.02
 		angularDrag = 3
-		maxTemp = 650
+		maxTemp = 1
 		explosionPotential = 0.1
 		fuelCrossFeed = True
 		bulkheadProfiles = srf
@@ -93999,7 +94058,7 @@ UrlConfig
 		maximum_drag = 0.02
 		minimum_drag = 0.02
 		angularDrag = 3
-		maxTemp = 650
+		maxTemp = 1
 		explosionPotential = 0.1
 		fuelCrossFeed = True
 		bulkheadProfiles = srf
@@ -94103,7 +94162,7 @@ UrlConfig
 		maximum_drag = 0.02
 		minimum_drag = 0.02
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		explosionPotential = 0.1
 		fuelCrossFeed = True
 		bulkheadProfiles = srf
@@ -94204,7 +94263,7 @@ UrlConfig
 		maximum_drag = 0.02
 		minimum_drag = 0.02
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		explosionPotential = 0.1
 		fuelCrossFeed = True
 		bulkheadProfiles = srf
@@ -94307,7 +94366,7 @@ UrlConfig
 		maximum_drag = 0.02
 		minimum_drag = 0.02
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		explosionPotential = 0.1
 		fuelCrossFeed = True
 		bulkheadProfiles = srf
@@ -94405,7 +94464,7 @@ UrlConfig
 		maximum_drag = 0.3
 		minimum_drag = 0.3
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		fuelCrossFeed = True
 		bulkheadProfiles = size1
 		crashTolerance = 8
@@ -94526,7 +94585,7 @@ UrlConfig
 		maximum_drag = 0.3
 		minimum_drag = 0.3
 		angularDrag = 1.2
-		maxTemp = 650
+		maxTemp = 1
 		fuelCrossFeed = True
 		bulkheadProfiles = size1
 		crashTolerance = 8
@@ -94644,7 +94703,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		thermalMassModifier = 6.0
 		emissiveConstant = 0.95
 		bulkheadProfiles = size0
@@ -94745,7 +94804,7 @@ UrlConfig
 		maximum_drag = 0.1
 		minimum_drag = 0.1
 		angularDrag = .25
-		maxTemp = 650
+		maxTemp = 1
 		fuelCrossFeed = True
 		bulkheadProfiles = size1
 		thermalMassModifier = 6.0
@@ -94839,7 +94898,7 @@ UrlConfig
 		maximum_drag = 0.1
 		minimum_drag = 0.1
 		angularDrag = .25
-		maxTemp = 650
+		maxTemp = 1
 		fuelCrossFeed = True
 		bulkheadProfiles = size1
 		thermalMassModifier = 6.0
@@ -94931,7 +94990,7 @@ UrlConfig
 		maximum_drag = 0.1
 		minimum_drag = 0.1
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		thermalMassModifier = 6.0
 		emissiveConstant = 0.95
 		fuelCrossFeed = True
@@ -95029,7 +95088,7 @@ UrlConfig
 		maximum_drag = 0.1
 		minimum_drag = 0.1
 		angularDrag = .25
-		maxTemp = 650
+		maxTemp = 1
 		fuelCrossFeed = True
 		bulkheadProfiles = size0
 		thermalMassModifier = 6.0
@@ -95128,7 +95187,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		thermalMassModifier = 6.0
 		emissiveConstant = 0.95
 		fuelCrossFeed = True
@@ -95228,7 +95287,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		thermalMassModifier = 6.0
 		emissiveConstant = 0.95
 		fuelCrossFeed = True
@@ -95329,7 +95388,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		fuelCrossFeed = True
 		bulkheadProfiles = size1, srf
 		crashTolerance = 8
@@ -95449,7 +95508,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		fuelCrossFeed = True
 		bulkheadProfiles = size1, srf
 		crashTolerance = 8
@@ -95572,7 +95631,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		fuelCrossFeed = True
 		stageOffset = 1
 		childStageOffset = 1
@@ -95692,7 +95751,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		fuelCrossFeed = True
 		stageOffset = 1
 		childStageOffset = 1
@@ -95812,7 +95871,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		fuelCrossFeed = True
 		stageOffset = 1
 		childStageOffset = 1
@@ -95930,7 +95989,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		fuelCrossFeed = False
 		stageOffset = 1
 		childStageOffset = 1
@@ -96059,7 +96118,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		fuelCrossFeed = False
 		stageOffset = 1
 		childStageOffset = 1
@@ -96188,7 +96247,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		fuelCrossFeed = False
 		stageOffset = 1
 		childStageOffset = 1
@@ -96318,7 +96377,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		fuelCrossFeed = False
 		stageOffset = 1
 		childStageOffset = 1
@@ -96445,7 +96504,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = srf
 		crashTolerance = 8
 		breakingForce = 25
@@ -96549,7 +96608,7 @@ UrlConfig
 		maximum_drag = 0.1
 		minimum_drag = 0.1
 		angularDrag = 0.5
-		maxTemp = 650
+		maxTemp = 1
 		thermalMassModifier = 6.0
 		emissiveConstant = 0.7
 		fuelCrossFeed = False
@@ -96644,7 +96703,7 @@ UrlConfig
 		maximum_drag = 0.3
 		minimum_drag = 0.3
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		fuelCrossFeed = True
 		bulkheadProfiles = size1
 		crashTolerance = 8
@@ -96764,7 +96823,7 @@ UrlConfig
 		maximum_drag = 0.02
 		minimum_drag = 0.02
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		explosionPotential = 0.1
 		fuelCrossFeed = True
 		bulkheadProfiles = srf
@@ -96865,7 +96924,7 @@ UrlConfig
 		maximum_drag = 0.02
 		minimum_drag = 0.02
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		explosionPotential = 0.1
 		fuelCrossFeed = True
 		bulkheadProfiles = srf
@@ -96969,7 +97028,7 @@ UrlConfig
 		maximum_drag = 0.02
 		minimum_drag = 0.02
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		explosionPotential = 0.1
 		fuelCrossFeed = True
 		bulkheadProfiles = srf
@@ -97074,7 +97133,7 @@ UrlConfig
 		maximum_drag = 0.02
 		minimum_drag = 0.02
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		explosionPotential = 0.1
 		fuelCrossFeed = True
 		bulkheadProfiles = srf
@@ -97180,7 +97239,7 @@ UrlConfig
 		maximum_drag = 0.02
 		minimum_drag = 0.02
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		explosionPotential = 0.1
 		fuelCrossFeed = True
 		bulkheadProfiles = srf
@@ -97285,7 +97344,7 @@ UrlConfig
 		maximum_drag = 0.02
 		minimum_drag = 0.02
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		explosionPotential = 0.1
 		fuelCrossFeed = True
 		bulkheadProfiles = srf
@@ -97387,7 +97446,7 @@ UrlConfig
 		maximum_drag = 0.02
 		minimum_drag = 0.02
 		angularDrag = 5
-		maxTemp = 650
+		maxTemp = 1
 		explosionPotential = 0.1
 		bulkheadProfiles = srf
 		crashTolerance = 8
@@ -97487,7 +97546,7 @@ UrlConfig
 		maximum_drag = 0.02
 		minimum_drag = 0.02
 		angularDrag = 5
-		maxTemp = 650
+		maxTemp = 1
 		explosionPotential = 0.1
 		mirrorRefAxis = 0, 0, -1
 		bulkheadProfiles = srf
@@ -97588,7 +97647,7 @@ UrlConfig
 		maximum_drag = 0.02
 		minimum_drag = 0.02
 		angularDrag = 5
-		maxTemp = 650
+		maxTemp = 1
 		explosionPotential = 0.1
 		bulkheadProfiles = srf
 		crashTolerance = 8
@@ -97689,7 +97748,7 @@ UrlConfig
 		maximum_drag = 0.02
 		minimum_drag = 0.02
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		explosionPotential = 0.1
 		fuelCrossFeed = True
 		bulkheadProfiles = srf
@@ -97791,7 +97850,7 @@ UrlConfig
 		maximum_drag = 0.02
 		minimum_drag = 0.02
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		explosionPotential = 0.1
 		fuelCrossFeed = True
 		bulkheadProfiles = srf
@@ -97893,7 +97952,7 @@ UrlConfig
 		maximum_drag = 0.02
 		minimum_drag = 0.02
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		explosionPotential = 0.1
 		fuelCrossFeed = True
 		bulkheadProfiles = srf
@@ -97995,7 +98054,7 @@ UrlConfig
 		maximum_drag = 0.02
 		minimum_drag = 0.02
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		explosionPotential = 0.1
 		fuelCrossFeed = True
 		bulkheadProfiles = srf
@@ -98097,7 +98156,7 @@ UrlConfig
 		maximum_drag = 0.02
 		minimum_drag = 0.02
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		explosionPotential = 0.1
 		fuelCrossFeed = True
 		bulkheadProfiles = srf
@@ -98194,7 +98253,7 @@ UrlConfig
 		maximum_drag = 0.02
 		minimum_drag = 0.02
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		explosionPotential = 0.1
 		fuelCrossFeed = True
 		bulkheadProfiles = srf
@@ -98296,7 +98355,7 @@ UrlConfig
 		maximum_drag = 0.02
 		minimum_drag = 0.02
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		explosionPotential = 0.1
 		fuelCrossFeed = True
 		bulkheadProfiles = srf
@@ -98393,7 +98452,7 @@ UrlConfig
 		maximum_drag = 0.02
 		minimum_drag = 0.02
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		explosionPotential = 0.1
 		bulkheadProfiles = srf
 		crashTolerance = 8
@@ -98496,7 +98555,7 @@ UrlConfig
 		maximum_drag = 0.02
 		minimum_drag = 0.02
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		explosionPotential = 0.1
 		bulkheadProfiles = srf
 		crashTolerance = 8
@@ -98599,7 +98658,7 @@ UrlConfig
 		maximum_drag = 0.02
 		minimum_drag = 0.02
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		explosionPotential = 0.1
 		bulkheadProfiles = srf
 		crashTolerance = 8
@@ -98702,7 +98761,7 @@ UrlConfig
 		maximum_drag = 0.02
 		minimum_drag = 0.02
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		explosionPotential = 0.1
 		bulkheadProfiles = srf
 		crashTolerance = 8
@@ -98805,7 +98864,7 @@ UrlConfig
 		maximum_drag = 0.02
 		minimum_drag = 0.02
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		explosionPotential = 0.1
 		bulkheadProfiles = srf
 		crashTolerance = 8
@@ -98903,7 +98962,7 @@ UrlConfig
 		maximum_drag = 0.02
 		minimum_drag = 0.02
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		explosionPotential = 0.1
 		fuelCrossFeed = True
 		bulkheadProfiles = srf
@@ -99005,7 +99064,7 @@ UrlConfig
 		maximum_drag = 0.02
 		minimum_drag = 0.02
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		explosionPotential = 0.1
 		fuelCrossFeed = True
 		bulkheadProfiles = srf
@@ -99107,7 +99166,7 @@ UrlConfig
 		maximum_drag = 0.02
 		minimum_drag = 0.02
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		explosionPotential = 0.1
 		fuelCrossFeed = True
 		bulkheadProfiles = srf
@@ -99209,7 +99268,7 @@ UrlConfig
 		maximum_drag = 0.02
 		minimum_drag = 0.02
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		explosionPotential = 0.1
 		fuelCrossFeed = True
 		bulkheadProfiles = srf
@@ -99311,7 +99370,7 @@ UrlConfig
 		maximum_drag = 0.02
 		minimum_drag = 0.02
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		explosionPotential = 0.1
 		fuelCrossFeed = True
 		bulkheadProfiles = srf
@@ -99408,7 +99467,7 @@ UrlConfig
 		maximum_drag = 0.02
 		minimum_drag = 0.02
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		explosionPotential = 0.1
 		fuelCrossFeed = True
 		bulkheadProfiles = srf
@@ -99510,7 +99569,7 @@ UrlConfig
 		maximum_drag = 0.02
 		minimum_drag = 0.02
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		explosionPotential = 0.1
 		fuelCrossFeed = True
 		bulkheadProfiles = srf
@@ -99610,7 +99669,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size2
 		crashTolerance = 8
 		breakingForce = 25
@@ -99704,7 +99763,7 @@ UrlConfig
 		maximum_drag = 0.20
 		minimum_drag = 0.20
 		angularDrag = 4
-		maxTemp = 650
+		maxTemp = 1
 		vesselType = Lander
 		CrewCapacity = 1
 		bulkheadProfiles = size2, size1
@@ -99856,7 +99915,7 @@ UrlConfig
 		maximum_drag = 0.05
 		minimum_drag = 0.05
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		vesselType = Rover
 		bulkheadProfiles = srf
 		crashTolerance = 8
@@ -99943,7 +100002,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		vesselType = Ship
 		bulkheadProfiles = size2
 		crashTolerance = 8
@@ -100083,7 +100142,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 775
 		bulkheadProfiles = size1
 		crashTolerance = 8
 		breakingForce = 25
@@ -100146,6 +100205,7 @@ UrlConfig
 			action = no crashTolerance set, use default
 			action = no breakingForce set, use default
 			action = no breakingTorque set, use default
+			action = change maxTemp to 'CMG'
 		}
 		MODULE
 		{
@@ -100193,7 +100253,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 775
 		bulkheadProfiles = size0
 		crashTolerance = 8
 		breakingForce = 25
@@ -100256,6 +100316,7 @@ UrlConfig
 			action = no crashTolerance set, use default
 			action = no breakingForce set, use default
 			action = no breakingTorque set, use default
+			action = change maxTemp to 'CMG'
 		}
 		MODULE
 		{
@@ -100303,7 +100364,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size0
 		crashTolerance = 8
 		breakingForce = 25
@@ -100397,7 +100458,7 @@ UrlConfig
 		maximum_drag = 0.20
 		minimum_drag = 0.15
 		angularDrag = 2
-		maxTemp = 1000
+		maxTemp = 1100
 		vesselType = Ship
 		CrewCapacity = 3
 		bulkheadProfiles = size2, size1
@@ -100566,7 +100627,7 @@ UrlConfig
 		maximum_drag = 0.1
 		minimum_drag = 0.1
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		vesselType = Ship
 		CrewCapacity = 1
 		bulkheadProfiles = size1
@@ -100715,7 +100776,7 @@ UrlConfig
 		maximum_drag = 0.08
 		minimum_drag = 0.08
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		vesselType = Ship
 		CrewCapacity = 1
 		bulkheadProfiles = size1, srf
@@ -100850,7 +100911,7 @@ UrlConfig
 		maximum_drag = 0.20
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		vesselType = Lander
 		CrewCapacity = 1
 		bulkheadProfiles = size1
@@ -100999,7 +101060,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.15
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		vesselType = Ship
 		CrewCapacity = 1
 		crashTolerance = 8
@@ -101150,7 +101211,7 @@ UrlConfig
 		maximum_drag = 0.1
 		minimum_drag = 0.1
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.8
 		vesselType = Ship
 		CrewCapacity = 2
@@ -101295,7 +101356,7 @@ UrlConfig
 		maximum_drag = 0.1
 		minimum_drag = 0.1
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.8
 		vesselType = Ship
 		CrewCapacity = 2
@@ -101440,7 +101501,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		vesselType = Probe
 		bulkheadProfiles = mk2
 		crashTolerance = 8
@@ -101537,7 +101598,7 @@ UrlConfig
 		maximum_drag = 0.20
 		minimum_drag = 0.15
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		vesselType = Lander
 		CrewCapacity = 2
 		bulkheadProfiles = size2
@@ -101676,7 +101737,7 @@ UrlConfig
 		maximum_drag = 0.1
 		minimum_drag = 0.1
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.9
 		fuelCrossFeed = True
 		vesselType = Ship
@@ -101814,7 +101875,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.15
 		angularDrag = 1.5
-		maxTemp = 675
+		maxTemp = 750
 		explosionPotential = 0
 		vesselType = Probe
 		bulkheadProfiles = size0
@@ -101932,6 +101993,10 @@ UrlConfig
 				rate = 0.001
 			}
 		}
+		MODULE
+		{
+			name = RCSLandingAidModule
+		}
 	}
 }
 UrlConfig
@@ -101963,7 +102028,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.15
 		angularDrag = 1.5
-		maxTemp = 675
+		maxTemp = 750
 		explosionPotential = 0
 		vesselType = Probe
 		bulkheadProfiles = size0
@@ -102081,6 +102146,10 @@ UrlConfig
 				rate = 0.001
 			}
 		}
+		MODULE
+		{
+			name = RCSLandingAidModule
+		}
 	}
 }
 UrlConfig
@@ -102112,7 +102181,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.15
 		angularDrag = 1.5
-		maxTemp = 675
+		maxTemp = 750
 		explosionPotential = 0
 		vesselType = Probe
 		bulkheadProfiles = size0
@@ -102230,6 +102299,10 @@ UrlConfig
 				rate = 0.001
 			}
 		}
+		MODULE
+		{
+			name = RCSLandingAidModule
+		}
 	}
 }
 UrlConfig
@@ -102261,7 +102334,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.15
 		angularDrag = 1.5
-		maxTemp = 675
+		maxTemp = 750
 		explosionPotential = 0
 		vesselType = Probe
 		bulkheadProfiles = size0
@@ -102378,6 +102451,10 @@ UrlConfig
 				rate = 0.001
 			}
 		}
+		MODULE
+		{
+			name = RCSLandingAidModule
+		}
 	}
 }
 UrlConfig
@@ -102409,7 +102486,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.15
 		angularDrag = 1.5
-		maxTemp = 675
+		maxTemp = 750
 		explosionPotential = 0
 		vesselType = Probe
 		bulkheadProfiles = size1
@@ -102523,6 +102600,10 @@ UrlConfig
 				rate = 0.001
 			}
 		}
+		MODULE
+		{
+			name = RCSLandingAidModule
+		}
 	}
 }
 UrlConfig
@@ -102554,7 +102635,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 675
+		maxTemp = 750
 		explosionPotential = 0
 		vesselType = Probe
 		bulkheadProfiles = size2
@@ -102673,6 +102754,10 @@ UrlConfig
 				rate = 0.001
 			}
 		}
+		MODULE
+		{
+			name = RCSLandingAidModule
+		}
 	}
 }
 UrlConfig
@@ -102703,7 +102788,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.15
 		angularDrag = 1.5
-		maxTemp = 675
+		maxTemp = 750
 		explosionPotential = 0
 		vesselType = Probe
 		bulkheadProfiles = size0
@@ -102816,6 +102901,10 @@ UrlConfig
 				rate = 0.001
 			}
 		}
+		MODULE
+		{
+			name = RCSLandingAidModule
+		}
 	}
 }
 UrlConfig
@@ -102849,7 +102938,7 @@ UrlConfig
 		maximum_drag = 0.02
 		minimum_drag = 0.02
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		explosionPotential = 0
 		PhysicsSignificance = 1
 		maxLength = 10
@@ -102954,7 +103043,7 @@ UrlConfig
 		maximum_drag = 0.02
 		minimum_drag = 0.02
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1000
 		explosionPotential = 0
 		fuelCrossFeed = False
 		PhysicsSignificance = 1
@@ -102999,6 +103088,7 @@ UrlConfig
 		VARS
 		{
 			TechRequired = generalConstruction
+			maxTemp = truss
 			old_mass = 0.05
 		}
 		MODULE
@@ -103031,6 +103121,7 @@ UrlConfig
 			action = no crashTolerance set, use default
 			action = no breakingForce set, use default
 			action = no breakingTorque set, use default
+			action = change maxTemp to 'truss'
 		}
 	}
 }
@@ -103061,7 +103152,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 725
+		maxTemp = 800
 		bulkheadProfiles = srf
 		thermalMassModifier = 2.0
 		emissiveConstant = 0.95
@@ -103183,7 +103274,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 725
+		maxTemp = 800
 		bulkheadProfiles = srf
 		thermalMassModifier = 2.0
 		emissiveConstant = 0.95
@@ -103306,7 +103397,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 725
+		maxTemp = 800
 		bulkheadProfiles = srf
 		thermalMassModifier = 2.0
 		emissiveConstant = 0.95
@@ -103429,7 +103520,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 725
+		maxTemp = 800
 		bulkheadProfiles = srf
 		thermalMassModifier = 2.0
 		emissiveConstant = 0.95
@@ -103552,7 +103643,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 725
+		maxTemp = 800
 		bulkheadProfiles = srf
 		thermalMassModifier = 2.0
 		emissiveConstant = 0.95
@@ -103674,7 +103765,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 725
+		maxTemp = 800
 		bulkheadProfiles = srf
 		thermalMassModifier = 2.0
 		emissiveConstant = 0.95
@@ -103797,7 +103888,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 725
+		maxTemp = 800
 		bulkheadProfiles = srf
 		thermalMassModifier = 2.0
 		emissiveConstant = 0.95
@@ -103919,7 +104010,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 725
+		maxTemp = 800
 		PhysicsSignificance = 1
 		bulkheadProfiles = srf
 		crashTolerance = 8
@@ -104043,7 +104134,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = ,size00, srf
 		crashTolerance = 8
 		breakingForce = 25
@@ -104137,7 +104228,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 675
+		maxTemp = 750
 		PhysicsSignificance = 1
 		bulkheadProfiles = srf
 		crashTolerance = 8
@@ -104246,7 +104337,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 675
+		maxTemp = 750
 		PhysicsSignificance = 1
 		bulkheadProfiles = srf
 		crashTolerance = 8
@@ -104356,7 +104447,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 675
+		maxTemp = 750
 		bulkheadProfiles = size2
 		crashTolerance = 8
 		breakingForce = 25
@@ -105562,8 +105653,8 @@ UrlConfig
 			}
 			atmosphereCurve
 			{
-				key = 0  221
-				key = 1 165.75
+				key = 0  208
+				key = 1 156
 				key = 7 0.001
 			}
 		}
@@ -105615,8 +105706,8 @@ UrlConfig
 			engine_type = Hydrazine
 			engine_thrust =   100
 			TWR_type = 23.2
-			isp_v =  221
-			isp_sl = 165.75
+			isp_v =  208
+			isp_sl = 156
 			old_mass = 0.1
 		}
 		MODULE
@@ -106621,8 +106712,8 @@ UrlConfig
 			}
 			atmosphereCurve
 			{
-				key = 0  238
-				key = 1 214.2
+				key = 0  220
+				key = 1 198
 				key = 3 0.001
 			}
 		}
@@ -106688,8 +106779,8 @@ UrlConfig
 			engine_type = Kerolox
 			engine_thrust =   100
 			TWR_type = 23.2
-			isp_v =  238
-			isp_sl = 214.2
+			isp_v =  220
+			isp_sl = 198
 			old_mass = 0.5
 		}
 		MODULE
@@ -110708,7 +110799,7 @@ UrlConfig
 		maximum_drag = 0.3
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 750
+		maxTemp = 825
 		stagingIcon = SOLID_BOOSTER
 		bulkheadProfiles = size1, srf
 		crashTolerance = 8
@@ -110738,7 +110829,7 @@ UrlConfig
 			atmosphereCurve
 			{
 				key = 0 182
-				key = 1 175
+				key = 1 118.3
 				key = 6 0.001
 			}
 		}
@@ -110841,11 +110932,12 @@ UrlConfig
 			action = add empty ModuleFuelTanks
 			action = add cylinder ModuleFuelTanks
 			action = finalize fuel tank volume
-			action = set Isp curve
 			action = ensure ModuleEnginesRF
 			action = calculate solid rocket maxThrust
 			action = define ModuleEngineConfigs for solid thrust curves
 			action = define ModuleEngineConfigs defaults
+			action = set Isp curve
+			action = set RF plume effect name
 			action = clear mass
 			action = add mass from solid fuel volume
 			action = no crashTolerance set, use default
@@ -110896,6 +110988,7 @@ UrlConfig
 				chamberNominalTemp = 1800
 				maxEngineTemp = 2050
 				curveResource = HTPB
+				powerEffectName = Solid-Lower
 				thrustCurve
 				{
 					key = 0.00 0.01
@@ -110925,6 +111018,7 @@ UrlConfig
 				chamberNominalTemp = 1800
 				maxEngineTemp = 2050
 				curveResource = HTPB
+				powerEffectName = Solid-Lower
 				thrustCurve
 				{
 					key = 0.00 0.01
@@ -110957,6 +111051,7 @@ UrlConfig
 				chamberNominalTemp = 1800
 				maxEngineTemp = 2050
 				curveResource = HTPB
+				powerEffectName = Solid-Lower
 				thrustCurve
 				{
 					key = 0.00 0.00
@@ -111626,7 +111721,7 @@ UrlConfig
 		maximum_drag = 0.3
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 750
+		maxTemp = 825
 		ActivatesEvenIfDisconnected = true
 		stagingIcon = SOLID_BOOSTER
 		bulkheadProfiles = srf
@@ -111647,7 +111742,6 @@ UrlConfig
 			fxOffset = 0, 0, 0.02
 			EngineType = SolidBooster
 			engineID = Sepratron I
-			powerEffectName = Solid-Lower
 			PROPELLANT
 			{
 				name = HTPB
@@ -111657,7 +111751,7 @@ UrlConfig
 			atmosphereCurve
 			{
 				key = 0 182
-				key = 1 118
+				key = 1 118.3
 				key = 6 0.001
 			}
 		}
@@ -111990,12 +112084,12 @@ UrlConfig
 			action = add empty ModuleFuelTanks
 			action = add cylinder ModuleFuelTanks
 			action = finalize fuel tank volume
-			action = set Isp curve
-			action = set FX plume effect name
 			action = ensure ModuleEnginesRF
 			action = override solid rocket maxThrust
 			action = define ModuleEngineConfigs for solid thrust curves
 			action = define ModuleEngineConfigs defaults
+			action = set Isp curve
+			action = set RF plume effect name
 			action = clear mass
 			action = add mass from solid fuel volume
 			action = no crashTolerance set, use default
@@ -112042,6 +112136,7 @@ UrlConfig
 				chamberNominalTemp = 1800
 				maxEngineTemp = 2050
 				curveResource = HTPB
+				powerEffectName = Solid-Lower
 				thrustCurve
 				{
 					key = 0.00 0.01
@@ -112071,6 +112166,7 @@ UrlConfig
 				chamberNominalTemp = 1800
 				maxEngineTemp = 2050
 				curveResource = HTPB
+				powerEffectName = Solid-Lower
 				thrustCurve
 				{
 					key = 0.00 0.01
@@ -112103,6 +112199,7 @@ UrlConfig
 				chamberNominalTemp = 1800
 				maxEngineTemp = 2050
 				curveResource = HTPB
+				powerEffectName = Solid-Lower
 				thrustCurve
 				{
 					key = 0.00 0.00
@@ -112157,7 +112254,7 @@ UrlConfig
 		maximum_drag = 0.3
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 750
+		maxTemp = 825
 		ActivatesEvenIfDisconnected = true
 		stagingIcon = SOLID_BOOSTER
 		bulkheadProfiles = srf
@@ -112179,7 +112276,6 @@ UrlConfig
 			heatProduction = 550
 			fxOffset = 0, 0, 0.02
 			EngineType = SolidBooster
-			powerEffectName = Solid-Sepmotor
 			PROPELLANT
 			{
 				name = HTPB
@@ -112189,7 +112285,7 @@ UrlConfig
 			atmosphereCurve
 			{
 				key = 0 182
-				key = 1 118
+				key = 1 118.3
 				key = 6 0.001
 			}
 		}
@@ -112403,12 +112499,12 @@ UrlConfig
 			action = add empty ModuleFuelTanks
 			action = add cylinder ModuleFuelTanks
 			action = finalize fuel tank volume
-			action = set Isp curve
-			action = set FX plume effect name
 			action = ensure ModuleEnginesRF
 			action = override solid rocket maxThrust
 			action = define ModuleEngineConfigs for solid thrust curves
 			action = define ModuleEngineConfigs defaults
+			action = set Isp curve
+			action = set RF plume effect name
 			action = clear mass
 			action = add mass from solid fuel volume
 			action = no crashTolerance set, use default
@@ -112455,6 +112551,7 @@ UrlConfig
 				chamberNominalTemp = 1800
 				maxEngineTemp = 2050
 				curveResource = HTPB
+				powerEffectName = Solid-Sepmotor
 				thrustCurve
 				{
 					key = 0.00 0.01
@@ -112484,6 +112581,7 @@ UrlConfig
 				chamberNominalTemp = 1800
 				maxEngineTemp = 2050
 				curveResource = HTPB
+				powerEffectName = Solid-Sepmotor
 				thrustCurve
 				{
 					key = 0.00 0.01
@@ -112516,6 +112614,7 @@ UrlConfig
 				chamberNominalTemp = 1800
 				maxEngineTemp = 2050
 				curveResource = HTPB
+				powerEffectName = Solid-Sepmotor
 				thrustCurve
 				{
 					key = 0.00 0.00
@@ -112572,7 +112671,7 @@ UrlConfig
 		maximum_drag = 0.01
 		minimum_drag = 0.01
 		angularDrag = 0.1
-		maxTemp = 1000
+		maxTemp = 1100
 		fuelCrossFeed = True
 		PhysicsSignificance = 1
 		bulkheadProfiles = srf
@@ -112708,7 +112807,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.87
 		fuelCrossFeed = True
 		bulkheadProfiles = srf, mk2, mk3
@@ -112802,7 +112901,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.87
 		fuelCrossFeed = True
 		bulkheadProfiles = size2, srf, mk3
@@ -112896,7 +112995,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.87
 		fuelCrossFeed = True
 		bulkheadProfiles = size2, srf, mk3
@@ -112990,7 +113089,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.8
 		fuelCrossFeed = True
 		bulkheadProfiles = size2, srf, mk2
@@ -113078,7 +113177,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.8
 		fuelCrossFeed = True
 		bulkheadProfiles = size1, size2, srf
@@ -113172,7 +113271,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.8
 		fuelCrossFeed = True
 		bulkheadProfiles = size1, size2, srf
@@ -113266,7 +113365,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.87
 		fuelCrossFeed = True
 		bulkheadProfiles = size3, srf, mk3
@@ -113360,7 +113459,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size2, srf
 		crashTolerance = 8
 		breakingForce = 25
@@ -113451,7 +113550,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size2, srf
 		scale = 1
 		rescaleFactor = 1
@@ -113543,7 +113642,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.15
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size0, srf
 		node_attach = 0.3, 0.0, 0.0, 1.0, 0.0, 0.0, 1
 		crashTolerance = 8
@@ -113635,7 +113734,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.15
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size0, srf
 		scale = 1
 		rescaleFactor = 1
@@ -113727,7 +113826,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.15
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size0, srf
 		scale = 1
 		rescaleFactor = 1
@@ -113820,7 +113919,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size1, srf
 		crashTolerance = 8
 		breakingForce = 25
@@ -113912,7 +114011,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size1, srf
 		crashTolerance = 8
 		breakingForce = 25
@@ -114004,7 +114103,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size1, srf
 		crashTolerance = 8
 		breakingForce = 25
@@ -114096,7 +114195,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size1, srf
 		crashTolerance = 8
 		breakingForce = 25
@@ -114187,7 +114286,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.15
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size1
 		crashTolerance = 8
 		breakingForce = 25
@@ -114278,7 +114377,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size2, srf
 		scale = 1
 		rescaleFactor = 1
@@ -114372,7 +114471,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size2, srf
 		crashTolerance = 8
 		breakingForce = 25
@@ -114463,7 +114562,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size2, srf
 		scale = 1
 		rescaleFactor = 1
@@ -114563,7 +114662,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.8
 		fuelCrossFeed = True
 		NoCrossFeedNodeKey = bottom
@@ -114666,7 +114765,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.8
 		fuelCrossFeed = True
 		bulkheadProfiles = size1, srf, mk2
@@ -114768,7 +114867,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.1
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.8
 		fuelCrossFeed = True
 		bulkheadProfiles = size1, srf, mk2
@@ -114870,7 +114969,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.8
 		fuelCrossFeed = True
 		bulkheadProfiles = srf, mk2
@@ -114972,7 +115071,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.8
 		fuelCrossFeed = True
 		bulkheadProfiles = srf, mk2
@@ -115074,7 +115173,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.8
 		fuelCrossFeed = True
 		bulkheadProfiles = srf, mk2
@@ -115176,7 +115275,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.8
 		fuelCrossFeed = True
 		bulkheadProfiles = srf, mk2
@@ -115278,7 +115377,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.8
 		fuelCrossFeed = True
 		bulkheadProfiles = srf, mk2
@@ -115380,7 +115479,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.87
 		fuelCrossFeed = True
 		vesselType = Ship
@@ -115510,7 +115609,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.87
 		fuelCrossFeed = True
 		bulkheadProfiles = srf, mk3
@@ -115604,7 +115703,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.87
 		fuelCrossFeed = True
 		bulkheadProfiles = srf, mk3
@@ -115698,7 +115797,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.87
 		fuelCrossFeed = True
 		bulkheadProfiles = srf, mk3
@@ -115792,7 +115891,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.87
 		fuelCrossFeed = True
 		bulkheadProfiles = srf, mk3
@@ -115886,7 +115985,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.87
 		fuelCrossFeed = True
 		bulkheadProfiles = srf, mk3
@@ -115980,7 +116079,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.87
 		fuelCrossFeed = True
 		bulkheadProfiles = srf, mk3
@@ -116074,7 +116173,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.87
 		fuelCrossFeed = True
 		bulkheadProfiles = srf, mk3
@@ -116167,7 +116266,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size2
 		crashTolerance = 8
 		breakingForce = 25
@@ -116258,7 +116357,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		fuelCrossFeed = True
 		bulkheadProfiles = size0, srf
 		scale = 1
@@ -116353,7 +116452,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 750
+		maxTemp = 825
 		bulkheadProfiles = size1
 		crashTolerance = 8
 		breakingForce = 25
@@ -116459,7 +116558,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 750
+		maxTemp = 825
 		bulkheadProfiles = srf
 		scale = 1
 		rescaleFactor = 1
@@ -116577,7 +116676,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 750
+		maxTemp = 825
 		bulkheadProfiles = srf
 		scale = 1
 		rescaleFactor = 1
@@ -116694,7 +116793,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 750
+		maxTemp = 825
 		bulkheadProfiles = srf
 		scale = 1
 		rescaleFactor = 1
@@ -116811,7 +116910,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = srf
 		scale = 1
 		rescaleFactor = 1
@@ -116906,7 +117005,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 750
+		maxTemp = 825
 		bulkheadProfiles = srf
 		scale = 1
 		rescaleFactor = 1
@@ -117042,7 +117141,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 750
+		maxTemp = 825
 		bulkheadProfiles = srf
 		scale = 1
 		rescaleFactor = 1
@@ -117177,7 +117276,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 750
+		maxTemp = 825
 		bulkheadProfiles = srf
 		scale = 1
 		rescaleFactor = 1
@@ -117315,7 +117414,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size3, srf
 		scale = 1
 		rescaleFactor = 1
@@ -117407,7 +117506,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size3, srf
 		scale = 1
 		rescaleFactor = 1
@@ -117499,7 +117598,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size3, srf
 		scale = 1
 		rescaleFactor = 1
@@ -117592,7 +117691,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size0
 		crashTolerance = 8
 		breakingForce = 25
@@ -117684,7 +117783,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size0
 		crashTolerance = 8
 		breakingForce = 25
@@ -117773,7 +117872,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 750
+		maxTemp = 825
 		bulkheadProfiles = srf
 		crashTolerance = 8
 		breakingForce = 25
@@ -117901,7 +118000,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		explosionPotential = 0.1
 		density = 0.03
 		vesselType = SpaceObject
@@ -118073,7 +118172,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -118190,7 +118289,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -118309,7 +118408,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -118566,7 +118665,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -118662,7 +118761,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -118799,7 +118898,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -118935,7 +119034,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -119030,7 +119129,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -119204,7 +119303,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -119319,7 +119418,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		PhysicsSignificance = 1
 		bulkheadProfiles = srf
 		crashTolerance = 8
@@ -119420,7 +119519,7 @@ UrlConfig
 		maximum_drag = 0.1
 		minimum_drag = 0.1
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = srf
 		crashTolerance = 8
 		breakingForce = 25
@@ -119534,7 +119633,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		vesselType = Ship
 		bulkheadProfiles = size2
 		crashTolerance = 8
@@ -119690,7 +119789,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		childStageOffset = 1
 		bulkheadProfiles = size1, srf
 		crashTolerance = 8
@@ -119809,7 +119908,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		PhysicsSignificance = 1
 		bulkheadProfiles = srf
 		crashTolerance = 8
@@ -119914,7 +120013,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		PhysicsSignificance = 1
 		bulkheadProfiles = srf
 		crashTolerance = 8
@@ -120019,7 +120118,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		PhysicsSignificance = 1
 		bulkheadProfiles = srf
 		crashTolerance = 8
@@ -120124,7 +120223,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		PhysicsSignificance = 1
 		bulkheadProfiles = srf
 		crashTolerance = 8
@@ -120239,7 +120338,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		fuelCrossFeed = True
 		NoCrossFeedNodeKey = bottom
 		bulkheadProfiles = size2, size1
@@ -120334,7 +120433,7 @@ UrlConfig
 		maximum_drag = 0.3
 		minimum_drag = 0.3
 		angularDrag = 3
-		maxTemp = 650
+		maxTemp = 1
 		fuelCrossFeed = True
 		NoCrossFeedNodeKey = bottom
 		bulkheadProfiles = size2, size1
@@ -120428,7 +120527,7 @@ UrlConfig
 		maximum_drag = 0.25
 		minimum_drag = 0.25
 		angularDrag = 2.5
-		maxTemp = 650
+		maxTemp = 1
 		fuelCrossFeed = True
 		NoCrossFeedNodeKey = bottom
 		bulkheadProfiles = size2, size1
@@ -120519,7 +120618,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		fuelCrossFeed = True
 		PhysicsSignificance = 1
 		bulkheadProfiles = size0, size1
@@ -120612,7 +120711,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		fuelCrossFeed = True
 		bulkheadProfiles = size0, size1
 		crashTolerance = 8
@@ -120704,7 +120803,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		thermalMassModifier = 2.0
 		fuelCrossFeed = True
 		bulkheadProfiles = size1, srf
@@ -120800,7 +120899,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		thermalMassModifier = 2.0
 		fuelCrossFeed = True
 		bulkheadProfiles = size1, srf
@@ -120908,7 +121007,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		fuelCrossFeed = True
 		bulkheadProfiles = size1, srf
 		crashTolerance = 8
@@ -121001,7 +121100,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 800
+		maxTemp = 875
 		fuelCrossFeed = False
 		PhysicsSignificance = 1
 		stageOffset = 1
@@ -121139,7 +121238,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size2, size3
 		scale = 1
 		rescaleFactor = 1
@@ -121233,7 +121332,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		fuelCrossFeed = True
 		PhysicsSignificance = 1
 		bulkheadProfiles = srf
@@ -121327,7 +121426,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size1
 		crashTolerance = 8
 		breakingForce = 25
@@ -121416,7 +121515,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		fuelCrossFeed = False
 		bulkheadProfiles = ,size00, srf
 		scale = 1
@@ -121507,7 +121606,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		fuelCrossFeed = False
 		bulkheadProfiles = ,size00, srf
 		scale = 1
@@ -121598,7 +121697,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		fuelCrossFeed = False
 		bulkheadProfiles = size0, srf
 		scale = 1
@@ -121692,7 +121791,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size0
 		scale = 1
 		rescaleFactor = 1
@@ -121782,7 +121881,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1000
 		bulkheadProfiles = size0, srf
 		scale = 1
 		rescaleFactor = 1
@@ -121810,6 +121909,7 @@ UrlConfig
 		VARS
 		{
 			TechRequired = composites
+			maxTemp = truss
 			old_mass = 0.075
 		}
 		MODULE
@@ -121851,6 +121951,7 @@ UrlConfig
 			action = no crashTolerance set, use default
 			action = no breakingForce set, use default
 			action = no breakingTorque set, use default
+			action = change maxTemp to 'truss'
 		}
 	}
 }
@@ -121882,7 +121983,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		fuelCrossFeed = False
 		bulkheadProfiles = size0, srf
 		scale = 1
@@ -121974,7 +122075,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1000
 		bulkheadProfiles = size0, srf
 		fuelCrossFeed = True
 		crashTolerance = 8
@@ -122000,6 +122101,7 @@ UrlConfig
 		VARS
 		{
 			TechRequired = composites
+			maxTemp = truss
 			old_mass = 0.3
 		}
 		MODULE
@@ -122041,6 +122143,7 @@ UrlConfig
 			action = no crashTolerance set, use default
 			action = no breakingForce set, use default
 			action = no breakingTorque set, use default
+			action = change maxTemp to 'truss'
 		}
 	}
 }
@@ -122073,7 +122176,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 800
+		maxTemp = 875
 		fuelCrossFeed = False
 		stagingIcon = DECOUPLER_HOR
 		stageOffset = 1
@@ -122210,7 +122313,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1000
 		bulkheadProfiles = ,size00, srf
 		fuelCrossFeed = True
 		crashTolerance = 8
@@ -122236,6 +122339,7 @@ UrlConfig
 		VARS
 		{
 			TechRequired = precisionEngineering
+			maxTemp = truss
 			old_mass = 0.001
 		}
 		MODULE
@@ -122277,6 +122381,7 @@ UrlConfig
 			action = no crashTolerance set, use default
 			action = no breakingForce set, use default
 			action = no breakingTorque set, use default
+			action = change maxTemp to 'truss'
 		}
 	}
 }
@@ -122311,7 +122416,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = ,size00, srf
 		crashTolerance = 8
 		breakingForce = 25
@@ -122402,7 +122507,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = ,size00, srf
 		crashTolerance = 8
 		breakingForce = 25
@@ -122493,7 +122598,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = ,size00, srf
 		crashTolerance = 8
 		breakingForce = 25
@@ -122583,7 +122688,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1000
 		bulkheadProfiles = size0
 		fuelCrossFeed = True
 		crashTolerance = 8
@@ -122609,6 +122714,7 @@ UrlConfig
 		VARS
 		{
 			TechRequired = precisionEngineering
+			maxTemp = truss
 			old_mass = 0.001
 		}
 		MODULE
@@ -122649,6 +122755,7 @@ UrlConfig
 			action = no crashTolerance set, use default
 			action = no breakingForce set, use default
 			action = no breakingTorque set, use default
+			action = change maxTemp to 'truss'
 		}
 	}
 }
@@ -122679,7 +122786,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size1
 		scale = 1
 		rescaleFactor = 1
@@ -122769,7 +122876,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size1, srf
 		scale = 1
 		rescaleFactor = 1
@@ -122859,7 +122966,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size1, srf
 		scale = 1
 		rescaleFactor = 1
@@ -122948,7 +123055,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = srf
 		emissiveConstant = 0.90
 		heatConductivity = 0.001
@@ -123050,7 +123157,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = srf
 		emissiveConstant = 0.90
 		heatConductivity = 0.001
@@ -123152,7 +123259,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = srf
 		emissiveConstant = 0.90
 		heatConductivity = 0.001
@@ -123254,7 +123361,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = srf
 		emissiveConstant = 0.90
 		heatConductivity = 0.75
@@ -123449,7 +123556,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 725
 		PhysicsSignificance = 1
 		bulkheadProfiles = ,size00, srf
 		crashTolerance = 8
@@ -123542,6 +123649,7 @@ UrlConfig
 			action = no crashTolerance set, use default
 			action = no breakingForce set, use default
 			action = no breakingTorque set, use default
+			action = change maxTemp to 'communications'
 		}
 		MODULE
 		{
@@ -123593,7 +123701,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 725
 		bulkheadProfiles = srf
 		crashTolerance = 8
 		breakingForce = 25
@@ -123697,6 +123805,7 @@ UrlConfig
 			action = no crashTolerance set, use default
 			action = no breakingForce set, use default
 			action = no breakingTorque set, use default
+			action = change maxTemp to 'communications'
 		}
 		MODULE
 		{
@@ -123750,7 +123859,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		PhysicsSignificance = 1
 		bulkheadProfiles = ,size00, srf
 		crashTolerance = 8
@@ -123860,7 +123969,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 800
+		maxTemp = 875
 		stagingIcon = DECOUPLER_HOR
 		stageOffset = 1
 		childStageOffset = 1
@@ -124005,7 +124114,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 800
+		maxTemp = 875
 		stagingIcon = DECOUPLER_HOR
 		stageOffset = 1
 		childStageOffset = 1
@@ -124150,7 +124259,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 800
+		maxTemp = 875
 		stagingIcon = DECOUPLER_HOR
 		stageOffset = 1
 		childStageOffset = 1
@@ -124294,7 +124403,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 800
+		maxTemp = 875
 		stagingIcon = DECOUPLER_HOR
 		stageOffset = 1
 		childStageOffset = 1
@@ -124440,7 +124549,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 800
+		maxTemp = 875
 		fuelCrossFeed = False
 		stageOffset = 1
 		childStageOffset = 1
@@ -124581,7 +124690,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 800
+		maxTemp = 875
 		fuelCrossFeed = False
 		stageOffset = 1
 		childStageOffset = 1
@@ -124731,7 +124840,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 800
+		maxTemp = 875
 		fuelCrossFeed = False
 		stageOffset = 1
 		childStageOffset = 1
@@ -124874,7 +124983,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 800
+		maxTemp = 875
 		fuelCrossFeed = False
 		stageOffset = 1
 		childStageOffset = 1
@@ -125013,7 +125122,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 800
+		maxTemp = 875
 		fuelCrossFeed = False
 		stageOffset = 1
 		childStageOffset = 1
@@ -125154,7 +125263,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 800
+		maxTemp = 875
 		fuelCrossFeed = False
 		stageOffset = 1
 		childStageOffset = 1
@@ -125295,7 +125404,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 800
+		maxTemp = 875
 		fuelCrossFeed = False
 		stageOffset = 1
 		childStageOffset = 1
@@ -125442,7 +125551,7 @@ UrlConfig
 		maximum_drag = 0.25
 		minimum_drag = 0.25
 		angularDrag = 0.5
-		maxTemp = 775
+		maxTemp = 850
 		bulkheadProfiles = size1, srf
 		crashTolerance = 8
 		breakingForce = 25
@@ -125561,7 +125670,7 @@ UrlConfig
 		maximum_drag = 0.08
 		minimum_drag = 0.08
 		angularDrag = 0.2
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size1
 		node_stack_tdn = 0, 0, -.671, 0, 0, -1, 1
 		crashTolerance = 8
@@ -125686,7 +125795,7 @@ UrlConfig
 		maximum_drag = 0.25
 		minimum_drag = 0.25
 		angularDrag = 0.5
-		maxTemp = 775
+		maxTemp = 850
 		bulkheadProfiles = size0, srf
 		crashTolerance = 8
 		breakingForce = 25
@@ -125805,7 +125914,7 @@ UrlConfig
 		maximum_drag = 0.25
 		minimum_drag = 0.25
 		angularDrag = 0.5
-		maxTemp = 650
+		maxTemp = 1
 		thermalMassModifier = 6.0
 		emissiveConstant = 0.8
 		bulkheadProfiles = size1
@@ -125930,7 +126039,7 @@ UrlConfig
 		maximum_drag = 0.25
 		minimum_drag = 0.25
 		angularDrag = 0.5
-		maxTemp = 775
+		maxTemp = 850
 		bulkheadProfiles = size2
 		crashTolerance = 8
 		breakingForce = 25
@@ -126052,7 +126161,7 @@ UrlConfig
 		maximum_drag = 0.3
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		fuelCrossFeed = False
 		bulkheadProfiles = size1, srf
 		crashTolerance = 8
@@ -126209,7 +126318,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.8
 		thermalMassModifier = 3
 		PhysicsSignificance = 1
@@ -126294,7 +126403,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.8
 		thermalMassModifier = 3
 		PhysicsSignificance = 1
@@ -126379,7 +126488,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.8
 		thermalMassModifier = 3
 		PhysicsSignificance = 1
@@ -126464,7 +126573,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.8
 		thermalMassModifier = 3
 		PhysicsSignificance = 1
@@ -126549,7 +126658,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.8
 		thermalMassModifier = 3
 		PhysicsSignificance = 1
@@ -126634,7 +126743,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.8
 		thermalMassModifier = 3
 		PhysicsSignificance = 1
@@ -126721,7 +126830,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.8
 		thermalMassModifier = 3.0
 		PhysicsSignificance = 1
@@ -126815,7 +126924,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.8
 		thermalMassModifier = 3.0
 		PhysicsSignificance = 1
@@ -126909,7 +127018,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = srf
 		crashTolerance = 8
 		breakingForce = 25
@@ -127014,7 +127123,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		CoMOffset = 0, 0, 0.1
 		bulkheadProfiles = srf
 		crashTolerance = 8
@@ -127118,7 +127227,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		explosionPotential = 0
 		bulkheadProfiles = srf
 		crashTolerance = 8
@@ -127221,7 +127330,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		fuelCrossFeed = True
 		bulkheadProfiles = size1, size2
 		crashTolerance = 8
@@ -127312,7 +127421,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		fuelCrossFeed = True
 		bulkheadProfiles = size2, size1
 		crashTolerance = 8
@@ -127404,7 +127513,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 2000
+		maxTemp = 725
 		fuelCrossFeed = False
 		explosionPotential = 0.1
 		stageOffset = 0
@@ -127499,6 +127608,7 @@ UrlConfig
 			action = use author's mass
 			action = add mass from comm antenna
 			action = change maxTemp to 'launch clamp'
+			action = change maxTemp to 'communications'
 		}
 		MODULE
 		{
@@ -127784,7 +127894,7 @@ UrlConfig
 		maximum_drag = 0.01
 		minimum_drag = 0.01
 		angularDrag = 0.1
-		maxTemp = 1000
+		maxTemp = 1100
 		fuelCrossFeed = True
 		PhysicsSignificance = 1
 		bulkheadProfiles = srf
@@ -127908,7 +128018,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.8
 		fuelCrossFeed = True
 		bulkheadProfiles = mk2
@@ -128032,7 +128142,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.8
 		fuelCrossFeed = True
 		bulkheadProfiles = mk2
@@ -128161,7 +128271,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.8
 		vesselType = Ship
 		bulkheadProfiles = mk2
@@ -128294,7 +128404,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.8
 		fuelCrossFeed = True
 		bulkheadProfiles = size1, mk2
@@ -128433,7 +128543,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.87
 		fuelCrossFeed = True
 		bulkheadProfiles = mk3
@@ -128554,7 +128664,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.87
 		fuelCrossFeed = True
 		bulkheadProfiles = mk3
@@ -128675,7 +128785,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.87
 		fuelCrossFeed = True
 		bulkheadProfiles = mk3
@@ -128793,7 +128903,7 @@ UrlConfig
 		mass = 9999
 		dragModelType = default
 		angularDrag = 3
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.7
 		stageOffset = -1
 		bulkheadProfiles = size0, srf
@@ -128927,7 +129037,7 @@ UrlConfig
 		mass = 9999
 		dragModelType = default
 		angularDrag = 3
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.7
 		stageOffset = -1
 		bulkheadProfiles = size0, srf
@@ -129068,7 +129178,7 @@ UrlConfig
 		mass = 9999
 		dragModelType = default
 		angularDrag = 3
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.7
 		bodyLiftMultiplier = 0
 		stageOffset = -1
@@ -129199,7 +129309,7 @@ UrlConfig
 		mass = 9999
 		dragModelType = default
 		angularDrag = 3
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.7
 		bodyLiftMultiplier = 0
 		stageOffset = -1
@@ -129333,7 +129443,7 @@ UrlConfig
 		mass = 9999
 		dragModelType = default
 		angularDrag = 3
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.7
 		bodyLiftMultiplier = 0
 		stageOffset = -1
@@ -129465,7 +129575,7 @@ UrlConfig
 		mass = 9999
 		dragModelType = default
 		angularDrag = 3
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.7
 		bodyLiftMultiplier = 0
 		stageOffset = -1
@@ -129603,7 +129713,7 @@ UrlConfig
 		mass = 9999
 		dragModelType = default
 		angularDrag = 3
-		maxTemp = 650
+		maxTemp = 1
 		emissiveConstant = 0.7
 		bodyLiftMultiplier = 0
 		stageOffset = -1
@@ -129740,7 +129850,7 @@ UrlConfig
 		maximum_drag = 0.25
 		minimum_drag = 0.25
 		angularDrag = 0.5
-		maxTemp = 650
+		maxTemp = 1
 		PhysicsSignificance = 1
 		bulkheadProfiles = size1, srf
 		crashTolerance = 8
@@ -129829,7 +129939,7 @@ UrlConfig
 		maximum_drag = 0.001
 		minimum_drag = 0.001
 		angularDrag = 2
-		maxTemp = 1000
+		maxTemp = 1100
 		PhysicsSignificance = 1
 		bulkheadProfiles = srf
 		crashTolerance = 8
@@ -129952,7 +130062,7 @@ UrlConfig
 		minimum_drag = 0.3
 		angularDrag = 2
 		bulkheadProfiles = size1
-		maxTemp = 650
+		maxTemp = 1
 		heatConductivity = 0.04
 		thermalMassModifier = 5.0
 		emissiveConstant = 0.95
@@ -130081,7 +130191,7 @@ UrlConfig
 		minimum_drag = 0.3
 		angularDrag = 2
 		bulkheadProfiles = size2
-		maxTemp = 650
+		maxTemp = 1
 		heatConductivity = 0.04
 		thermalMassModifier = 5.0
 		emissiveConstant = 0.95
@@ -130207,7 +130317,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 775
+		maxTemp = 850
 		PhysicsSignificance = 1
 		bulkheadProfiles = srf
 		crashTolerance = 8
@@ -130314,7 +130424,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 775
+		maxTemp = 850
 		PhysicsSignificance = 1
 		bulkheadProfiles = srf
 		crashTolerance = 8
@@ -130425,7 +130535,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		fuelCrossFeed = True
 		NoCrossFeedNodeKey = bottom
 		bulkheadProfiles = size1
@@ -130520,7 +130630,7 @@ UrlConfig
 		maximum_drag = 0.3
 		minimum_drag = 0.3
 		angularDrag = 3
-		maxTemp = 650
+		maxTemp = 1
 		fuelCrossFeed = True
 		NoCrossFeedNodeKey = bottom
 		bulkheadProfiles = size1
@@ -130615,7 +130725,7 @@ UrlConfig
 		maximum_drag = 0.3
 		minimum_drag = 0.3
 		angularDrag = 3
-		maxTemp = 650
+		maxTemp = 1
 		fuelCrossFeed = True
 		NoCrossFeedNodeKey = bottom
 		bulkheadProfiles = size1
@@ -130710,7 +130820,7 @@ UrlConfig
 		maximum_drag = 0.3
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		PhysicsSignificance = 1
 		bulkheadProfiles = srf
 		crashTolerance = 8
@@ -130809,7 +130919,7 @@ UrlConfig
 		maximum_drag = 0.3
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		PhysicsSignificance = 1
 		bulkheadProfiles = srf
 		crashTolerance = 8
@@ -130923,7 +131033,7 @@ UrlConfig
 		maximum_drag = 0.3
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = srf
 		crashTolerance = 8
 		breakingForce = 25
@@ -131045,7 +131155,7 @@ UrlConfig
 		maximum_drag = 0.3
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = srf
 		crashTolerance = 8
 		breakingForce = 25
@@ -131164,7 +131274,7 @@ UrlConfig
 		maximum_drag = 0.3
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = srf
 		crashTolerance = 8
 		breakingForce = 25
@@ -131330,7 +131440,7 @@ UrlConfig
 		maximum_drag = 0.3
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = srf
 		crashTolerance = 8
 		breakingForce = 25
@@ -131474,7 +131584,7 @@ UrlConfig
 		maximum_drag = 0.3
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = srf
 		crashTolerance = 8
 		breakingForce = 25
@@ -131605,7 +131715,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.15
 		angularDrag = 1.5
-		maxTemp = 650
+		maxTemp = 1
 		explosionPotential = 0
 		bulkheadProfiles = srf
 		crashTolerance = 8
@@ -131754,7 +131864,7 @@ UrlConfig
 		maximum_drag = 0.3
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 775
+		maxTemp = 850
 		PhysicsSignificance = 1
 		bulkheadProfiles = srf
 		crashTolerance = 8
@@ -143360,7 +143470,7 @@ UrlConfig
 		maximum_drag = 0.1
 		minimum_drag = 0.1
 		angularDrag = 1
-		maxTemp = 775
+		maxTemp = 850
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -143452,7 +143562,7 @@ UrlConfig
 		maximum_drag = 0.1
 		minimum_drag = 0.1
 		angularDrag = 1
-		maxTemp = 775
+		maxTemp = 850
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -143576,7 +143686,7 @@ UrlConfig
 		maximum_drag = 0.01
 		minimum_drag = 0.01
 		angularDrag = 1
-		maxTemp = 775
+		maxTemp = 850
 		PhysicsSignificance = 1
 		crashTolerance = 8
 		breakingForce = 25
@@ -143682,7 +143792,7 @@ UrlConfig
 		maximum_drag = 0.20
 		minimum_drag = 0.15
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		vesselType = Probe
 		crashTolerance = 8
 		breakingForce = 25
@@ -143952,7 +144062,7 @@ UrlConfig
 		maximum_drag = 0.20
 		minimum_drag = 0.15
 		angularDrag = 2
-		maxTemp = 1000
+		maxTemp = 1100
 		PhysicsSignificance = 1
 		crashTolerance = 8
 		breakingForce = 25
@@ -144062,7 +144172,7 @@ UrlConfig
 		maximum_drag = 0.20
 		minimum_drag = 0.15
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 725
 		PhysicsSignificance = 1
 		crashTolerance = 8
 		breakingForce = 25
@@ -144139,6 +144249,7 @@ UrlConfig
 			action = no crashTolerance set, use default
 			action = no breakingForce set, use default
 			action = no breakingTorque set, use default
+			action = change maxTemp to 'communications'
 		}
 		MODULE
 		{
@@ -144190,7 +144301,7 @@ UrlConfig
 		maximum_drag = 0.20
 		minimum_drag = 0.15
 		angularDrag = 2
-		maxTemp = 1000
+		maxTemp = 1100
 		stagingIcon = LIQUID_ENGINE
 		crashTolerance = 8
 		breakingForce = 25
@@ -144421,7 +144532,7 @@ UrlConfig
 		maximum_drag = 0.20
 		minimum_drag = 0.15
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -144506,7 +144617,7 @@ UrlConfig
 		maximum_drag = 0.20
 		minimum_drag = 0.15
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -144591,7 +144702,7 @@ UrlConfig
 		maximum_drag = 0.20
 		minimum_drag = 0.15
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -144715,7 +144826,7 @@ UrlConfig
 		maximum_drag = 0.20
 		minimum_drag = 0.15
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		vesselType = Station
 		CrewCapacity = 2
 		crashTolerance = 8
@@ -144818,7 +144929,7 @@ UrlConfig
 		maximum_drag = 0.20
 		minimum_drag = 0.15
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 725
 		PhysicsSignificance = 1
 		crashTolerance = 8
 		breakingForce = 25
@@ -144910,6 +145021,7 @@ UrlConfig
 			action = no crashTolerance set, use default
 			action = no breakingForce set, use default
 			action = no breakingTorque set, use default
+			action = change maxTemp to 'communications'
 		}
 		MODULE
 		{
@@ -144961,7 +145073,7 @@ UrlConfig
 		maximum_drag = 0.20
 		minimum_drag = 0.15
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 725
 		thermalMassModifier = 2.0
 		emissiveConstant = 0.95
 		heatConductivity = 0.04
@@ -145057,6 +145169,7 @@ UrlConfig
 			action = no crashTolerance set, use default
 			action = no breakingForce set, use default
 			action = no breakingTorque set, use default
+			action = change maxTemp to 'communications'
 		}
 		MODULE
 		{
@@ -145237,7 +145350,7 @@ UrlConfig
 		maximum_drag = 0.20
 		minimum_drag = 0.15
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 725
 		thermalMassModifier = 2.0
 		emissiveConstant = 0.95
 		heatConductivity = 0.04
@@ -145339,6 +145452,7 @@ UrlConfig
 			action = no crashTolerance set, use default
 			action = no breakingForce set, use default
 			action = no breakingTorque set, use default
+			action = change maxTemp to 'communications'
 		}
 		MODULE
 		{
@@ -145391,7 +145505,7 @@ UrlConfig
 		maximum_drag = 0.20
 		minimum_drag = 0.15
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		thermalMassModifier = 2.0
 		emissiveConstant = 0.95
 		heatConductivity = 0.04
@@ -145492,7 +145606,7 @@ UrlConfig
 		maximum_drag = 0.20
 		minimum_drag = 0.15
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		CrewCapacity = 1
 		crashTolerance = 8
 		breakingForce = 25
@@ -145606,7 +145720,7 @@ UrlConfig
 		maximum_drag = 0.20
 		minimum_drag = 0.15
 		angularDrag = 2
-		maxTemp = 1000
+		maxTemp = 1100
 		PhysicsSignificance = 1
 		crashTolerance = 8
 		breakingForce = 25
@@ -145722,7 +145836,7 @@ UrlConfig
 		maximum_drag = 0.20
 		minimum_drag = 0.15
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 725
 		thermalMassModifier = 2.0
 		emissiveConstant = 0.95
 		heatConductivity = 0.04
@@ -145818,6 +145932,7 @@ UrlConfig
 			action = no crashTolerance set, use default
 			action = no breakingForce set, use default
 			action = no breakingTorque set, use default
+			action = change maxTemp to 'communications'
 		}
 		MODULE
 		{
@@ -145996,7 +146111,7 @@ UrlConfig
 		maximum_drag = 0.20
 		minimum_drag = 0.15
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 725
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -146072,6 +146187,7 @@ UrlConfig
 			action = no crashTolerance set, use default
 			action = no breakingForce set, use default
 			action = no breakingTorque set, use default
+			action = change maxTemp to 'communications'
 		}
 		MODULE
 		{
@@ -146123,7 +146239,7 @@ UrlConfig
 		maximum_drag = 0.20
 		minimum_drag = 0.15
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		vesselType = Lander
 		crashTolerance = 8
 		breakingForce = 25
@@ -146224,7 +146340,7 @@ UrlConfig
 		maximum_drag = 0.20
 		minimum_drag = 0.15
 		angularDrag = 2
-		maxTemp = 800
+		maxTemp = 875
 		fuelCrossFeed = False
 		stageOffset = -1
 		crashTolerance = 8
@@ -149379,7 +149495,7 @@ UrlConfig
 		maximum_drag = 0.20
 		minimum_drag = 0.15
 		angularDrag = 2
-		maxTemp = 1000
+		maxTemp = 1100
 		stagingIcon = LIQUID_ENGINE
 		crashTolerance = 8
 		breakingForce = 25
@@ -149898,7 +150014,7 @@ UrlConfig
 		maximum_drag = 0.20
 		minimum_drag = 0.15
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -150215,7 +150331,7 @@ UrlConfig
 		maximum_drag = 0.20
 		minimum_drag = 0.15
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -150299,7 +150415,7 @@ UrlConfig
 		maximum_drag = 0.20
 		minimum_drag = 0.15
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -150383,7 +150499,7 @@ UrlConfig
 		maximum_drag = 0.20
 		minimum_drag = 0.15
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -150689,7 +150805,7 @@ UrlConfig
 		maximum_drag = 0.20
 		minimum_drag = 0.15
 		angularDrag = 2
-		maxTemp = 800
+		maxTemp = 875
 		fuelCrossFeed = False
 		stagingIcon = DECOUPLER_HOR
 		stageOffset = 1
@@ -150805,7 +150921,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -150895,7 +151011,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -151226,8 +151342,8 @@ UrlConfig
 		RSSShowCalendarToggled = False
 		AppLauncherSetTrueTimeOut = 6
 		DailyVersionCheck = True
-		VersionCheckDate_AttemptStored = 2015-07-22
-		VersionCheckDate_SuccessStored = 2015-07-22
+		VersionCheckDate_AttemptStored = 2015-07-29
+		VersionCheckDate_SuccessStored = 2015-07-29
 		VersionWeb = 3.4.0.0
 		WindowPositionStored
 		{
@@ -151496,8 +151612,8 @@ UrlConfig
 		ReplaceStockAppTimeOut = 20
 		AppLauncherSetTrueTimeOut = 6
 		DailyVersionCheck = True
-		VersionCheckDate_AttemptStored = 2015-07-22
-		VersionCheckDate_SuccessStored = 2015-07-22
+		VersionCheckDate_AttemptStored = 2015-07-29
+		VersionCheckDate_SuccessStored = 2015-07-29
 		ShowWindowOnResourceMonitor = True
 		VersionWeb = 2.7.2.0
 		WindowPositionStored
@@ -154941,7 +155057,7 @@ UrlConfig
 		maximum_drag = 0.25
 		minimum_drag = 0.25
 		angularDrag = .5
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size3
 		crashTolerance = 8
 		breakingForce = 25
@@ -155032,7 +155148,7 @@ UrlConfig
 		maximum_drag = 0.25
 		minimum_drag = 0.25
 		angularDrag = .5
-		maxTemp = 650
+		maxTemp = 1
 		vesselType = Ship
 		CrewCapacity = 1
 		bulkheadProfiles = size2
@@ -155179,7 +155295,7 @@ UrlConfig
 		maximum_drag = 0.25
 		minimum_drag = 0.25
 		angularDrag = .5
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = octo3
 		CrewCapacity = 12
 		crashTolerance = 8
@@ -155340,7 +155456,7 @@ UrlConfig
 		maximum_drag = 0.25
 		minimum_drag = 0.25
 		angularDrag = .5
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = octo3
 		CrewCapacity = 4
 		crashTolerance = 8
@@ -155645,7 +155761,7 @@ UrlConfig
 		maximum_drag = 0.25
 		minimum_drag = 0.25
 		angularDrag = .5
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = octo3
 		CrewCapacity = 4
 		crashTolerance = 8
@@ -156013,7 +156129,7 @@ UrlConfig
 		maximum_drag = 0.25
 		minimum_drag = 0.25
 		angularDrag = .5
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = octo3
 		CrewCapacity = 4
 		crashTolerance = 8
@@ -156300,7 +156416,7 @@ UrlConfig
 		maximum_drag = 0.25
 		minimum_drag = 0.25
 		angularDrag = .5
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size3, srf,octo3
 		crashTolerance = 8
 		breakingForce = 25
@@ -156384,7 +156500,7 @@ UrlConfig
 		maximum_drag = 0.25
 		minimum_drag = 0.25
 		angularDrag = .5
-		maxTemp = 775
+		maxTemp = 850
 		bulkheadProfiles = size2
 		CrewCapacity = 2
 		vesselType = Base
@@ -156684,7 +156800,7 @@ UrlConfig
 		maximum_drag = 0.25
 		minimum_drag = 0.25
 		angularDrag = .5
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size0, srf
 		crashTolerance = 8
 		breakingForce = 25
@@ -156873,7 +156989,7 @@ UrlConfig
 		maximum_drag = 0.25
 		minimum_drag = 0.25
 		angularDrag = .5
-		maxTemp = 775
+		maxTemp = 850
 		bulkheadProfiles = size2
 		CrewCapacity = 2
 		vesselType = Base
@@ -157148,7 +157264,7 @@ UrlConfig
 		maximum_drag = 0.25
 		minimum_drag = 0.25
 		angularDrag = .5
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size1, srf
 		crashTolerance = 8
 		breakingForce = 25
@@ -157300,7 +157416,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = srf
 		fuelCrossFeed = True
 		crashTolerance = 8
@@ -157439,7 +157555,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = srf
 		fuelCrossFeed = True
 		crashTolerance = 8
@@ -157563,7 +157679,7 @@ UrlConfig
 		minimum_drag = 0.2
 		angularDrag = 2
 		explosionPotential = 10
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = octo3
 		crashTolerance = 8
 		breakingForce = 25
@@ -157675,7 +157791,7 @@ UrlConfig
 		minimum_drag = 0.2
 		angularDrag = 2
 		explosionPotential = 10
-		maxTemp = 775
+		maxTemp = 850
 		bulkheadProfiles = size3
 		CrewCapacity = 4
 		crashTolerance = 8
@@ -157817,7 +157933,7 @@ UrlConfig
 		maximum_drag = 0.3
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size1, srf
 		fuelCrossFeed = False
 		crashTolerance = 8
@@ -157959,7 +158075,7 @@ UrlConfig
 		maximum_drag = 0.3
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size1, srf
 		fuelCrossFeed = False
 		crashTolerance = 8
@@ -158101,7 +158217,7 @@ UrlConfig
 		maximum_drag = 0.3
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size1, srf
 		fuelCrossFeed = False
 		crashTolerance = 8
@@ -158243,7 +158359,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size1, srf
 		fuelCrossFeed = True
 		TechRequired = advConstruction
@@ -158376,7 +158492,7 @@ UrlConfig
 		maximum_drag = 0.25
 		minimum_drag = 0.25
 		angularDrag = .5
-		maxTemp = 775
+		maxTemp = 850
 		bulkheadProfiles = size2
 		CrewCapacity = 2
 		vesselType = Base
@@ -158589,7 +158705,7 @@ UrlConfig
 		maximum_drag = 0.25
 		minimum_drag = 0.25
 		angularDrag = .5
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size3
 		CrewCapacity = 0
 		crashTolerance = 8
@@ -158697,7 +158813,7 @@ UrlConfig
 		maximum_drag = 0.25
 		minimum_drag = 0.25
 		angularDrag = .5
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size2, srf
 		CoMOffset = 0,-.5,0
 		PhysicsSignificance = 0
@@ -158833,7 +158949,7 @@ UrlConfig
 		maximum_drag = 0.25
 		minimum_drag = 0.25
 		angularDrag = .5
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size2, srf
 		CoMOffset = 0,-.5,0
 		PhysicsSignificance = 0
@@ -158970,7 +159086,7 @@ UrlConfig
 		maximum_drag = 0.25
 		minimum_drag = 0.25
 		angularDrag = .5
-		maxTemp = 775
+		maxTemp = 850
 		bulkheadProfiles = size2
 		CrewCapacity = 2
 		vesselType = Base
@@ -159178,7 +159294,7 @@ UrlConfig
 		maximum_drag = 0.25
 		minimum_drag = 0.25
 		angularDrag = .5
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size1, srf
 		crashTolerance = 8
 		breakingForce = 25
@@ -159275,7 +159391,7 @@ UrlConfig
 		maximum_drag = 0.25
 		minimum_drag = 0.25
 		angularDrag = .5
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size2
 		CrewCapacity = 0
 		vesselType = Base
@@ -159418,7 +159534,7 @@ UrlConfig
 		maximum_drag = 0.25
 		minimum_drag = 0.25
 		angularDrag = .5
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size2, srf
 		CrewCapacity = 1
 		crashTolerance = 8
@@ -159558,7 +159674,7 @@ UrlConfig
 		maximum_drag = 0.3
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size1
 		crashTolerance = 8
 		breakingForce = 25
@@ -159797,7 +159913,7 @@ UrlConfig
 		maximum_drag = 0.3
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size1
 		CrewCapacity = 1
 		crashTolerance = 8
@@ -159914,7 +160030,7 @@ UrlConfig
 		maximum_drag = 0.3
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size1
 		CrewCapacity = 1
 		crashTolerance = 8
@@ -160049,7 +160165,7 @@ UrlConfig
 		maximum_drag = 0.25
 		minimum_drag = 0.25
 		angularDrag = .5
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size2
 		crashTolerance = 8
 		breakingForce = 25
@@ -160132,7 +160248,7 @@ UrlConfig
 		maximum_drag = 0.3
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 725
 		bulkheadProfiles = srf, size1
 		CrewCapacity = 1
 		crashTolerance = 8
@@ -160285,6 +160401,7 @@ UrlConfig
 			action = no crashTolerance set, use default
 			action = no breakingForce set, use default
 			action = no breakingTorque set, use default
+			action = change maxTemp to 'communications'
 		}
 		MODULE
 		{
@@ -160324,7 +160441,7 @@ UrlConfig
 		maximum_drag = 0.3
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size1
 		CrewCapacity = 4
 		crashTolerance = 8
@@ -160527,7 +160644,7 @@ UrlConfig
 		maximum_drag = 0.3
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size1
 		crashTolerance = 8
 		breakingForce = 25
@@ -160679,7 +160796,7 @@ UrlConfig
 		maximum_drag = 0.25
 		minimum_drag = 0.25
 		angularDrag = .5
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size2
 		crashTolerance = 8
 		breakingForce = 25
@@ -160789,7 +160906,7 @@ UrlConfig
 		maximum_drag = 0.3
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size1
 		crashTolerance = 8
 		breakingForce = 25
@@ -160900,7 +161017,7 @@ UrlConfig
 		maximum_drag = 0.25
 		minimum_drag = 0.25
 		angularDrag = .5
-		maxTemp = 650
+		maxTemp = 1
 		vesselType = Ship
 		CrewCapacity = 2
 		bulkheadProfiles = size2
@@ -161047,7 +161164,7 @@ UrlConfig
 		maximum_drag = 0.3
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size1
 		crashTolerance = 8
 		breakingForce = 25
@@ -161198,7 +161315,7 @@ UrlConfig
 		maximum_drag = 0.3
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size1
 		crashTolerance = 8
 		breakingForce = 25
@@ -161334,7 +161451,7 @@ UrlConfig
 		maximum_drag = 0.3
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size1
 		crashTolerance = 8
 		breakingForce = 25
@@ -161557,7 +161674,7 @@ UrlConfig
 		maximum_drag = 0.3
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size1
 		crashTolerance = 8
 		breakingForce = 25
@@ -161802,7 +161919,7 @@ UrlConfig
 		maximum_drag = 0.3
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size1
 		crashTolerance = 8
 		breakingForce = 25
@@ -161938,7 +162055,7 @@ UrlConfig
 		maximum_drag = 0.3
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size1
 		CrewCapacity = 4
 		crashTolerance = 8
@@ -162196,7 +162313,7 @@ UrlConfig
 		maximum_drag = 0.25
 		minimum_drag = 0.25
 		angularDrag = .5
-		maxTemp = 1000
+		maxTemp = 1100
 		bulkheadProfiles = size3
 		CoMOffset = 0,-.5,0
 		PhysicsSignificance = 0
@@ -162358,7 +162475,7 @@ UrlConfig
 		maximum_drag = 0.25
 		minimum_drag = 0.25
 		angularDrag = .5
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size2
 		CrewCapacity = 2
 		vesselType = Station
@@ -162633,7 +162750,7 @@ UrlConfig
 		maximum_drag = 0.25
 		minimum_drag = 0.25
 		angularDrag = .5
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size2
 		crashTolerance = 8
 		breakingForce = 25
@@ -162766,7 +162883,7 @@ UrlConfig
 		maximum_drag = 0.25
 		minimum_drag = 0.25
 		angularDrag = .5
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size2, size1
 		crashTolerance = 8
 		breakingForce = 25
@@ -162861,7 +162978,7 @@ UrlConfig
 		maximum_drag = 0.25
 		minimum_drag = 0.25
 		angularDrag = .5
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size2
 		CrewCapacity = 2
 		vesselType = Station
@@ -163109,7 +163226,7 @@ UrlConfig
 		maximum_drag = 0.25
 		minimum_drag = 0.25
 		angularDrag = .5
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size2
 		CrewCapacity = 10
 		crashTolerance = 8
@@ -163214,7 +163331,7 @@ UrlConfig
 		maximum_drag = 0.25
 		minimum_drag = 0.25
 		angularDrag = .5
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size2
 		crashTolerance = 8
 		breakingForce = 25
@@ -163299,7 +163416,7 @@ UrlConfig
 		maximum_drag = 0.25
 		minimum_drag = 0.25
 		angularDrag = .5
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size2
 		CrewCapacity = 2
 		vesselType = Station
@@ -163488,7 +163605,7 @@ UrlConfig
 		maximum_drag = 0.25
 		minimum_drag = 0.25
 		angularDrag = .5
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size2
 		crashTolerance = 8
 		breakingForce = 25
@@ -163573,7 +163690,7 @@ UrlConfig
 		maximum_drag = 0.25
 		minimum_drag = 0.25
 		angularDrag = .5
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size2
 		CrewCapacity = 2
 		vesselType = Station
@@ -163753,7 +163870,7 @@ UrlConfig
 		maximum_drag = 0.25
 		minimum_drag = 0.25
 		angularDrag = .5
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size2
 		CrewCapacity = 0
 		vesselType = Station
@@ -163877,7 +163994,7 @@ UrlConfig
 		maximum_drag = 0.25
 		minimum_drag = 0.25
 		angularDrag = .5
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size1
 		crashTolerance = 8
 		breakingForce = 25
@@ -163961,7 +164078,7 @@ UrlConfig
 		maximum_drag = 0.25
 		minimum_drag = 0.25
 		angularDrag = .5
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size2
 		crashTolerance = 8
 		breakingForce = 25
@@ -164045,7 +164162,7 @@ UrlConfig
 		maximum_drag = 0.25
 		minimum_drag = 0.25
 		angularDrag = .5
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size1
 		crashTolerance = 8
 		breakingForce = 25
@@ -164148,7 +164265,7 @@ UrlConfig
 		maximum_drag = 0.25
 		minimum_drag = 0.25
 		angularDrag = .5
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
@@ -164315,7 +164432,7 @@ UrlConfig
 		maximum_drag = 0.20
 		minimum_drag = 0.15
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size1,srf
 		crashTolerance = 8
 		breakingForce = 25
@@ -164429,7 +164546,7 @@ UrlConfig
 		maximum_drag = 0.20
 		minimum_drag = 0.15
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size2,srf
 		crashTolerance = 8
 		breakingForce = 25
@@ -164543,7 +164660,7 @@ UrlConfig
 		maximum_drag = 0.20
 		minimum_drag = 0.15
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size3,srf
 		crashTolerance = 8
 		breakingForce = 25
@@ -164657,7 +164774,7 @@ UrlConfig
 		maximum_drag = 0.20
 		minimum_drag = 0.15
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size1,srf
 		crashTolerance = 8
 		breakingForce = 25
@@ -164767,7 +164884,7 @@ UrlConfig
 		maximum_drag = 0.20
 		minimum_drag = 0.15
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size2,srf
 		crashTolerance = 8
 		breakingForce = 25
@@ -164877,7 +164994,7 @@ UrlConfig
 		maximum_drag = 0.20
 		minimum_drag = 0.15
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size3,srf
 		crashTolerance = 8
 		breakingForce = 25
@@ -165296,7 +165413,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 2
-		maxTemp = 800
+		maxTemp = 875
 		fuelCrossFeed = False
 		stageOffset = 1
 		childStageOffset = 1
@@ -165420,7 +165537,7 @@ UrlConfig
 		maximum_drag = 0.01
 		minimum_drag = 0.01
 		angularDrag = 0.1
-		maxTemp = 1000
+		maxTemp = 1100
 		fuelCrossFeed = True
 		bulkheadProfiles = srf
 		crashTolerance = 8
@@ -165533,7 +165650,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		vesselType = Ship
 		crashTolerance = 8
 		breakingForce = 25
@@ -165653,7 +165770,7 @@ UrlConfig
 		maximum_drag = 0.01
 		minimum_drag = 0.01
 		angularDrag = 0.1
-		maxTemp = 1000
+		maxTemp = 1100
 		fuelCrossFeed = True
 		bulkheadProfiles = size0
 		crashTolerance = 8
@@ -165768,7 +165885,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size1
 		vesselType = Ship
 		crashTolerance = 8
@@ -166781,7 +166898,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.3
 		angularDrag = 2
-		maxTemp = 650
+		maxTemp = 1
 		fuelCrossFeed = True
 		bulkheadProfiles = size1
 		crashTolerance = 8
@@ -166893,7 +167010,7 @@ UrlConfig
 		maximum_drag = 0.25
 		minimum_drag = 0.25
 		angularDrag = 0.5
-		maxTemp = 650
+		maxTemp = 1
 		bulkheadProfiles = size1, srf
 		bodyLiftMultiplier = 0
 		stageOffset = -1
@@ -167748,7 +167865,7 @@ UrlConfig
 		maximum_drag = 0.2
 		minimum_drag = 0.2
 		angularDrag = 1
-		maxTemp = 650
+		maxTemp = 1
 		crashTolerance = 8
 		breakingForce = 25
 		breakingTorque = 25
