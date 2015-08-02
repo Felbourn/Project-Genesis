@@ -48,7 +48,7 @@ toolbars
 			drawBorder = False
 			useKSPSkin = False
 			buttonOrder = __TOOLBAR_INTERNAL.configureVisibleButtons,AmbientLightAdjustment.adjustLevels,SmokeScreen.main,sirkut.IREditorButton,AGX.AGXBtn
-			visibleButtons = SmokeScreen.main,sirkut.IREditorButton,AGX.AGXBtn
+			visibleButtons = SmokeScreen.main,sirkut.IREditorButton,AGX.AGXBtn,RCSla.RCSlaBtn
 		}
 		toolbar_1190476479
 		{
@@ -60,7 +60,7 @@ toolbars
 			drawBorder = False
 			useKSPSkin = False
 			buttonOrder = __TOOLBAR_INTERNAL.configureVisibleButtons,MechJeb2.Maneuver_Planner,MechJeb2.Rendezvous_Planner,MechJeb2.Smart_A_S_S_
-			visibleButtons = MechJeb2.Smart_A_S_S_,MechJeb2.Rendezvous_Planner,MechJeb2.Maneuver_Planner,sirkut.IREditorButton,SCANsat.SmallMap,SCANsat.BigMap,SCANsat.UIMenu,RCSla.RCSlaBtn,QuickHideConf.QuickHideConf,QuickHide.QuickHide
+			visibleButtons = MechJeb2.Smart_A_S_S_,MechJeb2.Rendezvous_Planner,MechJeb2.Maneuver_Planner,EnginesGUI.EnginesFlightButton
 		}
 		toolbar_512637643
 		{
@@ -121,6 +121,18 @@ toolbars
 			useKSPSkin = False
 			buttonOrder = 
 			visibleButtons = Fusebox.FBToggle,RO.ROButton
+		}
+		toolbar_881936231
+		{
+			x = 522
+			y = -3
+			width = 250
+			height = 38
+			autoHide = False
+			drawBorder = False
+			useKSPSkin = False
+			buttonOrder = 
+			visibleButtons = SCANsat.SmallMap,SCANsat.BigMap,SCANsat.UIMenu
 		}
 	}
 	EDITOR
