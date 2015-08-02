@@ -108,7 +108,7 @@ toolbars
 			drawBorder = False
 			useKSPSkin = False
 			buttonOrder = __TOOLBAR_INTERNAL.configureVisibleButtons,sirkut.IREditorButton,Fusebox.FBToggle,RCSBuildAid.mainButton
-			visibleButtons = RCSBuildAid.mainButton,sirkut.IREditorButton,AGX.AGXBtn
+			visibleButtons = RCSBuildAid.mainButton,sirkut.IREditorButton,AGX.AGXBtn,QuickHide.QuickHide
 		}
 		toolbar_2059823047
 		{
@@ -147,7 +147,7 @@ toolbars
 			drawBorder = False
 			useKSPSkin = False
 			buttonOrder = __TOOLBAR_INTERNAL.configureVisibleButtons,sirkut.IREditorButton,Fusebox.FBToggle,RCSBuildAid.mainButton
-			visibleButtons = RCSBuildAid.mainButton,sirkut.IREditorButton,AGX.AGXBtn
+			visibleButtons = RCSBuildAid.mainButton,sirkut.IREditorButton,AGX.AGXBtn,QuickHide.QuickHide
 		}
 		toolbar_2059823047
 		{
@@ -201,7 +201,7 @@ toolbars
 			drawBorder = False
 			useKSPSkin = False
 			buttonOrder = __TOOLBAR_INTERNAL.configureVisibleButtons,MechJeb2.Maneuver_Planner,MechJeb2.Rendezvous_Planner,MechJeb2.Smart_A_S_S_
-			visibleButtons = MechJeb2.Smart_A_S_S_,MechJeb2.Rendezvous_Planner,MechJeb2.Maneuver_Planner,sirkut.IREditorButton,SCANsat.SmallMap,SCANsat.BigMap,SCANsat.UIMenu,RCSla.RCSlaBtn,QuickHideConf.QuickHideConf,QuickHide.QuickHide
+			visibleButtons = MechJeb2.Smart_A_S_S_,MechJeb2.Rendezvous_Planner,MechJeb2.Maneuver_Planner,SCANsat.SmallMap,SCANsat.BigMap,RCSla.RCSlaBtn,QuickHideConf.QuickHideConf,QuickHide.QuickHide,EnginesGUI.EnginesFlightButton
 		}
 		toolbar_512637643
 		{
@@ -232,15 +232,15 @@ toolbars
 	{
 		toolbar_1851594668
 		{
-			x = 215
-			y = 36
-			width = 250
+			x = 216
+			y = 39
+			width = 275
 			height = 38
 			autoHide = False
 			drawBorder = False
 			useKSPSkin = False
 			buttonOrder = __TOOLBAR_INTERNAL.configureVisibleButtons,AmbientLightAdjustment.adjustLevels,QuickGoToVAB.QuickGoToVAB,QuickGoToSPH.QuickGoToSPH,QuickGoToTS.QuickGoToTS,QuickGoToSC.QuickGoToSC,QuickHide.QuickHide
-			visibleButtons = AmbientLightAdjustment.adjustLevels,QuickGoToSC.QuickGoToSC,QuickGoToSPH.QuickGoToSPH,QuickGoToTS.QuickGoToTS,QuickGoToVAB.QuickGoToVAB,QuickHide.QuickHide
+			visibleButtons = AmbientLightAdjustment.adjustLevels,QuickGoToSC.QuickGoToSC,QuickGoToSPH.QuickGoToSPH,QuickGoToTS.QuickGoToTS,QuickGoToVAB.QuickGoToVAB,QuickHide.QuickHide,QuickHideConf.QuickHideConf,SCANsat.KSCMap,Trajectories.ToggleUI
 		}
 	}
 	FLIGHTMAP

@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <config>
     <rect name="flightWindowPos">
-        <xmin>0</xmin>
-        <xmax>0</xmax>
-        <ymin>0</ymin>
-        <ymax>0</ymax>
+        <xmin>240</xmin>
+        <xmax>504</xmax>
+        <ymin>48</ymin>
+        <ymax>286</ymax>
     </rect>
     <rect name="settingsWindowPos">
-        <xmin>0</xmin>
-        <xmax>0</xmax>
-        <ymin>0</ymin>
-        <ymax>0</ymax>
+        <xmin>337</xmin>
+        <xmax>557</xmax>
+        <ymin>306</ymin>
+        <ymax>585</ymax>
     </rect>
     <bool name="showAmbientTemp">1</bool>
     <bool name="showAmbientPressure">1</bool>
@@ -25,10 +25,10 @@
     <bool name="showIsp">1</bool>
     <bool name="showTSFC">1</bool>
     <rect name="unitsSettingsWindowPos">
-        <xmin>0</xmin>
-        <xmax>0</xmax>
-        <ymin>0</ymin>
-        <ymax>0</ymax>
+        <xmin>88</xmin>
+        <xmax>308</xmax>
+        <ymin>470</ymin>
+        <ymax>746</ymax>
     </rect>
     <string name="pressureUnits">kPa</string>
     <string name="temperatureUnits">kelvin</string>
