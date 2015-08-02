@@ -565,6 +565,18 @@ PART
 	}
 	MODULE
 	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
 		name = RCSLandingAidModule
 		isEnabled = True
 		isMasterModule = False
@@ -901,6 +913,16 @@ PART
 			actionName = ActionOpen
 			custom1 = NA
 		}
+		ACTION
+		{
+			group = 3
+			groupName = Comms
+			activated = 0
+			partModule = ModuleRTAntenna
+			actionGuiName = Activate
+			actionName = ActionOpen
+			custom1 = NA
+		}
 		TOGGLE
 		{
 		}
@@ -1132,6 +1154,18 @@ PART
 		IsRTPowered = False
 		IsRTSignalProcessor = True
 		IsRTCommandStation = False
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
 		EVENTS
 		{
 		}
@@ -1438,6 +1472,16 @@ PART
 			actionName = ActionOpen
 			custom1 = NA
 		}
+		ACTION
+		{
+			group = 3
+			groupName = Comms
+			activated = 0
+			partModule = ModuleRTAntenna
+			actionGuiName = Activate
+			actionName = ActionOpen
+			custom1 = NA
+		}
 		TOGGLE
 		{
 		}
@@ -1669,6 +1713,18 @@ PART
 		IsRTPowered = False
 		IsRTSignalProcessor = True
 		IsRTCommandStation = False
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
 		EVENTS
 		{
 		}
@@ -1975,6 +2031,16 @@ PART
 			actionName = ActionOpen
 			custom1 = NA
 		}
+		ACTION
+		{
+			group = 3
+			groupName = Comms
+			activated = 0
+			partModule = ModuleRTAntenna
+			actionGuiName = Activate
+			actionName = ActionOpen
+			custom1 = NA
+		}
 		TOGGLE
 		{
 		}
@@ -2191,6 +2257,18 @@ PART
 		IsRTPowered = False
 		IsRTSignalProcessor = True
 		IsRTCommandStation = False
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
 		EVENTS
 		{
 		}
@@ -2497,6 +2575,16 @@ PART
 			actionName = ActionOpen
 			custom1 = NA
 		}
+		ACTION
+		{
+			group = 3
+			groupName = Comms
+			activated = 0
+			partModule = ModuleRTAntenna
+			actionGuiName = Activate
+			actionName = ActionOpen
+			custom1 = NA
+		}
 		TOGGLE
 		{
 		}
@@ -2720,6 +2808,18 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 }
 PART
 {
@@ -2774,6 +2874,16 @@ PART
 		}
 		ACTIONS
 		{
+		}
+		ACTION
+		{
+			group = 3
+			groupName = Comms
+			activated = 0
+			partModule = ModuleRTAntenna
+			actionGuiName = Activate
+			actionName = ActionOpen
+			custom1 = NA
 		}
 		ACTION
 		{
@@ -3222,6 +3332,18 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 }
 PART
 {
@@ -3374,6 +3496,18 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 }
 PART
 {
@@ -3460,6 +3594,16 @@ PART
 		}
 		ACTIONS
 		{
+		}
+		ACTION
+		{
+			group = 3
+			groupName = Comms
+			activated = 0
+			partModule = ModuleRTAntenna
+			actionGuiName = Activate
+			actionName = ActionOpen
+			custom1 = NA
 		}
 		ACTION
 		{
@@ -3908,6 +4052,18 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 }
 PART
 {
@@ -4290,6 +4446,16 @@ PART
 			actionName = MoveNextPresetAction
 			custom1 = NA
 		}
+		ACTION
+		{
+			group = 2
+			groupName = Comm Arms
+			activated = 0
+			partModule = MuMechToggle
+			actionGuiName = Move To Next Preset
+			actionName = MoveNextPresetAction
+			custom1 = NA
+		}
 		TOGGLE
 		{
 		}
@@ -4347,6 +4513,18 @@ PART
 				unfocusedRange = 5
 				externalToEVAOnly = True
 			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
 		}
 		ACTIONS
 		{
@@ -4486,12 +4664,24 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 }
 PART
 {
 	part = IR.Segment.TrussLarge.5m00_4294122152
 	partName = Part
-	pos = -3.269951,29.03274,0.2196199
+	pos = -3.269951,29.03274,0.21962
 	attPos = 0,0,0
 	attPos0 = 0,0.9921246,0
 	rot = -5.960464E-08,-5.960464E-08,-1.24345E-14,-1
@@ -4620,15 +4810,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 }
 PART
 {
 	part = probeCoreOcto2_4294160956
 	partName = Part
-	pos = -3.249013,29.52882,0.2196211
+	pos = -3.249013,29.52882,0.2196213
 	attPos = 0.02093732,-0.06106186,0
 	attPos0 = 0,0.5571241,0
-	rot = -1.384258E-08,7.045195E-08,-0.7071068,0.7071068
+	rot = -1.384258E-08,7.045196E-08,-0.7071068,0.7071068
 	attRot = 0,0,0.7071068,-0.7071068
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
@@ -4943,6 +5145,18 @@ PART
 	}
 	MODULE
 	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
 		name = RCSLandingAidModule
 		isEnabled = True
 		isMasterModule = False
@@ -4985,7 +5199,7 @@ PART
 {
 	part = commDish_4294055868
 	partName = Part
-	pos = -3.064881,29.52882,0.2196208
+	pos = -3.064881,29.52882,0.219621
 	attPos = -2.195067E-08,0.1230737,0
 	attPos0 = 0,0.06106186,0
 	rot = -1.384212E-08,7.045149E-08,-0.7071069,0.7071068
@@ -5098,6 +5312,16 @@ PART
 		}
 		ACTIONS
 		{
+		}
+		ACTION
+		{
+			group = 3
+			groupName = Comms
+			activated = 0
+			partModule = ModuleRTAntenna
+			actionGuiName = Activate
+			actionName = ActionOpen
+			custom1 = NA
 		}
 		ACTION
 		{
@@ -5502,12 +5726,24 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 }
 PART
 {
 	part = W485.SurfaceOmniLight_4293313984
 	partName = Part
-	pos = -3.209764,29.73342,0.2196214
+	pos = -3.209764,29.73342,0.2196216
 	attPos = -0.453526,0.007696152,0.811329
 	attPos0 = -0.2045994,0.03924749,-4.267085E-08
 	rot = 0.5,0.4999997,-0.5000004,0.5000002
@@ -5699,6 +5935,18 @@ PART
 		defaultScale = 100
 		defaultTransformScale = (1, 1, 1)
 		DryCost = 12.5
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
 		EVENTS
 		{
 		}
@@ -6088,6 +6336,16 @@ PART
 			actionName = MoveNextPresetAction
 			custom1 = NA
 		}
+		ACTION
+		{
+			group = 2
+			groupName = Comm Arms
+			activated = 0
+			partModule = MuMechToggle
+			actionGuiName = Move To Next Preset
+			actionName = MoveNextPresetAction
+			custom1 = NA
+		}
 		TOGGLE
 		{
 		}
@@ -6145,6 +6403,18 @@ PART
 				unfocusedRange = 5
 				externalToEVAOnly = True
 			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
 		}
 		ACTIONS
 		{
@@ -6284,12 +6554,24 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 }
 PART
 {
 	part = IR.Segment.TrussLarge.5m00_4294043926
 	partName = Part
-	pos = -1.261245,29.03274,0.2196141
+	pos = -1.261245,29.03274,0.219614
 	attPos = 0,0,0
 	attPos0 = 0,0.9921246,0
 	rot = 5.960464E-08,1,-5.960469E-08,-2.682209E-07
@@ -6418,12 +6700,24 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 }
 PART
 {
 	part = probeCoreOcto2_4294043876
 	partName = Part
-	pos = -1.282185,29.52882,0.2196144
+	pos = -1.282185,29.52882,0.2196143
 	attPos = 0.02093732,-0.06106186,0
 	attPos0 = 0,0.5571241,0
 	rot = 0.7071066,-0.7071072,-7.556476E-08,2.194633E-07
@@ -6741,6 +7035,18 @@ PART
 	}
 	MODULE
 	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
 		name = RCSLandingAidModule
 		isEnabled = True
 		isMasterModule = False
@@ -6783,7 +7089,7 @@ PART
 {
 	part = commDish_4294043812
 	partName = Part
-	pos = -1.466317,29.52882,0.2196145
+	pos = -1.466317,29.52882,0.2196144
 	attPos = -2.195067E-08,0.1230737,0
 	attPos0 = 0,0.06106186,0
 	rot = 0.7071069,-0.7071069,-1.96582E-07,1.616664E-07
@@ -6896,6 +7202,16 @@ PART
 		}
 		ACTIONS
 		{
+		}
+		ACTION
+		{
+			group = 3
+			groupName = Comms
+			activated = 0
+			partModule = ModuleRTAntenna
+			actionGuiName = Activate
+			actionName = ActionOpen
+			custom1 = NA
 		}
 		ACTION
 		{
@@ -7300,12 +7616,24 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 }
 PART
 {
 	part = W485.SurfaceOmniLight_4293314580
 	partName = Part
-	pos = -1.321433,29.73342,0.2196142
+	pos = -1.321433,29.73342,0.2196141
 	attPos = -0.453526,0.007696152,0.811329
 	attPos0 = -0.2045995,0.03924751,-1.210009E-07
 	rot = 0.5000005,-0.5,0.5000001,0.4999997
@@ -7504,6 +7832,18 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 }
 PART
 {
@@ -7631,6 +7971,18 @@ PART
 		defaultScale = 1
 		defaultTransformScale = (1, 1, 1)
 		DryCost = 113.0357
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
 		EVENTS
 		{
 		}
@@ -7842,6 +8194,18 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 }
 PART
 {
@@ -8046,6 +8410,18 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 }
 PART
 {
@@ -8173,6 +8549,18 @@ PART
 		defaultScale = 1
 		defaultTransformScale = (1, 1, 1)
 		DryCost = 113.0357
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
 		EVENTS
 		{
 		}
@@ -8384,6 +8772,18 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 }
 PART
 {
@@ -8581,6 +8981,18 @@ PART
 		defaultScale = 100
 		defaultTransformScale = (1, 1, 1)
 		DryCost = 12.5
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
 		EVENTS
 		{
 		}
@@ -8887,6 +9299,16 @@ PART
 			actionName = ActionOpen
 			custom1 = NA
 		}
+		ACTION
+		{
+			group = 3
+			groupName = Comms
+			activated = 0
+			partModule = ModuleRTAntenna
+			actionGuiName = Activate
+			actionName = ActionOpen
+			custom1 = NA
+		}
 		TOGGLE
 		{
 		}
@@ -9103,6 +9525,18 @@ PART
 		IsRTPowered = False
 		IsRTSignalProcessor = True
 		IsRTCommandStation = False
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
 		EVENTS
 		{
 		}
@@ -9409,6 +9843,16 @@ PART
 			actionName = ActionOpen
 			custom1 = NA
 		}
+		ACTION
+		{
+			group = 3
+			groupName = Comms
+			activated = 0
+			partModule = ModuleRTAntenna
+			actionGuiName = Activate
+			actionName = ActionOpen
+			custom1 = NA
+		}
 		TOGGLE
 		{
 		}
@@ -9625,6 +10069,18 @@ PART
 		IsRTPowered = False
 		IsRTSignalProcessor = True
 		IsRTCommandStation = False
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
 		EVENTS
 		{
 		}
@@ -9935,6 +10391,16 @@ PART
 			actionName = ActionEnableThruster
 			custom1 = NA
 		}
+		ACTION
+		{
+			group = 4
+			groupName = RCS
+			activated = 0
+			partModule = ModuleTweakableRCS
+			actionGuiName = Enable Thruster
+			actionName = ActionEnableThruster
+			custom1 = NA
+		}
 		TOGGLE
 		{
 		}
@@ -10038,6 +10504,18 @@ PART
 			{
 				actionGroup = None
 			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
 		}
 	}
 }
@@ -10343,6 +10821,16 @@ PART
 			actionName = ActionEnableThruster
 			custom1 = NA
 		}
+		ACTION
+		{
+			group = 4
+			groupName = RCS
+			activated = 0
+			partModule = ModuleTweakableRCS
+			actionGuiName = Enable Thruster
+			actionName = ActionEnableThruster
+			custom1 = NA
+		}
 		TOGGLE
 		{
 		}
@@ -10446,6 +10934,18 @@ PART
 			{
 				actionGroup = None
 			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
 		}
 	}
 }
@@ -10576,6 +11076,18 @@ PART
 				unfocusedRange = 5
 				externalToEVAOnly = True
 			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
 		}
 		ACTIONS
 		{
@@ -10785,6 +11297,18 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 }
 PART
 {
@@ -10913,6 +11437,18 @@ PART
 				unfocusedRange = 5
 				externalToEVAOnly = True
 			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
 		}
 		ACTIONS
 		{
@@ -11122,6 +11658,18 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 }
 PART
 {
@@ -11250,6 +11798,18 @@ PART
 				unfocusedRange = 5
 				externalToEVAOnly = True
 			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
 		}
 		ACTIONS
 		{
@@ -11459,6 +12019,18 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 }
 PART
 {
@@ -11587,6 +12159,18 @@ PART
 				unfocusedRange = 5
 				externalToEVAOnly = True
 			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
 		}
 		ACTIONS
 		{
@@ -11796,6 +12380,18 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 }
 PART
 {
@@ -11928,6 +12524,18 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 }
 PART
 {
@@ -12055,6 +12663,18 @@ PART
 				unfocusedRange = 5
 				externalToEVAOnly = True
 			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
 		}
 		ACTIONS
 		{
@@ -12271,6 +12891,18 @@ PART
 			maxValue = 1
 			incrementSlide = 0.02
 		}
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
 		EVENTS
 		{
 		}
@@ -12581,6 +13213,16 @@ PART
 			actionName = ActionEnableThruster
 			custom1 = NA
 		}
+		ACTION
+		{
+			group = 4
+			groupName = RCS
+			activated = 0
+			partModule = ModuleTweakableRCS
+			actionGuiName = Enable Thruster
+			actionName = ActionEnableThruster
+			custom1 = NA
+		}
 		TOGGLE
 		{
 		}
@@ -12684,6 +13326,18 @@ PART
 			{
 				actionGroup = None
 			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
 		}
 	}
 }
@@ -12989,6 +13643,16 @@ PART
 			actionName = ActionEnableThruster
 			custom1 = NA
 		}
+		ACTION
+		{
+			group = 4
+			groupName = RCS
+			activated = 0
+			partModule = ModuleTweakableRCS
+			actionGuiName = Enable Thruster
+			actionName = ActionEnableThruster
+			custom1 = NA
+		}
 		TOGGLE
 		{
 		}
@@ -13092,6 +13756,18 @@ PART
 			{
 				actionGroup = None
 			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
 		}
 	}
 }
@@ -13368,6 +14044,16 @@ PART
 			actionName = ExtendPanelsAction
 			custom1 = NA
 		}
+		ACTION
+		{
+			group = 1
+			groupName = Solar
+			activated = 0
+			partModule = ModuleDeployableSolarPanel
+			actionGuiName = Toggle Panels
+			actionName = ExtendPanelsAction
+			custom1 = NA
+		}
 		TOGGLE
 		{
 		}
@@ -13459,6 +14145,18 @@ PART
 		{
 			controlEnabled = True
 		}
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
 		EVENTS
 		{
 		}
@@ -13740,6 +14438,16 @@ PART
 			actionName = ExtendPanelsAction
 			custom1 = NA
 		}
+		ACTION
+		{
+			group = 1
+			groupName = Solar
+			activated = 0
+			partModule = ModuleDeployableSolarPanel
+			actionGuiName = Toggle Panels
+			actionName = ExtendPanelsAction
+			custom1 = NA
+		}
 		TOGGLE
 		{
 		}
@@ -13831,6 +14539,18 @@ PART
 		{
 			controlEnabled = True
 		}
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
 		EVENTS
 		{
 		}
@@ -13965,6 +14685,18 @@ PART
 				unfocusedRange = 5
 				externalToEVAOnly = True
 			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
 		}
 		ACTIONS
 		{
@@ -14112,6 +14844,18 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 	RESOURCE
 	{
 		name = ElectricCharge
@@ -14248,6 +14992,18 @@ PART
 		defaultScale = 3.75
 		defaultTransformScale = (1, 1, 1)
 		DryCost = 111.804
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
 		EVENTS
 		{
 		}
@@ -14605,6 +15361,18 @@ PART
 			maxAmount = 0
 		}
 	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 	RESOURCE
 	{
 		name = Hydrazine
@@ -14750,6 +15518,18 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 }
 PART
 {
@@ -14853,7 +15633,7 @@ PART
 				active = False
 				guiActive = False
 				guiIcon = Jettison
-				guiName = Jettison(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)
+				guiName = Jettison(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)
 				category = Jettison
 				guiActiveUnfocused = False
 				unfocusedRange = 2
@@ -15034,7 +15814,7 @@ PART
 				active = False
 				guiActive = False
 				guiIcon = Jettison
-				guiName = Jettison(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)
+				guiName = Jettison(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)
 				category = Jettison
 				guiActiveUnfocused = False
 				unfocusedRange = 2
@@ -15146,6 +15926,18 @@ PART
 			}
 		}
 	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 }
 PART
 {
@@ -15168,7 +15960,6 @@ PART
 	modCost = -635.9375
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	link = AntennaDF2_4294085426
 	link = Fel.LoadFairing_4294101968
 	link = Fel.LoadFairing_4293942152
 	link = ksp.r.largeBatteryPack_4292151206
@@ -15177,6 +15968,7 @@ PART
 	link = batteryPack_4292144810
 	link = batteryPack_4292144560
 	link = FASAApolloIU_4294161348
+	link = Kosmos.Pravilo.ASAS_4293775510
 	attN = bottom,FASAApolloIU_4294161348
 	attN = connect01,Fel.LoadFairing_4293942152
 	attN = connect02,Fel.LoadFairing_4294101968
@@ -15446,6 +16238,18 @@ PART
 				unfocusedRange = 2
 				externalToEVAOnly = True
 			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
 		}
 		ACTIONS
 		{
@@ -15768,6 +16572,18 @@ PART
 			{
 				actionGroup = None
 			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
 		}
 	}
 	MODULE
@@ -16223,6 +17039,18 @@ PART
 			maxAmount = 0
 		}
 	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 	RESOURCE
 	{
 		name = LqdHydrogen
@@ -16372,6 +17200,18 @@ PART
 				unfocusedRange = 5
 				externalToEVAOnly = True
 			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
 		}
 		ACTIONS
 		{
@@ -16603,6 +17443,18 @@ PART
 			{
 				actionGroup = None
 			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
 		}
 	}
 }
@@ -16968,6 +17820,18 @@ PART
 			maxAmount = 0
 		}
 	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 	RESOURCE
 	{
 		name = Hydrazine
@@ -17107,6 +17971,18 @@ PART
 				unfocusedRange = 5
 				externalToEVAOnly = True
 			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
 		}
 		ACTIONS
 		{
@@ -17338,6 +18214,18 @@ PART
 			{
 				actionGroup = None
 			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
 		}
 	}
 }
@@ -17703,6 +18591,18 @@ PART
 			maxAmount = 0
 		}
 	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 	RESOURCE
 	{
 		name = Hydrazine
@@ -17921,6 +18821,18 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 }
 PART
 {
@@ -18122,6 +19034,18 @@ PART
 		defaultScale = 100
 		defaultTransformScale = (1, 1, 1)
 		DryCost = 12.5
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
 		EVENTS
 		{
 		}
@@ -18337,6 +19261,18 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 }
 PART
 {
@@ -18538,6 +19474,18 @@ PART
 		defaultScale = 100
 		defaultTransformScale = (1, 1, 1)
 		DryCost = 12.5
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
 		EVENTS
 		{
 		}
@@ -18753,6 +19701,18 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 }
 PART
 {
@@ -18954,6 +19914,18 @@ PART
 		defaultScale = 100
 		defaultTransformScale = (1, 1, 1)
 		DryCost = 12.5
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
 		EVENTS
 		{
 		}
@@ -19169,6 +20141,18 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 }
 PART
 {
@@ -19370,6 +20354,18 @@ PART
 		defaultScale = 100
 		defaultTransformScale = (1, 1, 1)
 		DryCost = 12.5
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
 		EVENTS
 		{
 		}
@@ -19585,6 +20581,18 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 }
 PART
 {
@@ -19786,6 +20794,18 @@ PART
 		defaultScale = 100
 		defaultTransformScale = (1, 1, 1)
 		DryCost = 12.5
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
 		EVENTS
 		{
 		}
@@ -20001,6 +21021,18 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 }
 PART
 {
@@ -20209,6 +21241,18 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 }
 PART
 {
@@ -20372,7 +21416,7 @@ PART
 				active = False
 				guiActive = False
 				guiIcon = Jettison
-				guiName = Jettison(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)
+				guiName = Jettison(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)(DEPRECATED)
 				category = Jettison
 				guiActiveUnfocused = False
 				unfocusedRange = 2
@@ -20551,6 +21595,18 @@ PART
 			{
 				actionGroup = None
 			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
 		}
 	}
 }
@@ -20803,6 +21859,18 @@ PART
 				unfocusedRange = 2
 				externalToEVAOnly = True
 			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
 		}
 		ACTIONS
 		{
@@ -21188,6 +22256,18 @@ PART
 			maxAmount = 0
 		}
 	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 	RESOURCE
 	{
 		name = HTPB
@@ -21346,6 +22426,18 @@ PART
 				unfocusedRange = 5
 				externalToEVAOnly = True
 			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
 		}
 		ACTIONS
 		{
@@ -21670,6 +22762,18 @@ PART
 			}
 		}
 	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 }
 PART
 {
@@ -21871,6 +22975,18 @@ PART
 		defaultScale = 100
 		defaultTransformScale = (1, 1, 1)
 		DryCost = 100
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
 		EVENTS
 		{
 		}
@@ -22086,6 +23202,18 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 }
 PART
 {
@@ -22287,6 +23415,18 @@ PART
 		defaultScale = 100
 		defaultTransformScale = (1, 1, 1)
 		DryCost = 100
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
 		EVENTS
 		{
 		}
@@ -22502,6 +23642,18 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 }
 PART
 {
@@ -22703,6 +23855,18 @@ PART
 		defaultScale = 100
 		defaultTransformScale = (1, 1, 1)
 		DryCost = 100
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
 		EVENTS
 		{
 		}
@@ -22918,6 +24082,18 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 }
 PART
 {
@@ -23119,6 +24295,18 @@ PART
 		defaultScale = 100
 		defaultTransformScale = (1, 1, 1)
 		DryCost = 100
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
 		EVENTS
 		{
 		}
@@ -23334,6 +24522,18 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 }
 PART
 {
@@ -23535,6 +24735,18 @@ PART
 		defaultScale = 100
 		defaultTransformScale = (1, 1, 1)
 		DryCost = 100
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
 		EVENTS
 		{
 		}
@@ -23750,6 +24962,18 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 }
 PART
 {
@@ -23951,6 +25175,18 @@ PART
 		defaultScale = 100
 		defaultTransformScale = (1, 1, 1)
 		DryCost = 100
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
 		EVENTS
 		{
 		}
@@ -24166,6 +25402,18 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 }
 PART
 {
@@ -24367,6 +25615,18 @@ PART
 		defaultScale = 100
 		defaultTransformScale = (1, 1, 1)
 		DryCost = 100
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
 		EVENTS
 		{
 		}
@@ -24582,6 +25842,18 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 }
 PART
 {
@@ -24783,6 +26055,18 @@ PART
 		defaultScale = 100
 		defaultTransformScale = (1, 1, 1)
 		DryCost = 100
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
 		EVENTS
 		{
 		}
@@ -24998,6 +26282,18 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 }
 PART
 {
@@ -25199,6 +26495,18 @@ PART
 		defaultScale = 100
 		defaultTransformScale = (1, 1, 1)
 		DryCost = 100
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
 		EVENTS
 		{
 		}
@@ -25414,6 +26722,18 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 }
 PART
 {
@@ -25615,6 +26935,18 @@ PART
 		defaultScale = 100
 		defaultTransformScale = (1, 1, 1)
 		DryCost = 100
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
 		EVENTS
 		{
 		}
@@ -25830,6 +27162,18 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 }
 PART
 {
@@ -26031,6 +27375,18 @@ PART
 		defaultScale = 100
 		defaultTransformScale = (1, 1, 1)
 		DryCost = 100
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
 		EVENTS
 		{
 		}
@@ -26246,6 +27602,18 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 }
 PART
 {
@@ -26447,6 +27815,18 @@ PART
 		defaultScale = 100
 		defaultTransformScale = (1, 1, 1)
 		DryCost = 100
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
 		EVENTS
 		{
 		}
@@ -26662,6 +28042,18 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 }
 PART
 {
@@ -26863,6 +28255,18 @@ PART
 		defaultScale = 100
 		defaultTransformScale = (1, 1, 1)
 		DryCost = 100
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
 		EVENTS
 		{
 		}
@@ -27078,6 +28482,18 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 }
 PART
 {
@@ -27279,6 +28695,18 @@ PART
 		defaultScale = 100
 		defaultTransformScale = (1, 1, 1)
 		DryCost = 100
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
 		EVENTS
 		{
 		}
@@ -27494,6 +28922,18 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 }
 PART
 {
@@ -27695,6 +29135,18 @@ PART
 		defaultScale = 100
 		defaultTransformScale = (1, 1, 1)
 		DryCost = 100
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
 		EVENTS
 		{
 		}
@@ -27910,339 +29362,11 @@ PART
 		{
 		}
 	}
-}
-PART
-{
-	part = AntennaDF2_4294085426
-	partName = Part
-	pos = -2.955815,26.49451,0.03467093
-	attPos = 0.01531637,-0.01218414,0.004104018
-	attPos0 = -0.7055347,-0.1505613,-0.1890476
-	rot = 0.2690692,-0.7116521,0.3506579,0.5460697
-	attRot = 0,0,0,1
-	attRot0 = 0.2690692,-0.7116521,0.3506579,0.5460697
-	mir = 1,1,1
-	symMethod = Radial
-	istg = 2
-	dstg = 2
-	sidx = -1
-	sqor = -1
-	sepI = 0
-	attm = 1
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	srfN = srfAttach,PayloadDec_4294118992
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
 	MODULE
 	{
-		name = ModuleAnimateGeneric
+		name = ModuleGravityBreakup
 		isEnabled = True
-		status = Locked
-		animSwitch = True
-		animTime = 1
-		animSpeed = 1
-		EVENTS
-		{
-			Toggle
-			{
-				active = False
-				guiActive = False
-				guiIcon = Toggle
-				guiName = Retract
-				category = Toggle
-				guiActiveUnfocused = True
-				unfocusedRange = 5
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-	MODULE
-	{
-		name = ModuleDataTransmitter
-		isEnabled = True
-		EVENTS
-		{
-			StartTransmission
-			{
-				active = True
-				guiActive = True
-				guiIcon = Transmit Data
-				guiName = Transmit Data
-				category = Transmit Data
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			StopTransmission
-			{
-				active = False
-				guiActive = True
-				guiIcon = Stop Transmitting
-				guiName = Stop Transmitting
-				category = Stop Transmitting
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = CollisionFX
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleAGX
-		isEnabled = True
-		placeHolder = Hello World
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		TOGGLE
-		{
-		}
-		HOLD
-		{
-		}
-	}
-	MODULE
-	{
-		name = ExtendedPartInfo
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = USI_ModuleRecycleablePart
-		isEnabled = True
-		EVENTS
-		{
-			ScrapPart
-			{
-				active = True
-				guiActive = False
-				guiIcon = Scrap part
-				guiName = Scrap Part
-				category = Scrap part
-				guiActiveUnfocused = True
-				unfocusedRange = 5
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = USI_ModuleRecycleablePart
-		isEnabled = True
-		EVENTS
-		{
-			ScrapPart
-			{
-				active = True
-				guiActive = False
-				guiIcon = Scrap part
-				guiName = Salvage Part
-				category = Scrap part
-				guiActiveUnfocused = True
-				unfocusedRange = 5
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleTweakableAnimateGeneric
-		isEnabled = True
-		startCompleted = False
-		startCompleted_UIFlight
-		{
-			controlEnabled = True
-		}
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleRTAntenna
-		isEnabled = True
-		IsRTAntenna = True
-		IsRTActive = True
-		IsRTPowered = True
-		IsRTBroken = False
-		RTDishCosAngle = 1
-		RTOmniRange = 75000
-		RTDishRange = -1
-		RTAntennaTarget = 00000000-0000-0000-0000-000000000000
-		EVENTS
-		{
-			EventToggle
-			{
-				active = True
-				guiActive = False
-				guiIcon = 
-				guiName = Toggle
-				category = 
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			EventTarget
-			{
-				active = False
-				guiActive = False
-				guiIcon = Target
-				guiName = Unknown Target
-				category = Target
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			EventEditorOpen
-			{
-				active = True
-				guiActive = False
-				guiIcon = Start deployed
-				guiName = Start deployed
-				category = Start deployed
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			EventEditorClose
-			{
-				active = True
-				guiActive = False
-				guiActiveEditor = True
-				guiIcon = Start retracted
-				guiName = Start retracted
-				category = Start retracted
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			EventOpen
-			{
-				active = False
-				guiActive = False
-				guiIcon = 
-				guiName = Activate
-				category = 
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			EventClose
-			{
-				active = True
-				guiActive = True
-				guiIcon = 
-				guiName = Deactivate
-				category = 
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			OverrideTarget
-			{
-				active = True
-				guiActive = False
-				guiIcon = [EVA] Set Target
-				guiName = [EVA] Set Target
-				category = [EVA] Set Target
-				guiActiveUnfocused = True
-				unfocusedRange = 5
-				externalToEVAOnly = True
-			}
-			OverrideOpen
-			{
-				active = True
-				guiActive = False
-				guiIcon = [EVA] Force Open
-				guiName = [EVA] Force Open
-				category = [EVA] Force Open
-				guiActiveUnfocused = False
-				unfocusedRange = 5
-				externalToEVAOnly = True
-			}
-			OverrideClose
-			{
-				active = True
-				guiActive = False
-				guiIcon = [EVA] Force Close
-				guiName = [EVA] Force Close
-				category = [EVA] Force Close
-				guiActiveUnfocused = True
-				unfocusedRange = 5
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			ActionToggle
-			{
-				actionGroup = None
-			}
-			ActionOpen
-			{
-				actionGroup = None
-			}
-			ActionClose
-			{
-				actionGroup = None
-			}
-		}
-	}
-	MODULE
-	{
-		name = ModuleSPUPassive
-		isEnabled = True
-		IsRTPowered = False
-		IsRTSignalProcessor = True
-		IsRTCommandStation = False
+		health = 200
 		EVENTS
 		{
 		}
@@ -28485,6 +29609,18 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 }
 PART
 {
@@ -28720,6 +29856,18 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 }
 PART
 {
@@ -28848,6 +29996,18 @@ PART
 				unfocusedRange = 5
 				externalToEVAOnly = True
 			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
 		}
 		ACTIONS
 		{
@@ -28996,6 +30156,18 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 	RESOURCE
 	{
 		name = ElectricCharge
@@ -29134,6 +30306,18 @@ PART
 				unfocusedRange = 5
 				externalToEVAOnly = True
 			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
 		}
 		ACTIONS
 		{
@@ -29281,6 +30465,18 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 	RESOURCE
 	{
 		name = ElectricCharge
@@ -29423,6 +30619,18 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 	RESOURCE
 	{
 		name = ElectricCharge
@@ -29466,9 +30674,9 @@ PART
 	PARTDATA
 	{
 		tgt = 4294104296
-		pos = -1.091833,-0.005974562,0.2600768
-		rot = 0,0.7071068,-1.876348E-07,0.7071068
-		dir = -0.972769,-0.00532295,0.2317152
+		pos = -1.091835,-0.005974741,0.260077
+		rot = 2.539188E-08,0.7071069,-2.130267E-07,0.7071069
+		dir = -0.9727691,-0.005323187,0.2317153
 	}
 	MODULE
 	{
@@ -29571,6 +30779,18 @@ PART
 				unfocusedRange = 5
 				externalToEVAOnly = True
 			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
 		}
 		ACTIONS
 		{
@@ -29609,9 +30829,9 @@ PART
 	PARTDATA
 	{
 		tgt = 4292118872
-		pos = -1.091829,-0.005974533,0.2600756
-		rot = 0,0.7071069,-2.737714E-07,0.7071068
-		dir = -0.972769,-0.00532295,0.2317152
+		pos = -1.091829,-0.005974607,0.2600756
+		rot = 1.212593E-08,0.7071069,-2.858973E-07,0.7071068
+		dir = -0.972769,-0.005323097,0.2317152
 	}
 	MODULE
 	{
@@ -29714,6 +30934,18 @@ PART
 				unfocusedRange = 5
 				externalToEVAOnly = True
 			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
 		}
 		ACTIONS
 		{
@@ -30087,6 +31319,18 @@ PART
 		IsRTPowered = False
 		IsRTSignalProcessor = True
 		IsRTCommandStation = False
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
 		EVENTS
 		{
 		}
@@ -30469,6 +31713,18 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 }
 PART
 {
@@ -30837,6 +32093,18 @@ PART
 		IsRTPowered = False
 		IsRTSignalProcessor = True
 		IsRTCommandStation = False
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
 		EVENTS
 		{
 		}
@@ -31219,6 +32487,18 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 }
 PART
 {
@@ -31557,6 +32837,18 @@ PART
 		techLevel = -1
 		thrustRating = maxThrust
 		modded = False
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
 		EVENTS
 		{
 		}
@@ -31919,6 +33211,18 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 	RESOURCE
 	{
 		name = HTPB
@@ -32267,6 +33571,18 @@ PART
 		techLevel = -1
 		thrustRating = maxThrust
 		modded = False
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
 		EVENTS
 		{
 		}
@@ -32629,6 +33945,18 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 	RESOURCE
 	{
 		name = HTPB
@@ -32977,6 +34305,18 @@ PART
 		techLevel = -1
 		thrustRating = maxThrust
 		modded = False
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
 		EVENTS
 		{
 		}
@@ -33339,6 +34679,18 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 	RESOURCE
 	{
 		name = HTPB
@@ -33530,17 +34882,6 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleLiftingSurface
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
 		name = ModuleTweakableDecouple
 		isEnabled = True
 		ejectionForce = 800
@@ -33595,265 +34936,13 @@ PART
 		{
 		}
 	}
-}
-PART
-{
-	part = KW5mExpFairingWall_4292118872
-	partName = Part
-	pos = -3.077472,28.20568,0.219615
-	attPos = 0,0,0
-	attPos0 = 0.0006250143,-2.737839,0
-	rot = 0,0,0,-1
-	attRot = 0,0,0,1
-	attRot0 = 0,0,0,1
-	mir = 1,1,1
-	symMethod = Radial
-	istg = 6
-	dstg = 6
-	sidx = -1
-	sqor = -1
-	sepI = 3
-	attm = 0
-	modCost = -600
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	link = KW5mExpFairingWall_4292118790
-	attN = top,KW5mExpFairingCone_4292118960
-	attN = bottom,KW5mExpFairingWall_4292118790
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
 	MODULE
 	{
-		name = CollisionFX
+		name = ModuleGravityBreakup
 		isEnabled = True
+		health = 200
 		EVENTS
 		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleAGX
-		isEnabled = True
-		placeHolder = Hello World
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		TOGGLE
-		{
-		}
-		HOLD
-		{
-		}
-	}
-	MODULE
-	{
-		name = ExtendedPartInfo
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = TweakScale
-		isEnabled = True
-		currentScale = 2.5
-		defaultScale = 5
-		defaultTransformScale = (1.25, 1.25, 1.25)
-		DryCost = 200
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = USI_ModuleRecycleablePart
-		isEnabled = True
-		EVENTS
-		{
-			ScrapPart
-			{
-				active = True
-				guiActive = False
-				guiIcon = Scrap part
-				guiName = Scrap Part
-				category = Scrap part
-				guiActiveUnfocused = True
-				unfocusedRange = 5
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = USI_ModuleRecycleablePart
-		isEnabled = True
-		EVENTS
-		{
-			ScrapPart
-			{
-				active = True
-				guiActive = False
-				guiIcon = Scrap part
-				guiName = Salvage Part
-				category = Scrap part
-				guiActiveUnfocused = True
-				unfocusedRange = 5
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-}
-PART
-{
-	part = KW5mExpFairingWall_4292118790
-	partName = Part
-	pos = -3.077472,25.04346,0.219615
-	attPos = 0,0,0
-	attPos0 = 0,-3.162218,0
-	rot = 0,0,0,-1
-	attRot = 0,0,0,1
-	attRot0 = 0,0,0,1
-	mir = 1,1,1
-	symMethod = Radial
-	istg = 6
-	dstg = 6
-	sidx = -1
-	sqor = -1
-	sepI = 3
-	attm = 0
-	modCost = -600
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	attN = top,KW5mExpFairingWall_4292118872
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = CollisionFX
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleAGX
-		isEnabled = True
-		placeHolder = Hello World
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		TOGGLE
-		{
-		}
-		HOLD
-		{
-		}
-	}
-	MODULE
-	{
-		name = ExtendedPartInfo
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = TweakScale
-		isEnabled = True
-		currentScale = 2.5
-		defaultScale = 5
-		defaultTransformScale = (1.25, 1.25, 1.25)
-		DryCost = 200
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = USI_ModuleRecycleablePart
-		isEnabled = True
-		EVENTS
-		{
-			ScrapPart
-			{
-				active = True
-				guiActive = False
-				guiIcon = Scrap part
-				guiName = Scrap Part
-				category = Scrap part
-				guiActiveUnfocused = True
-				unfocusedRange = 5
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = USI_ModuleRecycleablePart
-		isEnabled = True
-		EVENTS
-		{
-			ScrapPart
-			{
-				active = True
-				guiActive = False
-				guiIcon = Scrap part
-				guiName = Salvage Part
-				category = Scrap part
-				guiActiveUnfocused = True
-				unfocusedRange = 5
-				externalToEVAOnly = True
-			}
 		}
 		ACTIONS
 		{
@@ -34040,17 +35129,6 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleLiftingSurface
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
 		name = ModuleTweakableDecouple
 		isEnabled = True
 		ejectionForce = 800
@@ -34100,6 +35178,18 @@ PART
 				unfocusedRange = 2
 				externalToEVAOnly = True
 			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
 		}
 		ACTIONS
 		{
@@ -34238,6 +35328,18 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 }
 PART
 {
@@ -34364,6 +35466,468 @@ PART
 				unfocusedRange = 5
 				externalToEVAOnly = True
 			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = KW5mExpFairingWall_4292118872
+	partName = Part
+	pos = -3.077472,28.20567,0.219615
+	attPos = 0,0,0
+	attPos0 = 0.0006248951,-2.737837,0
+	rot = 0,0,0,1
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,-1
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 6
+	dstg = 6
+	sidx = -1
+	sqor = -1
+	sepI = 3
+	attm = 0
+	modCost = -600
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	link = KW5mExpFairingWall_4292118790
+	attN = top,KW5mExpFairingCone_4292118960
+	attN = bottom,KW5mExpFairingWall_4292118790
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = CollisionFX
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
+		name = ExtendedPartInfo
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 2.5
+		defaultScale = 5
+		defaultTransformScale = (1.25, 1.25, 1.25)
+		DryCost = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Scrap Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Salvage Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = KW5mExpFairingWall_4292118790
+	partName = Part
+	pos = -3.077472,25.04345,0.219615
+	attPos = 0,0,0
+	attPos0 = 0,-3.162218,0
+	rot = 0,0,0,1
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 6
+	dstg = 6
+	sidx = -1
+	sqor = -1
+	sepI = 3
+	attm = 0
+	modCost = -600
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	attN = top,KW5mExpFairingWall_4292118872
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = CollisionFX
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
+		name = ExtendedPartInfo
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 2.5
+		defaultScale = 5
+		defaultTransformScale = (1.25, 1.25, 1.25)
+		DryCost = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Scrap Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Salvage Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = Kosmos.Pravilo.ASAS_4293775510
+	partName = Part
+	pos = -2.952145,26.5344,0.03565496
+	attPos = 0,0,0
+	attPos0 = -0.6865475,-0.1228523,-0.18396
+	rot = 0.7511666,-0.195869,-0.5763903,-0.2552615
+	attRot = 0.9999999,0,0,0
+	attRot0 = 0.7511666,-0.195869,-0.5763903,-0.2552615
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 2
+	dstg = 2
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	srfN = srfAttach,PayloadDec_4294118992
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = CollisionFX
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
+		name = ExtendedPartInfo
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 100
+		defaultScale = 100
+		defaultTransformScale = (1.25, 1.25, 1.25)
+		DryCost = 100
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Scrap Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Salvage Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTweakableSAS
+		isEnabled = True
+		SASServiceLevel = 3
+		SASServiceLevel_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 3
+			incrementSlide = 1
+		}
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGravityBreakup
+		isEnabled = True
+		health = 200
+		EVENTS
+		{
 		}
 		ACTIONS
 		{

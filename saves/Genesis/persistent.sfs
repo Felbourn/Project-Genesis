@@ -10,7 +10,7 @@ GAME
 	scene = 5
 	editor = None
 	flag = Squad/Flags/kerbin
-	launchID = 77
+	launchID = 78
 	PARAMETERS
 	{
 		preset = Normal
@@ -489,7 +489,7 @@ GAME
 	{
 		name = AGextScenario
 		scene = 7
-		LastSave = 169
+		LastSave = 177
 	}
 	SCENARIO
 	{
@@ -656,8 +656,8 @@ GAME
 	FLIGHTSTATE
 	{
 		version = 1.0.4
-		UT = 95572.3347024665
-		activeVessel = 8
+		UT = 95573.1947024667
+		activeVessel = 14
 		mapViewFiltering = -1026
 		VESSEL
 		{
@@ -14975,8 +14975,8 @@ GAME
 			prst = False
 			ref = 2720348732
 			ctrl = True
-			cPch = 0.2
-			cHdg = 0.3
+			cPch = 
+			cHdg = 
 			cMod = 0
 			ORBIT
 			{
@@ -51431,6 +51431,601 @@ GAME
 				mainThrottle = 0
 			}
 		}
+		VESSEL
+		{
+			pid = e2a14bdcbfbd4389aeade0a397fff041
+			name = Untitled Space Craft
+			type = Ship
+			sit = PRELAUNCH
+			landed = True
+			landedAt = LaunchPad
+			splashed = False
+			met = 0
+			lct = 95573.1947024667
+			root = 0
+			lat = -0.0972077912319075
+			lon = 285.442325101614
+			alt = 73.3908149208874
+			hgt = 0.9724405
+			nrm = 0.0007456091,0.9999999,-5.147994E-08
+			rot = -0.7009888,-0.09221791,-0.09726538,0.7004643
+			CoM = 4.118735E-07,1.9738,-0.00296061
+			stg = 1
+			prst = False
+			ref = 3032552622
+			ctrl = False
+			cPch = 0.2
+			cHdg = 0.3
+			cMod = 0
+			ORBIT
+			{
+				SMA = 300816.385396152
+				ECC = 0.994822734853777
+				INC = 0.0972080729705273
+				LPE = 89.9999999999998
+				LAN = 258.335725160404
+				MNA = 3.14159265358979
+				EPH = 95573.1947024667
+				REF = 1
+			}
+			PART
+			{
+				name = ALCOR.Monley.Internals
+				cid = 4282854466
+				uid = 3032552622
+				mid = 3398280012
+				launchID = 77
+				parent = 0
+				position = 0,0,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 0
+				dstg = 0
+				sqor = -1
+				sepI = 0
+				sidx = -1
+				attm = 0
+				srfN = , -1
+				attN = top, 1
+				attN = bottom, -1
+				mass = 9999
+				temp = 287.553833131548
+				tempExt = 288.353961976297
+				expt = 0.5
+				state = 0
+				connected = True
+				attached = True
+				flag = Squad/Flags/kerbin
+				rTrf = ALCOR.Monley.Internals
+				modCost = 0
+				crew = Jebediah Kerman
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = CollisionFX
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleAGX
+					isEnabled = True
+					placeHolder = Hello World
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = ExtendedPartInfo
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = USI_ModuleRecycleablePart
+					isEnabled = True
+					EVENTS
+					{
+						ScrapPart
+						{
+							active = True
+							guiActive = False
+							guiIcon = Scrap part
+							guiName = Scrap Part
+							category = Scrap part
+							guiActiveUnfocused = True
+							unfocusedRange = 5
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = USI_ModuleRecycleablePart
+					isEnabled = True
+					EVENTS
+					{
+						ScrapPart
+						{
+							active = True
+							guiActive = False
+							guiIcon = Scrap part
+							guiName = Salvage Part
+							category = Scrap part
+							guiActiveUnfocused = True
+							unfocusedRange = 5
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleGravityBreakup
+					isEnabled = True
+					health = 200
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleTripLogger
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					Log
+					{
+						flight = 0
+					}
+				}
+				MODULE
+				{
+					name = ModuleKISInventory
+					isEnabled = True
+					invName = 
+					helmetEquipped = True
+					EVENTS
+					{
+						ShowInventory
+						{
+							active = True
+							guiActive = True
+							guiActiveEditor = True
+							guiIcon = 
+							guiName = Seat 0 inventory
+							category = 
+							guiActiveUnfocused = True
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = cupolaInternal
+				cid = 4282848370
+				uid = 3862720225
+				mid = 3398280012
+				launchID = 77
+				parent = 0
+				position = 0,1.97380065917969,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 0
+				dstg = 0
+				sqor = -1
+				sepI = 0
+				sidx = -1
+				attm = 0
+				srfN = , -1
+				attN = top, 2
+				attN = bottom, 0
+				mass = 9999
+				temp = 287.537567228708
+				tempExt = 288.231614528701
+				expt = 0.5
+				state = 0
+				connected = True
+				attached = True
+				flag = Squad/Flags/kerbin
+				rTrf = cupolaInternal
+				modCost = 0
+				crew = Bill Kerman
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = CollisionFX
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleAGX
+					isEnabled = True
+					placeHolder = Hello World
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = ExtendedPartInfo
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = USI_ModuleRecycleablePart
+					isEnabled = True
+					EVENTS
+					{
+						ScrapPart
+						{
+							active = True
+							guiActive = False
+							guiIcon = Scrap part
+							guiName = Scrap Part
+							category = Scrap part
+							guiActiveUnfocused = True
+							unfocusedRange = 5
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = USI_ModuleRecycleablePart
+					isEnabled = True
+					EVENTS
+					{
+						ScrapPart
+						{
+							active = True
+							guiActive = False
+							guiIcon = Scrap part
+							guiName = Salvage Part
+							category = Scrap part
+							guiActiveUnfocused = True
+							unfocusedRange = 5
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleGravityBreakup
+					isEnabled = True
+					health = 200
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleTripLogger
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					Log
+					{
+						flight = 0
+					}
+				}
+				MODULE
+				{
+					name = ModuleKISInventory
+					isEnabled = True
+					invName = 
+					helmetEquipped = True
+					EVENTS
+					{
+						ShowInventory
+						{
+							active = True
+							guiActive = True
+							guiActiveEditor = True
+							guiIcon = 
+							guiName = Seat 0 inventory
+							category = 
+							guiActiveUnfocused = True
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = crewCabinInternals
+				cid = 4282845754
+				uid = 1021106789
+				mid = 3398280012
+				launchID = 77
+				parent = 1
+				position = 0,3.94759941101074,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 0
+				dstg = 0
+				sqor = -1
+				sepI = 0
+				sidx = -1
+				attm = 0
+				srfN = , -1
+				attN = top, -1
+				attN = bottom, 1
+				mass = 9999
+				temp = 287.52133193226
+				tempExt = 288.331747555247
+				expt = 0.5
+				state = 0
+				connected = True
+				attached = True
+				flag = Squad/Flags/kerbin
+				rTrf = crewCabinInternals
+				modCost = 0
+				crew = Bob Kerman
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = CollisionFX
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleAGX
+					isEnabled = True
+					placeHolder = Hello World
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = ExtendedPartInfo
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = USI_ModuleRecycleablePart
+					isEnabled = True
+					EVENTS
+					{
+						ScrapPart
+						{
+							active = True
+							guiActive = False
+							guiIcon = Scrap part
+							guiName = Scrap Part
+							category = Scrap part
+							guiActiveUnfocused = True
+							unfocusedRange = 5
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = USI_ModuleRecycleablePart
+					isEnabled = True
+					EVENTS
+					{
+						ScrapPart
+						{
+							active = True
+							guiActive = False
+							guiIcon = Scrap part
+							guiName = Salvage Part
+							category = Scrap part
+							guiActiveUnfocused = True
+							unfocusedRange = 5
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleGravityBreakup
+					isEnabled = True
+					health = 200
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleTripLogger
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					Log
+					{
+						flight = 0
+					}
+				}
+				MODULE
+				{
+					name = ModuleKISInventory
+					isEnabled = True
+					invName = 
+					helmetEquipped = True
+					EVENTS
+					{
+						ShowInventory
+						{
+							active = True
+							guiActive = True
+							guiActiveEditor = True
+							guiIcon = 
+							guiName = Seat 0 inventory
+							category = 
+							guiActiveUnfocused = True
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+					}
+				}
+			}
+			ACTIONGROUPS
+			{
+				Stage = False, 0
+				Gear = True, 0
+				Light = False, 0
+				RCS = False, 0
+				SAS = False, 0
+				Brakes = False, 0
+				Abort = False, 0
+				Custom01 = False, 0
+				Custom02 = False, 0
+				Custom03 = False, 0
+				Custom04 = False, 0
+				Custom05 = False, 0
+				Custom06 = False, 0
+				Custom07 = False, 0
+				Custom08 = False, 0
+				Custom09 = False, 0
+				Custom10 = False, 0
+			}
+			DISCOVERY
+			{
+				state = -1
+				lastObservedTime = 0
+				lifetime = Infinity
+				refTime = Infinity
+				size = 2
+			}
+			FLIGHTPLAN
+			{
+			}
+			CTRLSTATE
+			{
+				pitch = 0
+				yaw = 0
+				roll = 0
+				trimPitch = 0
+				trimYaw = 0
+				trimRoll = 0
+				mainThrottle = 0
+			}
+		}
 	}
 	ROSTER
 	{
@@ -51443,7 +52038,7 @@ GAME
 			dumb = 0.5
 			badS = True
 			tour = False
-			state = Available
+			state = Assigned
 			ToD = 7200
 			idx = 0
 			CAREER_LOG
@@ -51480,9 +52075,9 @@ GAME
 			dumb = 0.8
 			badS = False
 			tour = False
-			state = Available
+			state = Assigned
 			ToD = 7200
-			idx = 1
+			idx = 0
 			CAREER_LOG
 			{
 				flight = 6
@@ -51517,9 +52112,9 @@ GAME
 			dumb = 0.1
 			badS = False
 			tour = False
-			state = Available
+			state = Assigned
 			ToD = 7200
-			idx = -1
+			idx = 0
 			CAREER_LOG
 			{
 				flight = 4

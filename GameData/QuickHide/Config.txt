@@ -23,6 +23,7 @@ CanPin
 	Item = LightsOut
 	Item = UbioWeldingLtd
 	Item = SCANsat
+	Item = KerboKatzUtilities
 }
 CanHide
 {
@@ -43,6 +44,7 @@ CanHide
 	Item = LightsOut
 	Item = UbioWeldingLtd
 	Item = SCANsat
+	Item = KerboKatzUtilities
 }
 CanSetFalse
 {
@@ -63,6 +65,7 @@ CanSetFalse
 	Item = LightsOut
 	Item = UbioWeldingLtd
 	Item = SCANsat
+	Item = KerboKatzUtilities
 }
 ModHasFirstConfig
 {
@@ -83,4 +86,5 @@ ModHasFirstConfig
 	Item = LightsOut
 	Item = UbioWeldingLtd
 	Item = SCANsat
+	Item = KerboKatzUtilities
 }
