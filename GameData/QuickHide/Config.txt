@@ -1,0 +1,82 @@
+isHidden = True
+MouseHide = True
+TimeToKeep = 2
+StockToolBar = True
+BlizzyToolBar = True
+StockToolBar_ModApp = False
+CanPin
+{
+	Item = SCANsat
+	Item = TextureReplacer
+	Item = FilterExtensions
+	Item = DistantObject
+	Item = KerboKatzUtilities
+	Item = HyperEdit
+	Item = KerbalKonstructs
+	Item = QuickGoTo
+	Item = RCSBuildAid
+	Item = LightsOut
+	Item = UbioWeldingLtd
+	Item = MechJeb2
+	Item = CameraTools
+	Item = KolonyTools
+	Item = KSPAlternateResourcePanel
+	Item = PlanetShine
+}
+CanHide
+{
+	Item = SCANsat
+	Item = TextureReplacer
+	Item = FilterExtensions
+	Item = DistantObject
+	Item = KerboKatzUtilities
+	Item = HyperEdit
+	Item = KerbalKonstructs
+	Item = QuickGoTo
+	Item = RCSBuildAid
+	Item = LightsOut
+	Item = UbioWeldingLtd
+	Item = MechJeb2
+	Item = CameraTools
+	Item = KolonyTools
+	Item = KSPAlternateResourcePanel
+	Item = PlanetShine
+}
+CanSetFalse
+{
+	Item = SCANsat
+	Item = TextureReplacer
+	Item = FilterExtensions
+	Item = DistantObject
+	Item = KerboKatzUtilities
+	Item = HyperEdit
+	Item = KerbalKonstructs
+	Item = QuickGoTo
+	Item = RCSBuildAid
+	Item = LightsOut
+	Item = UbioWeldingLtd
+	Item = MechJeb2
+	Item = CameraTools
+	Item = KolonyTools
+	Item = KSPAlternateResourcePanel
+	Item = PlanetShine
+}
+ModHasFirstConfig
+{
+	Item = SCANsat
+	Item = TextureReplacer
+	Item = FilterExtensions
+	Item = DistantObject
+	Item = KerboKatzUtilities
+	Item = HyperEdit
+	Item = KerbalKonstructs
+	Item = QuickGoTo
+	Item = RCSBuildAid
+	Item = LightsOut
+	Item = UbioWeldingLtd
+	Item = MechJeb2
+	Item = CameraTools
+	Item = KolonyTools
+	Item = KSPAlternateResourcePanel
+	Item = PlanetShine
+}
