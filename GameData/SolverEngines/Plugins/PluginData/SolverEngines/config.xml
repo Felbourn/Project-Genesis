@@ -7,10 +7,10 @@
         <ymax>286</ymax>
     </rect>
     <rect name="settingsWindowPos">
-        <xmin>337</xmin>
-        <xmax>557</xmax>
-        <ymin>306</ymin>
-        <ymax>585</ymax>
+        <xmin>0</xmin>
+        <xmax>0</xmax>
+        <ymin>0</ymin>
+        <ymax>0</ymax>
     </rect>
     <bool name="showAmbientTemp">1</bool>
     <bool name="showAmbientPressure">1</bool>
