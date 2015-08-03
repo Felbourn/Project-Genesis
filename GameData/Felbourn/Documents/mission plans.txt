@@ -74,6 +74,8 @@
 
 === Phase 1 ===
 
+=== Modules === 
+
 MK-V modules:
 	Command Pod				- attach to top of Colony Hub
 	Colony Hub				- attach 4 of anything below to each of these
@@ -81,15 +83,50 @@ MK-V modules:
 	Agricultural			- mulch, power, machinery 			  --> organics, recylables
 		or					- mulch, power, machinery, fertilzier --> organics, recylables
 
-	Airlock					- 
-	Attachment Point		- 
-	Auxillary Control		- 
-	Comm-Lab				- 
-	Habitation				- 
-	Inflatable Logistics	- 
-	Inflatable Workshop		- 	
-	Regolith Silfter		- 
-	Power Pack				- 
-	Portable Smelter		- 
+	Airlock					- go in, go out
+	Attachment Point		- pretty surface attachment base
+	Auxillary Control		- CPU
+	Comm-Lab				- comm
+	Habitation				- organics, machinery, power --> supplies, recyclables
+	Inflatable Logistics	- switchable storage
+	Inflatable Workshop		- metals, chemicals, polymers, machinery, power                   --> machinery
+		or 					- metals, chemicals, polymers, machinery, power, specializedParts --> rocket parts, recyclables
+	Regolith Silfter		- power --> water, or subhstrate, or minerals, or metalOre
+	Power Pack				- P238 --> power
+	Portable Smelter		- machinery, power, substrate --> polymers, recyclables
+		or 					- machinery, power, metalOre  --> metals, recyclables
+		or 					- machinery, power, minerals  --> chemicals, recyclables
 	Supply Redipack A		- non LS supplies
 	Supply Redipack B		- LS supplies
+
+Other stuff:
+	water & mineral drill
+	substrate, uraninite, metalOre drill
+
+OKS modules:
+	Agricultural			- store life support
+	Habitgation				- living space
+	Inflatable Storage		- variable contents
+	Inflatable Workshop		-
+	Power Unit 				-
+
+UKS modules:
+	Aeroponics, orbit		- machinery, power, water, substrate 			--> organics, recyclables
+		or 					- machinery, power, mulch			 			--> organics, recyclables
+
+	Fabrication, gnd/orbit	- recyclables, power, machinery      			--> metals, chemicals, polymers, recyclables
+		or 					- metals, chemicals, polymers, machinery, power --> rocketParts, recyclables
+		or 					- metals, chemicals, polymers, machinery, power --> machinery, recyclables
+
+	Kerbitat, ground		- organics, machinery, Power 					--> supplies, recyclables            
+	Kerbitat, orbit			- organics, machinery, Power 					--> supplies, recyclables            
+
+	Mobile Refinery,g/o		- substrate, machinery, power 					--> polymers, recyclables
+		or 					- metalOre, machinery, power 					--> metals, raremetals, recyclables
+		or 					- minerals, machinery, power 					--> chemicals, exoticMinerals, recyclables
+
+	Pioneer Module, orbit	- mulch, machinery, Power 						--> supplies, recyclables
+
+	Power Distro Unit, gnd  - U235  										--> DU, xenon, power
+
+	Orbital Shipyward 		- build in space
