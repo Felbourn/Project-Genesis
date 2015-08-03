@@ -1,0 +1,95 @@
+
+=== Concepts ===
+
+	---life support---
+	wear and tear, base maintenance
+
+		<water> + <substrate> --> [organics] --> (supplies) -> Kerbals --> (mulch)
+
+		Option 1
+			convert water and substrate over time
+
+		Option 2
+			recycle mulch into new organics
+
+	---maintenance---
+
+		3 resources:
+		<substrate>   --> [polymers]		these are all called [intermediate] resources
+		<metallicOre> --> [metals]
+		<minerals>    --> [chemicals]
+
+		[intermediate] --> (machinery) + (rocketParts)
+
+		Base building:
+			(machinery) + (rocketParts) + [specializedParts] --> new UKS modules
+
+		There is a base/module waste & recycling mechanic:
+			UKS modules --> (recyclables) --> [intermediate]
+
+		Advanced modules can build specialized parts:
+			UKS modules --> (machinery) + (rocketParts) + [specializedParts] --> even new UKS modules
+
+=== MK-V ===
+	phase 1
+	basic support feaures
+
+=== Mk-II ===
+	ground operations
+	science and life support
+	3.75m lifter
+
+=== Mk-III ===
+	manufacturing
+	5m lifter
+
+=== Mk-IV ===
+	huge parts, ground and orbit, final phase
+	5m expanded lifter
+
+=== Mission Overview ===
+
+	Use a logistics rover to "link" the base instead of connecting with KAS all the time.
+
+	---Phase 1---
+	Scan:
+		MK-V. Find a base location. Scan for resources. We want water and substrate.
+	Deploy:
+		MK-V. Land some life support and power generation.
+
+	---Phase 2---
+	Expand:
+		MK-V. Expand with harvesting and manufacturing.
+	
+	---Phase 3---
+	Life Support:
+		MK-II. Close the loop for supplies.
+	Manufacturing:
+		MK-III. Close the loop for production.
+
+	---Phase 4---
+	Upgrade:
+		MK-IV. Remove MK-II and MK-III modules in favor of better MK-IV modules.
+
+
+=== Phase 1 ===
+
+MK-V modules:
+	Command Pod				- attach to top of Colony Hub
+	Colony Hub				- attach 4 of anything below to each of these
+	
+	Agricultural			- mulch, power, machinery 			  --> organics, recylables
+		or					- mulch, power, machinery, fertilzier --> organics, recylables
+
+	Airlock					- 
+	Attachment Point		- 
+	Auxillary Control		- 
+	Comm-Lab				- 
+	Habitation				- 
+	Inflatable Logistics	- 
+	Inflatable Workshop		- 	
+	Regolith Silfter		- 
+	Power Pack				- 
+	Portable Smelter		- 
+	Supply Redipack A		- non LS supplies
+	Supply Redipack B		- LS supplies
