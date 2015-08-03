@@ -117,7 +117,7 @@ namespace ExtendedPartInfo
             Mass = (part.mass + part.GetResourceMass()) * 1000;
             CrossFeed = part.fuelCrossFeed;
             Temp = Math.Round(part.temperature) + " / " + part.maxTemp;
-            SkinTemp = Math.Round(part.skinTemperature) + " / " + part.skinMaxTemp + " ("+part.thermalConductionFlux+" , "+part.thermalRadiationFlux+")";
+            SkinTemp = Math.Round(part.skinTemperature) + " / " + part.skinMaxTemp + " (" + IntWithUnits((float)part.thermalConductionFlux) + "," + IntWithUnits((float)part.thermalRadiationFlux) + ")";
             Shielded = part.ShieldedFromAirstream;
 
             if (myRCS)
@@ -190,11 +190,11 @@ namespace ExtendedPartInfo
         //-----------------------------------------------------------------------------------------
         private string RemoteTech(float range1, float range2, float maxRange)
         {
-            return ValueWithUnits(Math.Min((float)(Math.Min(range1, range2) + Math.Sqrt(range1 * range2)), maxRange));
+            return DistWithUnits(Math.Min((float)(Math.Min(range1, range2) + Math.Sqrt(range1 * range2)), maxRange));
         }
 
         //-----------------------------------------------------------------------------------------
-        private string ValueWithUnits(float value)
+        private string DistWithUnits(float value)
         {
             if (value <= 1000)
                 return value + "m";
@@ -204,6 +204,20 @@ namespace ExtendedPartInfo
                 return Math.Round(value / 1000000, 2) + "Mm";
             if (value <= 1000000000000)
                 return Math.Round(value / 1000000000, 1) + "Gm";
+            return value.ToString();
+        }
+
+        //-----------------------------------------------------------------------------------------
+        private string IntWithUnits(float value)
+        {
+            if (value < 1000 && value > -1000)
+                return Math.Round(value, 0).ToString();
+            if (value <= 1000000 && value >= 1000000)
+                return Math.Round(value / 1000, 0) + "K";
+            if (value <= 1000000000 && value >= 1000000000)
+                return Math.Round(value / 1000000, 0) + "M";
+            if (value <= 1000000000000 && value >= 1000000000000)
+                return Math.Round(value / 1000000000, 0) + "G";
             return value.ToString();
         }
 

@@ -81,7 +81,7 @@ namespace Felbourn
                     return;
 
                 FlightLog(part.partInfo.title + " is melting and broke off!");
-                part.decouple(0);
+                part.disconnect();
                 broken = true;
             }
         }
