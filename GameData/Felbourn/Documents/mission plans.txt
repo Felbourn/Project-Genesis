@@ -74,6 +74,62 @@
 
 === Phase 1 ===
 
+first modules:
+	Habitat
+	Supplies --> Kerbals --> Mulch
+	Power Gen
+
+second modules:
+	send machinery & fertilzier supplies, recycle mulch
+	Agricultural - mulch, power, machinery, fertilizer --> organics, recylables
+
+next:
+	get supplies from where we are
+	Regolith Silfter - power --> water, or substrate, or minerals, or metalOre
+	UKS Aeroponics - machinery, power, water, substrate 			--> organics, recyclables
+	UKS Aeroponics - machinery, power, mulch			 			--> organics, recyclables
+	Habitation - organics, machinery, power --> supplies, recyclables
+
+next:
+	find a way to use recyclables that have been building up
+
+xxxxxxxxxxx
+MK-V modules:
+	Habitation				- organics, machinery, power --> supplies, recyclables
+
+	Inflatable Workshop		- metals, chemicals, polymers, machinery, power                   --> machinery
+		or 					- metals, chemicals, polymers, machinery, power, specializedParts --> rocket parts, recyclables
+
+	Portable Smelter		- machinery, power, substrate --> polymers, recyclables
+		or 					- machinery, power, metalOre  --> metals, recyclables
+		or 					- machinery, power, minerals  --> chemicals, recyclables
+
+OKS modules:
+	Agricultural			- store life support
+	Habitgation				- living space
+	Inflatable Storage		- variable contents
+	Inflatable Workshop		-
+	Power Unit 				-
+
+UKS modules:
+	Fabrication, gnd/orbit	- recyclables, power, machinery      			--> metals, chemicals, polymers, recyclables
+		or 					- metals, chemicals, polymers, machinery, power --> rocketParts, recyclables
+		or 					- metals, chemicals, polymers, machinery, power --> machinery, recyclables
+
+	Kerbitat, ground		- organics, machinery, Power 					--> supplies, recyclables            
+	Kerbitat, orbit			- organics, machinery, Power 					--> supplies, recyclables            
+
+	Mobile Refinery,g/o		- substrate, machinery, power 					--> polymers, recyclables
+		or 					- metalOre, machinery, power 					--> metals, raremetals, recyclables
+		or 					- minerals, machinery, power 					--> chemicals, exoticMinerals, recyclables
+
+	Pioneer Module, orbit	- mulch, machinery, Power 						--> supplies, recyclables
+
+	Power Distro Unit, gnd  - U235  										--> DU, xenon, power
+
+	Orbital Shipyward 		- build in space
+xxxxxxxxxx
+
 === Modules === 
 
 MK-V modules:
@@ -91,7 +147,7 @@ MK-V modules:
 	Inflatable Logistics	- switchable storage
 	Inflatable Workshop		- metals, chemicals, polymers, machinery, power                   --> machinery
 		or 					- metals, chemicals, polymers, machinery, power, specializedParts --> rocket parts, recyclables
-	Regolith Silfter		- power --> water, or subhstrate, or minerals, or metalOre
+	Regolith Silfter		- power --> water, or substrate, or minerals, or metalOre
 	Power Pack				- P238 --> power
 	Portable Smelter		- machinery, power, substrate --> polymers, recyclables
 		or 					- machinery, power, metalOre  --> metals, recyclables
@@ -111,7 +167,7 @@ OKS modules:
 	Power Unit 				-
 
 UKS modules:
-	Aeroponics, orbit		- machinery, power, water, substrate 			--> organics, recyclables
+	Aeroponics, gnd 		- machinery, power, water, substrate 			--> organics, recyclables
 		or 					- machinery, power, mulch			 			--> organics, recyclables
 
 	Fabrication, gnd/orbit	- recyclables, power, machinery      			--> metals, chemicals, polymers, recyclables
