@@ -22,6 +22,7 @@ CanPin
 	Item = KolonyTools
 	Item = KSPAlternateResourcePanel
 	Item = PlanetShine
+	Item = USILifeSupport
 }
 CanHide
 {
@@ -41,6 +42,7 @@ CanHide
 	Item = KolonyTools
 	Item = KSPAlternateResourcePanel
 	Item = PlanetShine
+	Item = USILifeSupport
 }
 CanSetFalse
 {
@@ -60,6 +62,7 @@ CanSetFalse
 	Item = KolonyTools
 	Item = KSPAlternateResourcePanel
 	Item = PlanetShine
+	Item = USILifeSupport
 }
 ModHasFirstConfig
 {
@@ -79,4 +82,5 @@ ModHasFirstConfig
 	Item = KolonyTools
 	Item = KSPAlternateResourcePanel
 	Item = PlanetShine
+	Item = USILifeSupport
 }
