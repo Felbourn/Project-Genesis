@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <config>
     <rect name="flightWindowPos">
-        <xmin>240</xmin>
-        <xmax>504</xmax>
-        <ymin>48</ymin>
-        <ymax>286</ymax>
+        <xmin>355</xmin>
+        <xmax>619</xmax>
+        <ymin>73</ymin>
+        <ymax>284</ymax>
     </rect>
     <rect name="settingsWindowPos">
         <xmin>0</xmin>

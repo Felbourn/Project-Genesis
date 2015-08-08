@@ -2,13 +2,13 @@
 <config>
     <bool name="showToolbar">1</bool>
     <bool name="showAppLauncher">1</bool>
-    <int name="ResourceWindow.x">1286</int>
-    <int name="ResourceWindow.y">602</int>
+    <int name="ResourceWindow.x">1269</int>
+    <int name="ResourceWindow.y">527</int>
     <bool name="showTotalMass">1</bool>
     <bool name="showDryMass">1</bool>
     <bool name="showCrewCapacity">1</bool>
     <bool name="showPartCount">1</bool>
     <bool name="showTWR">1</bool>
-    <int name="SettingsWindow.x">700</int>
-    <int name="SettingsWindow.y">370</int>
+    <int name="SettingsWindow.x">1099</int>
+    <int name="SettingsWindow.y">218</int>
 </config>

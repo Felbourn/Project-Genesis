@@ -1,0 +1,12416 @@
+ship = Lifter 2.5m Expanded
+version = 1.0.4
+description = Rated for cargo
+type = None
+size = 4.172689,35.3234,7.110607
+PART
+{
+	part = Fel.DeepFairingBase_4293667522
+	partName = Part
+	pos = -1.751399,21.25974,1.558304
+	attPos = 0,0.3802404,0
+	attPos0 = -1.751399,21.25974,1.558304
+	rot = 0,0,0,1
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 3
+	dstg = 3
+	sidx = 8
+	sqor = 3
+	sepI = 3
+	attm = 0
+	modCost = -7000
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	link = KW5mExpFairingCone_4293667394
+	link = Fel.LongTank1_4293667154
+	link = KW5mExpFairingCone_4293664484
+	attN = connect5,KW5mExpFairingCone_4293667394
+	attN = connect6,KW5mExpFairingCone_4293664484
+	attN = bottom,Fel.LongTank1_4293667154
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleAnchoredDecoupler
+		isEnabled = True
+		ejectionForcePercent = 52
+		isDecoupled = False
+		ejectionForcePercent_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 1
+		}
+		EVENTS
+		{
+			Decouple
+			{
+				active = True
+				guiActive = True
+				guiIcon = Decouple
+				guiName = Decouple
+				category = Decouple
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 2.5
+		defaultScale = 5
+		defaultTransformScale = (1, 1, 1)
+		DryCost = 1000
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = CollisionFX
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
+		name = ExtendedPartInfo
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Scrap Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Salvage Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = tjs_DecouplerLight
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTweakableDecouple
+		isEnabled = True
+		ejectionForce = 100
+		staged = True
+		ejectionForce_UIFlight
+		{
+			controlEnabled = True
+			minValue = -3.402823E+38
+			maxValue = 3.402823E+38
+			incrementSlide = 1
+		}
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTweakableCrossFeed
+		isEnabled = True
+		fuelCrossFeed = False
+		fuelCrossFeed_UIFlight
+		{
+			controlEnabled = True
+		}
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleStagingToggle
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+			EnableEvent
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Enable Staging
+				guiName = Enable Staging
+				category = Enable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			DisableEvent
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = KW5mExpFairingCone_4293667394
+	partName = Part
+	pos = -0.9388987,31.18974,1.558304
+	attPos = 0,0,0
+	attPos0 = 0.8125004,9.930002,0
+	rot = 0,1,0,0
+	attRot = 0,0.9999999,0,0
+	attRot0 = 0,1,0,0
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 4
+	dstg = 5
+	sidx = 0
+	sqor = 4
+	sepI = 4
+	attm = 0
+	modCost = -600
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	link = KW5mExpFairingWall_4293667310
+	attN = connect,KW5mExpFairingWall_4293667310
+	attN = bottom,Fel.DeepFairingBase_4293667522
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleFairingDecoupler
+		isEnabled = True
+		ejectionForcePercent = 100
+		isDecoupled = False
+		ejectionForcePercent_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 1
+		}
+		EVENTS
+		{
+			Decouple
+			{
+				active = True
+				guiActive = True
+				guiIcon = Decouple
+				guiName = Decouple
+				category = Decouple
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = CollisionFX
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
+		name = ExtendedPartInfo
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 2.5
+		defaultScale = 5
+		defaultTransformScale = (1.25, 1.25, 1.25)
+		DryCost = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Scrap Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Salvage Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = tjs_DecouplerLight
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTweakableDecouple
+		isEnabled = True
+		ejectionForce = 900
+		staged = True
+		ejectionForce_UIFlight
+		{
+			controlEnabled = True
+			minValue = -3.402823E+38
+			maxValue = 3.402823E+38
+			incrementSlide = 1
+		}
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleStagingToggle
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+			EnableEvent
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Enable Staging
+				guiName = Enable Staging
+				category = Enable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			DisableEvent
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = KW5mExpFairingWall_4293667310
+	partName = Part
+	pos = -0.9395237,28.4519,1.558304
+	attPos = 0,0,0
+	attPos0 = 0.0006248951,-2.737837,0
+	rot = 0,1,0,0
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 6
+	dstg = 6
+	sidx = -1
+	sqor = -1
+	sepI = 4
+	attm = 0
+	modCost = -600
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	link = KW5mExpFairingWall_4293667232
+	attN = top,KW5mExpFairingCone_4293667394
+	attN = bottom,KW5mExpFairingWall_4293667232
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = CollisionFX
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
+		name = ExtendedPartInfo
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 2.5
+		defaultScale = 5
+		defaultTransformScale = (1.25, 1.25, 1.25)
+		DryCost = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Scrap Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Salvage Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = KW5mExpFairingWall_4293667232
+	partName = Part
+	pos = -0.9395237,25.28969,1.558304
+	attPos = 0,0,0
+	attPos0 = 0,-3.162218,0
+	rot = 0,1,0,0
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 6
+	dstg = 6
+	sidx = -1
+	sqor = -1
+	sepI = 4
+	attm = 0
+	modCost = -600
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	attN = top,KW5mExpFairingWall_4293667310
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = CollisionFX
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
+		name = ExtendedPartInfo
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 2.5
+		defaultScale = 5
+		defaultTransformScale = (1.25, 1.25, 1.25)
+		DryCost = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Scrap Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Salvage Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = Fel.LongTank1_4293667154
+	partName = Part
+	pos = -1.751399,12.17788,1.558304
+	attPos = 0,0,0
+	attPos0 = 0,-9.08186,0
+	rot = 0,0,0,1
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 1
+	dstg = 4
+	sidx = 2
+	sqor = 1
+	sepI = 3
+	attm = 0
+	modCost = 3274.75
+	modMass = -62.32789
+	modSize = (0.0, 0.0, 0.0)
+	link = Fel.EngineShield2_4293666972
+	link = W485.SurfaceOmniLight_4293666776
+	link = W485.SurfaceOmniLight_4293666732
+	link = W485.SurfaceOmniLight_4293666688
+	link = W485.SurfaceOmniLight_4293666644
+	link = W485.SurfaceOmniLight_4293666600
+	link = W485.SurfaceOmniLight_4293666556
+	link = W485.SurfaceOmniLight_4293666512
+	link = W485.SurfaceOmniLight_4293666468
+	link = W485.SurfaceOmniLight_4293666424
+	link = W485.SurfaceOmniLight_4293666380
+	link = W485.SurfaceOmniLight_4293666336
+	link = W485.SurfaceOmniLight_4293666292
+	link = W485.SurfaceOmniLight_4293666248
+	link = W485.SurfaceOmniLight_4293666204
+	link = W485.SurfaceOmniLight_4293666160
+	link = W485.SurfaceOmniLight_4293666116
+	link = W485.SurfaceOmniLight_4293666072
+	link = W485.SurfaceOmniLight_4293666028
+	link = W485.SurfaceOmniLight_4293665984
+	link = W485.SurfaceOmniLight_4293665940
+	link = W485.SurfaceOmniLight_4293665896
+	link = W485.SurfaceOmniLight_4293665852
+	link = W485.SurfaceOmniLight_4293665808
+	link = W485.SurfaceOmniLight_4293665764
+	link = W485.SurfaceOmniLight_4293665720
+	link = W485.SurfaceOmniLight_4293665676
+	link = W485.SurfaceOmniLight_4293665632
+	link = W485.SurfaceOmniLight_4293665588
+	link = W485.SurfaceOmniLight_4293665544
+	link = W485.SurfaceOmniLight_4293665500
+	link = launchClamp1_4293665456
+	link = launchClamp1_4293665330
+	link = launchClamp1_4293665204
+	link = launchClamp1_4293665078
+	link = sepMotor1_4293664952
+	link = sepMotor1_4293664874
+	link = sepMotor1_4293664796
+	link = sepMotor1_4293664718
+	link = sepMotor1_4293664640
+	link = sepMotor1_4293664562
+	attN = bottom,Fel.EngineShield2_4293666972
+	attN = top,Fel.DeepFairingBase_4293667522
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 2.5
+		defaultScale = 2.5
+		defaultTransformScale = (1, 1, 1)
+		DryCost = 165256.8
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = KM_PostLaunchEffect
+		isEnabled = True
+		editorPlacementOptionsActive = False
+		isRunning = False
+		runningTime = 0.5
+		width = 1.3
+		height = 2
+		xOffset = 0
+		yOffset = -4
+		zOffset = 0
+		numP = 15
+		speedX = 0
+		speedY = -5
+		speedZ = 0
+		size = 0.5
+		rndVelocity = 0.1
+		softDecrease = True
+		isActive = True
+		editorPlacementOptionsActive_UIFlight
+		{
+			controlEnabled = True
+		}
+		runningTime_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 20
+			stepIncrement = 1
+		}
+		width_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 2
+			stepIncrement = 0.1
+		}
+		height_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 20
+			stepIncrement = 1
+		}
+		xOffset_UIFlight
+		{
+			controlEnabled = True
+			minValue = -4
+			maxValue = 4
+			stepIncrement = 0.1
+		}
+		yOffset_UIFlight
+		{
+			controlEnabled = True
+			minValue = -4
+			maxValue = 4
+			stepIncrement = 0.1
+		}
+		zOffset_UIFlight
+		{
+			controlEnabled = True
+			minValue = -4
+			maxValue = 4
+			stepIncrement = 0.1
+		}
+		numP_UIFlight
+		{
+			controlEnabled = True
+			minValue = 10
+			maxValue = 200
+			stepIncrement = 20
+		}
+		speedX_UIFlight
+		{
+			controlEnabled = True
+			minValue = -5
+			maxValue = 5
+			stepIncrement = 0.25
+		}
+		speedY_UIFlight
+		{
+			controlEnabled = True
+			minValue = -5
+			maxValue = 5
+			stepIncrement = 0.25
+		}
+		speedZ_UIFlight
+		{
+			controlEnabled = True
+			minValue = -5
+			maxValue = 5
+			stepIncrement = 0.25
+		}
+		size_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1.5
+			stepIncrement = 0.05
+		}
+		rndVelocity_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 2
+			stepIncrement = 0.1
+		}
+		softDecrease_UIFlight
+		{
+			controlEnabled = True
+		}
+		isActive_UIFlight
+		{
+			controlEnabled = True
+		}
+		EVENTS
+		{
+			toggle
+			{
+				active = True
+				guiActive = True
+				guiIcon = Toggle
+				guiName = Toggle
+				category = Toggle
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			toggleAG
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = CollisionFX
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
+		name = ExtendedPartInfo
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Scrap Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Salvage Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleFuelTanks
+		isEnabled = True
+		type = Default
+		utilization = 86
+		mass = 2.372505
+		volume = 74308.483699999997
+		type_UIEditor
+		{
+			controlEnabled = True
+		}
+		utilization_UIEditor
+		{
+			controlEnabled = True
+			minValue = 1
+			maxValue = 100
+			incrementSlide = 1
+		}
+		EVENTS
+		{
+			HideUI
+			{
+				active = False
+				guiActive = False
+				guiActiveEditor = True
+				guiIcon = Hide UI
+				guiName = Hide UI
+				category = Hide UI
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ShowUI
+			{
+				active = True
+				guiActive = False
+				guiActiveEditor = True
+				guiIcon = Show UI
+				guiName = Show UI
+				category = Show UI
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Empty
+			{
+				active = True
+				guiActive = False
+				guiActiveEditor = True
+				guiIcon = Remove All Tanks
+				guiName = Remove All Tanks
+				category = Remove All Tanks
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			MFT0
+			{
+				active = True
+				guiActive = False
+				guiIcon = 100% Hydrazine
+				guiName = 100% Hydrazine
+				category = 100% Hydrazine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			MFT1
+			{
+				active = True
+				guiActive = False
+				guiIcon = 72.203% LqdHydrogen / 27.797% LqdOxygen
+				guiName = 72.203% LqdHydrogen / 27.797% LqdOxygen
+				category = 72.203% LqdHydrogen / 27.797% LqdOxygen
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+		TANK
+		{
+			name = LqdOxygen
+			note = 
+			utilization = 1
+			mass = 1.4E-05
+			cost = 0
+			loss_rate = 8E-11
+			temperature = 90.15
+			fillable = True
+			techRequired = 
+			amount = 49159.886435660002
+			maxAmount = 49159.886435660002
+		}
+		TANK
+		{
+			name = Kerosene
+			note = 
+			utilization = 1
+			mass = 1.2E-05
+			cost = 0
+			loss_rate = 0
+			temperature = 300
+			fillable = True
+			techRequired = 
+			amount = 25148.599999999999
+			maxAmount = 25148.597264339998
+		}
+		TANK
+		{
+			name = LqdHydrogen
+			note = 
+			utilization = 1
+			mass = 2E-06
+			cost = 0
+			loss_rate = 5E-10
+			temperature = 20.15
+			fillable = True
+			techRequired = 
+			amount = 0
+			maxAmount = 0
+		}
+		TANK
+		{
+			name = NTO
+			note = 
+			utilization = 1
+			mass = 1.6E-05
+			cost = 0
+			loss_rate = 0
+			temperature = 300
+			fillable = True
+			techRequired = 
+			amount = 0
+			maxAmount = 0
+		}
+		TANK
+		{
+			name = UDMH
+			note = 
+			utilization = 1
+			mass = 1.6E-05
+			cost = 0
+			loss_rate = 0
+			temperature = 300
+			fillable = True
+			techRequired = 
+			amount = 0
+			maxAmount = 0
+		}
+		TANK
+		{
+			name = Hydrazine
+			note = 
+			utilization = 1
+			mass = 8.1E-05
+			cost = 0
+			loss_rate = 0
+			temperature = 300
+			fillable = True
+			techRequired = 
+			amount = 0
+			maxAmount = 0
+		}
+		TANK
+		{
+			name = ElectricCharge
+			note = 
+			utilization = 1000
+			mass = 0.05
+			cost = 0
+			loss_rate = 0
+			temperature = 300
+			fillable = True
+			techRequired = 
+			amount = 0
+			maxAmount = 0
+		}
+		TANK
+		{
+			name = LeadBallast
+			note = 
+			utilization = 1
+			mass = 0
+			cost = 0
+			loss_rate = 0
+			temperature = 300
+			fillable = True
+			techRequired = 
+			amount = 0
+			maxAmount = 0
+		}
+	}
+	RESOURCE
+	{
+		name = HTPB
+		amount = 6
+		maxAmount = 6
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Kerosene
+		amount = 25148.6
+		maxAmount = 25148.59726434
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = LqdOxygen
+		amount = 49159.88643566
+		maxAmount = 49159.88643566
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = Fel.EngineShield2_4293666972
+	partName = Part
+	pos = -1.751399,2.963078,1.558304
+	attPos = 0,0,0
+	attPos0 = 0,-9.214796,0
+	rot = 0,0,0,1
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 4
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 3
+	attm = 0
+	modCost = -562.9629
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	link = KE180_4293666928
+	attN = bottom,KE180_4293666928
+	attN = top,Fel.LongTank1_4293667154
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 2.5
+		defaultScale = 3.75
+		defaultTransformScale = (1, 1, 1)
+		DryCost = 237.0371
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = CollisionFX
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
+		name = ExtendedPartInfo
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Scrap Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Salvage Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = KE180_4293666928
+	partName = Part
+	pos = -1.751399,2.673079,1.558304
+	attPos = 0,0,0
+	attPos0 = 0,-0.289999,0
+	rot = 0,0,0,1
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 4
+	dstg = 4
+	sidx = 2
+	sqor = 4
+	sepI = 3
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	attN = top,Fel.EngineShield2_4293666972
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleEnginesFX
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleGimbal
+		isEnabled = True
+		gimbalLock = False
+		gimbalLimiter = 100
+		gimbalLock_UIFlight
+		{
+			controlEnabled = True
+		}
+		gimbalLimiter_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 1
+		}
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+			LockAction
+			{
+				actionGroup = None
+			}
+			FreeAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleAnimateHeat
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAlternator
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = FSmeshSwitch
+		isEnabled = True
+		selectedObject = 0
+		EVENTS
+		{
+			nextObjectEvent
+			{
+				active = True
+				guiActive = False
+				guiActiveEditor = True
+				guiIcon = Next part variant
+				guiName = Toggle Cover
+				category = Next part variant
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			previousObjectEvent
+			{
+				active = True
+				guiActive = False
+				guiActiveEditor = True
+				guiIcon = Prev part variant
+				guiName = Toggle Cover
+				category = Prev part variant
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleSurfaceFX
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = CollisionFX
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
+		name = ExtendedPartInfo
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = MGFix
+		isEnabled = True
+		gimbalRateIsActive = False
+		gimbalResponseSpeed = 10
+		gimbalRateIsActive_UIFlight
+		{
+			controlEnabled = True
+		}
+		gimbalResponseSpeed_UIFlight
+		{
+			controlEnabled = True
+			minValue = 1
+			maxValue = 30
+			stepIncrement = 1
+		}
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Scrap Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Salvage Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = tjs_EngineLight
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = KM_PreLaunchEffect
+		isEnabled = True
+		editorPlacementOptionsActive = False
+		isRunning = False
+		runningTime = 0
+		width = 0.2
+		height = 10
+		xOffset = 0.7
+		yOffset = -1.8
+		zOffset = 0
+		numP = 25
+		speedX = 0
+		speedY = -0.2
+		speedZ = 0
+		size = 1.5
+		rndVelocity = 0
+		softDecrease = False
+		isActive = True
+		editorPlacementOptionsActive_UIFlight
+		{
+			controlEnabled = True
+		}
+		runningTime_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 20
+			stepIncrement = 1
+		}
+		width_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 2
+			stepIncrement = 0.1
+		}
+		height_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 20
+			stepIncrement = 1
+		}
+		xOffset_UIFlight
+		{
+			controlEnabled = True
+			minValue = -4
+			maxValue = 4
+			stepIncrement = 0.1
+		}
+		yOffset_UIFlight
+		{
+			controlEnabled = True
+			minValue = -4
+			maxValue = 4
+			stepIncrement = 0.1
+		}
+		zOffset_UIFlight
+		{
+			controlEnabled = True
+			minValue = -4
+			maxValue = 4
+			stepIncrement = 0.1
+		}
+		numP_UIFlight
+		{
+			controlEnabled = True
+			minValue = 10
+			maxValue = 200
+			stepIncrement = 20
+		}
+		speedX_UIFlight
+		{
+			controlEnabled = True
+			minValue = -5
+			maxValue = 5
+			stepIncrement = 0.25
+		}
+		speedY_UIFlight
+		{
+			controlEnabled = True
+			minValue = -5
+			maxValue = 5
+			stepIncrement = 0.25
+		}
+		speedZ_UIFlight
+		{
+			controlEnabled = True
+			minValue = -5
+			maxValue = 5
+			stepIncrement = 0.25
+		}
+		size_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1.5
+			stepIncrement = 0.05
+		}
+		rndVelocity_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 2
+			stepIncrement = 0.1
+		}
+		softDecrease_UIFlight
+		{
+			controlEnabled = True
+		}
+		isActive_UIFlight
+		{
+			controlEnabled = True
+		}
+		EVENTS
+		{
+			toggle
+			{
+				active = True
+				guiActive = True
+				guiIcon = Toggle
+				guiName = Toggle
+				category = Toggle
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			toggleAG
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = KM_PreLaunchEffect
+		isEnabled = True
+		editorPlacementOptionsActive = False
+		isRunning = False
+		runningTime = 0
+		width = 0.2
+		height = 10
+		xOffset = -0.7
+		yOffset = -1.8
+		zOffset = 0
+		numP = 25
+		speedX = 0
+		speedY = -0.2
+		speedZ = 0
+		size = 1.5
+		rndVelocity = 0
+		softDecrease = False
+		isActive = True
+		editorPlacementOptionsActive_UIFlight
+		{
+			controlEnabled = True
+		}
+		runningTime_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 20
+			stepIncrement = 1
+		}
+		width_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 2
+			stepIncrement = 0.1
+		}
+		height_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 20
+			stepIncrement = 1
+		}
+		xOffset_UIFlight
+		{
+			controlEnabled = True
+			minValue = -4
+			maxValue = 4
+			stepIncrement = 0.1
+		}
+		yOffset_UIFlight
+		{
+			controlEnabled = True
+			minValue = -4
+			maxValue = 4
+			stepIncrement = 0.1
+		}
+		zOffset_UIFlight
+		{
+			controlEnabled = True
+			minValue = -4
+			maxValue = 4
+			stepIncrement = 0.1
+		}
+		numP_UIFlight
+		{
+			controlEnabled = True
+			minValue = 10
+			maxValue = 200
+			stepIncrement = 20
+		}
+		speedX_UIFlight
+		{
+			controlEnabled = True
+			minValue = -5
+			maxValue = 5
+			stepIncrement = 0.25
+		}
+		speedY_UIFlight
+		{
+			controlEnabled = True
+			minValue = -5
+			maxValue = 5
+			stepIncrement = 0.25
+		}
+		speedZ_UIFlight
+		{
+			controlEnabled = True
+			minValue = -5
+			maxValue = 5
+			stepIncrement = 0.25
+		}
+		size_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1.5
+			stepIncrement = 0.05
+		}
+		rndVelocity_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 2
+			stepIncrement = 0.1
+		}
+		softDecrease_UIFlight
+		{
+			controlEnabled = True
+		}
+		isActive_UIFlight
+		{
+			controlEnabled = True
+		}
+		EVENTS
+		{
+			toggle
+			{
+				active = True
+				guiActive = True
+				guiIcon = Toggle
+				guiName = Toggle
+				category = Toggle
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			toggleAG
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleTweakableGimbal
+		isEnabled = True
+		gimbalRange = 5
+		reverseGimbalControl = False
+		gimbalRange_UIFlight
+		{
+			controlEnabled = True
+			minValue = -3.402823E+38
+			maxValue = 3.402823E+38
+			incrementSlide = 0.1
+		}
+		reverseGimbalControl_UIFlight
+		{
+			controlEnabled = True
+		}
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ActionGimbalFlip
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	part = W485.SurfaceOmniLight_4293666776
+	partName = Part
+	pos = -3.000503,4.507889,1.558304
+	attPos = 0,0,0
+	attPos0 = -1.249104,-7.669988,5.960464E-08
+	rot = 0.5,-0.5,0.5,0.5
+	attRot = 0,0,0,1
+	attRot0 = 0.5,-0.5,0.5,0.5
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 4
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 3
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = W485.SurfaceOmniLight_4293666732
+	sym = W485.SurfaceOmniLight_4293666688
+	sym = W485.SurfaceOmniLight_4293666644
+	sym = W485.SurfaceOmniLight_4293666600
+	sym = W485.SurfaceOmniLight_4293666556
+	srfN = srfAttach,Fel.LongTank1_4293667154
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleLight
+		isEnabled = True
+		isOn = False
+		lightR = 1
+		lightG = 1
+		lightB = 1
+		lightR_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightG_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightB_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		EVENTS
+		{
+			LightsOff
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights Off
+				guiName = Lights Off
+				category = Lights Off
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			LightsOn
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights On
+				guiName = Lights On
+				category = Lights On
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleLightAction
+			{
+				actionGroup = Light
+			}
+			LightOnAction
+			{
+				actionGroup = None
+			}
+			LightOffAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = CollisionFX
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
+		name = ExtendedPartInfo
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Scrap Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Salvage Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 100
+		defaultScale = 100
+		defaultTransformScale = (1, 1, 1)
+		DryCost = 100
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = W485.SurfaceOmniLight_4293666732
+	partName = Part
+	pos = -2.37595,4.507889,2.64006
+	attPos = 0,0,0
+	attPos0 = -0.6245521,-7.669988,1.081756
+	rot = 0.6830127,-0.1830127,0.1830127,0.6830127
+	attRot = 0,0,0,1
+	attRot0 = 0.6830127,-0.1830127,0.1830127,0.6830127
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 4
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 3
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = W485.SurfaceOmniLight_4293666776
+	sym = W485.SurfaceOmniLight_4293666688
+	sym = W485.SurfaceOmniLight_4293666644
+	sym = W485.SurfaceOmniLight_4293666600
+	sym = W485.SurfaceOmniLight_4293666556
+	srfN = srfAttach,Fel.LongTank1_4293667154
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleLight
+		isEnabled = True
+		isOn = False
+		lightR = 1
+		lightG = 1
+		lightB = 1
+		lightR_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightG_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightB_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		EVENTS
+		{
+			LightsOff
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights Off
+				guiName = Lights Off
+				category = Lights Off
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			LightsOn
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights On
+				guiName = Lights On
+				category = Lights On
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleLightAction
+			{
+				actionGroup = Light
+			}
+			LightOnAction
+			{
+				actionGroup = None
+			}
+			LightOffAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = CollisionFX
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
+		name = ExtendedPartInfo
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Scrap Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Salvage Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 100
+		defaultScale = 100
+		defaultTransformScale = (1, 1, 1)
+		DryCost = 100
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = W485.SurfaceOmniLight_4293666688
+	partName = Part
+	pos = -1.126846,4.507889,2.64006
+	attPos = 0,0,0
+	attPos0 = 0.6245524,-7.669988,1.081756
+	rot = 0.6830127,0.1830127,-0.1830127,0.6830127
+	attRot = 0,0,0,1
+	attRot0 = 0.6830127,0.1830127,-0.1830127,0.6830127
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 4
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 3
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = W485.SurfaceOmniLight_4293666776
+	sym = W485.SurfaceOmniLight_4293666732
+	sym = W485.SurfaceOmniLight_4293666644
+	sym = W485.SurfaceOmniLight_4293666600
+	sym = W485.SurfaceOmniLight_4293666556
+	srfN = srfAttach,Fel.LongTank1_4293667154
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleLight
+		isEnabled = True
+		isOn = False
+		lightR = 1
+		lightG = 1
+		lightB = 1
+		lightR_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightG_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightB_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		EVENTS
+		{
+			LightsOff
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights Off
+				guiName = Lights Off
+				category = Lights Off
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			LightsOn
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights On
+				guiName = Lights On
+				category = Lights On
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleLightAction
+			{
+				actionGroup = Light
+			}
+			LightOnAction
+			{
+				actionGroup = None
+			}
+			LightOffAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = CollisionFX
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
+		name = ExtendedPartInfo
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Scrap Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Salvage Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 100
+		defaultScale = 100
+		defaultTransformScale = (1, 1, 1)
+		DryCost = 100
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = W485.SurfaceOmniLight_4293666644
+	partName = Part
+	pos = -0.5022947,4.507889,1.558304
+	attPos = 0,0,0
+	attPos0 = 1.249104,-7.669988,-1.788139E-07
+	rot = 0.4999999,0.5000001,-0.5000001,0.4999999
+	attRot = 0,0,0,1
+	attRot0 = 0.5,0.5000001,-0.5000001,0.5
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 4
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 3
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = W485.SurfaceOmniLight_4293666776
+	sym = W485.SurfaceOmniLight_4293666732
+	sym = W485.SurfaceOmniLight_4293666688
+	sym = W485.SurfaceOmniLight_4293666600
+	sym = W485.SurfaceOmniLight_4293666556
+	srfN = srfAttach,Fel.LongTank1_4293667154
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleLight
+		isEnabled = True
+		isOn = False
+		lightR = 1
+		lightG = 1
+		lightB = 1
+		lightR_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightG_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightB_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		EVENTS
+		{
+			LightsOff
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights Off
+				guiName = Lights Off
+				category = Lights Off
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			LightsOn
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights On
+				guiName = Lights On
+				category = Lights On
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleLightAction
+			{
+				actionGroup = Light
+			}
+			LightOnAction
+			{
+				actionGroup = None
+			}
+			LightOffAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = CollisionFX
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
+		name = ExtendedPartInfo
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Scrap Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Salvage Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 100
+		defaultScale = 100
+		defaultTransformScale = (1, 1, 1)
+		DryCost = 100
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = W485.SurfaceOmniLight_4293666600
+	partName = Part
+	pos = -1.126846,4.507889,0.4765472
+	attPos = 0,0,0
+	attPos0 = 0.6245521,-7.669988,-1.081756
+	rot = 0.1830127,0.6830127,-0.6830127,0.1830127
+	attRot = 0,0,0,1
+	attRot0 = 0.1830127,0.6830127,-0.6830127,0.1830127
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 4
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 3
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = W485.SurfaceOmniLight_4293666776
+	sym = W485.SurfaceOmniLight_4293666732
+	sym = W485.SurfaceOmniLight_4293666688
+	sym = W485.SurfaceOmniLight_4293666644
+	sym = W485.SurfaceOmniLight_4293666556
+	srfN = srfAttach,Fel.LongTank1_4293667154
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleLight
+		isEnabled = True
+		isOn = False
+		lightR = 1
+		lightG = 1
+		lightB = 1
+		lightR_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightG_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightB_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		EVENTS
+		{
+			LightsOff
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights Off
+				guiName = Lights Off
+				category = Lights Off
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			LightsOn
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights On
+				guiName = Lights On
+				category = Lights On
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleLightAction
+			{
+				actionGroup = Light
+			}
+			LightOnAction
+			{
+				actionGroup = None
+			}
+			LightOffAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = CollisionFX
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
+		name = ExtendedPartInfo
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Scrap Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Salvage Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 100
+		defaultScale = 100
+		defaultTransformScale = (1, 1, 1)
+		DryCost = 100
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = W485.SurfaceOmniLight_4293666556
+	partName = Part
+	pos = -2.37595,4.507889,0.4765472
+	attPos = 0,0,0
+	attPos0 = -0.6245521,-7.669988,-1.081756
+	rot = -0.1830127,0.6830127,-0.6830127,-0.1830127
+	attRot = 0,0,0,1
+	attRot0 = -0.1830127,0.6830127,-0.6830127,-0.1830127
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 4
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 3
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = W485.SurfaceOmniLight_4293666776
+	sym = W485.SurfaceOmniLight_4293666732
+	sym = W485.SurfaceOmniLight_4293666688
+	sym = W485.SurfaceOmniLight_4293666644
+	sym = W485.SurfaceOmniLight_4293666600
+	srfN = srfAttach,Fel.LongTank1_4293667154
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleLight
+		isEnabled = True
+		isOn = False
+		lightR = 1
+		lightG = 1
+		lightB = 1
+		lightR_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightG_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightB_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		EVENTS
+		{
+			LightsOff
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights Off
+				guiName = Lights Off
+				category = Lights Off
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			LightsOn
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights On
+				guiName = Lights On
+				category = Lights On
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleLightAction
+			{
+				actionGroup = Light
+			}
+			LightOnAction
+			{
+				actionGroup = None
+			}
+			LightOffAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = CollisionFX
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
+		name = ExtendedPartInfo
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Scrap Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Salvage Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 100
+		defaultScale = 100
+		defaultTransformScale = (1, 1, 1)
+		DryCost = 100
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = W485.SurfaceOmniLight_4293666512
+	partName = Part
+	pos = -2.995541,12.32795,1.558304
+	attPos = 0,0,0
+	attPos0 = -1.244143,0.1500654,5.960464E-08
+	rot = 0.5,-0.5,0.5,0.5
+	attRot = 0,0,0,1
+	attRot0 = 0.5,-0.5,0.5,0.5
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 4
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 3
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = W485.SurfaceOmniLight_4293666468
+	sym = W485.SurfaceOmniLight_4293666424
+	sym = W485.SurfaceOmniLight_4293666380
+	sym = W485.SurfaceOmniLight_4293666336
+	sym = W485.SurfaceOmniLight_4293666292
+	srfN = srfAttach,Fel.LongTank1_4293667154
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleLight
+		isEnabled = True
+		isOn = False
+		lightR = 1
+		lightG = 1
+		lightB = 1
+		lightR_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightG_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightB_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		EVENTS
+		{
+			LightsOff
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights Off
+				guiName = Lights Off
+				category = Lights Off
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			LightsOn
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights On
+				guiName = Lights On
+				category = Lights On
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleLightAction
+			{
+				actionGroup = Light
+			}
+			LightOnAction
+			{
+				actionGroup = None
+			}
+			LightOffAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = CollisionFX
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
+		name = ExtendedPartInfo
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Scrap Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Salvage Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 100
+		defaultScale = 100
+		defaultTransformScale = (1, 1, 1)
+		DryCost = 100
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = W485.SurfaceOmniLight_4293666468
+	partName = Part
+	pos = -2.373469,12.32795,2.635766
+	attPos = 0,0,0
+	attPos0 = -0.6220716,0.1500654,1.07746
+	rot = 0.6830127,-0.1830127,0.1830127,0.6830127
+	attRot = 0,0,0,1
+	attRot0 = 0.6830127,-0.1830127,0.1830127,0.6830127
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 4
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 3
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = W485.SurfaceOmniLight_4293666512
+	sym = W485.SurfaceOmniLight_4293666424
+	sym = W485.SurfaceOmniLight_4293666380
+	sym = W485.SurfaceOmniLight_4293666336
+	sym = W485.SurfaceOmniLight_4293666292
+	srfN = srfAttach,Fel.LongTank1_4293667154
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleLight
+		isEnabled = True
+		isOn = False
+		lightR = 1
+		lightG = 1
+		lightB = 1
+		lightR_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightG_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightB_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		EVENTS
+		{
+			LightsOff
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights Off
+				guiName = Lights Off
+				category = Lights Off
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			LightsOn
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights On
+				guiName = Lights On
+				category = Lights On
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleLightAction
+			{
+				actionGroup = Light
+			}
+			LightOnAction
+			{
+				actionGroup = None
+			}
+			LightOffAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = CollisionFX
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
+		name = ExtendedPartInfo
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Scrap Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Salvage Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 100
+		defaultScale = 100
+		defaultTransformScale = (1, 1, 1)
+		DryCost = 100
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = W485.SurfaceOmniLight_4293666424
+	partName = Part
+	pos = -1.129326,12.32795,2.635766
+	attPos = 0,0,0
+	attPos0 = 0.6220718,0.1500654,1.07746
+	rot = 0.6830127,0.1830127,-0.1830127,0.6830127
+	attRot = 0,0,0,1
+	attRot0 = 0.6830127,0.1830127,-0.1830127,0.6830127
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 4
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 3
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = W485.SurfaceOmniLight_4293666512
+	sym = W485.SurfaceOmniLight_4293666468
+	sym = W485.SurfaceOmniLight_4293666380
+	sym = W485.SurfaceOmniLight_4293666336
+	sym = W485.SurfaceOmniLight_4293666292
+	srfN = srfAttach,Fel.LongTank1_4293667154
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleLight
+		isEnabled = True
+		isOn = False
+		lightR = 1
+		lightG = 1
+		lightB = 1
+		lightR_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightG_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightB_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		EVENTS
+		{
+			LightsOff
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights Off
+				guiName = Lights Off
+				category = Lights Off
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			LightsOn
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights On
+				guiName = Lights On
+				category = Lights On
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleLightAction
+			{
+				actionGroup = Light
+			}
+			LightOnAction
+			{
+				actionGroup = None
+			}
+			LightOffAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = CollisionFX
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
+		name = ExtendedPartInfo
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Scrap Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Salvage Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 100
+		defaultScale = 100
+		defaultTransformScale = (1, 1, 1)
+		DryCost = 100
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = W485.SurfaceOmniLight_4293666380
+	partName = Part
+	pos = -0.5072557,12.32795,1.558304
+	attPos = 0,0,0
+	attPos0 = 1.244143,0.1500654,-1.788139E-07
+	rot = 0.4999999,0.5000001,-0.5000001,0.4999999
+	attRot = 0,0,0,1
+	attRot0 = 0.5,0.5000001,-0.5000001,0.5
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 4
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 3
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = W485.SurfaceOmniLight_4293666512
+	sym = W485.SurfaceOmniLight_4293666468
+	sym = W485.SurfaceOmniLight_4293666424
+	sym = W485.SurfaceOmniLight_4293666336
+	sym = W485.SurfaceOmniLight_4293666292
+	srfN = srfAttach,Fel.LongTank1_4293667154
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleLight
+		isEnabled = True
+		isOn = False
+		lightR = 1
+		lightG = 1
+		lightB = 1
+		lightR_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightG_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightB_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		EVENTS
+		{
+			LightsOff
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights Off
+				guiName = Lights Off
+				category = Lights Off
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			LightsOn
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights On
+				guiName = Lights On
+				category = Lights On
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleLightAction
+			{
+				actionGroup = Light
+			}
+			LightOnAction
+			{
+				actionGroup = None
+			}
+			LightOffAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = CollisionFX
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
+		name = ExtendedPartInfo
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Scrap Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Salvage Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 100
+		defaultScale = 100
+		defaultTransformScale = (1, 1, 1)
+		DryCost = 100
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = W485.SurfaceOmniLight_4293666336
+	partName = Part
+	pos = -1.129328,12.32795,0.4808443
+	attPos = 0,0,0
+	attPos0 = 0.6220716,0.1500654,-1.07746
+	rot = 0.1830127,0.6830127,-0.6830127,0.1830127
+	attRot = 0,0,0,1
+	attRot0 = 0.1830127,0.6830127,-0.6830127,0.1830127
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 4
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 3
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = W485.SurfaceOmniLight_4293666512
+	sym = W485.SurfaceOmniLight_4293666468
+	sym = W485.SurfaceOmniLight_4293666424
+	sym = W485.SurfaceOmniLight_4293666380
+	sym = W485.SurfaceOmniLight_4293666292
+	srfN = srfAttach,Fel.LongTank1_4293667154
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleLight
+		isEnabled = True
+		isOn = False
+		lightR = 1
+		lightG = 1
+		lightB = 1
+		lightR_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightG_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightB_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		EVENTS
+		{
+			LightsOff
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights Off
+				guiName = Lights Off
+				category = Lights Off
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			LightsOn
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights On
+				guiName = Lights On
+				category = Lights On
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleLightAction
+			{
+				actionGroup = Light
+			}
+			LightOnAction
+			{
+				actionGroup = None
+			}
+			LightOffAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = CollisionFX
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
+		name = ExtendedPartInfo
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Scrap Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Salvage Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 100
+		defaultScale = 100
+		defaultTransformScale = (1, 1, 1)
+		DryCost = 100
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = W485.SurfaceOmniLight_4293666292
+	partName = Part
+	pos = -2.373469,12.32795,0.4808443
+	attPos = 0,0,0
+	attPos0 = -0.6220715,0.1500654,-1.07746
+	rot = -0.1830127,0.6830127,-0.6830127,-0.1830127
+	attRot = 0,0,0,1
+	attRot0 = -0.1830127,0.6830127,-0.6830127,-0.1830127
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 4
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 3
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = W485.SurfaceOmniLight_4293666512
+	sym = W485.SurfaceOmniLight_4293666468
+	sym = W485.SurfaceOmniLight_4293666424
+	sym = W485.SurfaceOmniLight_4293666380
+	sym = W485.SurfaceOmniLight_4293666336
+	srfN = srfAttach,Fel.LongTank1_4293667154
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleLight
+		isEnabled = True
+		isOn = False
+		lightR = 1
+		lightG = 1
+		lightB = 1
+		lightR_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightG_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightB_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		EVENTS
+		{
+			LightsOff
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights Off
+				guiName = Lights Off
+				category = Lights Off
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			LightsOn
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights On
+				guiName = Lights On
+				category = Lights On
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleLightAction
+			{
+				actionGroup = Light
+			}
+			LightOnAction
+			{
+				actionGroup = None
+			}
+			LightOffAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = CollisionFX
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
+		name = ExtendedPartInfo
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Scrap Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Salvage Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 100
+		defaultScale = 100
+		defaultTransformScale = (1, 1, 1)
+		DryCost = 100
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = W485.SurfaceOmniLight_4293666248
+	partName = Part
+	pos = -2.996921,16.59208,1.558304
+	attPos = 0,0,0
+	attPos0 = -1.245523,4.414187,5.960464E-08
+	rot = 0.5,-0.5,0.5,0.5
+	attRot = 0,0,0,1
+	attRot0 = 0.5,-0.5,0.5,0.5
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 4
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 3
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = W485.SurfaceOmniLight_4293666204
+	sym = W485.SurfaceOmniLight_4293666160
+	sym = W485.SurfaceOmniLight_4293666116
+	sym = W485.SurfaceOmniLight_4293666072
+	sym = W485.SurfaceOmniLight_4293666028
+	srfN = srfAttach,Fel.LongTank1_4293667154
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleLight
+		isEnabled = True
+		isOn = False
+		lightR = 1
+		lightG = 1
+		lightB = 1
+		lightR_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightG_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightB_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		EVENTS
+		{
+			LightsOff
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights Off
+				guiName = Lights Off
+				category = Lights Off
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			LightsOn
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights On
+				guiName = Lights On
+				category = Lights On
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleLightAction
+			{
+				actionGroup = Light
+			}
+			LightOnAction
+			{
+				actionGroup = None
+			}
+			LightOffAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = CollisionFX
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
+		name = ExtendedPartInfo
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Scrap Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Salvage Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 100
+		defaultScale = 100
+		defaultTransformScale = (1, 1, 1)
+		DryCost = 100
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = W485.SurfaceOmniLight_4293666204
+	partName = Part
+	pos = -2.374159,16.59208,2.63696
+	attPos = 5.960464E-08,2.384186E-06,3.576279E-07
+	attPos0 = -0.6227614,4.414187,1.078654
+	rot = 0.6830127,-0.1830127,0.1830127,0.6830127
+	attRot = 0,0,0,1
+	attRot0 = 0.6830127,-0.1830127,0.1830127,0.6830127
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 4
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 3
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = W485.SurfaceOmniLight_4293666248
+	sym = W485.SurfaceOmniLight_4293666160
+	sym = W485.SurfaceOmniLight_4293666116
+	sym = W485.SurfaceOmniLight_4293666072
+	sym = W485.SurfaceOmniLight_4293666028
+	srfN = srfAttach,Fel.LongTank1_4293667154
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleLight
+		isEnabled = True
+		isOn = False
+		lightR = 1
+		lightG = 1
+		lightB = 1
+		lightR_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightG_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightB_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		EVENTS
+		{
+			LightsOff
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights Off
+				guiName = Lights Off
+				category = Lights Off
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			LightsOn
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights On
+				guiName = Lights On
+				category = Lights On
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleLightAction
+			{
+				actionGroup = Light
+			}
+			LightOnAction
+			{
+				actionGroup = None
+			}
+			LightOffAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = CollisionFX
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
+		name = ExtendedPartInfo
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Scrap Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Salvage Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 100
+		defaultScale = 100
+		defaultTransformScale = (1, 1, 1)
+		DryCost = 100
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = W485.SurfaceOmniLight_4293666160
+	partName = Part
+	pos = -1.128636,16.59208,2.63696
+	attPos = 0,2.384186E-06,3.576279E-07
+	attPos0 = 0.6227616,4.414187,1.078654
+	rot = 0.6830127,0.1830127,-0.1830127,0.6830127
+	attRot = 0,0,0,1
+	attRot0 = 0.6830127,0.1830127,-0.1830127,0.6830127
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 4
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 3
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = W485.SurfaceOmniLight_4293666248
+	sym = W485.SurfaceOmniLight_4293666204
+	sym = W485.SurfaceOmniLight_4293666116
+	sym = W485.SurfaceOmniLight_4293666072
+	sym = W485.SurfaceOmniLight_4293666028
+	srfN = srfAttach,Fel.LongTank1_4293667154
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleLight
+		isEnabled = True
+		isOn = False
+		lightR = 1
+		lightG = 1
+		lightB = 1
+		lightR_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightG_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightB_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		EVENTS
+		{
+			LightsOff
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights Off
+				guiName = Lights Off
+				category = Lights Off
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			LightsOn
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights On
+				guiName = Lights On
+				category = Lights On
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleLightAction
+			{
+				actionGroup = Light
+			}
+			LightOnAction
+			{
+				actionGroup = None
+			}
+			LightOffAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = CollisionFX
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
+		name = ExtendedPartInfo
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Scrap Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Salvage Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 100
+		defaultScale = 100
+		defaultTransformScale = (1, 1, 1)
+		DryCost = 100
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = W485.SurfaceOmniLight_4293666116
+	partName = Part
+	pos = -0.5058758,16.59208,1.558304
+	attPos = 2.384186E-07,2.384186E-06,-2.980235E-08
+	attPos0 = 1.245523,4.414187,-1.788139E-07
+	rot = 0.4999999,0.5000001,-0.5000001,0.4999999
+	attRot = 0,0,0,1
+	attRot0 = 0.5,0.5000001,-0.5000001,0.5
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 4
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 3
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = W485.SurfaceOmniLight_4293666248
+	sym = W485.SurfaceOmniLight_4293666204
+	sym = W485.SurfaceOmniLight_4293666160
+	sym = W485.SurfaceOmniLight_4293666072
+	sym = W485.SurfaceOmniLight_4293666028
+	srfN = srfAttach,Fel.LongTank1_4293667154
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleLight
+		isEnabled = True
+		isOn = False
+		lightR = 1
+		lightG = 1
+		lightB = 1
+		lightR_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightG_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightB_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		EVENTS
+		{
+			LightsOff
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights Off
+				guiName = Lights Off
+				category = Lights Off
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			LightsOn
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights On
+				guiName = Lights On
+				category = Lights On
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleLightAction
+			{
+				actionGroup = Light
+			}
+			LightOnAction
+			{
+				actionGroup = None
+			}
+			LightOffAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = CollisionFX
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
+		name = ExtendedPartInfo
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Scrap Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Salvage Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 100
+		defaultScale = 100
+		defaultTransformScale = (1, 1, 1)
+		DryCost = 100
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = W485.SurfaceOmniLight_4293666072
+	partName = Part
+	pos = -1.128637,16.59208,0.4796491
+	attPos = -1.192093E-07,2.384186E-06,3.576279E-07
+	attPos0 = 0.6227614,4.414187,-1.078655
+	rot = 0.1830127,0.6830127,-0.6830127,0.1830127
+	attRot = 0,0,0,1
+	attRot0 = 0.1830127,0.6830127,-0.6830127,0.1830127
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 4
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 3
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = W485.SurfaceOmniLight_4293666248
+	sym = W485.SurfaceOmniLight_4293666204
+	sym = W485.SurfaceOmniLight_4293666160
+	sym = W485.SurfaceOmniLight_4293666116
+	sym = W485.SurfaceOmniLight_4293666028
+	srfN = srfAttach,Fel.LongTank1_4293667154
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleLight
+		isEnabled = True
+		isOn = False
+		lightR = 1
+		lightG = 1
+		lightB = 1
+		lightR_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightG_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightB_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		EVENTS
+		{
+			LightsOff
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights Off
+				guiName = Lights Off
+				category = Lights Off
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			LightsOn
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights On
+				guiName = Lights On
+				category = Lights On
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleLightAction
+			{
+				actionGroup = Light
+			}
+			LightOnAction
+			{
+				actionGroup = None
+			}
+			LightOffAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = CollisionFX
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
+		name = ExtendedPartInfo
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Scrap Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Salvage Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 100
+		defaultScale = 100
+		defaultTransformScale = (1, 1, 1)
+		DryCost = 100
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = W485.SurfaceOmniLight_4293666028
+	partName = Part
+	pos = -2.374159,16.59208,0.4796491
+	attPos = 5.960464E-08,2.384186E-06,3.576279E-07
+	attPos0 = -0.6227613,4.414187,-1.078655
+	rot = -0.1830127,0.6830127,-0.6830127,-0.1830127
+	attRot = 0,0,0,1
+	attRot0 = -0.1830127,0.6830127,-0.6830127,-0.1830127
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 4
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 3
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = W485.SurfaceOmniLight_4293666248
+	sym = W485.SurfaceOmniLight_4293666204
+	sym = W485.SurfaceOmniLight_4293666160
+	sym = W485.SurfaceOmniLight_4293666116
+	sym = W485.SurfaceOmniLight_4293666072
+	srfN = srfAttach,Fel.LongTank1_4293667154
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleLight
+		isEnabled = True
+		isOn = False
+		lightR = 1
+		lightG = 1
+		lightB = 1
+		lightR_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightG_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightB_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		EVENTS
+		{
+			LightsOff
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights Off
+				guiName = Lights Off
+				category = Lights Off
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			LightsOn
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights On
+				guiName = Lights On
+				category = Lights On
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleLightAction
+			{
+				actionGroup = Light
+			}
+			LightOnAction
+			{
+				actionGroup = None
+			}
+			LightOffAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = CollisionFX
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
+		name = ExtendedPartInfo
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Scrap Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Salvage Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 100
+		defaultScale = 100
+		defaultTransformScale = (1, 1, 1)
+		DryCost = 100
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = W485.SurfaceOmniLight_4293665984
+	partName = Part
+	pos = -2.814278,19.8665,2.171958
+	attPos = 0,0,0
+	attPos0 = -1.06288,7.688619,0.6136538
+	rot = 0.6123725,-0.3535534,0.3535534,0.6123725
+	attRot = 0,0,0,1
+	attRot0 = 0.6123725,-0.3535534,0.3535534,0.6123725
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 4
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 3
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = W485.SurfaceOmniLight_4293665940
+	sym = W485.SurfaceOmniLight_4293665896
+	sym = W485.SurfaceOmniLight_4293665852
+	sym = W485.SurfaceOmniLight_4293665808
+	sym = W485.SurfaceOmniLight_4293665764
+	srfN = srfAttach,Fel.LongTank1_4293667154
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleLight
+		isEnabled = True
+		isOn = False
+		lightR = 1
+		lightG = 1
+		lightB = 1
+		lightR_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightG_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightB_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		EVENTS
+		{
+			LightsOff
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights Off
+				guiName = Lights Off
+				category = Lights Off
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			LightsOn
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights On
+				guiName = Lights On
+				category = Lights On
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleLightAction
+			{
+				actionGroup = Light
+			}
+			LightOnAction
+			{
+				actionGroup = None
+			}
+			LightOffAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = CollisionFX
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
+		name = ExtendedPartInfo
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Scrap Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Salvage Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 100
+		defaultScale = 100
+		defaultTransformScale = (1, 1, 1)
+		DryCost = 100
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = W485.SurfaceOmniLight_4293665940
+	partName = Part
+	pos = -1.751399,19.8665,2.785612
+	attPos = 0,0,0
+	attPos0 = -2.8871E-08,7.688619,1.227308
+	rot = 0.7071068,2.187831E-08,-2.187831E-08,0.7071068
+	attRot = 0,0,0,1
+	attRot0 = 0.7071068,2.187831E-08,-2.187831E-08,0.7071068
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 4
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 3
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = W485.SurfaceOmniLight_4293665984
+	sym = W485.SurfaceOmniLight_4293665896
+	sym = W485.SurfaceOmniLight_4293665852
+	sym = W485.SurfaceOmniLight_4293665808
+	sym = W485.SurfaceOmniLight_4293665764
+	srfN = srfAttach,Fel.LongTank1_4293667154
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleLight
+		isEnabled = True
+		isOn = False
+		lightR = 1
+		lightG = 1
+		lightB = 1
+		lightR_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightG_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightB_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		EVENTS
+		{
+			LightsOff
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights Off
+				guiName = Lights Off
+				category = Lights Off
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			LightsOn
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights On
+				guiName = Lights On
+				category = Lights On
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleLightAction
+			{
+				actionGroup = Light
+			}
+			LightOnAction
+			{
+				actionGroup = None
+			}
+			LightOffAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = CollisionFX
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
+		name = ExtendedPartInfo
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Scrap Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Salvage Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 100
+		defaultScale = 100
+		defaultTransformScale = (1, 1, 1)
+		DryCost = 100
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = W485.SurfaceOmniLight_4293665896
+	partName = Part
+	pos = -0.6885197,19.8665,2.171958
+	attPos = 0,0,0
+	attPos0 = 1.06288,7.688619,0.6136537
+	rot = 0.6123725,0.3535534,-0.3535534,0.6123725
+	attRot = 0,0,0,1
+	attRot0 = 0.6123725,0.3535534,-0.3535534,0.6123725
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 4
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 3
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = W485.SurfaceOmniLight_4293665984
+	sym = W485.SurfaceOmniLight_4293665940
+	sym = W485.SurfaceOmniLight_4293665852
+	sym = W485.SurfaceOmniLight_4293665808
+	sym = W485.SurfaceOmniLight_4293665764
+	srfN = srfAttach,Fel.LongTank1_4293667154
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleLight
+		isEnabled = True
+		isOn = False
+		lightR = 1
+		lightG = 1
+		lightB = 1
+		lightR_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightG_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightB_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		EVENTS
+		{
+			LightsOff
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights Off
+				guiName = Lights Off
+				category = Lights Off
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			LightsOn
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights On
+				guiName = Lights On
+				category = Lights On
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleLightAction
+			{
+				actionGroup = Light
+			}
+			LightOnAction
+			{
+				actionGroup = None
+			}
+			LightOffAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = CollisionFX
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
+		name = ExtendedPartInfo
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Scrap Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Salvage Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 100
+		defaultScale = 100
+		defaultTransformScale = (1, 1, 1)
+		DryCost = 100
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = W485.SurfaceOmniLight_4293665852
+	partName = Part
+	pos = -0.6885197,19.8665,0.9446503
+	attPos = 0,0,0
+	attPos0 = 1.06288,7.688619,-0.6136539
+	rot = 0.3535534,0.6123725,-0.6123725,0.3535534
+	attRot = 0,0,0,1
+	attRot0 = 0.3535534,0.6123725,-0.6123725,0.3535534
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 4
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 3
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = W485.SurfaceOmniLight_4293665984
+	sym = W485.SurfaceOmniLight_4293665940
+	sym = W485.SurfaceOmniLight_4293665896
+	sym = W485.SurfaceOmniLight_4293665808
+	sym = W485.SurfaceOmniLight_4293665764
+	srfN = srfAttach,Fel.LongTank1_4293667154
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleLight
+		isEnabled = True
+		isOn = False
+		lightR = 1
+		lightG = 1
+		lightB = 1
+		lightR_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightG_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightB_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		EVENTS
+		{
+			LightsOff
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights Off
+				guiName = Lights Off
+				category = Lights Off
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			LightsOn
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights On
+				guiName = Lights On
+				category = Lights On
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleLightAction
+			{
+				actionGroup = Light
+			}
+			LightOnAction
+			{
+				actionGroup = None
+			}
+			LightOffAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = CollisionFX
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
+		name = ExtendedPartInfo
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Scrap Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Salvage Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 100
+		defaultScale = 100
+		defaultTransformScale = (1, 1, 1)
+		DryCost = 100
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = W485.SurfaceOmniLight_4293665808
+	partName = Part
+	pos = -1.751399,19.8665,0.3309958
+	attPos = 0,0,0
+	attPos0 = -4.377216E-08,7.688619,-1.227308
+	rot = -5.837855E-08,0.7071068,-0.7071068,-5.837855E-08
+	attRot = 0,0,0,1
+	attRot0 = -5.837855E-08,0.7071068,-0.7071068,-5.837855E-08
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 4
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 3
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = W485.SurfaceOmniLight_4293665984
+	sym = W485.SurfaceOmniLight_4293665940
+	sym = W485.SurfaceOmniLight_4293665896
+	sym = W485.SurfaceOmniLight_4293665852
+	sym = W485.SurfaceOmniLight_4293665764
+	srfN = srfAttach,Fel.LongTank1_4293667154
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleLight
+		isEnabled = True
+		isOn = False
+		lightR = 1
+		lightG = 1
+		lightB = 1
+		lightR_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightG_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightB_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		EVENTS
+		{
+			LightsOff
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights Off
+				guiName = Lights Off
+				category = Lights Off
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			LightsOn
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights On
+				guiName = Lights On
+				category = Lights On
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleLightAction
+			{
+				actionGroup = Light
+			}
+			LightOnAction
+			{
+				actionGroup = None
+			}
+			LightOffAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = CollisionFX
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
+		name = ExtendedPartInfo
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Scrap Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Salvage Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 100
+		defaultScale = 100
+		defaultTransformScale = (1, 1, 1)
+		DryCost = 100
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = W485.SurfaceOmniLight_4293665764
+	partName = Part
+	pos = -2.814278,19.8665,0.9446503
+	attPos = 0,0,0
+	attPos0 = -1.062879,7.688619,-0.613654
+	rot = -0.3535534,0.6123725,-0.6123725,-0.3535534
+	attRot = 0,0,0,1
+	attRot0 = -0.3535534,0.6123725,-0.6123725,-0.3535534
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 4
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 3
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = W485.SurfaceOmniLight_4293665984
+	sym = W485.SurfaceOmniLight_4293665940
+	sym = W485.SurfaceOmniLight_4293665896
+	sym = W485.SurfaceOmniLight_4293665852
+	sym = W485.SurfaceOmniLight_4293665808
+	srfN = srfAttach,Fel.LongTank1_4293667154
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleLight
+		isEnabled = True
+		isOn = False
+		lightR = 1
+		lightG = 1
+		lightB = 1
+		lightR_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightG_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightB_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		EVENTS
+		{
+			LightsOff
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights Off
+				guiName = Lights Off
+				category = Lights Off
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			LightsOn
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights On
+				guiName = Lights On
+				category = Lights On
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleLightAction
+			{
+				actionGroup = Light
+			}
+			LightOnAction
+			{
+				actionGroup = None
+			}
+			LightOffAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = CollisionFX
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
+		name = ExtendedPartInfo
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Scrap Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Salvage Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 100
+		defaultScale = 100
+		defaultTransformScale = (1, 1, 1)
+		DryCost = 100
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = W485.SurfaceOmniLight_4293665720
+	partName = Part
+	pos = -2.821751,8.657145,2.176272
+	attPos = 0,0,0
+	attPos0 = -1.070352,-3.52072,0.6179678
+	rot = 0.6123725,-0.3535534,0.3535534,0.6123725
+	attRot = 0,0,0,1
+	attRot0 = 0.6123725,-0.3535534,0.3535534,0.6123725
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 4
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 3
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = W485.SurfaceOmniLight_4293665676
+	sym = W485.SurfaceOmniLight_4293665632
+	sym = W485.SurfaceOmniLight_4293665588
+	sym = W485.SurfaceOmniLight_4293665544
+	sym = W485.SurfaceOmniLight_4293665500
+	srfN = srfAttach,Fel.LongTank1_4293667154
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleLight
+		isEnabled = True
+		isOn = False
+		lightR = 1
+		lightG = 1
+		lightB = 1
+		lightR_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightG_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightB_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		EVENTS
+		{
+			LightsOff
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights Off
+				guiName = Lights Off
+				category = Lights Off
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			LightsOn
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights On
+				guiName = Lights On
+				category = Lights On
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleLightAction
+			{
+				actionGroup = Light
+			}
+			LightOnAction
+			{
+				actionGroup = None
+			}
+			LightOffAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = CollisionFX
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
+		name = ExtendedPartInfo
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Scrap Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Salvage Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 100
+		defaultScale = 100
+		defaultTransformScale = (1, 1, 1)
+		DryCost = 100
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = W485.SurfaceOmniLight_4293665676
+	partName = Part
+	pos = -1.751399,8.657145,2.794241
+	attPos = 0,0,0
+	attPos0 = -1.769513E-08,-3.52072,1.235936
+	rot = 0.7071068,2.187831E-08,-2.187831E-08,0.7071068
+	attRot = 0,0,0,1
+	attRot0 = 0.7071068,2.187831E-08,-2.187831E-08,0.7071068
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 4
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 3
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = W485.SurfaceOmniLight_4293665720
+	sym = W485.SurfaceOmniLight_4293665632
+	sym = W485.SurfaceOmniLight_4293665588
+	sym = W485.SurfaceOmniLight_4293665544
+	sym = W485.SurfaceOmniLight_4293665500
+	srfN = srfAttach,Fel.LongTank1_4293667154
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleLight
+		isEnabled = True
+		isOn = False
+		lightR = 1
+		lightG = 1
+		lightB = 1
+		lightR_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightG_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightB_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		EVENTS
+		{
+			LightsOff
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights Off
+				guiName = Lights Off
+				category = Lights Off
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			LightsOn
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights On
+				guiName = Lights On
+				category = Lights On
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleLightAction
+			{
+				actionGroup = Light
+			}
+			LightOnAction
+			{
+				actionGroup = None
+			}
+			LightOffAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = CollisionFX
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
+		name = ExtendedPartInfo
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Scrap Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Salvage Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 100
+		defaultScale = 100
+		defaultTransformScale = (1, 1, 1)
+		DryCost = 100
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = W485.SurfaceOmniLight_4293665632
+	partName = Part
+	pos = -0.6810467,8.657145,2.176272
+	attPos = 0,0,0
+	attPos0 = 1.070352,-3.52072,0.6179678
+	rot = 0.6123725,0.3535534,-0.3535534,0.6123725
+	attRot = 0,0,0,1
+	attRot0 = 0.6123725,0.3535534,-0.3535534,0.6123725
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 4
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 3
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = W485.SurfaceOmniLight_4293665720
+	sym = W485.SurfaceOmniLight_4293665676
+	sym = W485.SurfaceOmniLight_4293665588
+	sym = W485.SurfaceOmniLight_4293665544
+	sym = W485.SurfaceOmniLight_4293665500
+	srfN = srfAttach,Fel.LongTank1_4293667154
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleLight
+		isEnabled = True
+		isOn = False
+		lightR = 1
+		lightG = 1
+		lightB = 1
+		lightR_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightG_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightB_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		EVENTS
+		{
+			LightsOff
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights Off
+				guiName = Lights Off
+				category = Lights Off
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			LightsOn
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights On
+				guiName = Lights On
+				category = Lights On
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleLightAction
+			{
+				actionGroup = Light
+			}
+			LightOnAction
+			{
+				actionGroup = None
+			}
+			LightOffAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = CollisionFX
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
+		name = ExtendedPartInfo
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Scrap Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Salvage Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 100
+		defaultScale = 100
+		defaultTransformScale = (1, 1, 1)
+		DryCost = 100
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = W485.SurfaceOmniLight_4293665588
+	partName = Part
+	pos = -0.6810476,8.657145,0.9403363
+	attPos = 0,0,0
+	attPos0 = 1.070352,-3.52072,-0.617968
+	rot = 0.3535534,0.6123725,-0.6123725,0.3535534
+	attRot = 0,0,0,1
+	attRot0 = 0.3535534,0.6123725,-0.6123725,0.3535534
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 4
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 3
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = W485.SurfaceOmniLight_4293665720
+	sym = W485.SurfaceOmniLight_4293665676
+	sym = W485.SurfaceOmniLight_4293665632
+	sym = W485.SurfaceOmniLight_4293665544
+	sym = W485.SurfaceOmniLight_4293665500
+	srfN = srfAttach,Fel.LongTank1_4293667154
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleLight
+		isEnabled = True
+		isOn = False
+		lightR = 1
+		lightG = 1
+		lightB = 1
+		lightR_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightG_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightB_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		EVENTS
+		{
+			LightsOff
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights Off
+				guiName = Lights Off
+				category = Lights Off
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			LightsOn
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights On
+				guiName = Lights On
+				category = Lights On
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleLightAction
+			{
+				actionGroup = Light
+			}
+			LightOnAction
+			{
+				actionGroup = None
+			}
+			LightOffAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = CollisionFX
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
+		name = ExtendedPartInfo
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Scrap Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Salvage Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 100
+		defaultScale = 100
+		defaultTransformScale = (1, 1, 1)
+		DryCost = 100
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = W485.SurfaceOmniLight_4293665544
+	partName = Part
+	pos = -1.751399,8.657145,0.3223679
+	attPos = 0,0,0
+	attPos0 = -5.587935E-08,-3.52072,-1.235936
+	rot = -5.837855E-08,0.7071068,-0.7071068,-5.837855E-08
+	attRot = 0,0,0,1
+	attRot0 = -5.837855E-08,0.7071068,-0.7071068,-5.837855E-08
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 4
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 3
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = W485.SurfaceOmniLight_4293665720
+	sym = W485.SurfaceOmniLight_4293665676
+	sym = W485.SurfaceOmniLight_4293665632
+	sym = W485.SurfaceOmniLight_4293665588
+	sym = W485.SurfaceOmniLight_4293665500
+	srfN = srfAttach,Fel.LongTank1_4293667154
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleLight
+		isEnabled = True
+		isOn = False
+		lightR = 1
+		lightG = 1
+		lightB = 1
+		lightR_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightG_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightB_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		EVENTS
+		{
+			LightsOff
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights Off
+				guiName = Lights Off
+				category = Lights Off
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			LightsOn
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights On
+				guiName = Lights On
+				category = Lights On
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleLightAction
+			{
+				actionGroup = Light
+			}
+			LightOnAction
+			{
+				actionGroup = None
+			}
+			LightOffAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = CollisionFX
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
+		name = ExtendedPartInfo
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Scrap Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Salvage Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 100
+		defaultScale = 100
+		defaultTransformScale = (1, 1, 1)
+		DryCost = 100
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = W485.SurfaceOmniLight_4293665500
+	partName = Part
+	pos = -2.821751,8.657145,0.9403363
+	attPos = 0,0,0
+	attPos0 = -1.070352,-3.52072,-0.6179681
+	rot = -0.3535534,0.6123725,-0.6123725,-0.3535534
+	attRot = 0,0,0,1
+	attRot0 = -0.3535534,0.6123725,-0.6123725,-0.3535534
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 4
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 3
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = W485.SurfaceOmniLight_4293665720
+	sym = W485.SurfaceOmniLight_4293665676
+	sym = W485.SurfaceOmniLight_4293665632
+	sym = W485.SurfaceOmniLight_4293665588
+	sym = W485.SurfaceOmniLight_4293665544
+	srfN = srfAttach,Fel.LongTank1_4293667154
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleLight
+		isEnabled = True
+		isOn = False
+		lightR = 1
+		lightG = 1
+		lightB = 1
+		lightR_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightG_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightB_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		EVENTS
+		{
+			LightsOff
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights Off
+				guiName = Lights Off
+				category = Lights Off
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			LightsOn
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights On
+				guiName = Lights On
+				category = Lights On
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleLightAction
+			{
+				actionGroup = Light
+			}
+			LightOnAction
+			{
+				actionGroup = None
+			}
+			LightOffAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = CollisionFX
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
+		name = ExtendedPartInfo
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Scrap Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Salvage Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 100
+		defaultScale = 100
+		defaultTransformScale = (1, 1, 1)
+		DryCost = 100
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = launchClamp1_4293665456
+	partName = Part
+	pos = -1.751399,5.136971,3.594911
+	attPos = 0,0,0
+	attPos0 = 0,-7.040913,2.036607
+	rot = 0,1,-1.11537E-07,0
+	attRot = 0,0,0,1
+	attRot0 = 0,1,-1.11537E-07,0
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 4
+	dstg = 4
+	sidx = 3
+	sqor = 4
+	sepI = 4
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = launchClamp1_4293665330
+	srfN = srfAttach,Fel.LongTank1_4293667154
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = LaunchClamp
+		isEnabled = True
+		scaleFactor = 2.297531
+		height = 5.797122
+		towerRot = 0,-1,1.11537E-07,0
+		EVENTS
+		{
+			Release
+			{
+				active = False
+				guiActive = True
+				guiIcon = Release Clamp
+				guiName = Release Clamp
+				category = Release Clamp
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ReleaseClamp
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		EVENTS
+		{
+			RunTestEvent
+			{
+				active = False
+				guiActive = True
+				guiIcon = Run Test
+				guiName = Run Test
+				category = Run Test
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = CollisionFX
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
+		name = ExtendedPartInfo
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Scrap Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Salvage Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 100
+		defaultScale = 100
+		defaultTransformScale = (1, 1, 1)
+		DryCost = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGenerator
+		isEnabled = True
+		generatorIsActive = False
+		throttle = 0
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Generator
+				guiName = Pumps & Power On
+				category = Activate Generator
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = True
+				guiActive = True
+				guiIcon = Shutdown Generator
+				guiName = Pumps & Power Off
+				category = Shutdown Generator
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleRTAntenna
+		isEnabled = True
+		IsRTAntenna = True
+		IsRTActive = True
+		IsRTPowered = True
+		IsRTBroken = False
+		RTDishCosAngle = 1
+		RTOmniRange = 75000
+		RTDishRange = -1
+		RTAntennaTarget = 00000000-0000-0000-0000-000000000000
+		EVENTS
+		{
+			EventToggle
+			{
+				active = True
+				guiActive = False
+				guiIcon = 
+				guiName = Toggle
+				category = 
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			EventTarget
+			{
+				active = False
+				guiActive = False
+				guiIcon = Target
+				guiName = Unknown Target
+				category = Target
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			EventEditorOpen
+			{
+				active = True
+				guiActive = False
+				guiIcon = Start deployed
+				guiName = Start deployed
+				category = Start deployed
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			EventEditorClose
+			{
+				active = True
+				guiActive = False
+				guiActiveEditor = True
+				guiIcon = Start retracted
+				guiName = Start retracted
+				category = Start retracted
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			EventOpen
+			{
+				active = False
+				guiActive = False
+				guiIcon = 
+				guiName = Activate
+				category = 
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			EventClose
+			{
+				active = True
+				guiActive = True
+				guiIcon = 
+				guiName = Deactivate
+				category = 
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			OverrideTarget
+			{
+				active = True
+				guiActive = False
+				guiIcon = [EVA] Set Target
+				guiName = [EVA] Set Target
+				category = [EVA] Set Target
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+			OverrideOpen
+			{
+				active = True
+				guiActive = False
+				guiIcon = [EVA] Force Open
+				guiName = [EVA] Force Open
+				category = [EVA] Force Open
+				guiActiveUnfocused = False
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+			OverrideClose
+			{
+				active = True
+				guiActive = False
+				guiIcon = [EVA] Force Close
+				guiName = [EVA] Force Close
+				category = [EVA] Force Close
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ActionToggle
+			{
+				actionGroup = None
+			}
+			ActionOpen
+			{
+				actionGroup = None
+			}
+			ActionClose
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleSPUPassive
+		isEnabled = True
+		IsRTPowered = False
+		IsRTSignalProcessor = True
+		IsRTCommandStation = False
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = launchClamp1_4293665330
+	partName = Part
+	pos = -1.751399,5.136971,-0.4783037
+	attPos = 0,0,0
+	attPos0 = -2.384186E-07,-7.040913,-2.036607
+	rot = -1.11537E-07,-4.371139E-08,4.875437E-15,-1
+	attRot = 0,0,0,1
+	attRot0 = -1.11537E-07,-4.371139E-08,4.875437E-15,-1
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 4
+	dstg = 4
+	sidx = 4
+	sqor = 4
+	sepI = 4
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = launchClamp1_4293665456
+	srfN = srfAttach,Fel.LongTank1_4293667154
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = LaunchClamp
+		isEnabled = True
+		scaleFactor = 2.297531
+		height = 5.797122
+		towerRot = 1.11537E-07,4.371139E-08,-4.875437E-15,-1
+		EVENTS
+		{
+			Release
+			{
+				active = False
+				guiActive = True
+				guiIcon = Release Clamp
+				guiName = Release Clamp
+				category = Release Clamp
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ReleaseClamp
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		EVENTS
+		{
+			RunTestEvent
+			{
+				active = False
+				guiActive = True
+				guiIcon = Run Test
+				guiName = Run Test
+				category = Run Test
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = CollisionFX
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
+		name = ExtendedPartInfo
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Scrap Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Salvage Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 100
+		defaultScale = 100
+		defaultTransformScale = (1, 1, 1)
+		DryCost = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGenerator
+		isEnabled = True
+		generatorIsActive = False
+		throttle = 0
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Generator
+				guiName = Pumps & Power On
+				category = Activate Generator
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = True
+				guiActive = True
+				guiIcon = Shutdown Generator
+				guiName = Pumps & Power Off
+				category = Shutdown Generator
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleRTAntenna
+		isEnabled = True
+		IsRTAntenna = True
+		IsRTActive = True
+		IsRTPowered = True
+		IsRTBroken = False
+		RTDishCosAngle = 1
+		RTOmniRange = 75000
+		RTDishRange = -1
+		RTAntennaTarget = 00000000-0000-0000-0000-000000000000
+		EVENTS
+		{
+			EventToggle
+			{
+				active = True
+				guiActive = False
+				guiIcon = 
+				guiName = Toggle
+				category = 
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			EventTarget
+			{
+				active = False
+				guiActive = False
+				guiIcon = Target
+				guiName = Unknown Target
+				category = Target
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			EventEditorOpen
+			{
+				active = True
+				guiActive = False
+				guiIcon = Start deployed
+				guiName = Start deployed
+				category = Start deployed
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			EventEditorClose
+			{
+				active = True
+				guiActive = False
+				guiActiveEditor = True
+				guiIcon = Start retracted
+				guiName = Start retracted
+				category = Start retracted
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			EventOpen
+			{
+				active = False
+				guiActive = False
+				guiIcon = 
+				guiName = Activate
+				category = 
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			EventClose
+			{
+				active = True
+				guiActive = True
+				guiIcon = 
+				guiName = Deactivate
+				category = 
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			OverrideTarget
+			{
+				active = True
+				guiActive = False
+				guiIcon = [EVA] Set Target
+				guiName = [EVA] Set Target
+				category = [EVA] Set Target
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+			OverrideOpen
+			{
+				active = True
+				guiActive = False
+				guiIcon = [EVA] Force Open
+				guiName = [EVA] Force Open
+				category = [EVA] Force Open
+				guiActiveUnfocused = False
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+			OverrideClose
+			{
+				active = True
+				guiActive = False
+				guiIcon = [EVA] Force Close
+				guiName = [EVA] Force Close
+				category = [EVA] Force Close
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ActionToggle
+			{
+				actionGroup = None
+			}
+			ActionOpen
+			{
+				actionGroup = None
+			}
+			ActionClose
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleSPUPassive
+		isEnabled = True
+		IsRTPowered = False
+		IsRTSignalProcessor = True
+		IsRTCommandStation = False
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = launchClamp1_4293665204
+	partName = Part
+	pos = -0.7341597,12.09108,3.320212
+	attPos = 0,0,0
+	attPos0 = 1.017239,-0.08679581,1.761909
+	rot = -4.191966E-08,0.9659259,-1.564463E-07,-0.258819
+	attRot = 0,0,0,1
+	attRot0 = -4.191966E-08,0.9659258,-1.564463E-07,-0.258819
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 4
+	dstg = 4
+	sidx = 5
+	sqor = 4
+	sepI = 4
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = launchClamp1_4293665078
+	srfN = srfAttach,Fel.LongTank1_4293667154
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = LaunchClamp
+		isEnabled = True
+		scaleFactor = 5.0536
+		height = 12.75123
+		towerRot = 4.191966E-08,-0.9659259,1.564463E-07,-0.258819
+		EVENTS
+		{
+			Release
+			{
+				active = False
+				guiActive = True
+				guiIcon = Release Clamp
+				guiName = Release Clamp
+				category = Release Clamp
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ReleaseClamp
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		EVENTS
+		{
+			RunTestEvent
+			{
+				active = False
+				guiActive = True
+				guiIcon = Run Test
+				guiName = Run Test
+				category = Run Test
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = CollisionFX
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
+		name = ExtendedPartInfo
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Scrap Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Salvage Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 100
+		defaultScale = 100
+		defaultTransformScale = (1, 1, 1)
+		DryCost = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGenerator
+		isEnabled = True
+		generatorIsActive = False
+		throttle = 0
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Generator
+				guiName = Pumps & Power On
+				category = Activate Generator
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = True
+				guiActive = True
+				guiIcon = Shutdown Generator
+				guiName = Pumps & Power Off
+				category = Shutdown Generator
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleRTAntenna
+		isEnabled = True
+		IsRTAntenna = True
+		IsRTActive = True
+		IsRTPowered = True
+		IsRTBroken = False
+		RTDishCosAngle = 1
+		RTOmniRange = 75000
+		RTDishRange = -1
+		RTAntennaTarget = 00000000-0000-0000-0000-000000000000
+		EVENTS
+		{
+			EventToggle
+			{
+				active = True
+				guiActive = False
+				guiIcon = 
+				guiName = Toggle
+				category = 
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			EventTarget
+			{
+				active = False
+				guiActive = False
+				guiIcon = Target
+				guiName = Unknown Target
+				category = Target
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			EventEditorOpen
+			{
+				active = True
+				guiActive = False
+				guiIcon = Start deployed
+				guiName = Start deployed
+				category = Start deployed
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			EventEditorClose
+			{
+				active = True
+				guiActive = False
+				guiActiveEditor = True
+				guiIcon = Start retracted
+				guiName = Start retracted
+				category = Start retracted
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			EventOpen
+			{
+				active = False
+				guiActive = False
+				guiIcon = 
+				guiName = Activate
+				category = 
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			EventClose
+			{
+				active = True
+				guiActive = True
+				guiIcon = 
+				guiName = Deactivate
+				category = 
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			OverrideTarget
+			{
+				active = True
+				guiActive = False
+				guiIcon = [EVA] Set Target
+				guiName = [EVA] Set Target
+				category = [EVA] Set Target
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+			OverrideOpen
+			{
+				active = True
+				guiActive = False
+				guiIcon = [EVA] Force Open
+				guiName = [EVA] Force Open
+				category = [EVA] Force Open
+				guiActiveUnfocused = False
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+			OverrideClose
+			{
+				active = True
+				guiActive = False
+				guiIcon = [EVA] Force Close
+				guiName = [EVA] Force Close
+				category = [EVA] Force Close
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ActionToggle
+			{
+				actionGroup = None
+			}
+			ActionOpen
+			{
+				actionGroup = None
+			}
+			ActionClose
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleSPUPassive
+		isEnabled = True
+		IsRTPowered = False
+		IsRTSignalProcessor = True
+		IsRTCommandStation = False
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = launchClamp1_4293665078
+	partName = Part
+	pos = -2.768637,12.09108,-0.2036045
+	attPos = 0,0,0
+	attPos0 = -1.017239,-0.08679581,-1.761909
+	rot = -1.564463E-07,-0.2588191,4.191967E-08,-0.9659258
+	attRot = 0,0,0,1
+	attRot0 = -1.564463E-07,-0.2588191,4.191967E-08,-0.9659258
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 4
+	dstg = 4
+	sidx = 6
+	sqor = 4
+	sepI = 4
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = launchClamp1_4293665204
+	srfN = srfAttach,Fel.LongTank1_4293667154
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = LaunchClamp
+		isEnabled = True
+		scaleFactor = 5.0536
+		height = 12.75123
+		towerRot = 1.564463E-07,0.2588191,-4.191967E-08,-0.9659258
+		EVENTS
+		{
+			Release
+			{
+				active = False
+				guiActive = True
+				guiIcon = Release Clamp
+				guiName = Release Clamp
+				category = Release Clamp
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ReleaseClamp
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		EVENTS
+		{
+			RunTestEvent
+			{
+				active = False
+				guiActive = True
+				guiIcon = Run Test
+				guiName = Run Test
+				category = Run Test
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = CollisionFX
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
+		name = ExtendedPartInfo
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Scrap Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Salvage Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 100
+		defaultScale = 100
+		defaultTransformScale = (1, 1, 1)
+		DryCost = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGenerator
+		isEnabled = True
+		generatorIsActive = False
+		throttle = 0
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Generator
+				guiName = Pumps & Power On
+				category = Activate Generator
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = True
+				guiActive = True
+				guiIcon = Shutdown Generator
+				guiName = Pumps & Power Off
+				category = Shutdown Generator
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleRTAntenna
+		isEnabled = True
+		IsRTAntenna = True
+		IsRTActive = True
+		IsRTPowered = True
+		IsRTBroken = False
+		RTDishCosAngle = 1
+		RTOmniRange = 75000
+		RTDishRange = -1
+		RTAntennaTarget = 00000000-0000-0000-0000-000000000000
+		EVENTS
+		{
+			EventToggle
+			{
+				active = True
+				guiActive = False
+				guiIcon = 
+				guiName = Toggle
+				category = 
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			EventTarget
+			{
+				active = False
+				guiActive = False
+				guiIcon = Target
+				guiName = Unknown Target
+				category = Target
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			EventEditorOpen
+			{
+				active = True
+				guiActive = False
+				guiIcon = Start deployed
+				guiName = Start deployed
+				category = Start deployed
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			EventEditorClose
+			{
+				active = True
+				guiActive = False
+				guiActiveEditor = True
+				guiIcon = Start retracted
+				guiName = Start retracted
+				category = Start retracted
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			EventOpen
+			{
+				active = False
+				guiActive = False
+				guiIcon = 
+				guiName = Activate
+				category = 
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			EventClose
+			{
+				active = True
+				guiActive = True
+				guiIcon = 
+				guiName = Deactivate
+				category = 
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			OverrideTarget
+			{
+				active = True
+				guiActive = False
+				guiIcon = [EVA] Set Target
+				guiName = [EVA] Set Target
+				category = [EVA] Set Target
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+			OverrideOpen
+			{
+				active = True
+				guiActive = False
+				guiIcon = [EVA] Force Open
+				guiName = [EVA] Force Open
+				category = [EVA] Force Open
+				guiActiveUnfocused = False
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+			OverrideClose
+			{
+				active = True
+				guiActive = False
+				guiIcon = [EVA] Force Close
+				guiName = [EVA] Force Close
+				category = [EVA] Force Close
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ActionToggle
+			{
+				actionGroup = None
+			}
+			ActionOpen
+			{
+				actionGroup = None
+			}
+			ActionClose
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleSPUPassive
+		isEnabled = True
+		IsRTPowered = False
+		IsRTSignalProcessor = True
+		IsRTCommandStation = False
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = sepMotor1_4293664952
+	partName = Part
+	pos = -2.76691,3.940905,2.14461
+	attPos = 0.06689858,0.01362038,-0.03862387
+	attPos0 = -1.08241,-8.250605,0.6249297
+	rot = -0.4980973,-0.07547905,0.86273,-0.04357785
+	attRot = 0,-0.08715574,0.9961946,0
+	attRot0 = -0.4980973,-0.07547905,0.86273,-0.04357785
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 3
+	dstg = 4
+	sidx = 2
+	sqor = 3
+	sepI = 3
+	attm = 1
+	modCost = 10.74306
+	modMass = -0.02225814
+	modSize = (0.0, 0.0, 0.0)
+	sym = sepMotor1_4293664874
+	sym = sepMotor1_4293664796
+	sym = sepMotor1_4293664718
+	sym = sepMotor1_4293664640
+	sym = sepMotor1_4293664562
+	srfN = srfAttach,Fel.LongTank1_4293667154
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleEnginesRF
+		isEnabled = True
+		ignitions = -1
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			vActivate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			vShutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Activate
+			{
+				active = False
+				guiActive = False
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = False
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			vOnAction
+			{
+				actionGroup = None
+			}
+			vShutdownAction
+			{
+				actionGroup = None
+			}
+			vActivateAction
+			{
+				actionGroup = None
+			}
+			OnAction
+			{
+				actionGroup = None
+				active = False
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+				active = False
+			}
+			ActivateAction
+			{
+				actionGroup = None
+				active = False
+			}
+		}
+		Ullage
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		EVENTS
+		{
+			RunTestEvent
+			{
+				active = False
+				guiActive = True
+				guiIcon = Run Test
+				guiName = Run Test
+				category = Run Test
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = CollisionFX
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
+		name = ExtendedPartInfo
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Scrap Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Salvage Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = tjs_EngineLight
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleFuelTanks
+		isEnabled = True
+		type = Solid
+		utilization = 86
+		mass = 0.001794644
+		volume = 5.7805
+		type_UIEditor
+		{
+			controlEnabled = True
+		}
+		utilization_UIEditor
+		{
+			controlEnabled = True
+			minValue = 1
+			maxValue = 100
+			incrementSlide = 1
+		}
+		EVENTS
+		{
+			HideUI
+			{
+				active = False
+				guiActive = False
+				guiActiveEditor = True
+				guiIcon = Hide UI
+				guiName = Hide UI
+				category = Hide UI
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ShowUI
+			{
+				active = True
+				guiActive = False
+				guiActiveEditor = True
+				guiIcon = Show UI
+				guiName = Show UI
+				category = Show UI
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Empty
+			{
+				active = True
+				guiActive = False
+				guiActiveEditor = True
+				guiIcon = Remove All Tanks
+				guiName = Remove All Tanks
+				category = Remove All Tanks
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+		TANK
+		{
+			name = HTPB
+			note = 
+			utilization = 1
+			mass = 0
+			cost = 0
+			loss_rate = 0
+			temperature = 300
+			fillable = True
+			techRequired = 
+			amount = 5.7805
+			maxAmount = 5.7805
+		}
+	}
+	MODULE
+	{
+		name = ModuleEngineConfigs
+		isEnabled = True
+		configuration = Linear Thrust
+		techLevel = -1
+		thrustRating = maxThrust
+		modded = False
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = HTPB
+		amount = 5.7805
+		maxAmount = 5.7805
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = sepMotor1_4293664874
+	partName = Part
+	pos = -1.751399,3.940905,2.730917
+	attPos = 0,0.01362038,-0.07724762
+	attPos0 = 0,-8.250605,1.249859
+	rot = 4.943792E-08,-0.0871557,0.9961947,5.358631E-09
+	attRot = 0,-0.08715574,0.9961946,0
+	attRot0 = 4.943792E-08,-0.0871557,0.9961947,5.358631E-09
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 3
+	dstg = 4
+	sidx = 3
+	sqor = 3
+	sepI = 3
+	attm = 1
+	modCost = 10.74306
+	modMass = -0.02225814
+	modSize = (0.0, 0.0, 0.0)
+	sym = sepMotor1_4293664952
+	sym = sepMotor1_4293664796
+	sym = sepMotor1_4293664718
+	sym = sepMotor1_4293664640
+	sym = sepMotor1_4293664562
+	srfN = srfAttach,Fel.LongTank1_4293667154
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleEnginesRF
+		isEnabled = True
+		ignitions = -1
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			vActivate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			vShutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Activate
+			{
+				active = False
+				guiActive = False
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = False
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			vOnAction
+			{
+				actionGroup = None
+			}
+			vShutdownAction
+			{
+				actionGroup = None
+			}
+			vActivateAction
+			{
+				actionGroup = None
+			}
+			OnAction
+			{
+				actionGroup = None
+				active = False
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+				active = False
+			}
+			ActivateAction
+			{
+				actionGroup = None
+				active = False
+			}
+		}
+		Ullage
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		EVENTS
+		{
+			RunTestEvent
+			{
+				active = False
+				guiActive = True
+				guiIcon = Run Test
+				guiName = Run Test
+				category = Run Test
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = CollisionFX
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
+		name = ExtendedPartInfo
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Scrap Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Salvage Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = tjs_EngineLight
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleFuelTanks
+		isEnabled = True
+		type = Solid
+		utilization = 86
+		mass = 0.001794644
+		volume = 5.7805
+		type_UIEditor
+		{
+			controlEnabled = True
+		}
+		utilization_UIEditor
+		{
+			controlEnabled = True
+			minValue = 1
+			maxValue = 100
+			incrementSlide = 1
+		}
+		EVENTS
+		{
+			HideUI
+			{
+				active = False
+				guiActive = False
+				guiActiveEditor = True
+				guiIcon = Hide UI
+				guiName = Hide UI
+				category = Hide UI
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ShowUI
+			{
+				active = True
+				guiActive = False
+				guiActiveEditor = True
+				guiIcon = Show UI
+				guiName = Show UI
+				category = Show UI
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Empty
+			{
+				active = True
+				guiActive = False
+				guiActiveEditor = True
+				guiIcon = Remove All Tanks
+				guiName = Remove All Tanks
+				category = Remove All Tanks
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+		TANK
+		{
+			name = HTPB
+			note = 
+			utilization = 1
+			mass = 0
+			cost = 0
+			loss_rate = 0
+			temperature = 300
+			fillable = True
+			techRequired = 
+			amount = 5.7805
+			maxAmount = 5.7805
+		}
+	}
+	MODULE
+	{
+		name = ModuleEngineConfigs
+		isEnabled = True
+		configuration = Linear Thrust
+		techLevel = -1
+		thrustRating = maxThrust
+		modded = False
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = HTPB
+		amount = 5.7805
+		maxAmount = 5.7805
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = sepMotor1_4293664796
+	partName = Part
+	pos = -0.7358868,3.940905,2.14461
+	attPos = -0.06689858,0.01362038,-0.03862399
+	attPos0 = 1.08241,-8.250605,0.6249297
+	rot = 0.4980974,-0.07547905,0.8627299,0.04357786
+	attRot = 0,-0.08715574,0.9961946,0
+	attRot0 = 0.4980974,-0.07547905,0.8627299,0.04357786
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 3
+	dstg = 4
+	sidx = 4
+	sqor = 3
+	sepI = 3
+	attm = 1
+	modCost = 10.74306
+	modMass = -0.02225814
+	modSize = (0.0, 0.0, 0.0)
+	sym = sepMotor1_4293664952
+	sym = sepMotor1_4293664874
+	sym = sepMotor1_4293664718
+	sym = sepMotor1_4293664640
+	sym = sepMotor1_4293664562
+	srfN = srfAttach,Fel.LongTank1_4293667154
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleEnginesRF
+		isEnabled = True
+		ignitions = -1
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			vActivate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			vShutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Activate
+			{
+				active = False
+				guiActive = False
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = False
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			vOnAction
+			{
+				actionGroup = None
+			}
+			vShutdownAction
+			{
+				actionGroup = None
+			}
+			vActivateAction
+			{
+				actionGroup = None
+			}
+			OnAction
+			{
+				actionGroup = None
+				active = False
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+				active = False
+			}
+			ActivateAction
+			{
+				actionGroup = None
+				active = False
+			}
+		}
+		Ullage
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		EVENTS
+		{
+			RunTestEvent
+			{
+				active = False
+				guiActive = True
+				guiIcon = Run Test
+				guiName = Run Test
+				category = Run Test
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = CollisionFX
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
+		name = ExtendedPartInfo
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Scrap Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Salvage Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = tjs_EngineLight
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleFuelTanks
+		isEnabled = True
+		type = Solid
+		utilization = 86
+		mass = 0.001794644
+		volume = 5.7805
+		type_UIEditor
+		{
+			controlEnabled = True
+		}
+		utilization_UIEditor
+		{
+			controlEnabled = True
+			minValue = 1
+			maxValue = 100
+			incrementSlide = 1
+		}
+		EVENTS
+		{
+			HideUI
+			{
+				active = False
+				guiActive = False
+				guiActiveEditor = True
+				guiIcon = Hide UI
+				guiName = Hide UI
+				category = Hide UI
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ShowUI
+			{
+				active = True
+				guiActive = False
+				guiActiveEditor = True
+				guiIcon = Show UI
+				guiName = Show UI
+				category = Show UI
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Empty
+			{
+				active = True
+				guiActive = False
+				guiActiveEditor = True
+				guiIcon = Remove All Tanks
+				guiName = Remove All Tanks
+				category = Remove All Tanks
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+		TANK
+		{
+			name = HTPB
+			note = 
+			utilization = 1
+			mass = 0
+			cost = 0
+			loss_rate = 0
+			temperature = 300
+			fillable = True
+			techRequired = 
+			amount = 5.7805
+			maxAmount = 5.7805
+		}
+	}
+	MODULE
+	{
+		name = ModuleEngineConfigs
+		isEnabled = True
+		configuration = Linear Thrust
+		techLevel = -1
+		thrustRating = maxThrust
+		modded = False
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = HTPB
+		amount = 5.7805
+		maxAmount = 5.7805
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = sepMotor1_4293664718
+	partName = Part
+	pos = -0.7358871,3.940905,0.9719983
+	attPos = -0.06689858,0.01362038,0.03862393
+	attPos0 = 1.08241,-8.250605,-0.6249298
+	rot = 0.86273,-0.04357784,0.4980973,0.07547905
+	attRot = 0,-0.08715574,0.9961946,0
+	attRot0 = 0.86273,-0.04357784,0.4980973,0.07547905
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 3
+	dstg = 4
+	sidx = 5
+	sqor = 3
+	sepI = 3
+	attm = 1
+	modCost = 10.74306
+	modMass = -0.02225814
+	modSize = (0.0, 0.0, 0.0)
+	sym = sepMotor1_4293664952
+	sym = sepMotor1_4293664874
+	sym = sepMotor1_4293664796
+	sym = sepMotor1_4293664640
+	sym = sepMotor1_4293664562
+	srfN = srfAttach,Fel.LongTank1_4293667154
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleEnginesRF
+		isEnabled = True
+		ignitions = -1
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			vActivate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			vShutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Activate
+			{
+				active = False
+				guiActive = False
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = False
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			vOnAction
+			{
+				actionGroup = None
+			}
+			vShutdownAction
+			{
+				actionGroup = None
+			}
+			vActivateAction
+			{
+				actionGroup = None
+			}
+			OnAction
+			{
+				actionGroup = None
+				active = False
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+				active = False
+			}
+			ActivateAction
+			{
+				actionGroup = None
+				active = False
+			}
+		}
+		Ullage
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		EVENTS
+		{
+			RunTestEvent
+			{
+				active = False
+				guiActive = True
+				guiIcon = Run Test
+				guiName = Run Test
+				category = Run Test
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = CollisionFX
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
+		name = ExtendedPartInfo
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Scrap Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Salvage Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = tjs_EngineLight
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleFuelTanks
+		isEnabled = True
+		type = Solid
+		utilization = 86
+		mass = 0.001794644
+		volume = 5.7805
+		type_UIEditor
+		{
+			controlEnabled = True
+		}
+		utilization_UIEditor
+		{
+			controlEnabled = True
+			minValue = 1
+			maxValue = 100
+			incrementSlide = 1
+		}
+		EVENTS
+		{
+			HideUI
+			{
+				active = False
+				guiActive = False
+				guiActiveEditor = True
+				guiIcon = Hide UI
+				guiName = Hide UI
+				category = Hide UI
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ShowUI
+			{
+				active = True
+				guiActive = False
+				guiActiveEditor = True
+				guiIcon = Show UI
+				guiName = Show UI
+				category = Show UI
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Empty
+			{
+				active = True
+				guiActive = False
+				guiActiveEditor = True
+				guiIcon = Remove All Tanks
+				guiName = Remove All Tanks
+				category = Remove All Tanks
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+		TANK
+		{
+			name = HTPB
+			note = 
+			utilization = 1
+			mass = 0
+			cost = 0
+			loss_rate = 0
+			temperature = 300
+			fillable = True
+			techRequired = 
+			amount = 5.7805
+			maxAmount = 5.7805
+		}
+	}
+	MODULE
+	{
+		name = ModuleEngineConfigs
+		isEnabled = True
+		configuration = Linear Thrust
+		techLevel = -1
+		thrustRating = maxThrust
+		modded = False
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = HTPB
+		amount = 5.7805
+		maxAmount = 5.7805
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = sepMotor1_4293664640
+	partName = Part
+	pos = -1.751399,3.940905,0.3856926
+	attPos = -1.192093E-07,0.01362038,0.07724774
+	attPos0 = 0,-8.250605,-1.24986
+	rot = 0.9961947,9.857533E-09,-1.008606E-07,0.0871557
+	attRot = 0,-0.08715574,0.9961946,0
+	attRot0 = 0.9961947,9.857533E-09,-1.008606E-07,0.0871557
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 3
+	dstg = 4
+	sidx = 6
+	sqor = 3
+	sepI = 3
+	attm = 1
+	modCost = 10.74306
+	modMass = -0.02225814
+	modSize = (0.0, 0.0, 0.0)
+	sym = sepMotor1_4293664952
+	sym = sepMotor1_4293664874
+	sym = sepMotor1_4293664796
+	sym = sepMotor1_4293664718
+	sym = sepMotor1_4293664562
+	srfN = srfAttach,Fel.LongTank1_4293667154
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleEnginesRF
+		isEnabled = True
+		ignitions = -1
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			vActivate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			vShutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Activate
+			{
+				active = False
+				guiActive = False
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = False
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			vOnAction
+			{
+				actionGroup = None
+			}
+			vShutdownAction
+			{
+				actionGroup = None
+			}
+			vActivateAction
+			{
+				actionGroup = None
+			}
+			OnAction
+			{
+				actionGroup = None
+				active = False
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+				active = False
+			}
+			ActivateAction
+			{
+				actionGroup = None
+				active = False
+			}
+		}
+		Ullage
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		EVENTS
+		{
+			RunTestEvent
+			{
+				active = False
+				guiActive = True
+				guiIcon = Run Test
+				guiName = Run Test
+				category = Run Test
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = CollisionFX
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
+		name = ExtendedPartInfo
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Scrap Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Salvage Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = tjs_EngineLight
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleFuelTanks
+		isEnabled = True
+		type = Solid
+		utilization = 86
+		mass = 0.001794644
+		volume = 5.7805
+		type_UIEditor
+		{
+			controlEnabled = True
+		}
+		utilization_UIEditor
+		{
+			controlEnabled = True
+			minValue = 1
+			maxValue = 100
+			incrementSlide = 1
+		}
+		EVENTS
+		{
+			HideUI
+			{
+				active = False
+				guiActive = False
+				guiActiveEditor = True
+				guiIcon = Hide UI
+				guiName = Hide UI
+				category = Hide UI
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ShowUI
+			{
+				active = True
+				guiActive = False
+				guiActiveEditor = True
+				guiIcon = Show UI
+				guiName = Show UI
+				category = Show UI
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Empty
+			{
+				active = True
+				guiActive = False
+				guiActiveEditor = True
+				guiIcon = Remove All Tanks
+				guiName = Remove All Tanks
+				category = Remove All Tanks
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+		TANK
+		{
+			name = HTPB
+			note = 
+			utilization = 1
+			mass = 0
+			cost = 0
+			loss_rate = 0
+			temperature = 300
+			fillable = True
+			techRequired = 
+			amount = 5.7805
+			maxAmount = 5.7805
+		}
+	}
+	MODULE
+	{
+		name = ModuleEngineConfigs
+		isEnabled = True
+		configuration = Linear Thrust
+		techLevel = -1
+		thrustRating = maxThrust
+		modded = False
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = HTPB
+		amount = 5.7805
+		maxAmount = 5.7805
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = sepMotor1_4293664562
+	partName = Part
+	pos = -2.76691,3.940905,0.9719983
+	attPos = 0.06689858,0.01362038,0.03862393
+	attPos0 = -1.08241,-8.250605,-0.62493
+	rot = 0.86273,0.04357785,-0.4980974,0.07547905
+	attRot = 0,-0.08715574,0.9961946,0
+	attRot0 = 0.86273,0.04357785,-0.4980974,0.07547905
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 3
+	dstg = 4
+	sidx = 7
+	sqor = 3
+	sepI = 3
+	attm = 1
+	modCost = 10.74306
+	modMass = -0.02225814
+	modSize = (0.0, 0.0, 0.0)
+	sym = sepMotor1_4293664952
+	sym = sepMotor1_4293664874
+	sym = sepMotor1_4293664796
+	sym = sepMotor1_4293664718
+	sym = sepMotor1_4293664640
+	srfN = srfAttach,Fel.LongTank1_4293667154
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleEnginesRF
+		isEnabled = True
+		ignitions = -1
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			vActivate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			vShutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Activate
+			{
+				active = False
+				guiActive = False
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = False
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			vOnAction
+			{
+				actionGroup = None
+			}
+			vShutdownAction
+			{
+				actionGroup = None
+			}
+			vActivateAction
+			{
+				actionGroup = None
+			}
+			OnAction
+			{
+				actionGroup = None
+				active = False
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+				active = False
+			}
+			ActivateAction
+			{
+				actionGroup = None
+				active = False
+			}
+		}
+		Ullage
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		EVENTS
+		{
+			RunTestEvent
+			{
+				active = False
+				guiActive = True
+				guiIcon = Run Test
+				guiName = Run Test
+				category = Run Test
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = CollisionFX
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
+		name = ExtendedPartInfo
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Scrap Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Salvage Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = tjs_EngineLight
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleFuelTanks
+		isEnabled = True
+		type = Solid
+		utilization = 86
+		mass = 0.001794644
+		volume = 5.7805
+		type_UIEditor
+		{
+			controlEnabled = True
+		}
+		utilization_UIEditor
+		{
+			controlEnabled = True
+			minValue = 1
+			maxValue = 100
+			incrementSlide = 1
+		}
+		EVENTS
+		{
+			HideUI
+			{
+				active = False
+				guiActive = False
+				guiActiveEditor = True
+				guiIcon = Hide UI
+				guiName = Hide UI
+				category = Hide UI
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ShowUI
+			{
+				active = True
+				guiActive = False
+				guiActiveEditor = True
+				guiIcon = Show UI
+				guiName = Show UI
+				category = Show UI
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Empty
+			{
+				active = True
+				guiActive = False
+				guiActiveEditor = True
+				guiIcon = Remove All Tanks
+				guiName = Remove All Tanks
+				category = Remove All Tanks
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+		TANK
+		{
+			name = HTPB
+			note = 
+			utilization = 1
+			mass = 0
+			cost = 0
+			loss_rate = 0
+			temperature = 300
+			fillable = True
+			techRequired = 
+			amount = 5.7805
+			maxAmount = 5.7805
+		}
+	}
+	MODULE
+	{
+		name = ModuleEngineConfigs
+		isEnabled = True
+		configuration = Linear Thrust
+		techLevel = -1
+		thrustRating = maxThrust
+		modded = False
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = HTPB
+		amount = 5.7805
+		maxAmount = 5.7805
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = KW5mExpFairingCone_4293664484
+	partName = Part
+	pos = -2.563898,31.18974,1.558304
+	attPos = 0,0,0
+	attPos0 = -0.8124999,9.93,0
+	rot = 0,0,0,1
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 4
+	dstg = 5
+	sidx = 1
+	sqor = 4
+	sepI = 4
+	attm = 0
+	modCost = -600
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	link = KW5mExpFairingWall_4293664400
+	attN = connect,KW5mExpFairingWall_4293664400
+	attN = bottom,Fel.DeepFairingBase_4293667522
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleFairingDecoupler
+		isEnabled = True
+		ejectionForcePercent = 100
+		isDecoupled = False
+		ejectionForcePercent_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 1
+		}
+		EVENTS
+		{
+			Decouple
+			{
+				active = True
+				guiActive = True
+				guiIcon = Decouple
+				guiName = Decouple
+				category = Decouple
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = CollisionFX
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
+		name = ExtendedPartInfo
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 2.5
+		defaultScale = 5
+		defaultTransformScale = (1.25, 1.25, 1.25)
+		DryCost = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Scrap Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Salvage Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = tjs_DecouplerLight
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTweakableDecouple
+		isEnabled = True
+		ejectionForce = 900
+		staged = True
+		ejectionForce_UIFlight
+		{
+			controlEnabled = True
+			minValue = -3.402823E+38
+			maxValue = 3.402823E+38
+			incrementSlide = 1
+		}
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleStagingToggle
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+			EnableEvent
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Enable Staging
+				guiName = Enable Staging
+				category = Enable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			DisableEvent
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = KW5mExpFairingWall_4293664400
+	partName = Part
+	pos = -2.563274,28.4519,1.558304
+	attPos = 0,0,0
+	attPos0 = 0.0006248951,-2.737837,0
+	rot = 0,0,0,1
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 6
+	dstg = 6
+	sidx = -1
+	sqor = -1
+	sepI = 4
+	attm = 0
+	modCost = -600
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	link = KW5mExpFairingWall_4293664322
+	attN = top,KW5mExpFairingCone_4293664484
+	attN = bottom,KW5mExpFairingWall_4293664322
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = CollisionFX
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
+		name = ExtendedPartInfo
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 2.5
+		defaultScale = 5
+		defaultTransformScale = (1.25, 1.25, 1.25)
+		DryCost = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Scrap Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Salvage Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = KW5mExpFairingWall_4293664322
+	partName = Part
+	pos = -2.563274,25.28969,1.558304
+	attPos = 0,0,0
+	attPos0 = 0,-3.162218,0
+	rot = 0,0,0,1
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 6
+	dstg = 6
+	sidx = -1
+	sqor = -1
+	sepI = 4
+	attm = 0
+	modCost = -600
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	attN = top,KW5mExpFairingWall_4293664400
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = CollisionFX
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
+		name = ExtendedPartInfo
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 2.5
+		defaultScale = 5
+		defaultTransformScale = (1.25, 1.25, 1.25)
+		DryCost = 200
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Scrap Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = USI_ModuleRecycleablePart
+		isEnabled = True
+		EVENTS
+		{
+			ScrapPart
+			{
+				active = True
+				guiActive = False
+				guiIcon = Scrap part
+				guiName = Salvage Part
+				category = Scrap part
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+}

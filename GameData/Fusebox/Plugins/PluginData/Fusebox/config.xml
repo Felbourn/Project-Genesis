@@ -5,7 +5,7 @@
         <xmin>1299</xmin>
         <xmax>1419</xmax>
         <ymin>91</ymin>
-        <ymax>218</ymax>
+        <ymax>101</ymax>
     </rect>
     <rect name="filterWin1">
         <xmin>1242</xmin>
@@ -31,7 +31,7 @@
     <int name="warphaltthresh">30</int>
     <bool name="showcharge1">1</bool>
     <int name="precision1">2</int>
-    <bool name="minimized1">0</bool>
+    <bool name="minimized1">1</bool>
     <string name="globalFontStyle1">Normal</string>
     <double name="goodColr1">0</double>
     <double name="goodColb1">0</double>
@@ -66,7 +66,7 @@
         <xmin>1136</xmin>
         <xmax>1256</xmax>
         <ymin>41</ymin>
-        <ymax>51</ymax>
+        <ymax>187</ymax>
     </rect>
     <rect name="filterWin0">
         <xmin>1280</xmin>
@@ -90,7 +90,7 @@
     <bool name="toolbar0">1</bool>
     <bool name="showcharge0">1</bool>
     <int name="precision0">2</int>
-    <bool name="minimized0">1</bool>
+    <bool name="minimized0">0</bool>
     <string name="globalFontStyle0">Normal</string>
     <double name="goodColr0">0</double>
     <double name="goodColb0">0</double>

@@ -23,6 +23,9 @@ CanPin
 	Item = KSPAlternateResourcePanel
 	Item = PlanetShine
 	Item = USILifeSupport
+	Item = NodeHelper
+	Item = KerbalAnimationSuite
+	Item = HotSpot
 }
 CanHide
 {
@@ -43,6 +46,9 @@ CanHide
 	Item = KSPAlternateResourcePanel
 	Item = PlanetShine
 	Item = USILifeSupport
+	Item = NodeHelper
+	Item = KerbalAnimationSuite
+	Item = HotSpot
 }
 CanSetFalse
 {
@@ -63,6 +69,9 @@ CanSetFalse
 	Item = KSPAlternateResourcePanel
 	Item = PlanetShine
 	Item = USILifeSupport
+	Item = NodeHelper
+	Item = KerbalAnimationSuite
+	Item = HotSpot
 }
 ModHasFirstConfig
 {
@@ -83,4 +92,7 @@ ModHasFirstConfig
 	Item = KSPAlternateResourcePanel
 	Item = PlanetShine
 	Item = USILifeSupport
+	Item = NodeHelper
+	Item = KerbalAnimationSuite
+	Item = HotSpot
 }
