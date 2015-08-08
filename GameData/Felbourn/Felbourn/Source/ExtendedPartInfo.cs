@@ -4,6 +4,8 @@ using System.Linq;
 using UnityEngine;
 using TweakScale;
 using RemoteTech.Modules;
+using KSPAPIExtensions;
+using KSPAPIExtensions.PartMessage;
 
 namespace ExtendedPartInfo
 {
@@ -16,17 +18,21 @@ namespace ExtendedPartInfo
         [KSPField(isPersistant = false, guiActive = true, guiActiveEditor = true, guiName = "Part")]
         private string PartName = "";
         [KSPField(isPersistant = false, guiActiveEditor = true)]
-        private string Internals = "";
+        private string Internal = "";
+        [KSPField(isPersistant = false, guiActiveEditor = true)]
+        private string Docking = null;
         [KSPField(isPersistant = false, guiActive = true, guiActiveEditor = true, guiFormat = "N0", guiUnits = " kg")]
         private float Mass = 0;
         [KSPField(isPersistant = false)]
         public float OriginalMass = 0;
         [KSPField(isPersistant = false, guiActive = true, guiActiveEditor = true)]
         private bool Shielded = false;
+        //[KSPField(isPersistant = false, guiActive = true, guiActiveEditor = true)]
+        //private string Temp = "";
+        //[KSPField(isPersistant = false, guiActive = true, guiActiveEditor = true)]
+        //private string SkinTemp = "";
         [KSPField(isPersistant = false, guiActive = true, guiActiveEditor = true)]
-        private string Temp = "";
-        [KSPField(isPersistant = false, guiActive = true, guiActiveEditor = true)]
-        private string SkinTemp = "";
+        private string Flux = "";
         [KSPField(isPersistant = false, guiActive = true, guiActiveEditor = true)]
         private bool CrossFeed = false;
 
@@ -59,6 +65,9 @@ namespace ExtendedPartInfo
         private ModuleReactionWheel myCMG = null;
         private ModuleDecouple myDecoupler1 = null;
         private ModuleAnchoredDecoupler myDecoupler2 = null;
+        private ModuleDockingNode myDocking = null;
+
+        private Part defaultPart = new Part();
 
         //-----------------------------------------------------------------------------------------
         // interface
@@ -80,15 +89,26 @@ namespace ExtendedPartInfo
 
                 if ((part.Modules[i] as ModuleAnchoredDecoupler) != null)
                     myDecoupler2 = part.Modules[i] as ModuleAnchoredDecoupler;
+
+                if ((part.Modules[i] as ModuleDockingNode) != null)
+                    myDocking = part.Modules[i] as ModuleDockingNode;
             }
 
             Display();
 
+            if (myDocking != null)
+                Docking = myDocking.nodeType;
+            else
+                DisableField("Docking");
+
             PartName = part.partInfo.name;
             if (part.CrewCapacity > 0)
-                Internals = part.InternalModelName + " for " + part.CrewCapacity;
+                Internal = part.CrewCapacity + "x ";
+                var node = part.partInfo.internalConfig.GetNode("INTERNAL");
+                if (node != null)
+                    Internal += node.GetValue("name");
             else
-                DisableField("Internals");
+                DisableField("Internal");
 
             if (myDecoupler1)
                 DecoupleForce = myDecoupler1.ejectionForce;
@@ -104,6 +124,7 @@ namespace ExtendedPartInfo
 
         public void OnRescale(TweakScale.ScalingFactor factor)
         {
+            Debug.Log("[EPI] TweakScale change");
             StartCoroutine(DelayDisplay());
         }
         private System.Collections.IEnumerator DelayDisplay()
@@ -112,12 +133,31 @@ namespace ExtendedPartInfo
             Display();
         }
 
+        [PartMessageListener(typeof(PartMassChanged), scenes: GameSceneFilter.AnyEditor)]
+        public void PartMassChanged(float mass)
+        {
+            Debug.Log("[EPI] PartMassChanged " + mass);
+            Display();
+        }
+
         private void Display()
         {
             Mass = (part.mass + part.GetResourceMass()) * 1000;
             CrossFeed = part.fuelCrossFeed;
-            Temp = Math.Round(part.temperature) + " / " + part.maxTemp;
-            SkinTemp = Math.Round(part.skinTemperature) + " / " + part.skinMaxTemp + " (" + IntWithUnits((float)part.thermalConductionFlux) + "," + IntWithUnits((float)part.thermalRadiationFlux) + ")";
+            //Temp = Math.Round(part.temperature) + " / " + part.maxTemp;
+
+            //SkinTemp = Math.Round(part.skinTemperature) + " / " + part.skinMaxTemp;
+
+            Flux = "";
+            bool comma = true;
+            comma = ShowFlux("s", part.skinToInternalFlux, comma);
+            comma = ShowFlux("c", part.thermalConductionFlux, comma);
+            comma = ShowFlux("v", part.thermalConvectionFlux, comma);
+            comma = ShowFlux("i", part.thermalInternalFlux, comma);
+            comma = ShowFlux("r", part.thermalRadiationFlux, comma);
+            if (Flux == "")
+                DisableField("Flux");
+
             Shielded = part.ShieldedFromAirstream;
 
             if (myRCS)
@@ -138,6 +178,17 @@ namespace ExtendedPartInfo
         }
 
         //-----------------------------------------------------------------------------------------
+        private bool ShowFlux(string units, double value, bool comma)
+        {
+            if (Math.Abs(value) < 100)
+                return comma;
+            Flux += units + IntWithUnits((float)value);
+            if (comma)
+                Flux += ",";
+            return false;
+        }
+
+        //-----------------------------------------------------------------------------------------
         public override string GetInfo()
         {
             string partName = "Part name: " + part.partInfo.name + "\n";
@@ -148,7 +199,7 @@ namespace ExtendedPartInfo
                 massInfo += OriginalMass * 1000 + " kg\n";
             else
                 massInfo += OriginalMass + " tons\n";
-            
+
             string remoteTech = "";
 
             ModuleRTAntenna antenna = null;
@@ -163,28 +214,42 @@ namespace ExtendedPartInfo
 
             if (antenna)
             {
-
                 remoteTech = "RemoteTech pairings:\n";
 
                 float range = Math.Max(antenna.Mode1OmniRange, antenna.Mode1DishRange);
                 float maxRange = (antenna.Mode1OmniRange != 0) ? antenna.Mode1OmniRange * 100 : antenna.Mode1DishRange * 1000;
 
-                Debug.Log("[EP] omni = " + antenna.Mode1OmniRange);
-                Debug.Log("[EP] dish = " + antenna.Mode1DishRange);
-                Debug.Log("[EP] range = " + range);
-                remoteTech += "   75km: " + RemoteTech(range, KM(75), maxRange) + "\n";
-                remoteTech += "   250km: " + RemoteTech(range, KM(250), maxRange) + "\n";
+                //Debug.Log("[EPI] omni = " + antenna.Mode1OmniRange);
+                //Debug.Log("[EPI] dish = " + antenna.Mode1DishRange);
+                //Debug.Log("[EPI] range = " + range);
+
+                remoteTech += "  75km: " + RemoteTech(range, KM(75), maxRange) + "\n";
+                remoteTech += " 250km: " + RemoteTech(range, KM(250), maxRange) + "\n";
                 remoteTech += "   1Mm: " + RemoteTech(range, MM(1), maxRange) + "\n";
-                remoteTech += "   3.5Mm: " + RemoteTech(range, MM(3.5f), maxRange) + "\n";
+                remoteTech += " 3.5Mm: " + RemoteTech(range, MM(3.5f), maxRange) + "\n";
                 remoteTech += "   8Mm: " + RemoteTech(range, MM(8), maxRange) + "\n";
-                remoteTech += "   20Mm: " + RemoteTech(range, MM(20), maxRange) + "\n";
-                remoteTech += "   45Mm: " + RemoteTech(range, MM(45), maxRange) + "\n";
+                remoteTech += "  20Mm: " + RemoteTech(range, MM(20), maxRange) + "\n";
+                remoteTech += "  45Mm: " + RemoteTech(range, MM(45), maxRange) + "\n";
                 remoteTech += "   8Gm: " + RemoteTech(range, GM(8), maxRange) + "\n";
-                remoteTech += "   15Gm: " + RemoteTech(range, GM(15), maxRange) + "\n";
-                remoteTech += "   32Gm: " + RemoteTech(range, GM(32), maxRange) + "\n";
-                remoteTech += "   93Gm: " + RemoteTech(range, GM(93), maxRange) + "\n";
+                remoteTech += "  15Gm: " + RemoteTech(range, GM(15), maxRange) + "\n";
+                remoteTech += "  32Gm: " + RemoteTech(range, GM(32), maxRange) + "\n";
+                remoteTech += "  93Gm: " + RemoteTech(range, GM(93), maxRange) + "\n";
             }
-            return partName + path + massInfo + remoteTech;
+
+            string stats =
+                ((part.PhysicsSignificance != defaultPart.PhysicsSignificance) ? "PhysicsSignificance " + part.PhysicsSignificance + "/n" : "") +
+                ((part.explosionPotential != defaultPart.explosionPotential) ? "explosionPotential " + part.explosionPotential + "/n" : "") +
+                ((part.emissiveConstant != defaultPart.emissiveConstant) ? "emissiveConstant " + part.emissiveConstant + "/n" : "") +
+                ((part.heatConductivity != defaultPart.heatConductivity) ? "heatConductivity " + part.heatConductivity + "/n" : "") +
+                ((part.heatConvectiveConstant != defaultPart.heatConvectiveConstant) ? "heatConvectiveConstant " + part.heatConvectiveConstant + "/n" : "") +
+                ((part.radiativeArea != defaultPart.radiativeArea) ? "radiativeArea " + part.radiativeArea + "/n" : "") +
+                ((part.radiatorHeadroom != defaultPart.radiatorHeadroom) ? "radiatorHeadroom " + part.radiatorHeadroom + "/n" : "") +
+                ((part.radiatorMax != defaultPart.radiatorMax) ? "radiatorMax " + part.radiatorMax + "/n" : "") +
+                ((part.resourceThermalMass != defaultPart.resourceThermalMass) ? "resourceThermalMass " + part.resourceThermalMass + "/n" : "") +
+                ((part.thermalMass != defaultPart.thermalMass) ? "thermalMass " + part.thermalMass + "/n" : "") +
+                ((part.thermalMassModifier != defaultPart.thermalMassModifier) ? "thermalMassModifier " + part.thermalMassModifier + "/n" : "")
+            ;
+            return partName + path + massInfo + remoteTech + stats ;
         }
 
         //-----------------------------------------------------------------------------------------
@@ -241,6 +306,23 @@ namespace ExtendedPartInfo
             BaseField field = Fields[name];
             field.guiActive = false;
             field.guiActiveEditor = false;
+        }
+        
+    }
+
+    public class ModuleDockingNodeName : ModuleDockingNode
+    {
+        [KSPField(isPersistant = false, guiActive = true, guiActiveEditor = true)]
+        private string Type;
+
+        public override void OnStart(PartModule.StartState state)
+        {
+            Type = nodeType;
+        }
+
+        public override string GetInfo()
+        {
+            return base.GetInfo() + "\nType: " + nodeType;
         }
     }
 }

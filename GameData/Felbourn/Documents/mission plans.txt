@@ -80,6 +80,8 @@ first modules:
 	Power Gen
 
 second modules:
+	Nom-O-Matic 5000 - mnulch, power --> supplies
+
 	send machinery & fertilzier supplies, recycle mulch
 	Agricultural - mulch, power, machinery, fertilizer --> organics, recylables
 
