@@ -73,6 +73,8 @@ namespace ExtendedPartInfo
         // interface
         public override void OnStart(PartModule.StartState state)
         {
+            Debug.Log("[EPI] start " + part.partInfo.name);
+
             for (int i = part.Modules.Count - 1; i >= 0; i--)
             {
                 if ((part.Modules[i] as ModuleRCS) != null)
@@ -133,48 +135,60 @@ namespace ExtendedPartInfo
             Display();
         }
 
-        [PartMessageListener(typeof(PartMassChanged), scenes: GameSceneFilter.AnyEditor)]
-        public void PartMassChanged(float mass)
-        {
-            Debug.Log("[EPI] PartMassChanged " + mass);
-            Display();
-        }
-
         private void Display()
         {
-            Mass = (part.mass + part.GetResourceMass()) * 1000;
-            CrossFeed = part.fuelCrossFeed;
-            //Temp = Math.Round(part.temperature) + " / " + part.maxTemp;
+            try
+            {
+                Mass = (part.mass + part.GetResourceMass()) * 1000;
+                CrossFeed = part.fuelCrossFeed;
+                //Temp = Math.Round(part.temperature) + " / " + part.maxTemp;
 
-            //SkinTemp = Math.Round(part.skinTemperature) + " / " + part.skinMaxTemp;
+                //SkinTemp = Math.Round(part.skinTemperature) + " / " + part.skinMaxTemp;
 
-            Flux = "";
-            bool comma = true;
-            comma = ShowFlux("s", part.skinToInternalFlux, comma);
-            comma = ShowFlux("c", part.thermalConductionFlux, comma);
-            comma = ShowFlux("v", part.thermalConvectionFlux, comma);
-            comma = ShowFlux("i", part.thermalInternalFlux, comma);
-            comma = ShowFlux("r", part.thermalRadiationFlux, comma);
-            if (Flux == "")
-                DisableField("Flux");
+                Flux = "";
+                bool comma = true;
+                comma = ShowFlux("s", part.skinToInternalFlux, comma);
+                comma = ShowFlux("c", part.thermalConductionFlux, comma);
+                comma = ShowFlux("v", part.thermalConvectionFlux, comma);
+                comma = ShowFlux("i", part.thermalInternalFlux, comma);
+                comma = ShowFlux("r", part.thermalRadiationFlux, comma);
+                if (Flux == "")
+                    DisableField("Flux");
 
-            Shielded = part.ShieldedFromAirstream;
+                Shielded = part.ShieldedFromAirstream;
 
-            if (myRCS)
-                Thrust = myRCS.thrusterPower;
-            else if (myEngine)
-                Thrust = myEngine.maxThrust;
-            else
-                DisableField("Thrust");
+                if (myRCS)
+                    Thrust = myRCS.thrusterPower;
+                else if (myEngine)
+                    Thrust = myEngine.maxThrust;
+                else
+                    DisableField("Thrust");
 
-            CrashTolerance = part.crashTolerance;
-            BreakForce = part.breakingForce;
-            BreakTorque = part.breakingTorque;
+                if (CrashTolerance != defaultPart.crashTolerance)
+                    CrashTolerance = part.crashTolerance;
+                else
+                    DisableField("CrashTolerance");
 
-            if (myCMG)
-                GyroTorque = myCMG.PitchTorque;
-            else
-                DisableField("GyroTorque");
+                if (BreakForce != defaultPart.breakingForce)
+                    BreakForce = part.breakingForce;
+                else
+                    DisableField("BreakForce");
+
+                if (BreakTorque != defaultPart.breakingTorque)
+                    BreakTorque = part.breakingTorque;
+                else
+                    DisableField("BreakTorque");
+
+                if (myCMG)
+                    GyroTorque = myCMG.PitchTorque;
+                else
+                    DisableField("GyroTorque");
+            }
+            catch (Exception e)
+            {
+                Debug.LogError("[EPI] Display exception " + e.InnerException);
+                Debug.Log(e.StackTrace);
+            }
         }
 
         //-----------------------------------------------------------------------------------------
@@ -191,65 +205,74 @@ namespace ExtendedPartInfo
         //-----------------------------------------------------------------------------------------
         public override string GetInfo()
         {
-            string partName = "Part name: " + part.partInfo.name + "\n";
-            string path = "Path: " + part.partInfo.partUrl + "\n";
-
-            string massInfo = "Original mass: ";
-            if (OriginalMass < 1)
-                massInfo += OriginalMass * 1000 + " kg\n";
-            else
-                massInfo += OriginalMass + " tons\n";
-
-            string remoteTech = "";
-
-            ModuleRTAntenna antenna = null;
-            for (int i = part.Modules.Count - 1; i >= 0; i--)
-                if ((part.Modules[i] as ModuleRTAntenna) != null)
-                    antenna = part.Modules[i] as ModuleRTAntenna;
-
-            //Debug.Log("name = " + part.partInfo.name);
-            //Debug.Log("thermalMassModifier = " + part.thermalMassModifier);
-            //Debug.Log("skinInternalConductionMult = " + part.skinInternalConductionMult);
-            //Debug.Log("skinMassPerArea = " + part.skinMassPerArea);
-
-            if (antenna)
+            try
             {
-                remoteTech = "RemoteTech pairings:\n";
+                string partName = "Part name: " + part.partInfo.name + "\n";
+                string path = "Path: " + part.partInfo.partUrl + "\n";
 
-                float range = Math.Max(antenna.Mode1OmniRange, antenna.Mode1DishRange);
-                float maxRange = (antenna.Mode1OmniRange != 0) ? antenna.Mode1OmniRange * 100 : antenna.Mode1DishRange * 1000;
+                string massInfo = "Original mass: ";
+                if (OriginalMass < 1)
+                    massInfo += OriginalMass * 1000 + " kg\n";
+                else
+                    massInfo += OriginalMass + " tons\n";
 
-                //Debug.Log("[EPI] omni = " + antenna.Mode1OmniRange);
-                //Debug.Log("[EPI] dish = " + antenna.Mode1DishRange);
-                //Debug.Log("[EPI] range = " + range);
+                string remoteTech = "";
 
-                remoteTech += "  75km: " + RemoteTech(range, KM(75), maxRange) + "\n";
-                remoteTech += " 250km: " + RemoteTech(range, KM(250), maxRange) + "\n";
-                remoteTech += "   1Mm: " + RemoteTech(range, MM(1), maxRange) + "\n";
-                remoteTech += " 3.5Mm: " + RemoteTech(range, MM(3.5f), maxRange) + "\n";
-                remoteTech += "   8Mm: " + RemoteTech(range, MM(8), maxRange) + "\n";
-                remoteTech += "  20Mm: " + RemoteTech(range, MM(20), maxRange) + "\n";
-                remoteTech += "  45Mm: " + RemoteTech(range, MM(45), maxRange) + "\n";
-                remoteTech += "   8Gm: " + RemoteTech(range, GM(8), maxRange) + "\n";
-                remoteTech += "  15Gm: " + RemoteTech(range, GM(15), maxRange) + "\n";
-                remoteTech += "  32Gm: " + RemoteTech(range, GM(32), maxRange) + "\n";
-                remoteTech += "  93Gm: " + RemoteTech(range, GM(93), maxRange) + "\n";
+                ModuleRTAntenna antenna = null;
+                for (int i = part.Modules.Count - 1; i >= 0; i--)
+                    if ((part.Modules[i] as ModuleRTAntenna) != null)
+                        antenna = part.Modules[i] as ModuleRTAntenna;
+
+                //Debug.Log("name = " + part.partInfo.name);
+                //Debug.Log("thermalMassModifier = " + part.thermalMassModifier);
+                //Debug.Log("skinInternalConductionMult = " + part.skinInternalConductionMult);
+                //Debug.Log("skinMassPerArea = " + part.skinMassPerArea);
+
+                if (antenna)
+                {
+                    remoteTech = "RemoteTech pairings:\n";
+
+                    float range = Math.Max(antenna.Mode1OmniRange, antenna.Mode1DishRange);
+                    float maxRange = (antenna.Mode1OmniRange != 0) ? antenna.Mode1OmniRange * 100 : antenna.Mode1DishRange * 1000;
+
+                    //Debug.Log("[EPI] omni = " + antenna.Mode1OmniRange);
+                    //Debug.Log("[EPI] dish = " + antenna.Mode1DishRange);
+                    //Debug.Log("[EPI] range = " + range);
+
+                    remoteTech += "  75km: " + RemoteTech(range, KM(75), maxRange) + "\n";
+                    remoteTech += " 250km: " + RemoteTech(range, KM(250), maxRange) + "\n";
+                    remoteTech += "   1Mm: " + RemoteTech(range, MM(1), maxRange) + "\n";
+                    remoteTech += " 3.5Mm: " + RemoteTech(range, MM(3.5f), maxRange) + "\n";
+                    remoteTech += "   8Mm: " + RemoteTech(range, MM(8), maxRange) + "\n";
+                    remoteTech += "  20Mm: " + RemoteTech(range, MM(20), maxRange) + "\n";
+                    remoteTech += "  45Mm: " + RemoteTech(range, MM(45), maxRange) + "\n";
+                    remoteTech += "   8Gm: " + RemoteTech(range, GM(8), maxRange) + "\n";
+                    remoteTech += "  15Gm: " + RemoteTech(range, GM(15), maxRange) + "\n";
+                    remoteTech += "  32Gm: " + RemoteTech(range, GM(32), maxRange) + "\n";
+                    remoteTech += "  93Gm: " + RemoteTech(range, GM(93), maxRange) + "\n";
+                }
+
+                string stats =
+                    ((part.PhysicsSignificance != defaultPart.PhysicsSignificance) ? "PhysicsSignificance " + part.PhysicsSignificance + "\n" : "") +
+                    ((part.explosionPotential != defaultPart.explosionPotential) ? "explosionPotential " + part.explosionPotential + " (" + defaultPart.explosionPotential + ")\n" : "") +
+                    ((part.emissiveConstant != defaultPart.emissiveConstant) ? "emissiveConstant " + part.emissiveConstant + " (" + defaultPart.emissiveConstant + ")\n" : "") +
+                    ((part.heatConductivity != defaultPart.heatConductivity) ? "heatConductivity " + part.heatConductivity + " (" + defaultPart.heatConductivity + ")\n" : "") +
+                    ((part.heatConvectiveConstant != defaultPart.heatConvectiveConstant) ? "heatConvectiveConstant " + part.heatConvectiveConstant + " (" + defaultPart.heatConvectiveConstant + ")\n" : "") +
+                    ((part.radiativeArea != defaultPart.radiativeArea) ? "radiativeArea " + part.radiativeArea + " (" + defaultPart.radiativeArea + ")\n" : "") +
+                    ((part.radiatorHeadroom != defaultPart.radiatorHeadroom) ? "radiatorHeadroom " + part.radiatorHeadroom + " (" + defaultPart.radiatorHeadroom + ")\n" : "") +
+                    ((part.radiatorMax != defaultPart.radiatorMax) ? "radiatorMax " + part.radiatorMax + " (" + defaultPart.radiatorMax + ")\n" : "") +
+                    ((part.resourceThermalMass != defaultPart.resourceThermalMass) ? "resourceThermalMass " + part.resourceThermalMass + " (" + defaultPart.resourceThermalMass + ")\n" : "") +
+                    ((part.thermalMass != defaultPart.thermalMass) ? "thermalMass " + part.thermalMass + " (" + defaultPart.thermalMass + ")\n" : "") +
+                    ((part.thermalMassModifier != defaultPart.thermalMassModifier) ? "thermalMassModifier " + part.thermalMassModifier + " (" + defaultPart.thermalMassModifier + ")\n" : "")
+                ;
+                return partName + path + massInfo + remoteTech + stats;
             }
-
-            string stats =
-                ((part.PhysicsSignificance != defaultPart.PhysicsSignificance) ? "PhysicsSignificance " + part.PhysicsSignificance + "/n" : "") +
-                ((part.explosionPotential != defaultPart.explosionPotential) ? "explosionPotential " + part.explosionPotential + "/n" : "") +
-                ((part.emissiveConstant != defaultPart.emissiveConstant) ? "emissiveConstant " + part.emissiveConstant + "/n" : "") +
-                ((part.heatConductivity != defaultPart.heatConductivity) ? "heatConductivity " + part.heatConductivity + "/n" : "") +
-                ((part.heatConvectiveConstant != defaultPart.heatConvectiveConstant) ? "heatConvectiveConstant " + part.heatConvectiveConstant + "/n" : "") +
-                ((part.radiativeArea != defaultPart.radiativeArea) ? "radiativeArea " + part.radiativeArea + "/n" : "") +
-                ((part.radiatorHeadroom != defaultPart.radiatorHeadroom) ? "radiatorHeadroom " + part.radiatorHeadroom + "/n" : "") +
-                ((part.radiatorMax != defaultPart.radiatorMax) ? "radiatorMax " + part.radiatorMax + "/n" : "") +
-                ((part.resourceThermalMass != defaultPart.resourceThermalMass) ? "resourceThermalMass " + part.resourceThermalMass + "/n" : "") +
-                ((part.thermalMass != defaultPart.thermalMass) ? "thermalMass " + part.thermalMass + "/n" : "") +
-                ((part.thermalMassModifier != defaultPart.thermalMassModifier) ? "thermalMassModifier " + part.thermalMassModifier + "/n" : "")
-            ;
-            return partName + path + massInfo + remoteTech + stats ;
+            catch (Exception e)
+            {
+                Debug.LogError("[EPI] Display exception " + e.InnerException);
+                Debug.Log(e.StackTrace);
+                return e.InnerException.ToString();
+            }
         }
 
         //-----------------------------------------------------------------------------------------
@@ -308,21 +331,5 @@ namespace ExtendedPartInfo
             field.guiActiveEditor = false;
         }
         
-    }
-
-    public class ModuleDockingNodeName : ModuleDockingNode
-    {
-        [KSPField(isPersistant = false, guiActive = true, guiActiveEditor = true)]
-        private string Type;
-
-        public override void OnStart(PartModule.StartState state)
-        {
-            Type = nodeType;
-        }
-
-        public override string GetInfo()
-        {
-            return base.GetInfo() + "\nType: " + nodeType;
-        }
     }
 }
