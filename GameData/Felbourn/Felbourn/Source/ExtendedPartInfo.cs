@@ -1,15 +1,20 @@
-﻿using System;
+﻿//#define USE_KSP_API
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using TweakScale;
 using RemoteTech.Modules;
-using KSPAPIExtensions;
-using KSPAPIExtensions.PartMessage;
+
+#if USE_KSP_API
+    using KSPAPIExtensions;
+    using KSPAPIExtensions.PartMessage;
+#endif
 
 namespace ExtendedPartInfo
 {
-    public class ExtendedPartInfo : PartModule //, TweakScale.IRescalable<ExtendedPartInfo>
+    public class ExtendedPartInfo : PartModule, TweakScale.IRescalable<ExtendedPartInfo>
     {
         KSPAssembly remoteTech = new KSPAssembly("RemoteTech", 1, 6);
 
@@ -35,6 +40,8 @@ namespace ExtendedPartInfo
         private string Flux = "";
         [KSPField(isPersistant = false, guiActive = true, guiActiveEditor = true)]
         private bool CrossFeed = false;
+        [KSPField(isPersistant = false, guiActive = true, guiActiveEditor = true)]
+        private string Scale = "";
 
         // engines
 
@@ -71,9 +78,19 @@ namespace ExtendedPartInfo
 
         //-----------------------------------------------------------------------------------------
         // interface
+        public override void OnAwake()
+        {
+            //Debug.Log("[EPI] OnAwake " + part.partInfo.name);
+            base.OnAwake();
+            #if USE_KSP_API
+                PartMessageService.Register(this);
+            #endif
+        }
+
         public override void OnStart(PartModule.StartState state)
         {
-            Debug.Log("[EPI] start " + part.partInfo.name);
+            base.OnStart(state);
+            //Debug.Log("[EPI] start " + part.partInfo.name);
 
             for (int i = part.Modules.Count - 1; i >= 0; i--)
             {
@@ -135,14 +152,28 @@ namespace ExtendedPartInfo
             Display();
         }
 
+        #if USE_KSP_API
+            [PartMessageListener(typeof(PartMassChanged), scenes:GameSceneFilter.AnyEditor)]
+            public void PartMassChanged(float mass)
+            {
+                Debug.Log("[EPI] PartMassChanged");
+                Mass = mass * 1000;
+            }
+        #endif
+
         private void Display()
         {
             try
             {
                 Mass = (part.mass + part.GetResourceMass()) * 1000;
                 CrossFeed = part.fuelCrossFeed;
-                //Temp = Math.Round(part.temperature) + " / " + part.maxTemp;
 
+                if (part.scaleFactor != 1 || part.rescaleFactor != 1)
+                    Scale = part.scaleFactor + " / " + part.rescaleFactor;
+                else
+                    DisableField("Scale");
+
+                //Temp = Math.Round(part.temperature) + " / " + part.maxTemp;
                 //SkinTemp = Math.Round(part.skinTemperature) + " / " + part.skinMaxTemp;
 
                 Flux = "";

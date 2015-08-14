@@ -27,6 +27,8 @@ namespace Felbourn
                 Debug.LogError("ModuleFairingDecoupler - error - can't find decoupler node: " + decouplerNode);
                 return;
             }
+            Debug.Log("ModuleFairingDecoupler - info - using attachment from " + part.name + "." + decouplerNode);
+
             Part decoupler = decouplerAttach.attachedPart;
             if (decoupler == null)
             {
@@ -37,6 +39,7 @@ namespace Felbourn
             shielded.Add(decoupler); // add decoupler so we don't recurse through it
             
             // I know the decoupler, so find its payload.
+            Debug.Log("ModuleFairingDecoupler - info - searching up from " + decoupler.name + "." + payloadNode);
             AttachNode payloadAttach = decoupler.findAttachNode(payloadNode);
             if (payloadAttach == null)
             {
@@ -52,7 +55,7 @@ namespace Felbourn
             }
 
             // recursively add first payload part and all children
-            Debug.Log("ModuleFairingDecoupler - info - shielding payload");
+            Debug.Log("ModuleFairingDecoupler - info - shielding payload via " + payload.name);
             ShieldPart(payload);
 
             // now add all surface attached parts that connect to a shielded part
@@ -85,7 +88,7 @@ namespace Felbourn
                 if (!shielded.Contains(parent))
                     continue; // is the thing we're attached to shielded?
 
-                Debug.Log("ModuleFairingDecoupler - info - shielded attach from: " + parent.partInfo.name + " at: " + radial.partInfo.name);
+                Debug.Log("ModuleFairingDecoupler - info - shield radial from: " + parent.partInfo.name + " into: " + radial.partInfo.name);
                 ShieldPart(radial);
                 again = true;
             }
@@ -94,7 +97,6 @@ namespace Felbourn
 
         private void ShieldPart(Part parent)
         {
-            //Debug.Log("ModuleFairingDecoupler - info - shielding part: " + parent.partInfo.name);
             parent.ShieldedFromAirstream = true;
             shielded.Add(parent);
 
@@ -111,14 +113,13 @@ namespace Felbourn
                     //Debug.Log("ModuleFairingDecoupler - info - seen: " + parent.partInfo.name + " from: " + child.partInfo.name);
                     continue;
                 }
+                Debug.Log("ModuleFairingDecoupler - info - shield: " + child.partInfo.name + " via: " + parent.partInfo.name);
                 ShieldPart(child);
             }
         }
 
-        public override void OnUpdate()
+        public void FixedUpdate()
         {
-            base.OnUpdate();
-
             if (!shielding)
                 return;
             if (!isDecoupled)
