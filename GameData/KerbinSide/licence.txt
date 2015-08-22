@@ -1,3 +1,21 @@
+KERBINSIDE CORE
+KerbinSide Core is for use as follows:
+- You don't want the bases included in KerbinSide. You do want the static assets to make your own bases for your own personal use.
+- You make and distribute bases using the assets in KerbinSide. You point to this as a requirement for your base pack/mod.
+- You've been pointed to KerbinSide Core as a requirement for a base pack/mod you want to use.
+
+KerbinSide Core is NOT for use as follows:
+- You make and distribute bases using the assets of KerbinSide. You include KerbinSide Core in your own pack/mod.
+- You remove some of the assets in KerbinSide Core and distribute that.
+
+Please don't do this. You're violating the licence and potentially putting more than one version of the KerbinSide assets out in the wild, making my life difficult and confusing players.
+
+If this happens, I'll restrict licences and if you make and distribute bases, you won't be able to any more.
+
+If you would like a modified or pared down version of KerbinSide Core available for your base pack/mod then contact AlphaAsh on the KSP forums. I'll then consider releasing a version of the Core just for you.
+
+KerbinSide Core requires Kerbal Konstructs. It's not included. You will need to go and get the latest version.
+
 LICENCE
 Copyright (c) 2014-2015, Ashley Hall and Alpha Strike Games
 All rights reserved.
