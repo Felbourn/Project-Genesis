@@ -76,6 +76,9 @@ namespace ExtendedPartInfo
 
         private Part defaultPart = new Part();
 
+        private ConfigNode config;
+        private bool showAntenna = true;
+
         //-----------------------------------------------------------------------------------------
         // interface
         public override void OnAwake()
@@ -85,6 +88,11 @@ namespace ExtendedPartInfo
             #if USE_KSP_API
                 PartMessageService.Register(this);
             #endif
+            config = ConfigNode.Load(@"Felbourn\Plugins\EPIsettings.cfg");
+            if (config != null)
+            {
+                showAntenna = config.HasValue("RemoteTech")? config.GetValue("RemoteTech").ToUpper()=="TRUE" : true;
+            }
         }
 
         public override void OnStart(PartModule.StartState state)
@@ -175,7 +183,6 @@ namespace ExtendedPartInfo
 
                 //Temp = Math.Round(part.temperature) + " / " + part.maxTemp;
                 //SkinTemp = Math.Round(part.skinTemperature) + " / " + part.skinMaxTemp;
-
                 Flux = "";
                 bool comma = true;
                 comma = ShowFlux("s", part.skinToInternalFlux, comma);
@@ -259,7 +266,7 @@ namespace ExtendedPartInfo
                 //Debug.Log("skinInternalConductionMult = " + part.skinInternalConductionMult);
                 //Debug.Log("skinMassPerArea = " + part.skinMassPerArea);
 
-                if (antenna)
+                if (antenna && showAntenna)
                 {
                     remoteTech = "RemoteTech pairings:\n";
 

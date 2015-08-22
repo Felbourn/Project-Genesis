@@ -7,8 +7,8 @@
         <ymax>32</ymax>
     </rect>
     <bool name="WindowVisibleByActiveScene">0</bool>
-    <string name="NavballPosition">0.3760559</string>
-    <string name="NavballScale">0.8219297</string>
+    <string name="NavballPosition">0.3842587</string>
+    <string name="NavballScale">0.8365403</string>
     <string name="GhostPosition">0.1</string>
     <string name="ProgradeColour">1:1:1</string>
     <string name="NormalColour">1:1:1</string>

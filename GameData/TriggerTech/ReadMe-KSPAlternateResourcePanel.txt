@@ -1,4 +1,4 @@
-Alternate Resource Panel - 2.7.2.0
+Alternate Resource Panel - 2.7.3.0
 ----------------------------------
 An Alternate display of resources in whole vessel and current stage
 
@@ -14,7 +14,7 @@ IF YOU WANT TO MAINTAIN YOUR SETTINGS DO NOT COPY THE CONFIG.XML FILE OVER
 
 Installing the plugin involves copying the plugin files into the correct location in the KSP aplication folder
 1. Extract the Zip file you have downloaded to a temporary Location
-2. Open the Extracted folder structure and open the KSPAlternateResourcePanel_v2.7.2.0 Folder
+2. Open the Extracted folder structure and open the KSPAlternateResourcePanel_v2.7.3.0 Folder
 3. Inside this you will find a GameData folder which contains all the content you will need
 4. Open another window to your KSP application folder - We'll call this <KSP_OS>
 5. Copy the Contents of the extracted GameData folder to the <KSP_OS>\GameData Folder
@@ -28,6 +28,12 @@ LICENSE
 This work is licensed under an MIT license as outlined at the OSI site. Visit the documentation site for more details and Attribution
 
 VERSION HISTORY
+Version 2.7.3.0        -    KSP Version: 1.0.4
+- Adjusted Resource transfer code to allow multi out/in transfers - not just one to one (Issue #79)
+- Fixed oversight that allowed staging to work when it should have been locked out (Issue #77)
+- Added ability for Modders to predefine a displayas setting for new installs (Issue #75)
+- Fixed selection issue for dropdown lists and multi pages
+
 Version 2.7.2.0        -    KSP Version: 1.0.4
 - Adjusted AutoStaging to cater to Stages with no Engines in them (Issue #73)
 - Adjusted AutoStaging to Better detect initial staging event (Issue #64)
