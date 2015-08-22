@@ -1,6 +1,6 @@
 license:
 
-All pieces AIES are creating Carmics ?
+All pieces AIES are creating Carmics
 use is free to all users to Kerbal Space Program, 
 however it is not allowed for commercial use, 
 and distribution through other unknown links
