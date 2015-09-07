@@ -4,4 +4,4 @@ This KSP directory structure is a generic root installation for an extended, mor
 
 # NOTE
 
-It now takes 10 minutes to load this install. I think this idea wqill need to be rethought. If I want to do this, I probably need ot create a custom part CFG writer C# project.
+It now takes 10 minutes to load this install. I think this idea will need to be rethought. If I want to do this, I probably need ot create a custom part CFG writer C# project.
